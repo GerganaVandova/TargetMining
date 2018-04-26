@@ -1,5 +1,6 @@
 April 25, 2018
 
+
 1. Update blast databases
     ssh maguro
     cd /mnt/gnpn/gnpn/projects/orphanpks/blast/db/
