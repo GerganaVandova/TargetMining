@@ -13,13 +13,14 @@ April 25, 2018
     perl update_blastdb.pl --passive sts                            yes
     perl update_blastdb.pl --passive htgs                           yes
     perl update_blastdb.pl --passive tsa_nt                         yes
-    perl update_blastdb.pl --passive wgs NOT FOUND?
+    perl update_blastdb.pl --passive wgs                            NOT FOUND?
     perl update_blastdb.pl --passive gss                            yes
 
 Add one more:
-    perl update_blastdb.pl --passive gss
+    perl update_blastdb.pl --passive est_others
 
-est_others
+2. Unzip databases:
+for f in `ls *.tar.gz`; do echo "----------    $f    -----------"; tar -xvzf $f; done
 
 Blast FTP site
 https://www.ncbi.nlm.nih.gov/books/NBK62345/
