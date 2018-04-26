@@ -1,0 +1,30 @@
+April 25, 2018
+
+1. Update blast databases
+    ssh maguro
+    cd /mnt/gnpn/gnpn/projects/orphanpks/blast/db/
+    screen
+    perl update_blastdb.pl --passive refseq_genomic                 yes
+    perl update_blastdb.pl --passive nt                             yes
+    perl update_blastdb.pl --passive other_genomic                  yes
+    perl update_blastdb.pl --passive env_nt                         yes
+    perl update_blastdb.pl --passive patnt                          yes
+    perl update_blastdb.pl --passive sts                            yes
+    perl update_blastdb.pl --passive htgs                           yes
+    perl update_blastdb.pl --passive tsa_nt                         yes
+    perl update_blastdb.pl --passive wgs NOT FOUND?
+    perl update_blastdb.pl --passive gss                            yes
+
+Add one more:
+    perl update_blastdb.pl --passive gss
+
+est_others
+
+Blast FTP site
+https://www.ncbi.nlm.nih.gov/books/NBK62345/
+
+The EST database is a collection of short single-read transcript sequences from GenBank. These sequences provide a resource to evaluate gene expression, find potential variation, and annotate genes.
+https://www.ncbi.nlm.nih.gov/genbank/htgs/
+https://www.ncbi.nlm.nih.gov/dbSTS/
+other_genomic -  Genomic records (NC/NT/NS/NZ accessioned) for lower eukaryotes, microbes and organelles.
+refseq_genomic.##.tar.gz	All genomic sequences from NCBI RefSeq project, including wgs scaffolds.

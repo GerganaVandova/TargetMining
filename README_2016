@@ -1,0 +1,163 @@
+Jan 27 2016
+
+Make new TargetMining folder on mnt share:
+/mnt/gnpn/gnpn/projects/orphanpks/TargetMining
+
+Update blast databases:
+Save databases here: /mnt/gnpn/gnpn/projects/orphanpks/blast/db
+mv update_blastdb.pl to /mnt/gnpn/gnpn/projects/orphanpks/blast/db
+perl update_blastdb.pl --passive refseq_genomic
+perl update_blastdb.pl --passive nt
+perl update_blastdb.pl --passive other_genomic
+perl update_blastdb.pl --passive env_nt
+perl update_blastdb.pl --passive patnt
+perl update_blastdb.pl --passive sts
+perl update_blastdb.pl --passive htgs
+perl update_blastdb.pl --passive tsa_nt
+perl update_blastdb.pl --passive wgs
+perl update_blastdb.pl --passive gss
+
+Time to download all 10 db: 1 day
+________________________________________________________________________________
+Jan 28 2016
+
+*******************************
+STEP1. Blast 5KS against 10db
+*******************************
+Blast queries in TargetMining/Blast/Manual:
+KSDisorazole.seq
+KSEpothilone.seq
+KSRapamycin.seq
+KSRifamycin.seq
+
+Update run_blast.py script: change db path
+
+for f in `ls *.tar.gz`; do echo "tar -zvxf $f"; done
+for f in `ls *.tar.gz`; do tar -zvxf $f; done
+
+Unzipping took 3.5h
+
+Run run_blast.py for all 5 KSs.
+
+There was an error with gss db, gss_annot.00.tar.gz was missing. Download it and restart KSEpothilone.seq for gss.
+
+Blast ran for 11h. Parsing of blast results ran for 1h.
+
+_______________________________________________________________________________
+
+Jan 29 2015
+
+sshfs gvandova@maguro.stanford.edu:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/ Code/
+make all: took 2h
+
+
+**********************************************
+STEP2. Fetch all genbank ids that contain a KS
+**********************************************
+
+make Genbank dir
+Genbank/gbids
+write get_gbid.py
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/blast_results_seqs$ cat blast_results.KS.fasta.cleanName.cdhit.99 | grep ">" |wc
+ 131587  131587 17341438 .atom/.atom.atom/
+
+Run get_gbids.py > gbids.txt
+
+cat gbids.txt |sort -u > gbids.unique.84233.txt
+
+Run fetch_gbid.py From 2:50pm
+had to put delay of 20s becasue I was blocked by ncbi for too many requests per s
+all gbids downloaded by Mon  Feb 1, 2016
+
+
+*******************************************************
+STEP3. Convert genbank files to fasta files
+*******************************************************
+
+Feb 1, 2016
+Run ./parse_gb.py to make a sequence file
+
+*******************************************************
+STEP4. Build blast database with all protein sequences
+*******************************************************
+
+makeblastdb -in seqfile.dna.fasta -dbtype nucl -out pksntdb
+
+Building a new DB, current time: 02/01/2016 12:01:30
+New DB name:   pksntdb
+New DB title:  seqfile.dna.fasta
+Sequence type: Nucleotide
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 84231 sequences in 1810.41 seconds.
+
+mv pksntdb* /mnt/gnpn/gnpn/projects/orphanpks/blast/db
+
+*******************************************************
+STEP5. Blast target fasta file against the pks database
+*******************************************************
+
+tblastn -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/pksntdb -query targets.6.fa -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -out targets.out
+
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat targets.out |wc
+  10232   61392  394334
+
+*******************************************************
+STEP6. Filter blast results by % identity > 0.3 and evalue ~0.05/80000 ~e-8
+        For FabFs % identity > 0.6
+*************************************************
+
+Run filter_blast.py
+Filtered results in targets.filtered.out
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat targets.filtered.out |wc
+   2431   17017  114558
+
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat targets.filtered.out.withallfabs |wc
+   3274   22918  156798
+
+*******************************************************
+STEP6. Require putative target to be in PKS cluster
+target is <50kb away from a KS
+*************************************************
+./target_ks_tandem.py
+
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat gbids_for_antismash.txt |wc
+    111     111    1251
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat gbids_for_antismash.txt |sort -u |wc
+         56      56     632
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat gbids_for_antismash.txt |sort -u > gbids_for_antismash.unique.txt
+
+
+*******************************************************
+STEP7. Run antismash on 56 gbids
+*************************************************
+./run_antismash.targets.py
+lr -R | grep "geneclusters.js" |wc
+     56     504    3833
+
+*******************************************************
+STEP8. Parse geneclusters.js files to extract protein sequences
+*************************************************
+
+./parse_js.py
+
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash$ cat sequences.faa.56.alltypes.fasta |grep ">" |wc
+   6203   16382  506507
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash$ cat sequences.faa.56.pks.fasta |grep ">" |wc
+   1121    2925   93898
+
+*******************************************************
+STEP9. Make prot database from these 1121sequences
+*************************************************
+
+makeblastdb -in sequences.faa.56.pks.fasta -dbtype prot -out pksdb1121
+
+Building a new DB, current time: 02/01/2016 21:23:33
+New DB name:   pksdb1121
+New DB title:  sequences.faa.56.pks.fasta
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 1121 sequences in 0.05388 seconds.
