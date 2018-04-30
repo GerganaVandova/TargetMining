@@ -1,20 +1,16 @@
 ################################################################################################################################## 
-# Compare 5 pHMMs interms of how they score:
-# 1.  a positive training set (known Type II KS and CLFs)
-# 2.  a negative training set (type I, FabF, FabH, etc)
+# Compare 4 pHMMs interms of how they score:
+# 1.  a positive training set (known TypeI, Type II, cisatpksnrps, transatpksnrps KS)
+# 2.  a negative training set (FabF, TypeIII, TypeI, Type II, cisatpksnrps, transatpksnrps KS)
 # Set of HMMs tested (for now):
-# t2ACP.selectknown12.hmm
-#  t2ks.Erin.60.hmm
-#  t2ks.selectKnown12.hmm
-#  t2ks.antismash.25.hmm
-#  t2ks.C16.hmm
-#  t2ks.C28.hmm
+# t1ks.11.hmm
+# t2ks.12.hmm
+# cisatpksnrps.10.hmm
+# transatpksnrps.7.hmm
 # Choose cutoff by testing HMMs against positive and negative train sets
-# HMMs were made manually (or in a README) and stored in the dir HMM/
+# HMMs were made manually and stored in the dir HMM/
 
 hmm_dir = HMM
-#hmm_dir = HMM_CLF
-#hmm_dir = HMM_ACP #dir for ACP hmm only
 # Positive training sets
 fasta_dir = FastaTestSets
 
