@@ -1,5 +1,9 @@
-April 25, 2018
+Useful commands:
+diskutil umount force /Users/gvandova/oldTargetMining/
+sshfs gvandova@maguro.stanford.edu:/mnt/gnpn/gnpn/projects/orphanpks/oldTargetMining/ /Users/gvandova/oldTargetMining/
 
+
+April 25, 2018
 
 1. Update blast databases
     ssh maguro
@@ -19,8 +23,6 @@ April 25, 2018
 Add one more:
     perl update_blastdb.pl --passive est_others
 
-2. Unzip databases:
-for f in `ls *.tar.gz`; do echo "----------    $f    -----------"; tar -xvzf $f; done
 
 Blast FTP site
 https://www.ncbi.nlm.nih.gov/books/NBK62345/
@@ -30,3 +32,112 @@ https://www.ncbi.nlm.nih.gov/genbank/htgs/
 https://www.ncbi.nlm.nih.gov/dbSTS/
 other_genomic -  Genomic records (NC/NT/NS/NZ accessioned) for lower eukaryotes, microbes and organelles.
 refseq_genomic.##.tar.gz	All genomic sequences from NCBI RefSeq project, including wgs scaffolds.
+
+
+April 26, 2018
+2. Unzip databases:
+for f in `ls *.tar.gz`; do echo "----------    $f    -----------"; tar -xvzf $f; done
+
+3a. Get WGS database:
+Whole genome shotgun sequence assemblies for various organisms. It is already
+superseded by the project-based datasets stored in vdb format (ftp://ftp​.ncbi.nlm.nih.gov/sra/wgs/).
+
+3b. Download Assemblies (is this the same as WGS data?):
+
+    https://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/
+
+
+    https://www.ncbi.nlm.nih.gov/assembly/?term=all%5Bfilter%5D
+    filter by bacteria (137,085 entries)
+
+    This is the ftp site:
+    https://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Acetobacter_cerevisiae/all_assembly_versions/GCA_001580535.1_ASM158053v1/GCA_001580535.1_ASM158053v1_genomic.gbff.gz
+    https://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/*/all_assembly_versions/*/*.gbff.gz
+
+    This is the command:
+    https://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Acetobacter_cerevisiae/all_assembly_versions/GCA_001580535.1_ASM158053v1/GCA_001580535.1_ASM158053v1_genomic.gbff.gz
+
+    This is the modified command I should try:
+    wget https://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/*/all_assembly_versions*/*.gbff.gz -P my_dir/
+
+Ask John Bell for help
+
+4. Choose clusters to mine:
+    1. TypeI Modular PKS
+    2. Trans AT PKS
+    3. NRPS
+    4. PKS/NRPS Hybrid
+    5. Bacterial type III PKS
+    6. TypeI Iterative PKS
+    7. TypeII PKS
+
+5. Choose sequences from each class to mine:
+
+    1. TypeI Modular PKS
+
+        All of the pks/nrps hybrids are with at least 3 KS,
+        TODO: Should I add nrps/pks hybrdids?
+    2. trans-AT pks/nrps hybrids (7 sequences)
+    3. Cis-AT pks/nrps hybrids (10 sequences)
+
+
+        From Maureen's 2014 phylogenetic tree, choose 11 typeI pks, and all pks/nrps
+
+        trans-at pks nrps hybrids
+        Pederin (AX768043 1) 2003, 10 KS, 2 AT, 2 C, 2 A, Pseudomonas sp.
+        Rhizoxin (AM411073 1) 2006, 16 KS, 2 AT, 2 C, 1 A, Burkholderia rhizoxina           pks in pksdb
+        Difficidin (AJ634062 1) 2004, 14 KS, 1 AT, 0 C, 1 A, Bacillus amyloliquefaciens
+        Bryostatin (DQ889941 1) 2004, 16 KS, AT, 1 C, 0 A, Candidatus Endobugula sertula    pks in both db
+        Mupirocin (AF318063S1 1) 2000, 10 KS, 2 AT, 0 C, 0 A, Pseudomonas fluorescens       pks in both db
+        Leinamycin (AF484556 1) 2002, 7 KS, 1 AT, 7 C, 7 A, Streptomyces atroolivaceus
+        Chivosazol (DQ065771 1) 2005, 18 KS, 2 AT, 2 C, 1 A, Polyangium cellulosum          pks in pksdb
+        Disorazol (AJ874112 1) 2004, 10 KS, 1 AT, 2 C, 1 A, Polyangium cellulosum           pks in pksdb
+        Virginiamycin (AB283030 1) 2006, 8 KS, 1 AT, 6 C, 4 A, Streptomyces virginiae       pks in pksdb
+        Pristinamycin (FR682001 1) 2010, 10 KS, 1 AT, 3 C, 3 A, Streptomyces pristinaespiralis  nrps pksdb, pks/nrps in mibig, but no KS domains, exclude
+        Lankacidin (GQ925917 1) 2009, 5 KS, 1 AT, 1 C, 1 A, Streptomyces rochei
+
+
+        Cis-AT ps/nrps hybrids
+        Myxothiazol (AF188287 1) 1999, 5 KS, 6 AT, 3 C, 3 A, Stigmatella aurantiaca
+        Melithiazol (AJ557546 1) 2003, 4 KS, 4 AT, 3 C, 3 A, Melittangium lichenicola
+        Curacin (AY652953 1) 2010, 9 KS, 9 AT, 1 C, 1 A, Lyngbya majuscula
+        Guadinomine (JX545234 1) 2012, 4 KS, 4 AT, 1 C, 1 A, Streptomyces sp. K01-0509
+        Cylindrospermopsin (EU140798 1) 2007, 5 KS, 5 AT, 0 C, 1 A, Cylindrospermopsis raciborskii
+        Epothilone (AF210843 1) 1999, 9 KS, 9 AT, 1 C, 1 A, Sorangium cellulosum
+        Chondramide (AM179409 1) 2005, 3 KS, 4 AT, 3 C, 3 A, Chondromyces crocatus      in pksdb as modular pks
+        Microcystin (AF183408 1) 1999, 4 KS, 3 AT, 6 C, 7 A, Microcystis aeruginosa
+        Cryptophycin (EF159954 1) 2006, 3 KS, 3 AT, 3 C, 3 A, Nostoc sp. ATCC 53789     in pksdb as modular pks
+        Pyoluteorin (CP000076 2) 1998, 3 KS, 2 AT, 0 C, 1 A, Pseudomonas protegens      ib both pksdb and mibig as pks, exclude
+
+        add rapamycin, why it is not in her tree?
+
+
+
+April 30, 2018
+
+    4. iterative type I pks
+        Most itypeI are from fungal plant pathogens
+
+    4. type II pks (12 sequences) - from the pnas paper
+
+
+
+
+
+
+
+
+
+        gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/oldTargetMiningGenome$ du -sh *
+        2.0G    antismash
+        228G    antismash_output_refseq
+        35G     gbdirs
+        112G    gbdirs_all
+        9.5K    parse_gb.py
+        9.5K    parse_js.py
+        93G     refseq_bacterial_genomes
+        52G     refseq_bacterial_genomes_gz
+        512     refseq_parsed_clusters
+        9.5K    run_antismash_genomes.py
+        1.8G    test_antismash_output_refseq
+        192M    test_refseq_bacterial_genomes
