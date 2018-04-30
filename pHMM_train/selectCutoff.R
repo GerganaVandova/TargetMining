@@ -30,7 +30,7 @@ plotScores <- function(hmm_filename, name_text, mylabs, mylabs_readable,
 
 }
 
-hmm_dir <- "/Users/gvandova/Dropbox/Code/TypeIIPKS/pHMM_train/"
+hmm_dir <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/pHMM_train/pHMM_train"
 
 # Print the output figure to pdf
 outfile <- paste(hmm_dir,"compare.sets.partner.0603.pdf", sep="")

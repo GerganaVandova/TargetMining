@@ -157,9 +157,9 @@ gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/pHMM_train/pHMM_t
                  mv FASTA/*.hmm HMM/
 
                  4. Compare 4 pHMMs interms of how they score:
-                    FastaTestSets/
 
-                    Compile Training sets:
+
+                    Compile Training sets in FastaTestSets:
 
                     TypeII.KS.30.fasta (from typeII paper)
                     TypeIII.KS.3.fasta (from typeII paper)
@@ -170,7 +170,9 @@ gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/pHMM_train/pHMM_t
                     Transat.KS.5.fasta (from pksdb, 2 PKS and 3 PKS/NRPS)
                     Cisat.KS.5.fasta (from pksdb, 2 NRPS/PKS and 3 PKS/NRPS)
 
-
+                5. Run make hmmsearch (no changes in Makefile)
+                    creates HMM.hmmsearch.FastaTestSets/
+                    HMM.hmmsearch.FastaTestSets.parse/
 
 
 
