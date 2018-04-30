@@ -117,11 +117,46 @@ April 30, 2018
 
     4. iterative type I pks
         Most itypeI are from fungal plant pathogens
+        There are 3 bacterial KS sequences in pksdb.
+        I should probably skip this class
 
-    4. type II pks (12 sequences) - from the pnas paper
+    5. type II pks (12 sequences) - from the pnas paper
 
 
+pHMM_train
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/pHMM_train/pHMM_train/FASTA$
 
+                 1. rm all files but t2ks.selectKnown12.fasta
+                                  t2ks.antismash.Erin.60.fasta
+                                  KSIII.10.fasta
+
+                 gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/pHMM_train/pHMM_train/FASTA$ lr
+                 total 48
+                 -rw-r----- 1 gvandova orphanpks 29203 Apr 30 11:39 t2ks.antismash.Erin.60.fasta
+                 -rw-rw-r-- 1 gvandova orphanpks  4392 Apr 30 11:39 KSIII.10.fasta
+                 -rw-rw-r-- 1 gvandova orphanpks  5867 Apr 30 11:39 t2ks.selectKnown12.fasta
+
+                 2. add all typeI ks sequences to FASTA/
+                 gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/pHMM_train$ mv *.fasta pHMM_train/FASTA/
+
+
+                 3. MSA and HMM
+                 gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/pHMM_train/pHMM_train/FASTA$ muscle -in t1ks.11.fasta -out t1ks.11.fas -maxiters 100
+                 gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/pHMM_train/pHMM_train/FASTA$ hmmbuild -n t1ks --amino t1ks.11.hmm t1ks.11.fas
+
+                 muscle -in t1ks.11.fasta -out t1ks.11.fas -maxiters 100
+                 muscle -in t2ks.12.fasta -out t2ks.12.fas -maxiters 100
+                 muscle -in cisatpksnrps.10.fasta -out cisatpksnrps.10.fas -maxiters 100
+                 muscle -in transatpksnrps.7.fasta -out transatpksnrps.7.fas -maxiters 100
+
+                 hmmbuild -n t1ks --amino t1ks.11.hmm t1ks.11.fas
+                 hmmbuild -n t2ks --amino t2ks.12.hmm t2ks.12.fas
+                 hmmbuild -n cisat--amino cisatpksnrps.10.hmm cisatpksnrps.10.fas
+                 hmmbuild -n transat --amino transatpksnrps.7.hmm transatpksnrps.7.fas
+
+                 mv *.fas ../MSA/
+                 mv FASTA/*.hmm HMM/
+                  
 
 
 
