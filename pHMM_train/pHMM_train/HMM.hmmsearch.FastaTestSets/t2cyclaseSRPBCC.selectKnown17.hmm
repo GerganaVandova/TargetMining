@@ -1,0 +1,1322 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/ACP.76.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                           76  (5847 residues searched)
+Passed MSV filter:                         0  (0); expected 1.5 (0.02)
+Passed bias filter:                        0  (0); expected 1.5 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 76  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.04
+# Mc/sec: 20.61
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/AT.7.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            7  (2524 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  7  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.05
+# Mc/sec: 7.12
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/Aur.ACP.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            1  (84 residues searched)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 0.59
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/Aur.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            2  (813 residues searched)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  2  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.03
+# Mc/sec: 3.82
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/CLF.30.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                           31  (12737 residues searched)
+Passed MSV filter:                         0  (0); expected 0.6 (0.02)
+Passed bias filter:                        0  (0); expected 0.6 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 31  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 89.80
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/Cyclase.3.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            3  (791 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.04
+# Mc/sec: 2.79
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/CyclaseABD.3.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            3  (431 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.02
+# Mc/sec: 3.04
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/Cyclase_polyket.6.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            6  (654 residues searched)
+Passed MSV filter:                         1  (0.166667); expected 0.1 (0.02)
+Passed bias filter:                        1  (0.166667); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  6  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.14
+# Mc/sec: 0.66
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/CyclaseSRPBCC.17.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                         -----------
+    3.2e-62  198.9   5.2    3.6e-62  198.7   5.2    1.0  1  gi|46925|emb|CAA39411.1|          putative polyketide cyclase [Str
+    8.3e-58  184.6   3.7    9.4e-58  184.5   3.7    1.0  1  gi|120431569|gb|ABM21750.1|       PdmD [Actinomadura hibisca]
+      3e-57  182.8   1.1    3.3e-57  182.7   1.1    1.0  1  gi|730913:3-148                   RecName: Full=Multifunctional cy
+    8.2e-57  181.4   1.0    9.3e-57  181.2   1.0    1.0  1  gi|33327099|gb|AAQ08919.1|        putative polyketide cyclase [Str
+    2.6e-56  179.8   0.7    2.9e-56  179.6   0.7    1.0  1  gb|AAK06788.1|AF324838_7:9-149    putative cyclase/dehydrase SimA5
+    4.7e-55  175.7   0.3    5.2e-55  175.5   0.3    1.0  1  gb|AAK06788.1|AF324838_7:162-313  putative cyclase/dehydrase SimA5
+    4.1e-54  172.7   2.2    4.5e-54  172.5   2.2    1.0  1  gb|AAZ78334.2|:10-150             OxyK [Streptomyces rimosus]
+    5.5e-53  169.0   0.5    6.1e-53  168.9   0.5    1.0  1  gb|AHF72770.1|:9-150              cyclase/dehydratase/aromatase [S
+    3.5e-51  163.2   0.0    3.9e-51  163.0   0.0    1.0  1  gb|AAZ78334.2|:161-313            OxyK [Streptomyces rimosus]
+      2e-50  160.7   0.0    2.2e-50  160.5   0.0    1.0  1  gb|AHF72770.1|:159-310            cyclase/dehydratase/aromatase [S
+    1.4e-49  158.0   0.1    1.5e-49  157.8   0.1    1.0  1  gi|519338309:158-309              putative Granaticin polyketide s
+    1.5e-49  157.9   0.6    1.6e-49  157.8   0.6    1.0  1  gi|519338309:10-146               putative Granaticin polyketide s
+    1.1e-48  155.1   0.1    1.2e-48  154.9   0.1    1.0  1  gi|14717097:9-147                 actinorhodin polyketide synthase
+    1.3e-48  154.8   1.9    1.5e-48  154.7   1.9    1.0  1  gb|AAP69576.1|:10-149             putative cyclase/dehydratase [St
+    9.2e-46  145.6   1.0      1e-45  145.4   1.0    1.0  1  gi|45259320|emb|CAE51178.1|       RemI protein [Streptomyces resis
+    1.9e-41  131.6   0.2    2.1e-41  131.4   0.2    1.0  1  gb|AAP69576.1|:160-309            putative cyclase/dehydratase [St
+    9.6e-41  129.3   0.2    1.1e-40  129.1   0.2    1.0  1  gi|14717097:158-307               actinorhodin polyketide synthase
+
+
+Domain annotation for each sequence (and alignments):
+>> gi|46925|emb|CAA39411.1|  putative polyketide cyclase [Streptomyces coelicolor]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  198.7   5.2   3.6e-62   3.6e-62       1     141 []       5     146 ..       5     146 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 198.7 bits;  conditional E-value: 3.6e-62
+           t2cyclaseSRPBCC   1 fedsitidapaelvydllndiekWpelfpevakvellerdgg..lqrltmettadGavktwvSeRvldpealtvrykqvvetapl 83 
+                               ++++iti+ap+elv++++ndiekWp+lf+e+a+ve+l+rd++  ++rltm+++adG+v++wvSeRv+dp ++tvr+++ vet+p+
+  gi|46925|emb|CAA39411.1|   5 TDNEITIAAPMELVWNMTNDIEKWPGLFSEYASVEVLGRDDDkvTFRLTMHPDADGKVWSWVSERVADPVTRTVRAQR-VETGPF 88 
+                               69****************************************9***********************************.****** PP
+
+           t2cyclaseSRPBCC  84 almngaWtieevgegtevtlrhdfaikddapealawvrealntnsraelaaikalaEr 141
+                               ++mn+ W+++e++egt++++++dfa+k+dap+++aw+++++n+nsr+++a+i++ +E+
+  gi|46925|emb|CAA39411.1|  89 QYMNIVWEYAETAEGTVMRWTQDFAMKPDAPVDDAWMTDNINRNSRTQMALIRDRIEQ 146
+                               ********************************************************96 PP
+
+>> gi|120431569|gb|ABM21750.1|  PdmD [Actinomadura hibisca]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  184.5   3.7   9.4e-58   9.4e-58       1     141 []       6     147 ..       6     147 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 184.5 bits;  conditional E-value: 9.4e-58
+              t2cyclaseSRPBCC   1 fedsitidapaelvydllndiekWpelfpevakvellerdgg..lqrltmettadGavktwvSeRvldpealtvrykqvvet 80 
+                                  +++ i+idap + v+d++nd+++Wpelf+e+a++e+lerdg+  ++rltm+++adG++++wvSeR++d++altv++++ vet
+  gi|120431569|gb|ABM21750.1|   6 TDSVIVIDAPLDVVWDMTNDVASWPELFDEYASAEILERDGDtvRFRLTMHPDADGNAWSWVSERTPDRAALTVNAHR-VET 86 
+                                  57889*************************************999*********************************.*** PP
+
+              t2cyclaseSRPBCC  81 aplalmngaWtieevgegtevtlrhdfaikddapealawvrealntnsraelaaikalaEr 141
+                                  +++++mn++W+++ev++g+e+++r+dfa+k+++p++la+++e++++ns  ++++ik+++Er
+  gi|120431569|gb|ABM21750.1|  87 GWFEHMNLRWDYREVPGGVEMRWRQDFAMKEASPVSLAAMTERIQSNSPVQMKLIKDKVER 147
+                                  ***********************************************************96 PP
+
+>> gi|730913:3-148  RecName: Full=Multifunctional cyclase-dehydratase-3-O-methyl transferase TcmN
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  182.7   1.1   3.3e-57   3.3e-57       1     140 [.       3     143 ..       3     144 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 182.7 bits;  conditional E-value: 3.3e-57
+  t2cyclaseSRPBCC   1 fedsitidapaelvydllndiekWpelfpevakvellerdgg..lqrltmettadGavktwvSeRvldpealtvrykqvvetaplalmngaWti 92 
+                      +++si+++ap+elv+d++ndie Wpelf+e+a++e+l++dg+   +rl+++++a+G+v++wvS+Rv+d+ ++tvr+++ vet+p+a+mn++Wt+
+  gi|730913:3-148   3 TDNSIVVNAPFELVWDVTNDIEAWPELFSEYAEAEILRQDGDgfDFRLKTRPDANGRVWEWVSHRVPDKGSRTVRAHR-VETGPFAYMNLHWTY 95 
+                      69****************************************999999******************************.*************** PP
+
+  t2cyclaseSRPBCC  93 eevgegtevtlrhdfaikddapealawvrealntnsraelaaikalaE 140
+                      ++v++gte+++ ++f++k+ ap+++a+++++lnt++ra++++ik+++E
+  gi|730913:3-148  96 RAVAGGTEMRWVQEFDMKPGAPFDNAHMTAHLNTTTRANMERIKKIIE 143
+                      ***********************************************9 PP
+
+>> gi|33327099|gb|AAQ08919.1|  putative polyketide cyclase [Streptomyces griseus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  181.2   1.0   9.3e-57   9.3e-57       1     141 []       5     146 ..       5     146 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 181.2 bits;  conditional E-value: 9.3e-57
+             t2cyclaseSRPBCC   1 fedsitidapaelvydllndiekWpelfpevakvellerdgg..lqrltmettadGavktwvSeRvldpealtvrykqvveta 81 
+                                 +++s+++dap+el++d++ndie+Wp+lf+e+ak+e+l+rdg   ++rlt++++++Gav++wvSeR++dp+++tvr+++ +et+
+  gi|33327099|gb|AAQ08919.1|   5 TDNSVVVDAPMELLWDMTNDIESWPGLFSEYAKAEILGRDGAtvTFRLTLHPDESGAVWDWVSERTPDPATRTVRARR-IETG 86 
+                                 69****************************************999*********************************.**** PP
+
+             t2cyclaseSRPBCC  82 plalmngaWtieevgegtevtlrhdfaikddapealawvrealntnsraelaaikalaEr 141
+                                 p+ +mn+ Wt++++++g+e+++r++f++k+  p+ +a+++e+lntn+r+e+a+ik+l+E+
+  gi|33327099|gb|AAQ08919.1|  87 PFVHMNILWTYASTDAGVEMRWRQEFEVKPGLPFGDAEMTERLNTNTRREMARIKELVEK 146
+                                 **********************************************************95 PP
+
+>> gb|AAK06788.1|AF324838_7:9-149  putative cyclase/dehydrase SimA5 [Streptomyces antibioticus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  179.6   0.7   2.9e-56   2.9e-56       1     140 [.       1     141 []       1     141 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 179.6 bits;  conditional E-value: 2.9e-56
+                 t2cyclaseSRPBCC   1 fedsitidapaelvydllndiekWpelfpevakvellerdgglqrltmettadGavktwvSeRvldpealtvrykqvve 79 
+                                     +e++i++dapa++vy+ll+++e+Wp++f ++++v+++er+++++r+++++ta+Ga+k+w+S+R+ldpeal++ ++q+v+
+  gb|AAK06788.1|AF324838_7:9-149   1 VEHTIEVDAPATDVYRLLAEVENWPRIFGPTIHVDHVERGARTERIRIWATANGAAKSWTSRRELDPEALRIDFRQEVS 79 
+                                     69***************************************************************************** PP
+
+                 t2cyclaseSRPBCC  80 taplalmngaWtieevgegte.vtlrhdfaikddapealawvrealntnsraelaaikalaE 140
+                                      +p+a+m+gaW ie+v+eg++ v+l hd+++ ddape+law+++a+++nsr+elaa+ka aE
+  gb|AAK06788.1|AF324838_7:9-149  80 APPVAAMGGAWIIEPVSEGACrVRLLHDYRAIDDAPEDLAWIEQAVDRNSRSELAALKANAE 141
+                                     ***********************************************************998 PP
+
+>> gb|AAK06788.1|AF324838_7:162-313  putative cyclase/dehydrase SimA5 [Streptomyces antibioticus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  175.5   0.3   5.2e-55   5.2e-55       1     141 []       1     152 []       1     152 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 175.5 bits;  conditional E-value: 5.2e-55
+                   t2cyclaseSRPBCC   1 fedsitidapaelvydllndiekWpelfpevakvellerdgglqrltmetta.dGavktwvSeRvldpealtvrykq 76 
+                                       f+ds++id++a++vyd+ln++++W+e++p+va+vel+e+++glq+ltmet+a dG+++t++S+Rv++p++ +++ykq
+  gb|AAK06788.1|AF324838_7:162-313   1 FQDSVRIDGSAKDVYDFLNEADRWTERLPHVAEVELTEQTPGLQVLTMETRAkDGSTHTTSSVRVCFPHE-RIVYKQ 76 
+                                       79********************************************************************.****** PP
+
+                   t2cyclaseSRPBCC  77 vvetaplalmngaWtieevgegtevtlrhdfaikdda...........pealawvrealntnsraelaaikalaEr 141
+                                       +v +a+++l++g W +ee+gegt++t++h++ i++++           +ea+++v++al+tnsra+l ++k++aEr
+  gb|AAK06788.1|AF324838_7:162-313  77 TVLPALMTLHTGYWLLEEDGEGTVATSQHTVIINTANirailgesagvAEARQYVQTALSTNSRATLGHAKDYAER 152
+                                       **************************************************************************96 PP
+
+>> gb|AAZ78334.2|:10-150  OxyK [Streptomyces rimosus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  172.5   2.2   4.5e-54   4.5e-54       3     140 ..       2     140 ..       1     141 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 172.5 bits;  conditional E-value: 4.5e-54
+        t2cyclaseSRPBCC   3 dsitidapaelvydllndiekWpelfpevakvellerdgglqrltmettadGavktwvSeRvldpealtvrykqvvetaplalmngaW 90 
+                            ++++idapa++vy+l++d+++Wp++f+++++ve +e d++ +rl++++ta+G+vk+w+S+R ldpe ++vr++q+v+++p+a+m+g+W
+  gb|AAZ78334.2|:10-150   2 HRTEIDAPADRVYALIRDAAEWPRHFTPTVHVERAELDARSERLRIWATANGEVKHWTSHRALDPEGQSVRFRQEVCSPPVAAMSGEW 89 
+                            7899************************************************************************************ PP
+
+        t2cyclaseSRPBCC  91 tieevgegte.vtlrhdfaikddapealawvrealntnsraelaaikalaE 140
+                             ++++++g++ +tl+h+fa+ dd+pe+ +w+++a ++nsr+ela+ikalaE
+  gb|AAZ78334.2|:10-150  90 VLRDLPGGRCeLTLHHTFAAVDDRPEDVEWITTATDRNSRTELANIKALAE 140
+                            **************************************************9 PP
+
+>> gb|AHF72770.1|:9-150  cyclase/dehydratase/aromatase [Salinispora pacifica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  168.9   0.5   6.1e-53   6.1e-53       1     140 [.       1     141 [.       1     142 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 168.9 bits;  conditional E-value: 6.1e-53
+       t2cyclaseSRPBCC   1 fedsitidapaelvydllndiekWpelfpevakvellerdgglqrltmettadGavktwvSeRvldpealtvrykqvvetaplalmnga 89 
+                           +e+++ +dapae+vy+l++++++Wpe+fp+++++e+lerdg+ + +++++ta+Ga+ktw+S+R +d+e++tv+++q+ +++p+  m+ga
+  gb|AHF72770.1|:9-150   1 TEHQVLVDAPAERVYALIEEVGRWPEVFPPTVHAECLERDGEAELIRIWATANGAAKTWTSRRRHDRERWTVSFRQERSQYPVGGMGGA 89 
+                           69*************************************************************************************** PP
+
+       t2cyclaseSRPBCC  90 Wtieevgegte.vtlrhdfaikddapealawvrealntnsraelaaikalaE 140
+                           W ie+++ +++ v+l hdf   +d+p++l+w+++a+++ns++elaa+k++aE
+  gb|AHF72770.1|:9-150  90 WVIEPISVSACrVRLLHDFFPASDDPADLTWIQQAVDRNSTSELAALKTAAE 141
+                           **************************************************99 PP
+
+>> gb|AAZ78334.2|:161-313  OxyK [Streptomyces rimosus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  163.0   0.0   3.9e-51   3.9e-51       1     140 [.       1     152 [.       1     153 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 163.0 bits;  conditional E-value: 3.9e-51
+         t2cyclaseSRPBCC   1 fedsitidapaelvydllndiekWpelfpevakvellerdgglqrltmetta.dGavktwvSeRvldpealtvrykqvvetaplalm 86 
+                             feds t++apae+vy++l++++kWp+++p+v++ +l+e ++g+q++tm t+a dG+++t++S+Rv++p++l+++ykq+ ++++++l+
+  gb|AAZ78334.2|:161-313   1 FEDSETVHAPAEAVYAFLAEAGKWPDRLPHVSRLDLTEPSDGVQVMTMVTRAnDGSEHTTESVRVCFPDELRIVYKQIGTPPLMTLH 87 
+                             79************************************************************************************* PP
+
+         t2cyclaseSRPBCC  87 ngaWtieevgegtevtlrhdfaikdda...........pealawvrealntnsraelaaikalaE 140
+                             +g+W+i+++g+g  vt++h+++i+++a           ++a+a vr+a++ ns a+la++k++aE
+  gb|AAZ78334.2|:161-313  88 TGEWSIRDTGDGLLVTSQHTIRINESAipeilgadataADARARVRAAVGGNSAATLALAKRFAE 152
+                             ****************************************************************9 PP
+
+>> gb|AHF72770.1|:159-310  cyclase/dehydratase/aromatase [Salinispora pacifica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  160.5   0.0   2.2e-50   2.2e-50       1     140 [.       1     152 []       1     152 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 160.5 bits;  conditional E-value: 2.2e-50
+         t2cyclaseSRPBCC   1 fedsitidapaelvydllndiekWpelfpevakvellerdgglqrltmetta.dGavktwvSeRvldpealtvrykqvvetaplalm 86 
+                             f+d++ ++++a +vyd+lnd+++Wp ++p+va+v l+e+++glq+l+m+t++ dG v+t++S+Rv++p++  ++ykq+v++a+l+l+
+  gb|AHF72770.1|:159-310   1 FDDTVPVAGDAAEVYDFLNDARRWPLRLPHVARVVLAEETPGLQVLEMDTRTkDGPVHTTRSVRVCEPHR-GIVYKQIVPPALLMLH 86 
+                             79********************************************************************.**************** PP
+
+         t2cyclaseSRPBCC  87 ngaWtieevgegte.vtlrhdfaikdda...........pealawvrealntnsraelaaikalaE 140
+                              g+W iee+g g++ vt+rh+++i++++           p+a++ vr+al++ns ++l+a+ka+aE
+  gb|AHF72770.1|:159-310  87 LGRWLIEEQGPGRVlVTSRHTVRINTARiaevlgpeadlPAAREFVRNALSANSLTTLRAAKAYAE 152
+                             ****************************************************************99 PP
+
+>> gi|519338309:158-309  putative Granaticin polyketide synthase bifunctional cyclase [Streptomyces afghaniensis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  157.8   0.1   1.5e-49   1.5e-49       1     141 []       1     152 []       1     152 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 157.8 bits;  conditional E-value: 1.5e-49
+       t2cyclaseSRPBCC   1 fedsitidapaelvydllndiekWpelfpevakvellerdgglqrltmetta.dGavktwvSeRvldpealtvrykqvvetaplalmng 88 
+                           fed++ti++ a++vyd++++++ W++++p+v  v+l e ++glq+l+m+t + dG+++t++S+Rv+ p++ +++ykqv+ +a+++l++g
+  gi|519338309:158-309   1 FEDTVTIRGAARDVYDFIDRADLWTDRLPHVLAVRLEEPAPGLQTLEMDTLSkDGTSHTTKSYRVCLPHH-RIAYKQVTLPALITLHTG 88 
+                           79********************************************************************.****************** PP
+
+       t2cyclaseSRPBCC  89 aWtieevgegtevtlrhdfaikdda...........pealawvrealntnsraelaaikalaEr 141
+                           +Wti+++++g++++++h+f++++d+           ++a ++vr+al+tns+a+l ++ka+aE+
+  gi|519338309:158-309  89 RWTITPTEDGVTASSQHTFTVDTDNigkvlgadatvQDAIDYVRTALSTNSMATLGLAKAFAEE 152
+                           **************************************************************95 PP
+
+>> gi|519338309:10-146  putative Granaticin polyketide synthase bifunctional cyclase [Streptomyces afghaniensis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  157.8   0.6   1.6e-49   1.6e-49       3     140 ..       1     137 []       1     137 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 157.8 bits;  conditional E-value: 1.6e-49
+      t2cyclaseSRPBCC   3 dsitidapaelvydllndiekWpelfpevakvellerdgglqrltmettadGavktwvSeRvldpealtvrykqvvetaplalmngaWti 92 
+                          ++i+i+apae+vy++l+++e+Wp+lfp+ + v+ +er+++++r+++++ta ++vk+w+S+R+ldpe+l++r++q+v+t+p+a+m+g+W+i
+  gi|519338309:10-146   1 HEIKISAPAETVYRMLAHAEDWPRLFPPNIYVDQVERGEREERIRIWATAGDTVKNWTSRRTLDPENLRIRFRQEVSTPPVAAMGGTWHI 90 
+                          79**************************************************************************************** PP
+
+      t2cyclaseSRPBCC  93 eevgegte.vtlrhdfaikddapealawvrealntnsraelaaikalaE 140
+                          e++++g   v+l+hd+++ dd  e+law++ ++++nsr+el+++k +aE
+  gi|519338309:10-146  91 EALPSGDAlVRLDHDYQAVDD--ESLAWLDGVVDRNSRSELESLKVTAE 137
+                          *********************..6**********************998 PP
+
+>> gi|14717097:9-147  actinorhodin polyketide synthase bifunctional cyclase/dehydratase [Streptomyces coelicolor A3(2)]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  154.9   0.1   1.2e-48   1.2e-48       2     141 .]       2     139 .]       1     139 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 154.9 bits;  conditional E-value: 1.2e-48
+    t2cyclaseSRPBCC   2 edsitidapaelvydllndiekWpelfpevakvellerdgglqrltmettadGavktwvSeRvldpealtvrykqvvetaplalmngaWtie 93 
+                         ++++++apa+++y+l++++e+Wp +f+++++v++ler++g++r++++++  G+vktw+S+R+ldp++l+v+++q+ +++p+a m+g+W+++
+  gi|14717097:9-147   2 VHTLRTQAPARRLYELVARVEDWPAVFEPTVHVQVLERGPGTERFRIWARVGGRVKTWTSRRTLDPDTLRVTFRQELTQPPIASMGGSWEFR 93 
+                        699***************************************************************************************** PP
+
+    t2cyclaseSRPBCC  94 evgegtevtlrhdfaikddapealawvrealntnsraelaaikalaEr 141
+                         +g+gtev l+hdfa+ d+a  al  +real++ns +elaa++alaEr
+  gi|14717097:9-147  94 GDGDGTEVVLTHDFAAVDEA--ALPGLREALDANSGKELAALVALAER 139
+                        ******************96..9***********************96 PP
+
+>> gb|AAP69576.1|:10-149  putative cyclase/dehydratase [Streptomyces griseoflavus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  154.7   1.9   1.5e-48   1.5e-48       3     141 .]       1     140 []       1     140 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 154.7 bits;  conditional E-value: 1.5e-48
+        t2cyclaseSRPBCC   3 dsitidapaelvydllndiekWpelfpevakvellerdgglqrltmettadGavktwvSeRvldpealtvrykqvvetaplalmngaW 90 
+                            +s ti+++a++vy+ l+d+++W+++f+++++   l rdg++q++++++ta+G+ k wvSeR+ldp a+t+r+ q+v+++p+a+m+gaW
+  gb|AAP69576.1|:10-149   1 HSATITGSADAVYRRLEDVGQWSQMFEPTIHGAELARDGNRQTIQLWATANGEPKAWVSERELDPVARTIRFAQTVTSSPVAEMSGAW 88 
+                            789************************************************************************************* PP
+
+        t2cyclaseSRPBCC  91 tieevgegte.vtlrhdfaikddapealawvrealntnsraelaaikalaEr 141
+                            ++ +++e+t+ v+l+h++++++d++e+l+w+ +a++tns++el+a+k ++Er
+  gb|AAP69576.1|:10-149  89 QVLPLSEDTCrVELTHTYRAENDSAESLTWIARAVETNSTKELSALKFACER 140
+                            *************************************************996 PP
+
+>> gi|45259320|emb|CAE51178.1|  RemI protein [Streptomyces resistomycificus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  145.4   1.0     1e-45     1e-45       1     140 [.       4     144 ..       4     145 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 145.4 bits;  conditional E-value: 1e-45
+              t2cyclaseSRPBCC   1 fedsitidapaelvydllndiekWpelfpevakvell..erdgglqrltmetta.dGavktwvSeRvldpea.ltvrykqvv 78 
+                                  +e+si+i a+++lv+d++ndi++W+e+f+e++++++l  erdg+++++ +e t+ +Ga +  +S R ld  + ++v++++ +
+  gi|45259320|emb|CAE51178.1|   4 IENSIVIGADPRLVFDVTNDIARWSEIFDEYSHAKVLseERDGRWTEIVFELTNeEGAGW--RSWRILDHRElVAVAERR-D 82 
+                                  69**********************************99999************9899875..688888765515677777.* PP
+
+              t2cyclaseSRPBCC  79 etaplalmngaWtieevgegtevtlrhdfaikddapealawvrealntnsraelaaikalaE 140
+                                  + +p+a+m+++W+++ev+egt +t+ +df+++d+++++la+v e++nt++r+++a ik+++E
+  gi|45259320|emb|CAE51178.1|  83 PLYPFAYMHLRWSYQEVPEGTLMTWIQDFELDDRFEVPLATVLERMNTHTRHNQAGIKQKIE 144
+                                  *************************************************************9 PP
+
+>> gb|AAP69576.1|:160-309  putative cyclase/dehydratase [Streptomyces griseoflavus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  131.4   0.2   2.1e-41   2.1e-41       1     139 [.       1     150 []       1     150 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 131.4 bits;  conditional E-value: 2.1e-41
+         t2cyclaseSRPBCC   1 fedsitidapaelvydllndiekWpelfpevakvellerdgglqrltmetta.dGavktwvSeRvldpealtvrykqvvetaplalm 86 
+                             f+d+++++ ++ l++++l++ e W++++++va++e+ e ++glq l+m+t++ dG+++ ++S+Rv+++ a ++ ykqv+ +a+l+l+
+  gb|AAP69576.1|:160-309   1 FTDAVDTTVDPVLLFSFLDRGELWAGRLEHVAEAEMREFSDGLQFLRMRTRTpDGDTHVTESYRVSQSPA-RLLYKQVTLPALLSLH 86 
+                             6899******************************************************************.**************** PP
+
+         t2cyclaseSRPBCC  87 ngaWtieevgegtevtlrhdfaikdda...........pealawvrealntnsraelaaikala 139
+                             +g+Wti+++ge+++vt++h++ai++da           ++a++  r++l++ns ++l+a++++a
+  gb|AAP69576.1|:160-309  87 TGEWTITPAGESWRVTSKHTVAIDPDAvhkvlgadatvSDAKRLARRNLGNNSLRTLEAAVRWA 150
+                             ***********************************************************99876 PP
+
+>> gi|14717097:158-307  actinorhodin polyketide synthase bifunctional cyclase/dehydratase [Streptomyces coelicolor A3(2)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.1   0.2   1.1e-40   1.1e-40       1     134 [.       1     150 []       1     150 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 129.1 bits;  conditional E-value: 1.1e-40
+      t2cyclaseSRPBCC   1 fedsitidapaelvydllndiekWpelfpevakvellerdgg..........lqrltmetta.dGavktwvSeRvldpealtvrykqvve 79 
+                          fed++++ ++ +++y+++++++ W+e++p+v+kv+l+e+++g          +q++tmet + dG ++t++S R++ p++ +++ykq+v+
+  gi|14717097:158-307   1 FEDTLRV-PSGDDAYAFIERSDLWQERLPHVRKVTLTEEAAGtgpaetrdmtVQDMTMETVTtDGGTHTTRSIRLCVPAR-SIVYKQLVP 88 
+                          7999***.9********************************99*************************************.********* PP
+
+      t2cyclaseSRPBCC  80 taplalmngaWtieevgegte.vtlrhdfaikdda...........pealawvrealntnsraelaa 134
+                          +a+l+ ++gaWt+     g++ vt+rh++ai++++           ++a++++re+l++nsra+l++
+  gi|14717097:158-307  89 PALLSGHCGAWTF-----GEDtVTARHTVAIDPARveevlgkgatvADARTHLREVLGANSRATLRH 150
+                          *************.....6666*******************************************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                           17  (2512 residues searched)
+Passed MSV filter:                        17  (1); expected 0.3 (0.02)
+Passed bias filter:                       17  (1); expected 0.3 (0.02)
+Passed Vit filter:                        17  (1); expected 0.0 (0.001)
+Passed Fwd filter:                        17  (1); expected 0.0 (1e-05)
+Initial search space (Z):                 17  [actual number of targets]
+Domain search space  (domZ):              17  [number of targets reported over threshold]
+# CPU time: 0.02u 0.02s 00:00:00.04 Elapsed: 00:00:00.02
+# Mc/sec: 17.71
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/Ecoli.ACP.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            1  (78 residues searched)
+Passed MSV filter:                         1  (1); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 0.55
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/FabD.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            3  (942 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 6.64
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/FabF.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            3  (1232 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.03
+# Mc/sec: 5.79
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/FabG.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            2  (490 residues searched)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  2  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.02
+# Mc/sec: 3.45
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/FabH.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            4  (1323 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  4  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.02
+# Mc/sec: 9.33
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/KR.16.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                           16  (4484 residues searched)
+Passed MSV filter:                         1  (0.0625); expected 0.3 (0.02)
+Passed bias filter:                        1  (0.0625); expected 0.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 16  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.02
+# Mc/sec: 31.61
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.all.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                    -----------
+    1.7e-49  158.3   3.1    1.7e-49  158.3   3.1    1.6  2  gi|662748191|gb|AIE76942.1|  putative bifunctional cyclase/3-
+
+
+Domain annotation for each sequence (and alignments):
+>> gi|662748191|gb|AIE76942.1|  putative bifunctional cyclase/3-oxoacyl-ACP reductase GrhT [Streptomyces sp. CN48+]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  158.3   3.1   6.5e-51   1.7e-49       2     140 ..       6     145 ..       5     146 .. 0.98
+   2 ?   -2.2   0.0      0.21       5.6     101     135 ..     243     277 ..     237     280 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 158.3 bits;  conditional E-value: 6.5e-51
+              t2cyclaseSRPBCC   2 edsitidapaelvydllndiekWpelfpevakvellerdgg..lqrltmettadGavktwvSeRvldpealtvrykqvveta 81 
+                                   +si+idap++lv++ +nd+++W+elf+e++ +e+le+dg   ++rl ++++++G+v++wvS+R+ d +++tvr+++ vet+
+  gi|662748191|gb|AIE76942.1|   6 SNSIVIDAPMDLVWERTNDVASWTELFSEYSLAEILEEDGPtvTFRLALHPDENGKVWSWVSRRTTDVASRTVRAHR-VETG 86 
+                                  79**************************************9999*********************************.**** PP
+
+              t2cyclaseSRPBCC  82 plalmngaWtieevgegtevtlrhdfaikddapealawvrealntnsraelaaikalaE 140
+                                  p+a+mn++W++ ++++g+++++++df++kd+ap ++a +++++n+ns  ++ +ik  +E
+  gi|662748191|gb|AIE76942.1|  87 PFAYMNIHWEYVQTDAGVRMQWTQDFHMKDEAPIDDAGMTDRINRNSVVQMGLIKSRIE 145
+                                  **********************************************************9 PP
+
+  == domain 2  score: -2.2 bits;  conditional E-value: 0.21
+              t2cyclaseSRPBCC 101 vtlrhdfaikddapealawvrealntnsraelaai 135
+                                  v+   dfa ++ a+  +a+  +al++n +++ + i
+  gi|662748191|gb|AIE76942.1| 243 VNNAGDFAPQPYAELTDAAWATALQSNLTSTHQVI 277
+                                  66677899999999999999999999987776665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                           26  (8832 residues searched)
+Passed MSV filter:                         1  (0.0384615); expected 0.5 (0.02)
+Passed bias filter:                        1  (0.0384615); expected 0.5 (0.02)
+Passed Vit filter:                         1  (0.0384615); expected 0.0 (0.001)
+Passed Fwd filter:                         1  (0.0384615); expected 0.0 (1e-05)
+Initial search space (Z):                 26  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.02s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 62.27
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.C15.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            5  (1249 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  5  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.04
+# Mc/sec: 4.40
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.C17.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            4  (1045 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  4  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.02
+# Mc/sec: 7.37
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.C19.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            6  (1495 residues searched)
+Passed MSV filter:                         1  (0.166667); expected 0.1 (0.02)
+Passed bias filter:                        1  (0.166667); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  6  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.03
+# Mc/sec: 7.03
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.C9.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                           11  (2889 residues searched)
+Passed MSV filter:                         0  (0); expected 0.2 (0.02)
+Passed bias filter:                        0  (0); expected 0.2 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 11  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 40.73
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/KS.30.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                           31  (13067 residues searched)
+Passed MSV filter:                         0  (0); expected 0.6 (0.02)
+Passed bias filter:                        0  (0); expected 0.6 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 31  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.02
+# Mc/sec: 92.12
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/KSIII.10.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                           10  (3297 residues searched)
+Passed MSV filter:                         0  (0); expected 0.2 (0.02)
+Passed bias filter:                        0  (0); expected 0.2 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 10  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.02s 00:00:00.02 Elapsed: 00:00:00.07
+# Mc/sec: 6.64
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/TypeI.ACP.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                           25  (1953 residues searched)
+Passed MSV filter:                         0  (0); expected 0.5 (0.02)
+Passed bias filter:                        0  (0); expected 0.5 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 25  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.02
+# Mc/sec: 13.77
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/TypeI.AT.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            3  (871 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.02
+# Mc/sec: 6.14
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/TypeI.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            3  (1269 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 8.95
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/TypeIII.KS.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            3  (1124 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 15.85
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2cyclaseSRPBCC.selectKnown17.hmm
+# target sequence database:        FastaTestSets/TypeI.KR.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2cyclaseSRPBCC  [M=141]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (141 nodes)
+Target sequences:                            3  (530 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.02
+# Mc/sec: 3.74
+//
+[ok]

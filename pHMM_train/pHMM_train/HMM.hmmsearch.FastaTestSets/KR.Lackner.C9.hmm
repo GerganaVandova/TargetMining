@@ -1,0 +1,2770 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/ACP.76.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                           76  (5847 residues searched)
+Passed MSV filter:                        11  (0.144737); expected 1.5 (0.02)
+Passed bias filter:                       10  (0.131579); expected 1.5 (0.02)
+Passed Vit filter:                         0  (0); expected 0.1 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 76  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.03
+# Mc/sec: 50.87
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/AT.7.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            7  (2524 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  7  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.02s 00:00:00.02 Elapsed: 00:00:00.04
+# Mc/sec: 16.47
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/Aur.ACP.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            1  (84 residues searched)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.02s 00:00:00.02 Elapsed: 00:00:00.04
+# Mc/sec: 0.55
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/Aur.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            2  (813 residues searched)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  2  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.03
+# Mc/sec: 7.07
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/CLF.30.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                           31  (12737 residues searched)
+Passed MSV filter:                         0  (0); expected 0.6 (0.02)
+Passed bias filter:                        0  (0); expected 0.6 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 31  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.06
+# Mc/sec: 55.41
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/Cyclase.3.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            3  (791 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.02s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 10.32
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/CyclaseABD.3.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            3  (431 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.02s 00:00:00.02 Elapsed: 00:00:00.08
+# Mc/sec: 1.41
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/Cyclase_polyket.6.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            6  (654 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  6  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.02s 00:00:00.02 Elapsed: 00:00:00.04
+# Mc/sec: 4.27
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/CyclaseSRPBCC.17.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                           17  (2512 residues searched)
+Passed MSV filter:                         0  (0); expected 0.3 (0.02)
+Passed bias filter:                        0  (0); expected 0.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 17  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 32.78
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/Ecoli.ACP.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            1  (78 residues searched)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.04
+# Mc/sec: 0.51
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/FabD.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            3  (942 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.02
+# Mc/sec: 12.29
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/FabF.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            3  (1232 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.02
+# Mc/sec: 16.08
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/FabG.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                      -----------
+    2.3e-57  181.5   8.7    1.2e-56  179.1   8.7    1.8  1  gi|388477173|ref|YP_489361.1|  3-oxoacyl-[acyl-carrier-protein]
+    8.9e-56  176.3   6.1    2.3e-55  174.9   6.1    1.5  1  gi|16078654|ref|NP_389473.1|   3-oxoacyl-[acyl-carrier-protein]
+
+
+Domain annotation for each sequence (and alignments):
+>> gi|388477173|ref|YP_489361.1|  3-oxoacyl-[acyl-carrier-protein] reductase [Escherichia coli str. K-12 substr. W3110]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  179.1   8.7   1.2e-56   1.2e-56       5     258 ..       4     241 ..       1     243 [. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 179.1 bits;  conditional E-value: 1.2e-56
+                  KR.Lackner.C9   5 eervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtv 84 
+                                    e ++alvtGa+ GiG a+a +laa+ga+v  +a +e+  a+++ +    g++  G  l+v+d a++e++++++++ fG v
+  gi|388477173|ref|YP_489361.1|   4 EGKIALVTGASRGIGRAIAETLAARGAKVIGTATSENG-AQAISDY--LGANGKGLMLNVTDPASIESVLEKIRAEFGEV 80 
+                                    5699************************9777766665.5555554..356678************************** PP
+
+                  KR.Lackner.C9  85 dvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGv 164
+                                    d+lvnnaG +      +++de w+d+ietnl+svfrl+++v++  +m++k +Grii i s  G  G    a y+a+k G+
+  gi|388477173|ref|YP_489361.1|  81 DILVNNAGITRDNLLMRMKDEEWNDIIETNLSSVFRLSKAVMR--AMMKKRHGRIITIGSVVGTMGNGGQANYAAAKAGL 158
+                                    *****************************************97..599999***************************** PP
+
+                  KR.Lackner.C9 165 vGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdta 244
+                                    +Gf+k+l+ e+a  Gitvn v pG++et m++ + ++               + a++p Gr   ++e+a+ v++l+sd+a
+  gi|388477173|ref|YP_489361.1| 159 IGFSKSLAREVASRGITVNVVAPGFIETDMTRALSDD-----------QRAGILAQVPAGRLGGAQEIANAVAFLASDEA 227
+                                    ******************************9876433...........33456799************************ PP
+
+                  KR.Lackner.C9 245 asitaqalnvcGGl 258
+                                    a it ++l v GG+
+  gi|388477173|ref|YP_489361.1| 228 AYITGETLHVNGGM 241
+                                    ************97 PP
+
+>> gi|16078654|ref|NP_389473.1|  3-oxoacyl-[acyl-carrier-protein] reductase FabG [Bacillus subtilis subsp. subtilis str.
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  174.9   6.1   2.3e-55   2.3e-55       5     258 ..       3     244 ..       1     245 [. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 174.9 bits;  conditional E-value: 2.3e-55
+                 KR.Lackner.C9   5 eervalvtGatsGiGlavarklaaegarvflc.ardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtv 84 
+                                   ++++a+vtGa+ GiG ++a  la++ga+v++  + +e + +e v+e+++ g ++   ++dv + +dv+++++++ + f t+
+  gi|16078654|ref|NP_389473.1|   3 NDKTAIVTGASRGIGRSIALDLAKSGANVVVNySGNEAKANEVVDEIKSMGRKAIAVKADVSNPEDVQNMIKETLSVFSTI 83 
+                                   5799*************************99725677788899************************************** PP
+
+                 KR.Lackner.C9  85 dvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvv 165
+                                   d+lvnnaG +      +++++ w+dvi+ nl++vf  t++v  t +m+++  Griin++s  G  G    a y a+k Gv+
+  gi|16078654|ref|NP_389473.1|  84 DILVNNAGITRDNLIMRMKEDEWDDVININLKGVFNCTKAV--TRQMMKQRSGRIINVSSIVGVSGNPGQANYVAAKAGVI 162
+                                   ***************************************99..56799999****************************** PP
+
+                 KR.Lackner.C9 166 GftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaas 246
+                                   G+tk+ ++ela   itvna+ pG++ t m++++ +           +v + +  +ipl r+ +p++v+++v++l+s+ a  
+  gi|16078654|ref|NP_389473.1| 163 GLTKSSAKELASRNITVNAIAPGFISTDMTDKLAK-----------DVQDEMLKQIPLARFGEPSDVSSVVTFLASEGARY 232
+                                   ******************************98765...........455666678************************** PP
+
+                 KR.Lackner.C9 247 itaqalnvcGGl 258
+                                   +t q+l + GG+
+  gi|16078654|ref|NP_389473.1| 233 MTGQTLHIDGGM 244
+                                   *********996 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            2  (490 residues searched)
+Passed MSV filter:                         2  (1); expected 0.0 (0.02)
+Passed bias filter:                        2  (1); expected 0.0 (0.02)
+Passed Vit filter:                         2  (1); expected 0.0 (0.001)
+Passed Fwd filter:                         2  (1); expected 0.0 (1e-05)
+Initial search space (Z):                  2  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.02u 0.02s 00:00:00.04 Elapsed: 00:00:00.04
+# Mc/sec: 3.20
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/FabH.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            4  (1323 residues searched)
+Passed MSV filter:                         1  (0.25); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  4  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.02s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 34.53
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/KR.16.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                              -----------
+   1.6e-151  493.0   9.2   1.8e-151  492.9   9.2    1.0  1  gi|12744823|gb|AAK06787.1|AF324838_6   putative ketoreductase SimA6 [St
+   5.7e-144  468.3   6.9   6.3e-144  468.2   6.9    1.0  1  gi|14717093|emb|CAC44199.1|            ketoacyl reductase [Streptomyces
+   1.5e-141  460.4   6.8   1.7e-141  460.2   6.8    1.0  1  gi|519338307|ref|WP_020275098.1|       putative Monensin polyketide syn
+   3.8e-141  459.0   6.8   4.2e-141  458.9   6.8    1.0  1  gi|573017189|gb|AHF72767.1|            short-chain dehydrogenase/reduct
+   1.8e-130  424.1   5.1   2.1e-130  423.8   5.1    1.0  1  gi|73621279|gb|AAZ78333.1|             OxyJ [Streptomyces rimosus]
+   4.4e-122  396.6   2.9   4.8e-122  396.4   2.9    1.0  1  gi|32140296|gb|AAP69586.1|             putative ketoreductase [Streptom
+    4.6e-50  160.5  12.0      6e-50  160.1  12.0    1.1  1  gi|12744843|gb|AAK06807.1|AF324838_26  putative 3-keto-acyl-reductase S
+    2.1e-49  158.3   9.0    1.1e-48  156.0   9.0    1.8  1  gi|12744845|gb|AAK06809.1|AF324838_28  putative 3-keto-acyl-reductase S
+    1.8e-37  119.2   0.2    9.2e-37  116.9   0.2    1.8  1  gi|40644858|emb|CAE17551.1|            ketoreductase [Streptomyces gris
+    6.5e-25   78.1   8.0    1.8e-22   70.0   8.0    2.6  1  gi|73621282|gb|AAZ78336.1|             OxyM [Streptomyces rimosus]
+
+
+Domain annotation for each sequence (and alignments):
+>> gi|12744823|gb|AAK06787.1|AF324838_6  putative ketoreductase SimA6 [Streptomyces antibioticus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  492.9   9.2  1.1e-151  1.8e-151       3     261 .]       3     261 .]       1     261 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 492.9 bits;  conditional E-value: 1.1e-151
+                         KR.Lackner.C9   3 eaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvq 75 
+                                            ++++valvtGatsGiGlav+r+laa+g++vf+car++++va t+kelr egl+vdG+++dvr++adv+a+v+
+  gi|12744823|gb|AAK06787.1|AF324838_6   3 GQKQQVALVTGATSGIGLAVVRALAAQGHQVFFCARNAEKVAVTIKELRGEGLDVDGTSCDVRSVADVKAFVA 75 
+                                           6889********************************************************************* PP
+
+                         KR.Lackner.C9  76 aaverfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGk 148
+                                           aaverfG+vdvlvnnaGrsGgGvtae++delw dvietnltsvf +trevlt+ggm+ek+ Gri+niast+Gk
+  gi|12744823|gb|AAK06787.1|AF324838_6  76 AAVERFGPVDVLVNNAGRSGGGVTAELTDELWADVIETNLTSVFMVTREVLTAGGMREKSSGRIVNIASTAGK 148
+                                           ************************************************************************* PP
+
+                         KR.Lackner.C9 149 qGvvlgapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqaki 221
+                                           qGvvlgapysaskhGvvGftkalg+ela+tGitvnavcpGyvetpmaervrqgyaa+y +se+++le+fqaki
+  gi|12744823|gb|AAK06787.1|AF324838_6 149 QGVVLGAPYSASKHGVVGFTKALGNELAPTGITVNAVCPGYVETPMAERVRQGYAAAYGTSEEAILEKFQAKI 221
+                                           ************************************************************************* PP
+
+                         KR.Lackner.C9 222 plGrystpeevaglvgylvsdtaasitaqalnvcGGlGny 261
+                                           plGrystpeevaglvgylvsdtaasitaqalnvcGGlGn+
+  gi|12744823|gb|AAK06787.1|AF324838_6 222 PLGRYSTPEEVAGLVGYLVSDTAASITAQALNVCGGLGNF 261
+                                           ***************************************8 PP
+
+>> gi|14717093|emb|CAC44199.1|  ketoacyl reductase [Streptomyces coelicolor A3(2)]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  468.2   6.9  3.9e-144  6.3e-144       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 468.2 bits;  conditional E-value: 3.9e-144
+                KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfG 82 
+                                  ma+++++valvtGatsGiGl++ar+l++eg rvf+car e+ +++t+kelre+g+e+dG+++dvr++ ++ealv+a+ver+G
+  gi|14717093|emb|CAC44199.1|   1 MATQDSEVALVTGATSGIGLEIARRLGKEGLRVFVCARGEEGLRTTLKELREAGVEADGRTCDVRSVPEIEALVAAVVERYG 82 
+                                  67899***************************************************************************** PP
+
+                KR.Lackner.C9  83 tvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGv 164
+                                  +vdvlvnnaGr GgG+tae+adelwldv+etnlt+vfr+t++vl++ggmle+g+Gri+niastgGkqGvv++apysaskhGv
+  gi|14717093|emb|CAC44199.1|  83 PVDVLVNNAGRPGGGATAELADELWLDVVETNLTGVFRVTKQVLKAGGMLERGTGRIVNIASTGGKQGVVHAAPYSASKHGV 164
+                                  ********************************************************************************** PP
+
+                KR.Lackner.C9 165 vGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaas 246
+                                  vGftkalglela+tGitvnavcpG+vetpma++vr++y++i+evs++e+++r++a++p+Gry++p+eva++v+yl+++ aa+
+  gi|14717093|emb|CAC44199.1| 165 VGFTKALGLELARTGITVNAVCPGFVETPMAASVREHYSDIWEVSTEEAFDRITARVPIGRYVQPSEVAEMVAYLIGPGAAA 246
+                                  ********************************************************************************** PP
+
+                KR.Lackner.C9 247 itaqalnvcGGlGny 261
+                                  +taqalnvcGGlGny
+  gi|14717093|emb|CAC44199.1| 247 VTAQALNVCGGLGNY 261
+                                  **************9 PP
+
+>> gi|519338307|ref|WP_020275098.1|  putative Monensin polyketide synthase ketoacyl reductase [Streptomyces afghaniensis
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  460.2   6.8    1e-141  1.7e-141       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 460.2 bits;  conditional E-value: 1e-141
+                     KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaa 77 
+                                       m+e+++rv lvtGatsGiGlav+r la +g+rvf+++r+ed+v +tvk+l+ee+l+vdG +ldvr++++++ +vqaa
+  gi|519338307|ref|WP_020275098.1|   1 MTEQKSRVVLVTGATSGIGLAVTRLLAGQGHRVFIGSRTEDKVVTTVKQLQEEQLDVDGVVLDVRSVDSIRGFVQAA 77 
+                                       7899************************************************************************* PP
+
+                     KR.Lackner.C9  78 verfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlg 154
+                                       verfGtvd lvnnaG  GgGvta+i+delw+d+++tnl+svfrltrevlttgg+++k++Gr+iniast+GkqGvvlg
+  gi|519338307|ref|WP_020275098.1|  78 VERFGTVDALVNNAGIPGGGVTADISDELWDDIVDTNLNSVFRLTREVLTTGGLRHKDWGRVINIASTAGKQGVVLG 154
+                                       ***************************************************************************** PP
+
+                     KR.Lackner.C9 155 apysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpee 231
+                                       apysaskhGvvGftkalg+ela+tGitvnavcpGyvetpmae+vr++y+ +   se ++le+fqakiplGryst+ e
+  gi|519338307|ref|WP_020275098.1| 155 APYSASKHGVVGFTKALGNELAPTGITVNAVCPGYVETPMAEHVRRNYSRLSGASEAAILEKFQAKIPLGRYSTAAE 231
+                                       ***************************************************************************** PP
+
+                     KR.Lackner.C9 232 vaglvgylvsdtaasitaqalnvcGGlGny 261
+                                       vaglvgyl++dtaasitaqalnvcGGlGn+
+  gi|519338307|ref|WP_020275098.1| 232 VAGLVGYLMTDTAASITAQALNVCGGLGNF 261
+                                       *****************************8 PP
+
+>> gi|573017189|gb|AHF72767.1|  short-chain dehydrogenase/reductase [Salinispora pacifica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  458.9   6.8  2.6e-141  4.2e-141       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 458.9 bits;  conditional E-value: 2.6e-141
+                KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfG 82 
+                                  mae+e+rval+tG+tsGiGlava +la++g +vflcar+ +a++etv +lr++ +++ G ++dvr +adve+lv aav+r+G
+  gi|573017189|gb|AHF72767.1|   1 MAENEQRVALITGGTSGIGLAVAETLARRGLKVFLCARTPEAIEETVGKLRADSHQAAGVVADVRRQADVERLVGAAVARYG 82 
+                                  67899***************************************************************************** PP
+
+                KR.Lackner.C9  83 tvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGv 164
+                                   vdvlvnnaGrsGgGvta+i+delw+dvietnl+svfr+trevl++g++le+g+Grii+iastgGkqGvvlgapysaskhGv
+  gi|573017189|gb|AHF72767.1|  83 HVDVLVNNAGRSGGGVTAKIEDELWNDVIETNLNSVFRVTREVLRSGQLLERGWGRIISIASTGGKQGVVLGAPYSASKHGV 164
+                                  ********************************************************************************** PP
+
+                KR.Lackner.C9 165 vGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaas 246
+                                  +GftkalglelaktG+tvnavcpGyvetpma+rvrqgyaa + ++e e+lerfqakiplGrystpeevaglvgylvsd+aa 
+  gi|573017189|gb|AHF72767.1| 165 IGFTKALGLELAKTGVTVNAVCPGYVETPMAQRVRQGYAAHFATTEAEILERFQAKIPLGRYSTPEEVAGLVGYLVSDAAAP 246
+                                  ********************************************************************************** PP
+
+                KR.Lackner.C9 247 itaqalnvcGGlGny 261
+                                  itaqa+nvcGGlGny
+  gi|573017189|gb|AHF72767.1| 247 ITAQAINVCGGLGNY 261
+                                  **************9 PP
+
+>> gi|73621279|gb|AAZ78333.1|  OxyJ [Streptomyces rimosus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  423.8   5.1  1.3e-130  2.1e-130       3     261 .]       4     263 .]       2     263 .] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 423.8 bits;  conditional E-value: 1.3e-130
+               KR.Lackner.C9   3 eaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtvd 85 
+                                 +a+ r+alvtG+tsGiGlav+++laa+g rvflcar+ ++v++ vkelr++gl+v G + dvr++++ve++v aav+rfG++ 
+  gi|73621279|gb|AAZ78333.1|   4 SATPRTALVTGGTSGIGLAVVKTLAARGLRVFLCARSRENVDAVVKELRDQGLQVAGCEGDVRSRESVERVVRAAVDRFGPLS 86 
+                                 56789****************************************************************************** PP
+
+               KR.Lackner.C9  86 vlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekg.rGriiniastgGkqGvvlgapysaskhGvvGf 167
+                                 vlvnnaGrsGgGvta+i delw+dvi+tnl+s+f +tre+lttgg+ + g  Grii+iastgGkqGv lgapysask G++Gf
+  gi|73621279|gb|AAZ78333.1|  87 VLVNNAGRSGGGVTARIPDELWYDVIDTNLNSAFLVTREALTTGGLERAGvDGRIISIASTGGKQGVPLGAPYSASKAGLIGF 169
+                                 **********************************************887636******************************* PP
+
+               KR.Lackner.C9 168 tkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaq 250
+                                 tkal++ela+tG+tvnavcpGyvetpma rvrq yaa ++++e++vl rf+ kiplGrystpeeva+lvg+l++d+a sitaq
+  gi|73621279|gb|AAZ78333.1| 170 TKALAKELAPTGVTVNAVCPGYVETPMAVRVRQAYAATWDTTEEDVLSRFNDKIPLGRYSTPEEVAALVGHLAGDEAGSITAQ 252
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 251 alnvcGGlGny 261
+                                 alnvcGGlG y
+  gi|73621279|gb|AAZ78333.1| 253 ALNVCGGLGIY 263
+                                 *********87 PP
+
+>> gi|32140296|gb|AAP69586.1|  putative ketoreductase [Streptomyces griseoflavus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  396.4   2.9    3e-122  4.8e-122       6     261 .]       4     259 .]       1     259 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 396.4 bits;  conditional E-value: 3e-122
+               KR.Lackner.C9   6 ervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtvdvlv 88 
+                                  r alvtG++sGiG +var+la+ g+ v +c rd+++++++ kel e+g+ v    +dv +  +v  lv +ave  G++ +lv
+  gi|32140296|gb|AAP69586.1|   4 PRHALVTGGSSGIGKSVARRLASAGHTVTICGRDSERLQQAAKELSEQGAPVTSLIADVSKPRQVGDLVREAVETNGPLGILV 86 
+                                 688******************************************************************************** PP
+
+               KR.Lackner.C9  89 nnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftkal 171
+                                 nnaGr+GgG tae++delw +v++tnl+svf +trevl  gg+ e ++ riiniast+GkqGv l+apysaskhGvvGftka+
+  gi|32140296|gb|AAP69586.1|  87 NNAGRNGGGRTAELSDELWREVLSTNLDSVFYVTREVLARGGIGEVDHARIINIASTAGKQGVLLAAPYSASKHGVVGFTKAV 169
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 172 glelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnv 254
+                                 g+ela+ GitvnavcpGyvetpma+rvrq ya+++e++e evl  f+akiplGrystp+eva+lv+yl+++ aasitaqa+nv
+  gi|32140296|gb|AAP69586.1| 170 GKELAPQGITVNAVCPGYVETPMASRVRQAYADAWETTEAEVLSAFEAKIPLGRYSTPDEVASLVEYLTTEGAASITAQAFNV 252
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 255 cGGlGny 261
+                                 cGGlGn+
+  gi|32140296|gb|AAP69586.1| 253 CGGLGNF 259
+                                 ******8 PP
+
+>> gi|12744843|gb|AAK06807.1|AF324838_26  putative 3-keto-acyl-reductase SimD2 [Streptomyces antibioticus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  160.1  12.0   3.8e-50     6e-50       5     257 ..      26     271 ..      22     272 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 160.1 bits;  conditional E-value: 3.8e-50
+                          KR.Lackner.C9   5 eervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqa 76 
+                                            ++ va+vtGa  GiG a a++laaega v +  r+e + a tv  +r++g ++ G  +dv+ ++ vea v++
+  gi|12744843|gb|AAK06807.1|AF324838_26  26 ADTVAIVTGAGRGIGAATAQRLAAEGATVAVVDRTEADTADTVASIRAAGGRALGIGCDVTVTDLVEAAVDR 97 
+                                            679********************************************************************* PP
+
+                          KR.Lackner.C9  77 averfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastg.. 146
+                                            +v+ fG +dvlvnnaG +       + de w+ vi+  l+++ r  r++    +m ++g Gri+n++s +  
+  gi|12744843|gb|AAK06807.1|AF324838_26  98 TVAEFGRLDVLVNNAGVTRDSLVFMMGDEDWDTVIDVHLNGAARTVRAAR--RQMVRQGSGRIVNLSSIAal 167
+                                            ********************************************999975..57*************98744 PP
+
+                          KR.Lackner.C9 147 GkqGvvlgapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfq 218
+                                            G qG    a y+++k  + G+t++l++el + Gitvna+ pG++ t m++   ++  +       ++ + + 
+  gi|12744843|gb|AAK06807.1|AF324838_26 168 GNQG---QANYATAKAAIQGYTRTLAVELGPHGITVNAIAPGFIATTMTDDTARRMGS----DPVALRKAVA 232
+                                            5666...689**************************************9987666543....2333445578 PP
+
+                          KR.Lackner.C9 219 akiplGrystpeevaglvgylvsdtaasitaqalnvcGG 257
+                                            +++p+ r  +pe++aglv++l++++a+ +t q++ v GG
+  gi|12744843|gb|AAK06807.1|AF324838_26 233 SRVPMRRVGRPEDIAGLVAFLAGPDASYLTGQTIYVDGG 271
+                                            9***********************************998 PP
+
+>> gi|12744845|gb|AAK06809.1|AF324838_28  putative 3-keto-acyl-reductase SimD4 [Streptomyces antibioticus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  156.0   9.0   6.9e-49   1.1e-48       4     258 ..       4     244 ..       1     246 [] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 156.0 bits;  conditional E-value: 6.9e-49
+                          KR.Lackner.C9   4 aeervalvtGatsGiGlavarklaaegarvflca.rdedavaetvkelreeglevdGaaldvrdaadvealv 74 
+                                            + + valvtG++ GiG av+ +l +eg  v +c  r++ a a   k + e g +v  + +dv da +v+++v
+  gi|12744845|gb|AAK06809.1|AF324838_28   4 NGRGVALVTGGSRGIGRAVVLRLVREGFDVAFCYqREAVAAADLEKAVAELGGRVAHRRVDVSDAVQVKEWV 75 
+                                            55679*************************888615556666677889999********************* PP
+
+                          KR.Lackner.C9  75 qaaverfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastg 146
+                                              + +  G+v+v+v  aG    G    ++d+ w+dvi+ nl++ f + r+++   gm++++ G +in++s +
+  gi|12744845|gb|AAK06809.1|AF324838_28  76 RDVESELGPVEVVVTSAGIVRDGPLVMMQDKDWQDVIDVNLNGTFNVCRAAV--FGMMKRKSGCLINLSSVA 145
+                                            *************************************************987..589999************ PP
+
+                          KR.Lackner.C9 147 GkqGvvlgapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfq 218
+                                            G  G +  + ysask G++Gftk+l++el + Gi  n v pG+++t m + + +g              +  
+  gi|12744845|gb|AAK06809.1|AF324838_28 146 GVSGHATQSNYSASKAGIIGFTKSLSKELGRYGIRANVVAPGFIDTDMVAGISDGL-----------RTKAV 206
+                                            ************************************************99887664...........45677 PP
+
+                          KR.Lackner.C9 219 akiplGrystpeevaglvgylvsdtaasitaqalnvcGGl 258
+                                            a + lGr+ +p+eva+ v+yl+s  a+ +t   l + GGl
+  gi|12744845|gb|AAK06809.1|AF324838_28 207 AGVALGRFGRPDEVADAVAYLAS--AEYVTGAVLQIDGGL 244
+                                            99*******************96..7899*******9998 PP
+
+>> gi|40644858|emb|CAE17551.1|  ketoreductase [Streptomyces griseus subsp. griseus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  116.9   0.2   5.8e-37   9.2e-37       6     257 ..       7     252 ..       4     253 .] 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 116.9 bits;  conditional E-value: 5.8e-37
+                KR.Lackner.C9   6 ervalvtGatsGiGlavarklaaegarvflcardedavaetv.kelreeglevdGaaldvrdaadvealvqaaverfGtvdv 86 
+                                   ++al+tGa+sGiG a ar+laaegarv+l+ r+ ++ a+ + +el ++   +     d+ d ++v+a v aa +r+G+vd+
+  gi|40644858|emb|CAE17551.1|   7 GKTALITGASSGIGTATARALAAEGARVVLTYRTGERRARELaDELGADRDLACAVPYDLGDPSSVDAAVRAAENRWGGVDI 88 
+                                  589*******************************998877661556555555666789************************ PP
+
+                KR.Lackner.C9  87 lvnnaGrsG.....gGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhG 163
+                                  lv na r G     g +  ++  + w +++  nl+  +r  + vl   gm+++ +Gr+  ++s   + G      y+a k  
+  gi|40644858|emb|CAE17551.1|  89 LVANAVRRGprqppGTHIEDVPAQQWRQLLRDNLEQTLRTVQLVL--PGMRARTWGRVALLSSHRTRDGAPGQEFYAAGKAA 168
+                                  *******99554445566777889***************999888..59********************************* PP
+
+                KR.Lackner.C9 164 vvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaa 245
+                                  + Gf+++l+ +  + G+ vn v pG   t           ++ +    ev er  ++ p Gr stpe+va+ +++l +++  
+  gi|40644858|emb|CAE17551.1| 169 LHGFARSLAWDAGPDGVFVNLVSPGLTRTV----------GVLSDLPAEVRERELQRTPSGRLSTPEDVAAAIAFLCAEANG 240
+                                  *************************98763..........3344445688899999************************** PP
+
+                KR.Lackner.C9 246 sitaqalnvcGG 257
+                                   i    ++v GG
+  gi|40644858|emb|CAE17551.1| 241 NINGAVIDVSGG 252
+                                  **********99 PP
+
+>> gi|73621282|gb|AAZ78336.1|  OxyM [Streptomyces rimosus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.0   8.0   1.2e-22   1.8e-22       7     257 ..      13     248 ..       8     250 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 70.0 bits;  conditional E-value: 1.2e-22
+               KR.Lackner.C9   7 rvalvtGatsGiGlavarklaaegarvflc.ardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtvdvlv 88 
+                                  valv G+t GiGla+arkl+a g  v l  a ded   ++ ++l eeg +v    +d+   a v +l++ +++ +G +dvlv
+  gi|73621282|gb|AAZ78336.1|  13 SVALVIGGTRGIGLAAARKLSAAGSEVLLNyAHDEDGALAAERQLSEEGGKVRLMRADIGRPAGVVRLLEDIRRTHGRLDVLV 95 
+                                 79*************************99648999999999****************************************** PP
+
+               KR.Lackner.C9  89 nnaGrsGgGvtae..iadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftk 169
+                                   aG      ta+  i   l +  +     +v  l   + + g+++  ++Gri+ ++s g +  v   a    +k  +  + +
+  gi|73621282|gb|AAZ78336.1|  96 HAAGSFHPAPTASphIGKYLGDGAV-----AVGPLLYGAARLGTLMTPDTGRIVAVSSIGARTVVPGYAGLGMAKAALETLVR 173
+                                 ****999999886214444444443.....5556666777789999************999988888899************* PP
+
+               KR.Lackner.C9 170 alglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqal 252
+                                  l++ela  G++vnav  G +                     +vle +  + p Gr +t+eeva++v+ l  ++a  +  q l
+  gi|73621282|gb|AAZ78336.1| 174 YLAVELAGKGVAVNAVAAGKIADG-------------GPVPAQVLEGLLRRTPTGRLATAEEVADVVALLCRPEAGGLHGQVL 243
+                                 ****************99966432.............22356899************************************** PP
+
+               KR.Lackner.C9 253 nvcGG 257
+                                  v GG
+  gi|73621282|gb|AAZ78336.1| 244 TVDGG 248
+                                 **999 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                           16  (4484 residues searched)
+Passed MSV filter:                        11  (0.6875); expected 0.3 (0.02)
+Passed bias filter:                       11  (0.6875); expected 0.3 (0.02)
+Passed Vit filter:                        10  (0.625); expected 0.0 (0.001)
+Passed Fwd filter:                        10  (0.625); expected 0.0 (1e-05)
+Initial search space (Z):                 16  [actual number of targets]
+Domain search space  (domZ):              10  [number of targets reported over threshold]
+# CPU time: 0.05u 0.01s 00:00:00.06 Elapsed: 00:00:00.07
+# Mc/sec: 16.72
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.all.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                              -----------
+   1.1e-155  507.4   4.2   1.2e-155  507.3   4.2    1.0  1  gi|809108|emb|CAA60572.1|              putative ketoreductase [Streptom
+   7.4e-154  501.4   5.2   8.2e-154  501.3   5.2    1.0  1  gi|7800663|gb|AAF70104.1|AF257324_5    AknA [Streptomyces galilaeus]
+   2.5e-152  496.4   6.6     3e-152  496.1   6.6    1.0  1  gi|510725|gb|AAB36565.1|               ketoreductase [Streptomyces vene
+   4.3e-152  495.6   6.0   4.8e-152  495.4   6.0    1.0  1  gi|29469255|gb|AAO65365.1|             putative ketoreductase [Streptom
+   7.7e-152  494.8   8.8   8.6e-152  494.6   8.8    1.0  1  gi|29469236|gb|AAO65349.1|             putative ketoreductase [Streptom
+   6.1e-151  491.8   8.2   6.9e-151  491.6   8.2    1.0  1  gi|16507975|gb|AAL24452.1|             RdmJ [Streptomyces purpurascens]
+   5.4e-147  478.9   9.4     6e-147  478.7   9.4    1.0  1  gi|68146470|emb|CAH10157.1|            ChaD protein [Streptomyces chart
+   9.6e-147  478.1   8.4   1.1e-146  477.9   8.4    1.0  1  gi|118571|sp|P16542.1|DHK1_STRVN       RecName: Full=Granaticin polyket
+   4.3e-146  476.0   5.8   4.8e-146  475.8   5.8    1.0  1  gi|532243|gb|AAA65204.1|               daunorubicin-doxorubicin polyket
+   1.6e-145  474.1   5.8   1.8e-145  473.9   5.8    1.0  1  gi|2916808|emb|CAA12013.1|             SnoaD [Streptomyces nogalater]
+   9.2e-144  468.3   6.9     1e-143  468.2   6.9    1.0  1  gi|14717093|emb|CAC44199.1|            ketoacyl reductase [Streptomyces
+    4.8e-45  144.7   1.3      6e-45  144.4   1.3    1.0  1  gi|33327106|gb|AAQ08926.1|             putative 3-ketoacyl-ACP reductas
+      2e-41  132.8   3.1    3.8e-41  132.0   3.1    1.4  1  gi|21039503|gb|AAM33668.1|AF509565_16  putative 3-oxoacyl-ACP reductase
+    2.2e-41  132.8   2.9    3.4e-41  132.1   2.9    1.2  1  gi|9944998|gb|AAG03071.1|AF293355_7    putative reductase [Streptomyces
+    1.6e-39  126.6   0.9    2.3e-39  126.1   0.9    1.1  1  gi|169402971|emb|CAM58804.1|           BenL protein [Streptomyces sp. A
+    1.8e-39  126.5   4.7    2.1e-38  123.0   4.7    1.9  1  gi|120431572|gb|ABM21753.1|            PdmG [Actinomadura hibisca]
+    2.8e-36  116.0   1.2      4e-36  115.5   1.2    1.2  1  gi|662748191|gb|AIE76942.1|            putative bifunctional cyclase/3-
+    1.4e-34  110.5   7.4    1.7e-34  110.2   7.4    1.0  1  gi|532241|gb|AAA65202.1|               daunorubicin-doxorubicin polyket
+    1.8e-33  106.8   6.5    2.5e-33  106.4   6.5    1.1  1  gi|6018300|gb|AAF01806.1|AF187532_2    C-7 ketoreductase [Streptomyces 
+    7.3e-31   98.3   2.8    8.4e-31   98.1   2.8    1.0  1  gi|68146488|emb|CAH10174.1|            ChaL protein [Streptomyces chart
+    3.6e-30   96.0   1.6    4.6e-30   95.6   1.6    1.1  1  gi|8133012|gb|AAF73457.1|AF264025_8    putative aklaviketone reductase 
+    1.4e-23   74.4   1.4    3.4e-23   73.1   1.4    1.6  1  gi|29469257|gb|AAO65367.1|             oxygenase reductase-like protein
+    2.1e-23   73.8   2.4    1.2e-22   71.3   2.4    2.1  1  gi|6002929|gb|AAF00206.1|AF164960_2    oxygenase-reductase [Streptomyce
+    1.1e-21   68.2   0.3    3.3e-21   66.6   0.3    1.8  1  gi|690514147|ref|YP_009060694.1|       auricin polyketide oxygenase-red
+    6.1e-21   65.7   2.4    2.4e-20   63.8   2.4    1.7  1  gi|720065712|pdb|4OSO|A                Chain A, The Crystal Structure O
+    7.1e-21   65.5   0.4    4.1e-20   63.0   0.4    2.1  1  gi|14280348|gb|AAK57530.1|             PgaM [Streptomyces sp. PGA64]
+
+
+Domain annotation for each sequence (and alignments):
+>> gi|809108|emb|CAA60572.1|  putative ketoreductase [Streptomyces fradiae]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  507.3   4.2  1.2e-155  1.2e-155       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 507.3 bits;  conditional E-value: 1.2e-155
+              KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtv 84 
+                                m++++ +va+vtGatsGiGlav+r l+++g+rvflcar+ed+v++tvk+l +eglevdGa +dvr+a+dve++vq+av+rfGt+
+  gi|809108|emb|CAA60572.1|   1 MTQQNPKVAIVTGATSGIGLAVTRLLGRQGHRVFLCARTEDSVTSTVKQLLDEGLEVDGAPCDVRSADDVERFVQRAVHRFGTI 84 
+                                68999******************************************************************************* PP
+
+              KR.Lackner.C9  85 dvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGft 168
+                                dvlvnnaGrsGgGvta+iadelw+dvi+tnl+svfr+trevl+tggm++k+rGriiniast+GkqGvvlgapysaskhGvvGft
+  gi|809108|emb|CAA60572.1|  85 DVLVNNAGRSGGGVTADIADELWHDVIDTNLNSVFRMTREVLNTGGMRHKDRGRIINIASTAGKQGVVLGAPYSASKHGVVGFT 168
+                                ************************************************************************************ PP
+
+              KR.Lackner.C9 169 kalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqal 252
+                                kalg+ela+tGitvnavcpGyvetpma+rvr+gyaa+y++sed++le+fqakiplGrystpeevaglvgyl+sdtaasit+qal
+  gi|809108|emb|CAA60572.1| 169 KALGNELAPTGITVNAVCPGYVETPMAQRVRAGYAAAYDTSEDAILEKFQAKIPLGRYSTPEEVAGLVGYLASDTAASITSQAL 252
+                                ************************************************************************************ PP
+
+              KR.Lackner.C9 253 nvcGGlGny 261
+                                nvcGGlGn+
+  gi|809108|emb|CAA60572.1| 253 NVCGGLGNF 261
+                                ********8 PP
+
+>> gi|7800663|gb|AAF70104.1|AF257324_5  AknA [Streptomyces galilaeus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  501.3   5.2  8.2e-154  8.2e-154       3     261 .]       3     261 .]       1     261 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 501.3 bits;  conditional E-value: 8.2e-154
+                        KR.Lackner.C9   3 eaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqa 76 
+                                           a+erva+vtGatsGiGlavar+la+ garvf+card d+va+tvkelre+g++vdGa++dvrd+a+v+a+vq+
+  gi|7800663|gb|AAF70104.1|AF257324_5   3 PASERVAIVTGATSGIGLAVARSLAEGGARVFICARDGDRVAHTVKELREAGHDVDGASCDVRDTARVRAFVQE 76 
+                                          5789********************************************************************** PP
+
+                        KR.Lackner.C9  77 averfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqG 150
+                                          a++rfG+vd lvnnaGrsGgG+ta+iadelwldvietnl+svfr+trevlttggmle+g+Gri+niastgGkqG
+  gi|7800663|gb|AAF70104.1|AF257324_5  77 ARDRFGPVDALVNNAGRSGGGHTAQIADELWLDVIETNLNSVFRMTREVLTTGGMLERGAGRIVNIASTGGKQG 150
+                                          ************************************************************************** PP
+
+                        KR.Lackner.C9 151 vvlgapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplG 224
+                                          v+lgapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgya++++++edevlerf+akiplG
+  gi|7800663|gb|AAF70104.1|AF257324_5 151 VALGAPYSASKHGVVGFTKALGLELAKTGITVNAVCPGYVETPMAERVRQGYAGAWDITEDEVLERFEAKIPLG 224
+                                          ************************************************************************** PP
+
+                        KR.Lackner.C9 225 rystpeevaglvgylvsdtaasitaqalnvcGGlGny 261
+                                          rystp+evaglvgyl+s+taasitaqa+nvcGGlGny
+  gi|7800663|gb|AAF70104.1|AF257324_5 225 RYSTPDEVAGLVGYLLSSTAASITAQAMNVCGGLGNY 261
+                                          ************************************9 PP
+
+>> gi|510725|gb|AAB36565.1|  ketoreductase [Streptomyces venezuelae ATCC 10712]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  496.1   6.6    3e-152    3e-152       2     261 .]       5     264 .]       4     264 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 496.1 bits;  conditional E-value: 3e-152
+             KR.Lackner.C9   2 aeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtvdv 86 
+                               +++e+rvalvtGatsGiGlavar la++++rvfl+ar++++va+tvk+l++eglevdG++ldvr+ +dv+a+vqaav+rfGtv++
+  gi|510725|gb|AAB36565.1|   5 EKQEKRVALVTGATSGIGLAVARLLASQNHRVFLGARNAENVAATVKQLQDEGLEVDGTTLDVRSGEDVKAFVQAAVDRFGTVEL 89 
+                               6799********************************************************************************* PP
+
+             KR.Lackner.C9  87 lvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftkal 171
+                               lvnnaGrsG+Gvta+iadelw+dvi+tnl++vfrltre+lttggm+ek+rGriin+ast+GkqGvvlgapysaskhGvvGftkal
+  gi|510725|gb|AAB36565.1|  90 LVNNAGRSGAGVTADIADELWNDVIDTNLNCVFRLTREALTTGGMREKSRGRIINMASTAGKQGVVLGAPYSASKHGVVGFTKAL 174
+                               ************************************************************************************* PP
+
+             KR.Lackner.C9 172 glelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnvcG 256
+                               g+ela+tGitvnavcpGyvetpma+rvrqgyaa+ye+sed++le+fq+kiplGrystpeevaglvgyl+sdtaasit+qalnvcG
+  gi|510725|gb|AAB36565.1| 175 GNELAPTGITVNAVCPGYVETPMAQRVRQGYAAAYETSEDAILEKFQSKIPLGRYSTPEEVAGLVGYLASDTAASITSQALNVCG 259
+                               ************************************************************************************* PP
+
+             KR.Lackner.C9 257 GlGny 261
+                               GlGn+
+  gi|510725|gb|AAB36565.1| 260 GLGNF 264
+                               ****8 PP
+
+>> gi|29469255|gb|AAO65365.1|  putative ketoreductase [Streptomyces sp. WP 4669]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  495.4   6.0  4.8e-152  4.8e-152       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 495.4 bits;  conditional E-value: 4.8e-152
+               KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGt 83 
+                                 m++++ervalv+GatsGiGla+ar la++g+rvfl++rd+d+va+tvkel++egl+vdG +ldvr+a ++e++vqaav+rfG+
+  gi|29469255|gb|AAO65365.1|   1 MSDKHERVALVSGATSGIGLAAARLLAQQGHRVFLGSRDADNVARTVKELTAEGLDVDGGTLDVRSALSIESFVQAAVDRFGP 83 
+                                 67899****************************************************************************** PP
+
+               KR.Lackner.C9  84 vdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvG 166
+                                 vdvlvnnaGrsGgGvta+i+delw+dv+etnl+svfrltr+vlttggm++k+rGriiniast+GkqGvvlgapysaskhGvvG
+  gi|29469255|gb|AAO65365.1|  84 VDVLVNNAGRSGGGVTADIDDELWYDVVETNLNSVFRLTRAVLTTGGMRHKNRGRIINIASTAGKQGVVLGAPYSASKHGVVG 166
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 167 ftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasita 249
+                                 ftkalg+ela+tGitvnavcpGyvetpma+rvr+gyaa+y+++ed+++e+f+akiplGrystpeevaglvgyl+sdtaasita
+  gi|29469255|gb|AAO65365.1| 167 FTKALGNELAPTGITVNAVCPGYVETPMAQRVRAGYAAAYDTTEDAIMEKFTAKIPLGRYSTPEEVAGLVGYLASDTAASITA 249
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 250 qalnvcGGlGny 261
+                                 qalnvcGGlGn+
+  gi|29469255|gb|AAO65365.1| 250 QALNVCGGLGNF 261
+                                 ***********8 PP
+
+>> gi|29469236|gb|AAO65349.1|  putative ketoreductase [Streptomyces murayamaensis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  494.6   8.8  8.6e-152  8.6e-152       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 494.6 bits;  conditional E-value: 8.6e-152
+               KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGt 83 
+                                 m+e+++rvalvtGatsGiGl+var l+++g++vf++ar++d+vaetvk+l+ egle+dG+aldv+daa+v+a+vqaav+rfGt
+  gi|29469236|gb|AAO65349.1|   1 MTENTARVALVTGATSGIGLSVARLLGSQGHKVFIGARNADNVAETVKQLQGEGLEADGSALDVTDAASVKAFVQAAVDRFGT 83 
+                                 68999****************************************************************************** PP
+
+               KR.Lackner.C9  84 vdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvG 166
+                                 vdvlvnnaGrsGgGvta+i+delw+ vi+tnl+svfr+trevl+tggm++k+rGriiniast+GkqGvvlgapysaskhGvvG
+  gi|29469236|gb|AAO65349.1|  84 VDVLVNNAGRSGGGVTADIEDELWDAVIDTNLNSVFRVTREVLNTGGMRHKDRGRIINIASTAGKQGVVLGAPYSASKHGVVG 166
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 167 ftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasita 249
+                                 ftkalg+ela+tGitvnavcpGyvetpma+rvrqgyaa+y++sed++le+fq+kiplGrystp+evaglvgyl+sdtaasita
+  gi|29469236|gb|AAO65349.1| 167 FTKALGNELAPTGITVNAVCPGYVETPMAQRVRQGYAAAYSTSEDAILEKFQSKIPLGRYSTPDEVAGLVGYLASDTAASITA 249
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 250 qalnvcGGlGny 261
+                                 qalnvcGGlGn+
+  gi|29469236|gb|AAO65349.1| 250 QALNVCGGLGNF 261
+                                 ***********8 PP
+
+>> gi|16507975|gb|AAL24452.1|  RdmJ [Streptomyces purpurascens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  491.6   8.2  6.9e-151  6.9e-151       4     261 .]       7     264 .]       4     264 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 491.6 bits;  conditional E-value: 6.9e-151
+               KR.Lackner.C9   4 aeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtvdv 86 
+                                  ++rva+vtGatsGiGl+v+r+laa g+rvflcard+d+va tvkelr+eg++vdGaa+dvrd+a++e+lv+aaver+G+v+v
+  gi|16507975|gb|AAL24452.1|   7 PTSRVAVVTGATSGIGLSVTRSLAAVGHRVFLCARDADRVALTVKELRAEGHDVDGAACDVRDVAQIESLVSAAVERYGPVEV 89 
+                                 679******************************************************************************** PP
+
+               KR.Lackner.C9  87 lvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftk 169
+                                 lvnnaGrsGgG t++iadelw+dv++tnl+svfr+tr+vlttg+m+e g+Gr++niastgGkqGvvlgapysaskhGvvGftk
+  gi|16507975|gb|AAL24452.1|  90 LVNNAGRSGGGPTHTIADELWDDVMATNLDSVFRVTRAVLTTGRMREGGWGRVVNIASTGGKQGVVLGAPYSASKHGVVGFTK 172
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 170 alglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqal 252
+                                 alglelaktGitvnavcpGyvetpma rvrqgyaa++e+se+evl+rfqakiplGry+tp+evag+vgyl++d+a+s+taqa+
+  gi|16507975|gb|AAL24452.1| 173 ALGLELAKTGITVNAVCPGYVETPMAVRVRQGYAAAWETSEEEVLDRFQAKIPLGRYTTPDEVAGMVGYLLTDAASSVTAQAI 255
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 253 nvcGGlGny 261
+                                 nvcGGlGny
+  gi|16507975|gb|AAL24452.1| 256 NVCGGLGNY 264
+                                 ********9 PP
+
+>> gi|68146470|emb|CAH10157.1|  ChaD protein [Streptomyces chartreusis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  478.7   9.4    6e-147    6e-147       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 478.7 bits;  conditional E-value: 6e-147
+                KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfG 82 
+                                  m+e+++r+al+tGatsGiGl++ar+laa+g+rvf+c+r++d+va+tvkelr+ g+++dGa++dvrd++dvealv++av++fG
+  gi|68146470|emb|CAH10157.1|   1 MTEDASRTALITGATSGIGLSAARALAARGMRVFICSRNADDVARTVKELRNLGARADGAQADVRDREDVEALVSRAVAAFG 82 
+                                  68999***************************************************************************** PP
+
+                KR.Lackner.C9  83 tvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGv 164
+                                  +vdvlvnnaGrsGgGvta+i+delw+dvi+tnltsvfrltrevl ++gmle+g+Gr+iniastgGkqGvvlgapysaskhGv
+  gi|68146470|emb|CAH10157.1|  83 GVDVLVNNAGRSGGGVTARITDELWSDVIATNLTSVFRLTREVLVNAGMLERGWGRVINIASTGGKQGVVLGAPYSASKHGV 164
+                                  ********************************************************************************** PP
+
+                KR.Lackner.C9 165 vGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaas 246
+                                  vGftkalglelaktG+tvnavcpGyvetpmaervrqgyaa++e++e evlerf+++iplGry+tp+evag+vgylv+d+aa 
+  gi|68146470|emb|CAH10157.1| 165 VGFTKALGLELAKTGVTVNAVCPGYVETPMAERVRQGYAAAWETTEAEVLERFESRIPLGRYTTPDEVAGIVGYLVTDSAAP 246
+                                  ********************************************************************************** PP
+
+                KR.Lackner.C9 247 itaqalnvcGGlGny 261
+                                  itaqa+nvcGGlGny
+  gi|68146470|emb|CAH10157.1| 247 ITAQAINVCGGLGNY 261
+                                  **************9 PP
+
+>> gi|118571|sp|P16542.1|DHK1_STRVN  RecName: Full=Granaticin polyketide synthase putative ketoacyl reductase 1; AltName
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  477.9   8.4  1.1e-146  1.1e-146       3     261 .]      14     272 .]      12     272 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 477.9 bits;  conditional E-value: 1.1e-146
+                     KR.Lackner.C9   3 eaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaave 79 
+                                       +a++ valvtGatsGiGla+ar+laa gar+flcarde+++a+tvkelr eg++vdG+++dv+d a+++a+v+aav+
+  gi|118571|sp|P16542.1|DHK1_STRVN  14 TAAKPVALVTGATSGIGLAIARRLAALGARTFLCARDEERLAQTVKELRGEGFDVDGTVCDVADPAQIRAYVAAAVQ 90 
+                                       57899************************************************************************ PP
+
+                     KR.Lackner.C9  80 rfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgap 156
+                                       r+Gtvd+lvnnaGrsGgG+taeiadelwldvi+tnltsvf +t+evl++ggml+k+rGriiniastgGkqGvv+++p
+  gi|118571|sp|P16542.1|DHK1_STRVN  91 RYGTVDILVNNAGRSGGGATAEIADELWLDVITTNLTSVFLMTKEVLNAGGMLAKKRGRIINIASTGGKQGVVHAVP 167
+                                       ***************************************************************************** PP
+
+                     KR.Lackner.C9 157 ysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeeva 233
+                                       ysaskhGvvG+tkalglela+tGitvnavcpG+vetpmaervr++ya+i++vse+e+++r+++++plGry++++eva
+  gi|118571|sp|P16542.1|DHK1_STRVN 168 YSASKHGVVGLTKALGLELARTGITVNAVCPGFVETPMAERVREHYAGIWQVSEEETFDRITNRVPLGRYVETREVA 244
+                                       ***************************************************************************** PP
+
+                     KR.Lackner.C9 234 glvgylvsdtaasitaqalnvcGGlGny 261
+                                       ++v+ylv+d+aa++taqalnvcGGlGny
+  gi|118571|sp|P16542.1|DHK1_STRVN 245 AMVEYLVADDAAAVTAQALNVCGGLGNY 272
+                                       ***************************9 PP
+
+>> gi|532243|gb|AAA65204.1|  daunorubicin-doxorubicin polyketide synthase [Streptomyces peucetius]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  475.8   5.8  4.8e-146  4.8e-146       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 475.8 bits;  conditional E-value: 4.8e-146
+             KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtvd 85 
+                               m+ea++rvalvtG+tsGiGlav+rkla++g+rvflcarde+a++ tvkel+++glevdGa +dvr++adv++lvq+a++rfG++d
+  gi|532243|gb|AAA65204.1|   1 MSEAADRVALVTGGTSGIGLAVVRKLAQDGTRVFLCARDESAITGTVKELQASGLEVDGAPCDVRSTADVDRLVQTARNRFGPID 85 
+                               67899******************************************************************************** PP
+
+             KR.Lackner.C9  86 vlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftka 170
+                               ++vnnaGr GgGvtaei+d+lwldv++tnl+++fr+tr+vlt g+m+e+g+Grii+iastgGkqGv+lgapysask+G++Gftka
+  gi|532243|gb|AAA65204.1|  86 IVVNNAGRGGGGVTAEITDDLWLDVVDTNLSGAFRVTRAVLTGGAMQEHGWGRIISIASTGGKQGVALGAPYSASKSGLIGFTKA 170
+                               ************************************************************************************* PP
+
+             KR.Lackner.C9 171 lglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnvc 255
+                               ++lelaktGitvnavcpGyvetpma+ vrq+yaa++ ++ed+vle+fqakiplGrys+peevag+v+yl+sd+a+sitaqa+nvc
+  gi|532243|gb|AAA65204.1| 171 VALELAKTGITVNAVCPGYVETPMAQGVRQRYAAFWGITEDDVLEKFQAKIPLGRYSMPEEVAGMVHYLASDSADSITAQAINVC 255
+                               ************************************************************************************* PP
+
+             KR.Lackner.C9 256 GGlGny 261
+                               GGlG+y
+  gi|532243|gb|AAA65204.1| 256 GGLGSY 261
+                               ****98 PP
+
+>> gi|2916808|emb|CAA12013.1|  SnoaD [Streptomyces nogalater]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  473.9   5.8  1.8e-145  1.8e-145       2     261 .]       2     262 .]       1     262 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 473.9 bits;  conditional E-value: 1.8e-145
+               KR.Lackner.C9   2 aeaeervalvtGatsGiGlavarklaaegarv.flcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGt 83 
+                                  +++ rva+vtG+tsGiGlav+++laa+g+ +  lcar++dav++tv+elr+e+levdG+++dvr+++dv++++  a++rfG+
+  gi|2916808|emb|CAA12013.1|   2 PDTDGRVAVVTGGTSGIGLAVVKALAATGYACrSLCARSQDAVDSTVEELRDEKLEVDGRSCDVRSTDDVREFIGFATRRFGG 84 
+                                 67899*************************9989************************************************* PP
+
+               KR.Lackner.C9  84 vdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvG 166
+                                 vdvlvnnaGr+GgG ta+i+delwldvietnltsvfr+trevlttggml+ grGriiniastgGkqGvvlgapysaskhGvvG
+  gi|2916808|emb|CAA12013.1|  85 VDVLVNNAGRNGGGPTARITDELWLDVIETNLTSVFRVTREVLTTGGMLAAGRGRIINIASTGGKQGVVLGAPYSASKHGVVG 167
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 167 ftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasita 249
+                                 ftkalglelak+GitvnavcpGyvetpm+erv +gya+++++se++vlerfqakiplGry++peevaglv+yl+++ta+sita
+  gi|2916808|emb|CAA12013.1| 168 FTKALGLELAKSGITVNAVCPGYVETPMGERVGRGYAEVWDTSEEAVLERFQAKIPLGRYAQPEEVAGLVTYLTTPTADSITA 250
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 250 qalnvcGGlGny 261
+                                 qalnvcGGlGny
+  gi|2916808|emb|CAA12013.1| 251 QALNVCGGLGNY 262
+                                 ***********9 PP
+
+>> gi|14717093|emb|CAC44199.1|  ketoacyl reductase [Streptomyces coelicolor A3(2)]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  468.2   6.9    1e-143    1e-143       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 468.2 bits;  conditional E-value: 1e-143
+                KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfG 82 
+                                  ma+++++valvtGatsGiGl++ar+l++eg rvf+car e+ +++t+kelre+g+e+dG+++dvr++ ++ealv+a+ver+G
+  gi|14717093|emb|CAC44199.1|   1 MATQDSEVALVTGATSGIGLEIARRLGKEGLRVFVCARGEEGLRTTLKELREAGVEADGRTCDVRSVPEIEALVAAVVERYG 82 
+                                  67899***************************************************************************** PP
+
+                KR.Lackner.C9  83 tvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGv 164
+                                  +vdvlvnnaGr GgG+tae+adelwldv+etnlt+vfr+t++vl++ggmle+g+Gri+niastgGkqGvv++apysaskhGv
+  gi|14717093|emb|CAC44199.1|  83 PVDVLVNNAGRPGGGATAELADELWLDVVETNLTGVFRVTKQVLKAGGMLERGTGRIVNIASTGGKQGVVHAAPYSASKHGV 164
+                                  ********************************************************************************** PP
+
+                KR.Lackner.C9 165 vGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaas 246
+                                  vGftkalglela+tGitvnavcpG+vetpma++vr++y++i+evs++e+++r++a++p+Gry++p+eva++v+yl+++ aa+
+  gi|14717093|emb|CAC44199.1| 165 VGFTKALGLELARTGITVNAVCPGFVETPMAASVREHYSDIWEVSTEEAFDRITARVPIGRYVQPSEVAEMVAYLIGPGAAA 246
+                                  ********************************************************************************** PP
+
+                KR.Lackner.C9 247 itaqalnvcGGlGny 261
+                                  +taqalnvcGGlGny
+  gi|14717093|emb|CAC44199.1| 247 VTAQALNVCGGLGNY 261
+                                  **************9 PP
+
+>> gi|33327106|gb|AAQ08926.1|  putative 3-ketoacyl-ACP reductase [Streptomyces griseus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  144.4   1.3     6e-45     6e-45       8     257 ..       9     248 ..       5     249 .] 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 144.4 bits;  conditional E-value: 6e-45
+               KR.Lackner.C9   8 valvtGatsGiGlavarklaaegarvflcardedavae.tvkelreeglevdGaaldvrdaadvealvqaaverfGtvdvlvn 89 
+                                  alvtG+t GiG a++ +la+ ga v+ c r+e + a    +el+e g +     +dv  ++ vea+++a+++rf t+dvlvn
+  gi|33327106|gb|AAQ08926.1|   9 NALVTGGTRGIGRAIVLALAKAGATVVTCYRTEGEAADsLARELKELGGDHALVRADVGTTEGVEAVLAACRTRFETLDVLVN 91 
+                                 59*****************************99776651569***************************************** PP
+
+               KR.Lackner.C9  90 naGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftkalg 172
+                                 naG       a++  e w+ v++tnlt+ f +  ++l    +l ++   +ini s g   G+ l   y+ask G+vG+t++l 
+  gi|33327106|gb|AAQ08926.1|  92 NAGIISQVPFAQLPFEEWERVVTTNLTGPFMVISKALP---LL-RKGSSVINIGSRGAMAGIPLRGHYTASKAGLVGLTRSLC 170
+                                 *******************************9888875...44.45568********************************** PP
+
+               KR.Lackner.C9 173 lelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnvc 255
+                                 +el   Gi  n v pG ++t   e++ ++  a+y+       er+   + lGr+ +p+e+ag v +l+sd ++ +  ++l v 
+  gi|33327106|gb|AAQ08926.1| 171 KELGGKGIRFNVVAPGVIDTSEPEELTEEQRAAYD-------ERYLRMMALGRFGRPDEIAGAVLFLASDLSTYVNGETLHVD 246
+                                 ******************************99998.......78888899********************************9 PP
+
+               KR.Lackner.C9 256 GG 257
+                                 GG
+  gi|33327106|gb|AAQ08926.1| 247 GG 248
+                                 99 PP
+
+>> gi|21039503|gb|AAM33668.1|AF509565_16  putative 3-oxoacyl-ACP reductase GrhO10 [Streptomyces sp. JP95]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  132.0   3.1   3.8e-41   3.8e-41       9     258 ..      10     249 .]       5     249 .] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 132.0 bits;  conditional E-value: 3.8e-41
+                          KR.Lackner.C9   9 alvtGatsGiGlavarklaaegarvflca.rdedavaetvkelreeglevdGaaldvrdaadvealvqaave 79 
+                                             lvtG++ GiG  v+ + a+ ga v  c   d+++v++  +el++ g + +   +dv d ++v+alv  a+e
+  gi|21039503|gb|AAM33668.1|AF509565_16  10 LLVTGGSRGIGRGVVLAAARAGADVLTCYvNDSEHVESLRRELKALGGDHEVVRADVGDLDQVDALVGWARE 81 
+                                            69************************99625678999999******************************** PP
+
+                          KR.Lackner.C9  80 rfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGv 151
+                                            r+G +d +vnnaG       ae+a + w+ v++tnlt+++r+ ++ l   g    +   ++ni s g   G+
+  gi|21039503|gb|AAM33668.1|AF509565_16  82 RYGKLDGIVNNAGVISHIPFAELAPDEWSRVLDTNLTAAYRVIQQSLPLLG----SGASVVNIGSRGAAAGI 149
+                                            ********************************************9997544....34579************ PP
+
+                          KR.Lackner.C9 152 vlgapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakipl 223
+                                             l a y+a+k  ++G+t++l++el   Gi vn v pG +et   + + ++ a+        +   + +k  l
+  gi|21039503|gb|AAM33668.1|AF509565_16 150 PLRAHYTAAKAAMIGLTRSLAKELGGKGIRVNVVAPGVIETEAFDTMPAERAEG-------LRAMYAQKTAL 214
+                                            *****************************************8877777666654.......34456778999 PP
+
+                          KR.Lackner.C9 224 GrystpeevaglvgylvsdtaasitaqalnvcGGl 258
+                                             r  + +e+a+ v +l+sd aa +t ++lnv GG+
+  gi|21039503|gb|AAM33668.1|AF509565_16 215 ARLGRVDELAAPVLFLLSDLAAYVTGETLNVDGGI 249
+                                            99999****************************96 PP
+
+>> gi|9944998|gb|AAG03071.1|AF293355_7  putative reductase [Streptomyces collinus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  132.1   2.9   3.4e-41   3.4e-41       7     258 ..       8     249 .]       4     249 .] 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 132.1 bits;  conditional E-value: 3.4e-41
+                        KR.Lackner.C9   7 rvalvtGatsGiGlavarklaaegarvflcarde.davaetvkelreeglevdGaaldvrdaadvealvqaave 79 
+                                          r  l+tG+t GiG  ++ + a+ ga v  c r+e +av++    l+e+  +     +dv d+a+ ++lv +a++
+  gi|9944998|gb|AAG03071.1|AF293355_7   8 RKLLITGGTRGIGRGIVLAAARAGADVLTCYRQEsEAVDSLTAALKETAGDHHVIRADVGDTAEADRLVGEAKD 81 
+                                          5679***************************98735688888999**999************************ PP
+
+                        KR.Lackner.C9  80 rfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvl 153
+                                          rfG +d +vnnaG        e+  + w+ +++tnlt+++r+ +++l   g        ++ni s g   G+ l
+  gi|9944998|gb|AAG03071.1|AF293355_7  82 RFGRLDGVVNNAGVISHIPFGELPADEWSRILDTNLTAAYRIIHQALPLLGT----GSSVVNIGSRGAAAGIPL 151
+                                          ********************************************99976543....3579************** PP
+
+                        KR.Lackner.C9 154 gapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrys 227
+                                           a y+a+k  ++G+t++l++el + Gi vn v pG +et   + + ++ aa        +   + +k  l r  
+  gi|9944998|gb|AAG03071.1|AF293355_7 152 RAHYTAAKAAMIGLTRSLAKELGPKGIRVNVVAPGVIETEAFADMPAERAAG-------LRATYSQKTALARLG 218
+                                          ***************************************7655555554444.......4455788999***** PP
+
+                        KR.Lackner.C9 228 tpeevaglvgylvsdtaasitaqalnvcGGl 258
+                                          t ee+ag v +l+sd+aa it ++lnv GG+
+  gi|9944998|gb|AAG03071.1|AF293355_7 219 TVEELAGPVLFLLSDAAAYITGETLNVDGGI 249
+                                          *****************************96 PP
+
+>> gi|169402971|emb|CAM58804.1|  BenL protein [Streptomyces sp. A2991200]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  126.1   0.9   2.3e-39   2.3e-39       6     258 ..       7     249 .]       4     249 .] 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 126.1 bits;  conditional E-value: 2.3e-39
+                 KR.Lackner.C9   6 ervalvtGatsGiGlavarklaaegarvflcardedava.etvkelreeglevdGaaldvrdaadvealvqaaverfGtvd 85 
+                                    r alvtG++ GiG a++ +la+ ga v  c ++ +a a +   el+ ++ +    ++d++d adv++lv++a++r+G+++
+  gi|169402971|emb|CAM58804.1|   7 GRHALVTGGSRGIGKAIVLALARAGADVLACHQNPSAQAdQLALELKRTEGDHHLLQADITDPADVDRLVNEAKTRYGSLE 87 
+                                   578*****************************998766515567999999999999************************* PP
+
+                 KR.Lackner.C9  86 vlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvG 166
+                                   ++v naG        +++   w+ v++t lt++f + ++ l   g    +r  +i i s +  +G++l + y+a+k G+ G
+  gi|169402971|emb|CAM58804.1|  88 IVVHNAGVISHVPLPQLELAEWHRVLDTSLTAAFAVVQKTLPLYG----ERASVILIGSRSAARGIALRSHYTAAKAGLEG 164
+                                   ************************************999997655....6788**************************** PP
+
+                 KR.Lackner.C9 167 ftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasi 247
+                                   f+++ ++el   G+ vn + pG +++  a+ + ++          +++ r+  k  lGr  +p+e+ag   +l++d ++ +
+  gi|169402971|emb|CAM58804.1| 165 FARSAAKELGGRGVRVNVIAPGVIDSDDAKAIPAE-------QRAQLVARYGDKTALGRLGEPDEIAGAAVFLAGDLSSYV 238
+                                   *************************9999887655.......4567899******************************** PP
+
+                 KR.Lackner.C9 248 taqalnvcGGl 258
+                                   t q++nv GG+
+  gi|169402971|emb|CAM58804.1| 239 TGQTINVDGGI 249
+                                   *********96 PP
+
+>> gi|120431572|gb|ABM21753.1|  PdmG [Actinomadura hibisca]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  123.0   4.7   2.1e-38   2.1e-38       6     258 ..       8     246 .]       3     246 .] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 123.0 bits;  conditional E-value: 2.1e-38
+                KR.Lackner.C9   6 ervalvtGatsGiGlavarklaaegarvflcardedavaetv.kelreeglevdGaaldvrdaadvealvqaaverfGtvdv 86 
+                                   + al+tG+t GiG ava  la+ ga+v +c r++ + a+++  el +++ +    ++d+ +a dv++l++++ +r G++dv
+  gi|120431572|gb|ABM21753.1|   8 GKNALITGGTRGIGRAVALGLARAGANVTVCYRSDAESAAAMeAELAATDGKHHVLQADIGNAGDVRRLLDEVAARMGSLDV 89 
+                                  578******************************77665555416999999999999************************** PP
+
+                KR.Lackner.C9  87 lvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGft 168
+                                  +v naG       a+++ e w+ ++++nlt+++ + r++l     l  + G ++ + s     G+   + y+a+k G++Gf 
+  gi|120431572|gb|ABM21753.1|  90 VVHNAGLISHVPFADLEPEEWHRIVDSNLTGMYLVVRAALP----LLSEGGAVVGVGSKVALVGISQRTHYTAAKAGLIGFV 167
+                                  *************************************9996....456789******************************* PP
+
+                KR.Lackner.C9 169 kalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaq 250
+                                  ++l++el + Gi vn v pG  et  a+++         v      er+q+   l r  +++eva++v +l+++ a  +t +
+  gi|120431572|gb|ABM21753.1| 168 RSLSKELGPLGIRVNLVAPGITETDQAAHLPP-------VQ----RERYQSMTALKRLGQADEVADVVLFLAGPGARYVTGE 238
+                                  ************************98876543.......22....479999999**************************** PP
+
+                KR.Lackner.C9 251 alnvcGGl 258
+                                  ++nv GG+
+  gi|120431572|gb|ABM21753.1| 239 TVNVDGGM 246
+                                  ******96 PP
+
+>> gi|662748191|gb|AIE76942.1|  putative bifunctional cyclase/3-oxoacyl-ACP reductase GrhT [Streptomyces sp. CN48+]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  115.5   1.2     4e-36     4e-36       7     256 ..     161     400 ..     156     402 .] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 115.5 bits;  conditional E-value: 4e-36
+                KR.Lackner.C9   7 rvalvtGatsGiGlavarklaaegarvflcarded.avaetvkelreeglevdGaaldvrdaadvealvqaaverfGtvdvl 87 
+                                  +  +vtG++ GiG  ++ + a+ ga v+ c r+e+ + a+  kel           +dv +aa  + l ++a+e  G++d +
+  gi|662748191|gb|AIE76942.1| 161 KRIVVTGGSRGIGRGIVLAAARAGADVVTCYREENdHTASLAKELAPLPGSQHLLRADVSEAAGARLLADRARELLGGLDAV 242
+                                  5569****************************97615677789***999999999*************************** PP
+
+                KR.Lackner.C9  88 vnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftk 169
+                                  vnnaG       ae++d  w   +++nlts  ++ +++l     l    G i+++ st  + G++ g+ y+a k+ +vG+t+
+  gi|662748191|gb|AIE76942.1| 243 VNNAGDFAPQPYAELTDAAWATALQSNLTSTHQVIQAAL----PLLGAGGSIVSLGSTVARIGMAGGVHYTAVKQALVGLTR 320
+                                  ****************************99766665555....5566789******************************** PP
+
+                KR.Lackner.C9 170 alglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqa 251
+                                  +l+ el + Gi vn++ pG + t   + +  + aa     + +v+ +f a   lGr  tp+e+a++v +l+sd+++ it q 
+  gi|662748191|gb|AIE76942.1| 321 SLARELGPRGIRVNTLSPGRIATEALDALPPEEAA----RQRAVFSKFAA---LGRLGTPQEIADVVLFLISDQSSYITGQN 395
+                                  ***********************999988888776....5789*****87...9**************************** PP
+
+                KR.Lackner.C9 252 lnvcG 256
+                                  + v G
+  gi|662748191|gb|AIE76942.1| 396 IHVDG 400
+                                  *9977 PP
+
+>> gi|532241|gb|AAA65202.1|  daunorubicin-doxorubicin polyketide synthase [Streptomyces peucetius]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.2   7.4   1.7e-34   1.7e-34       3     258 ..       2     248 ..       1     250 [. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 110.2 bits;  conditional E-value: 1.7e-34
+             KR.Lackner.C9   3 eaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGt.vdv 86 
+                               e+++r  +vtG+ sGiG avar++aa+g rv +  r++  +aetv+  +    ++   a+d++d a  ea+v +++er G+ vdv
+  gi|532241|gb|AAA65202.1|   2 ENTQRSVIVTGGGSGIGRAVARAFAARGDRVLVVGRTAGPLAETVDGHK----DAHTLAVDITDPAAPEAVVREVRERLGGvVDV 82 
+                               5788999**************************************8765....5667899*******************8637** PP
+
+             KR.Lackner.C9  87 lvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastg..GkqGvvlgapysaskhGvvGftk 169
+                               lvnna  +  G+  e++    +  ++tnl +   lt++ l   g le   G ++ni s+g  G++     a y a+k G+  +t+
+  gi|532241|gb|AAA65202.1|  83 LVNNAATAAFGHLGELHRTAVEAQVATNLVAPVLLTQALL---GPLETASGLVVNIGSAGalGRRAWPGNAVYGAAKAGLDLLTR 164
+                               *************************************999...568999*******99886688999999*************** PP
+
+             KR.Lackner.C9 170 alglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnv 254
+                               + ++el + Gi v  v pG + t     vr+g +   + + d  le + +++plGr  +pe+va  v  l+ ++aa  +   l v
+  gi|532241|gb|AAA65202.1| 165 SWAVELGPRGIRVVGVAPGVIGTGA--GVRAGMS---QEAYDGFLEAMGQRVPLGRVGRPEDVAWWVVRLADPEAAYASGAVLAV 244
+                               *********************9965..5776554...567789****************************************** PP
+
+             KR.Lackner.C9 255 cGGl 258
+                                GGl
+  gi|532241|gb|AAA65202.1| 245 DGGL 248
+                               ***9 PP
+
+>> gi|6018300|gb|AAF01806.1|AF187532_2  C-7 ketoreductase [Streptomyces nogalater]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.4   6.5   2.5e-33   2.5e-33       9     258 ..      39     278 ..      32     280 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 106.4 bits;  conditional E-value: 2.5e-33
+                        KR.Lackner.C9   9 alvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfG 82 
+                                           +vtG+ sGiG a ar++aa+ga+v +  r+eda+a+t +   +  +     ++dv++ +  +a+v+aa + fG
+  gi|6018300|gb|AAF01806.1|AF187532_2  39 VIVTGGGSGIGRATARAFAAQGAKVLVVGRTEDALAQTAEGCADMRV----LVADVASPDGPQAVVNAALREFG 108
+                                          689***********************************987766555....568******************** PP
+
+                        KR.Lackner.C9  83 tvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriini..astgGkqGvvlg 154
+                                           +dvlvnna  +G  + ++++ +       tnlt+ + l + +l   g lek+rG ++n+  a+t G +    g
+  gi|6018300|gb|AAF01806.1|AF187532_2 109 RIDVLVNNAAVAGMETLQTVDRDAVARQFGTNLTAPLFLVQSAL---GALEKSRGIVVNVgtAATLGLRAAPTG 179
+                                          ***********************************999988777...6799********855788999****** PP
+
+                        KR.Lackner.C9 155 apysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGryst 228
+                                          a y ask  +  +t++ ++ela+ Gi v  v pG ++t ++ r+             e l  +  ++p+Gr  +
+  gi|6018300|gb|AAF01806.1|AF187532_2 180 ALYGASKVALDYLTRTWAVELAPRGIRVVGVAPGVIDTGIGVRMGMTP-----EGYREFLTGMGGRVPVGRVGR 248
+                                          **************************************9987766543.....34568999************* PP
+
+                        KR.Lackner.C9 229 peevaglvgylvsdtaasitaqalnvcGGl 258
+                                          pe+va  +  l+ ++a   t   + v GGl
+  gi|6018300|gb|AAF01806.1|AF187532_2 249 PEDVAWWIVQLARPEAGYATGMVVPVDGGL 278
+                                          ****************************98 PP
+
+>> gi|68146488|emb|CAH10174.1|  ChaL protein [Streptomyces chartreusis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.1   2.8   8.4e-31   8.4e-31       9     257 ..       4     242 ..       1     245 [. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 98.1 bits;  conditional E-value: 8.4e-31
+                KR.Lackner.C9   9 alvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtvdvlvnn 90 
+                                   ++tG+ +GiG a+a+++a+ g  v +  r++d++aet k        +    ld+++ +    +v++a+++ G +dvlvnn
+  gi|68146488|emb|CAH10174.1|   4 IVITGGGTGIGRAAAHAFADAGDAVLIVGRSADTLAETAKGRD----GIHTLPLDLTEPDAAAVVVETARRQLGRLDVLVNN 81 
+                                  689***********************************98643....356789***************************** PP
+
+                KR.Lackner.C9  91 aGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastg..GkqGvvlgapysaskhGvvGftka 170
+                                  aG +      +++    +  i tnl +   lt+++l +   le+ rG ++ni+s+g  G + +   + y a+k G+  +t++
+  gi|68146488|emb|CAH10174.1|  82 AGIASFAGLGSLEPASVEAQIRTNLIAPILLTQQALDS---LEETRGLVVNISSAGsiGLRTIPDNSVYCATKAGLDVLTRT 160
+                                  **99988889999999*******************986...8999*******99875577889999**************** PP
+
+                KR.Lackner.C9 171 lglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqal 252
+                                   ++ela+ Gi v  v pG  +t +a r             ++ +er++a iplGr   pe++a  +  l+s +   +    +
+  gi|68146488|emb|CAH10174.1| 161 WSVELAPRGIRVIGVAPGVTDTGVALRAGV-----SPAQYEAFMERMRAEIPLGRVGAPEDIAWWIVTLASADGGYLNGAVI 237
+                                  ***********************9987554.....4445689**********************999999988777766666 PP
+
+                KR.Lackner.C9 253 nvcGG 257
+                                   v G 
+  gi|68146488|emb|CAH10174.1| 238 PVDGA 242
+                                  66665 PP
+
+>> gi|8133012|gb|AAF73457.1|AF264025_8  putative aklaviketone reductase [Streptomyces galilaeus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.6   1.6   4.6e-30   4.6e-30       5     258 ..      20     264 ..      16     266 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 95.6 bits;  conditional E-value: 4.6e-30
+                        KR.Lackner.C9   5 eervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaav 78 
+                                          + r  +vtG+ +GiG a a+++a++g rv +  r++ ++a t +     g  +   ++d++d +  +a+ +aa 
+  gi|8133012|gb|AAF73457.1|AF264025_8  20 APRGVIVTGGGTGIGRATAHAFADRGDRVLVVGRTAATLAGTAEGH--PG--ISVLTADLTDPDGPRAITDAAL 89 
+                                          567789********************************99998653..34..445789**************** PP
+
+                        KR.Lackner.C9  79 erfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastg..GkqG 150
+                                          ++ G +dvlvnna   G    ae + e   +  ++nl + + ltr+ l +  + + g G ++ni s+g  G++ 
+  gi|8133012|gb|AAF73457.1|AF264025_8  90 DALGRIDVLVNNAATGGFAGLAETEPEAAREQFDSNLLAPLLLTRQTLDA--LSADGGGTVLNIGSAGalGRRA 161
+                                          *****************999**************************9975..789999******9987668999 PP
+
+                        KR.Lackner.C9 151 vvlgapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplG 224
+                                                y a+k G+  +t++ ++ela+ Gi v  + pG ++t ++er           +    l ++ a++p G
+  gi|8133012|gb|AAF73457.1|AF264025_8 162 WPQNGVYGAAKAGLDFLTRTWAVELAPRGIRVLGLAPGVIDTGIGERSGMSR-----EAYAGFLGQIAARVPAG 230
+                                          99999****************************************9965432.....23346799********* PP
+
+                        KR.Lackner.C9 225 rystpeevaglvgylvsdtaasitaqalnvcGGl 258
+                                          r  +pe++a     l+ + aa  t   l v GGl
+  gi|8133012|gb|AAF73457.1|AF264025_8 231 RVGRPEDIAWWAVQLADPRAAYATGAVLAVDGGL 264
+                                          *********************************9 PP
+
+>> gi|29469257|gb|AAO65367.1|  oxygenase reductase-like protein [Streptomyces sp. WP 4669]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.1   1.4   3.4e-23   3.4e-23       5     257 ..     516     760 ..     512     763 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 73.1 bits;  conditional E-value: 3.4e-23
+               KR.Lackner.C9   5 eervalvtGatsGiGlavarklaaegarvflc.ardedavaetvkelreeglevdGaaldvrdaadvealv....qaaverfG 82 
+                                 + r+alvtGa+ G+G a a++la++ga v +    +eda ae v  ++ +g ++    +++    dv++l     q  +er G
+  gi|29469257|gb|AAO65367.1| 516 TGRTALVTGASRGMGRATAQRLARDGALVAVHyGTNEDAAAEVVAGIERDGGRAFAVRAELGAPGDVHELFlaleQGLKERTG 598
+                                 6799************************988626788999999*****99999999999999999998765222255678999 PP
+
+               KR.Lackner.C9  83 t..vdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhG 163
+                                 +  +++lvnnaG  Gg +  + + ++++ + + n  + f l + +lt+  m   + Gri+ni+s   +      + y+ sk  
+  gi|29469257|gb|AAO65367.1| 599 SteLNILVNNAGVMGGVKPEDTTPDMFDRIFAVNARAPFFLVQRALTN--M--PDGGRIVNISSGLTRFANPDEIAYAMSKGA 677
+                                 733679************************************999986..3..578*************************** PP
+
+               KR.Lackner.C9 164 vvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaas 246
+                                 v  ++   ++ l + Gitvn+v pG           ++  a++++ e  ++e + a   + r  +p++va++v++lvsd+a  
+  gi|29469257|gb|AAO65367.1| 678 VEQLALHYAKALGPRGITVNSVAPGIT---------RNGNALFDIPE--AVEAMAALSTFNRVGEPQDVADVVAFLVSDDARW 749
+                                 *************************64.........34467899976..689999999************************* PP
+
+               KR.Lackner.C9 247 itaqalnvcGG 257
+                                 +t   ++  GG
+  gi|29469257|gb|AAO65367.1| 750 VTGSFVDASGG 760
+                                 **999999988 PP
+
+>> gi|6002929|gb|AAF00206.1|AF164960_2  oxygenase-reductase [Streptomyces fradiae]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.3   2.4   1.2e-22   1.2e-22       5     256 ..     417     660 ..     413     663 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 71.3 bits;  conditional E-value: 1.2e-22
+                        KR.Lackner.C9   5 eervalvtGatsGiGlavarklaaegarvfl.cardedavaetvkelreeglevdGaaldvrdaadvealvqaa 77 
+                                          + ++alvtG++ GiG a a +la+ega v + c+r+ +a +etv  +++eg ++    +++    dv++l  a 
+  gi|6002929|gb|AAF00206.1|AF164960_2 417 TGKTALVTGSSRGIGRATAIRLAREGALVAVhCSRNREAADETVATIEKEGGRAFSVLAELGVPGDVHELFLAL 490
+                                          6789***********************99655*******************99999888888888888765443 PP
+
+                        KR.Lackner.C9  78 ....ver..fGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniast 145
+                                              +er    t+d+lvnnaG  Gg +  e++ el++ +++ n ++ f + + ++t    l  + Griini+s 
+  gi|6002929|gb|AAF00206.1|AF164960_2 491 erglKERtdATTLDILVNNAGVMGGVAPEEVTPELFDRLVAVNAKAPFFIVQRAVT----LIPDGGRIINISSG 560
+                                          111123311579**********************************9988776554....56789********* PP
+
+                        KR.Lackner.C9 146 gGkqGvvlgapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqa 219
+                                            +      + y+ +k  +  +t  +++ l    itvn+v pG  +   ++ v ++  a+ +++   v++r+  
+  gi|6002929|gb|AAF00206.1|AF164960_2 561 LTRFANPQEVAYAMTKGAMDQLTLHFAKHLGSRNITVNSVGPGITN--NGTPVFDNPEAVAQMAGYSVFNRV-- 630
+                                          *******************************************854..455666666666677777776654.. PP
+
+                        KR.Lackner.C9 220 kiplGrystpeevaglvgylvsdtaasitaqalnvcG 256
+                                                  +  +va++v++l++d+a  it   l+  G
+  gi|6002929|gb|AAF00206.1|AF164960_2 631 -------GEVTDVADVVAFLAGDDARWITGSYLDASG 660
+                                          .......567789999999999999999987776655 PP
+
+>> gi|690514147|ref|YP_009060694.1|  auricin polyketide oxygenase-reductase (plasmid) [Streptomyces aureofaciens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   66.6   0.3   3.3e-21   3.3e-21       5     257 ..     526     770 ..     522     773 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 66.6 bits;  conditional E-value: 3.3e-21
+                     KR.Lackner.C9   5 eervalvtGatsGiGlavarklaaegarvflcar.dedavaetvkelreeglevdGaaldvrdaadvealvqa.... 76 
+                                       + r+alvtG++ G+G a+a +la+ega v +    d  a +e v  ++++g ++    +++    dve+l  a    
+  gi|690514147|ref|YP_009060694.1| 526 AGRTALVTGSSRGMGRAAAIRLAEEGALVAVHYTsDGAAAEEVVASVEKDGGRAFAIRAELGVPGDVESLFGAlead 602
+                                       5699************************9887551555666778889999999988888888888888876541111 PP
+
+                     KR.Lackner.C9  77 averfGtvd..vlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGv 151
+                                         er G+ d  +lvnnaG  Gg   a+i+ + ++ + + n ++ f l + +l++      + Griini+s   +   
+  gi|690514147|ref|YP_009060694.1| 603 LLERTGSTDlhILVNNAGVMGGVGPADITPDQFDRIFAVNAKAPFFLIQRALRN----MPDGGRIINISSGLTRFAN 675
+                                       579999876448**********************************99999986....3578*************** PP
+
+                     KR.Lackner.C9 152 vlgapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGryst 228
+                                          + y+ sk  +  ++   ++ l + Git+n+v pG           ++   ++++ e  ++e++ +   + r  +
+  gi|690514147|ref|YP_009060694.1| 676 PDEIAYAMSKGALEQLALHYAKALGPRGITINSVAPGIT---------RNGNPVFDIPE--AVEQMASLSAFNRVGE 741
+                                       *************************************64.........44467899976..6899************ PP
+
+                     KR.Lackner.C9 229 peevaglvgylvsdtaasitaqalnvcGG 257
+                                       pe+va++v++l++d+a  it   ++  GG
+  gi|690514147|ref|YP_009060694.1| 742 PEDVADVVAFLATDEARWITGSFVDATGG 770
+                                       *********************99999988 PP
+
+>> gi|720065712|pdb|4OSO|A  Chain A, The Crystal Structure Of Landomycin C-6 Ketoreductase Lanv With Bound Nadp And Rabe
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.8   2.4   2.4e-20   2.4e-20       6     257 ..      16     259 ..      11     262 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 63.8 bits;  conditional E-value: 2.4e-20
+            KR.Lackner.C9   6 ervalvtGatsGiGlavarklaaegarvflc.ardedavaetvkelreeglevdGaaldvrdaadvealvq....aaverfGt..v 84 
+                               ++alvtGa+ GiG a+a kl+  ga v +  a  +da ae  + ++++g ++   ++++    dv+ l +      +er G+  +
+  gi|720065712|pdb|4OSO|A  16 GKTALVTGASRGIGRAIAEKLGYAGALVAVHyATGADAAAEVAESIEKDGGRAFTVKAELGVPGDVDVLFEglerGLKERTGAtdL 101
+                              689***********************997743778888888888888888888888888877777777664111145789987336 PP
+
+            KR.Lackner.C9  85 dvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftka 170
+                              d+lvnnaG    G+  e++ e+++ +++ n ++ f + + +l+   m   + Griin++s   +      + y  sk  +  ++  
+  gi|720065712|pdb|4OSO|A 102 DILVNNAGVMAMGAPEEVTPEMFDRMMAVNAKAPFFIVQRALSV--M--PDGGRIINVSSGLTRVASPDQVTYGMSKGALEQIALH 183
+                              89***********************************9999974..3..578*********9999999****************** PP
+
+            KR.Lackner.C9 171 lglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnvcG 256
+                              ++  l    itvn+v pG  +         + +a++++ e  v e + +   +G  ++p  +a++v++l+s++a  it   ++  G
+  gi|720065712|pdb|4OSO|A 184 FSRHLGSRRITVNSVAPGSTD---------NGSALFQIPE--VRETLSQLSTFGEVAEPAAIADVVAFLASEDARWITGAFIDASG 258
+                              ******************765.........4467888875..66677777789**************************9999999 PP
+
+            KR.Lackner.C9 257 G 257
+                              G
+  gi|720065712|pdb|4OSO|A 259 G 259
+                              8 PP
+
+>> gi|14280348|gb|AAK57530.1|  PgaM [Streptomyces sp. PGA64]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.0   0.4   4.1e-20   4.1e-20       4     257 ..     535     780 ..     532     783 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 63.0 bits;  conditional E-value: 4.1e-20
+               KR.Lackner.C9   4 aeervalvtGatsGiGlavarklaaegarvfl..cardedavaetvkelreeglevdGaaldvrdaadvealv....qaaver 80 
+                                  ++++alvtG++ G+G a+a +la+ega v +  +ar +da +  v e++++g ++    +++    dv++l     +  +er
+  gi|14280348|gb|AAK57530.1| 535 LTSKTALVTGSSRGMGRAAAIRLAREGALVAVhyTAR-KDAAEDVVAEIEKDGGRAFTVRAELGVPGDVHELFlgleNGLRER 616
+                                 5789***********************9886621444.577889999*****9999999999999999988652222456889 PP
+
+               KR.Lackner.C9  81 fGt..vdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysask 161
+                                  G+  +d+lvnnaG  Gg +  + + e ++++ + n ++ f l + +l++      + Griini+s   +      + y+ +k
+  gi|14280348|gb|AAK57530.1| 617 TGStdLDILVNNAGVMGGVKPEDTTPEKFDELFAVNAKAPFFLIQRALKN----MPDGGRIINITSGLTRVANPDEIAYAMTK 695
+                                 99733689************************************999986....3578*******99999999999******* PP
+
+               KR.Lackner.C9 162 hGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdta 244
+                                   v  ++  +++ l +  itvn+v pG           ++   ++ + e  ++e++ +   + r  +pe+va++v++l++d+a
+  gi|14280348|gb|AAK57530.1| 696 GAVDQLALHFAKYLGPRNITVNSVAPGIT---------RNDNPVFGIPE--AVEQMAQLSAFNRVGEPEDVADVVAFLATDEA 767
+                                 ***************************64.........44567888865..578888888999******************** PP
+
+               KR.Lackner.C9 245 asitaqalnvcGG 257
+                                   it   ++  GG
+  gi|14280348|gb|AAK57530.1| 768 RWITGSFVDATGG 780
+                                 ****999999988 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                           26  (8832 residues searched)
+Passed MSV filter:                        26  (1); expected 0.5 (0.02)
+Passed bias filter:                       26  (1); expected 0.5 (0.02)
+Passed Vit filter:                        26  (1); expected 0.0 (0.001)
+Passed Fwd filter:                        26  (1); expected 0.0 (1e-05)
+Initial search space (Z):                 26  [actual number of targets]
+Domain search space  (domZ):              26  [number of targets reported over threshold]
+# CPU time: 0.13u 0.02s 00:00:00.15 Elapsed: 00:00:00.16
+# Mc/sec: 14.41
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.C15.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                         -----------
+    2.4e-25   77.8   1.2    6.3e-25   76.5   1.2    1.5  1  gb|AAO65367.1|:513-760            oxygenase reductase-like protein
+    4.1e-25   77.1   2.3      3e-24   74.2   2.3    1.9  1  gb|AAF00206.1|AF164960_2:416-660  oxygenase-reductase [Streptomyce
+    1.7e-23   71.7   0.3    5.6e-23   70.1   0.3    1.7  1  gi|690514147:525-770              auricin polyketide oxygenase-red
+    1.2e-22   69.0   0.4      9e-22   66.1   0.4    1.9  1  gb|AAK57530.1|:534-780            PgaM [Streptomyces sp. PGA64]
+    1.2e-21   65.7   2.4    4.7e-21   63.8   2.4    1.7  1  gi|720065712|pdb|4OSO|A           Chain A, The Crystal Structure O
+
+
+Domain annotation for each sequence (and alignments):
+>> gb|AAO65367.1|:513-760  oxygenase reductase-like protein [Streptomyces sp. WP 4669]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.5   1.2   6.3e-25   6.3e-25       6     257 ..       5     248 .]       2     248 .] 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 76.5 bits;  conditional E-value: 6.3e-25
+           KR.Lackner.C9   6 ervalvtGatsGiGlavarklaaegarvflc.ardedavaetvkelreeglevdGaaldvrdaadvealv....qaaverfGt..vd 85 
+                              r+alvtGa+ G+G a a++la++ga v +    +eda ae v  ++ +g ++    +++    dv++l     q  +er G+  ++
+  gb|AAO65367.1|:513-760   5 GRTALVTGASRGMGRATAQRLARDGALVAVHyGTNEDAAAEVVAGIERDGGRAFAVRAELGAPGDVHELFlaleQGLKERTGSteLN 91 
+                             689************************988626788999999*****9999999999999999999876522225567899973367 PP
+
+           KR.Lackner.C9  86 vlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftkalg 172
+                             +lvnnaG  Gg +  + + ++++ + + n  + f l + +lt+  m   + Gri+ni+s   +      + y+ sk  v  ++   +
+  gb|AAO65367.1|:513-760  92 ILVNNAGVMGGVKPEDTTPDMFDRIFAVNARAPFFLVQRALTN--M--PDGGRIVNISSGLTRFANPDEIAYAMSKGAVEQLALHYA 174
+                             9************************************999986..3..578************************************ PP
+
+           KR.Lackner.C9 173 lelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnvcGG 257
+                             + l + Gitvn+v pG           ++  a++++ e  ++e + a   + r  +p++va++v++lvsd+a  +t   ++  GG
+  gb|AAO65367.1|:513-760 175 KALGPRGITVNSVAPGIT---------RNGNALFDIPE--AVEAMAALSTFNRVGEPQDVADVVAFLVSDDARWVTGSFVDASGG 248
+                             ****************64.........34467899976..689999999***************************999888887 PP
+
+>> gb|AAF00206.1|AF164960_2:416-660  oxygenase-reductase [Streptomyces fradiae]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   74.2   2.3     3e-24     3e-24       7     253 ..       4     242 ..       1     245 [] 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 74.2 bits;  conditional E-value: 3e-24
+                     KR.Lackner.C9   7 rvalvtGatsGiGlavarklaaegarvfl.cardedavaetvkelreeglevdGaaldvrdaadvealvqaa....v 78 
+                                       ++alvtG++ GiG a a +la+ega v + c+r+ +a +etv  +++eg ++    +++    dv++l  a     +
+  gb|AAF00206.1|AF164960_2:416-660   4 KTALVTGSSRGIGRATAIRLAREGALVAVhCSRNREAADETVATIEKEGGRAFSVLAELGVPGDVHELFLALerglK 80 
+                                       79***********************99655*******************9999988888888888876544311112 PP
+
+                     KR.Lackner.C9  79 er..fGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvl 153
+                                       er    t+d+lvnnaG  Gg +  e++ el++ +++ n ++ f + + ++t    l  + Griini+s   +     
+  gb|AAF00206.1|AF164960_2:416-660  81 ERtdATTLDILVNNAGVMGGVAPEEVTPELFDRLVAVNAKAPFFIVQRAVT----LIPDGGRIINISSGLTRFANPQ 153
+                                       3311579**********************************9988776554....56789***************** PP
+
+                     KR.Lackner.C9 154 gapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpe 230
+                                        + y+ +k  +  +t  +++ l    itvn+v pG  +   ++ v ++  a+ +++   v++r+          +  
+  gb|AAF00206.1|AF164960_2:416-660 154 EVAYAMTKGAMDQLTLHFAKHLGSRNITVNSVGPGITN--NGTPVFDNPEAVAQMAGYSVFNRV---------GEVT 219
+                                       ***********************************854..455666666666666666666654.........5667 PP
+
+                     KR.Lackner.C9 231 evaglvgylvsdtaasitaqaln 253
+                                       +va++v++l++d+a  it   l+
+  gb|AAF00206.1|AF164960_2:416-660 220 DVADVVAFLAGDDARWITGSYLD 242
+                                       89999999999999998877665 PP
+
+>> gi|690514147:525-770  auricin polyketide oxygenase-reductase (plasmid) [Streptomyces aureofaciens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.1   0.3   5.6e-23   5.6e-23       6     257 ..       3     246 .]       1     246 [] 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 70.1 bits;  conditional E-value: 5.6e-23
+         KR.Lackner.C9   6 ervalvtGatsGiGlavarklaaegarvflcar.dedavaetvkelreeglevdGaaldvrdaadvealvqa....averfGtvd..vl 87 
+                            r+alvtG++ G+G a+a +la+ega v +    d  a +e v  ++++g ++    +++    dve+l  a      er G+ d  +l
+  gi|690514147:525-770   3 GRTALVTGSSRGMGRAAAIRLAEEGALVAVHYTsDGAAAEEVVASVEKDGGRAFAIRAELGVPGDVESLFGAleadLLERTGSTDlhIL 91 
+                           589************************9887551555666778889999999988888888888888876541111579999876448* PP
+
+         KR.Lackner.C9  88 vnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftkalglela 176
+                           vnnaG  Gg   a+i+ + ++ + + n ++ f l + +l++      + Griini+s   +      + y+ sk  +  ++   ++ l 
+  gi|690514147:525-770  92 VNNAGVMGGVGPADITPDQFDRIFAVNAKAPFFLIQRALRN----MPDGGRIINISSGLTRFANPDEIAYAMSKGALEQLALHYAKALG 176
+                           *********************************99999986....3578**************************************** PP
+
+         KR.Lackner.C9 177 ktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnvcGG 257
+                           + Git+n+v pG           ++   ++++ e  ++e++ +   + r  +pe+va++v++l++d+a  it   ++  GG
+  gi|690514147:525-770 177 PRGITINSVAPGIT---------RNGNPVFDIPE--AVEQMASLSAFNRVGEPEDVADVVAFLATDEARWITGSFVDATGG 246
+                           ************64.........44467899976..6899********************************999988887 PP
+
+>> gb|AAK57530.1|:534-780  PgaM [Streptomyces sp. PGA64]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   66.1   0.4     9e-22     9e-22       5     257 ..       3     247 .]       1     247 [] 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 66.1 bits;  conditional E-value: 9e-22
+           KR.Lackner.C9   5 eervalvtGatsGiGlavarklaaegarvfl..cardedavaetvkelreeglevdGaaldvrdaadvealv....qaaverfGt.. 83 
+                             ++++alvtG++ G+G a+a +la+ega v +  +ar +da +  v e++++g ++    +++    dv++l     +  +er G+  
+  gb|AAK57530.1|:534-780   3 TSKTALVTGSSRGMGRAAAIRLAREGALVAVhyTAR-KDAAEDVVAEIEKDGGRAFTVRAELGVPGDVHELFlgleNGLRERTGStd 88 
+                             5799**********************9886621444.577889999*****999999999999999998865222245688999733 PP
+
+           KR.Lackner.C9  84 vdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftka 170
+                             +d+lvnnaG  Gg +  + + e ++++ + n ++ f l + +l++      + Griini+s   +      + y+ +k  v  ++  
+  gb|AAK57530.1|:534-780  89 LDILVNNAGVMGGVKPEDTTPEKFDELFAVNAKAPFFLIQRALKN----MPDGGRIINITSGLTRVANPDEIAYAMTKGAVDQLALH 171
+                             689************************************999986....3578*******99999999999**************** PP
+
+           KR.Lackner.C9 171 lglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnvcGG 257
+                             +++ l +  itvn+v pG           ++   ++ + e  ++e++ +   + r  +pe+va++v++l++d+a  it   ++  GG
+  gb|AAK57530.1|:534-780 172 FAKYLGPRNITVNSVAPGIT---------RNDNPVFGIPE--AVEQMAQLSAFNRVGEPEDVADVVAFLATDEARWITGSFVDATGG 247
+                             ******************64.........44567888865..578888888999************************999988887 PP
+
+>> gi|720065712|pdb|4OSO|A  Chain A, The Crystal Structure Of Landomycin C-6 Ketoreductase Lanv With Bound Nadp And Rabe
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   63.8   2.4   4.7e-21   4.7e-21       6     257 ..      16     259 ..      11     262 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 63.8 bits;  conditional E-value: 4.7e-21
+            KR.Lackner.C9   6 ervalvtGatsGiGlavarklaaegarvflc.ardedavaetvkelreeglevdGaaldvrdaadvealvq....aaverfGt..v 84 
+                               ++alvtGa+ GiG a+a kl+  ga v +  a  +da ae  + ++++g ++   ++++    dv+ l +      +er G+  +
+  gi|720065712|pdb|4OSO|A  16 GKTALVTGASRGIGRAIAEKLGYAGALVAVHyATGADAAAEVAESIEKDGGRAFTVKAELGVPGDVDVLFEglerGLKERTGAtdL 101
+                              689***********************997743778888888888888888888888888877777777664111145789987336 PP
+
+            KR.Lackner.C9  85 dvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftka 170
+                              d+lvnnaG    G+  e++ e+++ +++ n ++ f + + +l+   m   + Griin++s   +      + y  sk  +  ++  
+  gi|720065712|pdb|4OSO|A 102 DILVNNAGVMAMGAPEEVTPEMFDRMMAVNAKAPFFIVQRALSV--M--PDGGRIINVSSGLTRVASPDQVTYGMSKGALEQIALH 183
+                              89***********************************9999974..3..578*********9999999****************** PP
+
+            KR.Lackner.C9 171 lglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnvcG 256
+                              ++  l    itvn+v pG  +         + +a++++ e  v e + +   +G  ++p  +a++v++l+s++a  it   ++  G
+  gi|720065712|pdb|4OSO|A 184 FSRHLGSRRITVNSVAPGSTD---------NGSALFQIPE--VRETLSQLSTFGEVAEPAAIADVVAFLASEDARWITGAFIDASG 258
+                              ******************765.........4467888875..66677777789**************************9999999 PP
+
+            KR.Lackner.C9 257 G 257
+                              G
+  gi|720065712|pdb|4OSO|A 259 G 259
+                              8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            5  (1249 residues searched)
+Passed MSV filter:                         5  (1); expected 0.1 (0.02)
+Passed bias filter:                        5  (1); expected 0.1 (0.02)
+Passed Vit filter:                         5  (1); expected 0.0 (0.001)
+Passed Fwd filter:                         5  (1); expected 0.0 (1e-05)
+Initial search space (Z):                  5  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.07u 0.02s 00:00:00.09 Elapsed: 00:00:00.09
+# Mc/sec: 3.62
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.C17.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                            Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                            -----------
+    2.1e-35  110.5   7.4    2.6e-35  110.2   7.4    1.0  1  gi|532241|gb|AAA65202.1|             daunorubicin-doxorubicin polyket
+    2.8e-34  106.8   6.5    3.8e-34  106.4   6.5    1.1  1  gi|6018300|gb|AAF01806.1|AF187532_2  C-7 ketoreductase [Streptomyces 
+    1.1e-31   98.3   2.8    1.3e-31   98.1   2.8    1.0  1  gi|68146488|emb|CAH10174.1|          ChaL protein [Streptomyces chart
+    5.5e-31   96.0   1.6    7.1e-31   95.6   1.6    1.1  1  gi|8133012|gb|AAF73457.1|AF264025_8  putative aklaviketone reductase 
+
+
+Domain annotation for each sequence (and alignments):
+>> gi|532241|gb|AAA65202.1|  daunorubicin-doxorubicin polyketide synthase [Streptomyces peucetius]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.2   7.4   2.6e-35   2.6e-35       3     258 ..       2     248 ..       1     250 [. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 110.2 bits;  conditional E-value: 2.6e-35
+             KR.Lackner.C9   3 eaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGt.vdv 86 
+                               e+++r  +vtG+ sGiG avar++aa+g rv +  r++  +aetv+  +    ++   a+d++d a  ea+v +++er G+ vdv
+  gi|532241|gb|AAA65202.1|   2 ENTQRSVIVTGGGSGIGRAVARAFAARGDRVLVVGRTAGPLAETVDGHK----DAHTLAVDITDPAAPEAVVREVRERLGGvVDV 82 
+                               5788999**************************************8765....5667899*******************8637** PP
+
+             KR.Lackner.C9  87 lvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastg..GkqGvvlgapysaskhGvvGftk 169
+                               lvnna  +  G+  e++    +  ++tnl +   lt++ l   g le   G ++ni s+g  G++     a y a+k G+  +t+
+  gi|532241|gb|AAA65202.1|  83 LVNNAATAAFGHLGELHRTAVEAQVATNLVAPVLLTQALL---GPLETASGLVVNIGSAGalGRRAWPGNAVYGAAKAGLDLLTR 164
+                               *************************************999...568999*******99886688999999*************** PP
+
+             KR.Lackner.C9 170 alglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnv 254
+                               + ++el + Gi v  v pG + t     vr+g +   + + d  le + +++plGr  +pe+va  v  l+ ++aa  +   l v
+  gi|532241|gb|AAA65202.1| 165 SWAVELGPRGIRVVGVAPGVIGTGA--GVRAGMS---QEAYDGFLEAMGQRVPLGRVGRPEDVAWWVVRLADPEAAYASGAVLAV 244
+                               *********************9965..5776554...567789****************************************** PP
+
+             KR.Lackner.C9 255 cGGl 258
+                                GGl
+  gi|532241|gb|AAA65202.1| 245 DGGL 248
+                               ***9 PP
+
+>> gi|6018300|gb|AAF01806.1|AF187532_2  C-7 ketoreductase [Streptomyces nogalater]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.4   6.5   3.8e-34   3.8e-34       9     258 ..      39     278 ..      32     280 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 106.4 bits;  conditional E-value: 3.8e-34
+                        KR.Lackner.C9   9 alvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfG 82 
+                                           +vtG+ sGiG a ar++aa+ga+v +  r+eda+a+t +   +  +     ++dv++ +  +a+v+aa + fG
+  gi|6018300|gb|AAF01806.1|AF187532_2  39 VIVTGGGSGIGRATARAFAAQGAKVLVVGRTEDALAQTAEGCADMRV----LVADVASPDGPQAVVNAALREFG 108
+                                          689***********************************987766555....568******************** PP
+
+                        KR.Lackner.C9  83 tvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriini..astgGkqGvvlg 154
+                                           +dvlvnna  +G  + ++++ +       tnlt+ + l + +l   g lek+rG ++n+  a+t G +    g
+  gi|6018300|gb|AAF01806.1|AF187532_2 109 RIDVLVNNAAVAGMETLQTVDRDAVARQFGTNLTAPLFLVQSAL---GALEKSRGIVVNVgtAATLGLRAAPTG 179
+                                          ***********************************999988777...6799********855788999****** PP
+
+                        KR.Lackner.C9 155 apysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGryst 228
+                                          a y ask  +  +t++ ++ela+ Gi v  v pG ++t ++ r+             e l  +  ++p+Gr  +
+  gi|6018300|gb|AAF01806.1|AF187532_2 180 ALYGASKVALDYLTRTWAVELAPRGIRVVGVAPGVIDTGIGVRMGMTP-----EGYREFLTGMGGRVPVGRVGR 248
+                                          **************************************9987766543.....34568999************* PP
+
+                        KR.Lackner.C9 229 peevaglvgylvsdtaasitaqalnvcGGl 258
+                                          pe+va  +  l+ ++a   t   + v GGl
+  gi|6018300|gb|AAF01806.1|AF187532_2 249 PEDVAWWIVQLARPEAGYATGMVVPVDGGL 278
+                                          ****************************98 PP
+
+>> gi|68146488|emb|CAH10174.1|  ChaL protein [Streptomyces chartreusis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.1   2.8   1.3e-31   1.3e-31       9     257 ..       4     242 ..       1     245 [. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 98.1 bits;  conditional E-value: 1.3e-31
+                KR.Lackner.C9   9 alvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtvdvlvnn 90 
+                                   ++tG+ +GiG a+a+++a+ g  v +  r++d++aet k        +    ld+++ +    +v++a+++ G +dvlvnn
+  gi|68146488|emb|CAH10174.1|   4 IVITGGGTGIGRAAAHAFADAGDAVLIVGRSADTLAETAKGRD----GIHTLPLDLTEPDAAAVVVETARRQLGRLDVLVNN 81 
+                                  689***********************************98643....356789***************************** PP
+
+                KR.Lackner.C9  91 aGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastg..GkqGvvlgapysaskhGvvGftka 170
+                                  aG +      +++    +  i tnl +   lt+++l +   le+ rG ++ni+s+g  G + +   + y a+k G+  +t++
+  gi|68146488|emb|CAH10174.1|  82 AGIASFAGLGSLEPASVEAQIRTNLIAPILLTQQALDS---LEETRGLVVNISSAGsiGLRTIPDNSVYCATKAGLDVLTRT 160
+                                  **99988889999999*******************986...8999*******99875577889999**************** PP
+
+                KR.Lackner.C9 171 lglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqal 252
+                                   ++ela+ Gi v  v pG  +t +a r             ++ +er++a iplGr   pe++a  +  l+s +   +    +
+  gi|68146488|emb|CAH10174.1| 161 WSVELAPRGIRVIGVAPGVTDTGVALRAGV-----SPAQYEAFMERMRAEIPLGRVGAPEDIAWWIVTLASADGGYLNGAVI 237
+                                  ***********************9987554.....4445689**********************999999988777766666 PP
+
+                KR.Lackner.C9 253 nvcGG 257
+                                   v G 
+  gi|68146488|emb|CAH10174.1| 238 PVDGA 242
+                                  66665 PP
+
+>> gi|8133012|gb|AAF73457.1|AF264025_8  putative aklaviketone reductase [Streptomyces galilaeus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.6   1.6   7.1e-31   7.1e-31       5     258 ..      20     264 ..      16     266 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 95.6 bits;  conditional E-value: 7.1e-31
+                        KR.Lackner.C9   5 eervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaav 78 
+                                          + r  +vtG+ +GiG a a+++a++g rv +  r++ ++a t +     g  +   ++d++d +  +a+ +aa 
+  gi|8133012|gb|AAF73457.1|AF264025_8  20 APRGVIVTGGGTGIGRATAHAFADRGDRVLVVGRTAATLAGTAEGH--PG--ISVLTADLTDPDGPRAITDAAL 89 
+                                          567789********************************99998653..34..445789**************** PP
+
+                        KR.Lackner.C9  79 erfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastg..GkqG 150
+                                          ++ G +dvlvnna   G    ae + e   +  ++nl + + ltr+ l +  + + g G ++ni s+g  G++ 
+  gi|8133012|gb|AAF73457.1|AF264025_8  90 DALGRIDVLVNNAATGGFAGLAETEPEAAREQFDSNLLAPLLLTRQTLDA--LSADGGGTVLNIGSAGalGRRA 161
+                                          *****************999**************************9975..789999******9987668999 PP
+
+                        KR.Lackner.C9 151 vvlgapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplG 224
+                                                y a+k G+  +t++ ++ela+ Gi v  + pG ++t ++er           +    l ++ a++p G
+  gi|8133012|gb|AAF73457.1|AF264025_8 162 WPQNGVYGAAKAGLDFLTRTWAVELAPRGIRVLGLAPGVIDTGIGERSGMSR-----EAYAGFLGQIAARVPAG 230
+                                          99999****************************************9965432.....23346799********* PP
+
+                        KR.Lackner.C9 225 rystpeevaglvgylvsdtaasitaqalnvcGGl 258
+                                          r  +pe++a     l+ + aa  t   l v GGl
+  gi|8133012|gb|AAF73457.1|AF264025_8 231 RVGRPEDIAWWAVQLADPRAAYATGAVLAVDGGL 264
+                                          *********************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            4  (1045 residues searched)
+Passed MSV filter:                         4  (1); expected 0.1 (0.02)
+Passed bias filter:                        4  (1); expected 0.1 (0.02)
+Passed Vit filter:                         4  (1); expected 0.0 (0.001)
+Passed Fwd filter:                         4  (1); expected 0.0 (1e-05)
+Initial search space (Z):                  4  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.04
+# Mc/sec: 6.82
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.C19.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                              -----------
+    1.1e-45  144.7   1.3    1.4e-45  144.4   1.3    1.0  1  gi|33327106|gb|AAQ08926.1|             putative 3-ketoacyl-ACP reductas
+    4.7e-42  132.8   3.1    8.7e-42  132.0   3.1    1.4  1  gi|21039503|gb|AAM33668.1|AF509565_16  putative 3-oxoacyl-ACP reductase
+      5e-42  132.8   2.9    7.9e-42  132.1   2.9    1.2  1  gi|9944998|gb|AAG03071.1|AF293355_7    putative reductase [Streptomyces
+    3.8e-40  126.6   0.9    5.3e-40  126.1   0.9    1.1  1  gi|169402971|emb|CAM58804.1|           BenL protein [Streptomyces sp. A
+    4.1e-40  126.5   4.7    4.9e-39  123.0   4.7    1.9  1  gi|120431572|gb|ABM21753.1|            PdmG [Actinomadura hibisca]
+    1.5e-37  118.1   1.2      2e-37  117.7   1.2    1.1  1  gi|662748191|gb|AIE76942.1:150-253|    putative bifunctional cyclase/3-
+
+
+Domain annotation for each sequence (and alignments):
+>> gi|33327106|gb|AAQ08926.1|  putative 3-ketoacyl-ACP reductase [Streptomyces griseus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  144.4   1.3   1.4e-45   1.4e-45       8     257 ..       9     248 ..       5     249 .] 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 144.4 bits;  conditional E-value: 1.4e-45
+               KR.Lackner.C9   8 valvtGatsGiGlavarklaaegarvflcardedavae.tvkelreeglevdGaaldvrdaadvealvqaaverfGtvdvlvn 89 
+                                  alvtG+t GiG a++ +la+ ga v+ c r+e + a    +el+e g +     +dv  ++ vea+++a+++rf t+dvlvn
+  gi|33327106|gb|AAQ08926.1|   9 NALVTGGTRGIGRAIVLALAKAGATVVTCYRTEGEAADsLARELKELGGDHALVRADVGTTEGVEAVLAACRTRFETLDVLVN 91 
+                                 59*****************************99776651569***************************************** PP
+
+               KR.Lackner.C9  90 naGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftkalg 172
+                                 naG       a++  e w+ v++tnlt+ f +  ++l    +l ++   +ini s g   G+ l   y+ask G+vG+t++l 
+  gi|33327106|gb|AAQ08926.1|  92 NAGIISQVPFAQLPFEEWERVVTTNLTGPFMVISKALP---LL-RKGSSVINIGSRGAMAGIPLRGHYTASKAGLVGLTRSLC 170
+                                 *******************************9888875...44.45568********************************** PP
+
+               KR.Lackner.C9 173 lelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnvc 255
+                                 +el   Gi  n v pG ++t   e++ ++  a+y+       er+   + lGr+ +p+e+ag v +l+sd ++ +  ++l v 
+  gi|33327106|gb|AAQ08926.1| 171 KELGGKGIRFNVVAPGVIDTSEPEELTEEQRAAYD-------ERYLRMMALGRFGRPDEIAGAVLFLASDLSTYVNGETLHVD 246
+                                 ******************************99998.......78888899********************************9 PP
+
+               KR.Lackner.C9 256 GG 257
+                                 GG
+  gi|33327106|gb|AAQ08926.1| 247 GG 248
+                                 99 PP
+
+>> gi|21039503|gb|AAM33668.1|AF509565_16  putative 3-oxoacyl-ACP reductase GrhO10 [Streptomyces sp. JP95]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  132.0   3.1   8.7e-42   8.7e-42       9     258 ..      10     249 .]       5     249 .] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 132.0 bits;  conditional E-value: 8.7e-42
+                          KR.Lackner.C9   9 alvtGatsGiGlavarklaaegarvflca.rdedavaetvkelreeglevdGaaldvrdaadvealvqaave 79 
+                                             lvtG++ GiG  v+ + a+ ga v  c   d+++v++  +el++ g + +   +dv d ++v+alv  a+e
+  gi|21039503|gb|AAM33668.1|AF509565_16  10 LLVTGGSRGIGRGVVLAAARAGADVLTCYvNDSEHVESLRRELKALGGDHEVVRADVGDLDQVDALVGWARE 81 
+                                            69************************99625678999999******************************** PP
+
+                          KR.Lackner.C9  80 rfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGv 151
+                                            r+G +d +vnnaG       ae+a + w+ v++tnlt+++r+ ++ l   g    +   ++ni s g   G+
+  gi|21039503|gb|AAM33668.1|AF509565_16  82 RYGKLDGIVNNAGVISHIPFAELAPDEWSRVLDTNLTAAYRVIQQSLPLLG----SGASVVNIGSRGAAAGI 149
+                                            ********************************************9997544....34579************ PP
+
+                          KR.Lackner.C9 152 vlgapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakipl 223
+                                             l a y+a+k  ++G+t++l++el   Gi vn v pG +et   + + ++ a+        +   + +k  l
+  gi|21039503|gb|AAM33668.1|AF509565_16 150 PLRAHYTAAKAAMIGLTRSLAKELGGKGIRVNVVAPGVIETEAFDTMPAERAEG-------LRAMYAQKTAL 214
+                                            *****************************************8877777666654.......34456778999 PP
+
+                          KR.Lackner.C9 224 GrystpeevaglvgylvsdtaasitaqalnvcGGl 258
+                                             r  + +e+a+ v +l+sd aa +t ++lnv GG+
+  gi|21039503|gb|AAM33668.1|AF509565_16 215 ARLGRVDELAAPVLFLLSDLAAYVTGETLNVDGGI 249
+                                            99999****************************96 PP
+
+>> gi|9944998|gb|AAG03071.1|AF293355_7  putative reductase [Streptomyces collinus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  132.1   2.9   7.9e-42   7.9e-42       7     258 ..       8     249 .]       4     249 .] 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 132.1 bits;  conditional E-value: 7.9e-42
+                        KR.Lackner.C9   7 rvalvtGatsGiGlavarklaaegarvflcarde.davaetvkelreeglevdGaaldvrdaadvealvqaave 79 
+                                          r  l+tG+t GiG  ++ + a+ ga v  c r+e +av++    l+e+  +     +dv d+a+ ++lv +a++
+  gi|9944998|gb|AAG03071.1|AF293355_7   8 RKLLITGGTRGIGRGIVLAAARAGADVLTCYRQEsEAVDSLTAALKETAGDHHVIRADVGDTAEADRLVGEAKD 81 
+                                          5679***************************98735688888999**999************************ PP
+
+                        KR.Lackner.C9  80 rfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvl 153
+                                          rfG +d +vnnaG        e+  + w+ +++tnlt+++r+ +++l   g        ++ni s g   G+ l
+  gi|9944998|gb|AAG03071.1|AF293355_7  82 RFGRLDGVVNNAGVISHIPFGELPADEWSRILDTNLTAAYRIIHQALPLLGT----GSSVVNIGSRGAAAGIPL 151
+                                          ********************************************99976543....3579************** PP
+
+                        KR.Lackner.C9 154 gapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrys 227
+                                           a y+a+k  ++G+t++l++el + Gi vn v pG +et   + + ++ aa        +   + +k  l r  
+  gi|9944998|gb|AAG03071.1|AF293355_7 152 RAHYTAAKAAMIGLTRSLAKELGPKGIRVNVVAPGVIETEAFADMPAERAAG-------LRATYSQKTALARLG 218
+                                          ***************************************7655555554444.......4455788999***** PP
+
+                        KR.Lackner.C9 228 tpeevaglvgylvsdtaasitaqalnvcGGl 258
+                                          t ee+ag v +l+sd+aa it ++lnv GG+
+  gi|9944998|gb|AAG03071.1|AF293355_7 219 TVEELAGPVLFLLSDAAAYITGETLNVDGGI 249
+                                          *****************************96 PP
+
+>> gi|169402971|emb|CAM58804.1|  BenL protein [Streptomyces sp. A2991200]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  126.1   0.9   5.3e-40   5.3e-40       6     258 ..       7     249 .]       4     249 .] 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 126.1 bits;  conditional E-value: 5.3e-40
+                 KR.Lackner.C9   6 ervalvtGatsGiGlavarklaaegarvflcardedava.etvkelreeglevdGaaldvrdaadvealvqaaverfGtvd 85 
+                                    r alvtG++ GiG a++ +la+ ga v  c ++ +a a +   el+ ++ +    ++d++d adv++lv++a++r+G+++
+  gi|169402971|emb|CAM58804.1|   7 GRHALVTGGSRGIGKAIVLALARAGADVLACHQNPSAQAdQLALELKRTEGDHHLLQADITDPADVDRLVNEAKTRYGSLE 87 
+                                   578*****************************998766515567999999999999************************* PP
+
+                 KR.Lackner.C9  86 vlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvG 166
+                                   ++v naG        +++   w+ v++t lt++f + ++ l   g    +r  +i i s +  +G++l + y+a+k G+ G
+  gi|169402971|emb|CAM58804.1|  88 IVVHNAGVISHVPLPQLELAEWHRVLDTSLTAAFAVVQKTLPLYG----ERASVILIGSRSAARGIALRSHYTAAKAGLEG 164
+                                   ************************************999997655....6788**************************** PP
+
+                 KR.Lackner.C9 167 ftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasi 247
+                                   f+++ ++el   G+ vn + pG +++  a+ + ++          +++ r+  k  lGr  +p+e+ag   +l++d ++ +
+  gi|169402971|emb|CAM58804.1| 165 FARSAAKELGGRGVRVNVIAPGVIDSDDAKAIPAE-------QRAQLVARYGDKTALGRLGEPDEIAGAAVFLAGDLSSYV 238
+                                   *************************9999887655.......4567899******************************** PP
+
+                 KR.Lackner.C9 248 taqalnvcGGl 258
+                                   t q++nv GG+
+  gi|169402971|emb|CAM58804.1| 239 TGQTINVDGGI 249
+                                   *********96 PP
+
+>> gi|120431572|gb|ABM21753.1|  PdmG [Actinomadura hibisca]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  123.0   4.7   4.9e-39   4.9e-39       6     258 ..       8     246 .]       3     246 .] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 123.0 bits;  conditional E-value: 4.9e-39
+                KR.Lackner.C9   6 ervalvtGatsGiGlavarklaaegarvflcardedavaetv.kelreeglevdGaaldvrdaadvealvqaaverfGtvdv 86 
+                                   + al+tG+t GiG ava  la+ ga+v +c r++ + a+++  el +++ +    ++d+ +a dv++l++++ +r G++dv
+  gi|120431572|gb|ABM21753.1|   8 GKNALITGGTRGIGRAVALGLARAGANVTVCYRSDAESAAAMeAELAATDGKHHVLQADIGNAGDVRRLLDEVAARMGSLDV 89 
+                                  578******************************77665555416999999999999************************** PP
+
+                KR.Lackner.C9  87 lvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGft 168
+                                  +v naG       a+++ e w+ ++++nlt+++ + r++l     l  + G ++ + s     G+   + y+a+k G++Gf 
+  gi|120431572|gb|ABM21753.1|  90 VVHNAGLISHVPFADLEPEEWHRIVDSNLTGMYLVVRAALP----LLSEGGAVVGVGSKVALVGISQRTHYTAAKAGLIGFV 167
+                                  *************************************9996....456789******************************* PP
+
+                KR.Lackner.C9 169 kalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaq 250
+                                  ++l++el + Gi vn v pG  et  a+++         v      er+q+   l r  +++eva++v +l+++ a  +t +
+  gi|120431572|gb|ABM21753.1| 168 RSLSKELGPLGIRVNLVAPGITETDQAAHLPP-------VQ----RERYQSMTALKRLGQADEVADVVLFLAGPGARYVTGE 238
+                                  ************************98876543.......22....479999999**************************** PP
+
+                KR.Lackner.C9 251 alnvcGGl 258
+                                  ++nv GG+
+  gi|120431572|gb|ABM21753.1| 239 TVNVDGGM 246
+                                  ******96 PP
+
+>> gi|662748191|gb|AIE76942.1:150-253|  putative bifunctional cyclase/3-oxoacyl-ACP reductase GrhT [Streptomyces sp. CN4
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  117.7   1.2     2e-37     2e-37       7     256 ..      12     251 ..       7     253 .] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 117.7 bits;  conditional E-value: 2e-37
+                        KR.Lackner.C9   7 rvalvtGatsGiGlavarklaaegarvflcarded.avaetvkelreeglevdGaaldvrdaadvealvqaave 79 
+                                          +  +vtG++ GiG  ++ + a+ ga v+ c r+e+ + a+  kel           +dv +aa  + l ++a+e
+  gi|662748191|gb|AIE76942.1:150-253|  12 KRIVVTGGSRGIGRGIVLAAARAGADVVTCYREENdHTASLAKELAPLPGSQHLLRADVSEAAGARLLADRARE 85 
+                                          5569****************************97615677789***999999999******************* PP
+
+                        KR.Lackner.C9  80 rfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvl 153
+                                            G++d +vnnaG       ae++d  w   +++nlts  ++ +++l     l    G i+++ st  + G++ 
+  gi|662748191|gb|AIE76942.1:150-253|  86 LLGGLDAVVNNAGDFAPQPYAELTDAAWATALQSNLTSTHQVIQAAL----PLLGAGGSIVSLGSTVARIGMAG 155
+                                          ************************************99766665555....5566789**************** PP
+
+                        KR.Lackner.C9 154 gapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrys 227
+                                          g+ y+a k+ +vG+t++l+ el + Gi vn++ pG + t   + +  + aa     + +v+ +f a   lGr  
+  gi|662748191|gb|AIE76942.1:150-253| 156 GVHYTAVKQALVGLTRSLARELGPRGIRVNTLSPGRIATEALDALPPEEAA----RQRAVFSKFAA---LGRLG 222
+                                          ***************************************999988888776....5789*****87...9**** PP
+
+                        KR.Lackner.C9 228 tpeevaglvgylvsdtaasitaqalnvcG 256
+                                          tp+e+a++v +l+sd+++ it q + v G
+  gi|662748191|gb|AIE76942.1:150-253| 223 TPQEIADVVLFLISDQSSYITGQNIHVDG 251
+                                          *************************9977 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            6  (1495 residues searched)
+Passed MSV filter:                         6  (1); expected 0.1 (0.02)
+Passed bias filter:                        6  (1); expected 0.1 (0.02)
+Passed Vit filter:                         6  (1); expected 0.0 (0.001)
+Passed Fwd filter:                         6  (1); expected 0.0 (1e-05)
+Initial search space (Z):                  6  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.04u 0.02s 00:00:00.06 Elapsed: 00:00:00.05
+# Mc/sec: 7.80
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.C9.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                            Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                            -----------
+   4.5e-156  507.4   4.2     5e-156  507.3   4.2    1.0  1  gi|809108|emb|CAA60572.1|            putative ketoreductase [Streptom
+   3.1e-154  501.4   5.2   3.5e-154  501.3   5.2    1.0  1  gi|7800663|gb|AAF70104.1|AF257324_5  AknA [Streptomyces galilaeus]
+   1.1e-152  496.4   6.6   1.3e-152  496.1   6.6    1.0  1  gi|510725|gb|AAB36565.1|             ketoreductase [Streptomyces vene
+   1.8e-152  495.6   6.0     2e-152  495.4   6.0    1.0  1  gi|29469255|gb|AAO65365.1|           putative ketoreductase [Streptom
+   3.3e-152  494.8   8.8   3.6e-152  494.6   8.8    1.0  1  gi|29469236|gb|AAO65349.1|           putative ketoreductase [Streptom
+   2.6e-151  491.8   8.2   2.9e-151  491.6   8.2    1.0  1  gi|16507975|gb|AAL24452.1|           RdmJ [Streptomyces purpurascens]
+   2.3e-147  478.9   9.4   2.5e-147  478.7   9.4    1.0  1  gi|68146470|emb|CAH10157.1|          ChaD protein [Streptomyces chart
+   4.1e-147  478.1   8.4   4.7e-147  477.9   8.4    1.0  1  gi|118571|sp|P16542.1|DHK1_STRVN     RecName: Full=Granaticin polyket
+   1.8e-146  476.0   5.8     2e-146  475.8   5.8    1.0  1  gi|532243|gb|AAA65204.1|             daunorubicin-doxorubicin polyket
+   6.8e-146  474.1   5.8   7.6e-146  473.9   5.8    1.0  1  gi|2916808|emb|CAA12013.1|           SnoaD [Streptomyces nogalater]
+   3.9e-144  468.3   6.9   4.3e-144  468.2   6.9    1.0  1  gi|14717093|emb|CAC44199.1|          ketoacyl reductase [Streptomyces
+
+
+Domain annotation for each sequence (and alignments):
+>> gi|809108|emb|CAA60572.1|  putative ketoreductase [Streptomyces fradiae]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  507.3   4.2    5e-156    5e-156       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 507.3 bits;  conditional E-value: 5e-156
+              KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtv 84 
+                                m++++ +va+vtGatsGiGlav+r l+++g+rvflcar+ed+v++tvk+l +eglevdGa +dvr+a+dve++vq+av+rfGt+
+  gi|809108|emb|CAA60572.1|   1 MTQQNPKVAIVTGATSGIGLAVTRLLGRQGHRVFLCARTEDSVTSTVKQLLDEGLEVDGAPCDVRSADDVERFVQRAVHRFGTI 84 
+                                68999******************************************************************************* PP
+
+              KR.Lackner.C9  85 dvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGft 168
+                                dvlvnnaGrsGgGvta+iadelw+dvi+tnl+svfr+trevl+tggm++k+rGriiniast+GkqGvvlgapysaskhGvvGft
+  gi|809108|emb|CAA60572.1|  85 DVLVNNAGRSGGGVTADIADELWHDVIDTNLNSVFRMTREVLNTGGMRHKDRGRIINIASTAGKQGVVLGAPYSASKHGVVGFT 168
+                                ************************************************************************************ PP
+
+              KR.Lackner.C9 169 kalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqal 252
+                                kalg+ela+tGitvnavcpGyvetpma+rvr+gyaa+y++sed++le+fqakiplGrystpeevaglvgyl+sdtaasit+qal
+  gi|809108|emb|CAA60572.1| 169 KALGNELAPTGITVNAVCPGYVETPMAQRVRAGYAAAYDTSEDAILEKFQAKIPLGRYSTPEEVAGLVGYLASDTAASITSQAL 252
+                                ************************************************************************************ PP
+
+              KR.Lackner.C9 253 nvcGGlGny 261
+                                nvcGGlGn+
+  gi|809108|emb|CAA60572.1| 253 NVCGGLGNF 261
+                                ********8 PP
+
+>> gi|7800663|gb|AAF70104.1|AF257324_5  AknA [Streptomyces galilaeus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  501.3   5.2  3.5e-154  3.5e-154       3     261 .]       3     261 .]       1     261 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 501.3 bits;  conditional E-value: 3.5e-154
+                        KR.Lackner.C9   3 eaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqa 76 
+                                           a+erva+vtGatsGiGlavar+la+ garvf+card d+va+tvkelre+g++vdGa++dvrd+a+v+a+vq+
+  gi|7800663|gb|AAF70104.1|AF257324_5   3 PASERVAIVTGATSGIGLAVARSLAEGGARVFICARDGDRVAHTVKELREAGHDVDGASCDVRDTARVRAFVQE 76 
+                                          5789********************************************************************** PP
+
+                        KR.Lackner.C9  77 averfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqG 150
+                                          a++rfG+vd lvnnaGrsGgG+ta+iadelwldvietnl+svfr+trevlttggmle+g+Gri+niastgGkqG
+  gi|7800663|gb|AAF70104.1|AF257324_5  77 ARDRFGPVDALVNNAGRSGGGHTAQIADELWLDVIETNLNSVFRMTREVLTTGGMLERGAGRIVNIASTGGKQG 150
+                                          ************************************************************************** PP
+
+                        KR.Lackner.C9 151 vvlgapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplG 224
+                                          v+lgapysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgya++++++edevlerf+akiplG
+  gi|7800663|gb|AAF70104.1|AF257324_5 151 VALGAPYSASKHGVVGFTKALGLELAKTGITVNAVCPGYVETPMAERVRQGYAGAWDITEDEVLERFEAKIPLG 224
+                                          ************************************************************************** PP
+
+                        KR.Lackner.C9 225 rystpeevaglvgylvsdtaasitaqalnvcGGlGny 261
+                                          rystp+evaglvgyl+s+taasitaqa+nvcGGlGny
+  gi|7800663|gb|AAF70104.1|AF257324_5 225 RYSTPDEVAGLVGYLLSSTAASITAQAMNVCGGLGNY 261
+                                          ************************************9 PP
+
+>> gi|510725|gb|AAB36565.1|  ketoreductase [Streptomyces venezuelae ATCC 10712]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  496.1   6.6  1.3e-152  1.3e-152       2     261 .]       5     264 .]       4     264 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 496.1 bits;  conditional E-value: 1.3e-152
+             KR.Lackner.C9   2 aeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtvdv 86 
+                               +++e+rvalvtGatsGiGlavar la++++rvfl+ar++++va+tvk+l++eglevdG++ldvr+ +dv+a+vqaav+rfGtv++
+  gi|510725|gb|AAB36565.1|   5 EKQEKRVALVTGATSGIGLAVARLLASQNHRVFLGARNAENVAATVKQLQDEGLEVDGTTLDVRSGEDVKAFVQAAVDRFGTVEL 89 
+                               6799********************************************************************************* PP
+
+             KR.Lackner.C9  87 lvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftkal 171
+                               lvnnaGrsG+Gvta+iadelw+dvi+tnl++vfrltre+lttggm+ek+rGriin+ast+GkqGvvlgapysaskhGvvGftkal
+  gi|510725|gb|AAB36565.1|  90 LVNNAGRSGAGVTADIADELWNDVIDTNLNCVFRLTREALTTGGMREKSRGRIINMASTAGKQGVVLGAPYSASKHGVVGFTKAL 174
+                               ************************************************************************************* PP
+
+             KR.Lackner.C9 172 glelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnvcG 256
+                               g+ela+tGitvnavcpGyvetpma+rvrqgyaa+ye+sed++le+fq+kiplGrystpeevaglvgyl+sdtaasit+qalnvcG
+  gi|510725|gb|AAB36565.1| 175 GNELAPTGITVNAVCPGYVETPMAQRVRQGYAAAYETSEDAILEKFQSKIPLGRYSTPEEVAGLVGYLASDTAASITSQALNVCG 259
+                               ************************************************************************************* PP
+
+             KR.Lackner.C9 257 GlGny 261
+                               GlGn+
+  gi|510725|gb|AAB36565.1| 260 GLGNF 264
+                               ****8 PP
+
+>> gi|29469255|gb|AAO65365.1|  putative ketoreductase [Streptomyces sp. WP 4669]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  495.4   6.0    2e-152    2e-152       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 495.4 bits;  conditional E-value: 2e-152
+               KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGt 83 
+                                 m++++ervalv+GatsGiGla+ar la++g+rvfl++rd+d+va+tvkel++egl+vdG +ldvr+a ++e++vqaav+rfG+
+  gi|29469255|gb|AAO65365.1|   1 MSDKHERVALVSGATSGIGLAAARLLAQQGHRVFLGSRDADNVARTVKELTAEGLDVDGGTLDVRSALSIESFVQAAVDRFGP 83 
+                                 67899****************************************************************************** PP
+
+               KR.Lackner.C9  84 vdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvG 166
+                                 vdvlvnnaGrsGgGvta+i+delw+dv+etnl+svfrltr+vlttggm++k+rGriiniast+GkqGvvlgapysaskhGvvG
+  gi|29469255|gb|AAO65365.1|  84 VDVLVNNAGRSGGGVTADIDDELWYDVVETNLNSVFRLTRAVLTTGGMRHKNRGRIINIASTAGKQGVVLGAPYSASKHGVVG 166
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 167 ftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasita 249
+                                 ftkalg+ela+tGitvnavcpGyvetpma+rvr+gyaa+y+++ed+++e+f+akiplGrystpeevaglvgyl+sdtaasita
+  gi|29469255|gb|AAO65365.1| 167 FTKALGNELAPTGITVNAVCPGYVETPMAQRVRAGYAAAYDTTEDAIMEKFTAKIPLGRYSTPEEVAGLVGYLASDTAASITA 249
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 250 qalnvcGGlGny 261
+                                 qalnvcGGlGn+
+  gi|29469255|gb|AAO65365.1| 250 QALNVCGGLGNF 261
+                                 ***********8 PP
+
+>> gi|29469236|gb|AAO65349.1|  putative ketoreductase [Streptomyces murayamaensis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  494.6   8.8  3.6e-152  3.6e-152       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 494.6 bits;  conditional E-value: 3.6e-152
+               KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGt 83 
+                                 m+e+++rvalvtGatsGiGl+var l+++g++vf++ar++d+vaetvk+l+ egle+dG+aldv+daa+v+a+vqaav+rfGt
+  gi|29469236|gb|AAO65349.1|   1 MTENTARVALVTGATSGIGLSVARLLGSQGHKVFIGARNADNVAETVKQLQGEGLEADGSALDVTDAASVKAFVQAAVDRFGT 83 
+                                 68999****************************************************************************** PP
+
+               KR.Lackner.C9  84 vdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvG 166
+                                 vdvlvnnaGrsGgGvta+i+delw+ vi+tnl+svfr+trevl+tggm++k+rGriiniast+GkqGvvlgapysaskhGvvG
+  gi|29469236|gb|AAO65349.1|  84 VDVLVNNAGRSGGGVTADIEDELWDAVIDTNLNSVFRVTREVLNTGGMRHKDRGRIINIASTAGKQGVVLGAPYSASKHGVVG 166
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 167 ftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasita 249
+                                 ftkalg+ela+tGitvnavcpGyvetpma+rvrqgyaa+y++sed++le+fq+kiplGrystp+evaglvgyl+sdtaasita
+  gi|29469236|gb|AAO65349.1| 167 FTKALGNELAPTGITVNAVCPGYVETPMAQRVRQGYAAAYSTSEDAILEKFQSKIPLGRYSTPDEVAGLVGYLASDTAASITA 249
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 250 qalnvcGGlGny 261
+                                 qalnvcGGlGn+
+  gi|29469236|gb|AAO65349.1| 250 QALNVCGGLGNF 261
+                                 ***********8 PP
+
+>> gi|16507975|gb|AAL24452.1|  RdmJ [Streptomyces purpurascens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  491.6   8.2  2.9e-151  2.9e-151       4     261 .]       7     264 .]       4     264 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 491.6 bits;  conditional E-value: 2.9e-151
+               KR.Lackner.C9   4 aeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtvdv 86 
+                                  ++rva+vtGatsGiGl+v+r+laa g+rvflcard+d+va tvkelr+eg++vdGaa+dvrd+a++e+lv+aaver+G+v+v
+  gi|16507975|gb|AAL24452.1|   7 PTSRVAVVTGATSGIGLSVTRSLAAVGHRVFLCARDADRVALTVKELRAEGHDVDGAACDVRDVAQIESLVSAAVERYGPVEV 89 
+                                 679******************************************************************************** PP
+
+               KR.Lackner.C9  87 lvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftk 169
+                                 lvnnaGrsGgG t++iadelw+dv++tnl+svfr+tr+vlttg+m+e g+Gr++niastgGkqGvvlgapysaskhGvvGftk
+  gi|16507975|gb|AAL24452.1|  90 LVNNAGRSGGGPTHTIADELWDDVMATNLDSVFRVTRAVLTTGRMREGGWGRVVNIASTGGKQGVVLGAPYSASKHGVVGFTK 172
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 170 alglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqal 252
+                                 alglelaktGitvnavcpGyvetpma rvrqgyaa++e+se+evl+rfqakiplGry+tp+evag+vgyl++d+a+s+taqa+
+  gi|16507975|gb|AAL24452.1| 173 ALGLELAKTGITVNAVCPGYVETPMAVRVRQGYAAAWETSEEEVLDRFQAKIPLGRYTTPDEVAGMVGYLLTDAASSVTAQAI 255
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 253 nvcGGlGny 261
+                                 nvcGGlGny
+  gi|16507975|gb|AAL24452.1| 256 NVCGGLGNY 264
+                                 ********9 PP
+
+>> gi|68146470|emb|CAH10157.1|  ChaD protein [Streptomyces chartreusis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  478.7   9.4  2.5e-147  2.5e-147       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 478.7 bits;  conditional E-value: 2.5e-147
+                KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfG 82 
+                                  m+e+++r+al+tGatsGiGl++ar+laa+g+rvf+c+r++d+va+tvkelr+ g+++dGa++dvrd++dvealv++av++fG
+  gi|68146470|emb|CAH10157.1|   1 MTEDASRTALITGATSGIGLSAARALAARGMRVFICSRNADDVARTVKELRNLGARADGAQADVRDREDVEALVSRAVAAFG 82 
+                                  68999***************************************************************************** PP
+
+                KR.Lackner.C9  83 tvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGv 164
+                                  +vdvlvnnaGrsGgGvta+i+delw+dvi+tnltsvfrltrevl ++gmle+g+Gr+iniastgGkqGvvlgapysaskhGv
+  gi|68146470|emb|CAH10157.1|  83 GVDVLVNNAGRSGGGVTARITDELWSDVIATNLTSVFRLTREVLVNAGMLERGWGRVINIASTGGKQGVVLGAPYSASKHGV 164
+                                  ********************************************************************************** PP
+
+                KR.Lackner.C9 165 vGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaas 246
+                                  vGftkalglelaktG+tvnavcpGyvetpmaervrqgyaa++e++e evlerf+++iplGry+tp+evag+vgylv+d+aa 
+  gi|68146470|emb|CAH10157.1| 165 VGFTKALGLELAKTGVTVNAVCPGYVETPMAERVRQGYAAAWETTEAEVLERFESRIPLGRYTTPDEVAGIVGYLVTDSAAP 246
+                                  ********************************************************************************** PP
+
+                KR.Lackner.C9 247 itaqalnvcGGlGny 261
+                                  itaqa+nvcGGlGny
+  gi|68146470|emb|CAH10157.1| 247 ITAQAINVCGGLGNY 261
+                                  **************9 PP
+
+>> gi|118571|sp|P16542.1|DHK1_STRVN  RecName: Full=Granaticin polyketide synthase putative ketoacyl reductase 1; AltName
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  477.9   8.4  4.7e-147  4.7e-147       3     261 .]      14     272 .]      12     272 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 477.9 bits;  conditional E-value: 4.7e-147
+                     KR.Lackner.C9   3 eaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaave 79 
+                                       +a++ valvtGatsGiGla+ar+laa gar+flcarde+++a+tvkelr eg++vdG+++dv+d a+++a+v+aav+
+  gi|118571|sp|P16542.1|DHK1_STRVN  14 TAAKPVALVTGATSGIGLAIARRLAALGARTFLCARDEERLAQTVKELRGEGFDVDGTVCDVADPAQIRAYVAAAVQ 90 
+                                       57899************************************************************************ PP
+
+                     KR.Lackner.C9  80 rfGtvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgap 156
+                                       r+Gtvd+lvnnaGrsGgG+taeiadelwldvi+tnltsvf +t+evl++ggml+k+rGriiniastgGkqGvv+++p
+  gi|118571|sp|P16542.1|DHK1_STRVN  91 RYGTVDILVNNAGRSGGGATAEIADELWLDVITTNLTSVFLMTKEVLNAGGMLAKKRGRIINIASTGGKQGVVHAVP 167
+                                       ***************************************************************************** PP
+
+                     KR.Lackner.C9 157 ysaskhGvvGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeeva 233
+                                       ysaskhGvvG+tkalglela+tGitvnavcpG+vetpmaervr++ya+i++vse+e+++r+++++plGry++++eva
+  gi|118571|sp|P16542.1|DHK1_STRVN 168 YSASKHGVVGLTKALGLELARTGITVNAVCPGFVETPMAERVREHYAGIWQVSEEETFDRITNRVPLGRYVETREVA 244
+                                       ***************************************************************************** PP
+
+                     KR.Lackner.C9 234 glvgylvsdtaasitaqalnvcGGlGny 261
+                                       ++v+ylv+d+aa++taqalnvcGGlGny
+  gi|118571|sp|P16542.1|DHK1_STRVN 245 AMVEYLVADDAAAVTAQALNVCGGLGNY 272
+                                       ***************************9 PP
+
+>> gi|532243|gb|AAA65204.1|  daunorubicin-doxorubicin polyketide synthase [Streptomyces peucetius]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  475.8   5.8    2e-146    2e-146       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 475.8 bits;  conditional E-value: 2e-146
+             KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtvd 85 
+                               m+ea++rvalvtG+tsGiGlav+rkla++g+rvflcarde+a++ tvkel+++glevdGa +dvr++adv++lvq+a++rfG++d
+  gi|532243|gb|AAA65204.1|   1 MSEAADRVALVTGGTSGIGLAVVRKLAQDGTRVFLCARDESAITGTVKELQASGLEVDGAPCDVRSTADVDRLVQTARNRFGPID 85 
+                               67899******************************************************************************** PP
+
+             KR.Lackner.C9  86 vlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvGftka 170
+                               ++vnnaGr GgGvtaei+d+lwldv++tnl+++fr+tr+vlt g+m+e+g+Grii+iastgGkqGv+lgapysask+G++Gftka
+  gi|532243|gb|AAA65204.1|  86 IVVNNAGRGGGGVTAEITDDLWLDVVDTNLSGAFRVTRAVLTGGAMQEHGWGRIISIASTGGKQGVALGAPYSASKSGLIGFTKA 170
+                               ************************************************************************************* PP
+
+             KR.Lackner.C9 171 lglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasitaqalnvc 255
+                               ++lelaktGitvnavcpGyvetpma+ vrq+yaa++ ++ed+vle+fqakiplGrys+peevag+v+yl+sd+a+sitaqa+nvc
+  gi|532243|gb|AAA65204.1| 171 VALELAKTGITVNAVCPGYVETPMAQGVRQRYAAFWGITEDDVLEKFQAKIPLGRYSMPEEVAGMVHYLASDSADSITAQAINVC 255
+                               ************************************************************************************* PP
+
+             KR.Lackner.C9 256 GGlGny 261
+                               GGlG+y
+  gi|532243|gb|AAA65204.1| 256 GGLGSY 261
+                               ****98 PP
+
+>> gi|2916808|emb|CAA12013.1|  SnoaD [Streptomyces nogalater]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  473.9   5.8  7.6e-146  7.6e-146       2     261 .]       2     262 .]       1     262 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 473.9 bits;  conditional E-value: 7.6e-146
+               KR.Lackner.C9   2 aeaeervalvtGatsGiGlavarklaaegarv.flcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfGt 83 
+                                  +++ rva+vtG+tsGiGlav+++laa+g+ +  lcar++dav++tv+elr+e+levdG+++dvr+++dv++++  a++rfG+
+  gi|2916808|emb|CAA12013.1|   2 PDTDGRVAVVTGGTSGIGLAVVKALAATGYACrSLCARSQDAVDSTVEELRDEKLEVDGRSCDVRSTDDVREFIGFATRRFGG 84 
+                                 67899*************************9989************************************************* PP
+
+               KR.Lackner.C9  84 vdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGvvG 166
+                                 vdvlvnnaGr+GgG ta+i+delwldvietnltsvfr+trevlttggml+ grGriiniastgGkqGvvlgapysaskhGvvG
+  gi|2916808|emb|CAA12013.1|  85 VDVLVNNAGRNGGGPTARITDELWLDVIETNLTSVFRVTREVLTTGGMLAAGRGRIINIASTGGKQGVVLGAPYSASKHGVVG 167
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 167 ftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaasita 249
+                                 ftkalglelak+GitvnavcpGyvetpm+erv +gya+++++se++vlerfqakiplGry++peevaglv+yl+++ta+sita
+  gi|2916808|emb|CAA12013.1| 168 FTKALGLELAKSGITVNAVCPGYVETPMGERVGRGYAEVWDTSEEAVLERFQAKIPLGRYAQPEEVAGLVTYLTTPTADSITA 250
+                                 *********************************************************************************** PP
+
+               KR.Lackner.C9 250 qalnvcGGlGny 261
+                                 qalnvcGGlGny
+  gi|2916808|emb|CAA12013.1| 251 QALNVCGGLGNY 262
+                                 ***********9 PP
+
+>> gi|14717093|emb|CAC44199.1|  ketoacyl reductase [Streptomyces coelicolor A3(2)]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  468.2   6.9  4.3e-144  4.3e-144       1     261 []       1     261 []       1     261 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 468.2 bits;  conditional E-value: 4.3e-144
+                KR.Lackner.C9   1 maeaeervalvtGatsGiGlavarklaaegarvflcardedavaetvkelreeglevdGaaldvrdaadvealvqaaverfG 82 
+                                  ma+++++valvtGatsGiGl++ar+l++eg rvf+car e+ +++t+kelre+g+e+dG+++dvr++ ++ealv+a+ver+G
+  gi|14717093|emb|CAC44199.1|   1 MATQDSEVALVTGATSGIGLEIARRLGKEGLRVFVCARGEEGLRTTLKELREAGVEADGRTCDVRSVPEIEALVAAVVERYG 82 
+                                  67899***************************************************************************** PP
+
+                KR.Lackner.C9  83 tvdvlvnnaGrsGgGvtaeiadelwldvietnltsvfrltrevlttggmlekgrGriiniastgGkqGvvlgapysaskhGv 164
+                                  +vdvlvnnaGr GgG+tae+adelwldv+etnlt+vfr+t++vl++ggmle+g+Gri+niastgGkqGvv++apysaskhGv
+  gi|14717093|emb|CAC44199.1|  83 PVDVLVNNAGRPGGGATAELADELWLDVVETNLTGVFRVTKQVLKAGGMLERGTGRIVNIASTGGKQGVVHAAPYSASKHGV 164
+                                  ********************************************************************************** PP
+
+                KR.Lackner.C9 165 vGftkalglelaktGitvnavcpGyvetpmaervrqgyaaiyevsedevlerfqakiplGrystpeevaglvgylvsdtaas 246
+                                  vGftkalglela+tGitvnavcpG+vetpma++vr++y++i+evs++e+++r++a++p+Gry++p+eva++v+yl+++ aa+
+  gi|14717093|emb|CAC44199.1| 165 VGFTKALGLELARTGITVNAVCPGFVETPMAASVREHYSDIWEVSTEEAFDRITARVPIGRYVQPSEVAEMVAYLIGPGAAA 246
+                                  ********************************************************************************** PP
+
+                KR.Lackner.C9 247 itaqalnvcGGlGny 261
+                                  +taqalnvcGGlGny
+  gi|14717093|emb|CAC44199.1| 247 VTAQALNVCGGLGNY 261
+                                  **************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                           11  (2889 residues searched)
+Passed MSV filter:                        11  (1); expected 0.2 (0.02)
+Passed bias filter:                       11  (1); expected 0.2 (0.02)
+Passed Vit filter:                        11  (1); expected 0.0 (0.001)
+Passed Fwd filter:                        11  (1); expected 0.0 (1e-05)
+Initial search space (Z):                 11  [actual number of targets]
+Domain search space  (domZ):              11  [number of targets reported over threshold]
+# CPU time: 0.04u 0.02s 00:00:00.06 Elapsed: 00:00:00.05
+# Mc/sec: 15.08
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/KS.30.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                           31  (13067 residues searched)
+Passed MSV filter:                         0  (0); expected 0.6 (0.02)
+Passed bias filter:                        0  (0); expected 0.6 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 31  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.02
+# Mc/sec: 170.52
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/KSIII.10.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                           10  (3297 residues searched)
+Passed MSV filter:                         1  (0.1); expected 0.2 (0.02)
+Passed bias filter:                        1  (0.1); expected 0.2 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 10  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.04
+# Mc/sec: 21.51
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/TypeI.ACP.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                           25  (1953 residues searched)
+Passed MSV filter:                         0  (0); expected 0.5 (0.02)
+Passed bias filter:                        0  (0); expected 0.5 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 25  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.03
+# Mc/sec: 16.99
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/TypeI.AT.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            3  (871 residues searched)
+Passed MSV filter:                         1  (0.333333); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.02
+# Mc/sec: 11.37
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/TypeI.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            3  (1269 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 33.12
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/TypeIII.KS.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            3  (1124 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.03s 00:00:00.04 Elapsed: 00:00:00.04
+# Mc/sec: 7.33
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/KR.Lackner.C9.hmm
+# target sequence database:        FastaTestSets/TypeI.KR.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       KR.Lackner.C9  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------         -----------
+    1.9e-10   28.3   0.3    2.2e-10   28.0   0.3    1.2  1  KR1_erythromycin  
+      4e-09   23.9   0.1    5.6e-09   23.4   0.1    1.2  1  KR1_disorazole    
+
+
+Domain annotation for each sequence (and alignments):
+>> KR1_erythromycin  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.0   0.3   1.5e-10   2.2e-10       9      75 ..       2      72 ..       1     105 [. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 28.0 bits;  conditional E-value: 1.5e-10
+     KR.Lackner.C9  9 alvtGatsGiGlavarklaaegarv.flcar...dedavaetvkelreeglevdGaaldvrdaadvealvq 75
+                       lvtG+t G+G ++ar la++ga    l +r   d+d   e v el++ g++   aa+dv+d+++v++l+ 
+  KR1_erythromycin  2 VLVTGGTGGVGGQIARWLARRGAPHlLLVSRsgpDADGAGELVAELEALGARTTVAACDVTDRESVRELLG 72
+                      59*******************985426778744467889999*************************9976 PP
+
+>> KR1_disorazole  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.4   0.1   3.7e-09   5.6e-09       9      93 ..       2      89 ..       1     112 [. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 23.4 bits;  conditional E-value: 3.7e-09
+   KR.Lackner.C9  9 alvtGatsGiGlavarklaaega.rvflcard..edavaetvkelreeglevdGaaldvrdaadvealvqaaverfGtvdvlvnnaGr 93
+                     l+ G++ G+Gl +a ++a++++ r +l  r+   ++ ++ + +lr +g e    ++dv d ++ e+ ++a+++rfG+++ +v  aG 
+  KR1_disorazole  2 YLLVGGAGGLGLGLAGHIASRAHaRLVLLGRSplGHEAERRLARLRGDGGETLYISADVSDPQQCEQALAAVRQRFGAIHGVVQMAGV 89
+                    5788999***********99876367788887335788999******************************************99985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                            3  (530 residues searched)
+Passed MSV filter:                         3  (1); expected 0.1 (0.02)
+Passed bias filter:                        3  (1); expected 0.1 (0.02)
+Passed Vit filter:                         2  (0.666667); expected 0.0 (0.001)
+Passed Fwd filter:                         2  (0.666667); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.01u 0.03s 00:00:00.04 Elapsed: 00:00:00.04
+# Mc/sec: 3.46
+//
+[ok]

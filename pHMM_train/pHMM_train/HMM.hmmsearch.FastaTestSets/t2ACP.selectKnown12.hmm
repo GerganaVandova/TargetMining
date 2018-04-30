@@ -1,0 +1,2251 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/ACP.76.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    5.3e-38  121.3   0.3    5.8e-38  121.2   0.3    1.0  1  AF324838         
+    1.1e-35  113.8   1.1    1.2e-35  113.7   1.1    1.0  1  AF126429         
+    2.3e-35  112.9   1.1    2.5e-35  112.8   1.1    1.0  1  KM264312         
+    2.4e-35  112.8   0.5    2.6e-35  112.7   0.5    1.0  1  HM193369         
+    2.9e-35  112.6   0.4    3.1e-35  112.4   0.4    1.0  1  GU134622         
+    2.9e-35  112.5   0.1    3.1e-35  112.4   0.1    1.0  1  AJ578458         
+    1.4e-34  110.3   0.2    1.5e-34  110.2   0.2    1.0  1  KF515737         
+    1.6e-34  110.1   0.3    1.8e-34  110.0   0.3    1.0  1  AF525490         
+    2.1e-34  109.8   0.2    2.3e-34  109.7   0.2    1.0  1  NZ_AGSW01000147  
+    2.5e-34  109.5   1.2    2.7e-34  109.4   1.2    1.0  1  AF098965         
+    3.3e-34  109.2   0.4    3.5e-34  109.1   0.4    1.0  1  GQ409537         
+      4e-34  108.9   0.5    4.3e-34  108.8   0.5    1.0  1  KJ437438         
+    4.7e-34  108.7   0.4    5.1e-34  108.5   0.4    1.0  1  AL939122         
+      8e-34  107.9   1.9    8.7e-34  107.8   1.9    1.0  1  FJ719113         
+    8.1e-34  107.9   1.0    8.8e-34  107.8   1.0    1.0  1  AJ628018         
+    8.3e-34  107.9   0.5      9e-34  107.8   0.5    1.0  1  AF293442         
+    2.3e-33  106.5   0.7    2.5e-33  106.3   0.7    1.0  1  EF151801         
+    2.5e-33  106.3   0.2    2.7e-33  106.2   0.2    1.0  1  FJ670504         
+    4.2e-33  105.6   0.4    4.5e-33  105.5   0.4    1.0  1  GU937384         
+    5.5e-33  105.2   0.7    5.9e-33  105.1   0.7    1.0  1  AF080235         
+    5.9e-33  105.1   1.9    6.4e-33  105.0   1.9    1.0  1  AY228175         
+    6.1e-33  105.1   0.9    6.6e-33  105.0   0.9    1.0  1  X77865           
+    7.7e-33  104.8   1.1    8.3e-33  104.7   1.1    1.0  1  KC962511         
+    9.7e-33  104.4   0.3      1e-32  104.3   0.3    1.0  1  NZ_AOPZ01000074  
+    1.3e-32  104.1   0.8    1.4e-32  103.9   0.8    1.0  1  X87093           
+    2.8e-32  103.0   0.1      3e-32  102.9   0.1    1.0  1  AB469194         
+    3.4e-32  102.7   0.3    3.7e-32  102.6   0.3    1.0  1  NZ_KE354310      
+    3.5e-32  102.7   0.7    3.8e-32  102.5   0.7    1.0  1  AY034378         
+    8.2e-32  101.5   0.7    8.9e-32  101.4   0.7    1.0  1  FJ915123         
+    1.4e-31  100.7   0.1    1.5e-31  100.6   0.1    1.0  1  M80674           
+    1.6e-31  100.5   0.3    1.8e-31  100.4   0.3    1.0  1  JN038178         
+    1.7e-31  100.4   0.3    1.8e-31  100.3   0.3    1.0  1  HQ828986         
+    3.7e-31   99.4   0.1      4e-31   99.3   0.1    1.0  1  KJ437437         
+    4.8e-31   99.0   0.5    5.2e-31   98.9   0.5    1.0  1  DQ915964         
+    5.2e-31   98.9   0.9    5.7e-31   98.8   0.9    1.0  1  AJ632203         
+    6.8e-31   98.5   0.8    7.4e-31   98.4   0.8    1.0  1  AB524586         
+    7.8e-31   98.3   1.3    8.3e-31   98.3   1.3    1.0  1  AB103463         
+      8e-31   98.3   0.3    8.6e-31   98.2   0.3    1.0  1  AJ786382         
+    9.3e-31   98.1   0.0      1e-30   98.0   0.0    1.0  1  KF931341         
+      1e-30   98.0   0.1    1.1e-30   97.9   0.1    1.0  1  KC870000         
+    1.1e-30   97.9   1.1    1.2e-30   97.7   1.1    1.0  1  AY228176         
+    1.5e-30   97.5   0.2    1.6e-30   97.3   0.2    1.0  1  KM881706         
+    1.6e-30   97.4   0.3    1.7e-30   97.2   0.3    1.0  1  FN565485         
+    2.7e-30   96.6   2.8    2.9e-30   96.5   2.8    1.0  1  AY233211         
+    2.7e-30   96.6   0.6    2.9e-30   96.5   0.6    1.0  1  FN565166         
+    4.4e-30   95.9   1.3    4.7e-30   95.8   1.3    1.0  1  X89899           
+    5.5e-30   95.6   1.7    5.9e-30   95.5   1.7    1.0  1  EU852062         
+    7.5e-30   95.2   0.3    8.1e-30   95.1   0.3    1.0  1  KF040454         
+    1.2e-29   94.6   0.2    1.3e-29   94.4   0.2    1.0  1  HM055942         
+    1.3e-29   94.4   0.4    1.4e-29   94.3   0.4    1.0  1  DQ143963         
+    2.9e-29   93.3   0.8    3.2e-29   93.2   0.8    1.0  1  JX262387         
+    3.4e-29   93.1   1.2    3.7e-29   93.0   1.2    1.0  1  AF058302         
+    9.9e-29   91.6   0.2    1.1e-28   91.5   0.2    1.0  1  AM900040         
+      1e-28   91.6   1.1    1.1e-28   91.4   1.1    1.0  1  AJ011500         
+    1.3e-28   91.2   0.0    1.4e-28   91.1   0.0    1.0  1  X55942           
+    2.3e-28   90.4   0.2    2.5e-28   90.3   0.2    1.0  1  HQ828985         
+    3.8e-28   89.7   0.1    4.1e-28   89.6   0.1    1.0  1  AF293355         
+      4e-28   89.7   0.4    4.3e-28   89.6   0.4    1.0  1  AM492533         
+    5.4e-28   89.2   0.1    5.8e-28   89.1   0.1    1.0  1  KF563088         
+    6.8e-28   88.9   0.4    7.1e-28   88.9   0.4    1.0  1  FJ483966         
+    1.3e-27   88.0   0.3    1.4e-27   87.9   0.3    1.0  1  AF257324         
+      2e-27   87.4   0.6    2.2e-27   87.3   0.6    1.0  1  HM627755         
+    4.9e-27   86.2   0.4    5.3e-27   86.1   0.4    1.0  1  AJ224512         
+    1.6e-26   84.5   0.6    1.7e-26   84.4   0.6    1.0  1  AM501485         
+    2.1e-26   84.1   0.7    2.3e-26   84.0   0.7    1.0  1  EU147299         
+    2.5e-26   83.9   0.2    2.7e-26   83.8   0.2    1.0  1  GQ421798         
+    5.2e-26   82.9   0.4    5.6e-26   82.8   0.4    1.0  1  AZXI01000002     
+    5.4e-26   82.8   0.4    5.8e-26   82.7   0.4    1.0  1  AY196994         
+      3e-25   80.4   0.4    3.2e-25   80.3   0.4    1.0  1  AF254925         
+    3.9e-25   80.1   0.4    4.2e-25   80.0   0.4    1.0  1  AM156932         
+      5e-25   79.7   0.9    5.5e-25   79.6   0.9    1.0  1  AJ585192         
+    9.1e-25   78.9   0.2    9.9e-25   78.8   0.2    1.0  1  JX843821         
+      1e-23   75.5   0.0    1.1e-23   75.4   0.0    1.0  1  L05390           
+      7e-23   72.8   0.4    7.5e-23   72.7   0.4    1.0  1  AF509565         
+    1.8e-16   52.3   0.0    2.1e-16   52.1   0.0    1.0  1  X62518           
+    4.8e-15   47.7   0.7    5.3e-15   47.6   0.7    1.0  1  CP000820         
+
+
+Domain annotation for each sequence (and alignments):
+>> AF324838  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  121.2   0.3   5.8e-38   5.8e-38       5      82 ..       1      78 []       1      78 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 121.2 bits;  conditional E-value: 5.8e-38
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +tlddLrrilr+gaG++edvdl+gdi+dvaFedLgy+S+alLe+++r+ereyg+sl+ddav+e+ Tpr+l+++Vnt+l
+  AF324838  1 FTLDDLRRILRDGAGASEDVDLEGDIIDVAFEDLGYESIALLETCSRIEREYGISLDDDAVSEAPTPRALVAIVNTHL 78
+              69**************************************************************************87 PP
+
+>> AF126429  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  113.7   1.1   1.2e-35   1.2e-35       4      82 ..       2      80 .]       1      80 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 113.7 bits;  conditional E-value: 1.2e-35
+     t2ACP  4 qltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              ++tlddL+rilregaG+de+vdldgdild+ Fe+Lgy+SlalLe+ +r+erey ++l+dd++++++Tpr+l+++Vn++l
+  AF126429  2 TFTLDDLKRILREGAGADEGVDLDGDILDTHFETLGYESLALLETGSRIEREYSITLDDDVLSDADTPRALIEAVNAHL 80
+              79**************************************************************************987 PP
+
+>> KM264312  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  112.8   1.1   2.5e-35   2.5e-35       5      82 ..       1      78 []       1      78 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 112.8 bits;  conditional E-value: 2.5e-35
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +tlddLrrilregaG +e++dldgdild +Fe+Lgy+SlalLe+++r+erey++ l+d a++++ Tpr+ll++Vn++l
+  KM264312  1 FTLDDLRRILREGAGTAEGTDLDGDILDAGFEELGYESLALLETASRIEREYDIALDDTALADARTPRDLLEAVNARL 78
+              69*************************************************************************986 PP
+
+>> HM193369  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  112.7   0.5   2.6e-35   2.6e-35       3      82 ..       2      81 .]       1      81 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 112.7 bits;  conditional E-value: 2.6e-35
+     t2ACP  3 kqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +++++ddL+ril egaGe+++v+l  d++d++F+dLgy+S+alLe+++r+ere++v+l+d++v +++Tp+ l+d+Vn++l
+  HM193369  2 QKFSADDLHRILIEGAGEADGVILGPDTVDMTFDDLGYESIALLETASRIEREFDVRLSDEEVLDAQTPSGLVDAVNARL 81
+              7899*************************************************************************986 PP
+
+>> GU134622  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  112.4   0.4   3.1e-35   3.1e-35       5      82 ..       1      78 []       1      78 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 112.4 bits;  conditional E-value: 3.1e-35
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +t++dL+ ilre+aGede+vdld +ild++FedLgy+Sla+ e+ +r+ereyg+sl +da+++++Tpr+lld+Vn++l
+  GU134622  1 FTIEDLKSILRECAGEDEGVDLDSQILDTQFEDLGYESLAIFETTSRIEREYGISLGEDALNDANTPRALLDIVNARL 78
+              69*************************************************************************986 PP
+
+>> AJ578458  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  112.4   0.1   3.1e-35   3.1e-35       8      80 ..       1      73 [.       1      75 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 112.4 bits;  conditional E-value: 3.1e-35
+     t2ACP  8 ddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVnt 80
+              +dL+ri+regaG+de+vdldgdi+dv+F+dLgyDSlalLe+v+r+ere+g  ++d+ v+++kTp+e+l+lVn 
+  AJ578458  1 EDLKRIMREGAGQDEGVDLDGDIADVPFTDLGYDSLALLETVSRVEREFGGPIADEIVGAAKTPGEFLHLVNL 73
+              69**********************************************************************6 PP
+
+>> KF515737  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.2   0.2   1.5e-34   1.5e-34       2      79 ..       1      78 []       1      78 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 110.2 bits;  conditional E-value: 1.5e-34
+     t2ACP  2 mkqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              mkq+tl+ L++i++++aGede++d+ +++ ++aF+dLgyDSlalLe+++ ++reygv+l+++a+++++Tp++l+dlVn
+  KF515737  1 MKQMTLSALEQIMHTCAGEDESTDSFQQAPERAFADLGYDSLALLETQSVIRREYGVDLSEQALSAAETPQQLVDLVN 78
+              79***************************************************************************9 PP
+
+>> AF525490  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.0   0.3   1.8e-34   1.8e-34       2      82 ..       1      81 []       1      81 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 110.0 bits;  conditional E-value: 1.8e-34
+     t2ACP  2 mkqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              m++++++dL++i++++ Ge ++++l++  l+++F+++gyDSla+Lei+++l+reyg+++pd+a+ee++Tp++++d+Vnt+l
+  AF525490  1 MSTISFNDLKTIMSRSLGEVDGTELTEADLTTPFTEIGYDSLAVLEIASQLQREYGLQIPDEAIEEMDTPQAVIDYVNTSL 81
+              6789**************************************************************************987 PP
+
+>> NZ_AGSW01000147  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  109.7   0.2   2.3e-34   2.3e-34       5      82 ..       2      79 .]       1      79 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 109.7 bits;  conditional E-value: 2.3e-34
+            t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+                     +t+ddL+ ilregaG+de+vdldgdild  F+ Lgy+Sla+Le++ r+ereyg+sl+++ ++++ Tpr+l++lVn++l
+  NZ_AGSW01000147  2 FTIDDLKSILREGAGADEGVDLDGDILDAEFDALGYESLAMLETAGRIEREYGISLDEEIFADARTPRALIALVNGQL 79
+                     79*************************************************************************987 PP
+
+>> AF098965  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  109.4   1.2   2.7e-34   2.7e-34       7      79 ..       2      74 .]       1      74 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 109.4 bits;  conditional E-value: 2.7e-34
+     t2ACP  7 lddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              +ddLrril ++aGed+++dl+gdild+ F dLgyDSlal+e++ar+er+ygv l+dd+++++ Tpr+lldlVn
+  AF098965  2 IDDLRRILVACAGEDDGIDLSGDILDTSFGDLGYDSLALMETAARIERDYGVALADDVIADARTPRDLLDLVN 74
+              79**********************************************************************9 PP
+
+>> GQ409537  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  109.1   0.4   3.5e-34   3.5e-34       2      79 ..       1      78 [.       1      79 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 109.1 bits;  conditional E-value: 3.5e-34
+     t2ACP  2 mkqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              m+++ ++dL+r+lre+aGede+vdl+g+ild++FedLgyDSlal ++v+r+er+y ++lpd++v+e+kTp++ll+l+n
+  GQ409537  1 MSEFVIQDLVRLLRECAGEDESVDLEGEILDTTFEDLGYDSLALFNTVSRIERDYTIQLPDEVVSEAKTPGQLLKLIN 78
+              578899***********************************************************************9 PP
+
+>> KJ437438  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  108.8   0.5   4.3e-34   4.3e-34       4      82 ..       3      81 .]       1      81 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 108.8 bits;  conditional E-value: 4.3e-34
+     t2ACP  4 qltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+               l++dd  rilre+aG+de+vdl+gdi+dv F+dLgyDSlalLe++ r+ r ygv+lpd+++ +++Tpr+++dlVn +l
+  KJ437438  3 ALSIDDFTRILRESAGQDEGVDLSGDIADVSFTDLGYDSLALLEVAGRITRAYGVTLPDEDLDGAETPRAFVDLVNSSL 81
+              689*************************************************************************976 PP
+
+>> AL939122  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  108.5   0.4   5.1e-34   5.1e-34       8      79 ..       1      72 []       1      72 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 108.5 bits;  conditional E-value: 5.1e-34
+     t2ACP  8 ddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              ddLrr+l e+aGe++++dl+gd+ld +Fed+gyDSlal+e++arle++ygvs+pdd++++++Tprelldl+n
+  AL939122  1 DDLRRALVECAGETDGTDLSGDFLDLRFEDIGYDSLALMETAARLESRYGVSIPDDVAGRVDTPRELLDLIN 72
+              79*********************************************************************9 PP
+
+>> FJ719113  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.8   1.9   8.7e-34   8.7e-34       7      79 ..       1      73 []       1      73 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 107.8 bits;  conditional E-value: 8.7e-34
+     t2ACP  7 lddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              lddLrril ++aGed+++dl+gdild +FedLgyDSlal+e +ar+++eygv+l+dd+v+e++Tpr+lld+Vn
+  FJ719113  1 LDDLRRILVACAGEDDGIDLSGDILDLTFEDLGYDSLALMESAARIKQEYGVDLSDDDVAEVETPRALLDIVN 73
+              69**********************************************************************9 PP
+
+>> AJ628018  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.8   1.0   8.8e-34   8.8e-34       5      82 ..       1      78 []       1      78 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 107.8 bits;  conditional E-value: 8.8e-34
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +t++dLrrilr+gaG de vdldgdild+ Fe Lgy+SlalLe++ r+ere+g++l+dd v e+kTpr+l+++Vnt l
+  AJ628018  1 FTIEDLRRILRDGAGTDEAVDLDGDILDTDFESLGYESLALLETSGRIEREFGITLDDDTVTEAKTPRALIGAVNTFL 78
+              69*************************************************************************965 PP
+
+>> AF293442  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  107.8   0.5     9e-34     9e-34       4      75 ..       1      72 []       1      72 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 107.8 bits;  conditional E-value: 9e-34
+     t2ACP  4 qltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprell 75
+              ++t+ddLrril e+aGede+vdl gdild++F++LgyDSlal+e++ar+e+e+gv +pdd+++el Tpr++l
+  AF293442  1 TMTIDDLRRILTECAGEDESVDLGGDILDTPFTELGYDSLALMETAARIEQEFGVAIPDDEFAELATPRAVL 72
+              59*******************************************************************986 PP
+
+>> EF151801  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.3   0.7   2.5e-33   2.5e-33       7      79 ..       1      73 []       1      73 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 106.3 bits;  conditional E-value: 2.5e-33
+     t2ACP  7 lddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              +ddLr+++r+++Ge++d+dldgdild++F++L+yDSla+Le++ar+e+++gv +p+d++++l+Tpr++ld+Vn
+  EF151801  1 IDDLRALMRAAVGEADDIDLDGDILDSTFTELEYDSLAVLELAARIETQWGVLIPEDDASGLETPRMFLDYVN 73
+              69**********************************************************************9 PP
+
+>> FJ670504  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.2   0.2   2.7e-33   2.7e-33       5      82 ..       1      78 []       1      78 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 106.2 bits;  conditional E-value: 2.7e-33
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +t++dLrrilr++aG+de++ l++di d aF++LgyDSlalLe+ +r+ereyg+sl+d+ v e+ Tpr ll++Vn++l
+  FJ670504  1 FTIEDLRRILRAAAGADEGTHLTTDIHDAAFDELGYDSLALLETGSRIEREYGISLDDSTVIEARTPRVLLAAVNARL 78
+              69*************************************************************************986 PP
+
+>> GU937384  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.5   0.4   4.5e-33   4.5e-33       5      82 ..       2      79 .]       1      79 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 105.5 bits;  conditional E-value: 4.5e-33
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +t+ddL++i++++ Ge ++++l++  l ++F+++gyDSla+Lei+++++reyg+++pd+a+e ++Tp++++d+Vnt+l
+  GU937384  2 MTFDDLKAIMSRSTGELDGQELTEADLGTTFTEIGYDSLAVLEIASQIQREYGLQIPDEAIETMNTPKDVIDYVNTSL 79
+              9**************************************************************************987 PP
+
+>> AF080235  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.1   0.7   5.9e-33   5.9e-33       5      82 ..       1      78 []       1      78 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 105.1 bits;  conditional E-value: 5.9e-33
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +t++dL+ril egaG+de+vdld dild+ Fe Lgy+SlalLe++ r+ere+g++l+d+++ +  Tprel+++Vn++l
+  AF080235  1 FTVEDLKRILVEGAGADEGVDLDSDILDTDFESLGYESLALLETAGRIEREFGITLDDEVFIDNPTPRELVAAVNAKL 78
+              69*************************************************************************986 PP
+
+>> AY228175  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.0   1.9   6.4e-33   6.4e-33       5      82 ..       2      79 .]       1      79 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 105.0 bits;  conditional E-value: 6.4e-33
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +tlddL+ril e+aG+de+vdldgdild+ Fe Lgy+SlalLe+  r+ereyg+sl+dda+ ++ Tpr+l+++Vn++l
+  AY228175  2 FTLDDLKRILLEAAGADEGVDLDGDILDTEFEVLGYESLALLETGGRIEREYGISLDDDALTDAVTPRALIEVVNAQL 79
+              89*************************************************************************986 PP
+
+>> X77865  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.0   0.9   6.6e-33   6.6e-33       5      81 ..       1      77 [.       1      78 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 105.0 bits;  conditional E-value: 6.6e-33
+   t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVnta 81
+            +tl+dL+ril egaG+de+vdldgdild+ Fe+Lgy+SlalLe+  r+ereyg++l+dd++++  Tpr l++++n+a
+  X77865  1 FTLEDLKRILLEGAGADEGVDLDGDILDTDFEELGYESLALLETGGRIEREYGITLDDDVLADSRTPRSLIAAINAA 77
+            69*************************************************************************86 PP
+
+>> KC962511  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  104.7   1.1   8.3e-33   8.3e-33       5      82 ..       1      78 []       1      78 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 104.7 bits;  conditional E-value: 8.3e-33
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +tl+dL+rilregaG+de+vdldgdild+ F  Lgy+SlalLe+  r+ere+g++l+d+ + ++ Tpr ll++Vn+ l
+  KC962511  1 FTLEDLKRILREGAGADEGVDLDGDILDTDFGSLGYESLALLETGGRIEREFGITLDDETLTDAATPRSLLEAVNALL 78
+              69*************************************************************************975 PP
+
+>> NZ_AOPZ01000074  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  104.3   0.3     1e-32     1e-32       4      82 ..       2      80 .]       1      80 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 104.3 bits;  conditional E-value: 1e-32
+            t2ACP  4 qltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+                     ++tlddL+ril eg+G+ e+  ldgd+ld+ F+d+gyDSlalLe+++r+ereyg++l++++v+e++Tpr+++++V ++l
+  NZ_AOPZ01000074  2 TFTLDDLKRILLEGSGAPEGDGLDGDVLDTEFTDIGYDSLALLETSSRIEREYGIELDESVVGEATTPRAFIAAVTGHL 80
+                     69*************************************************************************9876 PP
+
+>> X87093  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  103.9   0.8   1.4e-32   1.4e-32       5      82 ..       1      78 []       1      78 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 103.9 bits;  conditional E-value: 1.4e-32
+   t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+            +t+ddL+rilregaG+de+v ldg+i d+ Fe Lgy+Sla+Le+  r+ere+gv+l+dd + e+kTpr+l+++Vn+ l
+  X87093  1 FTIDDLKRILREGAGADEGVNLDGEITDTDFESLGYESLAMLETGGRIEREFGVTLDDDTLTEAKTPRALIEAVNALL 78
+            69*************************************************************************975 PP
+
+>> AB469194  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.9   0.1     3e-32     3e-32       3      82 ..       2      81 .]       1      81 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 102.9 bits;  conditional E-value: 3e-32
+     t2ACP  3 kqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +++tlddLr++lregaG+d++vdld  ild++F+ LgyDSla+Lei+ar+e++ gv++pd+ ve+l+Tpr++l++V+++l
+  AB469194  2 STFTLDDLRTMLREGAGVDDSVDLDVPILDTPFSSLGYDSLAMLEIAARIEQQLGVHVPDELVERLTTPRAVLEYVGRHL 81
+              579**************************************************************************987 PP
+
+>> NZ_KE354310  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.6   0.3   3.7e-32   3.7e-32       4      82 ..       2      80 .]       1      80 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 102.6 bits;  conditional E-value: 3.7e-32
+        t2ACP  4 qltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+                 ++tlddL+ril eg+G+ +++ l+gdild  F+d+gyDSlalLe+++r+ereyg++l++ +v+e++Tpr+lld++  +l
+  NZ_KE354310  2 TFTLDDLKRILLEGSGAPDGTGLEGDILDADFADIGYDSLALLETASRVEREYGIELDETVVGEANTPRALLDAISSHL 80
+                 69************************************************************************98776 PP
+
+>> AY034378  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.5   0.7   3.8e-32   3.8e-32       5      79 ..       1      75 []       1      75 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 102.5 bits;  conditional E-value: 3.8e-32
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              +t++dL+ril egaG++e+vdl+gdild+ Fe+Lgy+SlalLe+  r+ereyg+sl+dd++ +  Tpr l+d++n
+  AY034378  1 FTIEDLKRILLEGAGAEEGVDLHGDILDTDFEELGYESLALLETGGRIEREYGISLDDDVFTDNRTPRTLVDAIN 75
+              69************************************************************************9 PP
+
+>> FJ915123  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  101.4   0.7   8.9e-32   8.9e-32       2      82 ..       1      81 []       1      81 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 101.4 bits;  conditional E-value: 8.9e-32
+     t2ACP  2 mkqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              m+++tlddL r++r+++G+d++vdl+ di d+ F+dLgyDSlalLe+v+rle+e+  s+p++ ++el Tprel++ Vn++l
+  FJ915123  1 MREMTLDDLTRVIRATVGVDDSVDLTADIHDTLFTDLGYDSLALLEVVSRLEKEFPASVPEEMIGELRTPRELIEFVNDQL 81
+              689***************************************************************************986 PP
+
+>> M80674  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.6   0.1   1.5e-31   1.5e-31       4      80 ..       3      76 ..       1      77 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 100.6 bits;  conditional E-value: 1.5e-31
+   t2ACP  4 qltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVnt 80
+            q+ l +L++i+re+aG+ +++dldgdildv+++dLgyDS+alLei+a+le++ gvs+p +   elkTpr++l+lVnt
+  M80674  3 QIGLPRLVEIIRECAGDPDERDLDGDILDVTYQDLGYDSIALLEISAKLEQDLGVSIPGE---ELKTPRHTLHLVNT 76
+            88999******************************************************9...6************8 PP
+
+>> JN038178  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.4   0.3   1.8e-31   1.8e-31       3      79 ..       2      78 .]       1      78 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 100.4 bits;  conditional E-value: 1.8e-31
+     t2ACP  3 kqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              ++l+l  Lr ilre+aGed+  dl gdildv+F+dLgyDSlalLe+++ ++r++g +l+ddav +++Tpr+lldl n
+  JN038178  2 ATLDLPVLRDILRECAGEDDAADLGGDILDVPFSDLGYDSLALLETASVIQRRFGARLADDAVTQAQTPRALLDLTN 78
+              6789999*******************************************************************987 PP
+
+>> HQ828986  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.3   0.3   1.8e-31   1.8e-31       9      82 ..       3      76 .]       1      76 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 100.3 bits;  conditional E-value: 1.8e-31
+     t2ACP  9 dLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +L  +lre+aGe+e+v ldgd+ldv+F++LgyDSla+L +  r+er+yg++++dda++e++Tpr lld +n++l
+  HQ828986  3 QLTVLLRECAGEEEGVNLDGDVLDVPFTELGYDSLAVLQTTGRIERDYGIRISDDAAAEAHTPRLLLDFINESL 76
+              7899*******************************************************************986 PP
+
+>> KJ437437  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.3   0.1     4e-31     4e-31       5      82 ..       3      80 .]       1      80 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 99.3 bits;  conditional E-value: 4e-31
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +++ddL+ri+ egaGe e+   +  ++d  F++LgyDSla+Le++ r+ere+gvsl++++++++ Tpr l+d+Vn++l
+  KJ437437  3 FNIDDLKRIILEGAGEPEGPGVEATTVDLEFQELGYDSLAVLETCTRIEREFGVSLDEEVLGQARTPRVLVDIVNRHL 80
+              689************************************************************************987 PP
+
+>> DQ915964  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.9   0.5   5.2e-31   5.2e-31       8      79 ..       2      73 .]       1      73 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 98.9 bits;  conditional E-value: 5.2e-31
+     t2ACP  8 ddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              ++L  +lre+aGe+e+vdldgd+ld+aF+dLgyDSla+L +  r+e++yg++lpd++v+e++Tpr++l+ Vn
+  DQ915964  2 EQLTGLLRECAGEEEGVDLDGDVLDRAFTDLGYDSLAVLQVIGRVEQDYGLTLPDEVVAEATTPRQFLARVN 73
+              78999*****************************************************************99 PP
+
+>> AJ632203  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.8   0.9   5.7e-31   5.7e-31       4      81 ..       2      80 ..       1      81 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 98.8 bits;  conditional E-value: 5.7e-31
+     t2ACP  4 qltlddLrrilregaGededvdldg.dildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVnta 81
+              ++t+ddL+ril egaG+de+vdld  d+ld+ Fe Lgy+SlalLe+  r+ere+g++l+d a+ +++Tpr+l+++Vn++
+  AJ632203  2 EFTVDDLKRILLEGAGADESVDLDSaDFLDSEFEALGYESLALLETGGRIEREFGITLDDTALTDATTPRALIEVVNAH 80
+              79*********************95489*************************************************86 PP
+
+>> AB524586  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.4   0.8   7.4e-31   7.4e-31       4      82 ..       2      80 .]       1      80 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 98.4 bits;  conditional E-value: 7.4e-31
+     t2ACP  4 qltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              ++tlddLrril e+aG+de+v ld dild+ Fe L+y+SlalLe+  r+ereyg++l+dda++  +Tpr+l++lVn++l
+  AB524586  2 EFTLDDLRRILVEAAGADESVNLDVDILDTDFESLNYESLALLETGGRIEREYGITLEDDALSIEHTPRKLIELVNAHL 80
+              79**************************************************************************987 PP
+
+>> AB103463  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.3   1.3   8.3e-31   8.3e-31       3      82 ..       2      81 .]       1      81 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 98.3 bits;  conditional E-value: 8.3e-31
+     t2ACP  3 kqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              k+++lddL+ril+eg+G+de+vdl+gdildv Fe Lgy+Sla+Le+  r+ere+gv l d+ + e  Tpr l+++Vn +l
+  AB103463  2 KTFELDDLKRILKEGVGADESVDLEGDILDVDFEALGYESLAMLETGTRIEREFGVVLTDETLTETATPRRLIEAVNVQL 81
+              5789*************************************************************************876 PP
+
+>> AJ786382  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.2   0.3   8.6e-31   8.6e-31       8      82 ..       2      76 .]       1      76 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 98.2 bits;  conditional E-value: 8.6e-31
+     t2ACP  8 ddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              ++Lr+i+ e+aG++++v  d di d  F  LgyDS+alLe++arler+yg+s +d+av+++ Tp++lldlVn+al
+  AJ786382  2 EQLRTIMTECAGAADGVAPDDDIRDIEFGLLGYDSIALLETAARLERDYGISFEDEAVGQVRTPQALLDLVNNAL 76
+              79**********************************************************************987 PP
+
+>> KF931341  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.0   0.0     1e-30     1e-30       2      82 ..       1      81 []       1      81 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 98.0 bits;  conditional E-value: 1e-30
+     t2ACP  2 mkqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              m++++lddLr+i+r +aG++e++dldg+i+++ F+ +gyDSlalLe+  +ler+yg  +p++ ++e++Tp+++++ Vn +l
+  KF931341  1 MQEFSLDDLRAIMRSSAGVEEGIDLDGNIAEMEFSAMGYDSLALLELGGQLERRYGFPVPEEFASEMHTPAAVVAFVNSQL 81
+              789***************************************************************************986 PP
+
+>> KC870000  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.9   0.1   1.1e-30   1.1e-30       5      79 ..       1      75 []       1      75 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 97.9 bits;  conditional E-value: 1.1e-30
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              +t+ +L+r+lre+aGe+e+vdldg++ d +F++LgyDSlal ++  r+erey v+lp+d+v +++Tp++l+dlVn
+  KC870000  1 FTIAELVRLLRECAGEEEGVDLDGEVGDLPFDELGYDSLALFNTIGRIEREYTVDLPEDVVWQATTPGALVDLVN 75
+              6999**********************************************************************9 PP
+
+>> AY228176  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.7   1.1   1.2e-30   1.2e-30       4      79 ..       2      77 .]       1      77 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 97.7 bits;  conditional E-value: 1.2e-30
+     t2ACP  4 qltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+               +tlddL+ril e+aG+de+vdldgdild+ Fe+L y+Sla+Le++ r+er+y +sl+d++v e+ Tpr+ll++Vn
+  AY228176  2 SFTLDDLKRILLESAGADENVDLDGDILDTDFEELSYESLAILETCGRIERDYAISLDDSVVTEARTPRALLEIVN 77
+              69*************************************************************************9 PP
+
+>> KM881706  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.3   0.2   1.6e-30   1.6e-30       5      79 ..       1      75 []       1      75 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 97.3 bits;  conditional E-value: 1.6e-30
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              +tlddLr+i+r g G+de vdldgdi++ ++e++gyDSla+Lei++r+e++ g++lp+da+e++ Tp++++++Vn
+  KM881706  1 FTLDDLRAIMRSGGGVDEHVDLDGDIATIGYEEIGYDSLAVLEIQSRIEQQTGLRLPEDAAEHMRTPGDTVGYVN 75
+              69************************************************************************9 PP
+
+>> FN565485  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.2   0.3   1.7e-30   1.7e-30       2      82 ..       1      79 []       1      79 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 97.2 bits;  conditional E-value: 1.7e-30
+     t2ACP  2 mkqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              m+ +++ddL+rilregaG++   +ldgdild  F+dLgyDSlalLe+ +r+ reyg++ +d a+++++Tpr+l+++Vn++l
+  FN565485  1 MSSFSIDDLKRILREGAGATA--ELDGDILDASFDDLGYDSLALLETGSRIGREYGLEFEDTAFADVETPRDLVGVVNAQL 79
+              57899*************986..699****************************************************986 PP
+
+>> AY233211  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.5   2.8   2.9e-30   2.9e-30       7      79 ..       1      73 []       1      73 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 96.5 bits;  conditional E-value: 2.9e-30
+     t2ACP  7 lddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              +ddLrr+l+eg+G+de+vdld+d +++aF++LgyDSla+Le+  rl re++++l+d+++++l+Tp+++ld+Vn
+  AY233211  1 MDDLRRALEEGSGVDEGVDLDTDLETMAFSELGYDSLAVLETGLRLGRENDIELDDSVFADLDTPQQMLDAVN 73
+              69**********************************************************************9 PP
+
+>> FN565166  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.5   0.6   2.9e-30   2.9e-30       5      82 ..       1      76 []       1      76 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 96.5 bits;  conditional E-value: 2.9e-30
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +++ddL+ril egaG +   +l+gdi+dvaFedLgyDSlalLe+ +r+ reygv+ +d a+ +++Tpr+l+d+Vn++l
+  FN565166  1 FSIDDLKRILAEGAGGE--NELTGDIEDVAFEDLGYDSLALLETGSRIGREYGVEFEDTAFVDVDTPRDLVDVVNAHL 76
+              589************65..679*****************************************************987 PP
+
+>> X89899  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.8   1.3   4.7e-30   4.7e-30       3      82 ..       2      81 .]       1      81 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 95.8 bits;  conditional E-value: 4.7e-30
+   t2ACP  3 kqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+            +q+ l+dL ++lre+aGe+e+  l++ +ldv F+dLgyDS+a+Le+ ar+er+ gv l+++av+e++T ++ l+lVn+al
+  X89899  2 QQMHLEDLTAVLRECAGESESAGLTTAALDVSFADLGYDSVAVLETTARIERDHGVVLDEEAVSEAETLGQYLALVNEAL 81
+            79***************************************************************************987 PP
+
+>> EU852062  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.5   1.7   5.9e-30   5.9e-30       4      79 ..       3      78 .]       1      78 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 95.5 bits;  conditional E-value: 5.9e-30
+     t2ACP  4 qltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              ++tlddL+ +l e+aG+d+dv l+g+ ldv+F+dLgyDSlalLe++a +++++ v+l d++v +++Tpre+ld Vn
+  EU852062  3 TITLDDLVLVLTECAGADDDVTLTGQNLDVPFTDLGYDSLALLETAALMKQRFAVDLTDEEVTGIETPREFLDRVN 78
+              69*************************************************************************9 PP
+
+>> KF040454  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.1   0.3   8.1e-30   8.1e-30       7      79 ..       3      75 .]       1      75 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 95.1 bits;  conditional E-value: 8.1e-30
+     t2ACP  7 lddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              l dL +ilre+aGed++  l+gdildvaF+ LgyDS+al+e++ r++ +ygv l+dd+v  ++Tprell+lVn
+  KF040454  3 LTDLTAILRECAGEDDNSALQGDILDVAFDRLGYDSIALMETAGRIQIQYGVPLADDVVVLANTPRELLELVN 75
+              78**********************************************************************9 PP
+
+>> HM055942  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.4   0.2   1.3e-29   1.3e-29       5      82 ..       1      76 []       1      76 [] 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 94.4 bits;  conditional E-value: 1.3e-29
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +tlddL rilreg+Ge+e+   d   ++  F+dLgyDSlalLe++ r+ereyg++l+++a++e++Tpr+l++lVn++l
+  HM055942  1 FTLDDLMRILREGSGETEEPAGDPAGVE--FADLGYDSLALLETAGRIEREYGLTLDESALAEATTPRALVELVNEHL 76
+              69****************9986666555..*********************************************987 PP
+
+>> DQ143963  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.3   0.4   1.4e-29   1.4e-29      15      82 ..       1      68 []       1      68 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 94.3 bits;  conditional E-value: 1.4e-29
+     t2ACP 15 regaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              re+aGe+e++dl gd++dvaF+ LgyDSlalL++v r+er+ygv+l ddave+++Tpr+l+++ n++l
+  DQ143963  1 RECAGEEESIDLGGDVEDVAFDALGYDSLALLNTVGRIERDYGVQLGDDAVEKATTPRALIEMTNASL 68
+              69**************************************************************9976 PP
+
+>> JX262387  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   93.2   0.8   3.2e-29   3.2e-29       6      79 ..       2      75 .]       1      75 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 93.2 bits;  conditional E-value: 3.2e-29
+     t2ACP  6 tlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              ++d+L ++lr++aGede vdl gd+ldv+F++LgyDSlalL++v+r+er++g++l+d++v ++kTpr lld Vn
+  JX262387  2 SIDQLIELLRDSAGEDEAVDLAGDVLDVPFDQLGYDSLALLNTVSRIERDNGIHLSDSVVTDAKTPRLLLDEVN 75
+              799**********************************************************************9 PP
+
+>> AF058302  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   93.0   1.2   3.7e-29   3.7e-29       2      79 ..       1      77 []       1      77 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 93.0 bits;  conditional E-value: 3.7e-29
+     t2ACP  2 mkqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              m+ lt+ddL+++l e+aGed++vdl g+ ld++F dLgyDSlalLe++a l+++yg+ l d+ v++l Tprelld Vn
+  AF058302  1 MSALTVDDLKKLLAETAGEDDSVDLAGE-LDTPFVDLGYDSLALLETAAVLQQRYGIALTDETVGRLGTPRELLDEVN 77
+              5789**********************97.677*********************************************9 PP
+
+>> AM900040  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   91.5   0.2   1.1e-28   1.1e-28       7      79 ..       1      73 []       1      73 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 91.5 bits;  conditional E-value: 1.1e-28
+     t2ACP  7 lddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              ld L++++r++aG+++ + ldgdild++++dLgyDSlalLei a ler+y v ++d++v e  Tpr++ldl+n
+  AM900040  1 LDALVAVIRRCAGDSDVTSLDGDILDTPYQDLGYDSLALLEIFASLERDYAVPISDEEVFETRTPRQTLDLIN 73
+              589*********************************************************************9 PP
+
+>> AJ011500  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   91.4   1.1   1.1e-28   1.1e-28       8      79 ..       2      73 .]       1      73 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 91.4 bits;  conditional E-value: 1.1e-28
+     t2ACP  8 ddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              d Lr+il ++aGed++vdl+gdild +Fe+LgyDSlal+e ++r+ere gv l+d +++e  Tpr lldlVn
+  AJ011500  2 DGLRTILVACAGEDDGVDLSGDILDITFEELGYDSLALMESASRIERELGVALADGDINEELTPRVLLDLVN 73
+              789********************************************************************9 PP
+
+>> X55942  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   91.1   0.0   1.4e-28   1.4e-28       5      79 ..       1      74 []       1      74 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 91.1 bits;  conditional E-value: 1.4e-28
+   t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+            +t+++L+++++++aG++ d ++ ++++d++F+++g+DSl+lL+iva+le++yg+ lp++a e++kTp+++l+lVn
+  X55942  1 VTVEELSALMKRTAGVHVDPVTLRQQADDGFDTFGLDSLGLLGIVAELEKRYGLGLPEQA-ERCKTPADFLALVN 74
+            69*********************************************************7.*************9 PP
+
+>> HQ828985  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   90.3   0.2   2.5e-28   2.5e-28       2      79 ..       1      78 []       1      78 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 90.3 bits;  conditional E-value: 2.5e-28
+     t2ACP  2 mkqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              m+++t+d L  +lr + G++e+v+l++ i+d+a++dLgyDSlalLe++a++++e+gv +pdd+v elkTpr+++d+ n
+  HQ828985  1 MSEFTIDHLIGLLRSAGGVAEGVELNEGIVDDAYADLGYDSLALLEMSAKIQQEFGVAIPDDDVTELKTPRQTIDYLN 78
+              689*************************************************************************98 PP
+
+>> AF293355  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.6   0.1   4.1e-28   4.1e-28       5      82 ..       1      79 []       1      79 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 89.6 bits;  conditional E-value: 4.1e-28
+     t2ACP  5 ltlddLrrilregaGededvdldgd.ildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +tldd rrilr++ G+de++dldg+ ++d+ F+dLgyDSlalLe+v r+ereyg+++pd ++++ +Tpre l +V ++l
+  AF293355  1 FTLDDIRRILRASGGVDEQTDLDGEhFADTSFADLGYDSLALLELVNRIEREYGIQIPDGDLSHTQTPREALTYVHARL 79
+              69*********************97268999********************************************8765 PP
+
+>> AM492533  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.6   0.4   4.3e-28   4.3e-28       4      79 ..       3      78 .]       1      78 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 89.6 bits;  conditional E-value: 4.3e-28
+     t2ACP  4 qltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+               +tl+dLr+i+r++ G+de+vdl+g ++d+ F +LgyDSla+Le++ r++r  g+ l+dd++  + Tpre+++lVn
+  AM492533  3 SFTLEDLRAIMRDSIGVDESVDLTGAQADTDFGTLGYDSLAVLELAGRIQRMHGIPLADDDLLTASTPREVVALVN 78
+              69*************************************************************************9 PP
+
+>> KF563088  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.1   0.1   5.8e-28   5.8e-28       2      82 ..       1      81 []       1      81 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 89.1 bits;  conditional E-value: 5.8e-28
+     t2ACP  2 mkqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              m+ +t++dL +i+re+aGe+e vdl+  ++++ F+ LgyDSlal+e  +r+er  g++lp++ ++e+ Tp +++++Vn+al
+  KF563088  1 MSAFTTEDLFKIMRECAGEEEAVDLSSAAAEQEFALLGYDSLALMEAISRVERGHGITLPEETLGEALTPTAFVAAVNAAL 81
+              5789**************************************************************************987 PP
+
+>> FJ483966  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   88.9   0.4   7.1e-28   7.1e-28       8      77 ..       2      71 ..       1      76 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 88.9 bits;  conditional E-value: 7.1e-28
+     t2ACP  8 ddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldl 77
+               +L rilre+aGe e+v  dg+++d+ F+dLgyDSla+Le+++rl+r+ygv+l dd+v ++ Tp+ ll+l
+  FJ483966  2 GELTRILRECAGEGEGVAHDGEFADTLFTDLGYDSLAVLETASRLKRDYGVELTDDEVVDVGTPARLLEL 71
+              589*****************************************************************98 PP
+
+>> AF257324  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   87.9   0.3   1.4e-27   1.4e-27       2      82 ..       1      80 []       1      80 [] 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 87.9 bits;  conditional E-value: 1.4e-27
+     t2ACP  2 mkqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              m+ +t+++L +i+re+aGe+e vdl   ++++ F+ LgyDSlal+e  +r+er  g++lp++ v+e+ Tp++++d+Vn++l
+  AF257324  1 MSAFTVEELFQIMRECAGEEEAVDLAD-AAEQEFSLLGYDSLALMEAISRVERGLGIDLPEETVGEVLTPAAFVDVVNAEL 80
+              5789********************975.5566**********************************************986 PP
+
+>> HM627755  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   87.3   0.6   2.2e-27   2.2e-27       5      81 ..       1      76 [.       1      77 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 87.3 bits;  conditional E-value: 2.2e-27
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVnta 81
+              +tlddL ++l+e+aG+de++ ld dildv+F+dLgyDSlal ++   +ere g++lpd+ v e++Tpr+lld+Vn  
+  HM627755  1 FTLDDLITALKEAAGADEGIALD-DILDVPFADLGYDSLALFNTLNTIERERGITLPDETVVEATTPRMLLDAVNLG 76
+              69*****************9986.9**************************************************75 PP
+
+>> AJ224512  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   86.1   0.4   5.3e-27   5.3e-27      10      79 ..       1      70 []       1      70 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 86.1 bits;  conditional E-value: 5.3e-27
+     t2ACP 10 LrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              L +i+re+aG  edvd+ gd+    F+ LgyDSlalLe++ rlere+g++l d++v+++ Tp+el +lVn
+  AJ224512  1 LMEIMRECAGYGEDVDALGDTDGADFAALGYDSLALLETAGRLEREFGIQLGDEVVADARTPAELTALVN 70
+              679******************************************************************9 PP
+
+>> AM501485  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   84.4   0.6   1.7e-26   1.7e-26       4      82 ..       3      82 .]       1      82 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 84.4 bits;  conditional E-value: 1.7e-26
+     t2ACP  4 qltlddLrrilregaGededvd.ldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              +l++++L +i+r++ Ge+ d+  l++d+ld++F+dL+ DSla+Le+v +++ e+ +++pd+a+e+++Tpr++ld+Vn++l
+  AM501485  3 TLSVEKLLEIMRATQGESADTSgLTEDVLDKPFTDLNVDSLAVLEVVTQIQDEFKLRIPDSAMEGMETPRQVLDYVNERL 82
+              789**************98876499****************************************************986 PP
+
+>> EU147299  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   84.0   0.7   2.3e-26   2.3e-26       3      79 ..       2      78 .]       1      78 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 84.0 bits;  conditional E-value: 2.3e-26
+     t2ACP  3 kqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              +++tlddL+ + r+ aGe+e+  ldgdi+dv F+ LgyDS+al+e+ ++++ +yg++l+dd v +l Tpr++++ Vn
+  EU147299  2 QKFTLDDLVDLTRTYAGESEEGALDGDIVDVLFTHLGYDSVALMEVLSQIKHQYGIDLSDDSVDALRTPRAVIEKVN 78
+              789***********************************************************************999 PP
+
+>> GQ421798  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   83.8   0.2   2.7e-26   2.7e-26       4      82 ..       3      82 .]       1      82 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 83.8 bits;  conditional E-value: 2.7e-26
+     t2ACP  4 qltlddLrrilregaGededvdldgdi.ldvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              + tl +L   lre+aGe+e++dld d+ ldv+F dLgyDSlalL +   ++re gv+l+ddav e++Tpr ll+++n++l
+  GQ421798  3 EYTLPELADKLRECAGESEGIDLDSDAvLDVPFIDLGYDSLALLQVTGVIKRERGVELSDDAVVEAETPRLLLKMINASL 82
+              789*********************98538************************************************976 PP
+
+>> AZXI01000002  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   82.8   0.4   5.6e-26   5.6e-26       8      80 ..       1      73 [.       1      74 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 82.8 bits;  conditional E-value: 5.6e-26
+         t2ACP  8 ddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVnt 80
+                  ddL r+lre+ Ge +++   ++ ld+ F+dLgyDSlalLe++ r+ere gv+l+dd+v el Tpr++l+ Vn+
+  AZXI01000002  1 DDLFRLLREAGGELDGTTPAEELLDTEFTDLGYDSLALLEVSTRVEREHGVRLADDVVPELRTPRAFLEQVNA 73
+                  799*********************************************************************7 PP
+
+>> AY196994  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   82.7   0.4   5.8e-26   5.8e-26       7      81 ..       1      75 [.       1      76 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 82.7 bits;  conditional E-value: 5.8e-26
+     t2ACP  7 lddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVnta 81
+              ld+L+r l  +aG+de+v+l+gdil v+  dLg+DSla++++  rler++gv+lp++a  e++Tp++ll++Vn++
+  AY196994  1 LDELKRFLLSAAGDDESVELSGDILHVRLVDLGFDSLAVIDTLGRLERHFGVKLPEEATTEVETPADLLAAVNRQ 75
+              689**********************************************************************96 PP
+
+>> AF254925  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.3   0.4   3.2e-25   3.2e-25       8      79 ..       1      72 [.       1      73 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 80.3 bits;  conditional E-value: 3.2e-25
+     t2ACP  8 ddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              d+L +il+e++G+++      dild+ Fe LgyDSl lLe++a+l+ +y++++p+d++ +lkTpr++l++Vn
+  AF254925  1 DQLLQILSECSGDEQALAQGDDILDREFEVLGYDSLVLLETSAQLKHRYDIDIPEDVIRDLKTPRAVLEYVN 72
+              5799*******************************************************************9 PP
+
+>> AM156932  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.0   0.4   4.2e-25   4.2e-25      15      82 ..       1      69 []       1      69 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 80.0 bits;  conditional E-value: 4.2e-25
+     t2ACP 15 regaGededvdld.gdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+              re+aGede+  l  gd+ld++F+dLgyDSla+Le++ar++  ygv l+dd+v e+ Tprell lVn++l
+  AM156932  1 RECAGEDENAGLRgGDVLDTTFTDLGYDSLAMLETAARIQILYGVVLADDVVVEAGTPRELLSLVNESL 69
+              69*******9886279**************************************************986 PP
+
+>> AJ585192  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   79.6   0.9   5.5e-25   5.5e-25       5      85 ..       1      78 [.       1      79 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 79.6 bits;  conditional E-value: 5.5e-25
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntalaaa 85
+              ++++++++++++g+G+d+d+ +dg++l+   edL++DS++l+eiv++le+++++++++da+++++T+++l+++V++ l+a+
+  AJ585192  1 MDVREQVFAVMRGVGFDGDELADGKRLA---EDLDIDSTELVEIVVALEQHFDITVDADAEGGFTTVGDLVGCVGRLLSAG 78
+              799*************************...***********************************************997 PP
+
+>> JX843821  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   78.8   0.2   9.9e-25   9.9e-25       5      79 ..       2      76 .]       1      76 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 78.8 bits;  conditional E-value: 9.9e-25
+     t2ACP  5 ltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              +++d+L ++lr++aGe+ed  ld+ +ld+ F+ LgyDSlalLei  +l+r y vs+++dav+  + pr ll lVn
+  JX843821  2 MSTDELLEVLRTCAGESEDGALDESALDRDFASLGYDSLALLEITGHLRRAYRVSIAEDAVGLGDSPRRLLTLVN 76
+              899***********************************************************************9 PP
+
+>> L05390  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   75.4   0.0   1.1e-23   1.1e-23       6      82 ..       1      76 []       1      76 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 75.4 bits;  conditional E-value: 1.1e-23
+   t2ACP  6 tlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+            t+++L+++++++aG++ +    + +++ +F+ +g+DSl+lL+iva+le++ gv lp++ ve++kTp+e+l+ Vn+ l
+  L05390  1 TFEELSALMKRTAGVHVEPPDLRARAEEGFDGFGLDSLGLLGIVAELEKKHGVGLPEQ-VERCKTPAEFLAQVNATL 76
+            789****************999************************************.6**************976 PP
+
+>> AF509565  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   72.7   0.4   7.5e-23   7.5e-23       2      79 ..       1      77 []       1      77 [] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 72.7 bits;  conditional E-value: 7.5e-23
+     t2ACP  2 mkqltlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              m+ql+l  L  +lr ++G ++  dl+gd+ldvaF+dLgyDSl lL +   +er+ gv l+++++ee++Tpr+ +++Vn
+  AF509565  1 MQQLDLPTLIGLLR-TSGGSDTHDLNGDVLDVAFADLGYDSLCLLQVTGVIERDAGVALDEQVLEEAETPRQYIAAVN 77
+              56777777877776.56778899******************************************************9 PP
+
+>> X62518  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.1   0.0   2.1e-16   2.1e-16       6      79 ..       1      71 []       1      71 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 52.1 bits;  conditional E-value: 2.1e-16
+   t2ACP  6 tlddLrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+            t+++L ++++++aG++ d    + +++ +F+d+g+DSl+lL+iv +le +y   l     + +k pr++ld+Vn
+  X62518  1 TVEELATLMKKAAGVTVDPRDLERRAN-GFADFGLDSLGLLGIVGELENRYARALHRR--GTCKSPRAFLDVVN 71
+            89****************988777777.9**************************998..8************9 PP
+
+>> CP000820  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.6   0.7   5.3e-15   5.3e-15      10      79 ..       1      67 [.       1      68 [] 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 47.6 bits;  conditional E-value: 5.3e-15
+     t2ACP 10 LrrilregaGed.edvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+              L +il+e aG+d  dv +d+ ++d    dL+ DSl ++e+v++ e+++gv++pd++v+ lkT+++ + ++ 
+  CP000820  1 LAAILEEVAGVDpADVTADKTFID----DLDVDSLSMVEVVVAAEEKFGVKIPDEDVKTLKTVGDAVSYIQ 67
+              678999999987245666666666....***************************************9985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                           76  (5847 residues searched)
+Passed MSV filter:                        76  (1); expected 1.5 (0.02)
+Passed bias filter:                       76  (1); expected 1.5 (0.02)
+Passed Vit filter:                        76  (1); expected 0.1 (0.001)
+Passed Fwd filter:                        76  (1); expected 0.0 (1e-05)
+Initial search space (Z):                 76  [actual number of targets]
+Domain search space  (domZ):              76  [number of targets reported over threshold]
+# CPU time: 0.03u 0.02s 00:00:00.05 Elapsed: 00:00:00.37
+# Mc/sec: 1.36
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/AT.7.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            7  (2524 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  7  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.03
+# Mc/sec: 7.24
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/Aur.ACP.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                     -----------
+      1e-06   15.0   0.0    1.1e-06   14.9   0.0    1.2  1  gi|133919229|emb|CAL48954.1|  acyl carrier protein [Stigmatell
+
+
+Domain annotation for each sequence (and alignments):
+>> gi|133919229|emb|CAL48954.1|  acyl carrier protein [Stigmatella aurantiaca Sg a15]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.9   0.0   1.1e-06   1.1e-06      36      84 ..      33      81 ..       8      83 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 14.9 bits;  conditional E-value: 1.1e-06
+                         t2ACP 36 edLgyDSlalLeivarlereygvslpddaveelkTprelldlVntalaa 84
+                                  ++Lg  S+  Le  + ler +  + + +++e ++  +e++d+V + l++
+  gi|133919229|emb|CAL48954.1| 33 DELGATSVLRLEFIVMLERGFKFQFNPEEIEVAQNLNEVVDVVEKLLRG 81
+                                  79******************************************99986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            1  (84 residues searched)
+Passed MSV filter:                         1  (1); expected 0.0 (0.02)
+Passed bias filter:                        1  (1); expected 0.0 (0.02)
+Passed Vit filter:                         1  (1); expected 0.0 (0.001)
+Passed Fwd filter:                         1  (1); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.03s 00:00:00.04 Elapsed: 00:00:00.04
+# Mc/sec: 0.18
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/Aur.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            2  (813 residues searched)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  2  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 3.50
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/CLF.30.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                           31  (12737 residues searched)
+Passed MSV filter:                         1  (0.0322581); expected 0.6 (0.02)
+Passed bias filter:                        1  (0.0322581); expected 0.6 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 31  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 54.77
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/Cyclase.3.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            3  (791 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.05
+# Mc/sec: 1.36
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/CyclaseABD.3.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            3  (431 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 1.85
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/Cyclase_polyket.6.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            6  (654 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  6  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.04
+# Mc/sec: 1.41
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/CyclaseSRPBCC.17.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                           17  (2512 residues searched)
+Passed MSV filter:                         2  (0.117647); expected 0.3 (0.02)
+Passed bias filter:                        1  (0.0588235); expected 0.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 17  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.03
+# Mc/sec: 7.20
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/Ecoli.ACP.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.3e-18   50.7   0.8    7.6e-18   50.7   0.8    1.0  1  EcoliACP  gi|67462084|sp|P0A6A8.2|ACP_ECOLI RecName: Full=Acy
+
+
+Domain annotation for each sequence (and alignments):
+>> EcoliACP  gi|67462084|sp|P0A6A8.2|ACP_ECOLI RecName: Full=Acyl carrier protein; Short=ACP; AltName: Full=Cytosolic-ac
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.7   0.8   7.6e-18   7.6e-18      10      81 ..       8      76 ..       1      78 [] 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 50.7 bits;  conditional E-value: 7.6e-18
+     t2ACP 10 LrrilregaGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVnta 81
+               ++i+ e  G+++++++++       edLg DSl  +e+v +le+e++ ++pd+++e+++T+++ +d++n++
+  EcoliACP  8 VKKIIGEQLGVKQEEVTNNASFV---EDLGADSLDTVELVMALEEEFDTEIPDEEAEKITTVQAAIDYINGH 76
+              45666667777766666666655...9*******************************************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            1  (78 residues searched)
+Passed MSV filter:                         1  (1); expected 0.0 (0.02)
+Passed bias filter:                        1  (1); expected 0.0 (0.02)
+Passed Vit filter:                         1  (1); expected 0.0 (0.001)
+Passed Fwd filter:                         1  (1); expected 0.0 (1e-05)
+Initial search space (Z):                  1  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.06
+# Mc/sec: 0.11
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/FabD.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            3  (942 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.02
+# Mc/sec: 4.05
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/FabF.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            3  (1232 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 10.60
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/FabG.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            2  (490 residues searched)
+Passed MSV filter:                         0  (0); expected 0.0 (0.02)
+Passed bias filter:                        0  (0); expected 0.0 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  2  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.03
+# Mc/sec: 1.40
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/FabH.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            4  (1323 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  4  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 5.69
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/KR.16.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                           16  (4484 residues searched)
+Passed MSV filter:                         1  (0.0625); expected 0.3 (0.02)
+Passed bias filter:                        1  (0.0625); expected 0.3 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 16  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 19.28
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.all.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                           26  (8832 residues searched)
+Passed MSV filter:                         5  (0.192308); expected 0.5 (0.02)
+Passed bias filter:                        4  (0.153846); expected 0.5 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 26  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.03
+# Mc/sec: 25.32
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.C15.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            5  (1249 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  5  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 10.74
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.C17.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            4  (1045 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  4  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.02
+# Mc/sec: 4.49
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.C19.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            6  (1495 residues searched)
+Passed MSV filter:                         3  (0.5); expected 0.1 (0.02)
+Passed bias filter:                        2  (0.333333); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  6  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.03
+# Mc/sec: 4.29
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/KR.Lackner.C9.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                           11  (2889 residues searched)
+Passed MSV filter:                         2  (0.181818); expected 0.2 (0.02)
+Passed bias filter:                        1  (0.0909091); expected 0.2 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 11  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.02
+# Mc/sec: 12.42
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/KS.30.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                           31  (13067 residues searched)
+Passed MSV filter:                         0  (0); expected 0.6 (0.02)
+Passed bias filter:                        0  (0); expected 0.6 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 31  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.11
+# Mc/sec: 10.22
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/KSIII.10.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                           10  (3297 residues searched)
+Passed MSV filter:                         0  (0); expected 0.2 (0.02)
+Passed bias filter:                        0  (0); expected 0.2 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                 10  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.02
+# Mc/sec: 14.18
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/TypeI.ACP.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------             -----------
+    2.2e-09   28.1   0.0    2.2e-09   28.0   0.0    1.1  1  Myxov_002_PP_001.seq  Expect = 0.004  length=  70( 1344- 1414
+    1.6e-08   25.3   0.0    2.2e-08   24.9   0.0    1.3  1  chlro_003_PP_002.seq  Expect = 9e-22  length=  85( 3789- 3874
+    2.7e-08   24.6   0.0    4.1e-08   24.0   0.0    1.3  1  averm_001_PP_003.seq  Expect = 2e-22  length=  85( 3805- 3890
+    3.4e-08   24.2   0.0    5.6e-08   23.5   0.0    1.4  1  ascom_003_PP_003.seq  Expect = 6e-21  length=  81( 5262- 5343
+    3.5e-08   24.2   0.0    3.9e-08   24.0   0.0    1.2  1  borre_003_PP_002.seq  Expect = 1e-20  length=  85( 3328- 3413
+    4.2e-08   23.9   0.0    4.3e-08   23.9   0.0    1.2  1  chond_001_PP_002.seq  Expect = 5e-12  length=  73( 2219- 2292
+    4.3e-08   23.9   0.0    4.8e-08   23.8   0.0    1.1  1  ansam_001_PP_002.seq  Expect = 2e-22  length=  76( 2862- 2938
+    7.3e-08   23.2   0.0    7.4e-08   23.1   0.0    1.1  1  disor_001_PP_002.seq  Expect = 9e-04  length=  63( 3543- 3606
+    8.7e-08   22.9   0.0    1.1e-07   22.7   0.0    1.3  1  Aureo_001_PP_002.seq  Expect = 4e-20  length=  85( 1771- 1856
+    8.8e-08   22.9   0.0    9.5e-08   22.8   0.0    1.2  1  crypt_001_PP_002.seq  Expect = 2e-10  length=  85( 2807- 2892
+    1.5e-07   22.2   0.0    1.7e-07   22.0   0.0    1.1  1  corfa_002_PP_001.seq  Expect = 4e-17  length=  83( 1695- 1778
+    5.9e-07   20.3   0.0    7.4e-07   20.0   0.0    1.2  1  chalc_001_PP_002.seq  Expect = 2e-18  length=  84( 2449- 2533
+    5.9e-07   20.3   0.0    6.4e-07   20.2   0.0    1.1  1  cylin_005_PP_001.seq  Expect = 9e-14  length=  66( 1003- 1069
+    2.2e-06   18.4   0.0    2.3e-06   18.3   0.0    1.1  1  bryos_001_PP_004.seq  Expect = 0.036  length=  64( 4763- 4827
+    3.2e-06   17.9   0.0    3.5e-06   17.8   0.0    1.2  1  conca_002_PP_003.seq  Expect = 2e-20  length=  81( 4660- 4741
+    3.4e-06   17.8   0.0    3.7e-06   17.7   0.0    1.2  1  FR008_001_PP_002.seq  Expect = 2e-16  length=  82( 1582- 1664
+    2.4e-05   15.1   0.0    4.1e-05   14.4   0.0    1.4  2  AMBru_002_PP_001.seq  Expect = 1e-19  length=  78( 1413- 1491
+    5.6e-05   13.9   0.0    6.3e-05   13.8   0.0    1.2  1  ampho_002_PP_001.seq  Expect = 1e-20  length=  83( 1469- 1552
+    6.6e-05   13.7   0.0    7.5e-05   13.5   0.0    1.2  1  epoth_001_PP_001.seq  Expect = 2e-09  length=  80( 1301- 1381
+
+
+Domain annotation for each sequence (and alignments):
+>> Myxov_002_PP_001.seq  Expect = 0.004  length=  70( 1344- 1414)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.0   0.0   1.7e-09   2.2e-09      18      82 ..       7      71 .]       1      71 [] 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 28.0 bits;  conditional E-value: 1.7e-09
+                 t2ACP 18 aGededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVntal 82
+                          +G   ++ ++   ++   + Lg  Sla++e+  +l r+ g++++   + + +Tp++l d V ++l
+  Myxov_002_PP_001.seq  7 VGSYLGQPAHALDMEAELSALGVTSLAIVELGLALHRRHGIRVQPARFFQYTTPSQLRDFVAQEL 71
+                          55555555566666778899****************************************98876 PP
+
+>> chlro_003_PP_002.seq  Expect = 9e-22  length=  85( 3789- 3874) TOO LONG
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.9   0.0   1.6e-08   2.2e-08      22      74 ..      26      78 ..       1      85 [. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 24.9 bits;  conditional E-value: 1.6e-08
+                 t2ACP 22 edvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprel 74
+                          +   +++  +++ F+ Lg+DSl  +e+  rl    g++lp+  v +  Tp++l
+  chlro_003_PP_002.seq 26 GHPHTHTVDEQQSFQALGLDSLTAVELRNRLTAATGLRLPATLVFDHPTPHAL 78
+                          4445556667789*************************************876 PP
+
+>> averm_001_PP_003.seq  Expect = 2e-22  length=  85( 3805- 3890) TOO LONG
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.0   0.0   3.1e-08   4.1e-08      31      76 ..      35      80 ..      22      86 .] 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 24.0 bits;  conditional E-value: 3.1e-08
+                 t2ACP 31 ldvaFedLgyDSlalLeivarlereygvslpddaveelkTprelld 76
+                           d+aF dLg+DSl  +e+  rl r  g++lp   + +   p  l +
+  averm_001_PP_003.seq 35 PDRAFRDLGFDSLTAVELRNRLSRTTGLRLPTTLAFDHPNPTTLTH 80
+                          699****************************988777777766655 PP
+
+>> ascom_003_PP_003.seq  Expect = 6e-21  length=  81( 5262- 5343)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.5   0.0   4.2e-08   5.6e-08       6      74 ..       5      78 ..       2      81 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 23.5 bits;  conditional E-value: 4.2e-08
+                 t2ACP  6 tlddLrrilregaGededvdl.....dgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprel 74
+                          t+ ++rri++e +  +   +l     d+ ++d++F +Lg+DSl  +++  rl  e g++lp   v    T ++l
+  ascom_003_PP_003.seq  5 TAAEQRRIMQEVVLRHAAAVLayglgDRVAADRPFRELGFDSLTAVDLRNRLAAETGLRLPTTLVFSHPTAEAL 78
+                          66777777777776666666533322566789*****************************9988877777665 PP
+
+>> borre_003_PP_002.seq  Expect = 1e-20  length=  85( 3328- 3413) TOO LONG
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.0   0.0     3e-08   3.9e-08      11      75 ..      14      79 ..       6      86 .] 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 24.0 bits;  conditional E-value: 3e-08
+                 t2ACP 11 rrilregaGededvdldgdi.ldvaFedLgyDSlalLeivarlereygvslpddaveelkTprell 75
+                          +ri+ ++a +  + d++  i l+++F +Lg+DSl  + +  rl r+ g++lp+ +v +   p++l 
+  borre_003_PP_002.seq 14 QRIVLDTAAAVLGHDSHDAIpLTRGFLELGFDSLTAVRLRNRLARRLGLRLPATVVFDHPSPAALA 79
+                          5666666666666666655537999*******************************9999998875 PP
+
+>> chond_001_PP_002.seq  Expect = 5e-12  length=  73( 2219- 2292)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.9   0.0   3.3e-08   4.3e-08      31      62 ..      23      54 ..       3      66 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 23.9 bits;  conditional E-value: 3.3e-08
+                 t2ACP 31 ldvaFedLgyDSlalLeivarlereygvslpd 62
+                           dv+F++Lg+DSl  Le+  rle+  g +l++
+  chond_001_PP_002.seq 23 RDVPFTNLGLDSLTSLETRNRLESSLGTKLQA 54
+                          599************************99976 PP
+
+>> ansam_001_PP_002.seq  Expect = 2e-22  length=  76( 2862- 2938)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.8   0.0   3.7e-08   4.8e-08      23      74 ..      18      69 ..       4      76 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 23.8 bits;  conditional E-value: 3.7e-08
+                 t2ACP 23 dvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprel 74
+                           +d++   +++aF++Lg DSl  +e+  rl    g+ l++  v +  Tp+ l
+  ansam_001_PP_002.seq 18 HRDASAVDANRAFKELGVDSLTAVELRNRLAAATGLALAATSVFDHPTPALL 69
+                          56677778899**************************************654 PP
+
+>> disor_001_PP_002.seq  Expect = 9e-04  length=  63( 3543- 3606)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.1   0.0   5.7e-08   7.4e-08      28      75 ..      14      61 ..       2      64 .] 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 23.1 bits;  conditional E-value: 5.7e-08
+                 t2ACP 28 gdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprell 75
+                          +   dv+F+++g DS+  +e++  + re  ++l   a+ +  T r+l 
+  disor_001_PP_002.seq 14 KLSSDVPFTTFGVDSIFAVEVAGVIGRELSIDLRTTALFNYPTARALA 61
+                          55679********************************99999999875 PP
+
+>> Aureo_001_PP_002.seq  Expect = 4e-20  length=  85( 1771- 1856) TOO LONG
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.7   0.0     8e-08   1.1e-07      32      74 ..      36      78 ..       9      86 .] 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 22.7 bits;  conditional E-value: 8e-08
+                 t2ACP 32 dvaFedLgyDSlalLeivarlereygvslpddaveelkTprel 74
+                           ++F+d+g+DSl  L +  rl+   g++lp+  v +  Tp el
+  Aureo_001_PP_002.seq 36 RRTFTDIGFDSLRALQLRNRLNGATGLRLPATLVFDHPTPVEL 78
+                          457*************************************887 PP
+
+>> crypt_001_PP_002.seq  Expect = 2e-10  length=  85( 2807- 2892) TOO LONG
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.8   0.0   7.2e-08   9.5e-08      31      78 ..      35      82 ..      13      86 .] 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 22.8 bits;  conditional E-value: 7.2e-08
+                 t2ACP 31 ldvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlV 78
+                          l+++F dLg+DSl  +e+  +l++    s+p   + +  T+++l+d+ 
+  crypt_001_PP_002.seq 35 LETGFFDLGMDSLTSVELRNKLQTSLSCSVPSTLAFDYPTVGKLVDYL 82
+                          7889******************************************85 PP
+
+>> corfa_002_PP_001.seq  Expect = 4e-17  length=  83( 1695- 1778)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.0   0.0   1.3e-07   1.7e-07       9      76 ..      12      80 ..       8      84 .] 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 22.0 bits;  conditional E-value: 1.3e-07
+                 t2ACP  9 dLrrilregaGed.edvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelld 76
+                          +L +++ +g+Ge  e  d      d+ F  Lg+DSl  +e+++ l    g++lp  av +  T ++l d
+  corfa_002_PP_001.seq 12 RLLAVIAQGVGEVlEHPDPAAIPGDTEFLVLGFDSLTAVELCSWLAATTGIRLPSTAVFDHPTLSALAD 80
+                          577888999998735556666667999*******************************99999888766 PP
+
+>> chalc_001_PP_002.seq  Expect = 2e-18  length=  84( 2449- 2533)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.0   0.0   5.6e-07   7.4e-07      19      76 ..      25      80 ..       4      84 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 20.0 bits;  conditional E-value: 5.6e-07
+                 t2ACP 19 GededvdldgdildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelld 76
+                            ++ +dl   +  + F+d g+DSl  Le+  rl++  gv lp  +v +   p++l d
+  chalc_001_PP_002.seq 25 LRHDTTDLLAPR--RSFKDAGFDSLTALELRNRLNTATGVVLPVTVVFDHPNPGALAD 80
+                          344444444433..56***************************999988888888766 PP
+
+>> cylin_005_PP_001.seq  Expect = 9e-14  length=  66( 1003- 1069)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.2   0.0   4.9e-07   6.4e-07      32      73 ..      25      66 ..      12      67 .] 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 20.2 bits;  conditional E-value: 4.9e-07
+                 t2ACP 32 dvaFedLgyDSlalLeivarlereygvslpddaveelkTpre 73
+                          ++ F+dLg+DSl  +e+  +l++  g++lp   v +  T ++
+  cylin_005_PP_001.seq 25 EQMFSDLGIDSLMAIELRNKLRSAIGLELPVAIVFDHPTIKQ 66
+                          568***************************999888888776 PP
+
+>> bryos_001_PP_004.seq  Expect = 0.036  length=  64( 4763- 4827)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.3   0.0   1.8e-06   2.3e-06      33      65 ..      20      52 ..       3      61 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 18.3 bits;  conditional E-value: 1.8e-06
+                 t2ACP 33 vaFedLgyDSlalLeivarlereygvslpddav 65
+                          ++F+dLg+DS+  +    +++++yg+s+ + +v
+  bryos_001_PP_004.seq 20 KPFTDLGLDSINGVTWIRKINSHYGLSMTATKV 52
+                          48************************9988766 PP
+
+>> conca_002_PP_003.seq  Expect = 2e-20  length=  81( 4660- 4741)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.8   0.0   2.7e-06   3.5e-06      31      76 ..      35      80 ..      12      82 .] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 17.8 bits;  conditional E-value: 2.7e-06
+                 t2ACP 31 ldvaFedLgyDSlalLeivarlereygvslpddaveelkTprelld 76
+                          +d+aF+ +g+DS+  +    rl++  gv +++ +v +  Tp +l d
+  conca_002_PP_003.seq 35 ADQAFSAVGFDSMLAVSFRNRLRTATGVPIAATVVFDHPTPTALAD 80
+                          799**************************************99876 PP
+
+>> FR008_001_PP_002.seq  Expect = 2e-16  length=  82( 1582- 1664)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.7   0.0   2.8e-06   3.7e-06      29      79 ..      32      82 ..       9      83 .] 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 17.7 bits;  conditional E-value: 2.8e-06
+                 t2ACP 29 dildvaFedLgyDSlalLeivarlereygvslpddaveelkTprelldlVn 79
+                            + +aF++Lg  S+  +e+  rl    gv+lp   + +  Tp ++  l++
+  FR008_001_PP_002.seq 32 AGAGTAFTELGVTSVTAVELRNRLTAVTGVRLPPTLIFDHPTPTAVARLIG 82
+                          455679*************************************99877775 PP
+
+>> AMBru_002_PP_001.seq  Expect = 1e-19  length=  78( 1413- 1491)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.2   0.0       9.4        12      44      78 ..      12      17 ..       6      23 .. 0.59
+   2 !   14.4   0.0   3.1e-05   4.1e-05      31      73 ..      35      77 ..      30      79 .] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: -3.2 bits;  conditional E-value: 9.4
+                 t2ACP 44 alLeivarlereygvslpddaveelkTprelldlV 78
+                          alLe                             lV
+  AMBru_002_PP_001.seq 12 ALLE-----------------------------LV 17
+                          3444.............................43 PP
+
+  == domain 2  score: 14.4 bits;  conditional E-value: 3.1e-05
+                 t2ACP 31 ldvaFedLgyDSlalLeivarlereygvslpddaveelkTpre 73
+                          +d++ ++Lg+DSl  +e+  rl  +    lp   + +  Tpr+
+  AMBru_002_PP_001.seq 35 ADKPLKELGLDSLTAVELKNRLGARAETVLPTTLAFDHPTPRA 77
+                          688899*************************999999999987 PP
+
+>> ampho_002_PP_001.seq  Expect = 1e-20  length=  83( 1469- 1552)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.8   0.0   4.8e-05   6.3e-05      27      64 ..      31      68 ..       3      78 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 13.8 bits;  conditional E-value: 4.8e-05
+                 t2ACP 27 dgdildvaFedLgyDSlalLeivarlereygvslpdda 64
+                          ++  + +aF d+g+DS+  +++  rl    g++lp   
+  ampho_002_PP_001.seq 31 ETVPERRAFRDIGFDSVTAVDLRNRLVAATGLTLPSTM 68
+                          44456689*************************99865 PP
+
+>> epoth_001_PP_001.seq  Expect = 2e-09  length=  80( 1301- 1381)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.5   0.0   5.7e-05   7.5e-05      32      62 ..      35      65 ..      11      74 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 13.5 bits;  conditional E-value: 5.7e-05
+                 t2ACP 32 dvaFedLgyDSlalLeivarlereygvslpd 62
+                          +  F+ Lg+DSl  +e+  r+e    ++l+ 
+  epoth_001_PP_001.seq 35 EALFTRLGMDSLMAVELRNRIEASLKLKLST 65
+                          567*******************999998875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                           25  (1953 residues searched)
+Passed MSV filter:                        25  (1); expected 0.5 (0.02)
+Passed bias filter:                       25  (1); expected 0.5 (0.02)
+Passed Vit filter:                        22  (0.88); expected 0.0 (0.001)
+Passed Fwd filter:                        19  (0.76); expected 0.0 (1e-05)
+Initial search space (Z):                 25  [actual number of targets]
+Domain search space  (domZ):              19  [number of targets reported over threshold]
+# CPU time: 0.02u 0.02s 00:00:00.04 Elapsed: 00:00:00.03
+# Mc/sec: 5.60
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/TypeI.AT.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            3  (871 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.04
+# Mc/sec: 1.87
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/TypeI.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            3  (1269 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.01
+# Mc/sec: 10.91
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/TypeIII.KS.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            3  (1124 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.02
+# Mc/sec: 4.83
+//
+[ok]
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b1 (May 2013); http://hmmer.org/
+# Copyright (C) 2013 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  HMM/t2ACP.selectKnown12.hmm
+# target sequence database:        FastaTestSets/TypeI.KR.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       t2ACP  [M=86]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (86 nodes)
+Target sequences:                            3  (530 residues searched)
+Passed MSV filter:                         0  (0); expected 0.1 (0.02)
+Passed bias filter:                        0  (0); expected 0.1 (0.02)
+Passed Vit filter:                         0  (0); expected 0.0 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):                  3  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.03
+# Mc/sec: 1.52
+//
+[ok]
