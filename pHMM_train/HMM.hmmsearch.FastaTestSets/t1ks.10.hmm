@@ -4,29 +4,30 @@
 # Freely distributed under the GNU General Public License (GPLv3).
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # query HMM file:                  HMM/t1ks.10.hmm
-# target sequence database:        FastaTestSets/Cisat.KS.5.fasta
+# target sequence database:        FastaTestSets/Cisat.KS.6.fasta
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Query:       t1ks  [M=428]
 Scores for complete sequences (score includes all domains):
    --- full sequence ---   --- best 1 domain ---    -#dom-
-    E-value  score  bias    E-value  score  bias    exp  N  Sequence                Description
-    ------- ------ -----    ------- ------ -----   ---- --  --------                -----------
-   2.7e-234  766.1   4.9     3e-234  765.9   4.9    1.0  1  thuggacin_KS_PKSNRPS     gi|296280696|gb|ADH04639.1| TgaA [So
-   6.8e-214  698.9   9.0   7.9e-214  698.6   9.0    1.0  1  fk506_KS_PKSNRPS         _001_KS_002.seq Expect = e-133  leng
-   2.6e-168  548.7   2.1   2.9e-168  548.5   2.1    1.0  1  Myxalamid_KS_PKSNRPS     gi|14210842|gb|AAK57189.1|AF319998_8
-   2.3e-160  522.5   5.9   2.6e-160  522.3   5.9    1.0  1  Mycobactin_KS_NRPSPKS    mycob_004_KS_001.seq [Mycobacterium 
-   1.3e-138  450.8   0.2   1.4e-138  450.7   0.2    1.0  1  Myxochromide_KS_NRPSPKS  
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                   -----------
+   3.3e-234  766.1   4.9   3.6e-234  765.9   4.9    1.0  1  thuggacin_KS_PKSNRPS        gi|296280696|gb|ADH04639.1| TgaA 
+   8.2e-214  698.9   9.0   9.5e-214  698.6   9.0    1.0  1  fk506_KS_PKSNRPS            _001_KS_002.seq Expect = e-133  l
+   2.4e-181  591.9   9.2   2.7e-181  591.7   9.2    1.0  1  thuggacin_KSafterC_PKSNRPS  
+   3.2e-168  548.7   2.1   3.5e-168  548.5   2.1    1.0  1  Myxalamid_KS_PKSNRPS        gi|14210842|gb|AAK57189.1|AF31999
+   2.8e-160  522.5   5.9   3.1e-160  522.3   5.9    1.0  1  Mycobactin_KS_NRPSPKS       mycob_004_KS_001.seq [Mycobacteri
+   1.5e-138  450.8   0.2   1.7e-138  450.7   0.2    1.0  1  Myxochromide_KS_NRPSPKS     
 
 
 Domain annotation for each sequence (and alignments):
 >> thuggacin_KS_PKSNRPS  gi|296280696|gb|ADH04639.1| TgaA [Sorangium cellulosum](2325 2752)
    #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
  ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
-   1 !  765.9   4.9    3e-234    3e-234       1     428 []       1     428 []       1     428 [] 1.00
+   1 !  765.9   4.9  3.6e-234  3.6e-234       1     428 []       1     428 []       1     428 [] 1.00
 
   Alignments for each domain:
-  == domain 1  score: 765.9 bits;  conditional E-value: 3e-234
+  == domain 1  score: 765.9 bits;  conditional E-value: 3.6e-234
                   t1ks   1 epiaivgmacrlpGgvespeelwelvaegrdavsefpedrgwdleelfdpdpdasGtsaareGgfledaaefdaeffgisprealamdp 89 
                            epiaiv+m+cr+pGgv++peelw l++ g da+s+fpe rgw+l+el+d+dpda G+s++reGgfl+da  fd++ffgisprea a+dp
   thuggacin_KS_PKSNRPS   1 EPIAIVAMSCRFPGGVRTPEELWALLQRGGDAISAFPEGRGWNLDELYDADPDARGKSYVREGGFLHDADRFDPAFFGISPREAHAVDP 89 
@@ -55,10 +56,10 @@ Domain annotation for each sequence (and alignments):
 >> fk506_KS_PKSNRPS  _001_KS_002.seq Expect = e-133  length= 420( 2723- 3143)          
    #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
  ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
-   1 !  698.6   9.0  7.9e-214  7.9e-214       1     428 []       1     420 [.       1     420 [. 0.99
+   1 !  698.6   9.0  9.5e-214  9.5e-214       1     428 []       1     420 [.       1     420 [. 0.99
 
   Alignments for each domain:
-  == domain 1  score: 698.6 bits;  conditional E-value: 7.9e-214
+  == domain 1  score: 698.6 bits;  conditional E-value: 9.5e-214
               t1ks   1 epiaivgmacrlpGgvespeelwelvaegrdavsefpedrgwdleelfdpdpdasGtsaareGgfledaaefdaeffgisprealamdpqqrl 93 
                        ep+aiv+macr+pGgv++pe+lw+lv++g da++efp+drgwdl++l+dpdpda G+  +r+Ggfl++aa+fdaeffgisprealamdpqqrl
   fk506_KS_PKSNRPS   1 EPLAIVAMACRMPGGVDTPEDLWSLVESGGDAITEFPTDRGWDLAALYDPDPDAIGKVSVRHGGFLSGAADFDAEFFGISPREALAMDPQQRL 93 
@@ -84,13 +85,50 @@ Domain annotation for each sequence (and alignments):
   fk506_KS_PKSNRPS 366 TLHVDEPSRHVDWG-GDVRLLRRNEPWPVTGRVRRAGVSSFGISGANAHVVLEAGP 420
                        *************6.9************************************9876 PP
 
+>> thuggacin_KSafterC_PKSNRPS  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  591.7   9.2  2.7e-181  2.7e-181       3     428 .]       1     420 []       1     420 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 591.7 bits;  conditional E-value: 2.7e-181
+                        t1ks   3 iaivgmacrlpGgvespeelwelvaegrdavsefpedrgwdleelfdpdpdasGtsaareGgfledaaefdaeffgispreal 85 
+                                 iaivg +cr+pGg+++pe lw+l+ +g+da  e+p dr wd ++l+dpd+da G+ +ar+Ggfled   fd+effg+s rea 
+  thuggacin_KSafterC_PKSNRPS   1 IAIVGAGCRFPGGADDPEALWRLLLAGTDATREVPIDR-WDADALYDPDADAPGKMTARRGGFLEDIDRFDPEFFGVSQREAA 82 
+                                 89***********************************9.******************************************** PP
+
+                        t1ks  86 amdpqqrllletawealeragidpeslrGsdtGvfvGvsaqdyaaerakaedevegylltGnaasvlsGriayvlGleGpavt 168
+                                 amdpqqrllletaweale+agi pe lrG++tGvfvG++a+dy    +   ++++gy+ tGn+ sv+sGr++yvlG  Gp++t
+  thuggacin_KSafterC_PKSNRPS  83 AMDPQQRLLLETAWEALEQAGIVPERLRGTQTGVFVGMMASDYLPAAQPGLEALDGYVGTGNTGSVASGRLSYVLGTHGPSIT 165
+                                 *********************************************************************************** PP
+
+                        t1ks 169 vdtacssslvalhlaaqslrsgecslalaGgvtvlatpevfvefsrqrglapdGrckafaaeadGtglgeGvgllvlerlsda 251
+                                 +dtacss+lvalhla+qslr+gec+ al+G+vt+l tp +fve+sr rg+apdGrck+f+a+adG+g++eG+g+lv++rlsda
+  thuggacin_KSafterC_PKSNRPS 166 IDTACSSALVALHLACQSLRAGECDTALVGSVTLLLTPGLFVELSRLRGMAPDGRCKSFSAAADGVGWSEGAGVLVVKRLSDA 248
+                                 *********************************************************************************** PP
+
+                        t1ks 252 rregrrvlavvrGsavnqdGasnGltapnGpsqqrvirqalaragltaadvdvveahGtGtrlGdpieaqallatyGkeraae 334
+                                    g  +lavvr savnqdG s  ltapnG++q+ v+r+ala a +  ++v+ veahGtGtrlGdp+ea+al a yG +r+  
+  thuggacin_KSafterC_PKSNRPS 249 LAAGDSILAVVRASAVNQDGRSASLTAPNGRAQEAVLRRALALAEVEPQHVGYVEAHGTGTRLGDPVEARALGAVYGAGRE-- 329
+                                 ******************************************************************************997.. PP
+
+                        t1ks 335 rplvlGsvksniGhtqaaaGvagvikvvlalrrgllprtlhvdepsgevdwssgavrlltearewpetdrprraavssfgisg 417
+                                  plv+Gs+ksn+GhtqaaaG+agv+k  lalr++++p+ lh++ p +++ w + a++l + ar wp+   +r a+vs+fg sg
+  thuggacin_KSafterC_PKSNRPS 330 APLVVGSIKSNLGHTQAAAGLAGVLKAALALRHRTVPANLHAEAPHPDIPWGALALELPSRARAWPD---ARLAGVSAFGASG 409
+                                 5*****************************************************************7...599********** PP
+
+                        t1ks 418 tnahvileeap 428
+                                 tnahv+le+ap
+  thuggacin_KSafterC_PKSNRPS 410 TNAHVLLERAP 420
+                                 ********998 PP
+
 >> Myxalamid_KS_PKSNRPS  gi|14210842|gb|AAK57189.1|AF319998_8 MxaE [Stigmatella aurantiaca](36 463)
    #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
  ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
-   1 !  548.5   2.1  2.9e-168  2.9e-168       1     428 []       1     428 []       1     428 [] 0.99
+   1 !  548.5   2.1  3.5e-168  3.5e-168       1     428 []       1     428 []       1     428 [] 0.99
 
   Alignments for each domain:
-  == domain 1  score: 548.5 bits;  conditional E-value: 2.9e-168
+  == domain 1  score: 548.5 bits;  conditional E-value: 3.5e-168
                   t1ks   1 epiaivgmacrlpGgvespeelwelvaegrdavsefpedrgwdleelfdpdpdasGtsaareGgfledaaefdaeffgisprealamdp 89 
                            ep+ai+gm+cr+pGg ++pe++w+l+ +g dav+e+p+ r w  ee+   dp+a  +  ar G+f++   +fda+ffgisprea  mdp
   Myxalamid_KS_PKSNRPS   1 EPVAIIGMGCRFPGGGNDPESYWNLLCNGVDAVTEVPSSR-WTREEMERMDPEALEKLGARWGAFINKVDQFDADFFGISPREAHRMDP 88 
@@ -119,10 +157,10 @@ Domain annotation for each sequence (and alignments):
 >> Mycobactin_KS_NRPSPKS  mycob_004_KS_001.seq [Mycobacterium tuberculosis H37Rv](5 429)
    #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
  ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
-   1 !  522.3   5.9  2.6e-160  2.6e-160       1     425 [.       1     423 [.       1     425 [] 0.98
+   1 !  522.3   5.9  3.1e-160  3.1e-160       1     425 [.       1     423 [.       1     425 [] 0.98
 
   Alignments for each domain:
-  == domain 1  score: 522.3 bits;  conditional E-value: 2.6e-160
+  == domain 1  score: 522.3 bits;  conditional E-value: 3.1e-160
                    t1ks   1 epiaivgmacrlpGgvespeelwelvaegrdavsefpedrgwdleelfdpdpdasGtsaareGgfledaaefdaeffgisprealamd 88 
                             +p++ivg+a   pGgve+++++w l++e+r++++ fp+drgw l elfd +  +  + + + Ggfl+ a+ fd+eff isprea+amd
   Mycobactin_KS_NRPSPKS   1 DPVVIVGLAIEAPGGVETADDYWTLLSEQREGLGPFPTDRGWALRELFDGSRRNGFKPIHNLGGFLSSATTFDPEFFRISPREATAMD 88 
@@ -151,10 +189,10 @@ Domain annotation for each sequence (and alignments):
 >> Myxochromide_KS_NRPSPKS  
    #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
  ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
-   1 !  450.7   0.2  1.4e-138  1.4e-138       3     428 .]       1     427 []       1     427 [] 0.96
+   1 !  450.7   0.2  1.7e-138  1.7e-138       3     428 .]       1     427 []       1     427 [] 0.96
 
   Alignments for each domain:
-  == domain 1  score: 450.7 bits;  conditional E-value: 1.4e-138
+  == domain 1  score: 450.7 bits;  conditional E-value: 1.7e-138
                      t1ks   3 iaivgmacrlpGgvespeelwelvaegrdavsefpedrgwdleelfdpdpdasGtsaareGgfledaae.fdaeffgisprealam 87 
                               iai+g++cr+pGg++sp +lw+l+a+gr a+ e+p+dr wd  + +dpdpd+ G++++r+Ggfl++  + fda+ff isprea ++
   Myxochromide_KS_NRPSPKS   1 IAIIGIGCRFPGGASSPRHLWDLLAQGRSAIVEVPKDR-WDHRRYYDPDPDKPGKTYVRSGGFLQEPIDlFDAAFFSISPREAATL 85 
@@ -185,15 +223,15 @@ Domain annotation for each sequence (and alignments):
 Internal pipeline statistics summary:
 -------------------------------------
 Query model(s):                              1  (428 nodes)
-Target sequences:                            5  (2129 residues searched)
-Passed MSV filter:                         5  (1); expected 0.1 (0.02)
-Passed bias filter:                        5  (1); expected 0.1 (0.02)
-Passed Vit filter:                         5  (1); expected 0.0 (0.001)
-Passed Fwd filter:                         5  (1); expected 0.0 (1e-05)
-Initial search space (Z):                  5  [actual number of targets]
-Domain search space  (domZ):               5  [number of targets reported over threshold]
-# CPU time: 0.03u 0.03s 00:00:00.06 Elapsed: 00:00:00.05
-# Mc/sec: 18.22
+Target sequences:                            6  (2549 residues searched)
+Passed MSV filter:                         6  (1); expected 0.1 (0.02)
+Passed bias filter:                        6  (1); expected 0.1 (0.02)
+Passed Vit filter:                         6  (1); expected 0.0 (0.001)
+Passed Fwd filter:                         6  (1); expected 0.0 (1e-05)
+Initial search space (Z):                  6  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.05u 0.02s 00:00:00.07 Elapsed: 00:00:00.05
+# Mc/sec: 21.82
 //
 [ok]
 # hmmsearch :: search profile(s) against a sequence database
@@ -314,8 +352,8 @@ Passed Vit filter:                         3  (1); expected 0.0 (0.001)
 Passed Fwd filter:                         3  (1); expected 0.0 (1e-05)
 Initial search space (Z):                  3  [actual number of targets]
 Domain search space  (domZ):               3  [number of targets reported over threshold]
-# CPU time: 0.03u 0.04s 00:00:00.07 Elapsed: 00:00:00.04
-# Mc/sec: 13.18
+# CPU time: 0.02u 0.03s 00:00:00.05 Elapsed: 00:00:00.03
+# Mc/sec: 17.58
 //
 [ok]
 # hmmsearch :: search profile(s) against a sequence database
@@ -351,7 +389,7 @@ Passed Vit filter:                         0  (0); expected 0.0 (0.001)
 Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
 Initial search space (Z):                 10  [actual number of targets]
 Domain search space  (domZ):               0  [number of targets reported over threshold]
-# CPU time: 0.00u 0.03s 00:00:00.03 Elapsed: 00:00:00.01
+# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.01
 # Mc/sec: 141.11
 //
 [ok]
@@ -559,8 +597,8 @@ Passed Vit filter:                         5  (1); expected 0.0 (0.001)
 Passed Fwd filter:                         5  (1); expected 0.0 (1e-05)
 Initial search space (Z):                  5  [actual number of targets]
 Domain search space  (domZ):               5  [number of targets reported over threshold]
-# CPU time: 0.04u 0.04s 00:00:00.08 Elapsed: 00:00:00.06
-# Mc/sec: 15.29
+# CPU time: 0.03u 0.03s 00:00:00.06 Elapsed: 00:00:00.05
+# Mc/sec: 18.34
 //
 [ok]
 # hmmsearch :: search profile(s) against a sequence database
@@ -1979,7 +2017,7 @@ Passed Vit filter:                        31  (1); expected 0.0 (0.001)
 Passed Fwd filter:                        31  (1); expected 0.0 (1e-05)
 Initial search space (Z):                 31  [actual number of targets]
 Domain search space  (domZ):              31  [number of targets reported over threshold]
-# CPU time: 0.44u 0.03s 00:00:00.47 Elapsed: 00:00:00.45
+# CPU time: 0.44u 0.02s 00:00:00.46 Elapsed: 00:00:00.45
 # Mc/sec: 12.43
 //
 [ok]
@@ -2177,7 +2215,7 @@ Passed Vit filter:                         5  (1); expected 0.0 (0.001)
 Passed Fwd filter:                         5  (1); expected 0.0 (1e-05)
 Initial search space (Z):                  5  [actual number of targets]
 Domain search space  (domZ):               5  [number of targets reported over threshold]
-# CPU time: 0.04u 0.01s 00:00:00.05 Elapsed: 00:00:00.05
+# CPU time: 0.04u 0.04s 00:00:00.08 Elapsed: 00:00:00.05
 # Mc/sec: 18.16
 //
 [ok]
@@ -19256,7 +19294,7 @@ Passed Vit filter:                       516  (1); expected 0.5 (0.001)
 Passed Fwd filter:                       516  (1); expected 0.0 (1e-05)
 Initial search space (Z):                516  [actual number of targets]
 Domain search space  (domZ):             516  [number of targets reported over threshold]
-# CPU time: 2.84u 0.04s 00:00:02.88 Elapsed: 00:00:02.87
-# Mc/sec: 32.71
+# CPU time: 2.82u 0.04s 00:00:02.86 Elapsed: 00:00:02.85
+# Mc/sec: 32.93
 //
 [ok]
