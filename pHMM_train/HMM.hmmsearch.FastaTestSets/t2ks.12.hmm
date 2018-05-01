@@ -184,7 +184,7 @@ Passed Vit filter:                         5  (1); expected 0.0 (0.001)
 Passed Fwd filter:                         5  (1); expected 0.0 (1e-05)
 Initial search space (Z):                  5  [actual number of targets]
 Domain search space  (domZ):               5  [number of targets reported over threshold]
-# CPU time: 0.08u 0.03s 00:00:00.11 Elapsed: 00:00:00.09
+# CPU time: 0.09u 0.03s 00:00:00.12 Elapsed: 00:00:00.09
 # Mc/sec: 10.01
 //
 [ok]
@@ -326,8 +326,8 @@ Passed Vit filter:                         3  (1); expected 0.0 (0.001)
 Passed Fwd filter:                         3  (1); expected 0.0 (1e-05)
 Initial search space (Z):                  3  [actual number of targets]
 Domain search space  (domZ):               3  [number of targets reported over threshold]
-# CPU time: 0.03u 0.02s 00:00:00.05 Elapsed: 00:00:00.04
-# Mc/sec: 13.03
+# CPU time: 0.02u 0.03s 00:00:00.05 Elapsed: 00:00:00.03
+# Mc/sec: 17.37
 //
 [ok]
 # hmmsearch :: search profile(s) against a sequence database
@@ -363,8 +363,8 @@ Passed Vit filter:                         0  (0); expected 0.0 (0.001)
 Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
 Initial search space (Z):                 10  [actual number of targets]
 Domain search space  (domZ):               0  [number of targets reported over threshold]
-# CPU time: 0.01u 0.02s 00:00:00.03 Elapsed: 00:00:00.02
-# Mc/sec: 69.73
+# CPU time: 0.00u 0.03s 00:00:00.03 Elapsed: 00:00:00.01
+# Mc/sec: 139.46
 //
 [ok]
 # hmmsearch :: search profile(s) against a sequence database
@@ -568,8 +568,8 @@ Passed Vit filter:                         5  (1); expected 0.0 (0.001)
 Passed Fwd filter:                         5  (1); expected 0.0 (1e-05)
 Initial search space (Z):                  5  [actual number of targets]
 Domain search space  (domZ):               5  [number of targets reported over threshold]
-# CPU time: 0.10u 0.03s 00:00:00.13 Elapsed: 00:00:00.11
-# Mc/sec: 8.24
+# CPU time: 0.10u 0.02s 00:00:00.12 Elapsed: 00:00:00.10
+# Mc/sec: 9.06
 //
 [ok]
 # hmmsearch :: search profile(s) against a sequence database
@@ -605,8 +605,8 @@ Passed Vit filter:                         0  (0); expected 0.0 (0.001)
 Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
 Initial search space (Z):                  3  [actual number of targets]
 Domain search space  (domZ):               0  [number of targets reported over threshold]
-# CPU time: 0.00u 0.03s 00:00:00.03 Elapsed: 00:00:00.01
-# Mc/sec: 47.55
+# CPU time: 0.01u 0.03s 00:00:00.04 Elapsed: 00:00:00.02
+# Mc/sec: 23.77
 //
 [ok]
 # hmmsearch :: search profile(s) against a sequence database
@@ -2196,8 +2196,8 @@ Passed Vit filter:                        31  (1); expected 0.0 (0.001)
 Passed Fwd filter:                        31  (1); expected 0.0 (1e-05)
 Initial search space (Z):                 31  [actual number of targets]
 Domain search space  (domZ):              31  [number of targets reported over threshold]
-# CPU time: 0.18u 0.03s 00:00:00.21 Elapsed: 00:00:00.19
-# Mc/sec: 29.09
+# CPU time: 0.16u 0.04s 00:00:00.20 Elapsed: 00:00:00.18
+# Mc/sec: 30.71
 //
 [ok]
 # hmmsearch :: search profile(s) against a sequence database
@@ -2394,8 +2394,8 @@ Passed Vit filter:                         5  (1); expected 0.0 (0.001)
 Passed Fwd filter:                         5  (1); expected 0.0 (1e-05)
 Initial search space (Z):                  5  [actual number of targets]
 Domain search space  (domZ):               5  [number of targets reported over threshold]
-# CPU time: 0.10u 0.02s 00:00:00.12 Elapsed: 00:00:00.10
-# Mc/sec: 8.97
+# CPU time: 0.10u 0.03s 00:00:00.13 Elapsed: 00:00:00.12
+# Mc/sec: 7.48
 //
 [ok]
 # hmmsearch :: search profile(s) against a sequence database
@@ -19080,7 +19080,7 @@ Passed Vit filter:                       515  (0.998062); expected 0.5 (0.001)
 Passed Fwd filter:                       515  (0.998062); expected 0.0 (1e-05)
 Initial search space (Z):                516  [actual number of targets]
 Domain search space  (domZ):             515  [number of targets reported over threshold]
-# CPU time: 7.48u 0.02s 00:00:07.50 Elapsed: 00:00:07.47
-# Mc/sec: 12.42
+# CPU time: 7.45u 0.04s 00:00:07.49 Elapsed: 00:00:07.46
+# Mc/sec: 12.44
 //
 [ok]
