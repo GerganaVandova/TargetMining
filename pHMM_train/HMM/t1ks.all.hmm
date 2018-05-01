@@ -1,5 +1,5 @@
 HMMER3/f [3.1b1 | May 2013]
-NAME  t1ks
+NAME  t1ksall
 LENG  428
 ALPH  amino
 RF    no
@@ -7,7 +7,7 @@ MM    no
 CONS  yes
 CS    no
 MAP   yes
-DATE  Mon Apr 30 17:16:43 2018
+DATE  Mon Apr 30 17:25:46 2018
 NSEQ  28
 EFFN  1.110840
 CKSUM 789199703
