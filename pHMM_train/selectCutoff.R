@@ -37,16 +37,16 @@ plotScores <- function(hmm_filename, name_text, mylabs, mylabs_readable,
 hmm_dir <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/pHMM_train/"
 
 # Print the output figure to pdf
-outfile <- paste(hmm_dir,"compare.sets.0430.5hmms.pdf", sep="")
+outfile <- paste(hmm_dir,"compare.sets.0430.1.pdf", sep="")
 pdf(file=outfile, width=8, height=12) #for plotting all panels
 # par(mfrow=c(7, 2)) # to plot all domains
 par(mfrow=c(4, 2)) # to plot all but KS and CLF domains
 
 all_labs <- list(
-	c("TypeI.KS.all", "TypeI.KS.5", "TypeI.KS.pksdb.516", "Cisat.KS.5", "Transat.KS.5", "TypeII.KS.30", "KSIII.10", "FabF"),
-	c("TypeI.KS.5", "Cisat.KS.5", "TypeI.KS.5", "TypeI.KS.pksdb.516",  "Transat.KS.5", "TypeII.KS.30", "KSIII.10", "FabF"),
-	c("TypeI.KS.5", "Transat.KS.5", "TypeI.KS.5", "TypeI.KS.pksdb.516", "Cisat.KS.5", "TypeII.KS.30", "KSIII.10", "FabF"),
-	c("TypeI.KS.5", "TypeII.KS.30", "TypeI.KS.5", "TypeI.KS.pksdb.516", "Cisat.KS.5", "Transat.KS.5", "KSIII.10", "FabF")
+	c("TypeI.KS.5", "TypeI.KS.pksdb.516", "Cisat.KS.5", "Transat.KS.5", "TypeII.KS.30", "KSIII.10", "FabF"),
+	c("Cisat.KS.5", "TypeI.KS.5", "TypeI.KS.pksdb.516",  "Transat.KS.5", "TypeII.KS.30", "KSIII.10", "FabF"),
+	c("Transat.KS.5", "TypeI.KS.5", "TypeI.KS.pksdb.516", "Cisat.KS.5", "TypeII.KS.30", "KSIII.10", "FabF"),
+	c("TypeII.KS.30", "TypeI.KS.5", "TypeI.KS.pksdb.516", "Cisat.KS.5", "Transat.KS.5", "KSIII.10", "FabF")
 
 
 	# c("TypeI.KS.5", "TypeI.KS.pksdb.516", "Cisat.KS.5", "Transat.KS.5", "TypeII.KS.30", "hmm.KSIII.10", "FabF"),
@@ -72,10 +72,10 @@ all_labs <- list(
 )
 
 all_labs_readable <- list(
-	c("TypeI KS all", "TypeI KS", "TypeI KS", "Cisat KS", "Transat KS", "TypeII KS", "TypeIII KS", "FabF"),
-	c("TypeI KS all", "Cisat KS", "TypeI KS", "TypeI KS", "Transat KS", "TypeII KS", "TypeIII KS", "FabF"),
-	c("TypeI KS all", "Transat KS", "TypeI KS", "TypeI KS", "Cisat KS", "TypeII KS", "TypeIII KS", "FabF"),
-	c("TypeI KS all", "TypeII KS", "TypeI KS", "TypeI KS", "Cisat KS", "Transat KS", "TypeIII KS", "FabF")
+	c("TypeI KS", "TypeI KS", "Cisat KS", "Transat KS", "TypeII KS", "TypeIII KS", "FabF"),
+	c("Cisat KS", "TypeI KS", "TypeI KS", "Transat KS", "TypeII KS", "TypeIII KS", "FabF"),
+	c("Transat KS", "TypeI KS", "TypeI KS", "Cisat KS", "TypeII KS", "TypeIII KS", "FabF"),
+	c("TypeII KS", "TypeI KS", "TypeI KS", "Cisat KS", "Transat KS", "TypeIII KS", "FabF")
 
 	# c("TypeII KS", "FabF", "Aurachin", "TypeII CLF", "Type I PKS", "FabH"),
 	# c("TypeII CLF", "FabF", "TypeII KS", "Aurachin", "Type I PKS", "FabH"),
@@ -95,7 +95,7 @@ all_labs_readable <- list(
 
 )
 
-cutoffs <- c(300, 300, 300, 300, 300) # for all domains
+cutoffs <- c(300, 300, 300, 300) # for all domains
 
 # cutoffs <- c(323, 161, 14, 155, 62, 300, 300, 300, 300, 50, 50, 50, 50) # for all domains
 # cutoffs <- c(14, 155, 62, 300, 300, 300, 300, 50, 50, 50, 50) # for all but KS and CLF domains
@@ -103,15 +103,15 @@ cutoffs <- c(300, 300, 300, 300, 300) # for all domains
 names <- c(
 	# "KS pHMM (12 protein sequences)\n",
 	# "CLF pHMM (12 protein sequences)\n",
-	"typeI KS pHMM (28 protein sequences)\n",
-	"typeI KS pHMM (12 protein sequences)\n",
+	# "typeI KS pHMM (28 protein sequences)\n",
+	"typeI KS pHMM (10 protein sequences)\n",
 	"cisatpksnrps KS pHMM (10 protein sequences)\n",
 	"transatpksnrps KS pHMM (7 protein sequences)\n",
 	"type II KS pHMM (12 protein sequences)\n"
 )
 hmm_filenames <- c(
-	"t1ks.all.hmm",
-	"t1ks.11.hmm",
+	# "t1ks.all.hmm",
+	"t1ks.10.hmm",
 	"cisatpksnrps.10.hmm",
 	"transatpksnrps.7.hmm",
 	"t2ks.12.hmm"
