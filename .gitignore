@@ -1,0 +1,12 @@
+Blast/blast_results
+Blast/blast_results_parse
+blast_out_spiders
+blast_out_streptomyces
+out
+pHMM_train/FastaTestSets_unused/
+pHMM_train/HMM_unused/
+spiders_wgs.nvl
+sratoolkit.2.9.0-ubuntu64.tar.gz
+sratoolkit.2.9.0-ubuntu64/
+streptomyces_wgs.nvl
+wgs/
