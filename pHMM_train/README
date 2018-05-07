@@ -1,31 +1,40 @@
 # April 30, 2018
 # First do MSA of desired sequences in mega.
 # Export MSA in fasta format
-# Then build HMMs here
+# Build HMMs
+# Run selectCutoff to plot hmm scores
 
 
 ##########################################
 Test hmms for comparing pHMM_train fodler
 
 1. Collect sequences for different PKS classes and store them in FASTA/ :
-    transatpksnrps.7.fasta
-    t2ks.antismash.Erin.60.fasta
-    t2ks.12.fasta
-    t1ks.11.fasta
-    cisatpksnrps.10.fasta
-    KSIII.10.fasta
+    
+	KSIII.10.fasta
+	t2ks.12.fasta
+    	t2ks.antismash.Erin.60.fasta
+	transatpksnrps.7.fasta
+    	cisatpksnrps.10.fasta
+    	t1ks.10.fasta
+    	t1ks.27.fasta (all modular, cis and trans type 1 pks)
+    	t1ks.19.fasta (all t1ks excluding the 8 used for Blast step)
 
 2. Run MSA of all sequences:
-    muscle -in t1ks.11.fasta -out t1ks.11.fas -maxiters 100
-    muscle -in t2ks.12.fasta -out t2ks.12.fas -maxiters 100
-    muscle -in cisatpksnrps.10.fasta -out cisatpksnrps.10.fas -maxiters 100
-    muscle -in transatpksnrps.7.fasta -out transatpksnrps.7.fas -maxiters 100
+    	muscle -in t1ks.10.fasta -out t1ks.10.fas -maxiters 100
+	muscle -in t1ks.27.fasta -out t1ks.27.fas -maxiters 100
+	muscle -in t1ks.19.fasta -out t1ks.19.fas -maxiters 100
+    	muscle -in t2ks.12.fasta -out t2ks.12.fas -maxiters 100
+    	muscle -in cisatpksnrps.10.fasta -out cisatpksnrps.10.fas -maxiters 100
+    	muscle -in transatpksnrps.7.fasta -out transatpksnrps.7.fas -maxiters 100
+
 
 3. Build HMMs:
-    hmmbuild -n t1ks --amino t1ks.11.hmm t1ks.11.fas
-    hmmbuild -n t2ks --amino t2ks.12.hmm t2ks.12.fas
-    hmmbuild -n cisat--amino cisatpksnrps.10.hmm cisatpksnrps.10.fas
-    hmmbuild -n transat --amino transatpksnrps.7.hmm transatpksnrps.7.fas
+    	hmmbuild -n t1ks --amino t1ks.10.hmm t1ks.10.fas
+	hmmbuild -n t1ks19 --amino t1ks.19.hmm t1ks.19.fas
+    	hmmbuild -n t2ks --amino t2ks.12.hmm t2ks.12.fas
+    	hmmbuild -n cisat--amino cisatpksnrps.10.hmm cisatpksnrps.10.fas
+    	hmmbuild -n transat --amino transatpksnrps.7.hmm transatpksnrps.7.fas
+
 
 4. Move MSA and HMM files in the MSA/ and HMM/ folders:
     mv *.fas ../MSA/

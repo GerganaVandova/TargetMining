@@ -23,6 +23,8 @@ April 25, 2018
 Add one more:
     perl update_blastdb.pl --passive est_others
 
+Unzip db
+for f in `ls wgs.9*.tar.gz`; do echo "----------    $f    -----------"; tar -xvzf $f; done
 
 Blast FTP site
 https://www.ncbi.nlm.nih.gov/books/NBK62345/
@@ -60,7 +62,7 @@ superseded by the project-based datasets stored in vdb format (ftp://ftp​.ncbi
     This is the modified command I should try:
     wget https://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/*/all_assembly_versions*/*.gbff.gz -P my_dir/
 
-Ask John Bell for help
+Ask John Bell for help- he doesn't know how to help
 
 4. Choose clusters to mine:
     1. TypeI Modular PKS
@@ -142,7 +144,6 @@ gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/pHMM_train/pHMM_t
 
                  3. MSA and HMM
 
-
                  muscle -in t1ks.11.fasta -out t1ks.11.fas -maxiters 100
                  muscle -in t2ks.12.fasta -out t2ks.12.fas -maxiters 100
                  muscle -in cisatpksnrps.10.fasta -out cisatpksnrps.10.fas -maxiters 100
@@ -175,20 +176,106 @@ gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/pHMM_train/pHMM_t
                     HMM.hmmsearch.FastaTestSets.parse/
 
 
+                6. run selectCutoff.R
+
+                type I.516 from pksdb indistinguishable from cisAT pks
+
+                most of the bottom ones are KS1, there are also some pks/nrps hybrids in this set
+                might be able to select a cutoff to distingush between typeI pks and transatpks, but not
+                between typeI pks and cisat pks
+
+
+
+Blast
+
+1. Make phylogenetic tree of all typeI ks sequences used to make HMMs (27)
+2. make a phylogenetic tree in clustal omega
+3. pick diverse sequences to Blast
+
+grep -lr "leinamycin" *     transatpksnrps.7.fasta
+grep -lr "KSdisorazol " *   transatpksnrps.7.fasta
+grep -lr "KScuracin" *      cisatpksnrps.10.fasta
+grep -lr "KSepothilone" *   cisatpksnrps.10.fasta
+grep -lr "KSchivosazol" *   transatpksnrps.7.fasta
+grep -lr "KSguadinomine" *  cisatpksnrps.10.fasta
+grep -lr "eryth" *          t1ks.10.fasta
+grep -lr "KSrapamycin" *    cisatpksnrps.10.fasta
+
+
+May 3, 2018
+1. Cannot download the Assemblies. Run out of disk space. Downoaded 290G.
+    Sequences are ordered by number, so I cannot search them by name.
+
+    gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Assemblies$ find -type f -name '*.gz'  | wc -l
+    132240
+    gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Assemblies$ du -sh .
+    290G	.
+
+
+    gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/oldTargetMiningGenome$ du -sh *
+    2.0G    antismash
+    228G    antismash_output_refseq
+    35G     gbdirs
+    112G    gbdirs_all
+    9.5K    parse_gb.py
+    9.5K    parse_js.py
+    93G     refseq_bacterial_genomes
+    52G     refseq_bacterial_genomes_gz
+    512     refseq_parsed_clusters
+    9.5K    run_antismash_genomes.py
+    1.8G    test_antismash_output_refseq
+    192M    test_refseq_bacterial_genomes
+
+    TODO: Delete antismash_output_refseq
+           refseq_bacterial_genomes
+           refseq_bacterial_genomes_gz
+
+2. Make pHMM from all typeI sequences but the 8 used for Blast step
+
+2.1 Make fasta file
+    cp t1ks.27.fasta t1ks.19.fasta
+    manually remove the 8
+    check:
+    TargetMining/pHMM_train/FASTA$ cat t1ks.19.fasta | grep ">"|wc
+         19     166    1467
+2.2. Make MSA
+    muscle -in t1ks.19.fasta -out ../MSA/t1ks.19.fas -maxiters 100
+
+2.3 Make HMM
+    hmmbuild -n t1ks19 --amino ../HMM/t1ks.19.hmm ../MSA/t1ks.19.fas
+
+Remove HMM.hmmsearch.FastaTestSets/ and HMM.hmmsearch.FastaTestSets.parse/
+
+3. Run make hmmsearch (no changes in Makefile)
+  the script crashes because of TypeI.KS.pksdb.516.fasta test set?
+
+  May 7th 2018 
+  move TypeI.KS.pksdb.516.fasta to FastaTestSets_unused and rerun Makefile
+  no errors this time
+  commit
 
 
 
 
-        gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/oldTargetMiningGenome$ du -sh *
-        2.0G    antismash
-        228G    antismash_output_refseq
-        35G     gbdirs
-        112G    gbdirs_all
-        9.5K    parse_gb.py
-        9.5K    parse_js.py
-        93G     refseq_bacterial_genomes
-        52G     refseq_bacterial_genomes_gz
-        512     refseq_parsed_clusters
-        9.5K    run_antismash_genomes.py
-        1.8G    test_antismash_output_refseq
-        192M    test_refseq_bacterial_genomes
+1. Esearch to find id of species/class:
+    esearch -db taxonomy -query "Streptomyces" | esummary -db taxonomy | xtract -pattern DocumentSummary -element Id
+
+    1883
+
+/home/gvandova/taxid2wgs.pl 1883 -alias_file streptomyces_wgs -title "streptomyces wgs"
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining$
+sratoolkit.2.9.0-ubuntu64/bin/blastn_vdb -db streptomyces_wgs -query Blast/Manual/KScuracin.seq -evalue 0.001 -out blast_out_streptomyces -num_threads 64
+
+
+
+esearch -db taxonomy -query "spiders" | esummary -db taxonomy | xtract -pattern DocumentSummary -element Id
+6893
+/home/gvandova/taxid2wgs.pl 6893 -alias_file spiders_wgs -title "spiders wgs"
+sratoolkit.2.9.0-ubuntu64/bin/blastn_vdb -db spiders_wgs -query Blast/Manual/KScuracin.seq -evalue 1 -out blast_out_spiders -num_threads 64
+
+
+gvandova@maguro:~/ncbi/public$ du -s wgs
+19350316
+
+gvandova@maguro:~/ncbi/public$ du -sh wgs
+19G	wgs
