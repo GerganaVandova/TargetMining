@@ -1,0 +1,52 @@
+I. BLAST STEP
+
+Blast 8 diverse KSs from modular KS, cisat pks/nrps and transat pks/nrps hybrids
+against 11 databases (wgs not updated)
+and parse blast results with e value < 1
+
+    The blast queries are in Manual/
+
+    1. Make phylogenetic tree of all typeI ks sequences used to make HMMs (27)
+    2. make a phylogenetic tree in clustal omega
+    3. pick diverse sequences to Blast
+
+    grep -lr "leinamycin" *     transatpksnrps.7.fasta
+    grep -lr "KSdisorazol " *   transatpksnrps.7.fasta
+    grep -lr "KScuracin" *      cisatpksnrps.10.fasta
+    grep -lr "KSepothilone" *   cisatpksnrps.10.fasta
+    grep -lr "KSchivosazol" *   transatpksnrps.7.fasta
+    grep -lr "KSguadinomine" *  cisatpksnrps.10.fasta
+    grep -lr "eryth" *          t1ks.10.fasta
+    grep -lr "KSrapamycin" *    cisatpksnrps.10.fasta
+
+1. Run ./run_blast.py (specify on line 49 which query sequences to blast against)
+If you want to run blast agains all sequences, type
+blast_query_files = glob.glob("%s/*.seq" % blast_query_dir)
+
+2. Run make all
+
+    All files stored in TargetMining/Blast/blast_results_seqs/ folder
+
+    2.1 Concatenate all parsed blast files into one: make concat
+    creates blast_results_seqs/blast_results.parsed.KS.9f
+
+    2.2 Uniqify the proteins and remove dashes and asterisks and choose longest
+    synonym: make longest (have to rm output files of Step #2.4)
+    creates blast_results.parsed.KS.9f.synonyms
+            blast_results.parsed.KS.9f.longest_synonym
+
+    2.3. Compare the Reference set to the found set: make compare
+    creates blast_results.parsed.KS.9f.longest_synonym.comparemibig
+
+    2.4.  Make fasta file of blast hit sequences to use in HMM search and clean the
+    names: make fasta
+    creates blast_results.KS.fasta
+            blast_results.KS.fasta.cleanName
+
+    2.5. Remove unique sequences (cdhit cutoff = 0.99): make cdhit
+    creates blast_results.KS.fasta.cleanName.cdhit.99
+            blast_results.KS.fasta.cleanName.cdhit.99.clstr
+
+
+
+*******************************************************************************

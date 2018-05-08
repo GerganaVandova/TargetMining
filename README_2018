@@ -144,9 +144,17 @@ gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/pHMM_train/pHMM_t
 
                  3. MSA and HMM
 
-                 muscle -in t1ks.11.fasta -out t1ks.11.fas -maxiters 100
+                 -rw-rw-r-- 1 gvandova orphanpks  5239 Apr 30 16:22 cisatpksnrps.10.fas
+-rw-rw-r-- 1 gvandova orphanpks  6336 Apr 30 16:22 t1ks.11.fas
+-rw-rw-r-- 1 gvandova orphanpks  6527 Apr 30 16:22 t2ks.12.fas
+-rw-rw-r-- 1 gvandova orphanpks  3801 Apr 30 16:22 transatpksnrps.7.fas
+-rw-rw-r-- 1 gvandova orphanpks 17162 Apr 30 16:23 t1ks.all.fas
+-rw-rw-r-- 1 gvandova orphanpks  5740 Apr 30 20:59 t1ks.10.fas
+-rw-rw-r-- 1 gvandova orphanpks 11423 May  6 23:40 t1ks.19.fas
+
+muscle -in cisatpksnrps.10.fasta -out cisatpksnrps.10.fas -maxiters 100
+muscle -in t1ks.11.fasta -out t1ks.11.fas -maxiters 100
                  muscle -in t2ks.12.fasta -out t2ks.12.fas -maxiters 100
-                 muscle -in cisatpksnrps.10.fasta -out cisatpksnrps.10.fas -maxiters 100
                  muscle -in transatpksnrps.7.fasta -out transatpksnrps.7.fas -maxiters 100
 
                  hmmbuild -n t1ks --amino t1ks.11.hmm t1ks.11.fas
@@ -186,7 +194,9 @@ gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/pHMM_train/pHMM_t
 
 
 
-Blast
+*******************************
+STEP1. Blast 8KS against 11db
+*******************************
 
 1. Make phylogenetic tree of all typeI ks sequences used to make HMMs (27)
 2. make a phylogenetic tree in clustal omega
@@ -249,33 +259,140 @@ Remove HMM.hmmsearch.FastaTestSets/ and HMM.hmmsearch.FastaTestSets.parse/
 3. Run make hmmsearch (no changes in Makefile)
   the script crashes because of TypeI.KS.pksdb.516.fasta test set?
 
-  May 7th 2018 
+DATE: May 7th 2018
   move TypeI.KS.pksdb.516.fasta to FastaTestSets_unused and rerun Makefile
   no errors this time
-  commit
+4. commit
+  Create .gitignore file in TargetMining folder
+5. Run selectCutoff.R
+  /Library/Frameworks/R.framework/Versions/3.1/Resources/bin/Rscript selectCutoff.R
+  all plots
+  Cutoff 200 for typeI pks
+
+6. Download updated mibig genbank ids list
+https://mibig.secondarymetabolites.org/download.html
+cannot download anythnig from Version 1.3 (September 3rd, 2016)
+use Version 1.2 (December 24th, 2015) as a reference set (already in Blast folder)
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast$ cat mibig.gbids.gb |wc
+   1245    1245   11278
+
+7. Blast step #2
+Run make all to remove identical sequences and to compare with postive set
+
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/blast_results_seqs$ cat blast_results.parsed.KS.9f.longest_synonym.comparemibig |wc
+    525     525    4788
+
+
+
+TODO: Compile a positive set with targets in cluster only.
+
+*******************************************************************************
+8. III. pHMM_search STEP
+
+All files stored in TargetMining/pHMM_search/ folder
+
+11. Run hmmer using the selected HMM and score threshold: (started at 4:20pm) ran for ~30min
+
+Run make all:
+             run hmmsearch using the domain-specific hmms against the blast results
+             parse hmm results (SCRIPT BREAKS WHILE PARSING)
+             filter results according to the selected hmmsearch score cutoff
+             run cdhit to eliminate 99% identical sequences
+
+    creates t1ks.[hmm model].hmmsearch
+            Script crashes when attempting to parse the hmm search file
+            t2[domain].[hmm model].hmmsearch.parsed
+            t2[domain].[hmm model].hmmsearch.[cutoff]
+            t2[domain].[hmm model].hmmsearch.parsed.[hmm cutoff].cleanSeq.fasta
+            t2[domain].[hmm model].hmmsearch.parsed.[hmm cutoff].cdhit.99
+            t2[domain].[hmm model].hmmsearch.parsed.[hmm cutoff].cdhit.99.clstr
+
+
+*******************************************************************************
+
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/blast_results_seqs$ cat blast_results.KS.fasta.cleanName.cdhit.99 | grep ">" |wc
+ 162984  162984 21192378
+
+
+ **********************************************
+ STEP2. Fetch all genbank ids that contain a KS
+ **********************************************
+
+1. make Genbank dir:
+  mkdir GenBank
+  mkdir Genbank/gbdir
+  cp get_gbids.py from oldTargetMining
+  cp fetch_gbids.py from oldTargetMining
+
+2. ./get_gbid.py
+
+  gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat gbids.txt |wc
+  162984  162984 1918063
+
+3. cat gbids.txt |sort -u > gbids.unique.txt
+
+  gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat gbids.unique.txt |wc
+  94516   94516 1141060
+
+ Run fetch_gbid.py From 12:30am
+ had to put delay of 20s becasue I was blocked by ncbi for too many requests per s
+ all gbids downloaded by:
+
+
+
+
+
+
+
 
 
 
 
 1. Esearch to find id of species/class:
-    esearch -db taxonomy -query "Streptomyces" | esummary -db taxonomy | xtract -pattern DocumentSummary -element Id
+      1. esearch -db taxonomy -query "Streptomyces" | esummary -db taxonomy | xtract -pattern DocumentSummary -element Id
+      1883
 
-    1883
+      2. /home/gvandova/taxid2wgs.pl 1883 -alias_file streptomyces_wgs -title "streptomyces wgs"
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining$
+      3. sratoolkit.2.9.0-ubuntu64/bin/blastn_vdb -db streptomyces_wgs -query Blast/Manual/KScuracin.seq -evalue 0.001 -out blast_out_streptomyces -num_threads 64
 
-/home/gvandova/taxid2wgs.pl 1883 -alias_file streptomyces_wgs -title "streptomyces wgs"
-gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining$
-sratoolkit.2.9.0-ubuntu64/bin/blastn_vdb -db streptomyces_wgs -query Blast/Manual/KScuracin.seq -evalue 0.001 -out blast_out_streptomyces -num_threads 64
-
-
-
-esearch -db taxonomy -query "spiders" | esummary -db taxonomy | xtract -pattern DocumentSummary -element Id
-6893
-/home/gvandova/taxid2wgs.pl 6893 -alias_file spiders_wgs -title "spiders wgs"
-sratoolkit.2.9.0-ubuntu64/bin/blastn_vdb -db spiders_wgs -query Blast/Manual/KScuracin.seq -evalue 1 -out blast_out_spiders -num_threads 64
+      esearch -db taxonomy -query "spiders" | esummary -db taxonomy | xtract -pattern DocumentSummary -element Id
+      6893
+      /home/gvandova/taxid2wgs.pl 6893 -alias_file spiders_wgs -title "spiders wgs"
+      sratoolkit.2.9.0-ubuntu64/bin/blastn_vdb -db spiders_wgs -query Blast/Manual/KScuracin.seq -evalue 1 -out blast_out_spiders -num_threads 64
 
 
 gvandova@maguro:~/ncbi/public$ du -s wgs
 19350316
-
 gvandova@maguro:~/ncbi/public$ du -sh wgs
 19G	wgs
+
+
+DATE: May 7 2018
+
+      Try Blast_vdb with only one bacterial species:
+      1. esearch -db taxonomy -query "Actinomyces vulturis" | esummary -db taxonomy | xtract -pattern DocumentSummary -element Id
+      1857645
+
+      2. /home/gvandova/taxid2wgs.pl 1857645 -alias_file Avulturis_wgs -title "Avulturis wgs"
+         gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast$ cat Avulturis_wgs.nvl
+          #
+          # Alias file created by taxid2wgs.pl/1.1 on Mon May  7 13:32:59 2018
+          TITLE Avulturis wgs
+          VDBLIST LZRK01
+
+      3. gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining$
+      sratoolkit.2.9.0-ubuntu64/bin/blastn_vdb -db Avulturis_wgs -query Blast/Manual/KScuracin.seq -evalue 1 -out blast_out_Avulturis -num_threads 64
+
+      NO HITS
+
+DATE: May 8 2018
+1. Download antismash
+    Can't do that because the servers are down for maintanance!
+
+2. Re-download Assemblies (now I have 4T extra)
+    wget -L --recursive -e robots=off --reject "index.html" --no-host-directories --cut-dirs=6 -A genomic.gbff.gz https://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/  -P Assemblies/
+
+3. Update positive set of target in cluster
+
+4. try to fix the pHMM_search/Makefile
