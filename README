@@ -1,5 +1,7 @@
 I. BLAST STEP
 
+Location: TargetMining/Blast/ folder
+
 Blast 8 diverse KSs from modular KS, cisat pks/nrps and transat pks/nrps hybrids
 against 11 databases (wgs not updated)
 and parse blast results with e value < 1
@@ -43,7 +45,7 @@ blast_query_files = glob.glob("%s/*.seq" % blast_query_dir)
     creates blast_results.KS.fasta
             blast_results.KS.fasta.cleanName
 
-    2.5. Remove unique sequences (cdhit cutoff = 0.99): make cdhit
+    2.5. Remove redundant sequences (cdhit cutoff = 0.99): make cdhit
     creates blast_results.KS.fasta.cleanName.cdhit.99
             blast_results.KS.fasta.cleanName.cdhit.99.clstr
 

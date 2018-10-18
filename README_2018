@@ -1,7 +1,10 @@
+
+
+
 Useful commands:
 diskutil umount force /Users/gvandova/oldTargetMining/
 sshfs gvandova@maguro.stanford.edu:/mnt/gnpn/gnpn/projects/orphanpks/oldTargetMining/ /Users/gvandova/oldTargetMining/
-
+find . -type f -print | xargs grep "ku928136"
 
 April 25, 2018
 
@@ -211,6 +214,12 @@ grep -lr "KSguadinomine" *  cisatpksnrps.10.fasta
 grep -lr "eryth" *          t1ks.10.fasta
 grep -lr "KSrapamycin" *    cisatpksnrps.10.fasta
 
+Nucleotide records:
+cat blast_results.KS.fasta.cleanName.cdhit.99 | grep ">" |wc
+ 162984  162984 21192378
+Protein records:
+cat blast_results.KS.fasta.cleanName.cdhit.99 | grep ">" | cut -d. -f1 | sort -u |wc
+   94516   94516 1235576
 
 May 3, 2018
 1. Cannot download the Assemblies. Run out of disk space. Downoaded 290G.
@@ -275,6 +284,28 @@ cannot download anythnig from Version 1.3 (September 3rd, 2016)
 use Version 1.2 (December 24th, 2015) as a reference set (already in Blast folder)
 gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast$ cat mibig.gbids.gb |wc
    1245    1245   11278
+
+
+
+  ***** Oct 18, 2018
+   Dowload Version 1.4 (August 6th, 2018) in json format and place it in Blast/
+   sgtcadminsMBP8:mibig_json_1.4 gvandova$ cat *.json | grep Accession | cut -d: -f2 |sed 's/\"//g'| sed 's/\,//g'|sort -u > mibig.gbids.v1.4
+   cat mibig.gbids.v1.4 |wc
+       1895    1895   21621
+
+There are some gbids with a version number at the end and some weird ones like:
+find . -type f -print | xargs grep "ku928136"
+./BGC0001340.json:                    "Accession": "ku928136",
+Remove  KF899892, -, 1154333182, ku928136 and phytozome manually
+Remove versions:
+cat mibig.gbids.v1.4 | cut -d. -f1 | sort -u > mibig.gbids.v1.4.new
+cat mibig.gbids.v1.4.new |wc
+    1890    1891   21342
+rm mibig.gbids.v1.4
+mv mibig.gbids.v1.4.new mibig.gbids.v1.4
+cat mibig.gbids.v1.4 |wc
+  1890    1891   21342
+
 
 7. Blast step #2
 Run make all to remove identical sequences and to compare with postive set
