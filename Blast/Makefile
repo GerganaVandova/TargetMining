@@ -25,14 +25,14 @@ concat: $(blast_results_tab_ks_file)
 
 $(blast_results_tab_ks_file).longest_synonym: $(blast_results_tab_ks_file)
 	
-	perl $(script_dir)/chooseLongestSeqSynonym.pl $^ 6 8 $(blast_results_tab_ks_file).synonyms mibig.gbids.gb > $@
+	perl $(script_dir)/chooseLongestSeqSynonym.pl $^ 6 8 $(blast_results_tab_ks_file).synonyms mibig.gbids.v1.4.pks > $@
 
 longest: $(blast_results_tab_ks_file).longest_synonym $(blast_results_tab_ks_file).longest_synonym
 
 
 # Compare the Mibig set to the found set - found them all?
 
-$(blast_results_tab_ks_file).longest_synonym.comparemibig: $(blast_results_tab_ks_file).longest_synonym mibig.gbids.gb
+$(blast_results_tab_ks_file).longest_synonym.comparemibig: $(blast_results_tab_ks_file).longest_synonym mibig.gbids.v1.4.pks
 	perl $(script_dir)/compareErin.pl $^ > $@
 
 compare: $(blast_results_tab_ks_file).longest_synonym.comparemibig

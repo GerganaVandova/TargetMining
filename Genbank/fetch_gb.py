@@ -12,7 +12,7 @@ Entrez.email = 'gergana.vandova@gmail.com'
 # accession id works, returns genbank format, looks in the 'nucleotide' database:
 
 gbids = []
-gbidfile = "gbids.unique.txt"
+gbidfile = "gbids.unique.94516.txt"
 f = open(gbidfile, "r")
 for line in f:
     gbid = line.strip()
