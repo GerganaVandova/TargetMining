@@ -11,15 +11,9 @@ and parse blast results with e value < 1
     1. Make phylogenetic tree of all typeI ks sequences used to make HMMs (27)
     2. make a phylogenetic tree in clustal omega
     3. pick diverse sequences to Blast
-
-    grep -lr "leinamycin" *     transatpksnrps.7.fasta
-    grep -lr "KSdisorazol " *   transatpksnrps.7.fasta
-    grep -lr "KScuracin" *      cisatpksnrps.10.fasta
-    grep -lr "KSepothilone" *   cisatpksnrps.10.fasta
-    grep -lr "KSchivosazol" *   transatpksnrps.7.fasta
-    grep -lr "KSguadinomine" *  cisatpksnrps.10.fasta
-    grep -lr "eryth" *          t1ks.10.fasta
-    grep -lr "KSrapamycin" *    cisatpksnrps.10.fasta
+    4. update 11 databases (wgs not updated since 2013)
+       cd /mnt/gnpn/gnpn/projects/orphanpks/blast/db/
+       perl update_blastdb.pl --passive [database]
 
 1. Run ./run_blast.py (specify on line 49 which query sequences to blast against)
 If you want to run blast agains all sequences, type
@@ -49,6 +43,26 @@ blast_query_files = glob.glob("%s/*.seq" % blast_query_dir)
     creates blast_results.KS.fasta.cleanName.cdhit.99
             blast_results.KS.fasta.cleanName.cdhit.99.clstr
 
+**********************************************
+STEP2. Fetch all genbank ids that contain a KS
+**********************************************
 
+1. make Genbank dir:
+ mkdir GenBank
+ mkdir Genbank/gbdir
+ cp get_gbids.py from oldTargetMining
+ cp fetch_gbids.py from oldTargetMining
 
-*******************************************************************************
+2. ./get_gbid.py
+
+ gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat gbids.txt |wc
+ 162984  162984 1918063
+
+3. cat gbids.txt |sort -u > gbids.unique.txt
+
+ gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat gbids.unique.txt |wc
+ 94516   94516 1141060
+
+Run fetch_gbid.py
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/gbdir$ lr |wc
+ 94517  850646 6623003
