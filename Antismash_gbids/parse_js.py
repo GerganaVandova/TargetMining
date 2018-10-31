@@ -24,7 +24,7 @@ for record in SeqIO.parse(open(fasta_file, "rU"), "fasta"):
 context = EvalJs()
 
 # Output file with number of gbids on which antismash was run
-outfilefaa = "sequences.faa.84k.fasta"
+outfilefaa = "sequences.faa.95k.fasta"
 ff = open(outfilefaa, "w")
 
 antismash_dir = "antismash_output/"

@@ -1,0 +1,37 @@
+STEP1. Blast 8KS against 11db (wgs not updated, parallely downloading Assemblies)
+       Blast/
+
+STEP2. Fetch all genbank ids that contain a KS
+       Genbank/
+       Run get_gbid.py > gbids.txt
+       cat gbids.txt |sort -u > gbids.unique.94516.txt
+       Run fetch_gbid.py
+
+STEP3. Run Antismash on all 95k genbank ids
+       Antismash_gbids/
+       Run run_antismash.Agbids.py
+
+TODO: STEP4. Parse geneclusters.js files
+       Run parse_js.py and parse.coord.py
+       Output files: sequences.faa.95k.fasta
+                     sequences.faa.95k.coord.fasta
+
+      STEP5. Make database from sequences.faa.95k.fasta?
+      Use makeblastdb.py script? There are 10 input sequences,
+      where did they come from?
+
+      STEP6. Run blast to identify if target is located in clusters
+      run_blastp.py
+      input files: target file: targets.609.fa
+                   blast databases: antismashdb_sequences.faa.95k.coord.00.fasta
+                                    antismashdb_sequences.faa.95k.coord.01.fasta
+                                    ....
+                                    antismashdb_sequences.faa.95k.coord.09.fasta
+
+      output file: out.targets.609
+
+      STEP7. Filter output file
+      filter_blast.py
+
+      STEP8. Target and KS tandem
+      target_ks_tandem.py

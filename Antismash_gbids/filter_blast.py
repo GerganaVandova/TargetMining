@@ -6,8 +6,8 @@ import sys
 
 E_VALUE_THRESH = float(1e-8)
 # Remove identity threshold for the 619 essential E coli genes
-IDENTITY_THRESH = float(0.2)
-IDENTITY_THRESH_FABS = float(0.2)
+IDENTITY_THRESH = float(0.3)
+IDENTITY_THRESH_FABS = float(0.6)
 
 input_file = sys.argv[1]  # out.target.619.all
 
@@ -43,21 +43,21 @@ for line in f:
     if "Fab" in qseqid:
         if evalue < E_VALUE_THRESH and identity > IDENTITY_THRESH_FABS:
             # write ture protein coordinates
-            print ("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%.2f\t%s" % (qseqid,
-                   gbid, clusternum, coord, clustertype, protname,
-                   prot_start, prot_end, nident, qlen, slen, identity, evalue))
-            ff.write("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%.2f\t%s" % (qseqid,
-                     gbid, clusternum, coord, clustertype, protname,
-                     prot_start, prot_end, nident, qlen, slen, identity, evalue))
+            print ("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%.2f\t%s" %
+                   (qseqid, gbid, clusternum, coord, clustertype, protname,
+                    prot_start, prot_end, nident, qlen, slen, identity, evalue))
+            ff.write("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%.2f\t%s" %
+                     (qseqid, gbid, clusternum, coord, clustertype, protname,
+                      prot_start, prot_end, nident, qlen, slen, identity, evalue))
             ff.write("\n")
     elif evalue < E_VALUE_THRESH and identity > IDENTITY_THRESH:
             # identity threshold = 0.2 for the 619 essential E coli genes
-            print ("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%.2f\t%s" % (qseqid,
-                   gbid, clusternum, coord, clustertype, protname,
-                   prot_start, prot_end, nident, qlen, slen, identity, evalue))
-            ff.write("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%.2f\t%s" % (qseqid,
-                     gbid, clusternum, coord, clustertype, protname,
-                     prot_start, prot_end, nident, qlen, slen, identity, evalue))
+            print ("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%.2f\t%s" %
+                   (qseqid, gbid, clusternum, coord, clustertype, protname,
+                    prot_start, prot_end, nident, qlen, slen, identity, evalue))
+            ff.write("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%.2f\t%s" %
+                     (qseqid, gbid, clusternum, coord, clustertype, protname,
+                      prot_start, prot_end, nident, qlen, slen, identity, evalue))
             ff.write("\n")
 
 ff.close()

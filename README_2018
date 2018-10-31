@@ -1,4 +1,4 @@
-
+https://www.sciencemag.org/careers/2013/11/perfect-time-babies
 
 
 Useful commands:
@@ -224,7 +224,6 @@ cat blast_results.KS.fasta.cleanName.cdhit.99 | grep ">" | cut -d. -f1 | sort -u
 May 3, 2018
 1. Cannot download the Assemblies. Run out of disk space. Downoaded 290G.
     Sequences are ordered by number, so I cannot search them by name.
-
     gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Assemblies$ find -type f -name '*.gz'  | wc -l
     132240
     gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Assemblies$ du -sh .
@@ -469,71 +468,96 @@ Oct-22-2018
 STEP3. Convert genbank files to fasta files
 *******************************************************
 
-Run ./parse_gb.py to make a sequence file
-prot or dna needed?
-why not make both dna and prot files at the same time?
-with dna.fasta output first, started 51min
+1. Run ./parse_gb.py to make a DNA sequence file
+2. Run ./parse_gb.py to make a Protein sequence file
+
+********************************************************************************
+STEP4. Build blast database with all dna sequences
+********************************************************************************
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ makeblastdb -in dna.fasta -dbtype nucl -out pksntdb_2018
 
 
+Building a new DB, current time: 10/24/2018 14:32:29
+New DB name:   pksntdb_2018
+New DB title:  dna.fasta
+Sequence type: Nucleotide
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 87653 sequences in 1431.2 seconds.
+makeblastdb -in dna.fasta -dbtype nucl -out pksntdb_2018
+
+TODO: mv pksntdb_2018* /mnt/gnpn/gnpn/projects/orphanpks/blast/db
+
+*******************************************************
 Sep-5-2018
+  Install antiSMASH 4.2.0 (Nikola)
+  gvandova@maguro:~$ /home/gvandova/bin/run_antismash Z47198.gb /tmp/bla
 
-Install antiSMASH 4.2.0 (Nikola)
-gvandova@maguro:~$ /home/gvandova/bin/run_antismash Z47198.gb /tmp/bla
+Oct-22-2018
+  /home/gvandova/bin/run_antismash CP028813.gb /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output
+  Doesn't work with mounted folders. Have to run it on /home/gvandova and then copy it ot mnt
 
+  gvandova@maguro:~$ /home/gvandova/bin/run_antismash /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/gbdir/CP028813.gb antismash_output_2018
+  /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/gbdir
+  /home/gvandova/antismash_output_2018
+  docker: Error response from daemon: error while creating mount source path '/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/gbdir': mkdir /mnt/gnpn/gnpn/projects: permission denied.
+  gvandova@maguro:~$
 
-/home/gvandova/bin/run_antismash CP028813.gb /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output
+  Have to copy input files as well.
+  cp A*.gb /home/gvandova/gbdir_2018/
+  AZYN01000514.gb
+  /home/gvandova/bin/run_antismash gbdir_2018/AZYN01000514.gb antismash_output_2018
 
-Doesn't work with mounted folders. Have to run it on /home/gvandova and then copy it ot mnt
+  Make a gbid file with only gbids starting with A
+  gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat gbids.unique.94516.txt | grep '^A' |wc
+    17758   17758  222309
+  cat gbids.unique.94516.txt | grep '^A' > gbids.unique.17758.txt
+  find antismash_output_2018/ -type f -name "geneclusters.js" |wc
+     1266    1266   80467
+  Kill antismash:
+     kill -9 $(ps aux | grep 'antismash' | awk '{print $2}')
 
-gvandova@maguro:~$ /home/gvandova/bin/run_antismash /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/gbdir/CP028813.gb antismash_output_2018
-/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/gbdir
-/home/gvandova/antismash_output_2018
-docker: Error response from daemon: error while creating mount source path '/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/gbdir': mkdir /mnt/gnpn/gnpn/projects: permission denied.
-gvandova@maguro:~$
+  Run antismash on gbids that start with AZ
+  1. cp /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/gbdir/AZ*.gb /home/gvandova/gbdir_2018/
+  2. -rw-rw-r-- 1 gvandova gvandova   15549 Oct 23 16:31 AZYN01000613.gb
+  gvandova@maguro:~/gbdir_2018$ lr |wc
+      574    5159   38960
+  3. Run antismash on ids starting with AZ and move the output folder in /mnt
 
-Have to copy input files as well.
+  4. run antismash on all 95k gbids, started Oct 23, 10pm
+********************************************************************************
 
+  Download all bacterial Assemblies:
+  wget -L --recursive -e robots=off --reject "index.html" --no-host-directories --cut-dirs=6 -A genomic.gbff.gz https://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/  -P Assemblies/
 
-gvandova@maguro:~$ df -h
-Filesystem                                            Size  Used Avail Use% Mounted on
-udev                                                  126G  4.0K  126G   1% /dev
-tmpfs                                                  26G  1.3M   26G   1% /run
-/dev/sda3                                             5.4T  5.1T   90G  99% /
-none                                                  4.0K     0  4.0K   0% /sys/fs/cgroup
-none                                                  5.0M     0  5.0M   0% /run/lock
-none                                                  126G     0  126G   0% /run/shm
-none                                                  100M     0  100M   0% /run/user
-/dev/sda1                                             922M  360M  500M  42% /boot
-sgtc-ix.stanford.edu:/mnt/tank/sgtc/gnpn/gnpn          11T  6.0T  4.9T  56% /mnt/gnpn/gnpn
-sgtc-ix.stanford.edu:/mnt/tank/sgtc/users/gvandova     50G   13G   38G  26% /home/gvandova/gvandova
-sgtc-ix.stanford.edu:/mnt/tank/sgtc/users/maureenh    100G  879M  100G   1% /home/maureenh/maureenh
-sgtc-ix.stanford.edu:/mnt/tank/sgtc/gnpn/gnpnseqruns  6.1T  1.3T  4.9T  21% /mnt/gnpn/gnpnseqruns
+  370G downloaded. Is that all? Try to check how big the folder on the ftp server is.
+  gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Assemblies$ du -sh .
+  307G	.
+  gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Assemblies$ find -type f -name '*.gz'  | wc -l
+  140 833
+  There are 37 214 genome assemblies as of Oct-22-2018
+********************************************************************************
 
-cp A*.gb /home/gvandova/gbdir_2018/
-AZYN01000514.gb
+Oct-29-2018
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Assemblies$ du -sh .
+      381G	.
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Assemblies$ find -type f -name '*.gz'  | wc -l
+      172642
+      There are 172 642 Assemblies as of Oct-29-2018
+      FINISHED --2018-10-26 08:07:48--
+      Total wall clock time: 1d 17h 46m 19s
+      Downloaded: 1 115 055 files, 748G in 5h 15m 0s (40.5 MB/s)
 
-/home/gvandova/bin/run_antismash gbdir_2018/AZYN01000514.gb antismash_output_2018
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr |wc
+        90362  813251 5431043
+      Antismash needs to run on another ~5000 genbank ids
 
-Make a gbid file with only gbids starting with A
-gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat gbids.unique.94516.txt | grep '^A' |wc
-  17758   17758  222309
+Oct-30-2018
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr |wc
+      92056  828497 5532286
+      Antismash needs to run on another ~3000 genbank ids
 
-cat gbids.unique.94516.txt | grep '^A' > gbids.unique.17758.txt
-
-find antismash_output_2018/ -type f -name "geneclusters.js" |wc
-   1266    1266   80467
-
-
-   Kill antismash:
-   kill -9 $(ps aux | grep 'antismash' | awk '{print $2}')
-
-Run antismash on gbids that start with AZ
-1. cp /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/gbdir/AZ*.gb /home/gvandova/gbdir_2018/
-2. -rw-rw-r-- 1 gvandova gvandova   15549 Oct 23 16:31 AZYN01000613.gb
-gvandova@maguro:~/gbdir_2018$ lr |wc
-    574    5159   38960
-3. filter ids in run_antismash script:
-if gbid.startswith("AZ"):
-            gbids.append(gbid)
-
-4. run antismash
+Oct-31-2018
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr|wc
+      93003  837020 5587832

@@ -4,6 +4,8 @@ import glob
 
 # Parse json files and print the genbank ids of only polyketidespython
 # parse_json.py > mibig.gbids.pks
+# cat mibig.gbids.pks |wc
+#     493     493    4581
 
 ids_to_class = {}
 ids = []

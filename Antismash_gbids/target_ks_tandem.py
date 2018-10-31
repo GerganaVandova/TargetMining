@@ -50,17 +50,19 @@ print len(gbids_to_coord)
 
 for i in xrange(len(targets_to_coord)):
     # print targets_to_coord[i]
-    #target_id, gbid1, clusternum, coord, clustertype, protname, target_start, target_end, nident, qlen, slen, identity, evalue = targets_to_coord[i]
+    # target_id, gbid1, clusternum, coord, clustertype, protname, target_start,
+    # target_end, nident, qlen, slen, identity, evalue = targets_to_coord[i]
     seq_id = targets_to_coord[i][1]
     target_start = int(targets_to_coord[i][6])
     target_end = int(targets_to_coord[i][7])
-    #print seq_id, target_start, target_end
+    # print seq_id, target_start, target_end
 
     for j in xrange(len(gbids_to_coord)):
         gbid, gb_start, gb_end = gbids_to_coord[j]
-        #print gbid
+        # print gbid
         if seq_id == gbid:
-            # Check if targets are withing 10kb of a KS identified from blast search
+            # Check if targets are withing Xkb of a KS identified from
+            # the initial blast search
             dist1 = abs(gb_start - target_end)
             dist2 = abs(target_start - gb_end)
             dist = min(dist1, dist2)
@@ -76,6 +78,6 @@ for i in xrange(len(targets_to_coord)):
                 ff.write("\t".join(map(str, targets_to_coord[i])))
                 ff.write("\t%d\t%d\t%d" % (gb_start, gb_end, dist))
                 ff.write("\n")
-                # print "<10kb", target_id, abs(gb_start - target_end), gb_start, gb_end
+                # print "<10kb", target_id, abs(gb_start - target_end), \ gb_start, gb_end
 
 ff.close()

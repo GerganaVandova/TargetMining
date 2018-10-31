@@ -1,4 +1,6 @@
-I. BLAST STEP
+********************************************************************************
+STEP1. Blast 8 KSs against 11 databases
+********************************************************************************
 
 Location: TargetMining/Blast/ folder
 
@@ -43,9 +45,9 @@ blast_query_files = glob.glob("%s/*.seq" % blast_query_dir)
     creates blast_results.KS.fasta.cleanName.cdhit.99
             blast_results.KS.fasta.cleanName.cdhit.99.clstr
 
-**********************************************
+********************************************************************************
 STEP2. Fetch all genbank ids that contain a KS
-**********************************************
+********************************************************************************
 
 1. make Genbank dir:
  mkdir GenBank
@@ -53,16 +55,22 @@ STEP2. Fetch all genbank ids that contain a KS
  cp get_gbids.py from oldTargetMining
  cp fetch_gbids.py from oldTargetMining
 
-2. ./get_gbid.py
+2. Run ./get_gbid.py > gbids.txt
 
- gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat gbids.txt |wc
- 162984  162984 1918063
+    cat gbids.txt |wc
+    162984  162984 1918063
 
-3. cat gbids.txt |sort -u > gbids.unique.txt
+    cat gbids.txt |sort -u > gbids.unique.94516.txt
+    cat gbids.unique.94516.txt |wc
+    94516   94516 1141060
 
- gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat gbids.unique.txt |wc
- 94516   94516 1141060
+3. Run fetch_gbid.py
+    Genbank/gbdir$ lr |wc
+    94517  850646 6623003
 
-Run fetch_gbid.py
-gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/gbdir$ lr |wc
- 94517  850646 6623003
+********************************************************************************
+STEP3. Run Antismash on all 95k genbank ids
+********************************************************************************
+
+       Antismash_gbids/
+       Run run_antismash.Agbids.py
