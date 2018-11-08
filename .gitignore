@@ -26,6 +26,27 @@ Genbank/pksntdb*
 Antismash_gbids/antismash_output/
 
 
+Targets/blast_results/
+Targets/blastdb/
+Targets/mibig_fasta/
+
+Targets/mibig_json.v1.4/
+Targets/MIBiG_prot_seqs_1.4.fa
+Targets/mibig_fasta.v1.4.fasta
+
+Targets/mibig_ids.txt
+Targets/mibig_clusters.txt
+Targets/mibig_targets.txt
+
+Targets/all_uniprot.fa
+Targets/out.txt
+Targets/uniprot_fasta/
+Targets/uniprot_manual_fasta/
+
+
+
+
+
 
 sratoolkit.2.9.0-ubuntu64.tar.gz
 sratoolkit.2.9.0-ubuntu64/

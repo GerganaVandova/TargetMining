@@ -536,7 +536,7 @@ Oct-22-2018
   307G	.
   gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Assemblies$ find -type f -name '*.gz'  | wc -l
   140 833
-  There are 37 214 genome assemblies as of Oct-22-2018
+
 ********************************************************************************
 
 Oct-29-2018
@@ -561,3 +561,125 @@ Oct-30-2018
 Oct-31-2018
       gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr|wc
       93003  837020 5587832
+
+Nov-1-2018
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr |wc
+        93887  844976 5639652
+
+      Correct scripts:
+      run_antismash.Agbids.py
+      parse_js.py
+      parse_js.coord.py
+      makeblastdb.py
+      run_blastp.py
+      filter_blast.py
+      target_ks_tandem.py
+
+      Unzip Assemblies:
+      find -type f -name '*.gz'  | wc -l
+          172642
+      find -type f -name '*.gz' | for f in `ls *.gbff.gz`; do echo "----------    $f    -----------"; tar -xvzf $f; done
+          bash: /bin/ls: Argument list too long
+      find -type f -name '*.gz' | while read f; do echo "----------    $f    -----------"; tar -xvzf $f; done
+          tar: This does not look like a tar archive
+      find -type f -name '*.gz' | while read f; do echo "----------    $f    -----------"; gunzip $f; done
+          bash: ----------    ./GCA_000335175.2_ASM33517v2_genomic.gbff.gz    -----------: No such file or directory
+      for f in *.gz; do echo "----------    $f    -----------"; gunzip $f; done
+          ----------    GCA_000007705.1_ASM770v1_genomic.gbff.gz    -----------: command not found
+
+      Unzip Assemblies
+      Copy .gz files to a new folder
+      find Assemblies -type f -name '*.gbff.gz' | while read x; do cp $x Assemblies2/; echo $x; done
+      Make Assemblies/ folder
+      Move gb files in Assemblies/assemblies_gbdir
+      Copy parse_gb.py in Assemblies/
+      Run parse_gb.py on all gb files and output both protein and dna sequences
+        4063.pts-20.maguro
+
+      TODO: make a blast database from
+
+
+
+Nov-2-2018
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr |wc
+      93946  845507 5643015
+
+Nov-6-2018
+      Antismash ran on all gbids
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr |wc
+      94517  850646 5677842
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ find antismash_output/ -type f -name "geneclusters.js" |wc
+      56953   56953 2591304
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/oldTargetMining/Antismash_gbids$ find antismash_output/ -type f -name "geneclusters.js" |wc
+      53613   53613 2673271
+
+      STEP4. Parse geneclusters.js files
+             Run parse.coord.py
+             Output files: sequences.faa.95k.coord.fasta
+             screen -R 4691.pts-11.maguro DONE
+
+            STEP5. Make database from sequences.faa.95k.fasta
+                Split sequences.faa.95k.fasta into 10 files:
+                pyfasta split -n 10 sequences.faa.coord.95k.fasta
+                Run makeblastdb.py on 10 input sequences
+
+            STEP6. Run blast to identify if target is located in clusters
+            run_blastp.py
+            input files: target file: targets.609.fa
+                         blast databases: antismashdb_sequences.faa.95k.coord.00.fasta
+                                          antismashdb_sequences.faa.95k.coord.01.fasta
+                                          ....
+                                          antismashdb_sequences.faa.95k.coord.09.fasta
+
+            output file: out.targets.609
+
+            STEP7. Filter output file
+            filter_blast.py
+
+            STEP8. Target and KS tandem
+            target_ks_tandem.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Recent literature on resistant genes:
+      Core papers:
+      1. Tang, X. et al. Identification of thiotetronic acid antibiotic biosynthetic pathways by target-directed genome mining. ACS Chem. Biol. 10, 2841–2849 (2015).
+      https://pubs.acs.org/doi/10.1021/acschembio.5b00658
+
+      2. Alanjary, M. et al. The antibiotic resistant target seeker (ARTS), an exploration engine for antibiotic cluster prioritization and novel drug target discovery. Nucleic Acids Res. 45, W42–W48 (2017).
+      https://academic.oup.com/nar/article/45/W1/W42/3787867
+
+      3. Yeh, H.-H. et al. Resistance gene-guided genome mining: serial promoter exchanges in Aspergillus nidulans reveal the biosynthetic pathway for fellutamide B, a proteasome inhibitor. ACS Chem. Biol. 11, 2275–2284 (2016).
+      https://pubs.acs.org/doi/10.1021/acschembio.6b00213
+
+
+      4. Identifying more than 300 Biosynthetic Gene Clusters with Potential Resistance Genes
+      in over 75 Aspergillus species using Resistance Gene-Guided Genome Mining
+      http://orbit.dtu.dk/files/142117110/29FGC_abstract3.pdf
+
+      5. Resistance Gene-Guided Genome Mining: Serial Promoter Exchanges in Aspergillus nidulans Reveal the Biosynthetic Pathway for Fellutamide B, a Proteasome Inhibitor.
+      https://www.ncbi.nlm.nih.gov/pubmed/27294372
+
+      6. Genomics‐driven discovery of a novel self‐resistance mechanism in the echinocandin‐producing fungus Pezicula radicicola
+      https://onlinelibrary.wiley.com/doi/abs/10.1111/1462-2920.14089
+
+      7. Self-resistance guided genome mining uncovers new topoisomerase inhibitors from myxobacteria†
+      https://pubs.rsc.org/en/content/articlehtml/2018/sc/c8sc01325j

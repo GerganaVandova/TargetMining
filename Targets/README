@@ -1,0 +1,82 @@
+MIBiG Target-In-Cluster Analysis Results
+Nov-2-2018
+========================================
+
+1. Download json and fasta files from MIBiG http://mibig.secondarymetabolites.org/download.html
+    Version 1.4 (August 6th, 2018 release)
+2. Parse the MIBiG json files to find putative targets for each MIBiG entry
+   ("Molecular target" on the website).
+   Run /parse_js.mibig.py
+   Output files
+   a) tab-deliminated mibig_clusters.txt:
+      mibigid, compound, biosynthetic class, molecular target, activities
+      BGC0000001	Abyssomicin C	Polyketide	PabB, p-aminobenzoate (pABA) pathway	Antibacterial, Cytotoxic
+   b) mibig_targets.txt file with all targets
+      (these have free text and have types, etc)
+3. Search uniprot for a set of proteins matching this description. Sometimes
+   it's a single gene, sometimes it's broad, like "cell wall".
+   My general threshold was to return no more than 500 proteins.
+   Sometimes I use uniref to achieve this (it clusters by identity and returns only proteins with < 50% identity).
+
+      There are 25 empty files. Have to manually search uniprotKB on the following targets:
+
+      a2-macroglobulin_glutathione-s-transferase.uniprot.fasta                                DONE
+      a_site_of_50s_bacterial_ribosomal_subunit.uniref.fasta                                  ALREADY HAVE IT
+      acts_as_a_minimalistic_ion_channel_inserts_into_cell_membrane.uniprot.fasta             SKIP
+      acts_as_minimalistic_ion_channel_inserts_into_cell_membrane.uniprot.fasta               SKIP
+      bacterial_dna_gyrase_inhibitor_of_human_topoisomerases_i_and_ii.uniprot.fasta           ALREADY HAVE IT
+      bcl-xlcytochrome_c_reductase.uniprot.fasta                                              DONE
+      bcrp_abcg2_inhibitor.uniprot.fasta                                                      DONE
+      cell_wall_specifically_the_d-alanyl-d-alanine_terminus_of_peptidoglycan.uniprot.fasta   DONE
+      cellular_membrane_ergosterol.uniprot.fasta                                              DONE
+      eucaryotic_protein_phosphatases_type_1_and_2a.uniprot.fasta                             DONE
+      fabf_fabh.uniprot.fasta                                                                 DONE
+      fatty_acid_synthases_fabf_&_fabh.uniprot.fasta                                          ALREADY HAVE IT
+      fungal_cell_wall_chitinbacteriophage_rna_polymerase.uniprot.fasta                       SKIP
+      glutathion_s-transferase.uniprot.fasta                                                  ALREADY HAVE IT
+      histone_deacetylase_rpd3-class.uniprot.fasta                                            DONE
+      histone_deactylase_inhibitor_(hdac).uniprot.fasta                                       DONE
+      inhibition_of_protein_biosynthesis_caused_by_binding_to_the_ribosome._this_mechanism
+        _causes_a_ribotoxic_stress_response_and_ultimately_apoptosis..uniprot.fasta           SKIP
+      inhibits_the_abcb1_gene_product_p-glycoprotein_(p-gp)_thereby_reversing_daunorubicin
+        _resistance_in_cancer_cells.uniprot.fasta                                             DONE
+      iron_chelator_coordinates_fe3+.uniprot.fasta                                            SKIP
+      m_phase_inhibitor_of_cell_cycle_inhibitor_of_map-dependent_microtubule_assembly
+      _bcrp_abcg2_inhibitor.uniprot.fasta                                                     ALREADY HAVE IT
+      metalloproteinase_bacterial_peptide_deformylase.uniprot.fasta                           DONE
+      microsomal_sarcoplasmic_endoplasmic_reticulum_(sr_er)_ca2+_atpase.uniprot.fasta         DONE
+      microtuble_squalene_synthase.uniprot.fasta                                              DONE
+      might_interfere_with_actin_cytoskeleton.uniprot.fasta                                   DONE
+      myosin_atpase_ispd.uniprot.fasta                                                        DONE
+
+wget -O macroglobulin.fasta 'https://www.uniprot.org/uniprot/?query=macroglobulin&fil=reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O glutathione-s-transferase.fasta 'https://www.uniprot.org/uniprot/?query=glutathione-s-transferase+AND+reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O cytochrome_c_reductase.fasta 'https://www.uniprot.org/uniref/?query=%22cytochrome%20c%20reductase%22%20AND%20reviewed:yes&fil=identity:0.5&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O bcrp.fasta 'https://www.uniprot.org/uniprot/?query=%22bcrp%22+AND+reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O abcg.fasta 'https://www.uniprot.org/uniprot/?query=%22abcg2%22+AND+reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O d-alanyl-d-alanine.fasta 'https://www.uniprot.org/uniref/?query=%22d-alanyl-d-alanine%22%20AND%20reviewed:yes&fil=identity:0.5&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O ergosterol.fasta 'https://www.uniprot.org/uniprot/?query=%22ergosterol%22+AND+reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O phosphatase_type1_and_2_type_2.fasta 'https://www.uniprot.org/uniref/?query=phosphatase%20type%201%20and%20type%202%20AND%20reviewed:yes&fil=identity:0.5&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O fabf.fasta 'https://www.uniprot.org/uniprot/?query=fabf+AND+reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O fabh.fasta 'https://www.uniprot.org/uniprot/?query=fabh+AND+reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O histone_deacetylase_rpd3.fasta 'https://www.uniprot.org/uniprot/?query=%22histone+deacetylase+rpd3%22+AND+reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O histone_deacetylase.fasta 'https://www.uniprot.org/uniref/?query=%22histone%20deacetylase%22%20AND%20reviewed:yes&fil=identity:0.5&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O abcb1_gene_product_p-glycoprotein.fasta 'https://www.uniprot.org/uniprot/?query=%22abcb1_gene_product_p-glycoprotein%22+AND+reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O metalloproteinase.fasta 'https://www.uniprot.org/uniref/?query=metalloproteinase%20AND%20reviewed:yes&fil=identity:0.5&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O peptide_deformylase.fasta 'https://www.uniprot.org/uniprot/?query=peptide_deformylase+AND+reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O ca2_atpase.fasta 'https://www.uniprot.org/uniprot/?query=%22ca2%2B_atpase%22+AND+reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O squalene_synthase.fasta 'https://www.uniprot.org/uniprot/?query=%22squalene_synthase%22+AND+reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O actin_cytoskeleton.fasta 'https://www.uniprot.org/uniref/?query=actin_cytoskeleton%20AND%20reviewed:yes&fil=identity:0.5&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+wget -O myosin_atpase.fasta 'https://www.uniprot.org/uniprot/?query=myosin_atpase+AND+reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta'
+
+
+4. Make blast dbs from each of the proteins in the clusters in the MIBiG fasta file (`MIBiG_prot_seqs_1.4.fasta`)
+  a) wget 'https://mibig.secondarymetabolites.org/MIBiG_prot_seqs_1.4.fasta'
+  b) Split fasta file to subfiles for each cluster (Run ./split_mibig.py)
+       DONT DO THIS STEP, too many files in a folder, can run blast on a single fasta file
+    cat uniprot_fasta/*.fasta uniprot_manual_fasta/*.fasta > all_uniprot.fa
+  c) for f in BGC*fasta; do makeblastdb -in $f -dbtype prot -parse_seqids -out $(basename $f .fasta); done
+      move databases in blastdb/ folder
+
+  TODO: 5. For each protein in my set of uniprot fastas, check if there is a homolog in the cluster with blastp.
+     `python run_blast.py` (which uses `blastp -query uniprot_fasta/{fasta} -db blastdb/{cluster} -out out/{cluster}.out -evalue 1e-50 -outfmt 6`)
