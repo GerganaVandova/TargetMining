@@ -1,0 +1,270 @@
+13-beta-d-glucan_synthase.uniprot.fasta
+     30     409    3718
+20s_proteasome.uniref.fasta
+     60     541    5789
+23s_rrna.uniref.fasta
+    443    4188   47162
+50_s_ribosome.uniref.fasta
+    575    4929   54569
+actin-bundling_protein_fascin.uniprot.fasta
+     13     105     994
+actin.uniref.fasta
+    634    5983   66384
+activates_tnfr1.uniprot.fasta
+     65     758    6965
+adenine_nucleotide_translocase.uniref.fasta
+     12     108    1164
+angiogenesis.uniref.fasta
+     13     153    1617
+bacterial_70s_ribosome.uniprot.fasta
+    460    7327   59792
+bacterial_cell_envelope.uniprot.fasta
+    156    2002   18119
+bacterial_cell_wall_biosynthesis__peptidoglycan_.uniref.fasta
+      1      10     126
+bacterial_ribosome.uniref.fasta
+      6      43     480
+bacterial_rna_polymerase.uniref.fasta
+     11      94    1058
+beta-lactamase.uniref.fasta
+    261    1994   23993
+beta-subunit_of_acetyl-coa_carboxylase.uniprot.fasta
+     13     189    1717
+binding_to_lipid_ii_and_pore_formation.uniprot.fasta
+    235    2608   24209
+binds_to_ribosome_so_as_to_inhibit_protein_synthesis.uniprot.fasta
+      1      10     101
+binds_to_the_50s_ribosomal_subunit_protein_synthesis_inhibitor.uniprot.fasta
+      6      70     621
+bk_channels.uniprot.fasta
+     76     875    8383
+calmodulin.uniref.fasta
+    300    2776   32034
+caspase_1.uniref.fasta
+     94     769    8884
+cd1d.uniprot.fasta
+     16     193    1733
+cell_membrane.uniref.fasta
+    392    3381   37378
+cellular_membrane.uniref.fasta
+      4      30     348
+cell_wall_biosynthesis.uniref.fasta
+     67     550    7046
+cell_wall_ethanolamine.uniprot.fasta
+     26     484    3779
+cell_wall-_lipidii_pore_forming.uniprot.fasta
+     28    2506   60071
+cell_wall_synthesis.uniref.fasta
+     25     228    2573
+cell_wall.uniref.fasta
+    659    5795   65622
+cholesterol_biosynthesis.uniref.fasta
+      1       8     156
+colchicine_site_of_tubulin.uniprot.fasta
+      2      20     169
+collagenase_dna_synthesis.uniprot.fasta
+      3      30     282
+d-ala-d-ala_terminus_of_peptidoglycan_precursors.uniprot.fasta
+      2      23     239
+dna_and_rna.uniref.fasta
+      8      27     251
+dna_polymerase_alpha.uniref.fasta
+    201    1903   20285
+dna_rna.uniref.fasta
+   1406   13893  146861
+dna_topoisomerase_ii.uniref.fasta
+    178    1510   15155
+dna_topoisomerase_i.uniprot.fasta
+   1051   15938  130351
+dna.uniref.fasta
+   8852   79327  865967
+ef-tu.uniref.fasta
+     35     267    2934
+elastase.uniprot.fasta
+    311    3314   31059
+endoplasmic_reticulum.uniref.fasta
+    252    2466   28002
+eukaryotic_protein_phosphatase_1_and_2a.uniprot.fasta
+    111    1231   11736
+eukaryotic_translation_elongation_factor_1a__ef-1a_.uniprot.fasta
+     40     507    4506
+fabf_fatty_acid_synthase.uniprot.fasta
+     26     325    3451
+fabi.uniprot.fasta
+     46     680    6618
+fatty_acid_synthase_ii_system_membrane_disruption.uniprot.fasta
+     12     127    1197
+fungal_acetyl-coa_carboxylase_inhibitor.uniprot.fasta
+      1      14     130
+glucan_synthase.uniref.fasta
+     45     381    4643
+glutamine_synthetase.uniref.fasta
+    225    1789   22319
+gyrb_subunit_b_protein_of_dna_gyrase.uniprot.fasta
+    112    1763   13672
+hemoglobin.uniref.fasta
+    135    1130   12913
+histone_deacetylase__hdac_.uniprot.fasta
+    618    7527   67386
+histone_deacetylases.uniprot.fasta
+    346    3948   36028
+hiv-1_protease_rna_polymerase_dna_polymerase.uniprot.fasta
+    104    1567   13292
+hiv_reverse_transcriptase_human_telomerase.uniprot.fasta
+      5      52     499
+hsp90.uniref.fasta
+    158    1387   14971
+human_calpain_1_protease.uniprot.fasta
+     32     336    3081
+human_plasma_renin.uniprot.fasta
+     52     533    5060
+immunoglobulin_e.uniref.fasta
+    274    2803   30365
+inhibition_of_dna_synthesis_or_interference_of_cellular_processes_critical_to_dna_synthesis.uniprot.fasta
+     22     235    2261
+inhibition_of_protein_phosphatase_1_and_2a.uniprot.fasta
+    492    5737   53569
+inhibitor_of_cathepsin_k.uniprot.fasta
+    131    1205   11316
+inosine_monophosphate_dehydrogenase.uniprot.fasta
+    100    1283   13118
+inositol_phosphoceramide_synthase.uniprot.fasta
+     11     153    1614
+iron.uniref.fasta
+   1529   13478  153458
+isoleucyl_trna_synthetase.uniref.fasta
+     73     493    6192
+lipid_ii_blocks_cell-wall_biosynthesis.uniprot.fasta
+      3      47     443
+lipid_ii.uniref.fasta
+    651    5644   65987
+lysophospholipase.uniprot.fasta
+    235    3172   28366
+mdr_cancer_cells.uniprot.fasta
+     13     156    1435
+membrane__k+_ionophore_.uniprot.fasta
+     34     401    3681
+membrane.uniprot.fasta
+ 138344 1893665 17118159
+metal_ion.uniprot.fasta
+ 116544 1638802 14910243
+methionine_aminopeptidase_2.uniprot.fasta
+    241    3566   31181
+methionine_biosynthesis.uniref.fasta
+     38     292    3851
+microtubule_protein.uniprot.fasta
+   5693   66597  605608
+mitochondria.uniref.fasta
+    252    2971   31053
+m_phase_inhibitor_of_cell_cycle.uniprot.fasta
+    383    4454   40470
+m_phase_inhibitors_of_the_mammalian_cell_cycle.uniprot.fasta
+     60     630    5766
+mray.uniref.fasta
+     67     366    7279
+mtor.uniref.fasta
+     29     285    3162
+na+_k+.uniprot.fasta
+  16303  245963 2135769
+neuropeptide_y_neurokinin-1_receptor.uniprot.fasta
+      4      35     343
+nicotinic_acetylcholine_receptor.uniref.fasta
+     44     427    4913
+paba_p-aminobenzoate__paba__pathway.uniprot.fasta
+     19     235    2318
+pabb_p-aminobenzoate__paba__pathway.uniprot.fasta
+     15     186    1852
+penicillin_binding_proteins_transpeptidase_carboxypeptidase.uniprot.fasta
+     13     152    1505
+p-glycoprotein.uniprot.fasta
+     63     773    6883
+platelet-derived_growth_factor__pdgf_.uniprot.fasta
+    122    1390   12951
+polo-like_kinase_1;_protein_kinase_c.uniprot.fasta
+     28    2510   60091
+polymerizes_actin.uniprot.fasta
+     44     484    4175
+protease_inhibitor.uniprot.fasta
+   3180   33925  322463
+protease.uniref.fasta
+   2268   19729  221024
+proteasome_inhibitor.uniref.fasta
+      5      44     499
+proteasome.uniprot.fasta
+   6212   82923  732143
+protein_kinase_c__activator_.uniref.fasta
+     78     725    7925
+protein_kinase.uniref.fasta
+   6061   54561  629346
+protein_phosphatase.uniref.fasta
+   2271   20982  242821
+protein_transport.uniref.fasta
+   3714   34195  376998
+protein_tyrosine_phosphatase_1b__ptp1b_.uniprot.fasta
+     10     123    1140
+pyruvate_biosynthesis.uniref.fasta
+     16     124    1588
+raf-1.uniprot.fasta
+    364    4058   37330
+retroviral_dna_polymerase.uniprot.fasta
+    162    2229   19476
+reverse_transcriptase.uniref.fasta
+     66     596    6615
+ribosome_e_site.uniref.fasta
+     21     181    1974
+ribosomes.uniref.fasta
+     11      94    1074
+ribosome.uniref.fasta
+   1512   13134  145493
+rna_polymerase.uniref.fasta
+   2208   23811  242695
+rna_synthesis.uniref.fasta
+     16     143    1640
+sodium_channel_blocking.uniprot.fasta
+    184    1591   16276
+spliceosome.uniref.fasta
+     77     689    7886
+squalene_synthase.uniprot.fasta
+    168    2049   19054
+stat3.uniref.fasta
+      6      59     622
+telomerase.uniref.fasta
+     39     355    3987
+threonyl-trna_synthetase.uniref.fasta
+     53     368    4419
+tnf-alpha-1.uniprot.fasta
+      1      11     114
+topoisomerase_i_topoisomerase_ii.uniref.fasta
+    183    1557   15837
+topoisomerase_i.uniref.fasta
+    229    2058   20740
+topoisomerases_i_and_ii.uniprot.fasta
+    239    3605   28833
+transcription_termination_factor_rho.uniprot.fasta
+     75    1186   10270
+translocase_i.uniref.fasta
+    769    7342   80921
+trehalose_synthase.uniprot.fasta
+    166    2296   22533
+trypsin_and_chymotrypsin_proteases.uniprot.fasta
+    292    2957   27638
+trypsin_plasmin_thrombin.uniprot.fasta
+     46     469    4619
+trypsin_thrombin.uniprot.fasta
+    200    2022   19781
+trypsin.uniref.fasta
+    223    1902   21308
+tublin.uniprot.fasta
+      3      30     265
+udp-glcnac_enolpyruvyltransferase__mura_.uniprot.fasta
+      1      23     198
+undecaprenyl_diphosphate_synthase.uniprot.fasta
+     87    1440   15436
+unknown_pore_formation.uniprot.fasta
+     96    1133   10145
+unknown.uniref.fasta
+    174    1993   19306
+v-atpase.uniref.fasta
+     51     532    5263
+voltage-gated_sodium_channels_of_nerve_cells.uniprot.fasta
+     16     181    1604

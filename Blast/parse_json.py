@@ -7,8 +7,6 @@ import glob
 # cat mibig.gbids.pks |wc
 #     493     493    4581
 
-ids_to_class = {}
-ids = []
 
 json_files = glob.glob("mibig_json_1.4/*.json")
 for json_file in json_files:
@@ -18,16 +16,10 @@ for json_file in json_files:
         p = b['general_params']
         # print p
         l = p['loci']
-        bsc = p['biosyn_class'][0]
-        # print bsc
-        gbid = l['nucl_acc'][0]['Accession']
-        # print gbid
-        if bsc == 'Polyketide':
-            ids_to_class[gbid] = bsc
-            ids.append(gbid)
+        if not 'Polyketide' in p['biosyn_class']:
+            continue
 
-# for key in ids_to_class.keys():
-#     print key
+        for x in l['nucl_acc']:
+            gbid = x['Accession']
+            print gbid.strip().split('.')[0]
 
-for id in ids:
-    print id

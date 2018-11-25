@@ -9,12 +9,13 @@ import sys
 import requests
 import urllib
 import subprocess
+import time
 UTF8Writer = codecs.getwriter('utf8')
 sys.stdout = UTF8Writer(sys.stdout)
 
 
 def get_targets():
-    path = "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Targets/mibig_json.v1.4/*.json"
+    path = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Targets/mibig_json.v1.4/*.json"
     # outtargetfile = "mibig_targets.txt"
     fclusters = open("mibig_clusters.txt", "w")
     ftargets = open("mibig_targets.txt", "w")
@@ -62,8 +63,8 @@ def get_targets():
             continue
 
     set_targets = sorted(set(new_targets))
-    print(set_targets)
-    print(len(set_targets))
+    #print(set_targets)
+    #print(len(set_targets))
 
     for target in set_targets:
         ftargets.write(str(target))
@@ -75,8 +76,9 @@ def get_targets():
 
 
 def get_uniprot(target):
-
     query = target.strip()
+    if query in ["not determined"]:
+        return
     f = {
         'fil': 'reviewed:yes',
         'sort': 'score',
@@ -87,36 +89,55 @@ def get_uniprot(target):
     url = 'https://www.uniprot.org/uniprot/?' + urllib.urlencode(f)
     #url = 'https://www.uniprot.org/uniprot/?fil=reviewed%3Ayes&sort=score&columns=id,entry%20name,reviewed,protein%20names,genes,organism,length&format=fasta&query=gyrb%2C+subunit+b+protein+of+dna+gyrase'
     print "target: ", query, "\n", url
-    r = requests.get(url, allow_redirects=True)
     query1 = query.replace(",", "")
     query2 = query1.replace("/", "_")
-    query_new = query2.replace(" ", "_")
-    outfile = "Uniprot/" + query_new + '.uniprot.fasta'
-    open(outfile, 'wb').write(r.content)
-    records = list(SeqIO.parse(outfile, "fasta"))
+    query3 = query2.replace("(", "_")
+    query4 = query3.replace(")", "_")
+    query_new = query4.replace(" ", "_")
+    outfile_uniprot = "Uniprot/" + query_new + '.uniprot.fasta'
+    
+    if os.path.exists(outfile_uniprot) == True:
+        print outfile_uniprot, " exist\n"
+        return
+    
+    outfile_uniref = "Uniprot/" + query_new + '.uniref.fasta'
+    if os.path.exists(outfile_uniref) == True:
+        print outfile_uniref, " exist\n"
+        return
+    
+    r = requests.get(url, allow_redirects=True)
+    open(outfile_uniprot, 'wb').write(r.content)
+    records = list(SeqIO.parse(outfile_uniprot, "fasta"))
     print "number of sequences: ", len(records), "\n\n"
+    
+    #if len(records) == 0:
+    #    os.remove(os.path.join("Uniprot/", query_new + '.uniprot.fasta'))
 
     if len(records) > 500:
+        query_reviewed = query + '+AND reviewed:yes'
         f = {
             'fil': 'identity:0.5',
             'sort': 'score',
             'columns': 'id,entry name,reviewed,protein names,genes,organism,length',
             'format': 'fasta',
-            'query': query
+            'query': query_reviewed
         }
+        
         url = 'https://www.uniprot.org/uniref/?' + urllib.urlencode(f)
         print "target: ", query, "\n", url
         r = requests.get(url, allow_redirects=True)
-        outfile = "Uniprot/" + query_new + '.uniref.fasta'
-        open(outfile, 'wb').write(r.content)
-        records = list(SeqIO.parse(outfile, "fasta"))
+        open(outfile_uniref, 'wb').write(r.content)
+        records = list(SeqIO.parse(outfile_uniref, "fasta"))
         print "number of sequences: ", len(records), "\n\n"
         os.remove(os.path.join("Uniprot/", query_new + '.uniprot.fasta'))
+    time.sleep(1)     
 
+#target = 'actin'
+#get_uniprot(target)
 
 targets = get_targets()
 for target in targets:
     if target == "":
         continue
-    # target = 'gyrb, subunit b protein of dna gyrase'
+#    target = '50s_ribosomal_subunit'
     get_uniprot(target)

@@ -9,14 +9,14 @@ import math
 
 # Blast parameters
 # num_alignments = 100000
-blast_evalue_cutoff = 1e-1
+blast_evalue_cutoff = 0.05
 # GV not used in this script; added in parse_script
 # blast_evalue_cutoff_parse = 1
 blastoutdir = "blast_results"
 subprocess.call(["mkdir", "-p", blastoutdir])
 
 # There is a database for each cluster
-blastdbdir = "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Targets/blastdb/"
+blastdbdir = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Targets/blastdb/"
 mibigids = []
 f = open('mibig_ids.txt', "r")
 mibig_ids = f.readlines()
@@ -41,21 +41,4 @@ for blast_query_name in blast_query_names:
         print blast_query_name, mibigid, "\n"
         outfilename = os.path.join(blastoutdir, blast_query_name + "." + str(blast_evalue_cutoff) + "." + mibigid + ".out")
         print outfilename
-        # subprocess.call(["blastp", "-query", blast_query_file, "-db", dbdir, "-out",  outfilename, "-num_alignments", "-evalue", str(blast_evalue_cutoff),  "-num_threads", "64"])
-        subprocess.call(["blastp", "-query", blast_query_file, "-db", dbdir, "-out",  outfilename, "-evalue", str(blast_evalue_cutoff), "-outfmt", "6"])
-        # subprocess.call(["blastp", "-query", "fabf.seq", "-db", "blastdb/BGC0001140", "-out",  "fabf.out", "-evalue", str(blast_evalue_cutoff), "-outfmt", "6"])
-        # break
-    # break
-        #   qseqid sseqid sstart send nident qlen slen evalue
-
-        # blastp -query uniprot_fasta/{fasta} -db blastdb/{cluster} -out out/{cluster}.out -evalue 1e-50 -outfmt 6`)
-
-# blastp -query uniprot_manual_fasta/fabf.fasta -db blastdb/BGC0000005
-
-# parse_blast output:
-# print OUT "$hitname\t$start\t$end\t$hitdesc\t$frame\t$strand\t$hitlen\t$evalue\t$hitseq\n";
-# parse_script = "scripts/getGBHitCoordsFilesInDir.pl"
-# parse_blast_dir = "blast_results_parse"
-#
-# subprocess.call(["mkdir", "-p", parse_blast_dir])
-# subprocess.call(["perl", parse_script, blastoutdir, parse_blast_dir])
+        subprocess.call(["blastp", "-query", blast_query_file, "-db", dbdir, "-out",  outfilename, "-evalue", str(blast_evalue_cutoff), "-outfmt", "6 qseqid sseqid sstart send nident qlen slen evalue"])

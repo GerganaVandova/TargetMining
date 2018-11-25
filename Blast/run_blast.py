@@ -20,20 +20,23 @@ blastoutdir = "blast_results"
 
 subprocess.call(["mkdir", "-p", blastoutdir])
 
-dbs = ["nt", "refseq_genomic", "other_genomic", "env_nt", "patnt", "sts", "htgs", "tsa_nt", "wgs", "gss", "est_others"]
+dbs = ["nt", "refseq_genomic", "other_genomic", "env_nt", "patnt", "sts", "htgs", "tsa_nt", "wgs", "gss", "est_others", "asembliesntdb"]
+#dbs = ["asembliesntdb"]
 
 #Specify which queries to blast (KS*.seq, CLF*.seq, etc)
 blast_query_files = glob.glob("%s/KS*.seq" % blast_query_dir)
 blast_query_names = map(os.path.basename, blast_query_files)
 
 # Blast KS, etc domains:
-for blast_query_name in blast_query_names:
-    for db in dbs:
+for db in dbs:
+    for blast_query_name in blast_query_names:
         dbdir = os.path.join(blastdbdir, db)
         blast_query_file = os.path.join(blast_query_dir, blast_query_name)
         print blast_query_name, db, "\n"
         outfilename = os.path.join(blastoutdir, blast_query_name + "." + str(num_alignments) + ".alignments.evalue" + str(blast_evalue_cutoff) + "." + db)
         print outfilename
+        blastcmd = "tblastn", "-query", blast_query_file, "-db", dbdir, "-out",  outfilename, "-num_alignments", str(num_alignments), "-seg",  "no",  "-evalue", str(blast_evalue_cutoff),  "-num_threads", "64"
+        print blastcmd
         subprocess.call(["tblastn", "-query", blast_query_file, "-db", dbdir, "-out",  outfilename, "-num_alignments", str(num_alignments), "-seg",  "no",  "-evalue", str(blast_evalue_cutoff),  "-num_threads", "64"])
 
 

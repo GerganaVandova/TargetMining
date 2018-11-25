@@ -6,25 +6,36 @@ Blast/blast_results_seqs
 Blast/blast_results
 Blast/blast_results_parse
 
+Blast/bak/
+Blast/test/
+    
+
 pHMM_train/FastaTestSets_unused/
 pHMM_train/HMM_unused/
-
 pHMM_search/t1ks*
 pHMM_search/.cleanSeq.fasta
 pHMM_search/bak/
 
+Genbank/assemblyids_filenames.2f
 Genbank/gbdir/
 Genbank/gbids.txt
 Genbank/gbids.unique.txt
 Genbank/gbids.162984.txt
 Genbank/gbids.unique.94516.txt
+Genbank/gbids.assembly.txt
+Genbank/gbids.assembly.unique.txt
+Genbank/gbids.nt.txt
+Genbank/gbids.nt.unique.txt
 Genbank/dna.fasta
 Genbank/prot.fasta
 Genbank/pksntdb*
-
+Genbank/gbids.assembly.txt
+Genbank/old/
 
 Antismash_gbids/antismash_output/
-
+Antismash_gbids/bak/
+Antismash_gbids/seq_dir/
+Assemblies_zipped/
 
 Targets/blast_results/
 Targets/blastdb/
@@ -42,11 +53,9 @@ Targets/all_uniprot.fa
 Targets/out.txt
 Targets/uniprot_fasta/
 Targets/uniprot_manual_fasta/
-
-
-
-
-
+Targets/.DS_Store
+Targets/Uniprot/
+Targets/bak/
 
 sratoolkit.2.9.0-ubuntu64.tar.gz
 sratoolkit.2.9.0-ubuntu64/

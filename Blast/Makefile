@@ -16,9 +16,10 @@ concat: $(blast_results_tab_ks_file)
 # Uniqify the proteins
 # eliminiate 100% identical proteins here at this step.
 # Choose longest nucleotide synonym.
-# Also prioritize the Mibig set of nucleotide IDs:  Ie if this protein exists in multiple nucleotide records, one of which is Mibig's nucleotide, then keep the Mibig nucleotide, not the other one.
-# Mark synonyms in a separate file
-# filename.synonyms
+# Also prioritize the Mibig set of nucleotide IDs:  Ie if this protein exists 
+# in multiple nucleotide records, one of which is Mibig's nucleotide, 
+# then keep the Mibig nucleotide, not the other one.
+# Mark synonyms in a separate file: filename.synonyms
 # length column is 6 (starting from 0) and seq col is 9
 # * NOTE this script also removes dashes and asterisks
 
@@ -30,12 +31,13 @@ $(blast_results_tab_ks_file).longest_synonym: $(blast_results_tab_ks_file)
 longest: $(blast_results_tab_ks_file).longest_synonym $(blast_results_tab_ks_file).longest_synonym
 
 
-# Compare the Mibig set to the found set - found them all?
+# Compare the positive set (clusters chosen to be syntesized from prev time I ran the pipeline) to the found set - found them all?
 
-$(blast_results_tab_ks_file).longest_synonym.comparemibig: $(blast_results_tab_ks_file).longest_synonym mibig.gbids.v1.4.pks
+$(blast_results_tab_ks_file).longest_synonym.compareposset: $(blast_results_tab_ks_file).longest_synonym positive_set.ids
 	perl $(script_dir)/compareErin.pl $^ > $@
 
-compare: $(blast_results_tab_ks_file).longest_synonym.comparemibig
+compare: $(blast_results_tab_ks_file).longest_synonym.compareposset
+
 
 #################################################################
 # Make fasta file of blast hit sequences to use in HMM search (without using min cluster size)
@@ -67,7 +69,7 @@ cdhit_bin = ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit
 name_length = 200
 
 $(blast_ks_fasta).cleanName.cdhit$(cdhit_cutoff): $(blast_ks_fasta).cleanName
-	$(cdhit_bin) -i $^ -o $@ -c $(cdhit_cutoff) -d $(name_length)
+	$(cdhit_bin) -i $^ -o $@ -c $(cdhit_cutoff) -d $(name_length) -M 10000
 
 cdhit: $(blast_ks_fasta).cleanName.cdhit$(cdhit_cutoff) $(blast_ks_fasta).cleanName.cdhit$(cdhit_cutoff)
 

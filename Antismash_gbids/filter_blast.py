@@ -19,17 +19,22 @@ ff = open(filename_filtered, "w")
 
 # 1_75523-118144_t2fas-fabH_75248-75955_D459_RS33635_hypothetical protein
 # 1_79330-123547_t2fas-UbiA_cyclase_99330-100598_ctg1_orf00116_- cyclase
+# Script crashes when parsing coord because of acy_amino_acids in 50 lines like this one:
+# NZ_JAFN01000001_cluster-1_1660095-1722341_acyl_amino_acids_1700538-1703021_ctg1_1501_<span
+# Add another If statement and replace with acyl-amino-acids
 
 for line in f:
     qseqid, sseqid, sstart, send, nident, qlen, slen, evalue = line.split("\t")
     gbid, descr = sseqid.split("_cluster-")
-
+    print "\n\n\ndescr: ", descr
     clusternum = descr.split("_")[0]
     coord = descr.split("_")[1]
     if "UbiA_cyclase" in descr:
         descr = descr.replace("UbiA_cyclase", "UbiA-cyclase")
     if "head_to_tail" in descr:
 	descr = descr.replace("head_to_tail", "head-to-tail")
+    if "acyl_amino_acids" in descr:
+        descr = descr.replace("acyl_amino_acids", "acyl-amino-acids")
     clustertype = descr.split("_")[2]
     prot_coord = descr.split("_")[3]
     print "\nqseqid: ", qseqid, "\nsseqid: ", sseqid, "\nprot_coord: ", prot_coord
