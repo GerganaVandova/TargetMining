@@ -10,29 +10,32 @@ TEMP_ANTISMASH_OUTPUT = "/home/gvandova/antismash_output_2018/"
 FINAL_ANTISMASH_OUTPUT = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output"
 GB_FOLDER = "/home/gvandova/gbdir"
 
+import signal, os
+
 
 def f(gbid):
-    #print "\n", "***********", "\n", gbid
-    temp_dir = os.path.join(TEMP_ANTISMASH_OUTPUT, gbid)
+    print "Start %s" % gbid
+    temp_dir = os.path.join(TEMP_ANTISMASH_OUTPUT)
     final_dir = os.path.join(FINAL_ANTISMASH_OUTPUT, gbid)
 
     local_filename = os.path.join(GB_FOLDER, gbid + ".gb")
     geneclusters_filename = os.path.join(final_dir, "geneclusters.js")
-    print geneclusters_filename
+    print "checking if %s exists" % geneclusters_filename
     if os.path.exists(geneclusters_filename) == True:
         print geneclusters_filename, " exist"
         return
-    if os.path.exists(final_dir):
-        print final_dir, "exists"
-	return
-    #antismash = "python /home/gvandova/antismash/run_antismash.py" + " --outputfolder " + \
-    #            antismashoutdir + " " + local_filename
+    
+    #if os.path.exists(final_dir):
+    #    print final_dir, "exists"
+    #	return
+
     antismash = "/home/gvandova/bin/run_antismash" + " " + local_filename + " " + temp_dir
     print antismash
-    print "start %s" % gbid
     os.system(antismash)
+    print "done %s" % gbid
     subprocess.call(["rm", "-rf", final_dir])
-    subprocess.call(["mv", "-f", temp_dir, FINAL_ANTISMASH_OUTPUT])
+    subprocess.call(["mv", "-f", os.path.join(temp_dir, gbid), FINAL_ANTISMASH_OUTPUT])
+    print " ".join(["mv", "-f", os.path.join(temp_dir, gbid), FINAL_ANTISMASH_OUTPUT])
 
 if __name__ == "__main__":
     gbids = []
@@ -45,13 +48,22 @@ if __name__ == "__main__":
 
     total = len(gbids)
     print "Total %s" % total
-    p = Pool(processes=60)
-    #p.map(f, gbids)
-    for _ in tqdm.tqdm(p.imap_unordered(f, gbids), total=len(gbids)):
-        pass
+    original_sigint_handler = signal.signal(signal.SIGINT, signal.SIG_IGN)
+    p = Pool(processes=80)
+    signal.signal(signal.SIGINT, original_sigint_handler)
+    try:
+        for _ in tqdm.tqdm(p.imap_unordered(f, gbids), total=len(gbids)):
+            pass
 
+    except KeyboardInterrupt:
+        print("Caught KeyboardInterrupt, terminating workers")
+        p.terminate()
+    else:
+        print("Normal termination")
+        p.close()
+    p.join()
 
-
+    print "Done, exiting"
 
 """
     l = {} # dict of long species names with short species names as keys
