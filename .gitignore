@@ -31,9 +31,23 @@ Genbank/prot.fasta
 Genbank/pksntdb*
 Genbank/gbids.assembly.txt
 Genbank/old/
+Genbank/assembly_gb/
+Genbank/dna_assembly.fasta
+Genbank/dna_nt.fasta
+Genbank/grep
+Genbank/out.txt
+Genbank/prot_assembly.fasta
+Genbank/prot_nt.fasta
 
 Antismash_gbids/antismash_output/
+Antismash_gbids/antismash_output_assemblies/
+Antismash_gbids/antismash_output_assemblies_part/
+Antismash_gbids/sequences.faa.89k.coord.fasta
+Antismash_gbids/targets.9.dnaassemblydb.out
+Antismash_gbids/targets.9.dnantdb.out
+Antismash_gbids/targets.9.protntdb.out
 Antismash_gbids/bak/
+Antismash_gbids/bak_dec/
 Antismash_gbids/seq_dir/
 Assemblies_zipped/
 
@@ -56,6 +70,10 @@ Targets/uniprot_manual_fasta/
 Targets/.DS_Store
 Targets/Uniprot/
 Targets/bak/
+
+Targets/all.out
+Targets/clusters_fasta/
+Targets/out.parsed.pident.50
 
 sratoolkit.2.9.0-ubuntu64.tar.gz
 sratoolkit.2.9.0-ubuntu64/

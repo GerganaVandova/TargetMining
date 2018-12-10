@@ -33,6 +33,14 @@ for gb_file in gb_files:
 
         if gbid in assembly_gbids:
             print "%s\t%s" % (gbid, gbid_to_filename[gbid])
+            output_file = "assembly_gb/%s.gbff" % gbid
+            
+            print "checking if %s exists" % output_file
+            if os.path.exists(output_file) == True:
+                print output_file, " exist"
+                continue
+
+            SeqIO.write(record, output_file, 'genbank')
             outf.write(gbid)
             outf.write("\t")
             outf.write(gbid_to_filename[gbid])

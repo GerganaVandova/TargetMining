@@ -9,7 +9,7 @@ import math
 
 # Blast parameters
 # num_alignments = 100000
-blast_evalue_cutoff = 0.05
+blast_evalue_cutoff = 1e-50
 # GV not used in this script; added in parse_script
 # blast_evalue_cutoff_parse = 1
 blastoutdir = "blast_results"
@@ -40,5 +40,11 @@ for blast_query_name in blast_query_names:
         blast_query_file = os.path.join(blast_query_dir, blast_query_name)
         print blast_query_name, mibigid, "\n"
         outfilename = os.path.join(blastoutdir, blast_query_name + "." + str(blast_evalue_cutoff) + "." + mibigid + ".out")
+        
+        #if os.path.exists(outfilename) == True:
+        #    print outfilename, " exist"
+        #    continue
+
+        outfilename = os.path.join(blastoutdir, blast_query_name + "." + str(blast_evalue_cutoff) + "." + mibigid + ".out")
         print outfilename
-        subprocess.call(["blastp", "-query", blast_query_file, "-db", dbdir, "-out",  outfilename, "-evalue", str(blast_evalue_cutoff), "-outfmt", "6 qseqid sseqid sstart send nident qlen slen evalue"])
+        subprocess.call(["blastp", "-query", blast_query_file, "-db", dbdir, "-out",  outfilename, "-evalue", str(blast_evalue_cutoff), "-outfmt", "6"])

@@ -9,10 +9,10 @@ E_VALUE_THRESH = float(1e-8)
 IDENTITY_THRESH = float(0.3)
 IDENTITY_THRESH_FABS = float(0.6)
 
-input_file = sys.argv[1]  # out.target.619.all
+input_file = sys.argv[1]  # out.target.9
 
 f = open(input_file).readlines()
-filename_filtered = sys.argv[2]  # out.targets.619.filtered
+filename_filtered = sys.argv[2]  # out.targets.9.filtered
 
 ff = open(filename_filtered, "w")
 # >NZ_ANBB01000037_cluster-1_75523-118144_t2fas-fabH_75248-75955_D459_RS33635_hypothetical protein

@@ -3,6 +3,11 @@ from Bio import SeqIO
 import js2py
 from js2py import EvalJs
 import os
+import sys
+import tqdm
+from multiprocessing import Pool
+
+
 
 gbids_to_coord = []
 
@@ -10,25 +15,44 @@ fasta_file = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/blast_results
 # Head of cdhit file:
 # >AVFP01000283.1__724_1992_Microbial_mat_metagenome_scaffold_282__whole_genome_shotgun_sequence_0_1_9914_7e-169
 # IAIIGMSGIFPDAEDVQTYWNNLCQGR
+# >AM746676___5843905_5845200__0_-1_13033779_0.0
+
 
 for record in SeqIO.parse(open(fasta_file, "rU"), "fasta"):
         gbidfull = record.id
-        gbid = gbidfull.split(".")[0]
-        coord1 = gbidfull.split("__")[1]
-        coord = coord1.split("_")
-        start = int(coord[0])
-        end = int(coord[1])
-        gbids_to_coord.append((gbid, start, end))
-# print gbids_to_coord
+        try:
+            gbid = gbidfull.split(".")[0]
+            coord1 = gbidfull.split("__")[1]
+            coord = coord1.split("_")
+            start = int(coord[0])
+            end = int(coord[1])
+            gbids_to_coord.append((gbid, start, end))
+
+        except:
+        #if "___" in gbidfull:
+            gbid = gbidfull.split("___")[0]
+            coord1 = gbidfull.split("___")[1]
+            coord2 = coord1.split("__")[0]
+            coord = coord2.split("_")
+            start = int(coord[0])
+            end = int(coord[1])
+            gbids_to_coord.append((gbid, start, end))
+        
+#for i in gbids_to_coord:
+#    print i
+
+count = 0
 
 context = EvalJs()
 
 # Output file with number of gbids on which antismash was run
-outfilefaa = "sequences.faa.95k.coord.fasta"
+outfilefaa = "sequences.faa.89k.coord.fasta"
 ff = open(outfilefaa, "w")
 
 antismash_dir = "antismash_output/"
 for gbid in os.listdir(antismash_dir):
+    count += 1
+    print "Parsing %s Number %s: " % (gbid, count)
     filename = antismash_dir + gbid + "/geneclusters.js"
     # print filename
 
@@ -78,3 +102,10 @@ for gbid in os.listdir(antismash_dir):
             ff.write("\n")
             ff.write(sequence)
             ff.write("\n")
+
+
+
+
+
+
+

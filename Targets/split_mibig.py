@@ -13,20 +13,7 @@ UTF8Writer = codecs.getwriter('utf8')
 sys.stdout = UTF8Writer(sys.stdout)
 
 
-def split_mibig_fasta(infile):
-    # Split mibig fasta file into subfiles for each cluster
-    with open(infile, "rU") as handle:
-        records = list(SeqIO.parse(handle, "fasta"))
-        for i in xrange(len(records)):
-            print(records[i].id)
-            mibigid = records[i].id.split('|')[0]
-            print mibigid
-            outfilename = 'mibig_fasta/' + mibigid + '.fasta'
-            f = open(outfilename, 'wa')
-            f.write(">%s\n" % mibigid)
-            f.write(str(records[i].seq))
-            f.close()
-
+# For each cluster make a fasta file with all proteins 
 
 def split_fasta(infile):
     # Split fasta file into files for each sequence
@@ -35,16 +22,16 @@ def split_fasta(infile):
     with open(infile, "rU") as handle:
         records = list(SeqIO.parse(handle, "fasta"))
         for record in records:
-            new_name = record.name.replace('|', '_')
-            outfilename = 'uniprot_seqs/' + new_name + '.seq'
-            print outfilename
-            f = open(outfilename, 'wa')
-            f.write(">%s\n" % new_name)
+            name = record.name
+            #>BGC0000001|c1|1-1083|+|no_locus_tag|protein_methyltransferase|AEK75490.1
+            print name
+            cluster = name.split("|")[0]
+            outfilename = "clusters_fasta/%s.fasta" % cluster
+            f = open(outfilename, 'a')
+            f.write(">%s\n" % name)
             f.write(str(record.seq))
-            f.close()
+            f.write("\n")
 
-
-
-# infile = 'MIBiG_prot_seqs_1.4.fasta'
-infile = 'all_uniprot.fa'
+infile = 'MIBiG_prot_seqs_1.4.fa'
+#infile = 'all_uniprot.fa'
 split_fasta(infile)

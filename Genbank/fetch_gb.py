@@ -11,13 +11,15 @@ from Bio import Entrez
 Entrez.email = 'gergana.vandova@gmail.com'
 # accession id works, returns genbank format, looks in the 'nucleotide' database:
 
-gbids = []
-gbidfile = "gbids.nt.unique.txt"
-f = open(gbidfile, "r")
-for line in f:
-    gbid = line.strip()
-    gbids.append(gbid)
+#gbids = []
+#gbidfile = "gbids.nt.unique.txt"
+#f = open(gbidfile, "r")
+#for line in f:
+#    gbid = line.strip()
+#    gbids.append(gbid)
 
+
+gbids = ['CP033141']
 
 count = 0
 for gbid in gbids:

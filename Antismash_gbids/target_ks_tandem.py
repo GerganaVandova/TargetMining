@@ -3,7 +3,7 @@ from Bio import SeqIO
 import sys
 
 # To execute script: ./target_ks_tandem.py <filtered_filename> <dist cutoff>
-# For example: ./target_ks_tandem.py out.targets.7.filtered 10000
+# For example: ./target_ks_tandem.py out.targets.9.filtered 10000
 
 # Max distance of target to KS
 DIST_CUTOFF = int(sys.argv[2])
@@ -37,14 +37,27 @@ fasta_file = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/blast_results
 # Head of cdhit file:
 # >AVFP01000283.1__724_1992_Microbial_mat_metagenome_scaffold_282__whole_genome_shotgun_sequence_0_1_9914_7e-169
 # IAIIGMSGIFPDAEDVQTYWNNLCQGR
+# >AM746676___5843905_5845200__0_-1_13033779_0.0
+
 for record in SeqIO.parse(open(fasta_file, "rU"), "fasta"):
-    gbidfull = record.id
-    gbid = gbidfull.split(".")[0]
-    coord1 = gbidfull.split("__")[1]
-    coord = coord1.split("_")
-    start = int(coord[0])
-    end = int(coord[1])
-    gbids_to_coord.append((gbid, start, end))
+        gbidfull = record.id
+        try:
+            gbid = gbidfull.split(".")[0]
+            coord1 = gbidfull.split("__")[1]
+            coord = coord1.split("_")
+            start = int(coord[0])
+            end = int(coord[1])
+            gbids_to_coord.append((gbid, start, end))
+
+        except:
+        #if "___" in gbidfull:
+            gbid = gbidfull.split("___")[0]
+            coord1 = gbidfull.split("___")[1]
+            coord2 = coord1.split("__")[0]
+            coord = coord2.split("_")
+            start = int(coord[0])
+            end = int(coord[1])
+            gbids_to_coord.append((gbid, start, end))
 
 print len(gbids_to_coord)
 
