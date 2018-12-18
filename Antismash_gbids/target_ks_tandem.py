@@ -15,6 +15,9 @@ ff = open(outfilename, "w")
 targets_to_coord = []
 f = open(filtered_filename).readlines()
 
+
+
+#GyrB-R_Gyrase-B_novobiocin_Streptomyces-niveus_WP-069626152.1   CP012600        1       124209-194019   t1pks-nrps      ctg1_140_-      130514  132463  305.0   677.0   649 0.45     0.0
 # FabB/F	KJ189772	2	22654-53136	t2fas	AIW55624.1_ptmP3	1	404	397.0	404.0	404	0.98	0.0
 # qseqid, gbid, clusternum, coord, clustertype, protname, prot_start, prot_end, nident, qlen, slen, identity, evalue)
 
@@ -39,25 +42,38 @@ fasta_file = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/blast_results
 # IAIIGMSGIFPDAEDVQTYWNNLCQGR
 # >AM746676___5843905_5845200__0_-1_13033779_0.0
 
-for record in SeqIO.parse(open(fasta_file, "rU"), "fasta"):
-        gbidfull = record.id
-        try:
-            gbid = gbidfull.split(".")[0]
-            coord1 = gbidfull.split("__")[1]
-            coord = coord1.split("_")
-            start = int(coord[0])
-            end = int(coord[1])
-            gbids_to_coord.append((gbid, start, end))
 
-        except:
-        #if "___" in gbidfull:
-            gbid = gbidfull.split("___")[0]
-            coord1 = gbidfull.split("___")[1]
-            coord2 = coord1.split("__")[0]
-            coord = coord2.split("_")
-            start = int(coord[0])
-            end = int(coord[1])
-            gbids_to_coord.append((gbid, start, end))
+for record in SeqIO.parse(open(fasta_file, "rU"), "fasta"):
+    gbidfull = record.id
+#    print gbidfull
+    gbid, rest = gbidfull.split("__", 1)
+    parts = filter(lambda x: x, rest.split('_'))
+    start = int(parts[0])
+    end = int(parts[1])
+#    print gbid, start, end
+#    gbids_to_coord[gbid].append((start, end))
+    gbids_to_coord.append((gbid, start, end))
+
+
+#for record in SeqIO.parse(open(fasta_file, "rU"), "fasta"):
+#        gbidfull = record.id
+#        try:
+#            gbid = gbidfull.split(".")[0]
+#            coord1 = gbidfull.split("__")[1]
+#            coord = coord1.split("_")
+#            start = int(coord[0])
+#            end = int(coord[1])
+#            gbids_to_coord.append((gbid, start, end))
+#
+#        except:
+#        #if "___" in gbidfull:
+#            gbid = gbidfull.split("___")[0]
+#            coord1 = gbidfull.split("___")[1]
+#            coord2 = coord1.split("__")[0]
+#            coord = coord2.split("_")
+#            start = int(coord[0])
+#            end = int(coord[1])
+#            gbids_to_coord.append((gbid, start, end))
 
 print len(gbids_to_coord)
 
@@ -68,29 +84,34 @@ for i in xrange(len(targets_to_coord)):
     seq_id = targets_to_coord[i][1]
     target_start = int(targets_to_coord[i][6])
     target_end = int(targets_to_coord[i][7])
-    # print seq_id, target_start, target_end
+    #print seq_id, target_start, target_end
 
     for j in xrange(len(gbids_to_coord)):
         gbid, gb_start, gb_end = gbids_to_coord[j]
-        # print gbid
-        if seq_id == gbid:
-            # Check if targets are withing Xkb of a KS identified from
-            # the initial blast search
-            dist1 = abs(gb_start - target_end)
-            dist2 = abs(target_start - gb_end)
-            dist = min(dist1, dist2)
-            cluster_start, cluster_end = targets_to_coord[i][3].split("-")
-            cluster_start = int(cluster_start)
-            cluster_end = int(cluster_end)
-            cluster_len = abs(cluster_start - cluster_end)
-            if dist < DIST_CUTOFF:
-                print seq_id, DIST_CUTOFF, dist
-                # print seq_id, dist1, gb_start, gb_end, dist
-                ff.write(str(cluster_len))
-                ff.write("\t")
-                ff.write("\t".join(map(str, targets_to_coord[i])))
-                ff.write("\t%d\t%d\t%d" % (gb_start, gb_end, dist))
-                ff.write("\n")
-                # print "<10kb", target_id, abs(gb_start - target_end), \ gb_start, gb_end
+        if gbid == "CP012600":
+            #print gbid
+            if seq_id == gbid:
+                print targets_to_coord[i]
+                print "CP012600 found"
+                print "target coords: ", targets_to_coord[i][0], target_start, target_end 
+                # Check if targets are withing Xkb of a KS identified from
+                # the initial blast search
+                dist1 = abs(gb_start - target_end)
+                dist2 = abs(target_start - gb_end)
+                dist = min(dist1, dist2)
+                cluster_start, cluster_end = targets_to_coord[i][3].split("-")
+                cluster_start = int(cluster_start)
+                cluster_end = int(cluster_end)
+                cluster_len = abs(cluster_start - cluster_end)
+                print "dist", dist
+                if dist < DIST_CUTOFF:
+                    print seq_id, DIST_CUTOFF, dist
+                    # print seq_id, dist1, gb_start, gb_end, dist
+                    ff.write(str(cluster_len))
+                    ff.write("\t")
+                    ff.write("\t".join(map(str, targets_to_coord[i])))
+                    ff.write("\t%d\t%d\t%d" % (gb_start, gb_end, dist))
+                    ff.write("\n")
+                    # print "<10kb", target_id, abs(gb_start - target_end), \ gb_start, gb_end
 
 ff.close()

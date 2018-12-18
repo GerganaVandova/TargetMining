@@ -1,3 +1,4 @@
+
 Assemblies/
 
 Blast/mibig_json_1.4.tar.gz
@@ -42,6 +43,12 @@ Genbank/prot_nt.fasta
 Antismash_gbids/antismash_output/
 Antismash_gbids/antismash_output_assemblies/
 Antismash_gbids/antismash_output_assemblies_part/
+Antismash_gbids/antismash_output_assemblies_all/
+Antismash_gbids/antismash_output_assemblies_all_old/
+Antismash_gbids/antismashdb/
+Antismash_gbids/bak_1204/
+Antismash_gbids/bak_1213/
+Antismash_gbids/bak_1216/
 Antismash_gbids/sequences.faa.89k.coord.fasta
 Antismash_gbids/targets.9.dnaassemblydb.out
 Antismash_gbids/targets.9.dnantdb.out
@@ -49,6 +56,16 @@ Antismash_gbids/targets.9.protntdb.out
 Antismash_gbids/bak/
 Antismash_gbids/bak_dec/
 Antismash_gbids/seq_dir/
+Antismash_gbids/out.*
+
+Targets/out.parsed.pident.30
+Targets/out.parsed.pident.30-50
+Targets/out.targets.13.parsed.pident.30
+Targets/split_fasta.py
+Targets/targets.13.fasta
+Targets/threonyl-trna_synthetase.uniref.fasta.1e-50.all.out
+Targets/uniprot_fasta2/
+
 Assemblies_zipped/
 
 Targets/blast_results/

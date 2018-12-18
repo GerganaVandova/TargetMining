@@ -26,8 +26,10 @@ for mibig_id in mibig_ids:
     # print mibig_id
 
 # Specify which queries to blast (KS*.seq, CLF*.seq, etc)
-blast_query_dir = "uniprot_fasta/"
-blast_query_files = glob.glob("uniprot_fasta/*.fasta")
+#blast_query_dir = "uniprot_fasta/"
+blast_query_dir = "uniprot_fasta2/"
+#blast_query_files = glob.glob("uniprot_fasta/*.fasta")
+blast_query_files = glob.glob("uniprot_fasta2/*.fasta")
 print blast_query_files
 blast_query_names = map(os.path.basename, blast_query_files)
 print blast_query_names

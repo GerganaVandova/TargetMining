@@ -23,7 +23,8 @@ for line in f.readlines():
     id_to_name[mibigid] = (params[1:])
 
 
-blast_files = glob.glob("blast_results/*.out")
+#blast_files = glob.glob("blast_results/*.out")
+blast_files = glob.glob("blast_results/targets.13.*.out")
 
 for blast_file in blast_files:
     q = blast_file.split(".")[0]
@@ -36,7 +37,7 @@ for blast_file in blast_files:
         pident = float(pident)
         mibigid = sseqid.split("|")[0]
     
-        if pident > 50:
+        if pident > 30:
             if mibigid == "BGC0001482":
                 print "%s\t%s\tNoparams\t%s\t%.2f\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s" % (mibigid, target, sseqid, pident, length, mismatch, gapopen, qstart, qend, sstart, send, evalue, bitscore)
             else:

@@ -24,7 +24,8 @@ ff = open(filename_filtered, "w")
 # Add another If statement and replace with acyl-amino-acids
 
 for line in f:
-    qseqid, sseqid, sstart, send, nident, qlen, slen, evalue = line.split("\t")
+    qseqid, sseqid1, sstart, send, nident, qlen, slen, evalue = line.split("\t")
+    sseqid = sseqid1.split("_<span")[0]
     gbid, descr = sseqid.split("_cluster-")
     print "\n\n\ndescr: ", descr
     clusternum = descr.split("_")[0]
