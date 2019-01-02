@@ -16,7 +16,6 @@ filename_filtered = sys.argv[2]  # out.targets.9.filtered
 
 ff = open(filename_filtered, "w")
 # >NZ_ANBB01000037_cluster-1_75523-118144_t2fas-fabH_75248-75955_D459_RS33635_hypothetical protein
-
 # 1_75523-118144_t2fas-fabH_75248-75955_D459_RS33635_hypothetical protein
 # 1_79330-123547_t2fas-UbiA_cyclase_99330-100598_ctg1_orf00116_- cyclase
 # Script crashes when parsing coord because of acy_amino_acids in 50 lines like this one:
@@ -27,6 +26,9 @@ for line in f:
     qseqid, sseqid1, sstart, send, nident, qlen, slen, evalue = line.split("\t")
     sseqid = sseqid1.split("_<span")[0]
     gbid, descr = sseqid.split("_cluster-")
+#    if gbid != "AJ871581":
+#        continue
+
     print "\n\n\ndescr: ", descr
     clusternum = descr.split("_")[0]
     coord = descr.split("_")[1]
@@ -46,9 +48,12 @@ for line in f:
     qlen = float(qlen)
     identity = float(nident)/qlen
     evalue = float(evalue)
+
+    print "identity:", identity
+
     if "Fab" in qseqid:
         if evalue < E_VALUE_THRESH and identity > IDENTITY_THRESH_FABS:
-            # write ture protein coordinates
+            # write true protein coordinates
             print ("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%.2f\t%s" %
                    (qseqid, gbid, clusternum, coord, clustertype, protname,
                     prot_start, prot_end, nident, qlen, slen, identity, evalue))

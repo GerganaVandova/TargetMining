@@ -56,7 +56,55 @@ for gbidfull in tqdm.tqdm(os.listdir(antismash_dir)):
     details_data = context.details_data.to_dict()
 
 
+    domains = ["PKS_KS", "PKS_KR", "PKS_DH", "PKS_ER", "KS_AT", "KS_ACP",
+               "AMP-binding", "Condensation_LCL", "Condensation_DCL", "Condensation_Starter", "PCP",]
+
+    for cluster_id in details_data.iterkeys():
+        print "cluster-id from details_data:", cluster_id
+        geneclusterorfs = details_data[cluster_id]["orfs"]
+        domain_counts = defaultdict(int)
+        for orf in geneclusterorfs:
+            for domain in orf["domains"]:
+                domain_type = domain["type"]
+                for d in domains:
+                    if d in domain_type:
+                        domain_counts[d] += 1
+
+        cluster_key = "%s|%s" % (gbidfull, cluster_id)
+        print gbidfull, cluster_id, cluster_key, domain_counts
+
+        cluster_to_domains[cluster_key] = domain_counts
+
+    
     for cluster_id in geneclusters.iterkeys():
+        cluster_key = "%s|%s" % (gbidfull, cluster_id)
+        print "%s %s" % (cluster_key, json.dumps(cluster_to_domains.get(cluster_key)))
+
+        # write protein sequences in a fasta file
+        ff.write("%s\t%s" % (cluster_key, json.dumps(cluster_to_domains.get(cluster_key))))
+        ff.write("\n")
+        ff.flush()
+
+
+
+
+    for cluster_id in geneclusters.iterkeys():
+        
+        print "cluster-id from details_data:", cluster_id
+        geneclusterorfs = details_data[cluster_id]["orfs"]
+        domain_counts = defaultdict(int)
+        for orf in geneclusterorfs:
+            for domain in orf["domains"]:
+                domain_type = domain["type"]
+                for d in domains:
+                    if d in domain_type:
+                        domain_counts[d] += 1
+            
+        cluster_key = "%s|%s" % (gbidfull, cluster_id)
+        print gbidfull, cluster_id, cluster_key, domain_counts
+            
+        cluster_to_domains[cluster_key] = domain_counts
+
         geneclustertype = geneclusters[cluster_id]["type"]
         a_start = int(geneclusters[cluster_id]["start"])
         a_end = int(geneclusters[cluster_id]["end"])

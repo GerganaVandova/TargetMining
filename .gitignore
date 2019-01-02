@@ -1,3 +1,17 @@
+Antismash_gbids/all.cluster.counts.sorted.txt
+Antismash_gbids/all.cluster.counts.txt
+Antismash_gbids/all.cluster.counts.unique.txt
+Antismash_gbids/antismash_output_assemblies_all_deleted/
+Antismash_gbids/baks/
+Antismash_gbids/debug/
+Antismash_gbids/domain_counts_assemblies.txt
+Antismash_gbids/domain_counts_nt.txt
+Blast/mibigid_to_gbid.txt
+Genbank/complete_genomes_assembly.txt
+Genbank/taxa.txt
+Genbank/taxa_assembly.new.txt
+Genbank/taxa_nt.new.txt
+
 
 Assemblies/
 

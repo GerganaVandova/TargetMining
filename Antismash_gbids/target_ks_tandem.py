@@ -15,9 +15,9 @@ ff = open(outfilename, "w")
 targets_to_coord = []
 f = open(filtered_filename).readlines()
 
+min_distance = {}
+data = {}
 
-
-#GyrB-R_Gyrase-B_novobiocin_Streptomyces-niveus_WP-069626152.1   CP012600        1       124209-194019   t1pks-nrps      ctg1_140_-      130514  132463  305.0   677.0   649 0.45     0.0
 # FabB/F	KJ189772	2	22654-53136	t2fas	AIW55624.1_ptmP3	1	404	397.0	404.0	404	0.98	0.0
 # qseqid, gbid, clusternum, coord, clustertype, protname, prot_start, prot_end, nident, qlen, slen, identity, evalue)
 
@@ -47,35 +47,21 @@ for record in SeqIO.parse(open(fasta_file, "rU"), "fasta"):
     gbidfull = record.id
 #    print gbidfull
     gbid, rest = gbidfull.split("__", 1)
+    gbid = gbid.split(".")[0]
     parts = filter(lambda x: x, rest.split('_'))
     start = int(parts[0])
     end = int(parts[1])
+#    if gbid.startswith("KT362046"):
+#        print gbid
 #    print gbid, start, end
 #    gbids_to_coord[gbid].append((start, end))
     gbids_to_coord.append((gbid, start, end))
 
 
-#for record in SeqIO.parse(open(fasta_file, "rU"), "fasta"):
-#        gbidfull = record.id
-#        try:
-#            gbid = gbidfull.split(".")[0]
-#            coord1 = gbidfull.split("__")[1]
-#            coord = coord1.split("_")
-#            start = int(coord[0])
-#            end = int(coord[1])
-#            gbids_to_coord.append((gbid, start, end))
-#
-#        except:
-#        #if "___" in gbidfull:
-#            gbid = gbidfull.split("___")[0]
-#            coord1 = gbidfull.split("___")[1]
-#            coord2 = coord1.split("__")[0]
-#            coord = coord2.split("_")
-#            start = int(coord[0])
-#            end = int(coord[1])
-#            gbids_to_coord.append((gbid, start, end))
+#print len(gbids_to_coord)
 
-print len(gbids_to_coord)
+def get_key(arr):
+    return (arr[0], arr[1], arr[2], arr[3], arr[5])
 
 for i in xrange(len(targets_to_coord)):
     # print targets_to_coord[i]
@@ -84,34 +70,45 @@ for i in xrange(len(targets_to_coord)):
     seq_id = targets_to_coord[i][1]
     target_start = int(targets_to_coord[i][6])
     target_end = int(targets_to_coord[i][7])
+    
+    #if seq_id != "KT362046":
+    #    continue
+
     #print seq_id, target_start, target_end
 
     for j in xrange(len(gbids_to_coord)):
         gbid, gb_start, gb_end = gbids_to_coord[j]
-        if gbid == "CP012600":
-            #print gbid
-            if seq_id == gbid:
-                print targets_to_coord[i]
-                print "CP012600 found"
-                print "target coords: ", targets_to_coord[i][0], target_start, target_end 
-                # Check if targets are withing Xkb of a KS identified from
-                # the initial blast search
-                dist1 = abs(gb_start - target_end)
-                dist2 = abs(target_start - gb_end)
-                dist = min(dist1, dist2)
-                cluster_start, cluster_end = targets_to_coord[i][3].split("-")
-                cluster_start = int(cluster_start)
-                cluster_end = int(cluster_end)
-                cluster_len = abs(cluster_start - cluster_end)
-                print "dist", dist
-                if dist < DIST_CUTOFF:
-                    print seq_id, DIST_CUTOFF, dist
-                    # print seq_id, dist1, gb_start, gb_end, dist
-                    ff.write(str(cluster_len))
-                    ff.write("\t")
-                    ff.write("\t".join(map(str, targets_to_coord[i])))
-                    ff.write("\t%d\t%d\t%d" % (gb_start, gb_end, dist))
-                    ff.write("\n")
-                    # print "<10kb", target_id, abs(gb_start - target_end), \ gb_start, gb_end
+        if seq_id == gbid:
+            print targets_to_coord[i]
+            print "KS coord: ", gb_start, gb_end
+            print "target coords: ", targets_to_coord[i][0], target_start, target_end 
+            # Check if targets are within Xkb of a KS identified from
+            # the initial blast search
+            dist1 = abs(gb_start - target_end)
+            dist2 = abs(target_start - gb_end)
+            dist = min(dist1, dist2)
+            cluster_start, cluster_end = targets_to_coord[i][3].split("-")
+            cluster_start = int(cluster_start)
+            cluster_end = int(cluster_end)
+            cluster_len = abs(cluster_start - cluster_end)
+            print "dist", dist, "\n"
+            if dist < DIST_CUTOFF:
+                print seq_id, DIST_CUTOFF, dist
+                # print seq_id, dist1, gb_start, gb_end, dist
+                line = "%s\t%s\t%s" % (
+                    "\t".join(map(str, targets_to_coord[i])), 
+                    "\t".join(map(str, [gb_start, gb_end, dist])),
+                    cluster_len)
+#                ff.write(line)
+#                ff.write("\n")
+                key = get_key(targets_to_coord[i])
+                if min_distance.get(key) is None or min_distance.get(key) > dist:
+                    min_distance[key] = dist
+                    data[key] = line 
+
+
+for v in data.itervalues():
+    ff.write(v)
+    ff.write("\n")
 
 ff.close()
