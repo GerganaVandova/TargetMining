@@ -1,3 +1,8 @@
+Antismash_gbids/antismash_ids.txt
+Genbank/complete_genomes.txt
+Genbank/complete_genomes_nt.txt
+
+
 Antismash_gbids/all.cluster.counts.sorted.txt
 Antismash_gbids/all.cluster.counts.txt
 Antismash_gbids/all.cluster.counts.unique.txt
