@@ -4,7 +4,7 @@
 
 from Bio import SeqIO
 import glob
-
+import sys
 
 def get_complete_genomes(outfile, gbfilenames):
     
@@ -26,11 +26,16 @@ def get_complete_genomes(outfile, gbfilenames):
         for record in SeqIO.parse(open(gbfilename, "rU"), "genbank"):
             count += 1
             gbid = record.id.split(".")[0]
+            #TODO: try: descr = record.description
             print count, gbid, len(record.seq), record.annotations["keywords"]
             seq = record.seq
             t.write("%s\t%s" % (gbid, len(record.seq)))
             t.write("\n")
     t.close()
+
+
+sys.exit(0)
+
 
 
 outfile_assemblies  = "complete_genomes_assembly.txt"

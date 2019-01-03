@@ -8,7 +8,7 @@ import tqdm
 from multiprocessing import Pool
 from collections import defaultdict
 
-gbids_to_coord = defaultdict(list)
+#gbids_to_coord = defaultdict(list)
 
 fasta_file = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/blast_results_seqs/blast_results.KS.fasta.cleanName.cdhit.99"
 # Head of cdhit file:
