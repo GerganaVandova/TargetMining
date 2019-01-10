@@ -111,6 +111,9 @@ Targets/all.out
 Targets/clusters_fasta/
 Targets/out.parsed.pident.50
 
+Second_copy/checks
+
+
 sratoolkit.2.9.0-ubuntu64.tar.gz
 sratoolkit.2.9.0-ubuntu64/
 

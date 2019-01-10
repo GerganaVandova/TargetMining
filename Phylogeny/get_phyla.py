@@ -18,18 +18,14 @@ for line in taxafile:
         gbid_to_phyla[gbid] = phyla
 
 
-#f = open("out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.fasta.phyla", "w")
-f = open("out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.cdhit.90.phyla", "w")
+f = open("out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.fasta.phyla", "w")
 
 
 # Read KS fasta file and write phyla for each gbid
 #ACXX02000001_38012-39229
-#fasta_file = "out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.fasta"
-fasta_file = "out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.cdhit.90"
+fasta_file = "out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.fasta"
 for record in SeqIO.parse(open(fasta_file, "rU"), "fasta"):
     gbidfull = record.id
-    if "FabF" in gbidfull:
-        continue
     #print gbidfull
     gbid, coord  = gbidfull.rsplit("_", 1)
     if gbid in gbid_to_phyla.keys():
