@@ -3,8 +3,35 @@ https://www.sciencemag.org/careers/2013/11/perfect-time-babies
 
 Useful commands:
 diskutil umount force /Users/gvandova/oldTargetMining/
-sshfs gvandova@maguro.stanford.edu:/mnt/gnpn/gnpn/projects/orphanpks/oldTargetMining/ /Users/gvandova/oldTargetMining/
+sshfs gvandova@maguro.stanford.e:/mnt/gnpn/gnpn/projects/orphanpks/oldTargetMining/ /Users/gvandova/oldTargetMining/
 find . -type f -print | xargs grep "Y15279"
+
+Recent literature on resistant genes:
+Core papers:
+1. Tang, X. et al. Identification of thiotetronic acid antibiotic biosynthetic pathways by target-directed genome mining. ACS Chem. Biol. 10, 2841–2849 (2015).
+https://pubs.acs.org/doi/10.1021/acschembio.5b00658
+
+2. Alanjary, M. et al. The antibiotic resistant target seeker (ARTS), an exploration engine for antibiotic cluster prioritization and novel drug target discovery. Nucleic Acids Res. 45, W42–W48 (2017).
+https://academic.oup.com/nar/article/45/W1/W42/3787867
+
+3. Yeh, H.-H. et al. Resistance gene-guided genome mining: serial promoter exchanges in Aspergillus nilans reveal the biosynthetic pathway for fellutamide B, a proteasome inhibitor. ACS Chem. Biol. 11, 2275–2284 (2016).
+https://pubs.acs.org/doi/10.1021/acschembio.6b00213
+
+
+4. Identifying more than 300 Biosynthetic Gene Clusters with Potential Resistance Genes
+in over 75 Aspergillus species using Resistance Gene-Guided Genome Mining
+http://orbit.dtu.dk/files/142117110/29FGC_abstract3.pdf
+
+5. Resistance Gene-Guided Genome Mining: Serial Promoter Exchanges in Aspergillus nilans Reveal the Biosynthetic Pathway for Fellutamide B, a Proteasome Inhibitor.
+https://www.ncbi.nlm.nih.gov/pubmed/27294372
+
+6. Genomics‐driven discovery of a novel self‐resistance mechanism in the echinocandin‐procing fungus Pezicula radicicola
+https://onlinelibrary.wiley.com/doi/abs/10.1111/1462-2920.14089
+
+7. Self-resistance guided genome mining uncovers new topoisomerase inhibitors from myxobacteria†
+https://pubs.rsc.org/en/content/articlehtml/2018/sc/c8sc01325j
+________________________________________________________________________________
+
 
 April 25, 2018
 
@@ -388,7 +415,7 @@ gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/blast_resul
 
 2. ./get_gbid.py
 
-  gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat gbids.txt |wc
+  cat gbids.txt |wc
   162984  162984 1918063
 
 3. cat gbids.txt |sort -u > gbids.unique.txt
@@ -594,10 +621,22 @@ Nov-1-2018
       Move gb files in Assemblies/assemblies_gbdir
       Copy parse_gb.py in Assemblies/
       Run parse_gb.py on all gb files and output both protein and dna sequences
-        4063.pts-20.maguro
+        Outfiles: assemblies_dna.fasta
+                  assemblies_prot.fasta
+
+Nov-8-2018
+      makeblastdb -in assemblies_dna.fasta -dbtype nucl -out asembliesntdb
+      screen -R 4063.pts-20.maguro
 
       TODO: make a blast database from
-
+      makeblastdb -in assemblies_prot.fasta -dbtype prot -out asembliesprotdb
+      Building a new DB, current time: 11/08/2018 15:32:52
+      New DB name:   asembliesprotdb
+      New DB title:  assemblies_prot.fasta
+      Sequence type: Protein
+      Keep Linkouts: T
+      Keep MBits: T
+      Maximum file size: 1000000000B
 
 
 Nov-2-2018
@@ -618,26 +657,649 @@ Nov-6-2018
              Output files: sequences.faa.95k.coord.fasta
              screen -R 4691.pts-11.maguro DONE
 
-            STEP5. Make database from sequences.faa.95k.fasta
-                Split sequences.faa.95k.fasta into 10 files:
-                pyfasta split -n 10 sequences.faa.coord.95k.fasta
-                Run makeblastdb.py on 10 input sequences
+Nov-8-2018
+      STEP5. Make database from sequences.faa.95k.fasta
+          1. Split sequences.faa.95k.fasta into 10 files:
+             pyfasta split -n 10 sequences.faa.coord.95k.fasta
+                  Error because the following heather appears twice:
+                  >CP004877_cluster-1_1-114489_sactipeptide-lantipeptide-t1pks-nrps_92173-92246_cluster_1_allorf110_<span class="svgene-tooltip-bold">-</span>
+                  LLELLSMCSMFCGIIKFSSCGNRG
+                  >CP004877_cluster-1_1-114489_sactipeptide-lantipeptide-t1pks-nrps_92173-92246_cluster_1_allorf1100_<span class="svgene-tooltip-bold">-</span>
+                  LLELLSMCSMFCGIIKFSSCGNRG
+                  Manually add another 0 in allorf110 but gene appears twice
+                  Output files:
+                  sequences.faa.95k.coord.00.fasta
+                  sequences.faa.95k.coord.01.fasta
+                  ...
+                  sequences.faa.95k.coord.09.fasta
 
-            STEP6. Run blast to identify if target is located in clusters
-            run_blastp.py
-            input files: target file: targets.609.fa
-                         blast databases: antismashdb_sequences.faa.95k.coord.00.fasta
-                                          antismashdb_sequences.faa.95k.coord.01.fasta
-                                          ....
-                                          antismashdb_sequences.faa.95k.coord.09.fasta
+          2. mv sequences.faa.95k.coord.* seq_dir/
+          3. Run makeblastdb.py on 10 input sequences
+             screen -R 22483.pts-18.maguro
 
-            output file: out.targets.609
+Nov-9-2018
+      STEP6. Run blast to identify if target is located in clusters
+      1. run_blastp.py
+         input files: target file: targets.609.fa
+                   blast databases: antismashdb_sequences.faa.95k.coord.00.fasta
+                                    antismashdb_sequences.faa.95k.coord.01.fasta
+                                    ....
+                                    antismashdb_sequences.faa.95k.coord.09.fasta
 
-            STEP7. Filter output file
-            filter_blast.py
+         output file: out.targets.9.00
+                      out.targets.9.01
+                      ...
+                      out.targets.9.09
 
-            STEP8. Target and KS tandem
-            target_ks_tandem.py
+      2. cat out.targets.9.0* > out.targets.9.all
+         cat out.targets.9.all |wc
+         12946  103568 2120835
+
+      STEP7. Filter output file
+      ./filter_blast.py out.targets.9.all out.targets.9.filtered
+      E_VALUE_THRESH = float(1e-8)
+      IDENTITY_THRESH = float(0.3)
+      IDENTITY_THRESH_FABS = float(0.6)
+
+      Error in script, can't parse coord
+      Traceback (most recent call last):
+      File "./filter_blast.py", line 36, in <module>
+      prot_start, prot_end = prot_coord.split("-")
+      ValueError: need more than 1 value to unpack
+
+      Manually correct acyl_amino_acids to acyl-amino-acids in
+      CP013729_cluster-6_2605334-2666635_acyl_amino_acids_2662467-2663999_RD2015_2281_<span
+
+      Error still present. There are 50 more occurences of acyl_amino_acids
+      cat out.targets.9.all | grep "acyl_amino_acids" |wc
+      50     400    8780
+      cat out.targets.9.filtered |wc
+         1792   23296  292771
+
+      ###########################################################################
+      DEBUGGING
+
+      !!!!! There were more hits last time I ran the platform with 7 targets:
+            gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/oldTargetMining/Antismash_gbids$ cat out.targets.7.filtered |wc
+                  3333   43329  467944
+            gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/oldTargetMining/Antismash_gbids$ cat out.targets.7.all |wc
+                  11265   90120 1642076
+            TargetMining/Antismash_gbids$ cat sequences.faa.95k.coord.fasta | grep ">" |wc
+            1 958 529 5740072 254263001
+            oldTargetMining/Antismash_gbids$ cat sequences.faa.84k.coord.fasta | grep ">" |wc
+            2 417 897 4785716 217137806
+            TargetMining/Antismash_gbids$ find antismash_output/ -type f -name "geneclusters.js" |wc
+            56 953   56953 2 591 304
+            oldTargetMining/Antismash_gbids$ find antismash_output/ -type f -name "geneclusters.js" |wc
+            53 613   53613 2 673 271
+            oldTargetMining/Antismash_gbids$ cat out.targets.8.0-9.filtered | grep GyrB |wc
+                454    5902   45338
+            TargetMining/Antismash_gbids$ cat out.targets.9.filtered | grep GyrB |wc
+                309    4017   49957
+            oldTargetMining/Antismash_gbids$ cat out.targets.8.0-9 | grep FabB/F |wc
+               5000   40000  597590
+            TargetMining/Antismash_gbids$ cat out.targets.9.all | grep FabB/F |wc
+             5030   40240  814895
+             oldTargetMining/Antismash_gbids$ cat out.targets.8.0-9.filtered | grep FabB/F |wc
+             95    1235   10365
+             TargetMining/Antismash_gbids$ cat out.targets.9.filtered | grep FabB/F |wc
+             24     312    3702
+             oldTargetMining/Antismash_gbids$ cat out.targets.8.0-9.filtered | grep DnaN |wc
+             21     273    2039
+             oldTargetMining/Antismash_gbids$ cat out.targets.8.0-9.filtered | grep EF-Tu |wc
+             279    3627   28759
+             oldTargetMining/Antismash_gbids$ cat out.targets.8.0-9.filtered | grep ACC |wc
+
+
+
+            Missing gbid from out.targets.9.filtered: CP007219:
+            gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/oldTargetMining/Blast/blast_results$ grep -R CP007219 *
+            KSDisorazole.seq.100000.alignments.evalue1.nt:>gb|CP007219.1| Amycolatopsis lurida NRRL 2430, complete genome
+            KSEpothilone.seq.100000.alignments.evalue1.nt:>gb|CP007219.1| Amycolatopsis lurida NRRL 2430, complete genome
+            KSErythromycin.seq.100000.alignments.evalue1.nt:gb|CP007219.1|  Amycolatopsis lurida NRRL 2430, complete genome         467   2e-143
+            KSErythromycin.seq.100000.alignments.evalue1.nt:>gb|CP007219.1| Amycolatopsis lurida NRRL 2430, complete genome
+            KSRapamycin.seq.100000.alignments.evalue1.nt:gb|CP007219.1|  Amycolatopsis lurida NRRL 2430, complete genome         558   6e-175
+            KSRapamycin.seq.100000.alignments.evalue1.nt:>gb|CP007219.1| Amycolatopsis lurida NRRL 2430, complete genome
+            KSRifamycin.seq.100000.alignments.evalue1.nt:>gb|CP007219.1| Amycolatopsis lurida NRRL 2430, complete genome
+
+            tblastn -query /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/Manual/KSdisorazol.seq -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/nt -out test.KSDisorazole.seq.100000.alignments.evalue1.nt -num_alignments 100000 -seg no -evalue 1 -num_threads 64
+            tblastn -query /mnt/gnpn/gnpn/projects/orphanpks/oldTargetMining/Blast/Manual/KSDisorazole.seq -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/nt -out test.oldKSDisorazole.seq.100000.alignments.evalue1.nt -num_alignments 100000 -seg no -evalue 1 -num_threads 64
+            tblastn -query /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/Manual/KSdisorazol.seq -subject ../../oldTargetMining/Genbank/gbdir/CP007219.gb -out test.KSDisorazole.CP007219
+            tblastn -query /mnt/gnpn/gnpn/projects/orphanpks/oldTargetMining/Blast/Manual/KSDisorazole.seq -subject ../../oldTargetMining/Genbank/gbdir/CP007219.gb -out test.oldKSDisorazole.CP007219
+            tblastn -query /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/Manual/KSdisorazol.seq -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/nt -out test.KSDisorazole.seq.100000.alignments.evalue1e50.nt -num_alignments 100000 -seg no -evalue 1e-50 -num_threads 64
+            tblastn -query /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/CP007219-part.seq -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/nt -out test.CP007219-part.seq.100000.alignments.evalue1e50.nt -num_alignments 100000 -seg no -evalue 1e-50 -num_threads 64
+
+
+            The CP007219 is moved to the wgs database. Manual blast of the CP007219 hit sequence identified it in the wgs database.
+            Run tblastn searching the assemblies database
+            JFBM01000055 - this is the new gbid that corresponds to CP007219 in wgs
+            tblastn -query /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/Manual/KSdisorazol.seq -db /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Assemblies/blastdb/asembliesntdb -out test.KSDisorazole.seq.100000.alignments.evalue1e50.assemblies -num_alignments 100000 -seg no -evalue 1e-50 -num_threads 64
+            tblastn -query /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/CP007219-part.seq -db /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Assemblies/blastdb/asembliesntdb -out test.CP007219-part.seq.100000.alignments.evalue1e50.assembliesnt -num_alignments 100000 -seg no -evalue 1e-50 -num_threads 64
+            JFBM01000055 found.
+
+            -num_alignments 100000 - this does not limit how many alignments to
+                                     be returned, just how many to be displayed.
+                                     The cutoff comes only from the evalue of 1.
+            ######################################################################
+
+
+STEP1. Blast 8 KSs against the 12th database (asembilesntdb)
+       Move asembliesntdb in blast/db folder
+       1. Run ./run_blast.py with asembliesntdb
+           52569.pts-15.maguro
+           2hrs for 8 queries and 1 db
+           Blast/blast_results_parse$ cat *.asembliesntdb.parse | grep CP007219
+                                      193    1544   77362
+           The old id CP007219 is present in the Assemblies database.
+       2.1. make concat
+       2.2. make longest
+            Compile a positive data set with all chosen clusters from previous round
+                positive_set.ids
+                CP012600
+                NZ_AKYF01000010
+                CP007219
+                NZ_CM003601
+                CP003943
+                CP001966
+                CP004121
+                NZ_KQ947475
+                NZ_KB891767
+                HG964446
+                CP006835
+                AP014636
+                NZ_JUHA01000025
+                NZ_LFME01000001
+                CP003969
+                CP005973
+          2.3. make compare
+               Missing ids:
+               NZ_JUHA01000025 - pks/nrps target DEG10180589_tRNA delta(2)-isopentenylpyrophosphate transferase_(EC_2.5.1.8)
+               NZ_KB891767 - pks/nrps, target mupM_Isoleucyl_tRNA synthetase_mupirocin
+               NZ_LFME01000001 - transatpks-nrps, target DEG10180418_Alanyl-tRNA synthetase (EC_6.1.1.7
+
+               NZ_JUHA01000025 in refseq_genomic in oldTargetMiningGenome
+                                in wgs database online blast
+                                not in nt
+
+
+              NZ_KB891767 not in wgs online
+              NZ_KB891767 in refeq_genomic
+              KSRif and NZ_KB have 40% seq identity
+
+
+              >NZ_JUHA01000025 part 39455	40726
+              IAIVGIGCRFPGDGHTPEAFWRFLESGTDGVTEVPKERWDADACFDADPDAPGKSYTRWGGFVKDVDCFDAHFFGISPREAVSLDPQQRLLLEVTWESLEHAGIAPSSLAGSQTAVYMGITTHDYANQLSEAIGSRFGDAYTPSGTAHSVAAGRLSYFLGLHGPNVAIDTACSSSLVAIHWAVQSLRSGEADLALAGGVNLTLTADGSILTSRARMMSFDGRCKTFDDAADGYVRGEGCGVVVLKRLSDAQRDGDRVIALVRGSALNQDGRSSGLTAPNGTAQEAVIRAALANARVKPDEISYVEAHGTGTPLGDPIEVKALHQVYG---QRPAGAPLMIGSVKTNIGHLEAAAGVAGVIKVALALQHRTIPPHLHLKRPNHLIAWDEMPITVPTVPTPWPEAGR-PRRASVSSFGFSGTNAHVVLEE
+
+              >NZ_KB891767.1|	43544	44818	Streptomyces sp. LaPpAH-165 genomic scaffold B070DRAFT_scaffold_13.14, whole genome shotgun sequence	2	-1 185112	1e-71
+              IAVIGMGLRAPGAA-NTEEFWQSLIQGKESISRLSDD---DVIAAHGDPAVLSNPD-----LVRAAGILDGIEKFDAAYFGYTPREAEIMDPQQRFLLEVAVEALEDAGCDPTSSK-STTGVFLGIGRSGYFLH-HLLPRTDLMTSFARQISLFNDKDFAATQISHRLNLTGPSMTIGTACSTSLVSVHQACKSLLEFECDVALAGGATINVLQHG--GYQYQEGNIFSPDGHCRAFDAEAHGTVGGSGVGLVVLKRLSDAVRDGDAIRAVIRGSAVNNDGADKVGFTAPSVAGQASVVFEAQQVAGVDAESIGYVEAHGTGTPLGDPIEVSALTEAFRMSTDERGFCALGSVKTNVGHLDTAAGVAGFIKAVLAVERGVIPPSLHFRRPNPEIDFESSPFFVNAELREWS-GPSPRRAGVSSFGMGGTNAHVILEQPP
+
+
+
+              Seems that refseq_genomic was recently updated.
+
+              In Genbank/ folder see how many new ids from Assemblies2
+              gbids.unique.94516.txt
+              gbids.all.unique.106981.txt
+              12465 more in all?
+
+              Genbank$ diff -y  gbids.all.unique.106981.txt gbids.unique.94516.txt | grep "<" |wc
+              17432   34863  444865
+              Genbank$ diff -y  gbids.all.unique.106981.txt gbids.unique.94516.txt | grep ">" |wc
+              4967    9934  139289
+              Genbank$ cat gbids.unique.94516.txt | grep X77865
+              X77865
+              There are 4967 gbids which are not found in gbids.all.unique.106981.txt probably because cdhit
+              returned different sequences from the same cluster:
+              Blast/blast_results_seqs$ grep X77865 blast_results.KS.fasta.cleanName.cdhit.99
+              Blast/blast_results_seqs$ grep X77865 blast_results.KS.fasta.cleanName.cdhit.99.clstr
+              2	387aa, >X77865.1__208_1368_S.griseus_genes_for_ketosynthase__acyl_carrier_protein__ketoreductase__cyclase_and_dehydrase_0_1_5364_2e-14... at 99.22%
+              3	382aa, >X77865.1__208_1353_S.griseus_genes_for_ketosynthase__acyl_carrier_protein__ketoreductase__cyclase_and_dehydrase_0_1_5364_4e-19... at 99.21%
+              4	382aa, >X77865.1__232_1377_S.griseus_genes_for_ketosynthase__acyl_carrier_protein__ketoreductase__cyclase_and_dehydrase_0_1_5364_2e-18... at 100.00%
+              7	364aa, >X77865.1__208_1299_S.griseus_genes_for_ketosynthase__acyl_carrier_protein__ketoreductase__cyclase_and_dehydrase_0_1_5364_1e-16... at 99.18%
+              11	379aa, >X77865.1__217_1353_S.griseus_genes_for_ketosynthase__acyl_carrier_protein__ketoreductase__cyclase_and_dehydrase_0_1_5364_6e-30... at 100.00%
+              15	379aa, >X77865.1__208_1344_S.griseus_genes_for_ketosynthase__acyl_carrier_protein__ketoreductase__cyclase_and_dehydrase_0_1_5364_1e-10... at 99.21%
+
+              Figure out how to run Antismash on Assembly gbids
+              One assembly id is PGZO01000001.
+              It is not in Assemblies/assemblies_gbdir
+              It is from asembliesntdb:
+
+              Blast/blast_results_parse$ grep PGZO01000001 *
+              KSchivosazol.seq.100000.alignments.evalue1.asembliesntdb.parse:PGZO01000001||	135182	136474		1	1	252887	0.0	EPVAVIGMSGIMPQSENLEVFWDHLEAEKNLITEIPPDRWDWKEIYGNPMREANKTNIIWGGFMKEVDKFDPLFFGISPREAELMDPQQRIFLETVWRTIEDAGYKSSDISGTKTGVFVGVGTSDYNDILKDCNIEIQAQTATG-MAHCVLANRISYLLNLHGPSEPIDTACSSSLVAIHRAIEAIQYGNCSMAIAGGINVIASPALYISFSKAGMLCEDGSCKTFDKNANGYVRGEGAGAVLLKPLSKAIEDGDHIYGVIKGSAVNHGGHVNSLTTPNPNAQAELIITAWEKANIDPSTVGYIEAHGTGTSIGDPIEINGLKKAFNVLNSKWGNSI-ETPYCALGSVKTNIGHLETAAGISGLLKVLLALKYKKIPASINFNELNPYIQLTESPFYIAKRTEQWEKIGAAPRRAGVSSFGFGGTNAHIVIEE
+
+              Assemblies/assemblies_gbdir
+              find . -type f -print | xargs grep "PGZO01000001"
+
+Nov-13-2018
+1. Update all databases
+perl update_blastdb.pl --passive refseq_genomic                 done
+perl update_blastdb.pl --passive nt                             done
+perl update_blastdb.pl --passive other_genomic                  done
+perl update_blastdb.pl --passive env_nt                         done
+perl update_blastdb.pl --passive patnt                          done
+perl update_blastdb.pl --passive sts                            done
+perl update_blastdb.pl --passive htgs                           done
+perl update_blastdb.pl --passive tsa_nt                         done
+perl update_blastdb.pl --passive gss                            done
+perl update_blastdb.pl --passive est_others                     done
+
+Nov-14-2018
+2. Unzip databases:
+for f in `ls *.tar.gz`; do echo "----------    $f    -----------"; tar -xvzf $f; done
+9:30am 2466.pts-11.maguro
+2pm done
+
+3. Run ./run_blast.py (8 KS queries and 12 databases); older results in bak/
+      IN PROGRESS
+      Nov-15-2018 4:30done
+      Blast ran for 24h
+
+      Missing ids from before updating databases found in refseq_genomic:
+      NZ_JUHA01000025
+      NZ_KB891767
+      NZ_LFME01000001
+
+      Now running parsing script (since 4:30pm). Ran until earlier than 11:30pm.
+
+4. Make all
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/blast_results_seqs$ cat blast_results.KS.fasta.cleanName.cdhit.99 | grep ">" |wc
+      199894  199894 21074294
+
+      Nov-18-2018
+      not enough memory for cdhit
+      4.1 Rerun cdhit with option -M 10000
+          make cdhit IN PROGRESS
+
+      4.2. Compare with mibig set: there are 150 ids missing:
+            gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/blast_results_seqs$ diff -y ../mibig.gbids.v1.4.pks blast_results.parsed.KS.9f.longest_synonym.comparemibig  | grep "<" |wc
+            150     300    3350
+            MG837519  wortmanamide A (BGC0001466)it is there but version number: MG837519.1
+            NZ_KB898282 cosmomycin C / cosmomycin D (BGC0001558). NOT SURE WHY MISSING
+            U10405    rhodomycin (BGC0000265)   missing because partial cluster
+            Y15013    gibberellin (BGC0001270) missing because only P450 in cluster							      <
+            Y15277		gibberellin (BGC0001270) missing because only P450 in cluster
+            DS027057  cytochalasin (BGC0000983) (Aspergillus) not in blast_results/KS*
+                      https://www.ncbi.nlm.nih.gov/nuccore/DS027057
+                      Aspergillus clavatus NRRL 1 1099423829803 genomic scaffold, whole genome shotgun sequence
+
+            Find NZ_KB898282:
+
+            1. Find to which mibig cluster id it associates:
+                    grep NZ_KB898282 mibig_json_1.4/*
+                    mibig_json_1.4/BGC0001558.json:                    "Accession": "NZ_KB898282",
+
+            2. Go to mibig db, find cluster and get one KS sequence and put in
+                    NZ_KB898282_KS.fasta
+
+            3. Blast NZ_KB898282_KS.fasta against nt database:
+                    tblastn -query /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/NZ_KB898282_KS.fasta -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/nt -out NZ_KB898282_KS.fasta.100000.alignments.evalue1.nt -num_alignments 100000 -seg no -evalue 1 -num_threads 64
+
+            4. Blast NZ_KB898282_KS.fasta against nt database online:
+                    Has 100% seq identity to CP029188
+
+            5. Search for CP029188 in my local blast results:
+                    grep CP029188 NZ_KB898282_KS.fasta.100000.alignments.evalue1.nt
+                    gb|CP029188.1|  Streptomyces sp. HNM0039 chromosome, complete genome    836   0.0
+                    >gb|CP029188.1| Streptomyces sp. HNM0039 chromosome, complete genome
+
+            6. CP029188 in blast_results.KS.fasta.cleanName.cdhit.99
+
+
+            FIND DS027057:
+                  tblastn -query /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/DS027057_KS.fasta -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/nt -out DS027057_KS.fasta.100000.alignments.evalue1.nt -num_alignments 100000 -seg no -evalue 1 -num_threads 64
+                  tblastn -query /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/DS027057_KS.fasta -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/asembliesntdb -out DS027057_KS.fasta.100000.alignments.evalue1.asemblies -num_alignments 100000 -seg no -evalue 1 -num_threads 64
+
+                  Has a 100% sequence identity with XM_001270542.1 from nt database:
+
+                  grep XM_001270542 DS027057_KS.fasta.100000.alignments.evalue1.nt
+                  ref|XM_001270542.1|  Aspergillus clavatus NRRL 1 hybrid NRPS/PKS ...    900   0.0
+                  >ref|XM_001270542.1| Aspergillus clavatus NRRL 1 hybrid NRPS/PKS enzyme, putative
+
+                  XM_001270542 NOT in .longest_synonym
+                  Synonyms: gb|AAKD03000045.1|	ref|NW_001517096.1|	ref|XM_001270542.1|
+
+                  NW_001517096 in blast_results.KS.fasta.cleanName.cdhit.99
+                  https://www.ncbi.nlm.nih.gov/nuccore/NW_001517096
+
+
+
+
+      4.3. Compare with positive set of already chosen clusters:
+            gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMingvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/blast_results_seqs$ diff -y blast_results.parsed.KS.9f.longest_synonym.compareposset positive_set.ids.sorted
+            AP014636							AP014636
+            							      >	CP001966
+            CP003943							CP003943
+            CP003969							CP003969
+            CP004121							CP004121
+            CP005973							CP005973
+            							      >	CP006835
+            CP007219							CP007219
+            CP012600							CP012600
+            HG964446							HG964446
+            							      >	NZ_AKYF01000010
+            							      >	NZ_CM003601
+            							      >	NZ_JUHA01000025
+            							      >	NZ_KB891767
+            							      >	NZ_KQ947475
+            							      >	NZ_LFME01000001
+
+            Found synonyms and written in Positive_cluster_list.xlsx file
+
+        4.4.
+
+        > XM_418755
+        > XM_660691
+        > XR_001508665
+        > XR_002019857
+        > XR_002162974
+        > XR_002193366
+        > XR_850174
+
+          ********************************************************************************
+          STEP2. Fetch all genbank ids that contain a KS
+          ********************************************************************************
+
+1. Run get_assembly_id.py to map genbank id to assembly filename.
+  Output in assemblyids_filenames.2f:
+
+          KL997396        GCA_000738695.1_ASM73869v1_genomic.gbff
+          KL997409        GCA_000738695.1_ASM73869v1_genomic.gbff
+          KL997427        GCA_000738695.1_ASM73869v1_genomic.gbff
+          KL997432        GCA_000738695.1_ASM73869v1_genomic.gbff
+          KL997444        GCA_000738695.1_ASM73869v1_genomic.gbff
+          KL997446        GCA_000738695.1_ASM73869v1_genomic.gbff
+          KL997447        GCA_000738695.1_ASM73869v1_genomic.gbff
+
+          2. Run ./get_gbid.py > gbids.txt
+
+              cat gbids.txt |wc
+              162984  162984 1918063
+
+              cat gbids.txt |sort -u > gbids.unique.94516.txt
+              cat gbids.unique.94516.txt |wc
+              94516   94516 1141060
+
+          3. Run fetch_gbid.py
+              Genbank/gbdir$ lr |wc
+              94517  850646 6623003
+
+
+______________________________________________________
+
+./get_gbid.py
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat gbids.nt.unique.txt | wc
+  89449   89449 1080646
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat gbids.assembly.unique.txt | wc
+  21080   21080  259934
+
+Nov-19-2018
+  gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat gbids.nt.unique.txt gbids.assembly.unique.txt | wc
+   110529  110529 1340580
+  gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat gbids.nt.unique.txt gbids.assembly.unique.txt | sort -u |wc
+   110174  110174 1336870
+
+
+There are 110 529 gbids total. 355 ids are in both nt and assembly lists.
+
+1. Run get_assembly_id.py to map genbank id to assembly filename for all ids in
+the new gbids.assembly.unique.txt file.
+  Output in assemblyids_filenames.2f:
+ cat assemblyids_filenames.2f |wc
+    21280   42560 1174040
+cat gbids.assembly.unique.txt |wc
+    21080   21080  259934
+
+screen -R 9512.pts-14.maguro
+2.Cleanup_dir.py
+
+Genbank$ ./cleanup_dir.py | grep "DELETING"|wc
+10085   20170  216094
+
+Genbank$ diff -y gbids.nt.unique.txt old/gbids.unique.94516.txt | grep ">"|wc
+   9729   19458  266578
+
+./cleanup_dir.py
+
+gbids.unique.94516.txt
+94 516 - 84 432 = 10084 files deleted
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/gbdir$ lr|wc
+  84432  759881 5912744
+  cat gbids.nt.unique.txt |wc
+  89449   89449 1080646
+
+3. fetch genbank ids
+In fetch_gb.py, change gbidfile = "gbids.nt.unique.txt"
+Genbank/gbdir$ lr|wc
+  89449  805034 6268636
+
+4. ./cleanup_dir.py
+delete antismash folders
+./cleanup_dir.py | grep "DELETING" |wc
+  10085   40340  397624
+
+Nov-20-2018
+5. run_antismash.nt.gbids.py
+
+5.1. cp -r /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/gbdir/ .
+      ~/gbdir$ lr|wc
+        89449  805034 6179188
+
+5.2. delete old antismash_output dataset
+
+5.3. ./run_antismash.nt.gbids.py 10:40am
+IN PROGRESS on screen -R 9512.pts-14.maguro
+
+
+Nov-27-2018
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr |wc
+  38057  342506 2308580
+
+Add to run_antismash.nt.gbids.py script:
+  # Nov-27-2018 Run antismash for sequences smaller than 100000 bp
+    for record in SeqIO.parse(open(local_filename, "rU"), "genbank"):
+        if len(record.seq) > 100000:
+            print "Sequence larger than 100000; SKIP"
+            return
+        if len(record.seq) < 1000:
+            print "Sequence %s smaller than 1000; SKIP" % gbid
+            return
+
+
+Ran 9hrs
+            gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr |wc
+              57121  514082 3462677
+
+
+              # Nov-27-2018 Run antismash for sequences smaller than 100000 bp
+              for record in SeqIO.parse(open(local_filename, "rU"), "genbank"):
+                  if len(record.seq) > 500000:
+                      print "Sequence %s larger than 100000; SKIP" % gbid
+                      return
+                  if len(record.seq) < 1000:
+                      print "Sequence %s smaller than 1000; SKIP" % gbid
+                      return
+
+
+
+
+Ran for 8:26hrs
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr|wc
+  60154  541379 3649705
+
+Nov-28-2018
+   if len(record.seq) > 700000:
+   1:50
+   gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr|wc
+  60572  545141 3675275
+
+ if len(record.seq) > 1000000:
+1:24
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr |wc
+  60897  548066 3695074
+
+if len(record.seq) > 2000000:
+  8:02:33
+
+  gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr|wc
+    63309  569774 3840881
+
+
+Nov-29-2018
+Antismash is also parallel so that's why maguro is running out of memory.
+Run it with 5 parralel processes on all sequences
+
+
+    gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr |wc
+      63378  570395 3844814
+
+drwxr-xr-x 3 gvandova gvandova 4096 Nov 29 14:36 CP008730
+drwxr-xr-x 4 gvandova gvandova 4096 Nov 29 14:41 CP007155
+drwxr-xr-x 3 gvandova gvandova 4096 Nov 29 14:42 CP008739
+drwxr-xr-x 3 gvandova gvandova 4096 Nov 29 14:43 CP007699
+drwxr-xr-x 3 gvandova gvandova 4096 Nov 29 14:43 CP008742
+
+in mnt/antismash_output:
+ 22 Nov 29 14:43 CP008714
+
+ gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr|wc
+   63423  570800 3847379
+
+   drwxr-xr-x 9 gvandova gvandova 4096 Nov 30 13:15 CP019889
+   drwxr-xr-x 9 gvandova gvandova 4096 Nov 30 13:16 CP019894
+   drwxr-xr-x 9 gvandova gvandova 4096 Nov 30 13:17 CP019892
+   drwxr-xr-x 9 gvandova gvandova 4096 Nov 30 13:20 CP019856
+   drwxr-xr-x 9 gvandova gvandova 4096 Nov 30 13:22 CP019899
+   drwxr-xr-x 9 gvandova gvandova 4096 Nov 30 13:22 CP019913
+   drwxr-xr-x 9 gvandova gvandova 4096 Nov 30 13:22 CP019914
+   drwxr-xr-x 9 gvandova gvandova 4096 Nov 30 13:25 CP019936
+   drwxr-xr-x 9 gvandova gvandova 4096 Nov 30 13:32 CP019108
+   drwxr-xr-x 9 gvandova gvandova 4096 Nov 30 13:43 CP019724
+
+
+
+   gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr |wc
+     64411  579692 3903695
+
+
+Ran for 49:31hrs
+     89449/89449 49:31:33
+     gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismash_output$ lr|wc
+       68248  614225 4130921
+
+ CP033141.gb missing from Genbank/gbdir
+ run fetch_gb.py again and see if it gets downloaded
+
+TOTAL RUN TIME FOR run_antismash.nt.gbids.py: 95h.
+
+Dec-3-2018
+
+STEP4. Parse geneclusters.js files FOR ANTISMASH NT RESULTS ONLY
+      blast fasta file headers different for nt and assembly:
+
+      fasta_file = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Blast/blast_results_seqs/blast_results.KS.fasta.cleanName.cdhit.99"
+      # Head of cdhit file:
+      # >AVFP01000283.1__724_1992_Microbial_mat_metagenome_scaffold_282__whole_genome_shotgun_sequence_0_1_9914_7e-169
+      # >AM746676___5843905_5845200__0_-1_13033779_0.0
+
+      Correct script to parse assembly results from cdhit file
+      Run parse_js.coord.py
+      Input file: blast_results.KS.fasta.cleanName.cdhit.99 (it contains blast results from nt and assembly)
+      Input antismash folder: antismash_output/ (it contains antismash results from nt only)
+      Output file: sequences.faa.89k.coord.fasta
+
+      didn't work. Worked with RCYNC
+
+      Dec-13-2018
+      STEP4. Parse geneclusters.js files
+      TODO: fix script to split cluster header on " _<span" [0]
+      FIXED Dec13
+
+      Run parse_js.coord.py
+      Input file: blast_results.KS.fasta.cleanName.cdhit.99 (it contains blast results from nt and assembly)
+                antismash_output_assemblies_all/ (it contains antismash results from assemblies only)
+      Output file: sequences.faa.21k.coord.fasta
+
+      RUNTIME: ************ 2:40:36h
+
+       There are redundant sequences so I won't be able to make a database
+       with the concatenated files
+
+
+      Dec-17-2018
+      STEP5. Make database from sequences.faa.89k.coord.fasta and sequences.faa.21k.coord.fasta
+
+      5.1. Run makeblastdb.py
+      mv sequences.faa.coord.110k.fasta to seq_dir/
+
+      Building a new DB, current time: 12/17/2018 15:14:49
+      New DB name:   antismashdb_sequences.faa.21k.coord.fasta
+      New DB title:  seq_dir/sequences.faa.21k.coord.fasta
+      Sequence type: Protein
+      Keep Linkouts: T
+      Keep MBits: T
+      Maximum file size: 1000000000B
+      Adding sequences from FASTA; added 1 247 394 sequences in 58.2058 seconds.
+      makeblastdb -in seq_dir/sequences.faa.89k.coord.fasta -dbtype prot -out antismashdb_sequences.faa.89k.coord.fasta
+
+      Building a new DB, current time: 12/17/2018 15:15:49
+      New DB name:   antismashdb_sequences.faa.89k.coord.fasta
+      New DB title:  seq_dir/sequences.faa.89k.coord.fasta
+      Sequence type: Protein
+      Keep Linkouts: T
+      Keep MBits: T
+      Maximum file size: 1000000000B
+      Adding sequences from FASTA; added 1 123 192 sequences in 49.8299 seconds.
+
+      mv antismashdb_sequences.faa.* antismashdb/
+
+
+      STEP6. Run blast to identify if target is located in clusters
+
+      6.1. Update targets file to include ley-trna synthetase, trp-tRNA synthetase,
+          and translation initiation factor
+      6.2. ./run_blastp.py with targets.9.fa
+
+      6.3. cat out.targets.9* > out.targets.9
+
+
+
+
+      STEP7. Filter output file
+      ./filter_blast.py out.targets.9 out.targets.9.eval.1-8.pident.30.filtered
+
+      STEP8. Target and KS tandem
+      ./target_ks_tandem.py out.targets.9.eval.1-8.pident.30.filtered 10000
+
+      STEP9. Extract pks clusters only
+      cat out.targets.9.eval.1-8.pident.30.filtered.10000 | grep "t1pks" > out.targets.9.eval.1-8.pident.30.filtered.10000.t1pks
+      cat out.targets.9.eval.1-8.pident.30.filtered.10000 | grep "transatpks" > out.targets.9.eval.1-8.pident.30.filtered.10000.transatpks
+      cat out.targets.9.eval.1-8.pident.30.filtered.10000.t1pks out.targets.9.eval.1-8.pident.30.filtered.10000.transatpks | sort -u > out.targets.9.eval.1-8.pident.30.filtered.10000.allpks
+
+      cat out.targets.9.eval.1-8.pident.30.filtered.10000.allpks |wc
+          262    4454   48293
+
+
+      STEP10. Check if I found positive sets
+      10.1. Compare numbers with previous dataset from 2013:
+
+      Targets                    2013 numbers      2018 numbers
+      1. Acetyl CoA carboxylase		  17             85
+      2. Beta proteasome subunit	  7              9
+      3. DnaN 						          1              12
+      4. EF-Tu						          16             29
+      5. FabB/F					            17             31
+      6. FabI						            1              2
+      7. Gyrase B					          12             24
+      8. Isoleucyl tRNA synthetase 	27             64
+      9. Threonyl-tRNA synthetase	  5              6
+
+      10.2 Did I find all clusters from positive set (clusters to express)
+      CP012600 in out.targets.9.eval.1-8.pident.30.filtered but NOT in
+                  out.targets.9.eval.1-8.pident.30.filtered.1000
+
+      Error in parsing coord?
+      Correct script
+      ./target_ks_tandem.py out.targets.9.eval.1-8.pident.30.filtered 10001
 
 
 
@@ -645,41 +1307,776 @@ Nov-6-2018
 
 
 
+      ___________________________________________________________________________
+
+      Alternative:
+
+
+
+      1. Run ./parse_gb.py to make a DNA sequence file from all blast results (nt)
+
+      Dna seq 82095
+      no seq 12341
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat prot_nt.fasta | grep ">" | cut -d'[' -f 1 | sort -u |wc
+      3242    3242   61047
+
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat dna_nt.fasta |grep ">"|wc
+      82095   82095 1062359
+
+      TODO: There are some gbids that do not have a seqence but how to find which ones?
+
+
+      2. ./parse_gb.py to make a DNA sequence file from all blast results (assemblies)
+      Prot seq 0
+      Dna seq 21080
+      no seq 0 []
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat dna_assembly.fasta |grep ">"|wc
+      21080   21080  281014
+
+      3. Make databases from blast genbank files:
+
+      makeblastdb -in prot_nt.fasta -dbtype prot -out protntdb
+
+      Building a new DB, current time: 12/06/2018 14:53:34
+      New DB name:   protntdb
+      New DB title:  prot_nt.fasta
+      Sequence type: Protein
+      Keep Linkouts: T
+      Keep MBits: T
+      Maximum file size: 1000000000B
+      Adding sequences from FASTA; added 408195 sequences in 17.6635 seconds.
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat prot_nt.fasta | grep ">"|wc
+      408195  408195 20003964
+
+      makeblastdb -in dna_nt.fasta -dbtype nucl -out dnantdb
+
+      Building a new DB, current time: 12/06/2018 14:55:32
+      New DB name:   dnantdb
+      New DB title:  dna_nt.fasta
+      Sequence type: Nucleotide
+      Keep Linkouts: T
+      Keep MBits: T
+      Maximum file size: 1000000000B
+      Adding sequences from FASTA; added 82095 sequences in 1038.69 seconds.
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat dna_nt.fasta |grep ">"|wc
+      82095   82095 1062359
+
+
+      makeblastdb -in dna_assembly.fasta -dbtype nucl -out dnaassemblydb
+
+      Building a new DB, current time: 12/06/2018 15:19:33
+      New DB name:   dnaassemblydb
+      New DB title:  dna_assembly.fasta
+      Sequence type: Nucleotide
+      Keep Linkouts: T
+      Keep MBits: T
+      Maximum file size: 1000000000B
+      Adding sequences from FASTA; added 21080 sequences in 423.024 seconds.
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat dna_assembly.fasta |grep ">"|wc
+      21080   21080  281014
+
+
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ mv protntdb.p* ../../blast/db
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ mv dnantdb.* ../../blast/db
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ mv dnaassemblydb.* ../../blast/db
+
+
+
+      *******************************************************
+      STEP5. Blast target fasta file against the pks database
+      *******************************************************
+
+      tblastn -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/dnantdb -query targets.9.fa -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -out targets.9.dnantdb.out
+      tblastn -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/dnaassemblydb -query targets.9.fa -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -out targets.9.dnaassemblydb.out
+      blastp -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/protntdb -query targets.9.fa -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -out targets.9.protntdb.out
+
+
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat targets.out |wc
+      10232   61392  394334
+
+      *******************************************************
+      STEP6. Filter blast results by % identity > 0.3 and evalue ~0.05/80000 ~e-8
+      For FabFs % identity > 0.6
+      *************************************************
+
+      Run filter_blast.py
+      Filtered results in targets.filtered.out
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat targets.filtered.out |wc
+      2431   17017  114558
+
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat targets.filtered.out.withallfabs |wc
+      3274   22918  156798
+
+      *******************************************************
+      STEP6. Require putative target to be in PKS cluster
+      target is <50kb away from a KS
+      *************************************************
+      ./target_ks_tandem.py
+
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat gbids_for_antismash.txt |wc
+      111     111    1251
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat gbids_for_antismash.txt |sort -u |wc
+       56      56     632
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat gbids_for_antismash.txt |sort -u > gbids_for_antismash.unique.txt
 
 
 
 
 
+      Dec-18-2018
+      STEP5. Make database from sequences.faa.89k.coord.fasta and sequences.faa.21k.coord.fasta
+
+         5.1. mv sequences.faa.21k.coord.fasta to seq_dir/
+         5.2. Run makeblastdb.py
+
+         Building a new DB, current time: 12/18/2018 14:22:13
+         New DB name:   antismashdb_sequences.faa.21k.coord.fasta
+         New DB title:  seq_dir/sequences.faa.21k.coord.fasta
+         Sequence type: Protein
+         Keep Linkouts: T
+         Keep MBits: T
+         Maximum file size: 1000000000B
+         Adding sequences from FASTA; added 1247394 sequences in 57.8913 seconds.
+         makeblastdb -in seq_dir/sequences.faa.89k.coord.fasta -dbtype prot -out antismashdb_sequences.faa.89k.coord.fasta
+
+
+         Building a new DB, current time: 12/18/2018 14:23:13
+         New DB name:   antismashdb_sequences.faa.89k.coord.fasta
+         New DB title:  seq_dir/sequences.faa.89k.coord.fasta
+         Sequence type: Protein
+         Keep Linkouts: T
+         Keep MBits: T
+         Maximum file size: 1000000000B
+         Adding sequences from FASTA; added 1123192 sequences in 49.9277 seconds.
+
+         mv antismashdb_sequences.faa.* antismashdb/
 
 
 
+      STEP6. Run blast to identify if target is located in clusters
+
+             6.1. Update targets file to include ley-trna synthetase, trp-tRNA synthetase,
+                  and translation initiation factor
+             6.2. ./run_blastp.py with targets.9.fa
+
+             6.3. cat out.targets.9* > out.targets.9
+
+
+       ('GyrB-R_Gyrase-B_novobiocin_Streptomyces-niveus_WP-069626152.1', 'CP012600', '1', '1178914-1248724', 't1pks-nrps', 'ctg1_140_-', 1185219, 1187168, '305.0', '677.0', '649', '0.45', '0.0')
+       KS coord:  1204705 1205970
+       target coords:  GyrB-R_Gyrase-B_novobiocin_Streptomyces-niveus_WP-069626152.1 1185219 1187168
+       dist 17537
 
 
 
+      >CP012600_cluster-1_1178914-1248724_t1pks-nrps_1185219-1187168_ctg1_140_-
+
+
+      ks_start - target_end
+      149967-132463
+
+      Input file used to split gb file:
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat ../Blast/blast_results_seqs/blast_results.KS.fasta.cleanName.cdhit.99| grep CP012600
+      >CP012600___1204705_1205970__0_1_4597707_1e-95
+      EIAIIGMSCRFPGGQTIGEFWENLKQGKESVSIFSDEELLEGGIDRETLQNPNYVKAGGAITGTEWFDIDLFQYSPREAEVMDPQLKILHECAWEALENSGYSSDNMNGLVGTYIGSSTNLYWMDTIYRHVQDFIKEAELLNGSQFFSTRLSHQLNLKGPSYTVQTACSSSLVAVHLACQALLSGDCDMALAGGVSLTLPEKRGYVYRDGMILSPDGHCRPFDASAKGTVNGNGAGLVVLKRLEDAVSDGDSIYAVVKGSAINNDGSDKVSFTAPSVEGQANAIKAAHYMAEVEPESITYVETHGTGTMLGDPIEIEALKLAFHTKKRRFCGIGSVKANIGHLDNAAGIAGLIKTAAALKHRMIPPSINFEKPNEKIDFENSPFYVNDKLTEWKNPEFPLRAGVSSFGMGGTNAHVVLEEAP
+
+      >CP012600___674517_675731__2_1_4597707_2e-20
+      VVITGIGAVSPLGNTAQTSWENAVKGVSGIGPLTRVNPDEYPAKVAAELKDFDAADFMDKKDARKMDRFTQYAVAASKMAVEDAKLEITDQNAPRIGVWIGSGIGGMETFEQQYDALLSKGPRRVSPFFVPMMIPDMAAGQVSIYLGAKGVNSCTVTACATGTNSIGDAFKAIQRGDADAMIAGGTEAPLTKMSFAGFCANKALSTNPDPKTASRPFDKNRDGFVMGEGAGIVILEELEHAIKRGANIYAEVSGYGSTGDAYHITAPSPTGEGGARAMLQAILDAELTPENIDYINAHGTSTQYNEKFETMAIKEVFGDYAYKLAISSTKSMTGHLLGAAGGIEAIFSIMAIKDGIIPPTINYETPDEDCDLDYVPNKARKQEVKAVLSNSLGFGGHNATLVFKK
+      >CP012600___2741087_2742367__2_-1_4597707_8e-110
+      EPIAIIGMGCRFPGGGNNTEEFWQNLVSGKDSITEIPKDRWDIDRYYDPNSKKKGKSKAKWGGFLDKIAEFDAEFFGISPREASLLDPQQRLLLEVTYAAFEDAGLPVDSLAGKNIGVYIGAFTLDWKLLQFTESNRSMIDSHSATGSMMTLLSNRLSYAFDLKGPSLSVDTACSSSLVALHLACQSILQKESSMAVVGGVNVMLKPEYFIAESKAGMLSPDGRSKTYDSRANGYVRGEGAGVIVLKPLSKAIEDGDYIHSLIRASGSNQDGQTSSITVPSGQSQENLMRTIYEQNGISPSSIQYIEAHGTGTPVGDPIEAKAIGKVYSQGRLNGQKTLIGSVKTNIGHTEAAAGIAGVIKTVMSMKNNLIPKHLHMNKVNPDIDFEELGLKVPLENTPWPETNGPKRAAVNSFGFGGTNAHVLIEE
+
+      Antismash_assembly_gb folders:
+        CP012600_1054705_1355970:
+        CP012600_2591087_2892367:
+        CP012600_524517_825731:
+
+      >CP012600___1204708_1205964__0_1_4597707_3e-93
+      1 204 708-1 185 219
+
+
+STEP7. Filter output file
+./filter_blast.py out.targets.9 out.targets.9.eval.1-8.pident.30.filtered
+
+STEP8. Target and KS tandem
+./target_ks_tandem.py out.targets.9.eval.1-8.pident.30.filtered 10000
+./target_ks_tandem.py out.targets.9.eval.1-8.pident.30.filtered 20000
+
+Check if all positive ids found:
+  CP012600, CP003943, and UHIQ01000001 found in out.targets.9.eval.1-8.pident.30.filtered.20000
+  CP012600, CP003943, and CP001966(synonym of UHIQ01000001)
+  found in old file from 2016 out.targets.8.0-9.filtered.20000.t1pks.transatpks.92
+  All other ids found in out.targets.9.eval.1-8.pident.30.filtered.10000
+
+
+      Dec-18-2018
+      Parse json files with correct coordinates for cut assembly genbank files
+      pase_js.coord.py
+
+
+      Add taxa
+      1. parse_gb_taxa.py
+         Input folder: gbdir/
+         Output file: taxa_nt.txt
+      2. parse_gb_taxa.py
+         Input folder: assembly_bg/
+         Output file: taxa_assembly.txt
+
+Dec-20-2018
+STEP6. Run blast to identify if target is located in clusters
+
+      6.1. Update targets file to include ley-trna synthetase, trp-tRNA synthetase,
+           and translation initiation factor
+      6.2. ./run_blastp.py with targets.12.fa
+
+      6.3. cat out.targets.12* > out.targets.12
+
+      Check if all positive ids found:
+
+      Not found:
+      CP012600
+      CP003943
+      UHIQ01000001
+      NZ_KB891767
+      HG964446
+      CP006835
+      AP014636
+
+      cat out.targets.12.eval.1-8.pident.30.filtered.20000 | grep "t1pks" > out.targets.12.eval.1-8.pident.30.filtered.20000.t1pks
+      cat out.targets.12.eval.1-8.pident.30.filtered.20000 | grep "transatpks" > out.targets.12.eval.1-8.pident.30.filtered.20000.transatpks
+      cat out.targets.12.eval.1-8.pident.30.filtered.20000.t1pks out.targets.12.eval.1-8.pident.30.filtered.20000.transatpks | sort -u > out.targets.12.eval.1-8.pident.30.filtered.20000.allpks
+      cat out.targets.12.eval.1-8.pident.30.filtered.20000.allpks |wc
+          803   13651  110565
+
+      cat out.targets.12.eval.1-8.pident.30.filtered.20000.allpks | grep CP012600 FOUND
+      cat out.targets.12.eval.1-8.pident.30.filtered.20000.allpks | grep CP003943 FOUND
+      cat out.targets.12.eval.1-8.pident.30.filtered.20000.allpks | grep UHIQ01000001 FOUND
+
+      cat out.targets.12.eval.1-8.pident.30.filtered.20000.allpks | grep JYBE02000001 NOT FOUND
+          seq identity < 30%
+          mupM_Ile-tRNA-syn	JYBE02000001_cluster-2_1275813-1353292_t1pks-nrps_1289729-1292299_ctg1_318_-	42	805	200	1030	856	1e-42
+          I must have run the second set of targets with no seq identity threshold, just evalue threshold
+
+
+      cat out.targets.12.eval.1-8.pident.30.filtered.20000.allpks | grep HG964446 NOT FOUND
+              It is a fungal target, not in targets.12
+              It is in targets.7
+
+              Run scripts with targets.7
+
+      cat out.targets.12.eval.1-8.pident.30.filtered.20000.allpks | grep CP009481
+      68229	mupM_Ile-tRNA-syn	CP009481	1	5972634-6040863	t1pks-nrps	ctg1_135_-	6033140	6036547	414.0	1030.0	1135	0.40	0.0	6019571	6020845	12295
+
+      cat out.targets.12.eval.1-8.pident.30.filtered.20000.allpks | grep AP014636
+
+      Copy NZ_KB891767 antismash folder and look into cluster
+
+
+      STEP6. Run blast to identify if target is located in clusters
+            run_blastp.py with targets.7
+            6.3. cat out.targets.7* > out.targets.7
+
+
+      STEP7. Filter output file
+      ./filter_blast.py out.targets.7 out.targets.7.eval.1-8.pident.30.filtered
+
+      STEP8. Target and KS tandem
+      ./target_ks_tandem.py out.targets.7.eval.1-8.pident.30.filtered 10000
+      ./target_ks_tandem.py out.targets.7.eval.1-8.pident.30.filtered 20000
+
+      STEP7. Filter output file
+      ./filter_blast.py out.targets.7 out.targets.7.eval.1-8.pident.0.filtered
+
+      STEP8. Target and KS tandem
+      ./target_ks_tandem.py out.targets.7.eval.1-8.pident.0.filtered 10000
+
+
+      FOUND THEM All from positive sets
+
+      Check for all mibig genbank mibig_ids: FOUND THEM ALL
+
+      TODO: uniquify out.targets.12.eval.1-8.pident.0.filtered.1000
+      [Redundancy was due to antismash results from both whole genbank
+        records and cut genbank records
+        FIXED See Jan-1-2019]
+            There should be only 2 entries for the 2 targets below:
+      31724	PtmP3_FabB-F	KE354369	1	1-31725	t1pks-nrps	STAFG_7034_putative	13990	15186	335.0	404.0	398	0.83	0.0	13990	15183	1193
+      31724	PtmP3_FabB-F	KE354369	1	1-31725	t1pks-nrps	STAFG_7034_putative	13990	15186	335.0	404.0	398	0.83	0.0	22709	23959	7523
+      31724	PtmP3_FabB-F	KE354369	1	1-31725	t1pks-nrps	STAFG_7034_putative	13990	15186	335.0	404.0	398	0.83	0.0	24804	26063	9618
+      31724	PtmP3_FabB-F	KE354369	1	1-31725	t1pks-nrps	STAFG_7039_putative	27505	28638	243.0	404.0	377	0.60	6e-150	22709	23959	3546
+      31724	PtmP3_FabB-F	KE354369	1	1-31725	t1pks-nrps	STAFG_7039_putative	27505	28638	243.0	404.0	377	0.60	6e-150	24804	26063	1442
+      31724	PtmP3_FabB-F	KE354369	1	1-31725	t1pks-nrps	STAFG_7039_putative	27505	28638	243.0	404.0	377	0.60	6e-150	27508	28524	1019
+      31724	PtmP3_FabB-F	KE354369	1	1-31725	t1pks-nrps	STAFG_7039_putative	27505	28638	243.0	404.0	377	0.60	6e-150	27520	28698	1118
+
+
+Count clusters with targets:
+
+cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks |wc
+          406    6902   55477
+cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks |cut -f1-14|sort -u > out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.unique.276
+
+
+66+14+13+28+1+31+68+9+10+14+5+17 = 276
+cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.unique.276 | grep AdmT|wc
+    66     924    7827
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.unique.276 | grep SalI_beta_proteasome |wc
+    14     196    1791
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.unique.276 | grep GriR |wc
+    13     182    1467
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.unique.276 | grep EF-Tu|wc
+    28     392    3073
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.unique.276 | grep BatG|wc
+     1      14     127
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.unique.276 | grep GyrB|wc
+    31     434    3272
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.unique.276 | grep mupM|wc
+    68     952    8384
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.unique.276 | grep borI|wc
+     9     126    1049
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.unique.276 | grep agnB2|wc
+    10     140    1193
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.unique.276 | grep rubR1|wc
+    14     196    1538
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.unique.276 | grep Ind0|wc
+     5      70     592
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.unique.276 | grep Ptm|wc
+    17     238    1973
 
 
 
-      Recent literature on resistant genes:
-      Core papers:
-      1. Tang, X. et al. Identification of thiotetronic acid antibiotic biosynthetic pathways by target-directed genome mining. ACS Chem. Biol. 10, 2841–2849 (2015).
-      https://pubs.acs.org/doi/10.1021/acschembio.5b00658
+cat out.targets.12.eval.1e-8.pident.30.filtered.10000 |wc
+        681   11577   89998
+at out.targets.12.eval.1e-8.pident.30.filtered.10000 | grep "t1pks" > out.targets.12.eval.1e-8.pident.30.filtered.10000.t1pks
+cat out.targets.12.eval.1e-8.pident.30.filtered.10000 | grep "transatpks" > out.targets.12.eval.1e-8.pident.30.filtered.10000.transatpks
+cat out.targets.12.eval.1e-8.pident.30.filtered.10000.t1pks out.targets.12.eval.1e-8.pident.30.filtered.10000.transatpks | wc
+        284    4828   38612
+cat out.targets.12.eval.1e-8.pident.30.filtered.10000.t1pks out.targets.12.eval.1e-8.pident.30.filtered.10000.transatpks | sort -u |wc
+        274    4658   37141
+cat out.targets.12.eval.1e-8.pident.30.filtered.10000.t1pks out.targets.12.eval.1e-8.pident.30.filtered.10000.transatpks | sort -u > out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
 
-      2. Alanjary, M. et al. The antibiotic resistant target seeker (ARTS), an exploration engine for antibiotic cluster prioritization and novel drug target discovery. Nucleic Acids Res. 45, W42–W48 (2017).
-      https://academic.oup.com/nar/article/45/W1/W42/3787867
-
-      3. Yeh, H.-H. et al. Resistance gene-guided genome mining: serial promoter exchanges in Aspergillus nidulans reveal the biosynthetic pathway for fellutamide B, a proteasome inhibitor. ACS Chem. Biol. 11, 2275–2284 (2016).
-      https://pubs.acs.org/doi/10.1021/acschembio.6b00213
 
 
-      4. Identifying more than 300 Biosynthetic Gene Clusters with Potential Resistance Genes
-      in over 75 Aspergillus species using Resistance Gene-Guided Genome Mining
-      http://orbit.dtu.dk/files/142117110/29FGC_abstract3.pdf
+./add_taxa.py ../data/out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
 
-      5. Resistance Gene-Guided Genome Mining: Serial Promoter Exchanges in Aspergillus nidulans Reveal the Biosynthetic Pathway for Fellutamide B, a Proteasome Inhibitor.
-      https://www.ncbi.nlm.nih.gov/pubmed/27294372
 
-      6. Genomics‐driven discovery of a novel self‐resistance mechanism in the echinocandin‐producing fungus Pezicula radicicola
-      https://onlinelibrary.wiley.com/doi/abs/10.1111/1462-2920.14089
+Dec-30-2018
+STEP4. Parse geneclusters.js files
+      ./parse_js.coord.py
+      Input file: blast_results.KS.fasta.cleanName.cdhit.99
+                  antismash_output_assemblies_all/
+      Output file: sequences.faa.21k.coord.fasta
 
-      7. Self-resistance guided genome mining uncovers new topoisomerase inhibitors from myxobacteria†
-      https://pubs.rsc.org/en/content/articlehtml/2018/sc/c8sc01325j
+      RUNTIME: ************ 2:48:33h
+
+
+Dec-31-2018
+STEP5. Make database from sequences.faa.89k.coord.fasta and sequences.faa.21k.coord.fasta
+
+   5.1. mv sequences.faa.21k.coord.fasta to seq_dir/
+   5.2. Run makeblastdb.py
+   5.3. mv antismashdb_sequences.faa.* antismashdb/
+
+STEP6. Run blast to identify if target is located in clusters
+    6.1 ./run_blastp.py with targets.12.fa
+    6.2. cat out.targets.12* > out.targets.12
+
+STEP7. Filter output file
+./filter_blast.py out.targets.12 out.targets.12.eval.1e-8.pident.30.filtered
+
+Jan-1-2019
+STEP8. Target and KS tandem
+./target_ks_tandem.py out.targets.12.eval.1e-8.pident.30.filtered 10000
+./target_ks_tandem.py out.targets.12.eval.1e-8.pident.30.filtered 20000
+
+
+STEP9. Get pks clusters only:
+cat out.targets.12.eval.1e-8.pident.30.filtered.10000 | grep "t1pks" > out.targets.12.eval.1e-8.pident.30.filtered.10000.t1pks
+cat out.targets.12.eval.1e-8.pident.30.filtered.10000 | grep "transatpks" > out.targets.12.eval.1e-8.pident.30.filtered.10000.transatpks
+cat out.targets.12.eval.1e-8.pident.30.filtered.10000.t1pks out.targets.12.eval.1e-8.pident.30.filtered.10000.transatpks | sort -u > out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks |wc
+    270    4590   36567
+
+cat out.targets.12.eval.1e-8.pident.30.filtered.20000 | grep "t1pks" > out.targets.12.eval.1e-8.pident.30.filtered.20000.t1pks
+cat out.targets.12.eval.1e-8.pident.30.filtered.20000 | grep "transatpks" > out.targets.12.eval.1e-8.pident.30.filtered.20000.transatpks
+cat out.targets.12.eval.1e-8.pident.30.filtered.20000.t1pks out.targets.12.eval.1e-8.pident.30.filtered.20000.transatpks | sort -u > out.targets.12.eval.1e-8.pident.30.filtered.20000.allpks
+cat out.targets.12.eval.1e-8.pident.30.filtered.20000.allpks |wc
+    543    9231   73465
+
+
+    Redundancy FIXED
+        cat out.targets.12.eval.1-8.pident.30.filtered.10000 |grep KE354369
+        PtmP3_FabB-F	KE354369	1	1-31725	t1pks-nrps	STAFG_7034_putative	13990	15186	335.0	404.0	398	0.83	0.0	13990	15183	1193	31724
+        PtmP3_FabB-F	KE354369	1	1-31725	t1pks-nrps	STAFG_7039_putative	27505	28638	243.0	404.0	377	0.60	5e-150	27508	28524	1019	31724
+
+
+STEP10. Add domain counts
+  10.1 ./extract_domain_counts.py
+        outfiledomains = "domain_counts_assemblies.txt"
+        antismash_dir = "antismash_output_assemblies_all/"
+
+  10.1 ./extract_domain_counts.py
+        outfiledomains = "domain_counts_nt.txt"
+        antismash_dir = "antismash_output/"
+
+  10.3 cat domain_counts_assemblies.txt domain_counts_nt.txt |sort > all.cluster.counts.sorted.txt
+       cat domain_counts_assemblies.txt domain_counts_nt.txt |sort -u > all.cluster.counts.unique.txt
+
+
+  10.4 There are 82 genbank ids which are in both antismash_output and antismash_assemblies_all dirs:
+       diff -y all.cluster.counts.sorted.txt all.cluster.counts.unique.txt |grep "<" | cut -d"|" -f1|sort -u |wc
+            82      82    1057
+
+
+  10.5 ./add_domain_counts.py all.cluster.counts.unique.txt out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains
+
+  BEFORE:
+  grep BDBD01000011 baks/bak_1230/out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+  AdmT_ACC	BDBD01000011	1	992563-1114385	nrps-t1pks-otherks	ctg1_136_-	1006722	1008416	117.0	304.0	564	0.38	3e-65	1017822	1019195	9406121822
+  AdmT_ACC	BDBD01000011	6	992563-1114385	nrps-t1pks-otherks	ctg1_976_-	1006722	1008416	117.0	304.0	564	0.38	3e-65	1017822	1019195	9406121822
+
+  NOW:
+  grep BDBD01000011 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+  AdmT_ACC	BDBD01000011	1	992563-1114385	nrps-t1pks-otherks	ctg1_136_-	1006722	1008416	117.0	304.0	564	0.38	3e-65	1017822	1019195	9406121822
+
+
+  cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks|wc
+    270    4590   36567
+  cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains |wc
+    274    7675   43459
+
+    Repeats twice:
+    AdmT_ACC	CP026304	2	7303001-7383847	t2pks
+    Repeats 3 times:
+    AdmT_ACC	AM420293	1	8925-62106	t1pks
+
+    ./add_domain_counts.py all.cluster.counts.unique.txt out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks AM420293.out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains
+    ./add_domain_counts.py all.cluster.counts.unique.txt out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks CP026304.out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains
+
+    Redundancy because there are redundna ids in antismsh_output/ and antismash_output_assemblies_all/
+    Can't figure out why there is :
+    grep CP026304 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+    AdmT_ACC	CP026304	21	7303001-7383847	t2pks-t1pks-arylpolyene-nrps	SLUN_33575_acetyl-CoA	7366570	7368267	115.0	304.0	565	0.38	5e-66	7362981	7363841	2729	80846
+    AdmT_ACC	CP026304	2	7303001-7383847	t2pks-t1pks-arylpolyene-nrps	ctg1_176_-	7366570	7368267	115.0	304.0	565	0.38	6e-66	7362981	7363841	2729	80846
+    Redundnacy here comes from the blast output file, not adding domains.
+
+    10.6 Manually delete redundnat lines.
+      cp out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.270
+
+      cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.270 |wc
+        269    7535   42694
+      mv out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.270 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268
+
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ grep AdmT out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268|wc
+         62    1736    9967
+         grep AdmT out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268|cut -f1-4 |sort -u |wc
+            62     248    2255
+            gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ grep AdmT out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains|cut -f1,2,4 |sort -u |wc
+         62     186    2130
+
+         gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains | cut -f1,2,4 |sort -u |wc
+        260     780    9679
+    gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268 | cut -f1,2,4 |sort -u |wc
+        260     780    9679
+
+
+STEP 11. Add taxa:
+  ./add_taxa.py out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268
+
+
+STEP12. Check if positive ids found: yes for all, but soe found in fitered.2000
+          TODO: expnd search to include pks/nrps clusters, in which the target is located 10kb away from a C domain
+          then I would habe found all from positive data set with a threshold 10000.
+
+
+TODO: Table of number of clusters with a target.
+
+STEP13. FIND COMPLETE GENOMES
+
+ Use "DEFINITION" to parse complete genomes, "TITLE" is misleading
+ grep "DEFINITION" gbdir/CP*.gb |grep "complete genome" |wc
+   2099   14871  176425
+grep "DEFINITION" gbdir/CP*.gb |grep "Complete genome" |wc
+      0       0       0
+grep "DEFINITION" gbdir/CP*.gb |grep "complete chromosome" |wc
+      0       0       0
+grep "TITLE" gbdir/CP*.gb |grep "complete genome" |wc
+    151    1522   13390
+grep "DEFINITION" assembly_gb/*.gbff |grep "complete genome" |wc
+   1103    8004  102391
+grep "DEFINITION" assembly_gb/*.gbff |grep "Complete genome" |wc
+      0       0       0
+grep "DEFINITION" assembly_gb/*.gbff |grep "complete chromosome" |wc
+      0       0       0
+grep "DEFINITION" assembly_gb/*.gbff |grep "Complete chromosome" |wc
+      0       0       0
+grep "TITLE" assembly_gb/*.gbff |grep "complete genome" |wc
+     84     836    8213
+grep "TITLE" assembly_gb/*.gbff |grep "Complete genome" |wc
+    349    3544   35522
+grep "TITLE" assembly_gb/*.gbff |grep "complete chromosome" |wc
+      2      20     199
+grep "TITLE" assembly_gb/*.gbff |grep "Complete chromosome" |wc
+      1       8      99
+
+Step 13. Jan-9-2019
+Correct script to include length of genome and record.description
+Now running ./get_genome_length.py 12:36pm
+cat genome_lengths_assembly.txt genome_lengths_nt.txt | sort -u |wc
+ 110179  330537 2588183
+cat genome_lengths_assembly.txt genome_lengths_nt.txt | sort -u > genome_lengths.txt
+cat genome_lengths.txt |grep True |wc
+   3925   11775   86311
+
+STEP 14. Phylogeny
+        Commands:
+        /home/maureenh/RAxML/standard-RAxML-master/raxmlHPC-PTHREADS-AVX -n subtree_ids_reduced.withFabF.fasta -T 64 -s subtree_ids_reduced.withFabF.fasta.mafft -m PROTCATJTT -p 12345
+        /usr/local/bin/mafft --thread 64 subtree_ids.withFabF.fasta > subtree_ids_repeat_.withFabF.fasta.mafft
+         /home/maureenh/FastTree/FastTreeMP subtree_ids_repeat.withFabF.fasta.mafft > subtree_ids_repeat.withFabF.fasta.mafft.FastTree
+
+         14.1 Extract all KS sequences within 10kb of a target gene
+              ./get_ks_sequences.py
+              Output file: out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.fasta
+              has 244 Sequences
+              out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa
+              had 244 unique genbank ids
+
+          14.2 Add FabF
+
+          14.3 Run mafft
+
+          /usr/local/bin/mafft --thread 64 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta > out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.mafft
+
+         14.4. Run FastTree
+         /home/maureenh/FastTree/FastTreeMP out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.mafft > out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.mafft.FastTree
+
+         14.5. Add phyla
+         ./get_phyla.py
+
+                cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.fasta.phyla |cut -f2 | sort -u
+                Actinobacteria
+                Bacteria
+                Candidatus Cloacimonetes
+                Cyanobacteria
+                environmental samples
+                Firmicutes
+                Fungi
+                metagenomes
+                Nitrospirae
+                None
+                Proteobacteria
+
+                cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.fasta.phyla |grep Bacteria
+                    CP024614_1727105-1728364	Bacteria
+                cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.fasta.phyla |grep Candidatus
+                    NBMB01000023_32559-33845	Candidatus Cloacimonetes
+                cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.fasta.phyla |grep environmental
+                    KP830094_17013-18257	environmental samples
+                cat out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.fasta.phyla |grep metagenomes
+                    CXWL01000826_152278-153558	metagenomes
+                    CZLB01000430_4738-6099	metagenomes
+                    OAUA01000150_36369-37640	metagenomes
+                    OAWK01000026_35600-36889	metagenomes
+                    OBAA01000005_9194-10270	metagenomes
+                    OBVB01000276_46215-47483	metagenomes
+                    OFLW01000124_16316-17557	metagenomes
+
+                cat taxa.txt |grep CP024614
+                    CP024614	cellular organisms	Bacteria	Terrabacteria group	Actinobacteria	Actinobacteria	Corynebacteriales	Mycobacteriaceae	MycobacteriuMycobacterium tuberculosis complex
+                cat taxa.txt |grep NBMB01000023
+                    NBMB01000023	Bacteria	Candidatus Cloacimonetes
+                cat taxa.txt |grep KP830094
+                    KP830094	Bacteria	environmental samples
+                cat taxa.txt |grep CXWL01000826
+                    CXWL01000826	unclassified sequences	metagenomes	ecological metagenomes
+
+                Manually change "Bcteria" to "Actinobacteria" for CP024614
+                TODO: add colors to
+                      Fungi,
+                      Candidatus Cloacimonetes - marine sediment
+                      Nitrospirae
+                      Metagenomes
+                      environmental samples
+
+            14.6 Rscript trees.R
+
+            14.7. Make a file with mibig reference ids with descriptions
+                  JPRX01000001  mupirocin_Isoleucyl_tRNA_synthetase_BGC0000182
+                  KE354369  thiolactomycin__FabB/F_BGC0001237
+                  AJ871581  rubradirin_translation_initiation_factor_BGC0000141
+                  KQ949024  cinnabaramide_beta_proteasome_subunit_BGC0000971
+                  KP830094  clarexpoxcin_beta_proteasome_subunit_BGC0001203
+                  JXDG01000003  kalimantacin_FabI_BGC0001099
+                  CP000667  salinosporamide_beta_proteasome_subunit_BGC0001041
+                  FN689524  thiomarinol_Isoleucyl_tRNA_synthetase_BGC0001115
+
+            14.8. Add reseqs to all 244 KS sequences
+            14.9. Rerun trees.R
+
+            Jan-9-2019
+            14.20. Exmine one Ef-Tu clade
+
+            CP022433        Streptomyces pluripotens strain MUSC 137      complete genome   2 copies, one next to Ef-G and RN pol genes
+            NZ_KQ948231     Streptomyces yokosukanensis strain DSM 40224  107888 bp
+            JOCB01000044    Streptomyces sp. NRRL S-31                    75530 bp
+            QLLW01000013    Streptomyces sp. PsTaAH-130                   244718 bp
+            NZ_LBDA02000011 Streptomyces malaysiense strain MUSC 136      71625 bp
+            LGDV01000251    Streptomyces sp. MMG1121                      433798 bp
+            LWRP01000113    Streptomyces sp. FXJ1.172                     144313 bp
+            CP011497_7068841_7375796  Streptomyces incarnatus strain NRRL 8089  8648285 bp   TITLE     Draft Genome Sequence
+            MTKC01000001_240108_546453  Streptomyces griseofuscus         1948235 bp         TITLE     Draft genome
+
+
+List of complete genomes (22):
+cat blast_out.second_copy.filtered.pident.30.complete_genomes |grep True|cut -f2
+
+6 out of 19 (32%) of the complete genomes have a second copy of Ef-Tu
+AM420293  1
+CP004121  2
+CP017717  2
+CP026304  2
+AM889285  1
+CP023778  2
+CP019572  1
+CP007219  1
+CP018145  1
+CP020894  2
+CP023474  1
+CP030117  1
+AP018164  1
+CP004886  0-1?
+CP025542  1
+CP025546  1
+FO203509  1
+CP017248  2
+CP000667  1
+
+
+Jan-3-2019
+            14.10. Add cluster type and target
+
+            ./get_phyla.py
+            CP024614_1727105-1728364	t1pks_AdmT
+
+
+STEP 15 LOOK FOR A SECOND COPY IN GENOME
+
+ 1. Split target sequences in subfiles
+./split_mibig.py
+
+2. Run blast to find number of copies
+    ./second_copy.py
+
+      0 Jan  3 18:09 EF-Tu.1e-08.NZ_KQ948231.out
+      0 Jan  3 18:09 EF-Tu.1e-08.NZ_LBDA02000011.out
+      0 Jan  3 18:09 AdmT_ACC.1e-08.NZ_RFFG01000027.out
+      0 Jan  3 18:09 SalI_beta_proteasome.1e-08.NZ_UPHU01000001.out
+
+      Jan-4-2019
+      Files are 0B because there is no sequence in GB file
+      TODO: Extract sequences to run blast or run blast manually for these empty ones
+
+      There are also > 268 files, because for some clusters there are 2 or more Targets
+      Use defaultdict and rerun script
+
+      EF-Tu	28	26
+      mupM_Ile-tRNA-syn	68	67
+      PtmP3_FabB-F	15	13
+      rubR1_TIF	14	12
+
+        Case 1:
+              diff -y mupM.ids ../Antismash_gbids/antismash_mupM.ids |grep "<"
+              RCCW01000001						      <
+              diff -y mupM.ids ../Antismash_gbids/antismash_mupM.ids |grep ">"
+              							      >	AP018164
+              							      >	AP018164
+
+              cat mupM_Ile-tRNA-syn.1e-08.AP018164.out
+                    mupM_Ile-tRNA-syn	Subject_1	40.55	4006850	4009867	412	1030	6898441	0.0
+                    mupM_Ile-tRNA-syn	Subject_1	25.41	5335298	5333040	216	1030	6898441	7e-53
+
+              grep AP018164 out.targets.12.eval.1e-8.pident.30.filtered.10000
+                    mupM_Ile-tRNA-syn	AP018164	8	2280748-2358005	t1pks-nrps	MSG_02213_isoleucine--tRNA	2340997	2344158	412.0	1030.0	1053	0.40	0.0	2334601	2335869	5128	77257
+                    mupM_Ile-tRNA-syn	AP018164	1	2280748-2358005	t1pks-nrps	ctg1_115_-	2340997	2344158	412.0	1030.0	1053	0.40	0.0	2334601	2335869	512877257
+
+              There is one match and is found in blast search. The other blast hit is <30% identical.
+              In antismash out file there is the same cluster but two ids because antismash was run on whole genbank id and cut gbid.
+
+        Case 2:
+              grep EF-Tu out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa |cut -f2 |sort> antismash_EF-Tu.ids
+              lr *EF-Tu* > EF-Tu.filenames
+              cat EF-Tu.filenames | cut -d"." -f3 |sort > EF-Tu.ids
+              diff -y EF-Tu.ids ../../Antismash_gbids/antismash_EF-Tu.ids
+              CP022433							CP022433
+            							      >	CP022433
+            							      >	CP022433
+
+              grep CP022433 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+                    EF-Tu	CP022433	4	952150-1003799	t1pks-otherks	ctg1_241_-	987834	989006	240.0	397.0	390	0.60	1e-159	980425	981729	6105	51649
+                    EF-Tu	CP022433	6	952150-1003799	t1pks-otherks	LK07_04170_elongation	987834	989006	240.0	397.0	390	0.60	8e-160	980425	981729	6105	51649
+
+              grep CP022433 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa
+                    EF-Tu	CP022433	4	952150-1003799	t1pks-otherks	ctg1_241_-	987834	989006	240.0	397.0	390	0.60	1e-159	980425	981729	6105	51649	0	Bacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces
+                    EF-Tu	CP022433	4	952150-1003799	t1pks-otherks	ctg1_241_-	987834	989006	240.0	397.0	390	0.60	1e-159	980425	981729	6105	51649	2	Bacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces
+                    EF-Tu	CP022433	6	952150-1003799	t1pks-otherks	LK07_04170_elongation	987834	989006	240.0	397.0	390	0.60	8e-160	980425	981729	6105	51649	Bacteria	Actinobacteria	Streptomycetales	Streptomycetaceae	Streptomyces
+
+              cat EF-Tu.1e-08.CP022433.out
+                    EF-Tu	Subject_1	5480961	5479771	350	397	10010106	0.0
+                    EF-Tu	Subject_1	3412544	3411381	240	397	10010106	6e-142
+                    EF-Tu	Subject_1	8747601	8747173	46	397	10010106	2e-16
+                    EF-Tu	Subject_1	8167788	8168399	74	397	10010106	7e-14
+                    EF-Tu	Subject_1	7513343	7513750	39	397	10010106	1e-10
+                    EF-Tu	Subject_1	4835536	4834727	81	397	10010106	3e-09
+
+3. Filter blast results with pident 60 for FabB and pident  30 for the rest
+   Also, add complete genome (True/False) and the length
+    ./filter_second_copy.py > blast_out.second_copy.filtered.pident.30.complete_genomes
+    outfile: blast_out.filtered.second_copy
+             blast_out.second_copy.filtered.pident.30.complete_genomes
+
+
+Jan-9-2019
+#./filter_second_copy.py > blast_out.second_copy.filtered.pident.30.genome_len
+#    outfile: blast_out.second_copy.filtered.pident.30
+#             blast_out.second_copy.filtered.pident.30.genome_len
+
+Total number of target-cluster pairs:
+cat blast_out.second_copy.filtered.pident.30.genome_len |cut -f2 |wc
+    268     268    3172
+
+Number of unique genbank ids(clusters) (build a tree with them)
+cat blast_out.second_copy.filtered.pident.30.genome_len |cut -f2 |sort -u|wc
+   244     244    2904
+
+Number of unique target-cluster pairs:
+cat blast_out.second_copy.filtered.pident.30.genome_len |sort -u|wc
+     259    1332   10500
+
+STEP16. Count unique clusters:
+cat blast_out.second_copy.filtered.pident.30.genome_len |grep AdmT_ACC |cut -f2 |sort -u|wc
+cat blast_out.second_copy.filtered.pident.30.genome_len |grep agnB2_Leu-tRNA-syn|cut -f2 |sort -u|wc
+cat blast_out.second_copy.filtered.pident.30.genome_len |grep BatG_FabI |cut -f2 |sort -u|wc
+cat blast_out.second_copy.filtered.pident.30.genome_len |grep borI_Thr-tRNA-syn |cut -f2 |sort -u|wc
+cat blast_out.second_copy.filtered.pident.30.genome_len |grep EF-Tu |cut -f2 |sort -u|wc
+cat blast_out.second_copy.filtered.pident.30.genome_len |grep GriR_DnaN |cut -f2 |sort -u|wc
+cat blast_out.second_copy.filtered.pident.30.genome_len |grep GyrB-R |cut -f2 |sort -u|wc
+cat blast_out.second_copy.filtered.pident.30.genome_len |grep Ind0_Trp-tRNA-syn |cut -f2 |sort -u|wc
+cat blast_out.second_copy.filtered.pident.30.genome_len |grep mupM_Ile-tRNA-syn |cut -f2 |sort -u|wc
+cat blast_out.second_copy.filtered.pident.30.genome_len |grep PtmP3_FabB-F |cut -f2 |sort -u|wc
+cat blast_out.second_copy.filtered.pident.30.genome_len |grep rubR1_TIF |cut -f2 |sort -u|wc
+cat blast_out.second_copy.filtered.pident.30.genome_len |grep SalI_beta_proteasome |cut -f2 |sort -u|wc
+
+AdmT_ACC              62
+agnB2_Leu-tRNA-syn    9
+BatG_FabI             1
+borI_Thr-tRNA-syn     9
+EF-Tu                 26
+GriR_DnaN             13
+GyrB-R                31
+Ind0_Trp-tRNA-syn     5
+mupM_Ile-tRNA-syn     66
+PtmP3_FabB-F          12
+rubR1_TIF             12
+SalI_beta_proteasome  13
+              TOTAL   259
+
+
+              

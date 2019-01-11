@@ -13,7 +13,7 @@ The experiment went as follows:
 5. For each protein in my set of uniprot fastas, check if there is a homolog in the cluster with blastp.
    `python run_blast.py` (which uses `blastp -query uniprot_fasta/{fasta} -db blastdb/{cluster} -out out/{cluster}.out -evalue 1e-50 -outfmt 6`)
 
-
+NOT FOUND
 BGC0000023
 ----------
 Target: "cholesterol biosynthesis"
@@ -23,6 +23,8 @@ evalue: 1e-140
 False positive. LOVF is "Lovastatin diketide synthase" (http://www.uniprot.org/uniprot/Q9Y7D5)
 HMGR was in the set of uniprot genes but no homolog was found.
 
+
+FOUND
 BGC0000031
 ----------
 Target: "Threonyl-tRNA synthetase"
@@ -32,6 +34,7 @@ evalue: 0
 Pretty obvious since it's annotated correctly in MIBiG.
 
 
+FOUND
 BGC0000104
 ----------
 Target: "inosine monophosphate dehydrogenase"
@@ -50,6 +53,7 @@ evalue: 0
 False positive. The query genes are just the genes from the biosynthetic cluster.
 
 
+Found
 BGC0000182
 ----------
 Target: "Isoleucyl tRNA synthetase"
@@ -58,7 +62,7 @@ Hit: BGC0000182|c1|54444-57536|+|no_locus_tag|MupM|AAM12927.2
 evalue: 0
 MupM is isoleucyl tRNA synthase (https://en.wikipedia.org/wiki/Mupirocin)
 
-
+FOUND
 BGC0000345
 ----------
 Target: "proeasome" [proteasome]
@@ -78,6 +82,7 @@ evalue: 1e-90	0
 This was one of the extremely broad targets groups.
 
 
+Found
 BGC0000615
 ----------
 Target: "ribosome"
@@ -89,6 +94,7 @@ The NCBI entry (https://www.ncbi.nlm.nih.gov/protein/ADO67785.1) is a ribosomal 
 The entry was from a paper: "Isolation and Characterization of the Gene Cluster for Biosynthesis of the Thiopeptide Antibiotic TP-1161"
 
 
+FOUND
 BGC0000832
 ----------
 Target: "GyrB, subunit B protein of DNA gyrase"
@@ -97,7 +103,7 @@ Hit: BGC0000832|c1|31227-32944|+|no_locus_tag|clorobiocin-resistant_gyrase_B|AAN
 evalue: 0
 This one is obvious.
 
-
+FOUND
 BGC0000833
 ----------
 Target: "GyrB, subunit B protein of DNA gyrase"
@@ -106,7 +112,7 @@ Hit: BGC0000833|c1|33611-35644|+|no_locus_tag|DNA_gyrase_subunit_B|AAO47225.2
 evalue: 0
 This one is obvious.
 
-
+FOUND
 BGC0000834
 ----------
 Target: "GyrB, subunit B protein of DNA gyrase"

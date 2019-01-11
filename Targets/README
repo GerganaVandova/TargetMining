@@ -2,6 +2,53 @@ MIBiG Target-In-Cluster Analysis Results
 Nov-2-2018
 ========================================
 
+How did I make mibig_ids.txt file?
+
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Targets$ cat mibig_ids.txt |wc
+   1808    1808   19888
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Targets$ cat mibig_clusters.txt| cut -f1 |sort -u |wc
+   1816    1816   19976
+
+cat mibig_clusters.txt| cut -f1 |sort -u > mibig_clusters.txt.ids
+   diff -y mibig_clusters.txt.ids mibig_ids.txt
+
+   gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Targets$ diff -y mibig_clusters.txt.ids mibig_ids.txt | grep "<"
+   BGC0001129						      <
+   BGC0001447						      <
+   BGC0001451						      <
+   BGC0001453						      <
+   BGC0001454						      <
+   BGC0001455						      <
+   BGC0001456						      <
+   BGC0001457						      <
+   BGC0001475						      <
+   gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Targets$ diff -y mibig_clusters.txt.ids mibig_ids.txt | grep ">"
+   							      >	BGC0001482
+
+    cat MIBiG_prot_seqs_1.4.fa |grep BGC0001482
+
+        >BGC0001482|c1|1-2544|+|no_locus_tag|hypothetical_protein|ANA09434.1
+        >BGC0001482|c1|2627-3976|-|no_locus_tag|hypothetical_protein|ANA09433.1
+        >BGC0001482|c1|4139-5524|-|no_locus_tag|hypothetical_protein|ANA09432.1
+        >BGC0001482|c1|5902-6843|-|no_locus_tag|hypothetical_protein|ANA09431.1
+        >BGC0001482|c1|6858-7463|-|no_locus_tag|hypothetical_protein|ANA09430.1
+        >BGC0001482|c1|7533-8012|-|no_locus_tag|hypothetical_protein|ANA09442.1
+        >BGC0001482|c1|8159-9475|-|no_locus_tag|PriG|ANA09449.1
+        >BGC0001482|c1|9962-10696|-|no_locus_tag|PriF|ANA09448.1
+        >BGC0001482|c1|11108-12205|-|no_locus_tag|PriE|ANA09447.1
+        >BGC0001482|c1|12289-13665|-|no_locus_tag|PriD|ANA09446.1
+        >BGC0001482|c1|13760-13981|+|no_locus_tag|hypothetical_protein|ANA09441.1
+        >BGC0001482|c1|14313-15443|+|no_locus_tag|hypothetical_protein|ANA09440.1
+        >BGC0001482|c1|15461-15841|+|no_locus_tag|hypothetical_protein|ANA09439.1
+        >BGC0001482|c1|16157-16774|+|no_locus_tag|hypothetical_protein|ANA09438.1
+        >BGC0001482|c1|16784-18130|+|no_locus_tag|PriC|ANA09445.1
+        >BGC0001482|c1|18469-19626|+|no_locus_tag|PriB|ANA09444.1
+        >BGC0001482|c1|19675-21048|+|no_locus_tag|PriA|ANA09443.1
+        >BGC0001482|c1|21322-21741|-|no_locus_tag|hypothetical_protein|ANA09429.1
+        >BGC0001482|c1|21870-22886|-|no_locus_tag|hypothetical_protein|ANA09435.1
+        >BGC0001482|c1|22901-23518|-|no_locus_tag|hypothetical_protein|ANA09436.1
+        >BGC0001482|c1|23678-25255|-|no_locus_tag|hypothetical_protein|ANA09437.1
+
 1. Download json and fasta files from MIBiG http://mibig.secondarymetabolites.org/download.html
     Version 1.4 (August 6th, 2018 release)
 2. Parse the MIBiG json files to find putative targets for each MIBiG entry
@@ -72,11 +119,42 @@ wget -O myosin_atpase.fasta 'https://www.uniprot.org/uniprot/?query=myosin_atpas
 
 4. Make blast dbs from each of the proteins in the clusters in the MIBiG fasta file (`MIBiG_prot_seqs_1.4.fasta`)
   a) wget 'https://mibig.secondarymetabolites.org/MIBiG_prot_seqs_1.4.fasta'
-  b) Split fasta file to subfiles for each cluster (Run ./split_mibig.py)
-       DONT DO THIS STEP, too many files in a folder, can run blast on a single fasta file
-    cat uniprot_fasta/*.fasta uniprot_manual_fasta/*.fasta > all_uniprot.fa
-  c) for f in BGC*fasta; do makeblastdb -in $f -dbtype prot -parse_seqids -out $(basename $f .fasta); done
+  b) Make a file with all protein sequences for each cluster
+    ./split_mibig.py
+    1809 [cluster].fasta files in clusters_fasta/ folder
+
+    c) for f in BGC*fasta; do makeblastdb -in $f -dbtype prot -parse_seqids -out $(basename $f .fasta); done
       move databases in blastdb/ folder
 
-  TODO: 5. For each protein in my set of uniprot fastas, check if there is a homolog in the cluster with blastp.
+  5. For each protein in my set of uniprot fastas, check if there is a homolog in the cluster with blastp.
      `python run_blast.py` (which uses `blastp -query uniprot_fasta/{fasta} -db blastdb/{cluster} -out out/{cluster}.out -evalue 1e-50 -outfmt 6`)
+
+
+     output in blast_results/ folder
+
+     [OPTIONAL]: for f in `ls`; do echo $f; cat $f >> merged/all.out; done
+
+6. Parse blast_results/ with pident > 50% and grep for all with "antibacterial"
+or "cytotoxic" descriptions
+
+  ./parse_blast.py > out.parsed.pident.50
+  gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Targets$ cat out.parsed.pident.50 |wc
+  872   15627  162035
+
+7. Filter results
+
+      7.1. Keep all with non-empty target field
+            Delete query target Unknown
+            Filter by:
+            Activity field != None or Unknown
+            233 clusters left
+      7.2. Remove duplicates:
+            For example: gyrb_subunit_b_protein_of_dna_gyrase,
+            topoisomerase_i_topoisomerase_ii,
+            topoisomerase_i
+
+            all identified clorobiocin
+
+cat udp-glcnac_enolpyruvyltransferase__mura_.uniprot.fasta.1e-50.all
+
+File empty but MurA is a good antibacterial target. Include in list of targets to mine

@@ -1,26 +1,70 @@
+
 STEP1. Blast 8KS against 11db (wgs not updated, parallely downloading Assemblies)
        Blast/
 
 STEP2. Fetch all genbank ids that contain a KS
        Genbank/
-       Run get_gbid.py > gbids.txt
-       cat gbids.txt |sort -u > gbids.unique.94516.txt
-       Run fetch_gbid.py
+       2.1 Run get_gbid.py
+           Input file: blast_results.KS.fasta.cleanName.cdhit.99
+           Output files: gbids.nt.txt
+                         gbids.assembly.txt
+            cat gbids.nt.txt | sort -u > gbids.nt.unique.txt (89449 gbids)
+            cat gbids.assembly.txt | sort -u > gbids.assembly.unique.txt (21080 gbids)
 
-STEP3. Run Antismash on all 95k genbank ids
+        2.2 Run fetch_gbid.py
+            Input file: gbids.nt.unique.txt
+            Output files: gbdir/*.gb (89449 genbank files)
+
+
+STEP3. Run Antismash on all 89k genbank ids
        Antismash_gbids/
-       Run run_antismash.Agbids.py
+       Run run_antismash.nt.gbids.py
+       Input files: gbids.nt.unique.txt
+                    gbdir/
+       Output files: antismash_output/
+       ***** 95h total run time
 
-TODO: STEP4. Parse geneclusters.js files
-       Run parse_js.py and parse.coord.py
-       Output files: sequences.faa.95k.fasta
-                     sequences.faa.95k.coord.fasta
 
-      STEP5. Make database from sequences.faa.95k.fasta?
-      Use makeblastdb.py script? There are 10 input sequences,
-      where did they come from?
+STEP4. Parse geneclusters.js files
 
-      STEP6. Run blast to identify if target is located in clusters
+      Run parse_js.coord.py
+      Input file: blast_results.KS.fasta.cleanName.cdhit.99 (it contains blast results from nt and assembly)
+                  antismash_output/ (it contains antismash results from nt only)
+      Output file: sequences.faa.89k.coord.fasta
+
+      154m0.715s
+
+      TODO: fix script to split cluster header on " _<span" [0]
+      FIXED Dec13
+
+
+STEP 4a. Combine fasta sequences from nt and assemblies
+         Cat sequences.faa.89k.coord.fasta and sequences.faa.21k.coord.fasta
+
+
+STEP5. Make database from sequences.faa.89k.fasta
+
+    5.1. Run makeblastdb.py
+    mv sequences.faa.89k.fasta to seq_dir/
+    Input file: seq_dir/sequences.faa.89k.fasta
+    Output file: antismashdb_sequences.faa.89k.coord.fasta.pin
+                 antismashdb_sequences.faa.89k.coord.fasta.phr
+                 antismashdb_sequences.faa.89k.coord.fasta.psq
+
+    Building a new DB, current time: 12/03/2018 23:07:11
+    New DB name:   antismashdb_sequences.faa.89k.coord.fasta
+    New DB title:  seq_dir/sequences.faa.89k.coord.fasta
+    Sequence type: Protein
+    Keep Linkouts: T
+    Keep MBits: T
+    Maximum file size: 1000000000B
+    Adding sequences from FASTA; added 1123192 sequences in 67.9128 seconds.
+
+    real	1m9.266s
+    user	1m5.347s
+    sys	0m1.459s
+
+STEP6. Run blast to identify if target is located in clusters
       run_blastp.py
       input files: target file: targets.609.fa
                    blast databases: antismashdb_sequences.faa.95k.coord.00.fasta
@@ -29,9 +73,334 @@ TODO: STEP4. Parse geneclusters.js files
                                     antismashdb_sequences.faa.95k.coord.09.fasta
 
       output file: out.targets.609
+      real	1m45.012s
+      user	1m43.859s
+      sys	0m0.521s
+
 
       STEP7. Filter output file
-      filter_blast.py
+       ./filter_blast.py out.targets.9 out.targets.9.filtered
+
 
       STEP8. Target and KS tandem
-      target_ks_tandem.py
+      ./target_ks_tandem.py out.targets.9.filtered 10000
+      Output file: out.targets.9.filtered.10000
+
+
+
+cat out.targets.9.filtered.10000 | grep "t1pks" > out.targets.9.filtered.10000.t1pks
+cat out.targets.9.filtered.10000 | grep "transatpks" > out.targets.9.filtered.10000.transatpks
+
+cat out.targets.9.filtered.10000.t1pks.transatpks |wc
+     47     799    8202
+
+___________________________________________________________________________________
+Run pipeline on Assemblies
+
+STEP1. Blast 8KS against downloaded Assemblies
+       Blast/
+
+STEP2. Fetch all genbank ids that contain a KS
+        Genbank/
+        2.1 Run get_gbid.py
+            Input file: blast_results.KS.fasta.cleanName.cdhit.99
+            Output files: gbids.nt.txt
+                          gbids.assembly.txt
+             cat gbids.nt.txt | sort -u > gbids.nt.unique.txt (89449 gbids)
+             cat gbids.assembly.txt | sort -u > gbids.assembly.unique.txt (21080 gbids)
+
+         2.2 Map assembly genbank id with assembly genbank filename and
+             Make a genbank file for each assembly gbid
+             Run get_assembly_id.py
+             Input file: gbids.assembly.unique.txt
+                         Assemblies/assemblies_gbdir/
+             Output files: assemblyids_filenames.2f
+                           #assembly_gb/%s.gbff" % gbid
+
+
+ STEP3. Run Antismash on all 21080 genbank ids Antismash_gbids/
+
+        1. Run run_antismash.assembly.gbids.py
+        Input files: gbids.assembly.unique.txt
+                     gbdir_assemblies/
+        Output files: antismash_output_assemblies/
+
+        NOW RUNNING FOR SEQUENCES < 1M
+        *****  46:18:44 run time for 13655/21080 sequences
+               29:56:18 run time for 21080/21080 sequences
+
+        2. Extract assembly genbank files' sequences around a
+        KS to run antismash faster:
+        Script: extract_assembly_parts.py
+        Input files:  Blast/blast_results_seqs/blast_results.KS.fasta.cleanName.cdhit.99
+                      Genbank/gbids.assembly.unique.txt
+                      Genbank/assembly_gb/
+        Output folder: /home/gvandova/assemblies_part
+
+        3. Run antismsh for all split assembly gbids:
+        Script: run_antismash.assembly.part.gbids.p
+        Input files: gbdir_assemblies_part/
+        Output files: antismash_output_assemblies_part/
+        ****** 51:36:37 run time for 9013/9013 sequences
+
+        4. Combine antismash results in one folder
+
+        cp -r antismash_output_assemblies_part/* antismash_output_assemblies_all
+        cp -r antismash_output_assemblies/* antismash_output_assemblies_all
+
+        didn't work. Worked with RCYNC
+
+Dec-18-2018
+        ADD TAXA
+         Genbanks/
+        1. parse_gb_taxa.py
+           Input folder: gbdir/
+           Output file: taxa_nt.txt
+        2. parse_gb_taxa.py
+           Input folder: assembly_bg/
+           Output file: taxa_assembly.txt
+        3. cat taxa_nt.txt taxa_assembly.txt > taxa.txt
+
+
+
+          FIND COMPLETE GENOMES
+           Genbank/assembly_gb$ cat *.gbff |grep "DEFINITION" | grep "complete genome" |wc
+           1103    8004   73713
+           There are 1103 complete genomes in assembly_gb
+           assembly_gb$ cat *.gbff |grep "DEFINITION" | grep "complete genome"> assembly_complete_genome.txt
+           gbdir$ cat *.gb | grep "DEFINITION" | grep "complete genome" > nt_complete_genome.txt
+           cat nt_complete_genome.txt |wc
+           2412   17188  159561
+
+           parse_gb_complete_genomes.py
+           Output file: annotations_assembly.txt
+
+           parse_gb_complete_genomes.py
+           Output file: annotations_nt.txt
+
+           cat annotations_* > annotations.txt
+
+
+Dec-18-2018
+STEP4. Parse geneclusters.js files
+      [FIXED] fix script to split cluster header on " _<span" [0] Dec-13
+      [FIXED] Correct antismash coordinates for split assembly genbank files
+
+      Run parse_js.coord.py
+      Input file: blast_results.KS.fasta.cleanName.cdhit.99 (it contains blast results from nt and assembly)
+                  antismash_output_assemblies_all/ (it contains antismash results from assemblies only)
+      Output file: sequences.faa.21k.coord.fasta
+
+      RUNTIME: ************ 2:48:33h
+
+       There are redundant sequences so I won't be able to make a database
+       with the concatenated files
+
+
+Dec-18-2018
+STEP5. Make database from sequences.faa.89k.coord.fasta and sequences.faa.21k.coord.fasta
+
+   5.1. mv sequences.faa.21k.coord.fasta to seq_dir/
+   5.2. Run makeblastdb.py
+   5.3. mv antismashdb_sequences.faa.* antismashdb/
+
+STEP6. Run blast to identify if target is located in clusters
+
+      6.1. Update targets file to include ley-trna synthetase, trp-tRNA synthetase,
+           and translation initiation factor
+      6.2. ./run_blastp.py with targets.12.fa
+      6.3. cat out.targets.12* > out.targets.12
+
+STEP7. Filter output file
+./filter_blast.py out.targets.12 out.targets.12.eval.1-8.pident.30.filtered
+
+STEP8. Target and KS tandem
+./target_ks_tandem.py out.targets.12.eval.1-8.pident.30.filtered 10000
+./targ
+et_ks_tandem.py out.targets.12.eval.1-8.pident.30.filtered 20000
+
+
+STEP9. Extract pks clusters only
+cat out.targets.12.eval.1-8.pident.30.filtered.10000 | grep "t1pks" > out.targets.12.eval.1-8.pident.30.filtered.10000.t1pks
+cat out.targets.12.eval.1-8.pident.30.filtered.10000 | grep "transatpks" > out.targets.12.eval.1-8.pident.30.filtered.10000.transatpks
+cat out.targets.12.eval.1-8.pident.30.filtered.10000.t1pks out.targets.12.eval.1-8.pident.30.filtered.10000.transatpks | sort -u > out.targets.9.eval.1-8.pident.30.filtered.10000.allpks
+cat out.targets.12.eval.1-8.pident.30.filtered.10000.allpks |wc
+    360    6120   49535
+
+
+STEP10. Check if I found positive sets
+        10.1. Compare numbers with previous dataset from 2013:
+
+        Targets                    2013 numbers      2018 numbers
+        1. Acetyl CoA carboxylase		  17             85
+        2. Beta proteasome subunit	  7              9
+        3. DnaN 						          1              12
+        4. EF-Tu						          16             29
+        5. FabB/F					            17             31
+        6. FabI						            1              2
+        7. Gyrase B					          12             24
+        8. Isoleucyl tRNA synthetase 	27             64
+        9. Threonyl-tRNA synthetase	  5              6
+
+        10.2 Did I find all clusters from positive set (clusters to express)
+        CP012600 in out.targets.9.eval.1-8.pident.30.filtered but NOT in
+                    out.targets.9.eval.1-8.pident.30.filtered.1000
+
+        Error in parsing coord?
+        Correct script
+./target_ks_tandem.py out.targets.9.eval.1-8.pident.30.filtered 10001
+
+Mibig ids:
+grep KT362046 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+grep JPRX01000001 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+grep KE354369 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+grep AJ871581 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+grep AY192157 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+grep KQ949024 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+grep KP830094 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+grep KF647220 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+grep JXDG01000003 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+grep CP000667 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+grep FN689524 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+
+
+grep KT362046 out.targets.12.eval.1e-8.pident.30.filtered.20000.allpks
+grep KF647220 out.targets.12.eval.1e-8.pident.30.filtered.20000.allpks
+
+
+Dec-26-29
+STEP 11. Add taxa
+
+STEP 12. Add domain counts
+
+./add_ks_counts.py ../../Antismash_gbids/domain_counts.txt ../data/out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks ../data/out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domaincounts
+
+
+TODO: delete antismash folders with full and cut coord
+BDBD01000011|cluster-4	null
+BDBD01000011|cluster-5	{"AMP-binding": 1, "Condensation_LCL": 1, "PKS_KR": 1}
+BDBD01000011|cluster-6	{"Condensation_LCL": 1, "PCP": 3, "AMP-binding": 4, "PKS_DH": 1, "PKS_KR": 3, "PKS_KS": 2, "KS_AT": 2, "PKS_ER": 1, "Condensation_Starter": 1}
+BDBD01000011|cluster-7	null
+BDBD01000011|cluster-1	null
+BDBD01000011|cluster-2	{"Condensation_DCL": 4, "PCP": 9, "AMP-binding": 10, "Condensation_LCL": 3, "PKS_ER": 1, "Condensation_Starter": 1}
+BDBD01000011|cluster-3	{"AMP-binding": 1, "PKS_KR": 2, "PKS_ER": 2}
+BDBD01000011_867822_1244349|cluster-1	{"Condensation_LCL": 1, "PCP": 3, "AMP-binding": 4, "PKS_DH": 1, "PKS_KR": 3, "PKS_KS": 2, "KS_AT": 2, "PKS_ER": 1, "Condensation_Starter": 1}
+BDBD01000011_867822_1244349|cluster-2	null
+
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Processed/scripts$ grep BDBD01000011 ../../Antismash_gbids/out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks
+AdmT_ACC	BDBD01000011	1	992563-1114385	nrps-t1pks-otherks	ctg1_136_-	1006722	1008416	117.0	304.0	564	0.38	3e-65	1017822	1019195	9406	121822
+AdmT_ACC	BDBD01000011	6	992563-1114385	nrps-t1pks-otherks	ctg1_976_-	1006722	1008416	117.0	304.0	564	0.38	3e-65	1017822	1019195	9406	121822
+
+
+
+___________________________________________________________________________
+
+Alternative:
+
+
+
+1. Run ./parse_gb.py to make a DNA sequence file from all blast results (nt)
+
+Dna seq 82095
+no seq 12341
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat prot_nt.fasta | grep ">" | cut -d'[' -f 1 | sort -u |wc
+   3242    3242   61047
+
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat dna_nt.fasta |grep ">"|wc
+  82095   82095 1062359
+
+TODO: There are some gbids that do not have a seqence but how to find which ones?
+
+
+2. ./parse_gb.py to make a DNA sequence file from all blast results (assemblies)
+Prot seq 0
+Dna seq 21080
+no seq 0 []
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat dna_assembly.fasta |grep ">"|wc
+  21080   21080  281014
+
+3. Make databases from blast genbank files:
+
+makeblastdb -in prot_nt.fasta -dbtype prot -out protntdb
+
+      Building a new DB, current time: 12/06/2018 14:53:34
+      New DB name:   protntdb
+      New DB title:  prot_nt.fasta
+      Sequence type: Protein
+      Keep Linkouts: T
+      Keep MBits: T
+      Maximum file size: 1000000000B
+      Adding sequences from FASTA; added 408195 sequences in 17.6635 seconds.
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat prot_nt.fasta | grep ">"|wc
+      408195  408195 20003964
+
+makeblastdb -in dna_nt.fasta -dbtype nucl -out dnantdb
+
+      Building a new DB, current time: 12/06/2018 14:55:32
+      New DB name:   dnantdb
+      New DB title:  dna_nt.fasta
+      Sequence type: Nucleotide
+      Keep Linkouts: T
+      Keep MBits: T
+      Maximum file size: 1000000000B
+      Adding sequences from FASTA; added 82095 sequences in 1038.69 seconds.
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat dna_nt.fasta |grep ">"|wc
+      82095   82095 1062359
+
+
+makeblastdb -in dna_assembly.fasta -dbtype nucl -out dnaassemblydb
+
+      Building a new DB, current time: 12/06/2018 15:19:33
+      New DB name:   dnaassemblydb
+      New DB title:  dna_assembly.fasta
+      Sequence type: Nucleotide
+      Keep Linkouts: T
+      Keep MBits: T
+      Maximum file size: 1000000000B
+      Adding sequences from FASTA; added 21080 sequences in 423.024 seconds.
+      gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ cat dna_assembly.fasta |grep ">"|wc
+        21080   21080  281014
+
+
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ mv protntdb.p* ../../blast/db
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ mv dnantdb.* ../../blast/db
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank$ mv dnaassemblydb.* ../../blast/db
+
+
+
+*******************************************************
+STEP5. Blast target fasta file against the pks database
+*******************************************************
+
+tblastn -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/dnantdb -query targets.9.fa -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -out targets.9.dnantdb.out
+tblastn -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/dnaassemblydb -query targets.9.fa -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -out targets.9.dnaassemblydb.out
+blastp -db /mnt/gnpn/gnpn/projects/orphanpks/blast/db/protntdb -query targets.9.fa -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -out targets.9.protntdb.out
+
+
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat targets.out |wc
+  10232   61392  394334
+
+*******************************************************
+STEP6. Filter blast results by % identity > 0.3 and evalue ~0.05/80000 ~e-8
+        For FabFs % identity > 0.6
+*************************************************
+
+Run filter_blast.py
+Filtered results in targets.filtered.out
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat targets.filtered.out |wc
+   2431   17017  114558
+
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat targets.filtered.out.withallfabs |wc
+   3274   22918  156798
+
+*******************************************************
+STEP6. Require putative target to be in PKS cluster
+target is <50kb away from a KS
+*************************************************
+./target_ks_tandem.py
+
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat gbids_for_antismash.txt |wc
+    111     111    1251
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat gbids_for_antismash.txt |sort -u |wc
+         56      56     632
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/BlastTargets$ cat gbids_for_antismash.txt |sort -u > gbids_for_antismash.unique.txt

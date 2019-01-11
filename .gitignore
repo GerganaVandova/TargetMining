@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 Coevolution/fasta/
 
 Antismash_gbids/sequences.110k.coord.redundant.fasta
+=======
+Antismash_gbids/2016_antismash_output/
+Check_positive_ids.xlsx
+Known_targets_in_cluster (version 1).xlsx
+Known_targets_in_cluster_newest.xlsx
+Known_targets_in_cluster_v1.xlsx
+Postive_cluster_list.xlsx
+out.parsed.pident.50.xlsx
+
+>>>>>>> cf3d817cbd44041860656aa5d27a67192f9b393e
 Antismash_gbids/antismash_ids.txt
 Genbank/complete_genomes.txt
 Genbank/complete_genomes_nt.txt
