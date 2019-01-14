@@ -2079,4 +2079,17 @@ SalI_beta_proteasome  13
               TOTAL   259
 
 
-              
+Jan-9-2019
+1. Run cdhit with cutoff .90
+    ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta -o out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.cdhit.90 -c .9 -d 200 -M 10000
+
+2. Run mafft
+
+/usr/local/bin/mafft --thread 64 out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.cdhit.90 > out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.cdhit.90.mafft
+
+3. Run FastTree
+/home/maureenh/FastTree/FastTreeMP out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.cdhit.90.mafft > out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.cdhit.90.mafft.FastTree
+
+4. Rscript trees.R
+  Changes:
+  filename <- "out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.cdhit.90.mafft.FastTree"

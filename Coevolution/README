@@ -1,0 +1,38 @@
+diskutil umount force /Users/gvandova/TargetMining/
+sshfs gvandova@maguro.stanford.edu:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/ /Users/gvandova/TargetMining/
+
+COEVOLUTION STEP
+
+Jan-10-2019
+
+1. mkdir Coevolution
+2. Make fasta files with all KS and target sequences
+
+   cat seq_dir/sequences.faa.21k.coord.fasta seq_dir/sequences.faa.89k.coord.fasta > sequences.110k.coord.redundant.fasta
+
+Jan-11-2019
+   ./get_ks_sequences.py
+
+3. separate fasta files into separate sequence files for blasting
+  mv *.fasta target_seq/
+  mv *.KS.fasta KS_seq/
+  cat *.fasta > all.KS.fasta
+  cat *.fasta > all.target.fasta
+
+  ./split_fastaseqs.py
+
+  mkdir KS_split
+  mv *.KS.* KS_split/
+  mkdir target_split
+  mv *.fasta target_split/
+
+4. Make blast databases for KS and targets
+  ./makeblastdb.py
+   mv antismashdb_* blastdb/
+
+Jan-14-2019
+5. Run paiwise blast
+./run_blast.py
+
+WOrking but I don't know which KS comes with which target, since their coord are diff.
+Add cluster coord to sequence ids.
