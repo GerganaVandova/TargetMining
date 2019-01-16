@@ -2,9 +2,8 @@ https://www.sciencemag.org/careers/2013/11/perfect-time-babies
 
 
 Useful commands:
-diskutil umount force /Users/gvandova/oldTargetMining/
-sshfs gvandova@maguro.stanford.e:/mnt/gnpn/gnpn/projects/orphanpks/oldTargetMining/ /Users/gvandova/oldTargetMining/
-find . -type f -print | xargs grep "Y15279"
+diskutil umount force /Users/gvandova/TargetMining/
+sshfs gvandova@maguro.stanford.edu:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/ /Users/gvandova/TargetMining/
 
 Recent literature on resistant genes:
 Core papers:
