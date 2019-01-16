@@ -20,12 +20,13 @@ def get_targets(antismash_outfilename):
     return(targets)
 
 
-def paiwise_blast(blastdb_dir, fasta_dir, target_name):
+def paiwise_blast(blastdb_dir, fasta_dir, out_dir, target_name):
     # For each target, do paiwise blasts for KSs and targets
     # from the same clusters
     for fasta_seq in os.listdir(fasta_dir):
         fasta_seq_basename = fasta_seq.split(".fasta")[0]
-        outfile = target_name + ".out"
+        outfilename = target_name + ".out"
+        outfile = os.path.join(out_dir, outfilename)
         if fasta_seq_basename != target_name:
             continue
 
@@ -39,26 +40,28 @@ def paiwise_blast(blastdb_dir, fasta_dir, target_name):
             if os.path.isfile(outfile):
                 continue
 
+            # blastp -db blastdb/GyrB-R -query GyrB-R.KS.fasta
+            # -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue"
+            # -evalue 1e-8 -out GyrB-R.KS.out
             blastp = "blastp -db " + os.path.join(blastdb_dir, blastdb) \
                 + " -query " + os.path.join(fasta_dir, fasta_seq) \
                 + " -outfmt " \
                 + '"6 qseqid sseqid sstart send nident qlen slen evalue"' \
+                + " -evalue 1" \
                 + " -out " + outfile
-            # blastp -db blastdb/GyrB-R -query GyrB-R.KS.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1e-8 -out GyrB-R.KS.out
             print blastp
-
             os.system(blastp)
 
 
 blastdb_dir = "blastdb"
 fasta_dir = "fasta_seqs"
+out_dir = "out"
 antismash_outfilename = \
     "../Antismash_gbids/out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa"
 
 
 targets = get_targets(antismash_outfilename)
-targets = ["GyrB-R"]
 for target in targets:
     target_ks = target + ".KS"
-    paiwise_blast(blastdb_dir, fasta_dir, target)
-    paiwise_blast(blastdb_dir, fasta_dir, target_ks)
+    paiwise_blast(blastdb_dir, fasta_dir, out_dir, target)
+    paiwise_blast(blastdb_dir, fasta_dir, out_dir, target_ks)

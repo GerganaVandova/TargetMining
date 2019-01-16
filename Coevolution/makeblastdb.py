@@ -3,7 +3,7 @@ from Bio import SeqIO
 import os
 import sys
 
-seq_dirs = ["fasta/KS_seq/", "fasta/target_seq/"]
+seq_dirs = ["ks_seqs/", "target_seqs/"]
 for seq_dir in seq_dirs:
     for seqfile in os.listdir(seq_dir):
         print seqfile

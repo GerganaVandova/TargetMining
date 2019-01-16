@@ -65,6 +65,7 @@ def get_antismash_clusters(gene_name, antismash_outfilename):
 
     antismashgbids_to_kscoord = defaultdict(list)
     antismashgbids_to_targetcoord = defaultdict(list)
+    antismashgbids_to_clustercoord = defaultdict(list)
 
     # ['Target', 'Cluster', 'Clusternum', 'Clustercoord', 'Type', 'Gene', \
     # 'sstart', 'send', 'nident', 'querylen', 'slen', 'pident', 'evalue', \
@@ -77,7 +78,7 @@ def get_antismash_clusters(gene_name, antismash_outfilename):
     outfile = open(antismash_outfilename).readlines()[1:]
     for line in outfile:
         line = line.strip()
-        target, cluster, _, _, _, target_gene, target_gene_start, \
+        target, cluster, _, clustercoord, _, target_gene, target_gene_start, \
             target_gene_end, _, _, _, _, _, \
             ks_start, ks_end = line.split("\t")[:15]
         if target != gene_name:
@@ -87,13 +88,17 @@ def get_antismash_clusters(gene_name, antismash_outfilename):
         ks_coord = ks_start + "-" + ks_end
         antismashgbids_to_kscoord[cluster].append(ks_coord)
         antismashgbids_to_targetcoord[cluster].append(target_gene_coord)
+        antismashgbids_to_clustercoord[cluster].append(clustercoord)
 
-    return([antismashgbids_to_kscoord, antismashgbids_to_targetcoord])
+    return([antismashgbids_to_kscoord,
+            antismashgbids_to_targetcoord,
+            antismashgbids_to_clustercoord])
 
 
 def get_fasta_files(gene_name,
                     antismashgbids_to_kscoord,
-                    antismashgbids_to_targetcoord):
+                    antismashgbids_to_targetcoord,
+                    antismashgbids_to_clustercoord):
     # Match antismash coord with blast coord to extract KS DNA sequence
 
     ks_outfilename = gene_name + ".KS" + ".fasta"
@@ -101,11 +106,15 @@ def get_fasta_files(gene_name,
     for gbid in sorted(antismashgbids_to_kscoord.keys()):
         aks_coord = antismashgbids_to_kscoord[gbid][0]
         ks_sequences = fastagbids_to_coord[gbid]
+        clustercoord = antismashgbids_to_clustercoord[gbid][0]
+        # if len(antismashgbids_to_clustercoord[gbid]) > 1:
+        #     print gbid, "KScoord: ", antismashgbids_to_kscoord[gbid]
+        #     print gbid, "clustercoord: ", antismashgbids_to_clustercoord[gbid]
         for ks in ks_sequences:
             ks_coord, ks_seq = ks
             if aks_coord == ks_coord:
-                print "%s.%s.KS.%s" % (gene_name, gbid, ks_coord)
-                f.write(">%s.%s.KS.%s\n" % (gene_name, gbid, ks_coord))
+                print "%s.%s.%s.KS.%s" % (gene_name, gbid, clustercoord, ks_coord)
+                f.write(">%s.%s.%s.KS.%s\n" % (gene_name, gbid, clustercoord, ks_coord))
                 f.write(str(ks_seq))
                 f.write("\n")
     f.close()
@@ -115,10 +124,14 @@ def get_fasta_files(gene_name,
     ff = open(target_outfilename, "w")
     for gbid in sorted(antismashgbids_to_targetcoord.keys()):
         target_gene_coord = antismashgbids_to_targetcoord[gbid][0]
+        # if len(antismashgbids_to_clustercoord[gbid]) > 1:
+        #     print gbid, "targetcoord: ", antismashgbids_to_targetcoord[gbid]
+        #     print gbid, "clustercoord: ", antismashgbids_to_clustercoord[gbid]
+        clustercoord = antismashgbids_to_clustercoord[gbid][0]
         key = gbid + "_" + target_gene_coord
         target_sequence = antismashgbids_to_targetseq[key]
-        print gene_name, gbid, target_gene_coord
-        ff.write(">%s.%s.%s\n" % (gene_name, gbid, target_gene_coord))
+        print gene_name, gbid, clustercoord, target_gene_coord
+        ff.write(">%s.%s.%s.%s\n" % (gene_name, gbid, clustercoord, target_gene_coord))
         ff.write(str(target_sequence))
         ff.write("\n")
     ff.close()
@@ -134,8 +147,11 @@ antismashgbids_to_targetseq = get_target_sequences(antismash_sequences)
 fastagbids_to_coord = get_KS_sequences(blast_file)
 
 for target in get_targets(antismash_outfilename):
-    antismashgbids_to_kscoord, antismashgbids_to_targetcoord = \
+    antismashgbids_to_kscoord, \
+    antismashgbids_to_targetcoord, \
+    antismashgbids_to_clustercoord = \
         get_antismash_clusters(target, antismash_outfilename)
     get_fasta_files(target,
                     antismashgbids_to_kscoord,
-                    antismashgbids_to_targetcoord)
+                    antismashgbids_to_targetcoord,
+                    antismashgbids_to_clustercoord)

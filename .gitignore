@@ -18,6 +18,8 @@ Genbank/complete_genomes_nt.txt
 
 Coevolution/blastdb/
 Coevolution/fasta_seqs/
+Coevolution/all.KS.out
+Coevolution/all.targets.out
 
 Antismash_gbids/all.cluster.counts.sorted.txt
 Antismash_gbids/all.cluster.counts.txt
