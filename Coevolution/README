@@ -59,7 +59,7 @@ Jan-15-2019
   cat ks_seqs/* > all.KS.out
   cat *.out > all.targets.out
   mv ks_seqs/* out/
-  
+
   cat borI_Thr-tRNA-syn.out |wc
        81     648   11320
   cat borI_Thr-tRNA-syn.KS.out |wc
@@ -68,3 +68,26 @@ Jan-15-2019
 Jan-16-2019
 4. Extract ks and corresponding target pairwise identities
   ./parse_pairwise_identities.py
+
+
+  cat all.KS.out | grep borI_Thr-tRNA-syn.QZFT01000045 | grep borI_Thr-tRNA-syn.LGTC01000001
+  borI_Thr-tRNA-syn.LGTC01000001.2624321-2672198.KS.2647729-2648562	borI_Thr-tRNA-syn.QZFT01000045.122581-166774.KS.142614-143975	206	303	28	278	454	4e-04
+  borI_Thr-tRNA-syn.QZFT01000045.122581-166774.KS.142614-143975	borI_Thr-tRNA-syn.LGTC01000001.2624321-2672198.KS.2647729-2648562	21	127	28	454	278	6e-04
+
+  borI_Thr-tRNA-syn.QZFT01000045-borI_Thr-tRNA-syn.LGTC01000001	6.17	borI_Thr-tRNA-syn.QZFT01000045-borI_Thr-tRNA-syn.LGTC01000001	35.62
+
+manual blast: 35% KS seq identity
+in fasta_seqs/borI_Thr-tRNA-syn.KS.fasta
+>borI_Thr-tRNA-syn.LGTC01000001.2624321-2672198.KS.2647729-2648562
+
+  cat blast_results.KS.fasta.cleanName.cdhit.99 | grep LGTC01000001
+  >LGTC01000001___1717315_1718712__2_-1_6878816_3e-67
+  >LGTC01000001___1465072_1466283__2_-1_6878816_2e-22
+  >LGTC01000001___225988_227286__0_1_6878816_3e-107
+  >LGTC01000001___1956479_1957750__1_-1_6878816_4e-102
+  >LGTC01000001___2650774_2652174__2_-1_6878816_9e-50 REAL KS
+  >LGTC01000001___218710_219993__0_1_6878816_2e-88
+  >LGTC01000001___2647729_2648562__2_-1_6878816_0.007 CURRENT KS
+
+  vim sequences.faa.21k.coord.fasta
+  >LGTC01000001_cluster-1_2624321-2672198_t1pks_2644321-2652198_ctg1_146_- WHOLE MODULE SEQUENCE
