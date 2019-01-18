@@ -30,9 +30,41 @@ Jan-11-2019
   ./makeblastdb.py
    mv antismashdb_* blastdb/
 
+
 Jan-14-2019
 5. Run paiwise blast
 ./run_blast.py
 
 WOrking but I don't know which KS comes with which target, since their coord are diff.
 Add cluster coord to sequence ids.
+
+Start from beginning of pipeline:
+1. Make fasta files of all KS and corresponding target sequences:
+    ./get_ks_sequences.py
+    Ouptut ids:
+    >[target].[clusterid].[clustercoord].[targetcoord] for all target sequences
+    >[target].[clusterid].[clustercoord].KS. [targetcoord] for all KS sequences
+    >borI_Thr-tRNA-syn.QZFT01000045.122581-166774.137802-139817
+    >borI_Thr-tRNA-syn.QZFT01000045.122581-166774.KS.142614-143975
+
+    mv *.fasta fasta_seqs/
+
+2. Run ./makeblastb.py and move to blastdb/
+
+Jan-15-2019
+3. Run pairwise blast
+  ./run_blastp.py
+  evalue cutoff = 1e-8
+  mv out/*.KS.out ks_seqs/
+  cat ks_seqs/* > all.KS.out
+  cat *.out > all.targets.out
+  mv ks_seqs/* out/
+  
+  cat borI_Thr-tRNA-syn.out |wc
+       81     648   11320
+  cat borI_Thr-tRNA-syn.KS.out |wc
+       71     568   10254
+
+Jan-16-2019
+4. Extract ks and corresponding target pairwise identities
+  ./parse_pairwise_identities.py

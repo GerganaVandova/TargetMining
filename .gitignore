@@ -20,6 +20,7 @@ Coevolution/blastdb/
 Coevolution/fasta_seqs/
 Coevolution/all.KS.out
 Coevolution/all.targets.out
+Coevolution/pairwise_identities.out
 
 Antismash_gbids/all.cluster.counts.sorted.txt
 Antismash_gbids/all.cluster.counts.txt
