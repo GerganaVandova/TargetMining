@@ -10,7 +10,7 @@ def get_KS_sequences(blast_file):
     fastagbids_to_coord = defaultdict(list)
     # Head of blast fasta file
     # CENS01067892.1__80_1441_marine
-    # CP000510___1361206_1362423__0_1_4559598_
+    # CP000510___1361206_1362423__0_1_4559598_2e-80
     for record in SeqIO.parse(open(blast_file, "rU"), "fasta"):
         gbidfull = record.id
         seq = record.seq
@@ -18,9 +18,16 @@ def get_KS_sequences(blast_file):
         gbid = gbid1.split(".")[0]
         parts = filter(lambda x: x, rest.split('_'))
         coord = "-".join(parts[:2])
-        fastagbids_to_coord[gbid].append((coord, seq))
+        eval = parts[-1]
+        print gbid, coord, eval, seq[0:20]
+        try:
+            float(eval)
+        except:
+            print "corrupt gbidfull %s" % gbidfull
+            continue
+        fastagbids_to_coord[gbid].append((coord, seq, float(eval)))
 
-    return(fastagbids_to_coord)
+    return fastagbids_to_coord
 
 
 def get_target_sequences(antismash_sequences):
@@ -100,7 +107,8 @@ def get_fasta_files(gene_name,
                     antismashgbids_to_targetcoord,
                     antismashgbids_to_clustercoord):
     # Match antismash coord with blast coord to extract KS DNA sequence
-
+    print len(fastagbids_to_coord)
+    print shit
     ks_outfilename = gene_name + ".KS" + ".fasta"
     f = open(ks_outfilename, "w")
     for gbid in sorted(antismashgbids_to_kscoord.keys()):
@@ -111,7 +119,7 @@ def get_fasta_files(gene_name,
         #     print gbid, "KScoord: ", antismashgbids_to_kscoord[gbid]
         #     print gbid, "clustercoord: ", antismashgbids_to_clustercoord[gbid]
         for ks in ks_sequences:
-            ks_coord, ks_seq = ks
+            ks_coord, ks_seq, eval = ks
             if aks_coord == ks_coord:
                 print "%s.%s.%s.KS.%s" % (gene_name, gbid, clustercoord, ks_coord)
                 f.write(">%s.%s.%s.KS.%s\n" % (gene_name, gbid, clustercoord, ks_coord))
@@ -120,7 +128,7 @@ def get_fasta_files(gene_name,
     f.close()
 
     # Match antismash gbid and target coord to extract target gene DNA sequence
-    target_outfilename = gene_name + ".fasta"
+    target_outfilename = gene_name + ".fasta.nikola"
     ff = open(target_outfilename, "w")
     for gbid in sorted(antismashgbids_to_targetcoord.keys()):
         target_gene_coord = antismashgbids_to_targetcoord[gbid][0]
@@ -145,6 +153,7 @@ antismash_sequences = "../Antismash_gbids/sequences.110k.coord.redundant.fasta"
 
 antismashgbids_to_targetseq = get_target_sequences(antismash_sequences)
 fastagbids_to_coord = get_KS_sequences(blast_file)
+#sys.exit(0)
 
 for target in get_targets(antismash_outfilename):
     antismashgbids_to_kscoord, \

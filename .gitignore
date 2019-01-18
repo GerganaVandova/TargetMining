@@ -46,7 +46,7 @@ Blast/blast_results_parse
 
 Blast/bak/
 Blast/test/
-    
+
 
 pHMM_train/FastaTestSets_unused/
 pHMM_train/HMM_unused/
@@ -94,6 +94,11 @@ Antismash_gbids/bak/
 Antismash_gbids/bak_dec/
 Antismash_gbids/seq_dir/
 Antismash_gbids/out.*
+Antismash_gbids/bak_2019/out.*
+Antismash_gbids/bak_2019/all.*
+Antismash_gbids/bak_2019/domain_*
+Antismash_gbids/bak_2019/debug/
+Antismash_gbids/bak_2019/sequences.110k.coord.redundant.fasta
 
 Targets/out.parsed.pident.30
 Targets/out.parsed.pident.30-50

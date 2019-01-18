@@ -1,6 +1,6 @@
 #!/usr/bin/python
 from collections import defaultdict
-
+import sys
 
 def get_targets(antismash_outfilename):
     # Get list of target gene names
@@ -19,6 +19,7 @@ def parse_blast(target, blast_file):
     pairs = defaultdict(float)
     lines = open(blast_file).readlines()
     for line in lines:
+        # print line
         # AdmT_ACC.ACXX02000001.14512-116691.KS.38012-39229
         # AdmT_ACC.ACXX02000001.14512-116691.KS.38012-39229
         # 1 406	406	406	406	0.0
@@ -30,22 +31,29 @@ def parse_blast(target, blast_file):
             continue
         nident = float(nident)
         qlen = float(qlen)
-        identity = float(nident)/qlen
+        identity = float(nident)/qlen*100
         qseqid_short = qseqid.rsplit(".", 3)[0]
         sseqid_short = sseqid.rsplit(".", 3)[0]
+        if (qseqid, sseqid) in pairs.keys():
+            if identity > pairs[(qseqid, sseqid)]:
+                pairs[(qseqid, sseqid)] = identity
+            else:
+                continue
         # if (qseqid, sseqid) in pairs.keys() or (sseqid, qseqid) in pairs.keys():
-        #     print "%s\t%s\t%.4f already exists" % (qseqid_short, sseqid_short, identity)
-        #     # if identity > pairs[(qseqid, sseqid)]:
-        #     #     # print "%s\t%s\t%f  previous identity " % (qseqid_short, sseqid_short, pairs[(qseqid, sseqid)])
-        #     #     # print "%s\t%s\t%f found higher seq identity " % (qseqid_short, sseqid_short, identity)
-        #     #     pairs[(qseqid, sseqid)] = identity
-        #     # if identity > pairs[(sseqid, qseqid)]:
-        #     #     # print "%s\t%s\t%f  previous identity " % (qseqid_short, sseqid_short, pairs[(qseqid, sseqid)])
-        #     #     # print "%s\t%s\t%f found higher seq identity " % (qseqid_short, sseqid_short, identity)
-        #     #     pairs[(sseqid, qseqid)] = identity
+        #     # print "%s\t%s\t%.4f already exists" % (qseqid_short, sseqid_short, identity)
+        #     if identity > pairs[(qseqid, sseqid)]:
+        #         # print "%s\t%s\t%f  previous identity " % (qseqid_short, sseqid_short, pairs[(qseqid, sseqid)])
+        #         # print "%s\t%s\t%f found higher seq identity " % (qseqid_short, sseqid_short, identity)
+        #         pairs[(qseqid, sseqid)] = identity
+        #     if identity > pairs[(sseqid, qseqid)]:
+        #         # print "%s\t%s\t%f  previous identity " % (qseqid_short, sseqid_short, pairs[(qseqid, sseqid)])
+        #         # print "%s\t%s\t%f found higher seq identity " % (qseqid_short, sseqid_short, identity)
+        #         pairs[(sseqid, qseqid)] = identity
         # else:
         #     pairs[(qseqid, sseqid)] = identity
         pairs[(qseqid, sseqid)] = identity
+        # print qseqid_short, sseqid_short, identity
+
     return pairs
 
 
@@ -55,9 +63,23 @@ antismash_outfilename = \
 targets = get_targets(antismash_outfilename)
 blast_file_ks = "all.KS.out"
 blast_file_target = "all.targets.out"
-
 outfile = "pairwise_identities.out"
 f = open(outfile, "w")
+
+
+# targets = ["EF-Tu"]
+# blast_file_ks = "test.out"
+# for target in targets:
+#     pairs_ks = parse_blast(target, blast_file_ks)
+#     print pairs_ks.keys()
+#     for (qseqid_ks, sseqid_ks) in sorted(pairs_ks.keys()):
+#         qseqid_k_short = qseqid_ks.rsplit(".", 3)[0]
+#         sseqid_k_short = sseqid_ks.rsplit(".", 3)[0]
+#         print "%s\t%s\t%.2f" % \
+#             (qseqid_k_short,
+#              sseqid_k_short,
+#              pairs_ks[(qseqid_ks, sseqid_ks)])
+# sys.exit(0)
 
 for target in targets:
     pairs_ks = parse_blast(target, blast_file_ks)
@@ -78,7 +100,7 @@ for target in targets:
             sseqid_t_short = sseqid_target.rsplit(".", 2)[0]
 
             if (qseqid_k, sseqid_k) == (qseqid_t, sseqid_t):
-                f.write("%s-%s\t%.4f\t%s-%s\t%.4f\n" %
+                f.write("%s-%s\t%.2f\t%s-%s\t%.2f\n" %
                         (qseqid_k_short,
                          sseqid_k_short,
                          pairs_ks[(qseqid_ks, sseqid_ks)],
@@ -86,7 +108,7 @@ for target in targets:
                          sseqid_t_short,
                          pairs_target[(qseqid_target, sseqid_target)]))
 
-                print "%s-%s\t%.4f\t%s-%s\t%.4f" % \
+                print "%s-%s\t%.2f\t%s-%s\t%.2f" % \
                     (qseqid_k_short,
                      sseqid_k_short,
                      pairs_ks[(qseqid_ks, sseqid_ks)],
