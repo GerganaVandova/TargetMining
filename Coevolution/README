@@ -90,3 +90,62 @@ in fasta_seqs/borI_Thr-tRNA-syn.KS.fasta
 
   vim sequences.faa.21k.coord.fasta
   >LGTC01000001_cluster-1_2624321-2672198_t1pks_2644321-2652198_ctg1_146_- WHOLE MODULE SEQUENCE
+
+
+Jan-22-2019
+
+makeblastdb -in KS.12.10kb.fasta -dbtype prot -out KS.12.10kb
+
+
+Building a new DB, current time: 01/22/2019 16:41:47
+New DB name:   KS.12.10kb
+New DB title:  KS.12.10kb.fasta
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 252 sequences in 0.0142119 seconds.
+gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Coevolution$ makeblastdb -in targets.12.10kb.fasta -dbtype prot -out targets.12.10kb
+
+
+Building a new DB, current time: 01/22/2019 16:42:07
+New DB name:   targets.12.10kb
+New DB title:  targets.12.10kb.fasta
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 252 sequences in 0.0179 seconds.
+
+
+Blast
+blastp -db blastdb/KS.12.10kb -query KS.12.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.10kb.out
+blastp -db blastdb/targets.12.10kb -query targets.12.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.10kb.out
+
+
+Jan-23-2019
+low KS-KS seq identity because antismash couldn't recognize the domains, just the active sites
+
+
+Jan-24-2019
+
+COEVOLUTION ON POSITIVE SET
+1. Extrct mibig pos data set KS and target sequences and write in
+
+      KS.mibig.fasta
+      targets.mibig.fasta
+
+      KT362046|borI_Thr-tRNA-syn|45548|45969|57935|59962|cluster-1|t1pks|1-63657|11966
+      JPRX01000001|mupM_Ile-tRNA-syn|1126232|1126663|1122028|1125120|cluster-1|hserlactone-transatpks-otherks|1085078-1198411|1112
+      KE354369|PtmP3_FabB-F|27540|27879|27505|28638|cluster-1|t1pks-nrps|1-31725|374
+      AJ871581|rubR1_TIF|8427|8852|4268|4492|cluster-1|aminocoumarin-t1pks-nrps|1-105657|3935
+      KQ949024|SalI_beta_proteasome|658027|658446|664301|665146|cluster-6|transatpks-t1pks-nrps|607929-695233|5855
+      KP830094|SalI_beta_proteasome|17001|17415|25854|26708|cluster-1|t1pks-nrps|1-37516|8439
+      KF647220|SalI_beta_proteasome|13459|13876|2040|2897|cluster-1|t1pks-nrps|1-25783|10562
+      JXDG01000003|BatG_FabI|331023|331246|336894|338084|cluster-1|transatpks-otherks-nrps|264229-352095|5648
+      CP000667|SalI_beta_proteasome|1151298|1151717|1144517|1145353|cluster-1|transatpks-t1pks-nrps|1131285-1181131|5945
+      FN689524|mupM_Ile-tRNA-syn|21295|21726|16377|19523|cluster-1|nrps-transatpks-otherks|1265-97600|1772
+
+2. Make blast databases and move to blastdb/
+makeblastdb -in KS.mibig.fasta -dbtype prot -out KS.mibig
+makeblastdb -in targets.mibig.fasta -dbtype prot -out targets.mibig
