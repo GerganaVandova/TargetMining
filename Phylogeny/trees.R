@@ -4,10 +4,10 @@
 
 # Load the tree file
 library(ape)
-dir <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
+dir <- "/Users/gvandova/Dropbox/Computational_projects/Phylogeny/"
 #filename <- "out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.mafft.FastTree"
 
-filename <- "out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.cdhit.90.mafft.FastTree"
+filename <- "KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree"
 
 # Choose root sequence set
 rootset <- "FabF"
@@ -17,26 +17,24 @@ MyTree <- read.tree(file)
 
 #############################################################
 # # Highlight specific sequences
-dir1 <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
+dir1 <- "/Users/gvandova/Dropbox/Computational_projects/Phylogeny/"
 #filename1 <- "mibig_refset.8" # to get Erin's ref set cluster names for KSs
 #filename1 <-"out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.cluster_type"
-
 # whole description in second filed:
 # ACXX02000001_38012-39229	ACXX02000001_38012-39229_AdmT_ACC_transatpks-nrps
-filename1 <- "out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.descr"
-
-description_file = paste(dir1, filename1, sep="")
-descriptions <- read.table(description_file, sep="\t", as.is=T, row.names=1)
-desc.df <- data.frame(descriptions)
-tip.label.df <- data.frame(MyTree$tip.label, row.names=1)
-# reorder descriptions
-desc.reordered <- desc.df[rownames(tip.label.df),]# This is the key step that matches the tree tip names to the external description file
+# filename1 <- "out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.descr"
+# description_file = paste(dir1, filename1, sep="")
+# descriptions <- read.table(description_file, sep="\t", as.is=T, row.names=1)
+# desc.df <- data.frame(descriptions)
+# tip.label.df <- data.frame(MyTree$tip.label, row.names=1)
+# # reorder descriptions
+# desc.reordered <- desc.df[rownames(tip.label.df),]# This is the key step that matches the tree tip names to the external description file
 ##############################################################
 #Descriptions
 
 # Read the 2f file of fastaID and description
-dir1 <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
-filename1 <- "out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.fasta.phyla" # to get colors by phyla for KSs
+dir1 <- "/Users/gvandova/Dropbox/Computational_projects/Phylogeny/"
+filename1 <- "KS.12.10kb.fasta.phyla" # to get colors by phyla for KSs
 
 phylum_file = paste(dir1, filename1, sep="")
 phyla <- read.table(phylum_file, sep="\t", as.is=T, row.names=1)
@@ -101,7 +99,7 @@ outgroup <- grep(rootset, MyTree$tip.label, perl=TRUE)
 MyTree.rooted <- root(MyTree,outgroup,node = NULL)
 MyTree.ladderized <- ladderize(MyTree.rooted)
 
-mywidth=3; myheight=6 #for small tree
+mywidth=4; myheight=6 #for small tree
 # mywidth=10; myheight=30 #for big tree
 #mywidth=40; myheight=100# really big for browsing names
 
@@ -125,12 +123,12 @@ selectCex <- 1
 # Print all labels
 allLabCex <- .5
 # allLabCex <- .1
-# tiplabels(MyTree$tip.label, cex=.1, frame="none", adj=0) ### comment out if don't want to show labels
+tiplabels(MyTree$tip.label, cex=.1, frame="none", adj=0) ### comment out if don't want to show labels
 # tiplabels(MyTree$tip.label, cex=.2, frame="none", adj=0) ### comment out if don't want to show labels
 # nodelabels(MyTree$node.label, frame="none", cex=.1)
 #edgelabels(MyTree$edge.label, frame="none", cex=.2)
 
-tiplabels(desc.reordered, cex=0.1, frame="none", adj=0) # to highlight ref sequences when pdf(3,6)
+# tiplabels(desc.reordered, cex=0.1, frame="none", adj=0) # to highlight ref sequences when pdf(3,6)
 # # tiplabels(desc.reordered, cex=.3, frame="none", adj=0) # to highlight ref sequences for big pdf (10.30)
 # # tiplabels(phyla.reordered, cex=.1, frame="none", adj=0) # if you want phyla displayed
 

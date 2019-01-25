@@ -70,6 +70,7 @@ def get_orfs(gbidfull, antismash_dir, gene_outfile, ks_outfile, stdoutfile):
             stdoutfile.write("%s\t%s\tEmpty details_data\n" %
                              (gbidfull, abs(cluster_end - cluster_start)))
             continue
+
         for orfs in details_data[cluster_id]["orfs"]:
             locus_tag = orfs["id"]
             for domain in orfs["domains"]:
@@ -178,25 +179,25 @@ def parse_gbidfull(gbidfull):
 
 def main():
     count = 0
-    # antismash_dir = "antismash_output/"
-    antismash_dir = "antismash_output_assemblies_all/"
+    antismash_dir = "antismash_output/"
+    #antismash_dir = "antismash_output_assemblies_all/"
 
-    # outfile_cluster_genes = "cluster_genes.89k.fasta"
-    outfile_cluster_genes = "cluster_genes.21k.fasta.test"
+    outfile_cluster_genes = "cluster_genes.89k.fasta"
+    #outfile_cluster_genes = "cluster_genes.21k.fasta"
     gene_out_f = open(outfile_cluster_genes, "w")
 
-    outfile_ks = "ks.21k.fasta.test"
+    outfile_ks = "ks.89k.fasta"
+    #outfile_ks = "ks.21k.fasta"
     ks_out_f = open(outfile_ks, "w")
 
-    stdoutfile = "stdout.txt"
+    stdoutfile = "stdout_89k.txt"
+    #stdoutfile = "stdout_21k.txt"
     stdout_f = open(stdoutfile, "w")
 
-    # infile_cluster_genes = "cluster_genes.21k.fasta"
 
     for gbidfull in tqdm.tqdm(os.listdir(antismash_dir)):
-        if not gbidfull.startswith("JOIR01000095"):
-            continue
-        print gbidfull
+        # if not gbidfull.startswith("JOIR01000095"):
+        #     continue
 
         count += 1
         print "Parsing %s Number %s: " % (gbidfull, count)
