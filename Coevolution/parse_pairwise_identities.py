@@ -60,7 +60,8 @@ def parse_blast(target, blast_file):
 antismash_outfilename = \
     "../Antismash_gbids/out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa"
 
-targets = get_targets(antismash_outfilename)
+# targets = get_targets(antismash_outfilename)
+targets = "EF-Tu"
 blast_file_ks = "all.KS.out"
 blast_file_target = "all.targets.out"
 outfile = "pairwise_identities.out"
