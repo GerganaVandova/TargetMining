@@ -74,3 +74,35 @@ STEP3. Run Antismash on all 95k genbank ids
 
        Antismash_gbids/
        Run run_antismash.Agbids.py
+
+
+Step 1: BLAST search for KS homologs.
+Using 8 diverse KS query sequences, e-value < 1
+199 894 proteins;  110174 NCBI nucleotide records/genomes
+
+Step 2: Fetch all genbank ids that contain a KS
+       Genbank/gbdir (89449 gbids)
+       Genbank/assembly_gb (21080 gbids)
+
+STEP3. Run Antismash on all 89k genbank ids and 21k assembly ids
+	Some assembly gb files split into smaller files (26575 assembly files total)
+
+STEP4. Extract gene sequences from all pks clusters found by antismash
+    cluster_genes.21k.fasta
+    KS.21k.fasta
+    cluster_genes.89k.fasta
+    KS.89k.fasta
+78 clusters don’t have predicted KS domains (details_data empty)
+
+STEP5. Make blast database from cluster_genes.21k.fasta and cluster_genes.89k.fasta
+244 196 sequences
+664 336 sequences
+
+STEP6. Blast 12 targets genes against antismash database from 110k genbank ids
+4404 hits.
+
+STEP7. Filter blast hits by evalue <1e-8 and identity > 0.3 (and FabB/F identity > 0.6)
+806 hits.
+
+STEP8. Require both KS+ target <10kb apart.
+252 hits.
