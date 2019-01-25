@@ -11,36 +11,38 @@ from matplotlib.pyplot import *  # This is for the legend to work
 #
 # xyz=np.array(np.random.random((100,3)))
 # plt.scatter(xyz[:,0], xyz[:,1])
+# plt.savefig('foo.png')
 #
 # sys.exit(0)
 
 
 # This code will make a 6deb production plot. The input is 6deb data: PCC<tab>sterror<tab>48htime point)
-ks_pair_identites = []
+ks_pair_identities = []
 target_pair_identities = []
 
-pairwis_filename = "pairwise_identities.out"
+# pairwis_filename = "pairwise_identities.mibig.out"
+pairwis_filename = "pairwise_identities.12.10kb.out"
 with open(pairwis_filename, 'r') as f:
     data = f.readlines()
     data = map(lambda x: x.strip(), data)
     for line in data:
-        # print line
-        ks_pair, ks_pair_identity,\
-            target_pair, target_pair_identity = line.split("\t")
-        ks_pair_identites.append(ks_pair_identity)
+        print line
+        pair, ks_pair_identity, target_pair_identity = line.split("\t")
+        ks_pair_identities.append(ks_pair_identity)
         target_pair_identities.append(target_pair_identity)
 
-ks_pair_identites = map(float, ks_pair_identites)
+ks_pair_identities = map(float, ks_pair_identities)
 target_pair_identities = map(float, target_pair_identities)
 
-
-plt.scatter(ks_pair_identites, target_pair_identities, color='r')
+print len(ks_pair_identities), len(target_pair_identities)
+plt.scatter(ks_pair_identities, target_pair_identities, color='r', s=1)
 plt.xlim((0,1))
 plt.ylim([0,1])
-plt.savefig('foo.png')
+# plt.savefig('mibig.png')
+plt.savefig('12.10kb.png')
 # fig = plt.figure(5, figsize=(10, 6))
 # plt.savefig("image.png",bbox_inches='tight', dpi=100)
-# plt.show()
+#plt.show()
 
 sys.exit(0)
 print pccs, "\n", sterrs, "\n", debs

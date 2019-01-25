@@ -1,98 +1,111 @@
 #!/usr/bin/python
 from collections import defaultdict
-
+import sys
 
 def get_targets(antismash_outfilename):
     # Get list of target gene names
 
+    # Head of file:
+    # ACXX02000001|AdmT_ACC|37972|38377|31720|32586|cluster-1|transatpks-nrps|14512-116691|5386
     targets = set()
     outfile = open(antismash_outfilename).readlines()[1:]
     for line in outfile:
         line = line.strip()
-        target = line.split("\t")[0]
+        target = line.split("|")[1]
         targets.add(target)
     return(targets)
 
+
+def parse_gbids(gbidfull):
+    parts = gbidfull.split("|")
+    gbid, target = parts[:2]
+    id_short = "|".join([gbid, target])
+    return gbid, target, id_short
 
 def parse_blast(target, blast_file):
     # Parse blast results; return pairwise target/ks ids and identity
     pairs = defaultdict(float)
     lines = open(blast_file).readlines()
     for line in lines:
-        # AdmT_ACC.ACXX02000001.14512-116691.KS.38012-39229
-        # AdmT_ACC.ACXX02000001.14512-116691.KS.38012-39229
-        # 1 406	406	406	406	0.0
+        # print line
+        # CSTD01000001|mupM_Ile-tRNA-syn|1364568|1364989|1356957|1360097|cluster-3|t1pks-nrps|1344560-1399261|4471
+        # CSTD01000001|mupM_Ile-tRNA-syn|1364568|1364989|1356957|1360097|cluster-3|t1pks-nrps|1344560-1399261|4471
+        # 1	421	421	421	421	0.0
         qseqid, sseqid, sstart, send, nident, qlen, slen, evalue = \
             line.strip().split("\t")
         # print qseqid, sseqid, sstart, send, nident, qlen, slen, evalue
-        target_query = qseqid.split(".")[0]
-        if target_query != target:
+
+        qgb_id, target_query, qseqid_short = parse_gbids(qseqid)
+        sgb_id, target_subject, sseqid_short = parse_gbids(sseqid)
+
+        if target_query != target or target_subject != target:
+            # print target, target_query, target_subject
             continue
         nident = float(nident)
         qlen = float(qlen)
         identity = float(nident)/qlen
-        qseqid_short = qseqid.rsplit(".", 3)[0]
-        sseqid_short = sseqid.rsplit(".", 3)[0]
-        # if (qseqid, sseqid) in pairs.keys() or (sseqid, qseqid) in pairs.keys():
-        #     print "%s\t%s\t%.4f already exists" % (qseqid_short, sseqid_short, identity)
-        #     # if identity > pairs[(qseqid, sseqid)]:
-        #     #     # print "%s\t%s\t%f  previous identity " % (qseqid_short, sseqid_short, pairs[(qseqid, sseqid)])
-        #     #     # print "%s\t%s\t%f found higher seq identity " % (qseqid_short, sseqid_short, identity)
-        #     #     pairs[(qseqid, sseqid)] = identity
-        #     # if identity > pairs[(sseqid, qseqid)]:
-        #     #     # print "%s\t%s\t%f  previous identity " % (qseqid_short, sseqid_short, pairs[(qseqid, sseqid)])
-        #     #     # print "%s\t%s\t%f found higher seq identity " % (qseqid_short, sseqid_short, identity)
-        #     #     pairs[(sseqid, qseqid)] = identity
-        # else:
-        #     pairs[(qseqid, sseqid)] = identity
+
+        if qseqid > sseqid:
+            continue
+        if (qseqid, sseqid) in pairs.keys():
+            if identity > pairs[(qseqid, sseqid)]:
+                pairs[(qseqid, sseqid)] = identity
+            else:
+                continue
+
         pairs[(qseqid, sseqid)] = identity
+        # pairs[(qseqid, sseqid)] = (identity, line) # if I want to print blast params
+
     return pairs
 
 
-antismash_outfilename = \
-    "../Antismash_gbids/out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa"
+def main():
 
-# targets = get_targets(antismash_outfilename)
-targets = "EF-Tu"
-blast_file_ks = "all.KS.out"
-blast_file_target = "all.targets.out"
+    antismash_outfilename = "../Antismash_gbids/out.12.filtered.10kb"
 
-outfile = "pairwise_identities.out"
-f = open(outfile, "w")
+    targets = get_targets(antismash_outfilename)
+    # targets = ["borI_Thr-tRNA-syn", "mupM_Ile-tRNA-syn", "PtmP3_FabB-F",
+               # "rubR1_TIF", "AdmT_ACC", "SalI_beta_proteasome", "BatG_FabI"]
 
-for target in targets:
-    pairs_ks = parse_blast(target, blast_file_ks)
-    pairs_target = parse_blast(target, blast_file_target)
-    for (qseqid_ks, sseqid_ks) in sorted(pairs_ks.keys()):
-        qseqid_k = qseqid_ks.rsplit(".", 2)[0]
-        sseqid_k = sseqid_ks.rsplit(".", 2)[0]
+    blast_file_ks = "KS.12.10kb.out"
+    blast_file_target = "targets.12.10kb.out"
+    outfile = "pairwise_identities.12.10kb.out"
 
-        qseqid_k_short = qseqid_ks.rsplit(".", 3)[0]
-        sseqid_k_short = sseqid_ks.rsplit(".", 3)[0]
+    # Mibig set
+    # blast_file_ks = "KS.mibig.out"
+    # blast_file_target = "targets.mibig.out"
+    # outfile = "pairwise_identities.mibig.out"
 
-        for (qseqid_target, sseqid_target) in sorted(pairs_target.keys()):
-            # AdmT_ACC.ACXX02000001.14512-116691.KS.38012-39229
-            qseqid_t = qseqid_target.rsplit(".", 1)[0]
-            sseqid_t = sseqid_target.rsplit(".", 1)[0]
+    f = open(outfile, "w")
 
-            qseqid_t_short = qseqid_target.rsplit(".", 2)[0]
-            sseqid_t_short = sseqid_target.rsplit(".", 2)[0]
+    for target in targets:
+        pairs_ks = parse_blast(target, blast_file_ks)
+        pairs_target = parse_blast(target, blast_file_target)
 
-            if (qseqid_k, sseqid_k) == (qseqid_t, sseqid_t):
-                f.write("%s-%s\t%.4f\t%s-%s\t%.4f\n" %
-                        (qseqid_k_short,
-                         sseqid_k_short,
-                         pairs_ks[(qseqid_ks, sseqid_ks)],
-                         qseqid_t_short,
-                         sseqid_t_short,
-                         pairs_target[(qseqid_target, sseqid_target)]))
+        for (qseqid_ks, sseqid_ks) in sorted(pairs_ks.keys()):
+            qgbid, target_q, qseqid_ks_short = parse_gbids(qseqid_ks)
+            sgbid, target_s, sseqid_ks_short = parse_gbids(sseqid_ks)
 
-                print "%s-%s\t%.4f\t%s-%s\t%.4f" % \
-                    (qseqid_k_short,
-                     sseqid_k_short,
+            f.write("%s-%s\t%.2f\t%.2f\n" %
+                    (qgbid,
+                     sgbid,
                      pairs_ks[(qseqid_ks, sseqid_ks)],
-                     qseqid_t_short,
-                     sseqid_t_short,
-                     pairs_target[(qseqid_target, sseqid_target)])
+                     pairs_target[(qseqid_ks, sseqid_ks)]))
 
-f.close()
+            print "%s-%s\t%.2f\t%.2f" % \
+                (qgbid,
+                 sgbid,
+                 pairs_ks[(qseqid_ks, sseqid_ks)],
+                 pairs_target[(qseqid_ks, sseqid_ks)])
+
+            # #To print blast params
+            # print "%s-%s\t%s\t%s" % \
+            #     (qgbid,
+            #      sgbid,
+            #      pairs_ks[(qseqid_ks, sseqid_ks)],
+            #      pairs_target[(qseqid_ks, sseqid_ks)])
+    f.close()
+
+
+if __name__ == "__main__":
+    main()

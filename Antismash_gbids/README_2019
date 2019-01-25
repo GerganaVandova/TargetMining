@@ -1,0 +1,130 @@
+1. parse_js.py
+    Generate two files: one with all genes in clusters from antismash json files
+                        on with all KS sequenses
+
+    make coords absolute and take only t1pks and transatpks
+
+    output file:
+    cluster_genes.21k.fasta
+
+    ">%s|%s|%s-%s|%s|%s-%s|%s" % (gbid, cluster_id, cluster_start, cluster_end, clustertype, prot_start, prot_end, locus_tag)
+
+    ks.21k.fasta
+    ">%s|%s|%s-%s|%s|%s-%s|%s|%s" % (gbid, cluster_id, cluster_start, cluster_end, clustertype, ks_start, ks_end, locus_tag, domain_type)
+
+    >BCAN01000084|cluster-1|1-49876|t1pks|2826-13703|ctg1_2
+    >BCAN01000084|cluster-1|1-49876|t1pks|2826-3247|ctg1_2|PKS_KS
+    >CP012600|cluster-1|1178914-1248724|t1pks-nrps|1178571-1181294|ctg1_132
+    >CP012600|cluster-1|1178914-1248724|t1pks-nrps|1 054 717-1055138|PKS_KS
+    >CP012600|cluster-1|2710378-2762382|t1pks-nrps|2591094-2591520|PKS_KS
+
+    Parsing JOIR01000095 Number 2139:
+    KeyError: u'cluster-1'
+    Exception RuntimeError: RuntimeError('cannot join current thread',) in  ignored
+
+    This cluster has an empty details_data dictionary. For such cases,
+    take the orf sequences and skip the KS sequences.
+    If one of these ifs turns out to have a a target close by, take coord from blast file.
+    Write in an output file with these gbids
+
+    Parsing 26575/26575
+    cluster_genes.21k.fasta
+    KS.21k.fasta
+    cluster_genes.89k.fasta
+    KS.89k.fasta
+
+2. makeblastdb
+    gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ ./makeblastdb.py
+    makeblastdb -in seq_dir/cluster_genes.89k.fasta -dbtype prot -out cluster_genes.89k
+
+    Building a new DB, current time: 01/21/2019 23:38:37
+    New DB name:   cluster_genes.89k
+    New DB title:  seq_dir/cluster_genes.89k.fasta
+    Sequence type: Protein
+    Deleted existing BLAST database with identical name.
+    Keep Linkouts: T
+    Keep MBits: T
+    Maximum file size: 1000000000B
+    Adding sequences from FASTA; added 244196 sequences in 10.8386 seconds.
+    makeblastdb -in seq_dir/cluster_genes.21k.fasta -dbtype prot -out cluster_genes.21k
+
+    Building a new DB, current time: 01/21/2019 23:38:49
+    New DB name:   cluster_genes.21k
+    New DB title:  seq_dir/cluster_genes.21k.fasta
+    Sequence type: Protein
+    Deleted existing BLAST database with identical name.
+    Keep Linkouts: T
+    Keep MBits: T
+    Maximum file size: 1000000000B
+    Adding sequences from FASTA; added 664336 sequences in 30.9862 seconds.
+
+3. run_blastp.py
+
+4. filter_blast.py
+
+Jan-22-2019
+5. target_ks_tandm.py
+
+    Output files:
+    out.12.filtered.10kb  254 lines
+                          no KS found for target ('JKPI01000013', 96376, 99501, 'mupM_Ile-tRNA-syn\tJKPI01000013|cluster-1|62040-107607|t1pks|96376-99501|AN55_02266\t0.41\t0.0\n')
+                          no KS found for target ('KK334248', 40365, 43490, 'mupM_Ile-tRNA-syn\tKK334248|cluster-1|5933-51161|t1pks|40365-43490|AP00_02593\t0.41\t0.0\n')
+
+    KS.12.10kb.fasta      252 sequences
+    targets.12.10kb.fasta
+
+6. add_taxa.py [I DONT NEED IT AT THIS POINT]
+
+    Output file: out.12.filtered.10kb.taxa
+    UHIQ01000001|EF-Tu|2832789|2833217|2822489|2823679|cluster-1|t1pks|2812755-2889595|9110|Bacteria|Actinobacteria|Corynebacteriales|Tsukamurellaceae|Tsukamurella
+
+7. add_phyla in Phylogeny
+
+Output file:  KS.12.10kb.fasta.phyla
+              PYAX01000012|120458-199012|Actinobacteria
+
+8. Compare out file with previous outfile
+cat out.12.filtered.10kb |cut -d"|" -f1 |sort -u > gbids.out.12.filtered.10kb
+cat bak_2019/out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268 | cut -f2|sort -u > gbids.old.out.12.filtered.10kb
+
+diff -y gbids.out.12.filtered.10kb gbids.old.out.12.filtered.10kb | grep ">"|wc
+48 missing (E.g. QRDR01000001)
+run target_ks_tandem.py with DIST_CUTOFF = 20kb
+cat out.12.filtered.20kb |cut -d"|" -f1 |sort -u > gbids.out.12.filtered.20kb
+diff -y gbids.out.12.filtered.20kb gbids.old.out.12.filtered.10kb | grep ">"|wc
+  All are found
+cat out.12.filtered.20kb |grep QRDR01000001
+QRDR01000001|GyrB-R|828488|828910|848719|850689|cluster-7|transatpks-nrps|803071-863372|19809
+
+9. CHeck if all positive gbids found in out.12.filtered.20kb. Not found:
+    CP009481 and JYBE02000001
+
+    a) CP009481 (old synonym CP006835) should have SalI copy
+    make CP009481.fasta and blast SalI : no hits
+          https://dev.antismash.secondarymetabolites.org/upload/bacteria-ba1f97da-4cb7-43a4-bff9-bfad201e1b2d/index.html
+          Antismash did not predict 2 biosynthetic genes and thus the SalI is >20kb:
+          out.12.filtered.20kb
+            CP009481|mupM_Ile-tRNA-syn|6014584|6015007|6033140|6036547|cluster-1|t1pks-nrps|5972634-6040863|18133
+          TODO: Prioritize CP006835 gbid, which has all biosynthetic genes predicted
+
+    b) JYBE02000001 should have mupM copy (ile-tRNA synthetase)
+          https://dev.antismash.secondarymetabolites.org/upload/bacteria-4effc05d-5b17-42b6-9426-36a4ae6301f7/index.html#r1c7
+          Target is not Ile-tRNA but Val-tRNA, ident = 0.19, my threshold is 0.3
+          grep JYBE02000001 out.12
+            mupM_Ile-tRNA-syn	JYBE02000001|cluster-2|1275813-1353292|t1pks-nrps|1289729-1292299|ctg1_318	42	805	200	1030	856	6e-43
+
+
+10. CHeck if all mibig ids found
+      All but Acetyl CoA carboxylase	BGC0000956	AY192157 found. Because it is annotated by
+      antismash as arylpolyene-nrps cluster.
+      cat out.12.filtered.20kb |grep KT362046
+      KT362046|borI_Thr-tRNA-syn|45548|45969|57935|59962|cluster-1|t1pks|1-63657|11966
+      JPRX01000001|mupM_Ile-tRNA-syn|1126232|1126663|1122028|1125120|cluster-1|hserlactone-transatpks-otherks|1085078-1198411|1112
+      KE354369|PtmP3_FabB-F|27540|27879|27505|28638|cluster-1|t1pks-nrps|1-31725|374
+      AJ871581|rubR1_TIF|8427|8852|4268|4492|cluster-1|aminocoumarin-t1pks-nrps|1-105657|3935
+      KQ949024|SalI_beta_proteasome|658027|658446|664301|665146|cluster-6|transatpks-t1pks-nrps|607929-695233|5855
+      KP830094|SalI_beta_proteasome|17001|17415|25854|26708|cluster-1|t1pks-nrps|1-37516|8439
+      KF647220|SalI_beta_proteasome|13459|13876|2040|2897|cluster-1|t1pks-nrps|1-25783|10562
+      JXDG01000003|BatG_FabI|331023|331246|336894|338084|cluster-1|transatpks-otherks-nrps|264229-352095|5648
+      CP000667|SalI_beta_proteasome|1151298|1151717|1144517|1145353|cluster-1|transatpks-t1pks-nrps|1131285-1181131|5945
+      FN689524|mupM_Ile-tRNA-syn|21295|21726|16377|19523|cluster-1|nrps-transatpks-otherks|1265-97600|1772

@@ -1,0 +1,37 @@
+1. Copy KS fasta files to Phylogeny
+
+    KS.12.10kb.fasta
+    KS.12.20kb.fasta
+
+2. ./get_phyla
+
+    # CSTD01000001|1344560-1399261|Actinobacteria
+    KS.12.10kb.fasta.phyla
+    KS.12.20kb.fasta.phyla
+
+3. Add FabF
+
+    KS.12.10kb.fasta.withFabF
+    KS.12.20kb.fasta.withFabF
+
+4. Run cdhit with cutoff .90
+
+    ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.12.10kb.fasta.withFabF -o KS.12.10kb.fasta.withFabF.cdhit.90 -c .9 -d 200 -M 10000
+    ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.12.20kb.fasta.withFabF -o KS.12.20kb.fasta.withFabF.cdhit.90 -c .9 -d 200 -M 10000
+
+5. Run mafft
+
+    /usr/local/bin/mafft --thread 64 KS.12.10kb.fasta.withFabF.cdhit.90 > KS.12.10kb.fasta.withFabF.cdhit.90.mafft
+    /usr/local/bin/mafft --thread 64 KS.12.20kb.fasta.withFabF.cdhit.90 > KS.12.20kb.fasta.withFabF.cdhit.90.mafft
+
+6. Run FastTree
+    /home/maureenh/FastTree/FastTreeMP KS.12.10kb.fasta.withFabF.cdhit.90.mafft > KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree
+    /home/maureenh/FastTree/FastTreeMP KS.12.20kb.fasta.withFabF.cdhit.90.mafft > KS.12.20kb.fasta.withFabF.cdhit.90.mafft.FastTree
+
+7. Rscript trees.R
+      Changes:
+      filename <- "KS.12.20kb.fasta.withFabF.cdhit.90.mafft.FastTree"
+      filename <- "KS.12.20kb.fasta.withFabF.cdhit.90.mafft.FastTree"
+
+      KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree.phylogram.png
+      KS.12.20kb.fasta.withFabF.cdhit.90.mafft.FastTree.phylogram.png

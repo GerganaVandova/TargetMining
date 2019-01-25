@@ -69,7 +69,6 @@ Jan-16-2019
 4. Extract ks and corresponding target pairwise identities
   ./parse_pairwise_identities.py
 
-
   cat all.KS.out | grep borI_Thr-tRNA-syn.QZFT01000045 | grep borI_Thr-tRNA-syn.LGTC01000001
   borI_Thr-tRNA-syn.LGTC01000001.2624321-2672198.KS.2647729-2648562	borI_Thr-tRNA-syn.QZFT01000045.122581-166774.KS.142614-143975	206	303	28	278	454	4e-04
   borI_Thr-tRNA-syn.QZFT01000045.122581-166774.KS.142614-143975	borI_Thr-tRNA-syn.LGTC01000001.2624321-2672198.KS.2647729-2648562	21	127	28	454	278	6e-04

@@ -1,9 +1,12 @@
 
-STEP1. Blast 8KS against 11db (wgs not updated, parallely downloading Assemblies)
-       Blast/
+STEP1. Blast 8KS against 11db (10 traditional ncbi databases + the NCBI Assembly database)
+      Using 8 diverse KS query sequences, e-value < 1
+      199 894 proteins;  110174 NCBI nucleotide records/genomes
 
 STEP2. Fetch all genbank ids that contain a KS
-       Genbank/
+       Genbank/gbdir (89449 gbids)
+       Genbank/assembly_gb (21080 gbids)
+
        2.1 Run get_gbid.py
            Input file: blast_results.KS.fasta.cleanName.cdhit.99
            Output files: gbids.nt.txt

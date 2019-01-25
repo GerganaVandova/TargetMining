@@ -1,14 +1,20 @@
 #!/usr/bin/env python
 from Bio import SeqIO
 import os
+import ntpath
 
-blastdb_dir = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismashdb"
-blastdb_names = [
-                 "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismashdb/antismashdb_sequences.faa.89k.coord.fasta",
-                 "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/antismashdb/antismashdb_sequences.faa.21k.coord.fasta"]
+targets_file = "targets.12.fa"
+dbdir = "antismashdb"
+blastdb_names = [os.path.join(dbdir, "cluster_genes.89k"),
+                 os.path.join(dbdir, "cluster_genes.21k")]
 
+print blastdb_names
 for blastdb_name in blastdb_names:
-    outfile = "out.targets.12.antismashdb." + blastdb_name.split(".")[2]
-    blastp = "blastp -db " + blastdb_name + " -query targets.12.fa -outfmt " + '"6 qseqid sseqid sstart send nident qlen slen evalue"' +  " -out " + outfile
+    outfile = "out." + targets_file + "." + ntpath.basename(blastdb_name)
+    print outfile
+    blastp = "blastp -db " + blastdb_name + \
+             " -query " + targets_file + \
+             " -outfmt " + '"6 qseqid sseqid sstart send nident qlen slen evalue"' + \
+             " -out " + outfile
     print blastp
     os.system(blastp)
