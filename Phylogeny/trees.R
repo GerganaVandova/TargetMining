@@ -1,12 +1,10 @@
 # Plotting phylogenetic trees in R using the APE package
-# Maureen Hillenmeyer
+# modified from Maureen Hillenmeyer
 # Jan-2-2019
 
 # Load the tree file
 library(ape)
-dir <- "/Users/gvandova/Dropbox/Computational_projects/Phylogeny/"
-#filename <- "out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.KS.withFabF.fasta.mafft.FastTree"
-
+dir <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
 filename <- "KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree"
 
 # Choose root sequence set
@@ -17,18 +15,49 @@ MyTree <- read.tree(file)
 
 #############################################################
 # # Highlight specific sequences
-dir1 <- "/Users/gvandova/Dropbox/Computational_projects/Phylogeny/"
-#filename1 <- "mibig_refset.8" # to get Erin's ref set cluster names for KSs
+dir1 <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
 #filename1 <-"out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.cluster_type"
 # whole description in second filed:
 # ACXX02000001_38012-39229	ACXX02000001_38012-39229_AdmT_ACC_transatpks-nrps
+
 # filename1 <- "out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.descr"
-# description_file = paste(dir1, filename1, sep="")
-# descriptions <- read.table(description_file, sep="\t", as.is=T, row.names=1)
-# desc.df <- data.frame(descriptions)
-# tip.label.df <- data.frame(MyTree$tip.label, row.names=1)
-# # reorder descriptions
-# desc.reordered <- desc.df[rownames(tip.label.df),]# This is the key step that matches the tree tip names to the external description file
+filename1 <- "KS.12.10kb.fasta.target"
+description_file = paste(dir1, filename1, sep="")
+descriptions <- read.table(description_file, sep="\t", as.is=T, row.names=1)
+desc.df <- data.frame(descriptions)
+tip.label.df <- data.frame(MyTree$tip.label, row.names=1)
+# reorder descriptions
+desc.reordered <- desc.df[rownames(tip.label.df),]# This is the key step that matches the tree tip names to the external description file
+Identify various bacterial phyla in the phylum file, assign to variables
+admt <- desc.reordered=="AdmT_ACC"
+sal <- desc.reordered=="SalI_beta_proteasome"
+dnan <- desc.reordered=="GriR_DnaN"
+eftu <- desc.reordered=="EF-Tu"
+fabb <- desc.reordered=="PtmP3_FabB-F"
+fabi <- desc.reordered=="BatG_FabI"
+gyrb <- desc.reordered=="GyrB-R"
+ile <- desc.reordered=="mupM_Ile-tRNA-syn"
+thr <- desc.reordered=="borI_Thr-tRNA-syn"
+leu <- desc.reordered=="agnB2_Leu-tRNA-syn"
+rub <- desc.reordered=="rubR1_TIF"
+trp <- desc.reordered=="Ind0_Trp-tRNA-syn"
+# colors
+myCols <- c(rep("black",length(MyTree$tip.label)))
+myCols[admt]="blue"
+myCols[sal]="lightblue"
+myCols[dnan]="cyan"
+myCols[eftu]="darkblue"
+myCols[fabb]="red"
+myCols[fabi]="purple"
+myCols[gyrb]="magenta"
+myCols[ile]="brown"
+myCols[thr]="lightpink"
+myCols[leu]="orange"
+myCols[rub]="green"
+myCols[trp]="lightgreen"
+
+myBG <- myCols
+
 ##############################################################
 #Descriptions
 
@@ -59,27 +88,27 @@ syner <- phyla.reordered=="Synergistetes"
 aqui <- phyla.reordered=="Aquificae"
 cloa <- phyla.reordered=="Cloacimonetes"
 # colors
-myCols <- c(rep("black",length(MyTree$tip.label)))
+myCols1 <- c(rep("black",length(MyTree$tip.label)))
 
 # Terrabacteria: blues (per Hedges MBE 2009)
-myCols[actino]="blue"
-myCols[firm]="lightblue"## old: "orange"
-myCols[cyano]="cyan"
-myCols[chloroflexi]="darkblue"
+myCols1[actino]="blue"
+myCols1[firm]="lightblue"## old: "orange"
+myCols1[cyano]="cyan"
+myCols1[chloroflexi]="darkblue"
 # Hydrobacteria (per Hedges MBE 2009)
-myCols[proteo]="red"
-myCols[bactero]="purple"
-myCols[plancto]="magenta"
-myCols[verru]="brown"
-myCols[spiro]="lightpink"
+myCols1[proteo]="red"
+myCols1[bactero]="purple"
+myCols1[plancto]="magenta"
+myCols1[verru]="brown"
+myCols1[spiro]="lightpink"
 # Other bacteria (per Hedges MBE 2009)
-myCols[thermo]="orange"
-myCols[aqui]="orange"
-myCols[syner]="orange"
-myCols[cloa]="orange"
+myCols1[thermo]="orange"
+myCols1[aqui]="orange"
+myCols1[syner]="orange"
+myCols1[cloa]="orange"
 # Other bacteria (random, check recommendations)
 
-myBG <- myCols
+myBG1 <- myCols1
 
 ##########################################################
 # colors
@@ -106,7 +135,7 @@ mywidth=4; myheight=6 #for small tree
 edge.color <- "gray"
 myPch <- 21# circles
 
-outfile <- paste(dir, filename, ".",treetype,".png", sep="")
+outfile <- paste(dir, filename, ".", treetype,".png", sep="")
 pdf(file=outfile, width=mywidth, height=myheight)
 plot(MyTree.ladderized, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
 
@@ -128,7 +157,7 @@ tiplabels(MyTree$tip.label, cex=.1, frame="none", adj=0) ### comment out if don'
 # nodelabels(MyTree$node.label, frame="none", cex=.1)
 #edgelabels(MyTree$edge.label, frame="none", cex=.2)
 
-# tiplabels(desc.reordered, cex=0.1, frame="none", adj=0) # to highlight ref sequences when pdf(3,6)
+tiplabels(desc.reordered, cex=0.1, frame="none", adj=0) # to highlight ref sequences when pdf(3,6)
 # # tiplabels(desc.reordered, cex=.3, frame="none", adj=0) # to highlight ref sequences for big pdf (10.30)
 # # tiplabels(phyla.reordered, cex=.1, frame="none", adj=0) # if you want phyla displayed
 
