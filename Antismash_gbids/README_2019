@@ -128,3 +128,43 @@ QRDR01000001|GyrB-R|828488|828910|848719|850689|cluster-7|transatpks-nrps|803071
       JXDG01000003|BatG_FabI|331023|331246|336894|338084|cluster-1|transatpks-otherks-nrps|264229-352095|5648
       CP000667|SalI_beta_proteasome|1151298|1151717|1144517|1145353|cluster-1|transatpks-t1pks-nrps|1131285-1181131|5945
       FN689524|mupM_Ile-tRNA-syn|21295|21726|16377|19523|cluster-1|nrps-transatpks-otherks|1265-97600|1772
+
+
+Jan-28-2019
+
+1. Add species names to phylogenetic tree
+Run for gbdir and assembly_gb and then concatenate
+./parse_gb_species.py
+
+2. Add target to description to color phylogenetic tree
+in Phylogeny
+./get_target_name.py
+Ouptut file: KS.12.10kb.fasta.target
+
+3. Add short descr gbid_target_cluster_type to label phylogenetic tree
+in Phylogeny
+ ./get_descr.py
+ Ouptut file: KS.12.10kb.fasta.descr
+
+ 4. Add short descr+species name gbid_target_cluster_type_species to label phylogenetic tree
+ in Phylogeny
+  ./get_descr_species.py
+  Ouptut file: KS.12.10kb.fasta.descr.species
+
+5. Rscript trees.R
+
+6. Explore tree
+
+6a. Look at Ile-tRNA synthetase clade
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/HG964936_1935836_2235526/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/LQPQ01000178/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/LZLF01000227/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/MAEM01000259/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/LZLS01000103/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/LQPW01000167/index.html#cluster-2
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/NCXP01000025/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/LQPF01000043/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/MVHT01000008/index.html#cluster-1
+
+
+all Mycobacteria homologs, but not same species
