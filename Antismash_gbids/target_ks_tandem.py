@@ -22,7 +22,7 @@ def parse_fasta(fasta_file):
 
 
 def main():
-    DIST_CUTOFF = 20000
+    DIST_CUTOFF = 5000
     cluster_genes_file = "cluster_genes.all.fasta"
     ks_file = "ks.all.fasta"
     target_blast_file = "out.12.filtered"
@@ -90,7 +90,7 @@ def main():
     target_to_seq = parse_fasta(cluster_genes_file)
 
     for v in data.itervalues():
-        # print v  # output in target_ks_tandem.20kb.out
+        # print v  # > in target_ks_tandem.morethan50kb.out
         # CSTD01000001|mupM_Ile-tRNA-syn|1364568|1364989|1356957|1360097|cluster-3|t1pks-nrps|1344560-1399261|4471
         gbid, target_name, ks_start, ks_end, target_start, target_end = v.split("|")[:6]
         # print gbid, target_name, ks_start, ks_end, target_start, target_end

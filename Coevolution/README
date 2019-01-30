@@ -94,41 +94,22 @@ in fasta_seqs/borI_Thr-tRNA-syn.KS.fasta
 
 Jan-22-2019
 
+2. Make blast databases and move to blastdb/
 makeblastdb -in KS.12.10kb.fasta -dbtype prot -out KS.12.10kb
-
-
-Building a new DB, current time: 01/22/2019 16:41:47
-New DB name:   KS.12.10kb
-New DB title:  KS.12.10kb.fasta
-Sequence type: Protein
-Keep Linkouts: T
-Keep MBits: T
-Maximum file size: 1000000000B
 Adding sequences from FASTA; added 252 sequences in 0.0142119 seconds.
-gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Coevolution$ makeblastdb -in targets.12.10kb.fasta -dbtype prot -out targets.12.10kb
-
-
-Building a new DB, current time: 01/22/2019 16:42:07
-New DB name:   targets.12.10kb
-New DB title:  targets.12.10kb.fasta
-Sequence type: Protein
-Keep Linkouts: T
-Keep MBits: T
-Maximum file size: 1000000000B
+makeblastdb -in targets.12.10kb.fasta -dbtype prot -out targets.12.10kb
 Adding sequences from FASTA; added 252 sequences in 0.0179 seconds.
 
-
-Blast
+3. Pairwise blastp
 blastp -db blastdb/KS.12.10kb -query KS.12.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.10kb.out
 blastp -db blastdb/targets.12.10kb -query targets.12.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.10kb.out
 
-
+4, 5?
 Jan-23-2019
 low KS-KS seq identity because antismash couldn't recognize the domains, just the active sites
 
-
+**********************************************************************************
 Jan-24-2019
-
 COEVOLUTION ON POSITIVE SET
 1. Extrct mibig pos data set KS and target sequences and write in
 
@@ -149,3 +130,118 @@ COEVOLUTION ON POSITIVE SET
 2. Make blast databases and move to blastdb/
 makeblastdb -in KS.mibig.fasta -dbtype prot -out KS.mibig
 makeblastdb -in targets.mibig.fasta -dbtype prot -out targets.mibig
+
+3. Pairwise blastp
+blastp -db blastdb/KS.12.mibig -query KS.mibig.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.mibig.out
+blastp -db blastdb/targets.mibig -query targets.12.50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.mibig.out
+
+4.
+********************************************************************************
+Jan-29-2019
+Coevolution with >50kb distance between target and KS
+
+1. Run ../Antismash_gbids/target_ks_tandem.py
+Output: target_ks_tandem.50kb.out (1046 hits)
+        KS.12.50kb.fasta
+        targets.12.50kb.fasta
+
+2. Make KS and genes databaase and move to blastb/
+makeblastdb -in KS.12.50kb.fasta -dbtype prot -out KS.12.50kb
+makeblastdb -in targets.12.50kb.fasta -dbtype prot -out targets.12.50kb
+
+3. Pairwise blastp
+blastp -db blastdb/KS.12.50kb -query KS.12.50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.50kb.out
+blastp -db blastdb/targets.12.50kb -query targets.12.50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.50kb.out
+
+4. Parse pairwise blast
+parse_pairwise_identities.py
+Output file: pairwise_identities.12.50kb.out
+
+5. Plot pairwise identities
+plot_pairwise_identities.py
+Output file: 12.50kb.png
+
+****************************************************************************************
+********************************************************************************
+Jan-29-2019
+Coevolution with <5kb distance between target and KS
+
+1. Run ../Antismash_gbids/target_ks_tandem.py
+Output: target_ks_tandem.5kb.out (408 hits)
+        KS.12.5kb.fasta
+        targets.12.5kb.fasta
+
+2. Make KS and genes databaase and move to blastb/
+makeblastdb -in KS.12.5kb.fasta -dbtype prot -out KS.12.5kb
+makeblastdb -in targets.12.5kb.fasta -dbtype prot -out targets.12.5kb
+
+3. Pairwise blastp
+blastp -db blastdb/KS.12.5kb -query KS.12.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.5kb.out
+blastp -db blastdb/targets.12.5kb -query targets.12.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.5kb.out
+
+4. Parse pairwise blast
+parse_pairwise_identities.py
+Output file: pairwise_identities.12.5kb.out
+
+5. Plot pairwise identities
+plot_pairwise_identities.py
+Output file: 12.5kb.png
+
+6. Cleanup pairwise_identities.12.5kb.out to dicard identites < 30%
+pairwise_identities.12.5kb.out.sorted.sorted
+
+7. 5. Plot pairwise identities
+plot_pairwise_identities.py
+Output file: 12.5kb.cleaned.png
+
+Off-diagona point:
+AUSV01000137-FN689524	0.30	0.91
+AUSV01000137-CP025542	0.31	0.39
+
+>AUSV01000137|mupM_Ile-tRNA-syn|95840|96267|89665|92811|cluster-1|transatpks-otherks-nrps|561-99843|3029
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/AUSV01000137/index.html#cluster-1
+>FN689524|mupM_Ile-tRNA-syn|21295|21726|16377|19523|cluster-1|nrps-transatpks-otherks|1265-97600|1772
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output/FN689524/index.html#cluster-1
+thiomarinol
+https://mibig.secondarymetabolites.org/repository/BGC0001115/index.html#cluster-1
+
+COLOR ALL POINTS CONNECTED TO A KNOWN CLUSTER WITH TARGET
+****************************************************************************************
+Examine low KS-KS seq identities
+CP015756-PYAX01000012	0.14	0.39
+>CP015756|AdmT_ACC|2437121|2437577|2430326|2431186|cluster-1|t1pks-nrps|2416416-2472581|5935
+IAVIEMSCRFPDASSPEEFWDNLATGKCSINEIPEDRWDINQYYSPSDDKAKTNCRTGAFIDNVFDFDAKLFNISDEEASVMDPQQRIILELVFEILERAGYSKKKISGRSLALFIGASTNAYYEYHLNTLKMLNLKSFDSVTSLTSEQQESILKEWKNKFGVTDFHPNLLVDNILNMIAARASQEFNLKGPSIVVDTACSSSIVTIHMACESLKRGECDIAIAGGINLLLTPTPYIYLSNAGALSTSGVSSVFDAKADGLVPGEGAGLVLLKPLKKAIADKDKVLAIIKASAINNDGHSIGVMAPNPDGQRSVIESLYAKNDFNPKDIQYVEAHGTGTKIGDPSEVRALDSAFKRWSPKPNSIAIGSVKANIGHLLNSAGIASFIKVVLALNNKIMPPNVNLTQLNPSIKFNKTPFYTISKAKEWTVDQGISRRASINSFGFGGTNCHMVVEEAP
+
+This is probably a CLF domain (annotated by antismash as KS)
+>PYAX01000012|AdmT_ACC|177843|178183|179292|180998|cluster-1|bacteriocin-t2pks-t1pks|120458-199012|1109
+LPSRLLSQTDHMTRLALVAADWALADAGVNPAELPEYGMGVITASSSGGFEFGQRELQNLWSKGGSHVSAYQSFAWFYAVNTGQISIRNGMRGPSGVLVTDQAGGLDAVANARRQIRKGIDLVVSGGVDGSICPWGWVAHMSTGRLSAVDDPDRAYLPFDADATGHVAGEGGAILVMEDEDAARRRGVERSYGELAGYAATMDPRPGGGEPGLRRAAELAIADAGLTPGDVDVVFADAAGVPELDRVEAEAITAVFGPRGVPVTAPKTMTGRLFSGAAPLDVAVALLSIRDGVIPPTINVNPAPGYGIDLVTGAPRHTRPRTALVLARGSGGFNAAVVVR
+
+TODO: Check all KSs from  ks.all.fasta file if they are true KSs
+      - blast each KS with a true KS and discard short or misannotated sequences
+      - for each discarded sequence, get KS coordinates from initial Blast search
+
+      Tentatively, discard all low seq identities in parse_pairwise_identities.py step
+****************************************************************************************
+
+Examine off-diagonal points:
+FNIE01000009-FNLF01000002	0.42	0.82
+>FNIE01000009|EF-Tu|195032|195374|189249|190442|cluster-1|t1pks|177579-237615|4590
+>FNLF01000002|EF-Tu|1131376|1131711|1141523|1142713|cluster-1|ladderane-t1pks-nrps|1057479-1153604|9812
+
+open ../Antismash_gbids/antismash_output_assemblies_all/FNIE01000009/index.html
+      file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/FNIE01000009/index.html#cluster-1
+      EF-Tu clustered with other translation-related genes:
+
+open ../Antismash_gbids/antismash_output_assemblies_all/FNLF01000002_927773_1282485//index.html
+      file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/FNLF01000002_927773_1282485/index.html#cluster-1
+
+
+Not sure which gene it is, get sequence from targets.12.10kb.fasta and search in geneclusters file
+      >FNLF01000002|EF-Tu|1131376|1131711|1141523|1142713|cluster-1|ladderane-t1pks-nrps|1 057 479-1153604|9812
+      VAKAKFERTKPHVNIGTIGHVDHGKTTLTAAITKVLAEKYPDLNEASAFDQIDKAPEEKARGITINISHVEYQTEKRHYAHVDAPGHADYIKNMITGAAQMDGAILVVAATDGPMPQTREHVLLARQVGVPYILVALNKCDMVDDEEILELVEMEVRELLGSQDFDEDAPVVRVSGYQALQGEEKWVDSIVELMNAVDESIPDPERETDKPFLMPVEDVFTITGRGTVVTGRVERGIINVNEEVEIVGIREKSTKTTVTGIEMFRKLLDSGQAGDNVGLLVRGLKREDVERGQVVVKPGTTTPHTEFEGQAYILSKDEGGRHTPFFNNYRPQFYFRTTDVTGVVTLPEGNEMVMPGDNTEMSVKLIQPVAMDEGLRFAIREGGRTVGAGRVTKIIA
+
+Search for sequence in geneclusters.js
+      atom ../Antismash_gbids/antismash_output_assemblies_all/FNLF01000002_927773_1282485/geneclusters.js
+      ctg1_196
+      ctg1_195 is reductase
+      ctg1_197 is another Ef-Tu

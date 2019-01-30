@@ -1,0 +1,8 @@
+1. split_mibig.py to split target sequences in separate fasta
+files
+Ouptut in targets_fasta/
+
+2. filter_second_copy.py
+
+    outfiltered_file = open("blast_out.second_copy.filtered.12.10kb.pident.30", "w")
+    blastdir = "blast_out/"

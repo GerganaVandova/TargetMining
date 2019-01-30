@@ -9,14 +9,14 @@ import glob
 # taxafile = "taxa_assembly.txt"
 # t = open(taxafile, "w")
 
-taxafile = "species_nt.txt"
-# taxafile = "species_assembly.txt"
+#taxafile = "species_nt.txt"
+taxafile = "species_assembly.txt"
 t = open(taxafile, "w")
 
 count = 0
 
-gbfilenames = glob.glob("gbdir/*.gb")
-#gbfilenames = glob.glob("assembly_gb/*.gbff")
+#gbfilenames = glob.glob("gbdir/*.gb")
+gbfilenames = glob.glob("assembly_gb/*.gbff")
 # gbfilenames = glob.glob("assembly_gb/LQPQ01000178.gbff")
 for gbfilename in gbfilenames:
     # print gbfilename

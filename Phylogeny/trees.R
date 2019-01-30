@@ -4,8 +4,8 @@
 
 # Load the tree file
 library(ape)
-dir <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
-filename <- "KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree"
+dir <- "/Users/gvandova/Dropbox/Computational_projects/Phylogeny/"
+filename <- "KS.12.20kb.fasta.withFabF.cdhit.90.mafft.FastTree"
 
 # Choose root sequence set
 rootset <- "FabF"
@@ -15,20 +15,38 @@ MyTree <- read.tree(file)
 
 #############################################################
 # # Highlight specific sequences
-dir1 <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
+dir1 <- "/Users/gvandova/Dropbox/Computational_projects/Phylogeny/"
 #filename1 <-"out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.cluster_type"
 # whole description in second filed:
 # ACXX02000001_38012-39229	ACXX02000001_38012-39229_AdmT_ACC_transatpks-nrps
 
 # filename1 <- "out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.descr"
-filename1 <- "KS.12.10kb.fasta.target"
+filename3 <- "mibig_refset.10"
+description_file3 = paste(dir1, filename3, sep="")
+descriptions3 <- read.table(description_file3, sep="\t", as.is=T, row.names=1)
+desc3.df <- data.frame(descriptions3)
+tip.label3.df <- data.frame(MyTree$tip.label, row.names=1)
+# reorder descriptions
+desc3.reordered <- desc3.df[rownames(tip.label3.df),]# This is the key step that matches the tree tip names to the external description file
+
+filename2 <- "KS.12.20kb.fasta.descr.species"
+description_file2 = paste(dir1, filename2, sep="")
+descriptions2 <- read.table(description_file2, sep="\t", as.is=T, row.names=1)
+desc2.df <- data.frame(descriptions2)
+tip.label2.df <- data.frame(MyTree$tip.label, row.names=1)
+# reorder descriptions
+desc2.reordered <- desc2.df[rownames(tip.label2.df),]# This is the key step that matches the tree tip names to the external description file
+# Assign targets to variables
+
+
+filename1 <- "KS.12.20kb.fasta.target"
 description_file = paste(dir1, filename1, sep="")
 descriptions <- read.table(description_file, sep="\t", as.is=T, row.names=1)
 desc.df <- data.frame(descriptions)
 tip.label.df <- data.frame(MyTree$tip.label, row.names=1)
 # reorder descriptions
 desc.reordered <- desc.df[rownames(tip.label.df),]# This is the key step that matches the tree tip names to the external description file
-Identify various bacterial phyla in the phylum file, assign to variables
+# Assign targets to variables
 admt <- desc.reordered=="AdmT_ACC"
 sal <- desc.reordered=="SalI_beta_proteasome"
 dnan <- desc.reordered=="GriR_DnaN"
@@ -123,21 +141,23 @@ myBG1 <- myCols1
 # Must choose outgroup sequence to root on
 
 treetype <- "phylogram";
+# treetype <- "unrooted";
 outgroup <- grep(rootset, MyTree$tip.label, perl=TRUE)
 
 MyTree.rooted <- root(MyTree,outgroup,node = NULL)
 MyTree.ladderized <- ladderize(MyTree.rooted)
 
-mywidth=4; myheight=6 #for small tree
-# mywidth=10; myheight=30 #for big tree
-#mywidth=40; myheight=100# really big for browsing names
+mywidth=4; myheight=6 #for rooted tree
+# mywidth=6; myheight=4 #for unrooted tree
 
 edge.color <- "gray"
-myPch <- 21# circles
+myPch <- 21 # circles
 
-outfile <- paste(dir, filename, ".", treetype,".png", sep="")
+outfile <- paste(dir, filename, ".", treetype,".descr.species.png", sep="")
 pdf(file=outfile, width=mywidth, height=myheight)
 plot(MyTree.ladderized, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
+# plot(MyTree, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
+
 
 # colored dots
 # selectPchCex=.5 # for big pdf (10.30)
@@ -152,12 +172,14 @@ selectCex <- 1
 # Print all labels
 allLabCex <- .5
 # allLabCex <- .1
-tiplabels(MyTree$tip.label, cex=.1, frame="none", adj=0) ### comment out if don't want to show labels
+# tiplabels(MyTree$tip.label, cex=.1, frame="none", adj=0) ### comment out if don't want to show labels
 # tiplabels(MyTree$tip.label, cex=.2, frame="none", adj=0) ### comment out if don't want to show labels
 # nodelabels(MyTree$node.label, frame="none", cex=.1)
 #edgelabels(MyTree$edge.label, frame="none", cex=.2)
 
-tiplabels(desc.reordered, cex=0.1, frame="none", adj=0) # to highlight ref sequences when pdf(3,6)
+tiplabels(desc2.reordered, cex=0.1, frame="none", adj=0) # to highlight ref sequences when pdf(3,6)
+tiplabels(desc3.reordered, cex=0.3, frame="none", adj=0) # to highlight ref sequences when pdf(3,6)
+
 # # tiplabels(desc.reordered, cex=.3, frame="none", adj=0) # to highlight ref sequences for big pdf (10.30)
 # # tiplabels(phyla.reordered, cex=.1, frame="none", adj=0) # if you want phyla displayed
 
