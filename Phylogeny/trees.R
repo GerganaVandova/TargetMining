@@ -5,7 +5,7 @@
 # Load the tree file
 library(ape)
 dir <- "/Users/gvandova/Dropbox/Computational_projects/Phylogeny/"
-filename <- "KS.12.20kb.fasta.withFabF.cdhit.90.mafft.FastTree"
+filename <- "KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree"
 
 # Choose root sequence set
 rootset <- "FabF"
@@ -29,7 +29,7 @@ tip.label3.df <- data.frame(MyTree$tip.label, row.names=1)
 # reorder descriptions
 desc3.reordered <- desc3.df[rownames(tip.label3.df),]# This is the key step that matches the tree tip names to the external description file
 
-filename2 <- "KS.12.20kb.fasta.descr.species"
+filename2 <- "KS.12.10kb.fasta.descr.species"
 description_file2 = paste(dir1, filename2, sep="")
 descriptions2 <- read.table(description_file2, sep="\t", as.is=T, row.names=1)
 desc2.df <- data.frame(descriptions2)
@@ -39,7 +39,7 @@ desc2.reordered <- desc2.df[rownames(tip.label2.df),]# This is the key step that
 # Assign targets to variables
 
 
-filename1 <- "KS.12.20kb.fasta.target"
+filename1 <- "KS.12.10kb.fasta.target"
 description_file = paste(dir1, filename1, sep="")
 descriptions <- read.table(description_file, sep="\t", as.is=T, row.names=1)
 desc.df <- data.frame(descriptions)
@@ -153,7 +153,7 @@ mywidth=4; myheight=6 #for rooted tree
 edge.color <- "gray"
 myPch <- 21 # circles
 
-outfile <- paste(dir, filename, ".", treetype,".descr.species.png", sep="")
+outfile <- paste(dir, filename, ".", treetype,".descr.species.coloredbyphyla.png", sep="")
 pdf(file=outfile, width=mywidth, height=myheight)
 plot(MyTree.ladderized, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
 # plot(MyTree, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
@@ -162,7 +162,7 @@ plot(MyTree.ladderized, font=1, type=treetype, edge.color=edge.color, edge.width
 # colored dots
 # selectPchCex=.5 # for big pdf (10.30)
 selectPchCex=.15 #for small pdf (2.6)
-tiplabels(pch=myPch, cex=selectPchCex, col=myCols, bg=myBG)# colored label dots
+tiplabels(pch=myPch, cex=selectPchCex, col=myCols1, bg=myBG1)# colored label dots
 
 # Print select labels
 #  identified using grep above (Erin set)

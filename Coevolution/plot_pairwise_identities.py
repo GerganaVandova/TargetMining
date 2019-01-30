@@ -22,7 +22,7 @@ ks_pair_identities = defaultdict(list)
 target_pair_identities = defaultdict(list)
 
 # pairwis_filename = "pairwise_identities.mibig.out"
-pairwise_filename = "pairwise_identities.12.5kb.out.long"
+pairwise_filename = "pairwise_identities.mibig.out.long"
 with open(pairwise_filename, 'r') as f:
     data = f.readlines()
     data = map(lambda x: x.strip(), data)
@@ -42,61 +42,32 @@ with open(pairwise_filename, 'r') as f:
 print len(ks_pair_identities), len(target_pair_identities)
 
 target_to_color = {
-         "AdmT_ACC": "b",
-         "SalI_beta_proteasome": "g"}
-# admt <- desc.reordered=="AdmT_ACC"
-# sal <- desc.reordered=="SalI_beta_proteasome"
-# dnan <- desc.reordered=="GriR_DnaN"
-# eftu <- desc.reordered=="EF-Tu"
-# fabb <- desc.reordered=="PtmP3_FabB-F"
-# fabi <- desc.reordered=="BatG_FabI"
-# gyrb <- desc.reordered=="GyrB-R"
-# ile <- desc.reordered=="mupM_Ile-tRNA-syn"
-# thr <- desc.reordered=="borI_Thr-tRNA-syn"
-# leu <- desc.reordered=="agnB2_Leu-tRNA-syn"
-# rub <- desc.reordered=="rubR1_TIF"
-# trp <- desc.reordered=="Ind0_Trp-tRNA-syn"
-# # colors
-# myCols <- c(rep("black",length(MyTree$tip.label)))
-# myCols[admt]="blue"
-# myCols[sal]="lightblue"
-# myCols[dnan]="cyan"
-# myCols[eftu]="darkblue"
-# myCols[fabb]="red"
-# myCols[fabi]="purple"
-# myCols[gyrb]="magenta"
-# myCols[ile]="brown"
-# myCols[thr]="lightpink"
-# myCols[leu]="orange"
-# myCols[rub]="green"
-# myCols[trp]="lightgreen"
+         "AdmT_ACC": 'blue',
+         "SalI_beta_proteasome": 'lightblue',
+         "GriR_DnaN": "cyan",
+         "EF-Tu": "midnightblue",
+         "PtmP3_FabB-F": "r",
+         "BatG_FabI": "darkmagenta",
+        "GyrB-R": "magenta",
+        "mupM_Ile-tRNA-syn": "brown",
+        "borI_Thr-tRNA-syn": "lightpink",
+        "agnB2_Leu-tRNA-syn": "orange",
+        "rubR1_TIF": "green",
+        "Ind0_Trp-tRNA-syn": "lightgreen"}
 
 for target in ks_pair_identities:
     # plt.scatter(ks_pair_identities, target_pair_identities, color='r', s=1)
     if target not in target_to_color:
         continue
-    plt.scatter(ks_pair_identities[target], target_pair_identities[target], color=target_to_color[target], s=1)
+    plt.scatter(ks_pair_identities[target], target_pair_identities[target], color=target_to_color[target], s=100)
+    plt.xlabel('KS1-KS2 identity', size=10)
+    plt.ylabel('Trget1-Target2 identity', size=10)
 
 plt.xlim((0,1))
 plt.ylim([0,1])
 # plt.savefig('mibig.png')
-plt.savefig('12.5kb.long.png')
+plt.savefig('12.mibig.long.png', dpi=400)
+
 # fig = plt.figure(5, figsize=(10, 6))
 # plt.savefig("image.png",bbox_inches='tight', dpi=100)
 #plt.show()
-
-sys.exit(0)
-print pccs, "\n", sterrs, "\n", debs
-pos = np.arange(0, 16, 2)    # the bar centers on the y axis for 22 PCCs
-print pos
-b = plt.barh(pos, debs, xerr=sterrs, align='center', height=1, color = '0.65', ecolor='k', label='48h')
-#plt.grid(True)
-plt.yticks(pos, pccs)
-plt.xlabel('6deb to standard ion counts ratio at 48h', size=15)
-#plt.title('6deB production of 22 PCCs')
-plt.tick_params(labelsize=14, pad=10)
-plt.xlim((0,1)) #for 8 PCCs
-#remove pads from both sides of barplot
-plt.ylim([0,1])
-plt.tight_layout() #Show long labels
-plt.show()

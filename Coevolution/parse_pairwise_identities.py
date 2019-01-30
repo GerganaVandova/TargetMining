@@ -67,9 +67,9 @@ def main():
     # targets = ["borI_Thr-tRNA-syn", "mupM_Ile-tRNA-syn", "PtmP3_FabB-F",
                # "rubR1_TIF", "AdmT_ACC", "SalI_beta_proteasome", "BatG_FabI"]
 
-    blast_file_ks = "KS.12.5kb.out"
-    blast_file_target = "targets.12.5kb.out"
-    outfile = "pairwise_identities.12.5kb.out.long"
+    blast_file_ks = "KS.mibig.out"
+    blast_file_target = "targets.mibig.out"
+    outfile = "pairwise_identities.mibig.out.long"
 
     # Mibig set
     # blast_file_ks = "KS.mibig.out"
@@ -86,14 +86,14 @@ def main():
             qgbid, target_q, qseqid_ks_short = parse_gbids(qseqid_ks)
             sgbid, target_s, sseqid_ks_short = parse_gbids(sseqid_ks)
 
-            # f.write("%s-%s\t%.2f\t%.2f\n" %
+            # f.write("%s-%s\t%f\t%.2f\n" %
             #         (qgbid,
             #          sgbid,
             #          pairs_ks[(qseqid_ks, sseqid_ks)],
             #          pairs_target[(qseqid_ks, sseqid_ks)]))
 
-            # Print long ids
-            f.write("%s||%s\t%.2f\t%.2f\n" %
+            # Print long ids to later add color to plots
+            f.write("%s||%s\t%f\t%.2f\n" %
                     (qseqid_ks,
                      sseqid_ks,
                      pairs_ks[(qseqid_ks, sseqid_ks)],
