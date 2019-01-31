@@ -4,7 +4,7 @@
 
 # Load the tree file
 library(ape)
-dir <- "/Users/gvandova/Dropbox/Computational_projects/Phylogeny/"
+dir <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
 filename <- "KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree"
 
 # Choose root sequence set
@@ -15,7 +15,7 @@ MyTree <- read.tree(file)
 
 #############################################################
 # # Highlight specific sequences
-dir1 <- "/Users/gvandova/Dropbox/Computational_projects/Phylogeny/"
+dir1 <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
 #filename1 <-"out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.cluster_type"
 # whole description in second filed:
 # ACXX02000001_38012-39229	ACXX02000001_38012-39229_AdmT_ACC_transatpks-nrps
@@ -80,7 +80,7 @@ myBG <- myCols
 #Descriptions
 
 # Read the 2f file of fastaID and description
-dir1 <- "/Users/gvandova/Dropbox/Computational_projects/Phylogeny/"
+dir1 <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
 filename1 <- "KS.12.10kb.fasta.phyla" # to get colors by phyla for KSs
 
 phylum_file = paste(dir1, filename1, sep="")
@@ -153,16 +153,18 @@ mywidth=4; myheight=6 #for rooted tree
 edge.color <- "gray"
 myPch <- 21 # circles
 
-outfile <- paste(dir, filename, ".", treetype,".descr.species.coloredbyphyla.png", sep="")
+outfile <- paste(dir, filename, ".", treetype,".descr.species.coloredbytargets.png", sep="")
 pdf(file=outfile, width=mywidth, height=myheight)
 plot(MyTree.ladderized, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
 # plot(MyTree, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
 
 
 # colored dots
-# selectPchCex=.5 # for big pdf (10.30)
-selectPchCex=.15 #for small pdf (2.6)
-tiplabels(pch=myPch, cex=selectPchCex, col=myCols1, bg=myBG1)# colored label dots
+selectPchCex=.5 # for coloring tree by phyla
+# selectPchCex=.15 #for small pdf (2.6)
+# tiplabels(pch=myPch, cex=selectPchCex, col=myCols1, bg=myBG1)# colored by phyla
+tiplabels(pch=myPch, cex=selectPchCex, col=myCols, bg=myBG)# colored by phyla
+
 
 # Print select labels
 #  identified using grep above (Erin set)
@@ -177,10 +179,9 @@ allLabCex <- .5
 # nodelabels(MyTree$node.label, frame="none", cex=.1)
 #edgelabels(MyTree$edge.label, frame="none", cex=.2)
 
-tiplabels(desc2.reordered, cex=0.1, frame="none", adj=0) # to highlight ref sequences when pdf(3,6)
-tiplabels(desc3.reordered, cex=0.3, frame="none", adj=0) # to highlight ref sequences when pdf(3,6)
+# tiplabels(desc2.reordered, cex=0.1, frame="none", adj=0) # to label short descr
+# tiplabels(desc3.reordered, cex=0.3, frame="none", adj=0) # to highlight mibig ref sequences
 
-# # tiplabels(desc.reordered, cex=.3, frame="none", adj=0) # to highlight ref sequences for big pdf (10.30)
 # # tiplabels(phyla.reordered, cex=.1, frame="none", adj=0) # if you want phyla displayed
 
 add.scale.bar(cex=allLabCex, lwd=selectPchCex)
