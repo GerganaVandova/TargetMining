@@ -29,6 +29,7 @@ for line in antismash_file:
     line = line.strip()
     features = line.split("|")
     gbid, targetid = features[:2]
+    print gbid, targetid
     gbid_to_target[gbid].append((targetid))
 
 for gbid in sorted(gbid_to_target.keys()):
@@ -64,12 +65,12 @@ for gbid in sorted(gbid_to_target.keys()):
         # print outfilename
 
         # EF-Tu.1e-08.NZ_KQ948231.out
-        # if targetid == "mupM_Ile-tRNA-syn" and gbid == "AP018164":
-        #    print queryfile
-        #    print gbfile
-            # tblastn -query targets_fasta/EF-Tu.fasta -subject /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/assembly_gb/KB899005.gbff -out out.txt
+        # if targetid == "borI_Thr-tRNA-syn" and gbid == "KT362046":
+        #     print queryfile
+        #     print gbfile
+        # tblastn -query targets_fasta/EF-Tu.fasta -subject /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/assembly_gb/KB899005.gbff -out out.txt
         subprocess.call(["tblastn", "-query", queryfile,
                          "-subject", gbfile,
                          "-out", outfilename,
                          "-evalue", str(blast_evalue_cutoff),
-                         "-outfmt",  "6 qseqid sseqid pident sstart send nident qlen slen evalue"])
+                         "-outfmt",  "6 qseqid sseqid sstart send nident qlen slen evalue"])

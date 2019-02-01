@@ -2,7 +2,51 @@
 files
 Ouptut in targets_fasta/
 
-2. filter_second_copy.py
 
-    outfiltered_file = open("blast_out.second_copy.filtered.12.10kb.pident.30", "w")
-    blastdir = "blast_out/"
+2. Run blast to find number of copies (evalu e cutoff 1e-8)
+    ./second_copy.py
+
+    blast_out/lr -S
+    EF-Tu.1e-08.NZ_MLYO01000014.out
+    EF-Tu.1e-08.NZ_MLYN01000089.out
+    EF-Tu.1e-08.NZ_MCGQ01000026.out
+    EF-Tu.1e-08.NZ_LIWA01000004.out
+    EF-Tu.1e-08.NZ_LBDA02000011.out
+    EF-Tu.1e-08.NZ_KQ948231.out
+    EF-Tu.1e-08.NZ_KQ948036.out
+    EF-Tu.1e-08.NZ_JQJV01000052.out
+    EF-Tu.1e-08.NZ_JNXR01000047.out
+    AdmT_ACC.1e-08.NZ_RFFG01000027.out
+    AdmT_ACC.1e-08.NZ_NJGH01000020.out
+
+    Empty files because there is no sequence in genbank file.
+    TODO: Do blasts manually
+
+
+3. Filter blast results by pident >30%
+  ./filter_second_copy.py > second_copy.filtered.genome
+
+  Output file: second_copy.filtered.12.10kb
+  target, cluster, pident, sstart, send, nident, qlen, slen, evalue
+  AdmT_ACC	KB894406	48.02	205138	205893	121	304	295743	4e-70
+
+  cat second_copy.12.10kb.filtered |wc
+     252    2947   19707
+cat second_copy.12.10kb.filtered |sort -k1> second_copy.12.10kb.filtered.sorted
+
+Mupirocin pos control cluster has only 1 copy of Ile-tRNA synth,
+it is supposed to have 2:
+mupM_Ile-tRNA-syn	CP025542	1	6610571	True	6109741	6106655	994	1030	8670571	0.0
+
+cat blast_out/mupM_Ile-tRNA-syn.1e-08.CP025542.out
+mupM_Ile-tRNA-syn	Subject_1	6109741	6106655	994	1030	8670571	0.0
+mupM_Ile-tRNA-syn	Subject_1	7733092	7730762	240	1030	8670571	7e-88 240/1030=0.23
+mupM_Ile-tRNA-syn	Subject_1	7375205	7377637	210	1030	8670571	7e-53
+mupM_Ile-tRNA-syn	Subject_1	5528068	5530452	214	1030	8670571	2e-47
+mupM_Ile-tRNA-syn	Subject_1	7857867	7858343	53	1030	8670571	3e-11
+
+Low seq identity for the second copy.
+
+
+cat out.second_copy.12.10kb.filtered |grep True|wc
+29 complete GENOMES, 14 of which have a second copy

@@ -153,7 +153,7 @@ mywidth=4; myheight=6 #for rooted tree
 edge.color <- "gray"
 myPch <- 21 # circles
 
-outfile <- paste(dir, filename, ".", treetype,".descr.species.coloredbytargets.png", sep="")
+outfile <- paste(dir, filename, ".", treetype,".descr.species.coloredbytargets.refset.png", sep="")
 pdf(file=outfile, width=mywidth, height=myheight)
 plot(MyTree.ladderized, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
 # plot(MyTree, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
@@ -180,7 +180,7 @@ allLabCex <- .5
 #edgelabels(MyTree$edge.label, frame="none", cex=.2)
 
 # tiplabels(desc2.reordered, cex=0.1, frame="none", adj=0) # to label short descr
-# tiplabels(desc3.reordered, cex=0.3, frame="none", adj=0) # to highlight mibig ref sequences
+tiplabels(desc3.reordered, cex=0.3, frame="none", adj=0) # to highlight mibig ref sequences
 
 # # tiplabels(phyla.reordered, cex=.1, frame="none", adj=0) # if you want phyla displayed
 
