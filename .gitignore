@@ -1,8 +1,34 @@
-<<<<<<< HEAD
+Antismash_gbids/KS.12.20kb.fasta
+Antismash_gbids/KS.12.50kb.fasta
+Antismash_gbids/KS.12.5kb.fasta
+Antismash_gbids/bak_2019/CP009481.fasta
+Antismash_gbids/bak_2019/gbids.old.out.12.filtered.10kb
+Antismash_gbids/bak_2019/seq_dir/
+Antismash_gbids/cluster_genes.all.fasta
+Antismash_gbids/ks.21k.fasta
+Antismash_gbids/ks.89k.fasta
+Antismash_gbids/ks.all.fasta
+Antismash_gbids/stdout.12.filtered.10kb
+Antismash_gbids/stdout_21k.txt
+Antismash_gbids/stdout_89k.txt
+Antismash_gbids/targets.12.10kb.fasta
+Antismash_gbids/targets.12.20kb.fasta
+Antismash_gbids/targets.12.50kb.fasta
+Antismash_gbids/targets.12.5kb.fasta
+Coevolution/KS.12.50kb.out
+Genbank/.nfs000000000819ce5f00000008
+Genbank/species.txt
+Genbank/species_assembly.txt
+Genbank/species_nt.txt
+Phylogeny/CP025542
+Second_copy/blast_out/
+Second_copy/old/
+old.Coevolution/
+
+
 Coevolution/fasta/
 
 Antismash_gbids/sequences.110k.coord.redundant.fasta
-=======
 Antismash_gbids/2016_antismash_output/
 Check_positive_ids.xlsx
 Known_targets_in_cluster (version 1).xlsx
@@ -11,7 +37,6 @@ Known_targets_in_cluster_v1.xlsx
 Postive_cluster_list.xlsx
 out.parsed.pident.50.xlsx
 
->>>>>>> cf3d817cbd44041860656aa5d27a67192f9b393e
 Antismash_gbids/antismash_ids.txt
 Genbank/complete_genomes.txt
 Genbank/complete_genomes_nt.txt
