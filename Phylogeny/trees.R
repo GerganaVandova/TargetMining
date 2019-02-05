@@ -21,7 +21,7 @@ dir1 <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phyl
 # ACXX02000001_38012-39229	ACXX02000001_38012-39229_AdmT_ACC_transatpks-nrps
 
 # filename1 <- "out.targets.12.eval.1e-8.pident.30.filtered.10000.allpks.domains.268.taxa.descr"
-filename3 <- "mibig_refset.10"
+filename3 <- "mibig_refset.10.mod"
 description_file3 = paste(dir1, filename3, sep="")
 descriptions3 <- read.table(description_file3, sep="\t", as.is=T, row.names=1)
 desc3.df <- data.frame(descriptions3)
@@ -153,7 +153,7 @@ mywidth=4; myheight=6 #for rooted tree
 edge.color <- "gray"
 myPch <- 21 # circles
 
-outfile <- paste(dir, filename, ".", treetype,".descr.species.coloredbytargets.refset.png", sep="")
+outfile <- paste(dir, filename, ".", treetype,".descr.species.coloredbytargets.refsetmod.png", sep="")
 pdf(file=outfile, width=mywidth, height=myheight)
 plot(MyTree.ladderized, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
 # plot(MyTree, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
