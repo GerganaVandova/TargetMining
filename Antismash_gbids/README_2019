@@ -166,5 +166,82 @@ file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_
 file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/LQPF01000043/index.html#cluster-1
 file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/MVHT01000008/index.html#cluster-1
 
-
 all Mycobacteria homologs, but not same species
+
+
+******************************************************************************
+
+Feb-12-2019
+
+TODO #1: Look for homologs in distant species:
+ACC_clade
+    >NZ_NJGH01000020|AdmT_ACC|14798|15260|4868|5812|cluster-1|nrps-t1pks-PUFA-otherks|1-80367|8986
+    >PDDW01000001|AdmT_ACC|1628693|1629149|1623414|1625159|cluster-1|nrps-t1pks-otherks|1608682-1680551|3534
+    These look different
+    >BDBD01000011|AdmT_ACC|1012574|1013030|1006722|1008416|cluster-1|nrps-t1pks-otherks|992563-1114385|4158
+
+    file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output/NZ_NJGH01000020/index.html#cluster-1
+    file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/PDDW01000001_1483836_1811273/index.html#cluster-1
+    file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/BDBD01000011_867822_1244349/index.html#cluster-1
+
+Ef-Tu clade
+There is a discrepancy of which cluster it is. Cluster 4 is type3 pks, but the cluster with Ef-Tu is #6
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output/CP022433/index.html#cluster-6
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output/JOCB01000044/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/QTUG01000001_8461176_8762543/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output/NZ_LBDA02000011/index.html#cluster-1
+
+*******
+Clade 6:
+********
+Proteasome clade:
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/JAOA01000016/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/NKRA01000001_5604381_5905642/index.html#cluster-1
+False positive
+Check where this point is on the diagonal
+JAOA01000016|SalI_beta_proteasome|86426|86507|88771|89532|cluster-1|t1pks-nrps|38225-106400|2264	NKRA01000001|SalI_beta_proteasome|5662440|5662862|5659046|5659921|cluster-1|t1pks-nrps|5642393-5710922|2519
+81	422	0.876543	0.940711
+The truncated KS taken instead of the true one.
+Calulate KS-KS seq identity with the long KS.
+It is 94%, same as target1-target2 identity.
+This is an example of a false positive.
+
+Ile-tRNA synthetase/GyraseB clade
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/LN929908_2377122_2678393/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/CP019882_3174623_3475894/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/QAYH01000008/index.html#cluster-2
+
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/MBEU01000014/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/PKEK01000063/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/LT721901_4855155_5315089/index.html#cluster-2
+  These last 3 are not true homologs, but they share homologous t1pk module
+
+
+*******
+Clade 7: SalI_beta_proteasome clade, cinnabaramide homologs
+********
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/BBUY01000002/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/CP022161_2733351_3055960/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/KQ949024/index.html#cluster-6
+KQ949024 is cinnabaramide
+
+*******
+Clade 8: leu-tRNA clade
+********
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/QQAW01000006/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/AM889285_2324883_2626133/index.html#cluster-1
+
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/CP020892_0_173556/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/AUHU01000008/index.html#cluster-1
+
+*******
+Clade 9: Gyrase B clade
+********
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/CP020892_0_173556/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/AUHU01000008/index.html#cluster-1
+DNA replication locus co-clustered with biosynthetic genes
+
+
+
+Cluster very distant from othr lcusters:
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/CP017717_10751256_11052458/index.html#cluster-1

@@ -9,28 +9,20 @@ import sys
 import pylab
 from matplotlib.pyplot import *  # This is for the legend to work
 from collections import defaultdict
-#
-# xyz=np.array(np.random.random((100,3)))
-# plt.scatter(xyz[:,0], xyz[:,1])
-# plt.savefig('foo.png')
-#
-# sys.exit(0)
 
-
-# This code will make a 6deb production plot. The input is 6deb data: PCC<tab>sterror<tab>48htime point)
 ks_pair_identities = defaultdict(list)
 target_pair_identities = defaultdict(list)
 
 # pairwis_filename = "pairwise_identities.mibig.out"
-pairwise_filename = "pairwise_identities.mibig.out.long"
+pairwise_filename = "pairwise_identities.12.5kb.out.long.tmp.longks"
 with open(pairwise_filename, 'r') as f:
     data = f.readlines()
     data = map(lambda x: x.strip(), data)
     for line in data:
         print line
-        pair, ks_pair_identity, target_pair_identity = line.split("\t")
-        # pairwise_identities.12.5kb.out.long
-        gene1, gene2 = pair.split("||")
+        # pair, ks_pair_identity, target_pair_identity = line.split("\t")
+        # gene1, gene2 = pair.split("||")
+        gene1, gene2, len1, len2, ks_pair_identity, target_pair_identity = line.split("\t")
         target = gene1.split("|")[1]
         print gene1, gene2, target
         ks_pair_identities[target].append(float(ks_pair_identity))
@@ -59,14 +51,14 @@ for target in ks_pair_identities:
     # plt.scatter(ks_pair_identities, target_pair_identities, color='r', s=1)
     if target not in target_to_color:
         continue
-    plt.scatter(ks_pair_identities[target], target_pair_identities[target], color=target_to_color[target], s=100)
+    plt.scatter(ks_pair_identities[target], target_pair_identities[target], color=target_to_color[target], s=10)
     plt.xlabel('KS1-KS2 identity', size=10)
     plt.ylabel('Trget1-Target2 identity', size=10)
 
 plt.xlim((0,1))
 plt.ylim([0,1])
 # plt.savefig('mibig.png')
-plt.savefig('12.mibig.long.png', dpi=400)
+plt.savefig('12.5kb.long.tmp.longks.png', dpi=400)
 
 # fig = plt.figure(5, figsize=(10, 6))
 # plt.savefig("image.png",bbox_inches='tight', dpi=100)

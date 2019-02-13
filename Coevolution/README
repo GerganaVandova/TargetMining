@@ -245,3 +245,21 @@ Search for sequence in geneclusters.js
       ctg1_196
       ctg1_195 is reductase
       ctg1_197 is another Ef-Tu
+
+**********************************************************
+
+Feb-7-2019
+
+Look at low-seq identity KS-KS pairs
+NZ_LBDA02000011|EF-Tu|62303|62738|57118|58296|cluster-1|t1pks-otherks|41631-71625|4007	NZ_LIWA01000004|EF-Tu|732832|732876|729126|730298|cluster-5|t1pks-otherks|688615-739979|2534	0.027586	0.93
+
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output/NZ_MCGQ01000026/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output/NZ_LBDA02000011/index.html#cluster-1
+
+One of the KSs is very short.
+
+Remove all pairwise identities in which the KSs are < 300aa long.
+    pairwise_identities.12.5kb.out.long.tmp.longks
+    12.5kb.long.tmp.longks.png
+
+There are still some low-identity pairs. Looking into them:
