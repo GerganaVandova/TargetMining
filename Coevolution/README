@@ -262,4 +262,62 @@ Remove all pairwise identities in which the KSs are < 300aa long.
     pairwise_identities.12.5kb.out.long.tmp.longks
     12.5kb.long.tmp.longks.png
 
+******************************************************************
+Feb-13-2019
 There are still some low-identity pairs. Looking into them:
+Some are CLF domains. For now, discard short KSs:
+
+Mv all out files in old/ and rerun scripts for 5kb, 10kb, 50kb cutoffs:
+
+3. Pairwise blastp
+blastp -db blastdb/KS.12.5kb -query KS.12.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.5kb.out
+blastp -db blastdb/targets.12.5kb -query targets.12.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.5kb.out
+
+blastp -db blastdb/KS.12.10kb -query KS.12.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.10kb.out
+blastp -db blastdb/targets.12.10kb -query targets.12.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.10kb.out
+
+blastp -db blastdb/KS.12.50kb -query KS.12.50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.50kb.out
+blastp -db blastdb/targets.12.50kb -query targets.12.50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.50kb.out
+
+4. Parse pairwise blast: ./parse_pairwise_identities.py
+Output file: pairwise_identities.12.5kb.out
+             pairwise_identities.12.10kb.out
+             pairwise_identities.12.50kb.out
+
+5. Plot pairwise identities: ./plot_pairwise_identities.py
+Output file: 12.5kb.png
+             12.10kb.png
+             12.50kb.png
+
+6. Cleanup pairwise_identities.12.5kb.out to dicard identites < 30%
+pairwise_identities.12.5kb.out.sorted.sorted
+
+7. 5. Plot pairwise identities
+plot_pairwise_identities.py
+Output file: 12.5kb.cleaned.png
+
+
+Feb-14-2019
+print x-y distance
+    AUSV01000137|mupM_Ile-tRNA-syn	FN689524|mupM_Ile-tRNA-syn	427	431	30	91	62
+
+    FN is mupirocin (one of the true positives)
+    file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/AUSV01000137/index.html#cluster-1
+    When looking into the cluster, it looks like a true positive
+    The domain architecture is somewhat similar to the mupirocin one:
+    https://mibig.secondarymetabolites.org/repository/BGC0000182/index.html#cluster-1
+    file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output/FN689524/index.html#cluster-1
+    Low KS-KS seq identity, probably because the KS from AUS is not part of the cluster
+    When corresponding KSs blasted, identity is 84%
+    FALSE NEGATIVE
+
+    **************************
+
+    FNIE01000009|EF-Tu	PHAG01000006|EF-Tu	342	436	15	72	57
+    FNIE01000009|EF-Tu|195032|195374|189249|190442|cluster-1|t1pks|177579-237615|4590	PHAG01000006|EF-Tu|244680|245116|240352|241545|cluster-2|transatpks|223871-314283|3135	342	436	15.497076	72.292191
+
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/FNIE01000009/index.html#cluster-1
+file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/PHAG01000006/index.html#cluster-2
+
+In both clusters, there are other translation elongation factors next to the cluster
+Could be TRUE NEGATIVE

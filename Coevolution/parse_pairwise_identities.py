@@ -43,7 +43,7 @@ def parse_blast(target, blast_file):
             continue
         nident = float(nident)
         qlen = float(qlen)
-        identity = float(nident)/qlen
+        identity = float(nident)/qlen*100
 
         if qseqid > sseqid:
             continue
@@ -61,15 +61,16 @@ def parse_blast(target, blast_file):
 
 def main():
 
+    # Need a file to read target names, use the 10kb cutoff
     antismash_outfilename = "../Antismash_gbids/out.12.filtered.10kb"
 
     targets = get_targets(antismash_outfilename)
     # targets = ["borI_Thr-tRNA-syn", "mupM_Ile-tRNA-syn", "PtmP3_FabB-F",
-               # "rubR1_TIF", "AdmT_ACC", "SalI_beta_proteasome", "BatG_FabI"]
+    # "rubR1_TIF", "AdmT_ACC", "SalI_beta_proteasome", "BatG_FabI"]
 
     blast_file_ks = "KS.12.5kb.out"
     blast_file_target = "targets.12.5kb.out"
-    outfile = "pairwise_identities.12.5kb.out.long.tmp.longks"
+    outfile = "pairwise_identities.12.5kb.out.shortnames"
 
     # Mibig set
     # blast_file_ks = "KS.mibig.out"
@@ -91,46 +92,49 @@ def main():
             len_qks = int(qks_end) - int(qks_start)
             len_sks = int(sks_end) - int(sks_start)
 
+            x = pairs_ks[(qseqid_ks, sseqid_ks)]
+            y = pairs_target[(qseqid_ks, sseqid_ks)]
+            d = abs(x-y)
+
             # don't write pairwise idientites of short, misannotated KSs
-            if len_qks < 300 or len_sks <300:
+            if len_qks < 300 or len_sks < 300:
                 continue
 
-            # f.write("%s-%s\t%f\t%.2f\n" %
-            #         (qgbid,
-            #          sgbid,
-            #          pairs_ks[(qseqid_ks, sseqid_ks)],
-            #          pairs_target[(qseqid_ks, sseqid_ks)]))
-
-            # Print long ids to later add color to plots
-            # f.write("%s||%s\t%f\t%.2f\n" %
+            # To print with tab between ids to check low seq identity scores
+            # f.write("%s\t%s\t%s\t%s\t%f\t%f\n" %
             #         (qseqid_ks,
             #          sseqid_ks,
+            #          len_qks,
+            #          len_sks,
             #          pairs_ks[(qseqid_ks, sseqid_ks)],
             #          pairs_target[(qseqid_ks, sseqid_ks)]))
 
-            # To print with tab between ids to check low seq identity scores
-            f.write("%s\t%s\t%f\t%f\t%f\t%f\n" %
-                    (qseqid_ks,
-                     sseqid_ks,
-                     len_qks,
-                     len_sks,
-                     pairs_ks[(qseqid_ks, sseqid_ks)],
-                     pairs_target[(qseqid_ks, sseqid_ks)]))
+            # print "%s-%s\t%s\t%s\t%.2f\t%.2f" % \
+            #     (qgbid,
+            #      sgbid,
+            #      len_qks,
+            #      len_sks,
+            #      pairs_ks[(qseqid_ks, sseqid_ks)],
+            #      pairs_target[(qseqid_ks, sseqid_ks)])
 
-            print "%s-%s\t%s\t%s\t%.2f\t%.2f" % \
-                (qgbid,
-                 sgbid,
+            # To print short ids:
+            print "%s\t%s\t%s\t%s\t%.2f\t%.2f" % \
+                (qseqid_ks_short,
+                 sseqid_ks_short,
                  len_qks,
                  len_sks,
                  pairs_ks[(qseqid_ks, sseqid_ks)],
                  pairs_target[(qseqid_ks, sseqid_ks)])
 
-            # #To print blast params
-            # print "%s-%s\t%s\t%s" % \
-            #     (qgbid,
-            #      sgbid,
-            #      pairs_ks[(qseqid_ks, sseqid_ks)],
-            #      pairs_target[(qseqid_ks, sseqid_ks)])
+            f.write("%s\t%s\t%s\t%s\t%.0f\t%.0f\t%.0f\n" %
+                    (qseqid_ks_short,
+                     sseqid_ks_short,
+                     len_qks,
+                     len_sks,
+                     pairs_ks[(qseqid_ks, sseqid_ks)],
+                     pairs_target[(qseqid_ks, sseqid_ks)],
+                     d))
+
     f.close()
 
 
