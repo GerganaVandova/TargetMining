@@ -3,6 +3,8 @@
     KS.12.10kb.fasta
     KS.12.20kb.fasta
 
+    KS.92.5kb.fasta
+
 2. ./get_phyla
 
     # CSTD01000001|1344560-1399261|Actinobacteria
@@ -59,8 +61,9 @@ KS.92.10kb.fasta.descr.species"
 KS.92.5kb.fasta.target
 KS.92.10kb.fasta.target
 
+10. git commit
 
-7. Rscript trees.R
+11. Rscript trees.R
       Changes:
       filename <- "KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree"
       filename <- "KS.12.20kb.fasta.withFabF.cdhit.90.mafft.FastTree"

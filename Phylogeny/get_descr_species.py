@@ -13,11 +13,11 @@ for line in taxafile:
     gbid, name = line.split("\t")
     gbid_to_species[gbid] = name
 
-f = open("KS.92.10kb.fasta.descr.species", "w")
+f = open("KS.92.5kb.fasta.descr.species", "w")
 
 # Read KS fasta file and write phyla for each gbid
 # >CSTD01000001|mupM_Ile-tRNA-syn|1364568|1364989|1356957|1360097|cluster-3|t1pks-nrps|1344560-1399261|4471
-for record in SeqIO.parse(open("KS.92.10kb.fasta", "rU"), "fasta"):
+for record in SeqIO.parse(open("KS.92.5kb.fasta", "rU"), "fasta"):
     gbidfull = record.id
     #print gbidfull
     gbid, target, _, _, _, _, _, cl_type = gbidfull.split("|")[:8]

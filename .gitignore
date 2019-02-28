@@ -22,11 +22,13 @@ Genbank/.nfs000000000819ce5f00000008
 Genbank/species.txt
 Genbank/species_assembly.txt
 Genbank/species_nt.txt
+
 Phylogeny/CP025542
+Phylogeny/bak
+
 Second_copy/blast_out/
 Second_copy/old/
 old.Coevolution/
-
 
 Coevolution/fasta/
 Coevolution/old/

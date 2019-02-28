@@ -23,7 +23,8 @@ def main():
         qseqid, sseqid, sstart, send, nident, qlen, slen, evalue = features
         identity = float(nident)/float(qlen)
 
-        if "PtmP3_FabB-F" == qseqid:
+        #if "PtmP3_FabB-F" == qseqid:
+        if "FAB" in qseqid:
             IDENTITY_THRESH = IDENTITY_THRESH_FABS
         else:
             IDENTITY_THRESH = IDENTITY_THRESH_INIT
