@@ -7,7 +7,7 @@ def main():
     IDENTITY_THRESH_INIT = float(0.3)
     IDENTITY_THRESH_FABS = float(0.6)
 
-    blastp_file = "out.12"
+    blastp_file = "out.92"
     f = open(blastp_file).readlines()
 
     #params = [blastp_file, str(E_VALUE_THRESH), str(IDENTITY_THRESH_INIT)]

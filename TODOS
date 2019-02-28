@@ -1,0 +1,144 @@
+1. Make a table of known targets and clusters
+
+2. Make a list of known but unexplored targets:
+
+---putative self-ressitant targets
+a) from mining Mibig
+1. D-alanyl-D-alanine dipeptidase (https://www-pnas-org.stanford.idm.oclc.org/content/pnas/96/20/11028.full.pdf)
+2. murF (https://aac-asm-org.stanford.idm.oclc.org/content/53/8/3240)
+3. MRAY
+4. L11
+5. beta lactamase
+6. trehalose 6-phophate synthase
+7. DNA glycosylase
+8. methionine aminopeptidase 2 (fungal)
+9. squalene synthase (fungal)
+10. inosine monophosphate dehydrogenase (fungal)
+[TO ADD] lipid II Uniref
+
+---other known targets
+b) Your favorite target (Ron's):
+https://www-sciencedirect-com.stanford.idm.oclc.org/science/article/pii/S1359644601019250
+https://worldwidescience.org/topicpages/p/peptide+deformylase+inhibitor.html
+1. peptide deformylase (Lucy Shapiro)
+
+c) Proteases:
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4930914/
+https://www-nature-com.stanford.idm.oclc.org/articles/ja2016138.pdf
+Optimized arylomycins are a new class of Gram-negative antibiotics
+https://www.nature.com/articles/s41586-018-0483-6.pdf
+[ADDED] FtsH
+[ADDED] Caseinolytic protease (ClpP)
+[ADDED] LpxC
+[ADDED] RseP
+[ADDED] LepB (signal peptidase I)
+[ADDED] LspA (signal peptidaseII)
+[ADDED] Lon protease
+[ADDED] HslUV
+[ADDED] DegP
+
+d) 54 targets paper:
+1. lipid II -a molecule (corresponding genes will be added in (a))
+2. undecaprenyl phosphate
+[???] 3. phosphatidylethanolamine - a molecule
+4. Na-dependent NADH-quinone reductase
+5. translocase 1
+6. SecA–YEG complex - secA, secY, secE, secG ADDED
+7. type 1 signal peptidase
+8. type 2 signal peptidase
+9. WalK-WalR two-component system - Walk and walR added, WalH (regulatro, skip), WalI, WalJ skipped
+10. NADH oxidase - Type-II NADH Dehydrogenase (https://www.ncbi.nlm.nih.gov/pubmed/28472892)
+11. menaquinone - molecule ( https://www.ncbi.nlm.nih.gov/pubmed/27431268)
+    MenF, menD, menH, MenC, MenE, MenB, yfbB(MenI), MenA, MenG
+12 cytochrome bd
+    >sp|P0ABJ9|CYDA_ECOLI Cytochrome bd-I
+    >sp|P0ABK2|CYDB_ECOLI Cytochrome bd-I
+    >sp|P26459|APPC_ECOLI Cytochrome bd-II
+    >sp|P26458|APPB_ECOLI Cytochrome bd-II
+
+13. membrane stability - not a gene
+14. LPS - not a gene
+15. peptidoglycan transglycosylase
+16. penicillin binding protein - one added
+17. D-Ala-D-Ala dipeptide - a molecule, (corresponding genes will be added in (a))
+
+18, UDP-N-acetylglucosamine-3-enolpyruvyl transferase
+19, L-histidinol phosphate aminotransferase;
+20, N-acetylornithine transaminase
+21. isoleucine-tRNA synthetase - in targets.12
+22. leucine-tRNA synthetase - in targets.12
+23, tryptophan-tRNA synthetase - in targets.12
+24. proline-tRNA synthetase
+25. tyrosyl-tRNA synthetase
+26. threonine-tRNA synthetase
+27. phenylalanine-tRNA synthetase
+28. aspartate-tRNA synthetase
+29. serine-tRNA synthetase
+30. aspartate semialdehyde dehydrogenase
+31. alanine racemase
+32 glutamine synthase - GUAA_ECOLI GMP synthase  added
+33. pyruvate dehydrogenase
+34. threonine synthase
+[TO ADD] 35. biotin aminotransferase
+36. homoserine-O-succinyltransferase
+37. pyruvate carboxylase - Phosphoenolpyruvate carboxylase
+38. peptide deformylase - added in (b)
+
+39. FabF - in targets.12
+40. FabB - in targets.12
+41. acyl-CoA carboxylase - subunit B in targets.12
+42. FabD
+43. FabG
+44. FabI - in targets.12
+added fabh as well
+45. glucosamine-6-phosphate synthase: Glutamine--fructose-6-phosphate aminotransferase (https://www.ncbi.nlm.nih.gov/pubmed/16082410)
+46. deoxyxylulose phosphate reductoisomerase
+47. 4-amino-4-deoxychorismate (ADC) synthase) and components of macromolecular machinery
+    add pabA, pabB, pabC
+48. ClpP protease - added in cb
+49. elongation factors - EF-Tu added in targets.12 Add others:
+    >sp|P0CE47|EFTU1_ECOLI Elongation factor Tu 1
+    >sp|P0CE48|EFTU2_ECOLI Elongation factor Tu 2
+    >sp|P0A6N4|EFP_ECOLI Elongation factor P
+    >sp|P0A6P1|EFTS_ECOLI Elongation factor Ts
+    >sp|P60785|LEPA_ECOLI Elongation factor 4
+    >sp|P14081|SELB_ECOLI Selenocysteine-specific elongation factor
+    >sp|P0A6M8|EFG_ECOLI Elongation factor G
+
+[SKIP] 50. ribosome - there are many ribosomal proteins, maybe get them from E. coli essential genes
+51. transcription termination factor Rho
+52. RNA polymerase
+53. DNA gyrase - add subunit A, subunit B in targets.12
+54. DNA polymerase
+
+
+e) Drugs for bad bugs: confronting the challenges of antibacterial discovery
+https://www.nature.com/articles/nrd2201#t2
+MurB
+FABI -in targets.12
+Met tRNA synthetase
+Rnase P-ribunuclease P protein component
+Tyr tRNA synthetase - added in d)
+
+
+PRISM 3: Expanded prediction of natural product chemical structures from microbial genomes
+Resistance HMMS
+https://www-nature-com.stanford.idm.oclc.org/articles/s41467-017-02118-7
+D-Ala-D-Ala-ligase
+alanine racemase
+
+VanT: membrane bound serine racemase
+Aminoglycoside acetyltransferase
+Fluoroquinolone resistant DNA topoisomerase
+Quninolone resistance protein (Qnr): antibiotic target protection protein
+D-Ala-D-Ala carboxypeptidase
+Glycopeptide resistance: D-Ala-D-Ala dipeptidases
+Fosfomycin phosphotransferase - this is not a target, but inactivates fosfomycin
+  https://ac.els-cdn.com/S1074552106003401/1-s2.0-S1074552106003401-main.pdf?_tid=07fac8f0-8b21-47a2-b548-51c9ddb6140c&acdnat=1551132923_a210e69587e771c4d5c3016c55b296c7
+Mupirocin target isoform: Isoleucyl-tRNA synthetase isoform
+Chuangxmycin target isoform: Tryptophan-tRNA synthetase isoform (same as indolmycin?)
+Kirromycin target isoform: Ef-Tu Isoform (actually Ef-Tu in cluster is sensitive to kirromycin)
+Sulfonamide target isoform: dihydropteroate synthase
+
+--- novel targets
+c) from E. coli essential genes

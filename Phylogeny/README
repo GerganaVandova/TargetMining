@@ -9,29 +9,72 @@
     KS.12.10kb.fasta.phyla
     KS.12.20kb.fasta.phyla
 
+    KS.92.5kb.fasta.phyla
+    KS.92.10kb.fasta.phyla
+
 3. Add FabF
 
     KS.12.10kb.fasta.withFabF
     KS.12.20kb.fasta.withFabF
+
+    KS.92.5kb.fasta.withFabF
+    KS.92.10kb.fasta.withFabF
 
 4. Run cdhit with cutoff .90
 
     ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.12.10kb.fasta.withFabF -o KS.12.10kb.fasta.withFabF.cdhit.90 -c .9 -d 200 -M 10000
     ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.12.20kb.fasta.withFabF -o KS.12.20kb.fasta.withFabF.cdhit.90 -c .9 -d 200 -M 10000
 
+    ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.92.5kb.fasta.withFabF -o KS.92.5kb.fasta.withFabF.cdhit.90 -c .9 -d 200 -M 10000
+    ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.92.5kb.fasta.withFabF -o KS.92.10kb.fasta.withFabF.cdhit.90 -c .9 -d 200 -M 10000
+
 5. Run mafft
 
     /usr/local/bin/mafft --thread 64 KS.12.10kb.fasta.withFabF.cdhit.90 > KS.12.10kb.fasta.withFabF.cdhit.90.mafft
     /usr/local/bin/mafft --thread 64 KS.12.20kb.fasta.withFabF.cdhit.90 > KS.12.20kb.fasta.withFabF.cdhit.90.mafft
 
+    /usr/local/bin/mafft --thread 64 KS.92.5kb.fasta.withFabF.cdhit.90 > KS.92.5kb.fasta.withFabF.cdhit.90.mafft
+    /usr/local/bin/mafft --thread 64 KS.92.10kb.fasta.withFabF.cdhit.90 > KS.92.10kb.fasta.withFabF.cdhit.90.mafft
+
 6. Run FastTree
     /home/maureenh/FastTree/FastTreeMP KS.12.10kb.fasta.withFabF.cdhit.90.mafft > KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree
     /home/maureenh/FastTree/FastTreeMP KS.12.20kb.fasta.withFabF.cdhit.90.mafft > KS.12.20kb.fasta.withFabF.cdhit.90.mafft.FastTree
 
+    /home/maureenh/FastTree/FastTreeMP KS.92.5kb.fasta.withFabF.cdhit.90.mafft > KS.92.5kb.fasta.withFabF.cdhit.90.mafft.FastTree
+    /home/maureenh/FastTree/FastTreeMP KS.92.10kb.fasta.withFabF.cdhit.90.mafft > KS.92.10kb.fasta.withFabF.cdhit.90.mafft.FastTree
+
+
+7. Make a ref set file
+mibig_refset.10.mod for targrts.12 and targets.92 (new targets in non-pks or non-bacterial clusters, no fungal KS in blast step)
+
+8. Make descr files
+./get_descr_species.py
+KS.12.10kb.fasta.descr.species"
+
+KS.92.5kb.fasta.descr.species"
+KS.92.10kb.fasta.descr.species"
+
+9. Get target names
+./get_target_name.py
+KS.92.5kb.fasta.target
+KS.92.10kb.fasta.target
+
+
 7. Rscript trees.R
       Changes:
+      filename <- "KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree"
       filename <- "KS.12.20kb.fasta.withFabF.cdhit.90.mafft.FastTree"
-      filename <- "KS.12.20kb.fasta.withFabF.cdhit.90.mafft.FastTree"
+      filename3 <- "mibig_refset.10.mod"
+      filename2 <- "KS.12.10kb.fasta.descr.species"
+      filename1 <- "KS.12.10kb.fasta.target"
 
       KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree.phylogram.png
       KS.12.20kb.fasta.withFabF.cdhit.90.mafft.FastTree.phylogram.png
+
+***
+
+      filename <- "KS.92.5kb.fasta.withFabF.cdhit.90.mafft.FastTree"
+      filename <- "KS.92.5kb.fasta.withFabF.cdhit.90.mafft.FastTree"
+      filename3 <- "mibig_refset.10.mod"
+      filename2 <- "KS.92.5kb.fasta.descr.species"
+      filename1 <- "KS.92.5kb.fasta.target"

@@ -5,7 +5,7 @@
 # Load the tree file
 library(ape)
 dir <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
-filename <- "KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree"
+filename <- "KS.92.10kb.fasta.withFabF.cdhit.90.mafft.FastTree"
 
 # Choose root sequence set
 rootset <- "FabF"
@@ -29,7 +29,8 @@ tip.label3.df <- data.frame(MyTree$tip.label, row.names=1)
 # reorder descriptions
 desc3.reordered <- desc3.df[rownames(tip.label3.df),]# This is the key step that matches the tree tip names to the external description file
 
-filename2 <- "KS.12.10kb.fasta.descr.species"
+# filename2 <- "KS.12.10kb.fasta.descr.species"
+filename2 <- "KS.92.5kb.fasta.descr.species"
 description_file2 = paste(dir1, filename2, sep="")
 descriptions2 <- read.table(description_file2, sep="\t", as.is=T, row.names=1)
 desc2.df <- data.frame(descriptions2)
@@ -39,7 +40,8 @@ desc2.reordered <- desc2.df[rownames(tip.label2.df),]# This is the key step that
 # Assign targets to variables
 
 
-filename1 <- "KS.12.10kb.fasta.target"
+# filename1 <- "KS.12.10kb.fasta.target"
+filename1 <- "KS.92.5kb.fasta.target"
 description_file = paste(dir1, filename1, sep="")
 descriptions <- read.table(description_file, sep="\t", as.is=T, row.names=1)
 desc.df <- data.frame(descriptions)
@@ -81,7 +83,7 @@ myBG <- myCols
 
 # Read the 2f file of fastaID and description
 dir1 <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
-filename1 <- "KS.12.10kb.fasta.phyla" # to get colors by phyla for KSs
+filename1 <- "KS.92.5kb.fasta.phyla" # to get colors by phyla for KSs
 
 phylum_file = paste(dir1, filename1, sep="")
 phyla <- read.table(phylum_file, sep="\t", as.is=T, row.names=1)

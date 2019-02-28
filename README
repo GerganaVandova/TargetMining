@@ -1,3 +1,7 @@
+BLAST Step
+Identifying pks and pks/nrps clusters harboring a potential self-resistance
+gene.
+
 ********************************************************************************
 STEP1. Blast 8 KSs against 11 databases
 ********************************************************************************
@@ -7,6 +11,8 @@ Location: TargetMining/Blast/ folder
 Blast 8 diverse KSs from modular KS, cisat pks/nrps and transat pks/nrps hybrids
 against 11 databases (wgs not updated)
 and parse blast results with e value < 1
+
+199 894 proteins;  110174 NCBI nucleotide records/genomes 
 
     The blast queries are in Manual/
 
@@ -106,3 +112,25 @@ STEP7. Filter blast hits by evalue <1e-8 and identity > 0.3 (and FabB/F identity
 
 STEP8. Require both KS+ target <10kb apart.
 252 hits.
+________________________________________________________________________________
+Mine 92 putative targets, start from Step6:
+
+STEP6. Blast 92 targets genes against antismash database from 110k genbank ids
+
+        6.1. ./run_blastp.py with targets.92.fa
+        6.2. cat out.targets.85* > out.92
+
+31944 hits.
+
+STEP7. Filter blast hits by evalue <1e-8 and identity > 0.3 (and FabB/F identity > 0.6)
+82015 hits.
+
+STEP8. Require both KS+ target <5kb apart.
+      ./target_ks_tandem.py > KS.92.5kb.fasta
+      ./target_ks_tandem.py > KS.92.5kb.fasta
+      ./target_ks_tandem.py > target_ks_tandem.92.5kb.out
+1639 hits.
+
+252/4404 = 0.057
+1639/31944 = 0.051
+Similar discovery rate
