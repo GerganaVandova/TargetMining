@@ -5,7 +5,7 @@
 # Load the tree file
 library(ape)
 dir <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
-filename <- "KS.92.10kb.fasta.withFabF.cdhit.90.mafft.FastTree"
+filename <- "KS.92.5kb.fasta.withFabF.cdhit.90.mafft.FastTree"
 
 # Choose root sequence set
 rootset <- "FabF"
@@ -84,10 +84,8 @@ myBG <- myCols
 # Read the 2f file of fastaID and description
 dir1 <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
 filename1 <- "KS.92.5kb.fasta.phyla" # to get colors by phyla for KSs
-
 phylum_file = paste(dir1, filename1, sep="")
 phyla <- read.table(phylum_file, sep="\t", as.is=T, row.names=1)
-
 phyla.df <- data.frame(phyla)
 tip.label.df <- data.frame(MyTree$tip.label, row.names=1)
 # reorder phyla
@@ -131,49 +129,35 @@ myCols1[cloa]="orange"
 myBG1 <- myCols1
 
 ##########################################################
-# colors
-# for now just b&w
-#myCols <- c(rep("gray",length(MyTree$tip.label)))
-#myBG <- myCols
-#myBG<- c(rep("white",length(MyTree$tip.label)))
-
-##########################################################
-# Plot rectangular phylogram
-# With query sequences highlighted
-# Must choose outgroup sequence to root on
+# Plot rectangular phylogram With query sequences highlighted
 
 treetype <- "phylogram";
 # treetype <- "unrooted";
 outgroup <- grep(rootset, MyTree$tip.label, perl=TRUE)
-
 MyTree.rooted <- root(MyTree,outgroup,node = NULL)
 MyTree.ladderized <- ladderize(MyTree.rooted)
 
-mywidth=4; myheight=6 #for rooted tree
+mywidth=4; myheight=6 #for small rooted tree
+# mywidth=10; myheight=30 #for big rooted tree
 # mywidth=6; myheight=4 #for unrooted tree
 
 edge.color <- "gray"
 myPch <- 21 # circles
 
-outfile <- paste(dir, filename, ".", treetype,".descr.species.coloredbytargets.refsetmod.png", sep="")
+outfile <- paste(dir, filename, ".", treetype,".phyla.png", sep="")
 pdf(file=outfile, width=mywidth, height=myheight)
-plot(MyTree.ladderized, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
-# plot(MyTree, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
-
+plot(MyTree.ladderized, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5) # for rooted tree
+# plot(MyTree, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5) # for unrooted tree
 
 # colored dots
-selectPchCex=.5 # for coloring tree by phyla
-# selectPchCex=.15 #for small pdf (2.6)
-# tiplabels(pch=myPch, cex=selectPchCex, col=myCols1, bg=myBG1)# colored by phyla
-tiplabels(pch=myPch, cex=selectPchCex, col=myCols, bg=myBG)# colored by phyla
+# selectPchCex=.5 # for coloring dots by phyla, no labels
+selectPchCex=.15 # for coloring dots by phyla with labels
+# tiplabels(pch=myPch, cex=selectPchCex, col=myCols, bg=myBG)# colored by target
+tiplabels(pch=myPch, cex=selectPchCex, col=myCols1, bg=myBG1)# colored by phyla
 
-
-# Print select labels
-#  identified using grep above (Erin set)
+# Print labels
 selectCex <- 1
 # tiplabels(MyTree$tip.label[printlabels], printlabels, cex=selectCex, frame="none", adj=0) ### comment out if don't want to show labels
-
-# Print all labels
 allLabCex <- .5
 # allLabCex <- .1
 # tiplabels(MyTree$tip.label, cex=.1, frame="none", adj=0) ### comment out if don't want to show labels
@@ -181,10 +165,9 @@ allLabCex <- .5
 # nodelabels(MyTree$node.label, frame="none", cex=.1)
 #edgelabels(MyTree$edge.label, frame="none", cex=.2)
 
-# tiplabels(desc2.reordered, cex=0.1, frame="none", adj=0) # to label short descr
-tiplabels(desc3.reordered, cex=0.3, frame="none", adj=0) # to highlight mibig ref sequences
-
-# # tiplabels(phyla.reordered, cex=.1, frame="none", adj=0) # if you want phyla displayed
+# tiplabels(phyla.reordered, cex=.1, frame="none", adj=0) # if you want phyla displayed
+tiplabels(desc2.reordered, cex=0.1, frame="none", adj=0) # to label short descr
+# tiplabels(desc3.reordered, cex=0.3, frame="none", adj=0) # to highlight mibig ref sequences
 
 add.scale.bar(cex=allLabCex, lwd=selectPchCex)
 dev.off()
