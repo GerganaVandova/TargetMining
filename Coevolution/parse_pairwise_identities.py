@@ -62,15 +62,17 @@ def parse_blast(target, blast_file):
 def main():
 
     # Need a file to read target names, use the 10kb cutoff
-    antismash_outfilename = "../Antismash_gbids/out.12.filtered.10kb"
+    antismash_outfilename = "../Antismash_gbids/out.92.filtered.5kb"
 
     targets = get_targets(antismash_outfilename)
     # targets = ["borI_Thr-tRNA-syn", "mupM_Ile-tRNA-syn", "PtmP3_FabB-F",
     # "rubR1_TIF", "AdmT_ACC", "SalI_beta_proteasome", "BatG_FabI"]
 
-    blast_file_ks = "KS.12.5kb.out"
-    blast_file_target = "targets.12.5kb.out"
-    outfile = "pairwise_identities.12.5kb.out.shortnames"
+    print targets
+
+    blast_file_ks = "KS.92.5kb.out"
+    blast_file_target = "targets.92.5kb.out"
+    outfile = "pairwise_identities.92.5kb.out"
 
     # Mibig set
     # blast_file_ks = "KS.mibig.out"
@@ -92,6 +94,8 @@ def main():
             len_qks = int(qks_end) - int(qks_start)
             len_sks = int(sks_end) - int(sks_start)
 
+            distance = int(qseqid_ks.split("|")[-1])
+
             x = pairs_ks[(qseqid_ks, sseqid_ks)]
             y = pairs_target[(qseqid_ks, sseqid_ks)]
             d = abs(x-y)
@@ -100,40 +104,48 @@ def main():
             if len_qks < 300 or len_sks < 300:
                 continue
 
+            # print only points on diagonal:
+            # if d > 20:
+            #     continue
+            #
+            # if distance < 5000:
+            #     continue
             # To print with tab between ids to check low seq identity scores
-            # f.write("%s\t%s\t%s\t%s\t%f\t%f\n" %
-            #         (qseqid_ks,
-            #          sseqid_ks,
-            #          len_qks,
-            #          len_sks,
-            #          pairs_ks[(qseqid_ks, sseqid_ks)],
-            #          pairs_target[(qseqid_ks, sseqid_ks)]))
-
-            # print "%s-%s\t%s\t%s\t%.2f\t%.2f" % \
-            #     (qgbid,
-            #      sgbid,
-            #      len_qks,
-            #      len_sks,
-            #      pairs_ks[(qseqid_ks, sseqid_ks)],
-            #      pairs_target[(qseqid_ks, sseqid_ks)])
-
-            # To print short ids:
-            print "%s\t%s\t%s\t%s\t%.2f\t%.2f" % \
-                (qseqid_ks_short,
-                 sseqid_ks_short,
-                 len_qks,
-                 len_sks,
-                 pairs_ks[(qseqid_ks, sseqid_ks)],
-                 pairs_target[(qseqid_ks, sseqid_ks)])
-
-            f.write("%s\t%s\t%s\t%s\t%.0f\t%.0f\t%.0f\n" %
-                    (qseqid_ks_short,
-                     sseqid_ks_short,
+            f.write("%s\t%s\t%s\t%s\t%f\t%f\t%s\n" %
+                    (qseqid_ks,
+                     sseqid_ks,
                      len_qks,
                      len_sks,
                      pairs_ks[(qseqid_ks, sseqid_ks)],
                      pairs_target[(qseqid_ks, sseqid_ks)],
                      d))
+
+            print "%s-%s\t%s\t%s\t%.2f\t%.2f\t%.2f" % \
+                (qgbid,
+                 sgbid,
+                 len_qks,
+                 len_sks,
+                 pairs_ks[(qseqid_ks, sseqid_ks)],
+                 pairs_target[(qseqid_ks, sseqid_ks)],
+                 d)
+
+            # To print short ids:
+            # print "%s\t%s\t%s\t%s\t%.2f\t%.2f" % \
+            #     (qseqid_ks_short,
+            #      sseqid_ks_short,
+            #      len_qks,
+            #      len_sks,
+            #      pairs_ks[(qseqid_ks, sseqid_ks)],
+            #      pairs_target[(qseqid_ks, sseqid_ks)])
+            #
+            # f.write("%s\t%s\t%s\t%s\t%.0f\t%.0f\t%.0f\n" %
+            #         (qseqid_ks_short,
+            #          sseqid_ks_short,
+            #          len_qks,
+            #          len_sks,
+            #          pairs_ks[(qseqid_ks, sseqid_ks)],
+            #          pairs_target[(qseqid_ks, sseqid_ks)],
+            #          d))
 
     f.close()
 

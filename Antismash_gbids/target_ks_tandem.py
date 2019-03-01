@@ -22,10 +22,15 @@ def parse_fasta(fasta_file):
 
 
 def main():
-    DIST_CUTOFF = 5000
+    DIST_CUTOFF = 10000
     cluster_genes_file = "cluster_genes.all.fasta"
     ks_file = "ks.all.fasta"
     target_blast_file = "out.92.filtered"
+
+    f1 = open("KS.92.10kb.fasta", "w")
+    f2 = open("targets.92.10kb.fasta", "w")
+    f3 = open("out.92.filtered.10kb", "w")
+    f4 = open("out.92.filtered.10kb.noks", "w")
 
     min_distance = {}
     data = {}
@@ -87,20 +92,28 @@ def main():
                                                dist
                                                ]))
 
-        #if not found:
+        if not found:
         #    print "no KS found for target %s" % str(target)
+            f4.write("%s\n" % str(target))
 
     ks_to_seq = parse_fasta(ks_file)
     target_to_seq = parse_fasta(cluster_genes_file)
 
     for v in data.itervalues():
+        f3.write("%s\n" % v)
         #print v  # > in target_ks_tandem.morethan50kb.out
         # CSTD01000001|mupM_Ile-tRNA-syn|1364568|1364989|1356957|1360097|cluster-3|t1pks-nrps|1344560-1399261|4471
         gbid, target_name, ks_start, ks_end, target_start, target_end = v.split("|")[:6]
         # print gbid, target_name, ks_start, ks_end, target_start, target_end
         #print ">%s\n%s" % (v, ks_to_seq[(gbid, ks_start, ks_end)])
-        print ">%s\n%s" % (v, target_to_seq[(gbid, target_start, target_end)])
+        #print ">%s\n%s" % (v, target_to_seq[(gbid, target_start, target_end)])
+        f1.write(">%s\n%s\n" % (v, ks_to_seq[(gbid, ks_start, ks_end)]))
+        f2.write(">%s\n%s\n" % (v, target_to_seq[(gbid, target_start, target_end)]))
 
+    f1.close()
+    f2.close()
+    f3.close()
+    f4.close()
 
 if __name__ == "__main__":
     main()
