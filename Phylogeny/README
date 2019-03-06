@@ -81,3 +81,9 @@ KS.92.10kb.fasta.target
       filename3 <- "mibig_refset.10.mod"
       filename2 <- "KS.92.5kb.fasta.descr.species"
       filename1 <- "KS.92.5kb.fasta.target"
+
+      title <- "KS.92targets.5kb"
+      mywidth=6; myheight=12
+      plot(MyTree.ladderized, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5)
+      tiplabels(pch=21, cex=.5, col=myCols, bg=myBG) #color by target
+      tiplabels(desc2.reordered, cex=0.2, frame="none", adj=0)
