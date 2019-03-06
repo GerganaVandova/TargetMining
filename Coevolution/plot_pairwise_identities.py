@@ -15,21 +15,21 @@ target_pair_identities = defaultdict(list)
 pairs = []
 
 # pairwis_filename = "pairwise_identities.mibig.out"
-pairwise_filename = "pairwise_identities.92.5kb.out"
+pairwise_filename = "pairwise_identities.92.10kb.out"
 with open(pairwise_filename, 'r') as f:
     data = f.readlines()
     data = map(lambda x: x.strip(), data)
     for line in data:
-        print line
+        # print line
         gene1, gene2, len1, len2, ks_pair_identity, target_pair_identity, d = line.split("\t")
         target = gene1.split("|")[1]
-        if target == "'sp_P0A6K3_DEF_ECOLI'":
+        # if target == "'sp_P0A6K3_DEF_ECOLI'":
         # if target == "sp_P0A6K3_DEF_ECOLI":
         # if target == "sp_P0A6G7_CLPP_ECOLI":
-            print gene1, gene2, target
-            ks_pair_identities[target].append(float(ks_pair_identity))
-            target_pair_identities[target].append(float(target_pair_identity))
-            pairs.append((gene1,gene2))
+        # print target
+        ks_pair_identities[target].append(float(ks_pair_identity))
+        target_pair_identities[target].append(float(target_pair_identity))
+        pairs.append((gene1,gene2))
 
 # ks_pair_identities = map(float, ks_pair_identities)
 # target_pair_identities = map(float, target_pair_identities)
@@ -109,8 +109,9 @@ target_to_color = dict([(k, v) for k, v in zip(targets, colors)])
 
 target_to_name = dict([(k, k) for k in targets])
 
-print ks_pair_identities.keys()
-sys.exit(0)
+# for key in ks_pair_identities.keys():
+#     print key
+# sys.exit(0)
 for target in ks_pair_identities:
     # plt.scatter(ks_pair_identities, target_pair_identities, color='r', s=1)
     if target not in target_to_color:
