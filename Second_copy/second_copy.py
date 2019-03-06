@@ -6,10 +6,16 @@ import os
 import subprocess
 from collections import defaultdict
 
+# To Run script, specify:
+# targets_filename - fasta file with targets sequences
+# antismash_filename - output file of ks_target tandem search
+# gbdir1 and gbdir2 - folders with genbank files
+# outdir - outdir where output will be written
+
 target_to_seq = {}
 
 # Make a dictionary for target ids and their sequences
-targets_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/targets.12.fa"
+targets_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/targets.92.fa"
 
 for record in SeqIO.parse(open(targets_filename, "rU"), "fasta"):
     targetid = record.id
@@ -20,7 +26,7 @@ for record in SeqIO.parse(open(targets_filename, "rU"), "fasta"):
 
 # Read antismash output file
 # ACXX02000001|AdmT_ACC|37972|38377|31720|32586|cluster-1|transatpks-nrps|14512-116691|5386
-antismash_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/out.12.filtered.10kb"
+antismash_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/out.92.filtered.5kb"
 antismash_file = open(antismash_filename).readlines()
 
 gbid_to_target = defaultdict(list)

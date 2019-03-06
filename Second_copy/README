@@ -1,9 +1,50 @@
-1. split_mibig.py to split target sequences in separate fasta
-files
+STEP III. Housekeeping copy
+
+README FILE
+1. split_mibig.py to split target sequences in separate fasta files
+Ouptut in targets_fasta/
+
+# To run script specify:
+# infile - fasta file to split into separate sequence files
+
+2. Run blast to find number of copies (evalue cutoff 1e-8)
+    ./second_copy.py
+
+    # To Run script, specify:
+    # targets_filename - fasta file with targets sequences
+    # antismash_filename - output file of ks_target tandem search
+    # gbdir1 and gbdir2 - folders with genbank files
+    # outdir - outdir where output will be written
+
+
+3. Move allblast output files (*.out) in blast_out/
+
+4. Filter blast results by pident > 30%
+./filter_second_copy.py
+  # To run script, specify:
+  # blastdir - this is where blast results are stored
+  # genome_lengths_file - tab-deliminated file with genbank id,
+  #                       T/F for complete genome, and genome size
+  # antismash_filename - output file of ks_target tandem search
+  # outf - output file with genbank id, target, number of copies and other params
+
+
+
+
+
+
+
+
+
+
+
+
+NOTES
+1. split_mibig.py to split target sequences in separate fasta files
 Ouptut in targets_fasta/
 
 
-2. Run blast to find number of copies (evalu e cutoff 1e-8)
+2. Run blast to find number of copies (evalue cutoff 1e-8)
     ./second_copy.py
 
     blast_out/lr -S

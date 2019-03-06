@@ -76,6 +76,108 @@ myCols[leu]="orange"
 myCols[rub]="green"
 myCols[trp]="lightgreen"
 
+a1<- desc.reordered=='sp_P17109_MEND_ECOLI'
+a2<- desc.reordered=='sp_P0A6K3_DEF_ECOLI'
+a3<- desc.reordered=='mfR6_squalene_synthase'
+a4<- desc.reordered=='sp_P16659_SYP_ECOLI'
+a5<- desc.reordered=='sp_P05041_PABB_ECOLI'
+a6<- desc.reordered=='sp_P0A8M3_SYT_ECOLI'
+a7<- desc.reordered=='sp_P0A6W3_MRAY_ECOLI'
+a8<- desc.reordered=='sp_P0A7Z4_RPOA_ECOLI'
+a9<- desc.reordered=='sp_P60785_LEPA_ECOLI'
+a10<- desc.reordered=='sp_P10443_DPO3A_ECOLI'
+a11<- desc.reordered=='sp_Q9RDT5_WALR_STAAU'
+a12<- desc.reordered=='sp_P21889_SYD_ECOLI'
+a13<- desc.reordered=='sp_P0A6G7_CLPP_ECOLI'
+a14<- desc.reordered=='tr_E2QIY7_E2QIY7_ECOLX'
+a15<- desc.reordered=='sp_P0A6M8_EFG_ECOLI'
+a16<- desc.reordered=='sp_P77781_MENI_ECOLI'
+a17<- desc.reordered=='sp_P0A8L1_SYS_ECOLI'
+a18<- desc.reordered=='sp_P04079_GUAA_ECOLI'
+a19<- desc.reordered=='sp_P07862_DDLB_ECOLI'
+a20<- desc.reordered=='mpaF_IMDH'
+a21<- desc.reordered=='sp_P0CE47_EFTU1_ECOLI'
+a22<- desc.reordered=='sp_P0AGA2_SECY_ECOLI'
+a23<- desc.reordered=='sp_P28305_PABC_ECOLI'
+a24<- desc.reordered=='sp_P0A725_LPXC_ECOLI'
+a25<- desc.reordered=='sp_P10408_SECA_ECOLI'
+a26<- desc.reordered=='sp_P0AG30_RHO_ECOLI'
+a27<- desc.reordered=='sp_P0AGB6_RPOE_ECOLI'
+a28<- desc.reordered=='sp_P08312_SYFA_ECOLI'
+a29<- desc.reordered=='sp_P0AEK2_FABG_ECOLI'
+a30<- desc.reordered=='sp_Q9RDT3_WALK_STAAU'
+a31<- desc.reordered=='sp_P0A749_MURA_ECOLI'
+a32<- desc.reordered=='sp_P45568_DXR_ECOLI'
+a33<- desc.reordered=='sp_P0A9M0_LON_ECOLI'
+a34<- desc.reordered=='sp_P08373_MURB_ECOLI'
+a35<- desc.reordered=='sp_P0A6B4_ALR1_ECOLI'
+a36<- desc.reordered=='beta_lactamase'
+a37<- desc.reordered=='sp_P17169_GLMS_ECOLI'
+a38<- desc.reordered=='sp_P06986_HIS8_ECOLI'
+a39<- desc.reordered=='sp_P0AGJ9_SYY_ECOLI'
+a40<- desc.reordered=='sp_P0AAI3_FTSH_ECOLI'
+a41<- desc.reordered=='sp_Q75R59_NQRF_VIBAN'
+a42<- desc.reordered=='sp_P0A6N4_EFP_ECOLI'
+a43<- desc.reordered=='sp_P07003_POXB_ECOLI'
+a44<- desc.reordered=='sp_P00903_PABA_ECOLI'
+a45<- desc.reordered=='sp_P32166_MENA_ECOLI'
+a46<- desc.reordered=='sp_P0ABU0_MENB_ECOLI'
+a47<- desc.reordered=='sp_P0C0V0_DEGP_ECOLI'
+a48<- desc.reordered=='sp_P37353_MENE_ECOLI'
+a49<- desc.reordered=='sp_P03007_DPO3E_ECOLI'
+a50<- desc.reordered=='sp_P18335_ARGD_ECOLI'
+
+myCols[a1]="#FFFF00"
+myCols[a2]="#1CE6FF"
+myCols[a3]="#FF34FF"
+myCols[a4]="#FF4A46"
+myCols[a5]="#008941"
+myCols[a6]="#006FA6"
+myCols[a7]="#A30059"
+myCols[a8]="#FFDBE5"
+myCols[a9]="#7A4900"
+myCols[a10]="#0000A6"
+myCols[a11]="#63FFAC"
+myCols[a12]="#B79762"
+myCols[a13]="#004D43"
+myCols[a14]="#8FB0FF"
+myCols[a15]="#997D87"
+myCols[a16]="#5A0007"
+myCols[a17]="#809693"
+myCols[a18]="#FEFFE6"
+myCols[a19]="#1B4400"
+myCols[a20]="#4FC601"
+myCols[a21]="#3B5DFF"
+myCols[a22]="#4A3B53"
+myCols[a23]="#FF2F80"
+myCols[a24]="#61615A"
+myCols[a25]="#BA0900"
+myCols[a26]="#6B7900"
+myCols[a27]="#00C2A0"
+myCols[a28]="#FFAA92"
+myCols[a29]="#FF90C9"
+myCols[a30]="#B903AA"
+myCols[a31]="#D16100"
+myCols[a32]="#DDEFFF"
+myCols[a33]="#000035"
+myCols[a34]="#7B4F4B"
+myCols[a35]="#A1C299"
+myCols[a36]="#300018"
+myCols[a37]="#0AA6D8"
+myCols[a38]="#013349"
+myCols[a39]="#00846F"
+myCols[a40]="#372101"
+myCols[a41]="#FFB500"
+myCols[a42]="#C2FFED"
+myCols[a43]="#A079BF"
+myCols[a44]="#CC0744"
+myCols[a45]="#C0B9B2"
+myCols[a46]="#C2FF99"
+myCols[a47]="#001E09"
+myCols[a48]="#00489C"
+myCols[a49]="#6F0062"
+myCols[a50]="#0CBD66"
+
 myBG <- myCols
 
 ##############################################################
@@ -144,7 +246,7 @@ mywidth=4; myheight=6 #for small rooted tree
 edge.color <- "gray"
 myPch <- 21 # circles
 
-outfile <- paste(dir, filename, ".", treetype,".phyla.png", sep="")
+outfile <- paste(dir, filename, ".", treetype,".targets.png", sep="")
 pdf(file=outfile, width=mywidth, height=myheight)
 plot(MyTree.ladderized, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5) # for rooted tree
 # plot(MyTree, font=1, type=treetype, edge.color=edge.color, edge.width=.5, show.tip.label=F, open.angle=5) # for unrooted tree
@@ -152,8 +254,8 @@ plot(MyTree.ladderized, font=1, type=treetype, edge.color=edge.color, edge.width
 # colored dots
 # selectPchCex=.5 # for coloring dots by phyla, no labels
 selectPchCex=.15 # for coloring dots by phyla with labels
-# tiplabels(pch=myPch, cex=selectPchCex, col=myCols, bg=myBG)# colored by target
-tiplabels(pch=myPch, cex=selectPchCex, col=myCols1, bg=myBG1)# colored by phyla
+tiplabels(pch=myPch, cex=selectPchCex, col=myCols, bg=myBG)# colored by target
+# tiplabels(pch=myPch, cex=selectPchCex, col=myCols1, bg=myBG1)# colored by phyla
 
 # Print labels
 selectCex <- 1

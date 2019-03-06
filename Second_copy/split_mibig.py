@@ -12,8 +12,9 @@ import subprocess
 UTF8Writer = codecs.getwriter('utf8')
 sys.stdout = UTF8Writer(sys.stdout)
 
-
 # For each cluster make a fasta file with all proteins
+# To run script specify:
+# infile - fasta file to split into separate sequence files
 
 def split_fasta(infile):
     # Split fasta file into files for each sequence
@@ -30,5 +31,4 @@ def split_fasta(infile):
             f.write("\n")
 
 infile = '../Antismash_gbids/targets.92.fa'
-#infile = 'all_uniprot.fa'
 split_fasta(infile)

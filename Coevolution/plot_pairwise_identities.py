@@ -23,10 +23,13 @@ with open(pairwise_filename, 'r') as f:
         print line
         gene1, gene2, len1, len2, ks_pair_identity, target_pair_identity, d = line.split("\t")
         target = gene1.split("|")[1]
-        print gene1, gene2, target
-        ks_pair_identities[target].append(float(ks_pair_identity))
-        target_pair_identities[target].append(float(target_pair_identity))
-        pairs.append((gene1,gene2))
+        if target == "'sp_P0A6K3_DEF_ECOLI'":
+        # if target == "sp_P0A6K3_DEF_ECOLI":
+        # if target == "sp_P0A6G7_CLPP_ECOLI":
+            print gene1, gene2, target
+            ks_pair_identities[target].append(float(ks_pair_identity))
+            target_pair_identities[target].append(float(target_pair_identity))
+            pairs.append((gene1,gene2))
 
 # ks_pair_identities = map(float, ks_pair_identities)
 # target_pair_identities = map(float, target_pair_identities)
@@ -105,6 +108,9 @@ target_to_color = dict([(k, v) for k, v in zip(targets, colors)])
 #         "Ind0_Trp-tRNA-syn": "lightgreen"}
 
 target_to_name = dict([(k, k) for k in targets])
+
+print ks_pair_identities.keys()
+sys.exit(0)
 for target in ks_pair_identities:
     # plt.scatter(ks_pair_identities, target_pair_identities, color='r', s=1)
     if target not in target_to_color:
@@ -136,4 +142,4 @@ for target in ks_pair_identities:
 plt.xlim([0, 100])
 plt.ylim([0, 100])
 # plt.savefig('mibig.png')
-plt.savefig('92.5kb.png', dpi=400)
+plt.savefig('92.5kb.sp_P0A6K3_DEF_ECOLI.png', dpi=400)
