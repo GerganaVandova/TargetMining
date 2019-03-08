@@ -184,3 +184,78 @@ Output file: pairwise_identities.[number of targets].[distance cutoff]kb.out
 5. Plot pairwise identities
 plot_pairwise_identities.py
 Output file: 12.5kb.png
+
+
+
+________________________________________________________________________________
+Mine 609 E. coli essential genes Step6:
+
+STEP6. Blast 609 targets genes against antismash database from 110k genbank ids
+
+        6.1. ./run_blastp.py with targets.609.fa March-6-2019 4:20pm RUNNING
+        6.2. cat out.targets.609* > out.609
+
+31944 hits.
+
+STEP7. Filter blast hits by evalue <1e-8 and identity > 0.3 (and "FAB" identity > 0.6)
+5492 hits.
+
+STEP8. Require both KS+ target <5kb apart.
+       Run ../Antismash_gbids/target_ks_tandem.py
+      ./target_ks_tandem.py > KS.609.5kb.fasta
+      ./target_ks_tandem.py > target.609.5kb.fasta
+      ./target_ks_tandem.py > target_ks_tandem.609.5kb.out
+501 hits.
+
+
+252/4404 = 0.057
+501/5492 = 0.091
+Similar discovery rate
+**********************************************************************************
+II. PHYLOGENY Step
+Build a phylogenetic tree and look for homologs
+
+2. ./get_phyla
+3. Add FabF
+7. Make a ref set file: mibig_refset.10.mod for targrts.12 and targets.92 (new targets in non-pks or non-bacterial clusters, no fungal KS in blast step)
+8. Make descr files
+9. Get target names
+
+Remove redundant sequences: Run cdhit with cutoff .90
+Make Multiple sequence alignment using mafft
+Make a phylogram using FastTree
+Visualize tree using APE package in R
+  root tree with E. coli withFabF
+  color tree by targrets
+*********************************************************************************
+
+III. COEVOLUTION STEP
+
+1. (Step 8 from Blast step) Run ../Antismash_gbids/target_ks_tandem.py
+Output: target_ks_tandem.5kb.out (408 hits)
+        KS.92.5kb.fasta
+        targets.92.5kb.fasta
+
+2. Make blast databases for KS and targets and move to blastdb/
+    makeblastdb -in KS.92.5kb.fasta -dbtype prot -out KS.92.5kb
+    makeblastdb -in targets.92.5kb.fasta -dbtype prot -out targets.92.5kb
+
+    makeblastdb -in KS.92.10kb.fasta -dbtype prot -out KS.92.10kb
+    makeblastdb -in targets.92.10kb.fasta -dbtype prot -out targets.92.10kb
+
+3. Pairwise blastp
+blastp -db blastdb/KS.92.5kb -query KS.92.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.92.5kb.out
+blastp -db blastdb/targets.92.5kb -query targets.92.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.92.5kb.out
+
+blastp -db blastdb/KS.92.10kb -query KS.92.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.92.10kb.out
+blastp -db blastdb/targets.92.10kb -query targets.92.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.92.10kb.out
+
+
+4. Parse pairwise blast
+parse_pairwise_identities.py
+Output file: pairwise_identities.[number of targets].[distance cutoff]kb.out
+             pairwise_identities.92.5kb.out
+
+5. Plot pairwise identities
+plot_pairwise_identities.py
+Output file: 12.5kb.png

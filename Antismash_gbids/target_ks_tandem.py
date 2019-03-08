@@ -22,15 +22,15 @@ def parse_fasta(fasta_file):
 
 
 def main():
-    DIST_CUTOFF = 10000
+    DIST_CUTOFF = 5000
     cluster_genes_file = "cluster_genes.all.fasta"
     ks_file = "ks.all.fasta"
-    target_blast_file = "out.92.filtered"
+    target_blast_file = "out.609.filtered"
 
-    f1 = open("KS.92.10kb.fasta", "w")
-    f2 = open("targets.92.10kb.fasta", "w")
-    f3 = open("out.92.filtered.10kb", "w")
-    f4 = open("out.92.filtered.10kb.noks", "w")
+    f1 = open("KS.609.5kb.fasta", "w")
+    f2 = open("targets.609.5kb.fasta", "w")
+    f3 = open("out.609.filtered.5kb", "w")
+    f4 = open("out.609.filtered.5kb.noks", "w")
 
     min_distance = {}
     data = {}
@@ -53,6 +53,7 @@ def main():
         targets.append((gbid, target_start, target_end, line))
 
     # print targets # added for debugging purposes
+
     for target in targets:
         t_gbid, target_start, target_end, target_info = target
         target_n = target_info.split("\t")[0]
@@ -93,7 +94,7 @@ def main():
                                                ]))
 
         if not found:
-        #    print "no KS found for target %s" % str(target)
+            # print "no KS found for target %s" % str(target)
             f4.write("%s\n" % str(target))
 
     ks_to_seq = parse_fasta(ks_file)
@@ -101,12 +102,12 @@ def main():
 
     for v in data.itervalues():
         f3.write("%s\n" % v)
-        #print v  # > in target_ks_tandem.morethan50kb.out
+        print v  # > in target_ks_tandem.morethan50kb.out
         # CSTD01000001|mupM_Ile-tRNA-syn|1364568|1364989|1356957|1360097|cluster-3|t1pks-nrps|1344560-1399261|4471
         gbid, target_name, ks_start, ks_end, target_start, target_end = v.split("|")[:6]
         # print gbid, target_name, ks_start, ks_end, target_start, target_end
-        #print ">%s\n%s" % (v, ks_to_seq[(gbid, ks_start, ks_end)])
-        #print ">%s\n%s" % (v, target_to_seq[(gbid, target_start, target_end)])
+        print ">%s\n%s" % (v, ks_to_seq[(gbid, ks_start, ks_end)])
+        print ">%s\n%s" % (v, target_to_seq[(gbid, target_start, target_end)])
         f1.write(">%s\n%s\n" % (v, ks_to_seq[(gbid, ks_start, ks_end)]))
         f2.write(">%s\n%s\n" % (v, target_to_seq[(gbid, target_start, target_end)]))
 

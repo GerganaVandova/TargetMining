@@ -192,6 +192,17 @@ chloroflexi <- phyla.reordered=="Chloroflexi"
 syner <- phyla.reordered=="Synergistetes"
 aqui <- phyla.reordered=="Aquificae"
 cloa <- phyla.reordered=="Cloacimonetes"
+
+# Other bacteria
+acido <- phyla.reordered=="Acidobacteria" # gram neg
+elusim <- phyla.reordered=="Elusimicrobia" # gram neg
+fibro <- phyla.reordered=="Fibrobacteres" # gram neg?
+gemma <- phyla.reordered=="Gemmatimonadetes" # gram neg
+niro <- phyla.reordered=="Nitrospinae/Tectomicrobia group"
+stram <- phyla.reordered=="Stramenopiles" # ?
+verru <- phyla.reordered=="Verrucomicrobia" # gram neg
+fungi <-phyla.reordered=="Fungi"
+met <-phyla.reordered=="Metazoa"
 # colors
 myCols1 <- c(rep("black",length(MyTree$tip.label)))
 
@@ -211,6 +222,17 @@ myCols1[thermo]="orange"
 myCols1[aqui]="orange"
 myCols1[syner]="orange"
 myCols1[cloa]="orange"
+#New colors
+myCols1[acido]="#acc6f6"
+myCols1[elusim]="#a0db8e"
+myCols1[fibro]="#cc5c5c"
+myCols1[gemma]="#ff7373"
+myCols1[niro]="#904690"
+myCols1[stram]="#ffa500"
+myCols1[verru]="#ffd5d5"
+myCols1[fungi]="#0000ff"
+myCols1[met]="#607593"
+
 myBG1 <- myCols1
 
 ##########################################################
@@ -223,14 +245,14 @@ MyTree.ladderized <- ladderize(MyTree.rooted)
 # mywidth=4; myheight=6 #for small rooted tree
 mywidth=6; myheight=22 #for 92 targets rooted tree
 
-outfile <- paste(dir, filename, ".targets.png", sep="")
+outfile <- paste(dir, filename, ".phyla.png", sep="")
 title <- "KS.92targets.10kb.562sequences"
 pdf(file=outfile, width=mywidth, height=myheight)
 plot(MyTree.ladderized, main=title, font=1, type="phylogram", edge.color="gray",
      edge.width=.5, show.tip.label=F, open.angle=5) # for rooted tree
 # plot(MyTree, font=1, type="unrooted", edge.color="gray", edge.width=.5, show.tip.label=F, open.angle=5) # for unrooted tree
-tiplabels(pch=21, cex=.5, col=myCols, bg=myBG)# pch=21 circles, colored by target
-# tiplabels(pch=21, cex=.5, col=myCols1, bg=myBG1)# colored by phyla
+# tiplabels(pch=21, cex=.5, col=myCols, bg=myBG)# pch=21 circles, colored by target
+tiplabels(pch=21, cex=.5, col=myCols1, bg=myBG1)# colored by phyla
 
 # Print labels
 # tiplabels(MyTree$tip.label, cex=.2, frame="none", adj=0) # full label

@@ -1,0 +1,8 @@
+Nov-29-2016
+Downoald E coli essential genes from another place (the oneI have have duplicate
+uniprot ids and can't use to get prot sequences):
+http://tubic.tju.edu.cn/deg/download.php
+
+This new db is nicely referenced and compiled, easy to extract prot sequences.
+
+Run ./fetch_ecoli_seqs.py degannotation-p.ecoli.dat degaa-p.dat targets.609.fa
