@@ -230,8 +230,8 @@ myCols1[gemma]="#ff7373"
 myCols1[niro]="#904690"
 myCols1[stram]="#ffa500"
 myCols1[verru]="#ffd5d5"
-myCols1[fungi]="#0000ff"
-myCols1[met]="#607593"
+myCols1[fungi]="black"
+myCols1[met]="black"
 
 myBG1 <- myCols1
 
