@@ -1,3 +1,19 @@
+*******************
+For E. coli step:
+
+mv KS.609.5kb.fasta KS.609.5kb.fasta.origlongnames
+
+>KQ976354|DEG10180034_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)|9375614|9376035|9375609|9380402|cluster-1|bacteriocin-lantipeptide-t1pks|9355609-9408741|426
+>KQ976354|DEG10180034_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)|2091112|2091535|2091109|2100063|cluster-1|t1pks-nrps|2067478-2120063|426
+
+Make short KS names, becuase FastTree crashes with long names (it shortens them and then complains that there are not unique)
+./get_descr_species_phyla.py
+
+Output files: KS.609.5kb.fasta.descr.species.phyla (use later for phylogenetic tree labels)
+              KS.609.5kb.fasta (new KS fasta file)
+
+*******************
+
 1. Copy KS fasta files to Phylogeny
 
     KS.12.10kb.fasta
@@ -5,6 +21,9 @@
 
     KS.92.5kb.fasta
     KS.92.10kb.fasta
+
+    KS.609.5kb.fasta
+
 
 2. ./get_phyla
 
@@ -15,6 +34,8 @@
     KS.92.5kb.fasta.phyla
     KS.92.10kb.fasta.phyla
 
+    KS.609.5kb.fasta.phyla
+
 3. Add FabF
 
     KS.12.10kb.fasta.withFabF
@@ -22,6 +43,8 @@
 
     KS.92.5kb.fasta.withFabF
     KS.92.10kb.fasta.withFabF
+
+    KS.609.5kb.fasta.withFabF
 
 4. Run cdhit with cutoff .90
 
@@ -31,6 +54,8 @@
     ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.92.5kb.fasta.withFabF -o KS.92.5kb.fasta.withFabF.cdhit.90 -c .9 -d 200 -M 10000
     ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.92.10kb.fasta.withFabF -o KS.92.10kb.fasta.withFabF.cdhit.90 -c .9 -d 200 -M 10000
 
+    ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.609.5kb.fasta.withFabF -o KS.609.5kb.fasta.withFabF.cdhit.90 -c .9 -d 200 -M 10000
+
 5. Run mafft
 
     /usr/local/bin/mafft --thread 64 KS.12.10kb.fasta.withFabF.cdhit.90 > KS.12.10kb.fasta.withFabF.cdhit.90.mafft
@@ -39,6 +64,8 @@
     /usr/local/bin/mafft --thread 64 KS.92.5kb.fasta.withFabF.cdhit.90 > KS.92.5kb.fasta.withFabF.cdhit.90.mafft
     /usr/local/bin/mafft --thread 64 KS.92.10kb.fasta.withFabF.cdhit.90 > KS.92.10kb.fasta.withFabF.cdhit.90.mafft
 
+    /usr/local/bin/mafft --thread 64 KS.609.5kb.fasta.withFabF.cdhit.90 > KS.609.5kb.fasta.withFabF.cdhit.90.mafft
+
 6. Run FastTree
     /home/maureenh/FastTree/FastTreeMP KS.12.10kb.fasta.withFabF.cdhit.90.mafft > KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree
     /home/maureenh/FastTree/FastTreeMP KS.12.20kb.fasta.withFabF.cdhit.90.mafft > KS.12.20kb.fasta.withFabF.cdhit.90.mafft.FastTree
@@ -46,21 +73,32 @@
     /home/maureenh/FastTree/FastTreeMP KS.92.5kb.fasta.withFabF.cdhit.90.mafft > KS.92.5kb.fasta.withFabF.cdhit.90.mafft.FastTree
     /home/maureenh/FastTree/FastTreeMP KS.92.10kb.fasta.withFabF.cdhit.90.mafft > KS.92.10kb.fasta.withFabF.cdhit.90.mafft.FastTree
 
+    /home/maureenh/FastTree/FastTreeMP KS.609.5kb.fasta.withFabF.cdhit.90.mafft > KS.609.5kb.fasta.withFabF.cdhit.90.mafft.FastTree
+
 
 7. Make a ref set file
-mibig_refset.10.mod for targrts.12 and targets.92 (new targets in non-pks or non-bacterial clusters, no fungal KS in blast step)
+mibig_refset.10.mod for targrts.12 and
+
+TODO: mibig_refset.92.mod for targets.92 (are there fungal gene clusters in blast step?)
 
 8. Make descr files
 ./get_descr_species.py
-KS.12.10kb.fasta.descr.species"
+KS.12.10kb.fasta.descr.species
 
 KS.92.5kb.fasta.descr.species"
 KS.92.10kb.fasta.descr.species"
+
+*********
+For E. coli: Alreay done above:
+./get_descr_species_phyla.py
+KS.609.5kb.fasta.descr
+**********
 
 9. Get target names
 ./get_target_name.py
 KS.92.5kb.fasta.target
 KS.92.10kb.fasta.target
+KS.609.5kb.fasta.target (LGDD01000290|DEG10180178|9072|9497|3217|4206|cluster-1|t1pks-nrps|1-77930|4866	DEG10180178)
 
 10. git commit
 

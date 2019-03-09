@@ -22,15 +22,15 @@ def parse_fasta(fasta_file):
 
 
 def main():
-    DIST_CUTOFF = 5000
+    DIST_CUTOFF = 10000
     cluster_genes_file = "cluster_genes.all.fasta"
     ks_file = "ks.all.fasta"
     target_blast_file = "out.609.filtered"
 
-    f1 = open("KS.609.5kb.fasta", "w")
-    f2 = open("targets.609.5kb.fasta", "w")
-    f3 = open("out.609.filtered.5kb", "w")
-    f4 = open("out.609.filtered.5kb.noks", "w")
+    f1 = open("KS.609.10kb.fasta", "w")
+    f2 = open("targets.609.10kb.fasta", "w")
+    f3 = open("out.609.filtered.10kb", "w")
+    f4 = open("out.609.filtered.10kb.noks", "w")
 
     min_distance = {}
     data = {}

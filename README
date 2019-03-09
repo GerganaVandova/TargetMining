@@ -99,6 +99,9 @@ STEP4. Extract gene sequences from all pks clusters found by antismash
     cluster_genes.89k.fasta
     KS.89k.fasta
 78 clusters don’t have predicted KS domains (details_data empty)
+cat cluster_genes.all.fasta | grep ">" |cut -d"|" -f1,2 | sort -u |wc
+  29987   29987  692154
+
 
 STEP5. Make blast database from cluster_genes.21k.fasta and cluster_genes.89k.fasta
 244 196 sequences
@@ -110,8 +113,11 @@ STEP6. Blast 12 targets genes against antismash database from 110k genbank ids
 STEP7. Filter blast hits by evalue <1e-8 and identity > 0.3 (and FabB/F identity > 0.6)
 806 hits.
 
-STEP8. Require both KS+ target <10kb apart.
-252 hits.
+STEP8. Require both KS+ target <10kb apart (and 5kb apart)
+252 hits (and 136 hits)
+
+STEP9. add a FabF and cdhit.90
+152 hits.
 ________________________________________________________________________________
 Mine 92 putative targets, start from Step6:
 
@@ -132,10 +138,6 @@ STEP8. Require both KS+ target <5kb apart.
       ./target_ks_tandem.py > target_ks_tandem.92.5kb.out
 501 hits.
 
-
-252/4404 = 0.057
-501/5492 = 0.091
-Similar discovery rate
 **********************************************************************************
 II. PHYLOGENY Step
 Build a phylogenetic tree and look for homologs
@@ -195,22 +197,18 @@ STEP6. Blast 609 targets genes against antismash database from 110k genbank ids
         6.1. ./run_blastp.py with targets.609.fa March-6-2019 4:20pm RUNNING
         6.2. cat out.targets.609* > out.609
 
-31944 hits.
+133958 hits.
 
 STEP7. Filter blast hits by evalue <1e-8 and identity > 0.3 (and "FAB" identity > 0.6)
-5492 hits.
+28543 hits.
 
 STEP8. Require both KS+ target <5kb apart.
        Run ../Antismash_gbids/target_ks_tandem.py
       ./target_ks_tandem.py > KS.609.5kb.fasta
       ./target_ks_tandem.py > target.609.5kb.fasta
       ./target_ks_tandem.py > target_ks_tandem.609.5kb.out
-501 hits.
+3238 hits.
 
-
-252/4404 = 0.057
-501/5492 = 0.091
-Similar discovery rate
 **********************************************************************************
 II. PHYLOGENY Step
 Build a phylogenetic tree and look for homologs
@@ -218,12 +216,23 @@ Build a phylogenetic tree and look for homologs
 2. ./get_phyla
 3. Add FabF
 7. Make a ref set file: mibig_refset.10.mod for targrts.12 and targets.92 (new targets in non-pks or non-bacterial clusters, no fungal KS in blast step)
-8. Make descr files
+8. Make descr files (with species and phyla names)
 9. Get target names
 
 Remove redundant sequences: Run cdhit with cutoff .90
 Make Multiple sequence alignment using mafft
 Make a phylogram using FastTree
+
+There is a redundant KS sequence, because there are two copies of the target in that cluster
+>LT840184|DEG10180179_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)|2950237|2950660|2948904|2950187|cluster-1|transatpks-nrps|2916063-2977676|50
+IAIVGIAVKLPLADTVEQFANNLKTGRDCVRPIPSLRKQDTDLYFKQMGLEPEDLAYGEAAYLDEIDKFDYSFFKLSPREASLLDPNQRLFLETAWRAIEDAGYGGGKLGGSPTGVYVGYGSDADYLKLIRQVEPEAVSMSMAGNVRPIIASRLSYLMDLRGPSFIVDSTCSSSLVAVHLACQAIRNGECDSAIVGGTQLHLIPIREYEVGIESSTSRARTFDDRADGTGTGEGVVAMMLKPLEQAIESRDHIYAVIKSSALNQDGGSVGITAPNAEAQEAVIADAWKRAGIDPETIGYIETHGTGTKLGDPIEVEGLKRAFRRFTDKRQFCAIGALKSNIGHLDNTAGIAGLLKAVLSLKNKCIYPTLHFDRPNRVIDFAESPVYVNDKLMEWKSGPHPRRCGVSSFGISGTNCHVILEEAP
+>LT840184|DEG10180179_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)|4505173|4505599|4509851|4511098|cluster-1|transatpks-nrps|4480334-4564302|4252
+IAIIGIDAKIGSAKNVEELWDYLSNGFDLIRDFPVERWKDANQFYKLKFNRQLPEELTPCSYIDRLDMFDAGFFQLSPAEAELMEPAQRLFLESAWTALEDSGYGKGILNGSKTGVFLGYNNPQNPYNMVVEETDNYMYGVAVSGNVDAIIASRISYFLNLKGPAVNVDTSCSSSLVAVHLACQQIRDGEVSMALAGSVRLKTLPPHQHGKKMGIESSSGRTKTFDDRADGTGIGEGVICIVLKSLRQAVRDRDNIYAVIKGSSINQDGASVGITAPNAAAQEEVIKAAWKDAGINPETITYIEAHGTATNLGDPVEINGIERAFGSFTDKKQFCAIGSVKSNAGHLDCASGLAGLVKAILMLKHKQLLPTLHFEVPNRKINFISSPVYINDKLVPWETESGSRRCGVSSFGMSGTNCHLVLEEAP
+
+
+1973
+Manually remove the more distant one
+
 Visualize tree using APE package in R
   root tree with E. coli withFabF
   color tree by targrets
