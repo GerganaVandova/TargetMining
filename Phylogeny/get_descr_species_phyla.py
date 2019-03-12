@@ -2,9 +2,18 @@
 import sys
 from Bio import SeqIO
 from collections import defaultdict
-# import tqdm
 
-# Get phyla from taxa file
+# Get target name from targets fasta file
+# >DEG10180001_Molybdopterin_biosynthesis_mog_protein
+gbid_to_names = {}
+targetfilename = "../Antismash_gbids/targets.609.fa.longnames"
+for record in SeqIO.parse(open(targetfilename, "rU"), "fasta"):
+    gbidfull = record.id
+    gbid, name = gbidfull.split("_", 1)
+    name = name.replace("/", "_")
+    gbid_to_names[gbid] = name
+
+# Get species name from species file
 # BDBI01000023   Nocardia sp.
 gbid_to_species = {}
 taxafilename = "../Genbank/species.txt"
@@ -26,34 +35,25 @@ for line in taxafile:
     gbid_to_phyla[gbid] = phyla
 
 f = open("KS.609.5kb.fasta.descr", "w")
-# f1 = open("KS.609.5kb.fasta", "w")
-
 # Read KS fasta file and write phyla for each gbid
-# >KB907307|DEG10180214_Oligopeptide_transport_ATP-binding_protein_oppD|1954686|1955110|1951543|1953327|cluster-1|terpene-t1pks|1918076-2020118|1359
-for record in SeqIO.parse(open("KS.609.5kb.fasta.origlongnames", "rU"), "fasta"):
+# KB907307|DEG10180214|1954686|1955110|1951543|1953327|cluster-1|terpene-t1pks|1918076-2020118|1359
+for record in SeqIO.parse(open("KS.609.5kb.fasta", "rU"), "fasta"):
     gbidfull = record.id
     seq = record.seq
-    gbid, target, _, _, _, _, _, cl_type = gbidfull.split("|")[:8]
-    d1 = gbidfull.split("|")[2:]
-    d = "|".join(d1)
-    target_short, target_descr = target.split("_", 1)
-    gbid_new = "|".join([gbid, target_short, d])
-    print "d\t%s\ntarget_short\t%s\ntarget_descr\t%s\ngbid_new\t%s" % \
-          (d, target_short, target_descr, gbid_new)
-
-    # f1.write(">%s\n%s\n" % (gbid_new, str(seq)))
-
+    gbid, target_id, rest = gbidfull.split("|", 2)
+    cl_type = gbidfull.split("|")[6]
+    print gbid, target_id, rest
     if gbid not in gbid_to_phyla.keys():
         gbid_to_phyla[gbid] = "None"
     if gbid not in gbid_to_species.keys():
         gbid_to_species[gbid] = "None"
 
-    descr1 = "_".join([gbid, target, cl_type,
-                       gbid_to_phyla[gbid],
-                       gbid_to_species[gbid]])
+    descr = "_".join([gbid, target_id, cl_type,
+                      gbid_to_phyla[gbid],
+                      gbid_to_names[target_id],
+                      gbid_to_species[gbid]])
 
-    f.write("%s\t%s\n" % (gbid_new, descr1))
-    print "%s\t%s" % (gbid_new, descr1)
+    f.write("%s\t%s\n" % (gbidfull, descr))
+    print "%s\t%s" % (gbidfull, descr)
 
 f.close()
-# f1.close()

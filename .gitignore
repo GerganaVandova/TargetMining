@@ -19,7 +19,7 @@ Antismash_gbids/targets.12.50kb.fasta
 Antismash_gbids/targets.12.5kb.fasta
 Antismash_gbids/KS.609.5kb.fasta
 Antismash_gbids/targets.609.5kb.fasta
-
+Antismash_gbids/bak_2019/
 
 
 Coevolution/KS.12.50kb.out
@@ -31,10 +31,11 @@ Genbank/species_nt.txt
 Phylogeny/CP025542
 Phylogeny/bak
 
+Second_copy/*.out
 Second_copy/blast_out/
 Second_copy/old/
 old.Coevolution/
-
+Second_copy/targets_fasta/
 Coevolution/fasta/
 Coevolution/old/
 

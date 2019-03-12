@@ -6,3 +6,43 @@ http://tubic.tju.edu.cn/deg/download.php
 This new db is nicely referenced and compiled, easy to extract prot sequences.
 
 Run ./fetch_ecoli_seqs.py degannotation-p.ecoli.dat degaa-p.dat targets.609.fa
+
+
+cat out.609.filtered.5kb|cut -d"|" -f2|sort -u |wc
+    237     237   12365
+3238 clusters harbor an E. coli essential genes.
+237 out of the 609 essential E. coli genes were found within 5kb of a KS gene.
+
+List of all genes:
+cat bak_2019/out.609.filtered.5kb | cut -d"|" -f2|sort -u |cut -d"_" -f2-10|sort
+
+Filter results by removing:
+
+1. All pumps:
+cat bak_2019/out.609.filtered.5kb |grep ABC_transporter|wc
+     69      69    9658
+
+
+     gvandova@maguro:/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids$ cat targets.609.fa.longnames|grep 3-oxoacyl
+     >DEG10180178_3-oxoacyl-[acyl-carrier-protein]_synthase_III_(EC_2.3.1.41)
+     >DEG10180180_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)
+     >DEG10180363_3-oxoacyl-[acyl-carrier-protein]_synthase_I_(EC_2.3.1.41)
+
+
+3-oxoacyl-[acyl-carrier-protein] synthase 2 (KAS-II, FabF) not present?
+
+3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)  type II fatty acid biosynthesis
+3-oxoacyl-[acyl-carrier-protein]_synthase_I_(EC_2.3.1.41) FabB (condensation rxn)
+3-oxoacyl-[acyl-carrier-protein]_synthase_III_(EC_2.3.1.41) catalyses the first condensation step within the FAS II pathway
+3-phenylpropionate_dioxygenase_beta_subunit_(EC_1.14.1.-)
+
+cat bak_2019/out.609.filtered.5kb |grep DEG10180178|wc
+172     172   26229
+cat bak_2019/out.609.filtered.5kb |grep DEG10180180|wc
+169     169   25654
+cat bak_2019/out.609.filtered.5kb |grep DEG10180363|wc
+475     475   72565
+
+
+cat bak_2019/out.609.filtered.5kb |grep Elongation_factor_Tu|wc
+     27      27    3144

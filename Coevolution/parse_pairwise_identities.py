@@ -62,7 +62,7 @@ def parse_blast(target, blast_file):
 def main():
 
     # Need a file to read target names, use the 10kb cutoff
-    antismash_outfilename = "../Antismash_gbids/out.92.filtered.5kb"
+    antismash_outfilename = "../Antismash_gbids/out.609.filtered.5kb"
 
     targets = get_targets(antismash_outfilename)
     # targets = ["borI_Thr-tRNA-syn", "mupM_Ile-tRNA-syn", "PtmP3_FabB-F",
@@ -70,9 +70,9 @@ def main():
 
     print targets
 
-    blast_file_ks = "KS.92.5kb.out"
-    blast_file_target = "targets.92.5kb.out"
-    outfile = "pairwise_identities.92.5kb.out.short"
+    blast_file_ks = "KS.609.5kb.out"
+    blast_file_target = "targets.609.5kb.out"
+    outfile = "pairwise_identities.609.5kb.out.short"
 
     # Mibig set
     # blast_file_ks = "KS.mibig.out"

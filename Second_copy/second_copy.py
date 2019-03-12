@@ -1,6 +1,4 @@
 #!/usr/bin/python
-import sys
-import json
 from Bio import SeqIO
 import os
 import subprocess
@@ -15,23 +13,23 @@ from collections import defaultdict
 target_to_seq = {}
 
 # Make a dictionary for target ids and their sequences
-targets_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/targets.92.fa"
+targets_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/targets.609.fa"
 
 for record in SeqIO.parse(open(targets_filename, "rU"), "fasta"):
     targetid = record.id
     targetseq = record.seq
-    # print targetid, targetseq[:10]
     target_to_seq[targetid] = targetseq
-
+    print targetid, targetseq[:10]
 
 # Read antismash output file
 # ACXX02000001|AdmT_ACC|37972|38377|31720|32586|cluster-1|transatpks-nrps|14512-116691|5386
-antismash_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/out.92.filtered.5kb"
+antismash_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/out.609.filtered.5kb"
 antismash_file = open(antismash_filename).readlines()
 
 gbid_to_target = defaultdict(list)
 
 for line in antismash_file:
+    print line
     line = line.strip()
     features = line.split("|")
     gbid, targetid = features[:2]

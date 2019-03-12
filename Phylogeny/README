@@ -3,7 +3,7 @@ For E. coli step:
 
 mv KS.609.5kb.fasta KS.609.5kb.fasta.origlongnames
 
->KQ976354|DEG10180034_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)|9375614|9376035|9375609|9380402|cluster-1|bacteriocin-lantipeptide-t1pks|9355609-9408741|426
+>KQ976354|DEG10180034|9375614|9376035|9375609|9380402|cluster-1|bacteriocin-lantipeptide-t1pks|9355609-9408741|426
 >KQ976354|DEG10180034_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)|2091112|2091535|2091109|2100063|cluster-1|t1pks-nrps|2067478-2120063|426
 
 Make short KS names, becuase FastTree crashes with long names (it shortens them and then complains that there are not unique)

@@ -3,321 +3,35 @@ sshfs gvandova@maguro.stanford.edu:/mnt/gnpn/gnpn/projects/orphanpks/TargetMinin
 
 COEVOLUTION STEP
 
-Jan-10-2019
+1. Copy output fasta seqs from Tandem KS-target step:
+    KS.12.5kb.fasta
+    targets.12.5kb.fasta
 
-1. mkdir Coevolution
-2. Make fasta files with all KS and target sequences
-
-   cat seq_dir/sequences.faa.21k.coord.fasta seq_dir/sequences.faa.89k.coord.fasta > sequences.110k.coord.redundant.fasta
-
-Jan-11-2019
-   ./get_ks_sequences.py
-
-3. separate fasta files into separate sequence files for blasting
-  mv *.fasta target_seq/
-  mv *.KS.fasta KS_seq/
-  cat *.fasta > all.KS.fasta
-  cat *.fasta > all.target.fasta
-
-  ./split_fastaseqs.py
-
-  mkdir KS_split
-  mv *.KS.* KS_split/
-  mkdir target_split
-  mv *.fasta target_split/
-
-4. Make blast databases for KS and targets
-  ./makeblastdb.py
-   mv antismashdb_* blastdb/
-
-
-Jan-14-2019
-5. Run paiwise blast
-./run_blast.py
-
-WOrking but I don't know which KS comes with which target, since their coord are diff.
-Add cluster coord to sequence ids.
-
-Start from beginning of pipeline:
-1. Make fasta files of all KS and corresponding target sequences:
-    ./get_ks_sequences.py
-    Ouptut ids:
-    >[target].[clusterid].[clustercoord].[targetcoord] for all target sequences
-    >[target].[clusterid].[clustercoord].KS. [targetcoord] for all KS sequences
-    >borI_Thr-tRNA-syn.QZFT01000045.122581-166774.137802-139817
-    >borI_Thr-tRNA-syn.QZFT01000045.122581-166774.KS.142614-143975
-
-    mv *.fasta fasta_seqs/
-
-2. Run ./makeblastb.py and move to blastdb/
-
-Jan-15-2019
-3. Run pairwise blast
-  ./run_blastp.py
-  evalue cutoff = 1e-8
-  mv out/*.KS.out ks_seqs/
-  cat ks_seqs/* > all.KS.out
-  cat *.out > all.targets.out
-  mv ks_seqs/* out/
-
-  cat borI_Thr-tRNA-syn.out |wc
-       81     648   11320
-  cat borI_Thr-tRNA-syn.KS.out |wc
-       71     568   10254
-
-Jan-16-2019
-4. Extract ks and corresponding target pairwise identities
-  ./parse_pairwise_identities.py
-
-  cat all.KS.out | grep borI_Thr-tRNA-syn.QZFT01000045 | grep borI_Thr-tRNA-syn.LGTC01000001
-  borI_Thr-tRNA-syn.LGTC01000001.2624321-2672198.KS.2647729-2648562	borI_Thr-tRNA-syn.QZFT01000045.122581-166774.KS.142614-143975	206	303	28	278	454	4e-04
-  borI_Thr-tRNA-syn.QZFT01000045.122581-166774.KS.142614-143975	borI_Thr-tRNA-syn.LGTC01000001.2624321-2672198.KS.2647729-2648562	21	127	28	454	278	6e-04
-
-  borI_Thr-tRNA-syn.QZFT01000045-borI_Thr-tRNA-syn.LGTC01000001	6.17	borI_Thr-tRNA-syn.QZFT01000045-borI_Thr-tRNA-syn.LGTC01000001	35.62
-
-manual blast: 35% KS seq identity
-in fasta_seqs/borI_Thr-tRNA-syn.KS.fasta
->borI_Thr-tRNA-syn.LGTC01000001.2624321-2672198.KS.2647729-2648562
-
-  cat blast_results.KS.fasta.cleanName.cdhit.99 | grep LGTC01000001
-  >LGTC01000001___1717315_1718712__2_-1_6878816_3e-67
-  >LGTC01000001___1465072_1466283__2_-1_6878816_2e-22
-  >LGTC01000001___225988_227286__0_1_6878816_3e-107
-  >LGTC01000001___1956479_1957750__1_-1_6878816_4e-102
-  >LGTC01000001___2650774_2652174__2_-1_6878816_9e-50 REAL KS
-  >LGTC01000001___218710_219993__0_1_6878816_2e-88
-  >LGTC01000001___2647729_2648562__2_-1_6878816_0.007 CURRENT KS
-
-  vim sequences.faa.21k.coord.fasta
-  >LGTC01000001_cluster-1_2624321-2672198_t1pks_2644321-2652198_ctg1_146_- WHOLE MODULE SEQUENCE
-
-
-Jan-22-2019
-
-2. Make blast databases and move to blastdb/
-makeblastdb -in KS.12.10kb.fasta -dbtype prot -out KS.12.10kb
-Adding sequences from FASTA; added 252 sequences in 0.0142119 seconds.
-makeblastdb -in targets.12.10kb.fasta -dbtype prot -out targets.12.10kb
-Adding sequences from FASTA; added 252 sequences in 0.0179 seconds.
-
-3. Pairwise blastp
-blastp -db blastdb/KS.12.10kb -query KS.12.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.10kb.out
-blastp -db blastdb/targets.12.10kb -query targets.12.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.10kb.out
-
-4, 5?
-Jan-23-2019
-low KS-KS seq identity because antismash couldn't recognize the domains, just the active sites
-
-**********************************************************************************
-Jan-24-2019
-COEVOLUTION ON POSITIVE SET
-1. Extrct mibig pos data set KS and target sequences and write in
-
-      KS.mibig.fasta
-      targets.mibig.fasta
-
-      KT362046|borI_Thr-tRNA-syn|45548|45969|57935|59962|cluster-1|t1pks|1-63657|11966
-      JPRX01000001|mupM_Ile-tRNA-syn|1126232|1126663|1122028|1125120|cluster-1|hserlactone-transatpks-otherks|1085078-1198411|1112
-      KE354369|PtmP3_FabB-F|27540|27879|27505|28638|cluster-1|t1pks-nrps|1-31725|374
-      AJ871581|rubR1_TIF|8427|8852|4268|4492|cluster-1|aminocoumarin-t1pks-nrps|1-105657|3935
-      KQ949024|SalI_beta_proteasome|658027|658446|664301|665146|cluster-6|transatpks-t1pks-nrps|607929-695233|5855
-      KP830094|SalI_beta_proteasome|17001|17415|25854|26708|cluster-1|t1pks-nrps|1-37516|8439
-      KF647220|SalI_beta_proteasome|13459|13876|2040|2897|cluster-1|t1pks-nrps|1-25783|10562
-      JXDG01000003|BatG_FabI|331023|331246|336894|338084|cluster-1|transatpks-otherks-nrps|264229-352095|5648
-      CP000667|SalI_beta_proteasome|1151298|1151717|1144517|1145353|cluster-1|transatpks-t1pks-nrps|1131285-1181131|5945
-      FN689524|mupM_Ile-tRNA-syn|21295|21726|16377|19523|cluster-1|nrps-transatpks-otherks|1265-97600|1772
-
-2. Make blast databases and move to blastdb/
-makeblastdb -in KS.mibig.fasta -dbtype prot -out KS.mibig
-makeblastdb -in targets.mibig.fasta -dbtype prot -out targets.mibig
-
-3. Pairwise blastp
-blastp -db blastdb/KS.12.mibig -query KS.mibig.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.mibig.out
-blastp -db blastdb/targets.mibig -query targets.12.50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.mibig.out
-
-4.
-********************************************************************************
-Jan-29-2019
-Coevolution with >50kb distance between target and KS
-
-1. Run ../Antismash_gbids/target_ks_tandem.py
-Output: target_ks_tandem.50kb.out (1046 hits)
-        KS.12.50kb.fasta
-        targets.12.50kb.fasta
+    KS.609.5kb.fasta
+    targets.609.5kb.fasta
 
 2. Make KS and genes databaase and move to blastb/
-makeblastdb -in KS.12.50kb.fasta -dbtype prot -out KS.12.50kb
-makeblastdb -in targets.12.50kb.fasta -dbtype prot -out targets.12.50kb
+    makeblastdb -in KS.12.5kb.fasta -dbtype prot -out KS.12.5kb
+    makeblastdb -in targets.12.5kb.fasta -dbtype prot -out targets.12.5kb
+
+    makeblastdb -in KS.609.5kb.fasta -dbtype prot -out KS.609.5kb
+    makeblastdb -in targets.609.5kb.fasta -dbtype prot -out targets.609.5kb
+
 
 3. Pairwise blastp
-blastp -db blastdb/KS.12.50kb -query KS.12.50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.50kb.out
-blastp -db blastdb/targets.12.50kb -query targets.12.50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.50kb.out
+    blastp -db blastdb/KS.12.5kb -query KS.12.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.5kb.out
+    blastp -db blastdb/targets.12.5kb -query targets.12.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.5kb.out
 
-4. Parse pairwise blast
-parse_pairwise_identities.py
-Output file: pairwise_identities.12.50kb.out
+    blastp -db blastdb/KS.609.5kb -query KS.609.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.609.5kb.out
+    blastp -db blastdb/targets.609.5kb -query targets.609.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.609.5kb.out
 
-5. Plot pairwise identities
-plot_pairwise_identities.py
-Output file: 12.50kb.png
-
-****************************************************************************************
-********************************************************************************
-Jan-29-2019
-Coevolution with <5kb distance between target and KS
-
-1. Run ../Antismash_gbids/target_ks_tandem.py
-Output: target_ks_tandem.5kb.out (408 hits)
-        KS.12.5kb.fasta
-        targets.12.5kb.fasta
-
-2. Make KS and genes databaase and move to blastb/
-makeblastdb -in KS.12.5kb.fasta -dbtype prot -out KS.12.5kb
-makeblastdb -in targets.12.5kb.fasta -dbtype prot -out targets.12.5kb
-
-3. Pairwise blastp
-blastp -db blastdb/KS.12.5kb -query KS.12.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.5kb.out
-blastp -db blastdb/targets.12.5kb -query targets.12.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.5kb.out
 
 4. Parse pairwise blast
 parse_pairwise_identities.py
 Output file: pairwise_identities.12.5kb.out
+             pairwise_identities.609.5kb.out
 
 5. Plot pairwise identities
 plot_pairwise_identities.py
 Output file: 12.5kb.png
-
-6. Cleanup pairwise_identities.12.5kb.out to dicard identites < 30%
-pairwise_identities.12.5kb.out.sorted.sorted
-
-7. 5. Plot pairwise identities
-plot_pairwise_identities.py
-Output file: 12.5kb.cleaned.png
-
-Off-diagona point:
-AUSV01000137-FN689524	0.30	0.91
-AUSV01000137-CP025542	0.31	0.39
-
->AUSV01000137|mupM_Ile-tRNA-syn|95840|96267|89665|92811|cluster-1|transatpks-otherks-nrps|561-99843|3029
-file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/AUSV01000137/index.html#cluster-1
->FN689524|mupM_Ile-tRNA-syn|21295|21726|16377|19523|cluster-1|nrps-transatpks-otherks|1265-97600|1772
-file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output/FN689524/index.html#cluster-1
-thiomarinol
-https://mibig.secondarymetabolites.org/repository/BGC0001115/index.html#cluster-1
-
-COLOR ALL POINTS CONNECTED TO A KNOWN CLUSTER WITH TARGET
-****************************************************************************************
-Examine low KS-KS seq identities
-CP015756-PYAX01000012	0.14	0.39
->CP015756|AdmT_ACC|2437121|2437577|2430326|2431186|cluster-1|t1pks-nrps|2416416-2472581|5935
-IAVIEMSCRFPDASSPEEFWDNLATGKCSINEIPEDRWDINQYYSPSDDKAKTNCRTGAFIDNVFDFDAKLFNISDEEASVMDPQQRIILELVFEILERAGYSKKKISGRSLALFIGASTNAYYEYHLNTLKMLNLKSFDSVTSLTSEQQESILKEWKNKFGVTDFHPNLLVDNILNMIAARASQEFNLKGPSIVVDTACSSSIVTIHMACESLKRGECDIAIAGGINLLLTPTPYIYLSNAGALSTSGVSSVFDAKADGLVPGEGAGLVLLKPLKKAIADKDKVLAIIKASAINNDGHSIGVMAPNPDGQRSVIESLYAKNDFNPKDIQYVEAHGTGTKIGDPSEVRALDSAFKRWSPKPNSIAIGSVKANIGHLLNSAGIASFIKVVLALNNKIMPPNVNLTQLNPSIKFNKTPFYTISKAKEWTVDQGISRRASINSFGFGGTNCHMVVEEAP
-
-This is probably a CLF domain (annotated by antismash as KS)
->PYAX01000012|AdmT_ACC|177843|178183|179292|180998|cluster-1|bacteriocin-t2pks-t1pks|120458-199012|1109
-LPSRLLSQTDHMTRLALVAADWALADAGVNPAELPEYGMGVITASSSGGFEFGQRELQNLWSKGGSHVSAYQSFAWFYAVNTGQISIRNGMRGPSGVLVTDQAGGLDAVANARRQIRKGIDLVVSGGVDGSICPWGWVAHMSTGRLSAVDDPDRAYLPFDADATGHVAGEGGAILVMEDEDAARRRGVERSYGELAGYAATMDPRPGGGEPGLRRAAELAIADAGLTPGDVDVVFADAAGVPELDRVEAEAITAVFGPRGVPVTAPKTMTGRLFSGAAPLDVAVALLSIRDGVIPPTINVNPAPGYGIDLVTGAPRHTRPRTALVLARGSGGFNAAVVVR
-
-TODO: Check all KSs from  ks.all.fasta file if they are true KSs
-      - blast each KS with a true KS and discard short or misannotated sequences
-      - for each discarded sequence, get KS coordinates from initial Blast search
-
-      Tentatively, discard all low seq identities in parse_pairwise_identities.py step
-****************************************************************************************
-
-Examine off-diagonal points:
-FNIE01000009-FNLF01000002	0.42	0.82
->FNIE01000009|EF-Tu|195032|195374|189249|190442|cluster-1|t1pks|177579-237615|4590
->FNLF01000002|EF-Tu|1131376|1131711|1141523|1142713|cluster-1|ladderane-t1pks-nrps|1057479-1153604|9812
-
-open ../Antismash_gbids/antismash_output_assemblies_all/FNIE01000009/index.html
-      file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/FNIE01000009/index.html#cluster-1
-      EF-Tu clustered with other translation-related genes:
-
-open ../Antismash_gbids/antismash_output_assemblies_all/FNLF01000002_927773_1282485//index.html
-      file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/FNLF01000002_927773_1282485/index.html#cluster-1
-
-
-Not sure which gene it is, get sequence from targets.12.10kb.fasta and search in geneclusters file
-      >FNLF01000002|EF-Tu|1131376|1131711|1141523|1142713|cluster-1|ladderane-t1pks-nrps|1 057 479-1153604|9812
-      VAKAKFERTKPHVNIGTIGHVDHGKTTLTAAITKVLAEKYPDLNEASAFDQIDKAPEEKARGITINISHVEYQTEKRHYAHVDAPGHADYIKNMITGAAQMDGAILVVAATDGPMPQTREHVLLARQVGVPYILVALNKCDMVDDEEILELVEMEVRELLGSQDFDEDAPVVRVSGYQALQGEEKWVDSIVELMNAVDESIPDPERETDKPFLMPVEDVFTITGRGTVVTGRVERGIINVNEEVEIVGIREKSTKTTVTGIEMFRKLLDSGQAGDNVGLLVRGLKREDVERGQVVVKPGTTTPHTEFEGQAYILSKDEGGRHTPFFNNYRPQFYFRTTDVTGVVTLPEGNEMVMPGDNTEMSVKLIQPVAMDEGLRFAIREGGRTVGAGRVTKIIA
-
-Search for sequence in geneclusters.js
-      atom ../Antismash_gbids/antismash_output_assemblies_all/FNLF01000002_927773_1282485/geneclusters.js
-      ctg1_196
-      ctg1_195 is reductase
-      ctg1_197 is another Ef-Tu
-
-**********************************************************
-
-Feb-7-2019
-
-Look at low-seq identity KS-KS pairs
-NZ_LBDA02000011|EF-Tu|62303|62738|57118|58296|cluster-1|t1pks-otherks|41631-71625|4007	NZ_LIWA01000004|EF-Tu|732832|732876|729126|730298|cluster-5|t1pks-otherks|688615-739979|2534	0.027586	0.93
-
-file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output/NZ_MCGQ01000026/index.html#cluster-1
-file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output/NZ_LBDA02000011/index.html#cluster-1
-
-One of the KSs is very short.
-
-Remove all pairwise identities in which the KSs are < 300aa long.
-    pairwise_identities.12.5kb.out.long.tmp.longks
-    12.5kb.long.tmp.longks.png
-
-******************************************************************
-Feb-13-2019
-There are still some low-identity pairs. Looking into them:
-Some are CLF domains. For now, discard short KSs:
-
-Mv all out files in old/ and rerun scripts for 5kb, 10kb, 50kb cutoffs:
-
-3. Pairwise blastp
-blastp -db blastdb/KS.12.5kb -query KS.12.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.5kb.out
-blastp -db blastdb/targets.12.5kb -query targets.12.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.5kb.out
-
-blastp -db blastdb/KS.12.10kb -query KS.12.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.10kb.out
-blastp -db blastdb/targets.12.10kb -query targets.12.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.10kb.out
-
-blastp -db blastdb/KS.12.50kb -query KS.12.50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.50kb.out
-blastp -db blastdb/targets.12.50kb -query targets.12.50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.50kb.out
-
-4. Parse pairwise blast: ./parse_pairwise_identities.py
-Output file: pairwise_identities.12.5kb.out
-             pairwise_identities.12.10kb.out
-             pairwise_identities.12.50kb.out
-
-5. Plot pairwise identities: ./plot_pairwise_identities.py
-Output file: 12.5kb.png
-             12.10kb.png
-             12.50kb.png
-
-6. Cleanup pairwise_identities.12.5kb.out to dicard identites < 30%
-pairwise_identities.12.5kb.out.sorted.sorted
-
-7. 5. Plot pairwise identities
-plot_pairwise_identities.py
-Output file: 12.5kb.cleaned.png
-
-
-Feb-14-2019
-print x-y distance
-    AUSV01000137|mupM_Ile-tRNA-syn	FN689524|mupM_Ile-tRNA-syn	427	431	30	91	62
-
-    FN is mupirocin (one of the true positives)
-    file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/AUSV01000137/index.html#cluster-1
-    When looking into the cluster, it looks like a true positive
-    The domain architecture is somewhat similar to the mupirocin one:
-    https://mibig.secondarymetabolites.org/repository/BGC0000182/index.html#cluster-1
-    file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output/FN689524/index.html#cluster-1
-    Low KS-KS seq identity, probably because the KS from AUS is not part of the cluster
-    When corresponding KSs blasted, identity is 84%
-    FALSE NEGATIVE
-
-    **************************
-
-    FNIE01000009|EF-Tu	PHAG01000006|EF-Tu	342	436	15	72	57
-    FNIE01000009|EF-Tu|195032|195374|189249|190442|cluster-1|t1pks|177579-237615|4590	PHAG01000006|EF-Tu|244680|245116|240352|241545|cluster-2|transatpks|223871-314283|3135	342	436	15.497076	72.292191
-
-file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/FNIE01000009/index.html#cluster-1
-file:///Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/PHAG01000006/index.html#cluster-2
-
-In both clusters, there are other translation elongation factors next to the cluster
-Could be TRUE NEGATIVE
+             609.5kb.png

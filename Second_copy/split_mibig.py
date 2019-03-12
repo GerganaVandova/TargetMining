@@ -30,5 +30,5 @@ def split_fasta(infile):
             f.write(str(record.seq))
             f.write("\n")
 
-infile = '../Antismash_gbids/targets.92.fa'
+infile = '../Antismash_gbids/targets.609.fa'
 split_fasta(infile)
