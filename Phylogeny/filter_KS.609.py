@@ -26,6 +26,12 @@ for record in SeqIO.parse(open("KS.609.5kb.fasta", "rU"), "fasta"):
     if "[acyl-carrier-protein]" in target_name:
         print "skipping %s" % target_name
         continue
+    if "[acyl-carrier_protein]" in target_name:
+        print "skipping %s" % target_name
+        continue
+    if "[acyl_carrier_protein]" in target_name:
+        print "skipping %s" % target_name
+        continue
     if "transport" in target_name:
         print "skipping %s" % target_name
         continue

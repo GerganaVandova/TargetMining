@@ -1,5 +1,3 @@
-FRDC01002724|DEG10180180|10917|11343|5469|6221|cluster-1|t1pks|1-24434|4696	FRDC01002724_DEG10180180_t1pks_cluster-1_metagenomes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_freshwater metagenome
-
 JMCB01000034|DEG10180125|18466|18886|16757|18457|cluster-1|t1pks|1-60603|9	JMCB01000034_DEG10180125_t1pks_cluster-1_Proteobacteria_Dihydrolipoamide_succinyltransferase_component_of_2-oxoglutarate_dehydrogenase_complex_(EC_2.3.1.61)_Hyalangium minutum
 
 FZOU01000001|DEG10180034|1367283|1367705|1367267|1375207|cluster-1|t1pks-nrps|1343113-1397141|438	FZOU01000001_DEG10180034_t1pks-nrps_cluster-1_Acidobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Granulicella rosea
@@ -30,8 +28,6 @@ CP013442|DEG10180034|65408|65832|65375|78781|cluster-1|bacteriocin-t1pks-nrps|21
 
 NZ_LWLC01000025|DEG10180498|35290|35709|30353|30649|cluster-1|t1pks-nrps|14661-64974|4641	NZ_LWLC01000025_DEG10180498_t1pks-nrps_cluster-1_Actinobacteria_30S_ribosomal_protein_S14_Saccharothrix sp. CB00851
 
-JOIR01000002|DEG10180180|184108|184435|185333|186079|cluster-1|phosphonate-t1pks-ladderane|156511-215373|898	JOIR01000002_DEG10180180_phosphonate-t1pks-ladderane_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. NRRL F-2580
-
 FNBE01000022|DEG10180357|40726|41151|39851|52768|cluster-1|t1pks|11603-72768|1300	FNBE01000022_DEG10180357_t1pks_cluster-1_Actinobacteria_O-succinylbenzoic_acid--CoA_ligase_(EC_6.2.1.26)_Pseudonocardia oroxyli
 
 CP021011|DEG10180034|3818439|3818861|3817769|3829717|cluster-2|transatpks-nrps|3773675-3843648|1092	CP021011_DEG10180034_transatpks-nrps_cluster-2_Firmicutes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Bacillus velezensis
@@ -41,8 +37,6 @@ JOEQ01000033|DEG10180074|63587|64002|56654|58930|cluster-1|t1pks|43491-77863|465
 KQ948425|DEG10180303|643617|644032|638895|639893|cluster-5|t1pks|623520-667539|3724	KQ948425_DEG10180303_t1pks_cluster-5_Actinobacteria_Glyceraldehyde_3-phosphate_dehydrogenase_A_(EC_1.2.1.12)_Streptomyces antibioticus
 
 LT840184|DEG10180179|2950237|2950660|2948904|2950187|cluster-1|transatpks-nrps|2916063-2977676|50	LT840184_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus uliginis N3/975
-
-QFXB01000043|DEG10180180|25831|26261|22291|23037|cluster-1|t1pks|5795-33117|2794	QFXB01000043_DEG10180180_t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. NWU49
 
 PKCH01000241|DEG10180034|1908|2335|6337|7758|cluster-1|t1pks-nrps|1-59344|4002	PKCH01000241_DEG10180034_t1pks-nrps_cluster-1_Verrucomicrobia_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Verrucomicrobia bacterium (marine metagenome)
 
@@ -73,8 +67,6 @@ FNOG01000005|DEG10180185|90213|90633|85148|85834|cluster-1|lantipeptide-transatp
 CP017717|DEG10180052|10145278|10145340|10143442|10145154|cluster-1|ladderane-t1pks-arylpolyene-nrps|10086900-10191750|124	CP017717_DEG10180052_ladderane-t1pks-arylpolyene-nrps_cluster-1_Actinobacteria_Acetyl-coenzyme_A_carboxylase_carboxyl_transferase_subunit_alpha_(EC_6.4.1.2)_Nonomuraea sp. ATCC 55076
 
 BCBX01000030|DEG10180034|532633|533056|527801|529123|cluster-1|t1pks|512624-570537|3510	BCBX01000030_DEG10180034_t1pks_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Microbispora sp. GMKU363
-
-OEKQ01000137|DEG10180180|11|437|4747|5481|cluster-1|t1pks|1-10046|4310	OEKQ01000137_DEG10180180_t1pks_cluster-1_metagenomes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_metagenome
 
 CP000781|DEG10180185|397643|398067|394453|395193|cluster-1|t1pks|377619-426861|2450	CP000781_DEG10180185_t1pks_cluster-1_Proteobacteria_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Xanthobacter autotrophicus Py2
 
@@ -148,21 +140,13 @@ AMBZ01000007|DEG10180164|275038|275460|269686|270381|cluster-2|t1pks-nrps|255004
 
 JNZO01000016|DEG10180498|23|438|5404|5709|cluster-1|t1pks|1-23555|4966	JNZO01000016_DEG10180498_t1pks_cluster-1_Actinobacteria_30S_ribosomal_protein_S14_Streptomyces flavochromogenes
 
-CP024706|DEG10180180|2314227|2314562|2317439|2318176|cluster-1|transatpks|2238731-2332501|2877	CP024706_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
-
 BCMK01000022|DEG10180044|13036|13462|8837|9595|cluster-1|transatpks-nrps|1-85175|3441	BCMK01000022_DEG10180044_transatpks-nrps_cluster-1_Actinobacteria_Undecaprenyl_pyrophosphate_synthetase_(EC_2.5.1.31)_Streptomyces acidiscabies
-
-KN723307|DEG10180180|569154|569578|568259|568996|cluster-1|transatpks|549036-649491|158	KN723307_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus amyloliquefaciens
 
 PBVT01000085|DEG10180366|111918|112381|105932|107416|cluster-1|t1pks|91902-140430|4502	PBVT01000085_DEG10180366_t1pks_cluster-1_Proteobacteria_Glutamyl-tRNA_synthetase_(EC_6.1.1.17)_Myxococcales bacterium (marine metagenome)
 
 PPFB01000001|DEG10180303|6660530|6660913|6665592|6667037|cluster-1|t2pks-t1pks-nrps|6639285-6728417|4679	PPFB01000001_DEG10180303_t2pks-t1pks-nrps_cluster-1_Actinobacteria_Glyceraldehyde_3-phosphate_dehydrogenase_A_(EC_1.2.1.12)_Streptomyces sp. DH-12
 
 NZ_APJX01000001|DEG10180179|789457|789915|788743|796188|cluster-1|t1pks|768743-816188|1172	NZ_APJX01000001_DEG10180179_t1pks_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Desulfotignum phosphitoxidans DSM 13687
-
-FNSO01000004|DEG10180180|3335773|3336101|3334978|3335682|cluster-1|t1pks-butyrolactone|3318410-3369587|91	FNSO01000004_DEG10180180_t1pks-butyrolactone_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Amycolatopsis tolypomycina
-
-OBMM01000008|DEG10180180|86456|86801|85666|86391|cluster-1|t1pks-arylpolyene-nrps|9304-107632|65	OBMM01000008_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira xiamenensis
 
 NZJC01000189|DEG10180335|16682|17110|12205|12843|cluster-1|t1pks|1-28045|3839	NZJC01000189_DEG10180335_t1pks_cluster-1_Proteobacteria_Low_molecular_weight_protein-tyrosine-phosphatase_wzb_(EC_3.1.3.48)_Deltaproteobacteria bacterium (marine metagenome)
 
@@ -198,13 +182,9 @@ PGOI01000009|DEG10180469|314190|314616|308875|311016|cluster-1|t1pks|294176-3461
 
 PGEO01000001|DEG10180185|7539709|7540134|7534729|7535532|cluster-2|t1pks|7519668-7625043|4177	PGEO01000001_DEG10180185_t1pks_cluster-2_Actinobacteria_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Streptomyces sp. 2333.5
 
-NW_003345193|DEG10180180|219077|219501|213947|214961|cluster-1|t1pks|152401-244428|4116	NW_003345193_DEG10180180_t1pks_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Nannizzia gypsea CBS 118893
-
 FQZB01000011|DEG10180179|177444|177873|181248|182495|cluster-1|transatpks-nrps|127746-237987|3375	FQZB01000011_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Clostridium cavendishii DSM 21758
 
 CP022545|DEG10180179|10763045|10763471|10748677|10762932|cluster-1|t1pks|10695155-10842742|113	CP022545_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. 11-1-2
-
-NHOD01000320|DEG10180047|1294|1541|680|1174|cluster-1|t1pks|1-19082|120	NHOD01000320_DEG10180047_t1pks_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Streptomyces scabiei
 
 BBSL01000075|DEG10180242|7443|7868|2198|3214|cluster-1|t1pks|1-24294|4229	BBSL01000075_DEG10180242_t1pks_cluster-1_Proteobacteria_Methyl-accepting_chemotaxis_protein_III_Burkholderia sp. E7m39
 
@@ -215,8 +195,6 @@ CP012747|DEG10180242|1542132|1542556|1537178|1538740|cluster-2|t1pks|1522110-156
 JOAZ01000008|DEG10180141|258462|258800|259842|260888|cluster-3|t1pks|244515-291954|1042	JOAZ01000008_DEG10180141_t1pks_cluster-3_Actinobacteria_Hypothetical_protein_ybjS_Streptomyces halstedii
 
 NZ_MCGQ01000026|DEG10180210|94380|94816|89966|90919|cluster-1|t1pks-otherks|73689-166306|3461	NZ_MCGQ01000026_DEG10180210_t1pks-otherks_cluster-1_Actinobacteria_UTP--glucose-1-phosphate_uridylyltransferase_(EC_2.7.7.9)_Streptomyces diastatochromogenes
-
-KI911125|DEG10180180|1247847|1247879|1252772|1253734|cluster-1|t1pks|1222455-1267191|4893	KI911125_DEG10180180_t1pks_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Cladonia metacorallifera KoLRI002260
 
 CP003987|DEG10180222|9978035|9978459|9976191|9976874|cluster-5|t1pks-butyrolactone|9926227-10014903|1161	CP003987_DEG10180222_t1pks-butyrolactone_cluster-5_Actinobacteria_GTP_cyclohydrolase_II_(EC_3.5.4.25)_Streptomyces sp. 769
 
@@ -236,8 +214,6 @@ FSTQ01000168|DEG10180222|5989|6415|2949|3704|cluster-1|t1pks-nrps|1-17049|2285	F
 
 NKRE01000001|DEG10180397|1081135|1081558|1075455|1076180|cluster-1|t1pks-nrps|1061032-1156786|4955	NKRE01000001_DEG10180397_t1pks-nrps_cluster-1_Actinobacteria_Ribonuclease_III_(EC_3.1.26.3)_Mycobacterium kansasii
 
-LMLV01000031|DEG10180047|3312|3623|2789|3211|cluster-1|transatpks-nrps|1-104257|101	LMLV01000031_DEG10180047_transatpks-nrps_cluster-1_Firmicutes_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Paenibacillus sp. Leaf72
-
 LFME01000001|DEG10180418|238809|239240|234117|236768|cluster-1|transatpks|218806-274996|2041	LFME01000001_DEG10180418_transatpks_cluster-1_Proteobacteria_Alanyl-tRNA_synthetase_(EC_6.1.1.7)_Xanthomonas sp. NCPPB 1128
 
 NNBJ01000002|DEG10180282|286242|286668|281554|282699|cluster-2|t1pks-nrps|218560-337616|3543	NNBJ01000002_DEG10180282_t1pks-nrps_cluster-2_Actinobacteria_Hypothetical_protein_ydiO_Streptomyces sp. CB01201
@@ -245,8 +221,6 @@ NNBJ01000002|DEG10180282|286242|286668|281554|282699|cluster-2|t1pks-nrps|218560
 CP028369|DEG10180034|9151082|9151508|9145246|9146586|cluster-3|butyrolactone-transatpks-t1pks-nrps|9081895-9225210|4496	CP028369_DEG10180034_butyrolactone-transatpks-t1pks-nrps_cluster-3_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces sp. P3
 
 LPJL01000073|DEG10180099|77059|77324|72002|73378|cluster-1|transatpks-nrps|61033-138345|3681	LPJL01000073_DEG10180099_transatpks-nrps_cluster-1_Proteobacteria_Cysteinyl-tRNA_synthetase_(EC_6.1.1.16)_Burkholderia ubonensis
-
-FNKU01000002|DEG10180047|57057|57270|56438|56935|cluster-1|t1pks|40051-103641|122	FNKU01000002_DEG10180047_t1pks_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Pseudomonas cannabina
 
 JFHX01000029|DEG10180179|17542|17958|15575|16831|cluster-1|transatpks-t1pks-nrps|1-47272|711	JFHX01000029_DEG10180179_transatpks-t1pks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus ehimensis A2
 
@@ -261,8 +235,6 @@ BARG01000038|DEG10180303|264410|264836|259610|261055|cluster-1|t1pks|243789-2915
 NZ_KB892913|DEG10180179|77005|77466|76309|88023|cluster-1|t1pks|56309-97301|1157	NZ_KB892913_DEG10180179_t1pks_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Desulfobacter curvatus DSM 3379
 
 FNGM01000024|DEG10180179|22886|23308|21526|22803|cluster-1|transatpks-t1pks-nrps|1-98282|83	FNGM01000024_DEG10180179_transatpks-t1pks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus jilunlii
-
-MUMI01000368|DEG10180394|22696|23113|17072|17731|cluster-1|t1pks-nrps|1-37238|4965	MUMI01000368_DEG10180394_t1pks-nrps_cluster-1_Actinobacteria_Holo-[acyl-carrier_protein]_synthase_(EC_2.7.8.7)_Amycolatopsis kentuckyensis
 
 KK322558|DEG10180397|2913169|2913592|2907450|2908172|cluster-1|t1pks-nrps|2893066-2987575|4997	KK322558_DEG10180397_t1pks-nrps_cluster-1_Actinobacteria_Ribonuclease_III_(EC_3.1.26.3)_Mycobacterium tuberculosis XTB13-198
 
@@ -300,8 +272,6 @@ LAZR01000565|DEG10180179|11382|11842|10657|21435|cluster-1|t1pks|1-27899|1185	LA
 
 GL877172|DEG10180034|3130058|3130494|3133307|3139177|cluster-3|t1pks-nrps|3110053-3164793|2813	GL877172_DEG10180034_t1pks-nrps_cluster-3_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces griseus XylebKG-1
 
-JPWG01000010|DEG10180180|85685|86030|84894|85619|cluster-1|t1pks-arylpolyene-nrps|8429-106863|66	JPWG01000010_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira xiamenensis
-
 NZ_FKIO01000038|DEG10180179|49|499|44|4483|cluster-1|t1pks|1-5150|455	NZ_FKIO01000038_DEG10180179_t1pks_cluster-1_Nitrospinae/Tectomicrobia group_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Candidatus Entotheonella palauensis
 
 JNXE01000004|DEG10180303|102213|102640|97402|98847|cluster-1|t1pks|81591-129417|3366	JNXE01000004_DEG10180303_t1pks_cluster-1_Actinobacteria_Glyceraldehyde_3-phosphate_dehydrogenase_A_(EC_1.2.1.12)_Streptomyces sp. NRRL F-525
@@ -319,8 +289,6 @@ JSWG01000006|DEG10180543|14161|14619|10951|12342|cluster-1|t1pks-PUFA-otherks|1-
 CEOP01166524|DEG10180179|9|468|3|3341|cluster-1|t1pks|1-3343|465	CEOP01166524_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_marine metagenome
 
 CP022163|DEG10180034|8272636|8273060|8271953|8280439|cluster-1|butyrolactone-lantipeptide-t1pks-nrps|8232812-8316174|1107	CP022163_DEG10180034_butyrolactone-lantipeptide-t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Melittangium boletus DSM 14713
-
-CP025939|DEG10180180|843511|843935|842617|843354|cluster-1|transatpks|823394-923837|157	CP025939_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
 
 CP006058|DEG10180034|138762|139184|138092|150040|cluster-2|bacteriocin-transatpks-nrps|80563-231830|1092	CP006058_DEG10180034_bacteriocin-transatpks-nrps_cluster-2_Firmicutes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Bacillus amyloliquefaciens UMAF6639
 
@@ -374,8 +342,6 @@ OQZJ01000001|DEG10180179|556306|556625|554018|556225|cluster-1|transatpks|488367
 
 NMVN01000001|DEG10180439|724923|725313|728823|730016|cluster-1|t2pks-oligosaccharide-t1pks-otherks|691473-779288|3510	NMVN01000001_DEG10180439_t2pks-oligosaccharide-t1pks-otherks_cluster-1_Actinobacteria_S-adenosylmethionine_synthetase_(EC_2.5.1.6)_Propionibacteriaceae bacterium NML 061049
 
-MUMC01000036|DEG10180047|8471|8688|9531|10052|cluster-1|t1pks|6559-51955|843	MUMC01000036_DEG10180047_t1pks_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Streptomyces rhizosphaericus
-
 LZML01000068|DEG10180393|16382|16808|12997|13467|cluster-1|t1pks|1-42705|2915	LZML01000068_DEG10180393_t1pks_cluster-1_Actinobacteria_Hypothetical_protein_yfhC_Nocardia sp. 852002-51101_SCH5132738
 
 AEDD01000016|DEG10180179|58946|59369|57614|58912|cluster-1|transatpks-nrps|7928-86009|34	AEDD01000016_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus curdlanolyticus YK9
@@ -389,8 +355,6 @@ PBTU01000117|DEG10180034|32|459|2461|3882|cluster-1|t1pks|1-12559|2002	PBTU01000
 CP025018|DEG10180179|560148|560554|551612|560137|cluster-2|t1pks|531612-580137|11	CP025018_DEG10180179_t1pks_cluster-2_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. M56
 
 KQ976354|DEG10180034|2091112|2091535|2091109|2100063|cluster-1|t1pks-nrps|2067478-2120063|426	KQ976354_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Scytonema hofmannii PCC 7110
-
-FNSO01000004|DEG10180180|1972152|1972479|1974265|1974999|cluster-2|linaridin-ladderane-t1pks-otherks-nrps|1919775-2056676|1786	FNSO01000004_DEG10180180_linaridin-ladderane-t1pks-otherks-nrps_cluster-2_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Amycolatopsis tolypomycina
 
 CP027429|DEG10180311|1503835|1504253|1499353|1500822|cluster-1|transatpks|1482960-1579744|3013	CP027429_DEG10180311_transatpks_cluster-1_Firmicutes_Glucose-6-phosphate_1-dehydrogenase_(EC_1.1.1.49)_Bacillus velezensis
 
@@ -413,8 +377,6 @@ AJHM01000006|DEG10180179|869699|870029|864686|865552|cluster-1|nrps-transatpks-o
 NZ_QLTT01000004|DEG10180179|564974|565389|564974|567907|cluster-2|indole-t1pks-nrps|522096-593645|415	NZ_QLTT01000004_DEG10180179_indole-t1pks-nrps_cluster-2_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Lechevalieria atacamensis
 
 LS992241|DEG10180034|2913257|2913679|2913223|2920422|cluster-11|t1pks-nrps|2883531-2950759|456	LS992241_DEG10180034_t1pks-nrps_cluster-11_Firmicutes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Paenibacillus alvei
-
-RBAM01000001|DEG10180180|638255|638681|635966|636730|cluster-7|transatpks-t1pks-nrps|581254-749888|1525	RBAM01000001_DEG10180180_transatpks-t1pks-nrps_cluster-7_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces klenkii
 
 JPMW01000001|DEG10180074|7736674|7737085|7731166|7733517|cluster-1|t1pks|7716564-7763022|3157	JPMW01000001_DEG10180074_t1pks_cluster-1_Actinobacteria_Protein-export_membrane_protein_secF_Planobispora rosea
 
@@ -446,8 +408,6 @@ JYGH01000020|DEG10180072|434207|434616|429101|429940|cluster-3|transatpks|413324
 
 PJMW01000002|DEG10180098|1525636|1526069|1521347|1521844|cluster-1|t1pks|1505504-1550765|3792	PJMW01000002_DEG10180098_t1pks_cluster-1_Actinobacteria_Peptidyl-prolyl_cis-trans_isomerase_B_(EC_5.2.1.8)_Nocardia fluminea
 
-BDJC01000076|DEG10180180|3126|3543|263|967|cluster-1|transatpks-nrps|1-28389|2159	BDJC01000076_DEG10180180_transatpks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. JHA26
-
 LZJZ01000015|DEG10180351|66049|66467|61724|64240|cluster-1|t1pks-nrps|46049-98643|1809	LZJZ01000015_DEG10180351_t1pks-nrps_cluster-1_Actinobacteria_DNA_gyrase_subunit_A_(EC_5.99.1.3)_Mycobacterium sp. E2733
 
 CP004025|DEG10180179|6816247|6816674|6814733|6815608|cluster-1|transatpks-terpene-nrps|6777991-6927205|639	CP004025_DEG10180179_transatpks-terpene-nrps_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Myxococcus stipitatus DSM 14675
@@ -470,8 +430,6 @@ PZOX01000007|DEG10180034|228906|229329|223351|226674|cluster-2|t1pks-nrps|194859
 
 CP021707|DEG10180179|5993417|5993843|5993382|6004220|cluster-19|oligosaccharide-t1pks|5952593-6076893|461	CP021707_DEG10180179_oligosaccharide-t1pks_cluster-19_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. S063
 
-AM746676|DEG10180180|6861368|6862026|6858469|6860016|cluster-1|t1pks-otherks|6840778-6887494|1352	AM746676_DEG10180180_t1pks-otherks_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Sorangium cellulosum So ce56
-
 LT575476|DEG10180179|2873074|2873496|2869418|2870743|cluster-1|t1pks-nrps|2828009-2914400|2331	LT575476_DEG10180179_t1pks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus tuaregi
 
 NQXV01000044|DEG10180179|247426|247849|245088|247394|cluster-2|transatpks|227416-313315|32	NQXV01000044_DEG10180179_transatpks_cluster-2_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus velezensis
@@ -489,8 +447,6 @@ CP017834|DEG10180067|932807|933233|929811|930113|cluster-1|t1pks-nrps|912795-964
 LPDO01000022|DEG10180034|112574|112998|112541|125938|cluster-1|bacteriocin-t1pks-nrps|68408-183467|457	LPDO01000022_DEG10180034_bacteriocin-t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Burkholderia ubonensis
 
 FNHB01000001|DEG10180107|983342|983669|980525|981058|cluster-1|transatpks-otherks|963262-1064871|2284	FNHB01000001_DEG10180107_transatpks-otherks_cluster-1_Firmicutes_Protein_crcB_Dendrosporobacter quercicolus
-
-BBXF01000003|DEG10180047|243959|244218|242279|242752|cluster-1|t1pks-arylpolyene-nrps|223838-333951|1207	BBXF01000003_DEG10180047_t1pks-arylpolyene-nrps_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Herbidospora daliensis
 
 POWG01000032|DEG10180307|38284|38701|34081|34425|cluster-1|transatpks|25629-76681|3859	POWG01000032_DEG10180307_transatpks_cluster-1_Proteobacteria_Hypothetical_protein_yoaB_Azospirillum brasilense
 
@@ -540,13 +496,9 @@ CP022545|DEG10180522|2096340|2096806|2092126|2093973|cluster-1|t1pks-otherks|207
 
 CP028159|DEG10180034|193191|193615|193186|201315|cluster-1|t1pks-nrps|142769-226560|429	CP028159_DEG10180034_t1pks-nrps_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Plantactinospora sp. BB1
 
-LT854273|DEG10180180|5764401|5764831|5763160|5764071|cluster-6|t1pks|5744396-5793538|330	LT854273_DEG10180180_t1pks_cluster-6_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Zymoseptoria tritici ST99CH_3D1
-
 JABQ01000230|DEG10180179|600|833|1|2496|cluster-1|t1pks|1-2496|832	JABQ01000230_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. PRh5
 
 FOIJ01000009|DEG10180325|148625|149047|147429|148106|cluster-1|t1pks-terpene-nrps|103698-232326|519	FOIJ01000009_DEG10180325_t1pks-terpene-nrps_cluster-1_Proteobacteria_CDP-diacylglycerol--glycerol-3-phosphate_3-phosphatidyltransferase_(EC_2.7.8.5)_Stigmatella erecta
-
-LN877229|DEG10180047|2189354|2189612|2190356|2190811|cluster-8|t1pks-nrps|2160639-2214732|744	LN877229_DEG10180047_t1pks-nrps_cluster-8_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Kibdelosporangium sp. MJ126-NF4
 
 CP005080|DEG10180034|567578|568009|560366|567571|cluster-5|t1pks-nrps|540366-590843|7	CP005080_DEG10180034_t1pks-nrps_cluster-5_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces fulvissimus DSM 40593
 
@@ -576,8 +528,6 @@ JF342593|DEG10180034|36835|37102|28493|36820|cluster-1|t1pks-nrps|1-37660|15	JF3
 
 CP033073|DEG10180241|941246|941670|946617|947252|cluster-1|t1pks|854794-965081|4947	CP033073_DEG10180241_t1pks_cluster-1_Actinobacteria_Acyl_carrier_protein_phosphodiesterase_(EC_3.1.4.14)_Streptomyces sp. Z022
 
-QTTT01000001|DEG10180047|6464120|6464334|6465101|6465580|cluster-1|t1pks|6460541-6506972|767	QTTT01000001_DEG10180047_t1pks_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Actinomadura umbrina
-
 AMLP01000018|DEG10180044|15847|16270|10784|12670|cluster-1|t1pks-terpene|1-43401|3177	AMLP01000018_DEG10180044_t1pks-terpene_cluster-1_Actinobacteria_Undecaprenyl_pyrophosphate_synthetase_(EC_2.5.1.31)_Streptomyces viridochromogenes Tue57
 
 LN997842|DEG10180508|2087711|2087755|2084827|2085996|cluster-2|ectoine-t1pks-otherks|2033920-2093478|1715	LN997842_DEG10180508_ectoine-t1pks-otherks_cluster-2_Actinobacteria_Elongation_factor_Tu_Streptomyces reticuli
@@ -585,8 +535,6 @@ LN997842|DEG10180508|2087711|2087755|2084827|2085996|cluster-2|ectoine-t1pks-oth
 QRDZ01000003|DEG10180179|393009|393434|390774|391991|cluster-1|transatpks-nrps|357166-420760|1018	QRDZ01000003_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Cohnella phaseoli
 
 LIUT01000001|DEG10180179|2207360|2207786|2204264|2205550|cluster-1|transatpks-nrps|2187329-2252657|1810	LIUT01000001_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus solani
-
-ALYX01000008|DEG10180180|35487|35885|34457|35194|cluster-1|ladderane-t1pks-nrps|1-49468|293	ALYX01000008_DEG10180180_ladderane-t1pks-nrps_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptococcus mutans B112SM-A
 
 CP007155|DEG10180179|7432887|7433308|7423185|7432829|cluster-3|oligosaccharide-t1pks|7346235-7511754|58	CP007155_DEG10180179_oligosaccharide-t1pks_cluster-3_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Kutzneria albida DSM 43870
 
@@ -608,10 +556,6 @@ MUNF01000042|DEG10180050|2361|2780|268|885|cluster-1|t1pks|1-20178|1476	MUNF0100
 
 LSZM01000003|DEG10180179|44146|44575|42810|44063|cluster-1|transatpks-nrps|4388-82123|83	LSZM01000003_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus velezensis
 
-CP031320|DEG10180180|5729221|5729644|5725270|5726040|cluster-2|t1pks|5709215-5754098|3181	CP031320_DEG10180180_t1pks_cluster-2_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces armeniacus
-
-KB904018|DEG10180047|274321|274701|272716|273204|cluster-2|nrps-t1pks-ladderane|254315-301419|1117	KB904018_DEG10180047_nrps-t1pks-ladderane_cluster-2_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Nonomuraea coxensis DSM 45129
-
 CP006003|DEG10180179|6184864|6185289|6184824|6190298|cluster-6|bacteriocin-t1pks-nrps|6161965-6251589|465	CP006003_DEG10180179_bacteriocin-t1pks-nrps_cluster-6_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Myxococcus fulvus 124B02
 
 JANZ01000006|DEG10180483|341777|342081|346874|347377|cluster-1|t3pks-t1pks|305937-353577|4793	JANZ01000006_DEG10180483_t3pks-t1pks_cluster-1_Actinobacteria_Arginine_repressor_Mycobacterium kansasii 732
@@ -621,8 +565,6 @@ NZ_FNSD01000001|DEG10180034|4080205|4080636|4080196|4088028|cluster-5|t1pks-nrps
 OBJC01000114|DEG10180179|6565|7026|6533|15400|cluster-1|t1pks|1-15400|493	OBJC01000114_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_metagenome
 
 PFGG01000041|DEG10180113|97138|97550|90247|92775|cluster-1|t1pks|76442-121895|4363	PFGG01000041_DEG10180113_t1pks_cluster-1_None_Leucyl-tRNA_synthetase_(EC_6.1.1.4)_bacterium (Candidatus Blackallbacteria) CG13_big_fil_rev_8_21_14_2_50_49_14 (groundwater metagenome)
-
-FN554889|DEG10180047|8810182|8810428|8809594|8810046|cluster-2|t1pks|8793133-8848674|136	FN554889_DEG10180047_t1pks_cluster-2_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Streptomyces scabiei 87.22
 
 JOFE01000006|DEG10180034|496947|497412|490582|496950|cluster-3|t1pks-nrps|470582-520429|3	JOFE01000006_DEG10180034_t1pks-nrps_cluster-3_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces griseus subsp. rhodochrous
 
@@ -636,13 +578,9 @@ LC008143|DEG10180179|44063|44487|37994|44008|cluster-1|t1pks|1-72530|55	LC008143
 
 MASI01000003|DEG10180179|64689|65043|61529|62950|cluster-1|transatpks|42947-84677|1739	MASI01000003_DEG10180179_transatpks_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Methyloligella halotolerans
 
-ATMS01000014|DEG10180180|211592|211933|210798|211544|cluster-1|transatpks-ladderane-nrps|160849-234435|48	ATMS01000014_DEG10180180_transatpks-ladderane-nrps_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Paenibacillus alvei A6-6i-x
-
 QTVG01000014|DEG10180179|28|455|2023|3279|cluster-1|transatpks|1-21997|1568	QTVG01000014_DEG10180179_transatpks_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Eubacterium sp. AF36-5BH
 
 JAGE01000001|DEG10180179|2332224|2332651|2330868|2332100|cluster-1|transatpks-nrps|2312194-2402676|124	JAGE01000001_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Ruminiclostridium josui JCM 17888
-
-QVNU01000001|DEG10180180|1158906|1159337|1157950|1158702|cluster-1|transatpks|1138894-1189255|204	QVNU01000001_DEG10180180_transatpks_cluster-1_Bacteroidetes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Taibaiella koreensis
 
 CP007155|DEG10180179|1570843|1571255|1560570|1570775|cluster-3|t1pks-nrps|1540570-1652929|68	CP007155_DEG10180179_t1pks-nrps_cluster-3_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Kutzneria albida DSM 43870
 
@@ -676,8 +614,6 @@ OGSV01000051|DEG10180179|19863|20287|24890|26110|cluster-1|transatpks-nrps|1-600
 
 MH325201|DEG10180034|12869|13296|12831|22172|cluster-1|t1pks-nrps|1-55894|465	MH325201_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Symplocastrum muelleri NIVA-CYA 644
 
-FMUV01000003|DEG10180180|75477|75810|76692|77429|cluster-1|transatpks-otherks|1-96665|882	FMUV01000003_DEG10180180_transatpks-otherks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Ruminococcus bromii
-
 CP013445|DEG10180034|65409|65833|65376|78782|cluster-1|bacteriocin-t1pks-nrps|21243-147909|457	CP013445_DEG10180034_bacteriocin-t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Burkholderia ubonensis
 
 NZ_JNYP01000001|DEG10180034|386049|386508|379778|386047|cluster-3|t1pks-nrps|359778-409526|2	NZ_JNYP01000001_DEG10180034_t1pks-nrps_cluster-3_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces vinaceus
@@ -685,8 +621,6 @@ NZ_JNYP01000001|DEG10180034|386049|386508|379778|386047|cluster-3|t1pks-nrps|359
 ARPF01000007|DEG10180034|440868|441299|433473|440861|cluster-5|t1pks-nrps|358676-464199|7	ARPF01000007_DEG10180034_t1pks-nrps_cluster-5_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces sp. SolWspMP-sol2th
 
 MG459168|DEG10180179|85734|86158|74694|85661|cluster-1|t1pks-nrps|1-116700|73	MG459168_DEG10180179_t1pks-nrps_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. ID38640
-
-CP016808|DEG10180180|5934825|5935136|5934035|5934775|cluster-2|transatpks-nrps|5874058-5945125|50	CP016808_DEG10180180_transatpks-nrps_cluster-2_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Paenibacillus sp. BIHB4019
 
 QRDR01000001|DEG10180034|621583|622007|610931|621553|cluster-5|transatpks-nrps|570719-699897|30	QRDR01000001_DEG10180034_transatpks-nrps_cluster-5_Firmicutes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Brevibacillus brevis
 
@@ -750,13 +684,9 @@ PYAX01000004|DEG10180034|136735|137151|136191|146120|cluster-2|transatpks-t1pks-
 
 CETU01170121|DEG10180179|1|431|1|2979|cluster-1|t1pks|1-2981|430	CETU01170121_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_marine metagenome
 
-LGDH01000178|DEG10180180|174287|174603|173444|174190|cluster-1|phosphonate-t1pks-ladderane|144101-215593|97	LGDH01000178_DEG10180180_phosphonate-t1pks-ladderane_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. IGB124
-
 LZYU01000002|DEG10180179|80267|80690|78973|80226|cluster-1|transatpks-nrps|28449-121775|41	LZYU01000002_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Clostridium roseum
 
 PSRG01000149|DEG10180034|727|1149|1|7023|cluster-1|transatpks|1-8686|1148	PSRG01000149_DEG10180034_transatpks_cluster-1_Acidobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Acidobacteria bacterium (soil metagenome)
-
-CP017747|DEG10180180|837811|838235|836917|837654|cluster-1|transatpks|817694-893475|157	CP017747_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
 
 PVQO01000001|DEG10180179|716136|716558|714243|715445|cluster-2|transatpks-nrps|695466-785641|691	PVQO01000001_DEG10180179_transatpks-nrps_cluster-2_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus atrophaeus
 
@@ -768,15 +698,9 @@ LFNT01000001|DEG10180034|37280|37711|29876|37222|cluster-1|t1pks-nrps|9876-60608
 
 KB891883|DEG10180164|98028|98455|93952|94674|cluster-2|terpene-siderophore-t1pks-nrps|37624-137089|3354	KB891883_DEG10180164_terpene-siderophore-t1pks-nrps_cluster-2_Actinobacteria_TorCAD_operon_transcriptional_regulatory_protein_torR_Streptomyces sp. MspMP-M5
 
-LGDW01000452|DEG10180047|54134|54380|53524|53976|cluster-1|t1pks|37063-77629|158	LGDW01000452_DEG10180047_t1pks_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Streptomyces sp. NRRL WC-3618
-
-PIWI01000022|DEG10180180|562312|562736|561417|562154|cluster-1|transatpks|542194-642641|158	PIWI01000022_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
-
 JPLW01000006|DEG10180357|358942|359366|357065|358600|cluster-2|t1pks|338811-443853|342	JPLW01000006_DEG10180357_t1pks_cluster-2_Actinobacteria_O-succinylbenzoic_acid--CoA_ligase_(EC_6.2.1.26)_Amycolatopsis sp. MJM2582
 
 QJUA01000013|DEG10180029|39493|39915|36468|37871|cluster-1|t1pks|19457-71846|1622	QJUA01000013_DEG10180029_t1pks_cluster-1_Actinobacteria_Dihydrolipoamide_dehydrogenase_(EC_1.8.1.4)_Mycobacterium kyogaense
-
-LIPC01000001|DEG10180180|331721|332056|333382|334164|cluster-1|t2pks-phenazine-t1pks-otherks|276531-352867|1326	LIPC01000001_DEG10180180_t2pks-phenazine-t1pks-otherks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. TSRI0445
 
 AZVZ01000050|DEG10180179|1|270|1|2679|cluster-1|t1pks|1-22679|269	AZVZ01000050_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Salinispora pacifica CNT131
 
@@ -787,8 +711,6 @@ KE150413|DEG10180179|2814605|2815031|2811510|2812790|cluster-1|transatpks-nrps|2
 CP033054|DEG10180072|2757407|2757816|2752301|2753140|cluster-1|transatpks|2736524-2836971|4267	CP033054_DEG10180072_transatpks_cluster-1_Firmicutes_Pyrroline-5-carboxylate_reductase_(EC_1.5.1.2)_Bacillus velezensis
 
 KZ836076|DEG10180052|196151|196485|191913|193604|cluster-1|t2pks-t1pks|176063-247566|2547	KZ836076_DEG10180052_t2pks-t1pks_cluster-1_Actinobacteria_Acetyl-coenzyme_A_carboxylase_carboxyl_transferase_subunit_alpha_(EC_6.4.1.2)_Streptomyces qinglanensis
-
-NZ_NTFY01000060|DEG10180180|16113|16574|15276|16040|cluster-1|t1pks|1-44244|73	NZ_NTFY01000060_DEG10180180_t1pks_cluster-1_Planctomycetes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Rhodopirellula sp. SM50
 
 LS992241|DEG10180179|2500462|2500894|2496843|2500250|cluster-10|bacteriocin-transatpks-t1pks-nrps|2444713-2602747|212	LS992241_DEG10180179_bacteriocin-transatpks-t1pks-nrps_cluster-10_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus alvei
 
@@ -809,8 +731,6 @@ BDBP01000021|DEG10180098|27819|28253|25560|26057|cluster-1|t1pks|7689-52983|1762
 MVHE01000030|DEG10180299|50479|50901|46159|46749|cluster-1|t1pks-nrps|743-60651|3730	MVHE01000030_DEG10180299_t1pks-nrps_cluster-1_Actinobacteria_Hypothetical_protein_ynjA_Mycobacterium angelicum
 
 LJGV01000022|DEG10180052|1705408|1705742|1709074|1710765|cluster-1|t2pks-t1pks|1655256-1726624|3332	LJGV01000022_DEG10180052_t2pks-t1pks_cluster-1_Actinobacteria_Acetyl-coenzyme_A_carboxylase_carboxyl_transferase_subunit_alpha_(EC_6.4.1.2)_Streptomyces qinglanensis
-
-CP025537|DEG10180180|227661|228003|226876|227601|cluster-1|t1pks-arylpolyene-nrps|98761-248821|60	CP025537_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Vibrio harveyi
 
 KX708168|DEG10180179|656|1094|1|7113|cluster-1|t1pks|1-7113|1093	KX708168_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp
 
@@ -837,8 +757,6 @@ CP031749|DEG10180179|1823340|1823765|1822042|1823271|cluster-1|transatpks-nrps|1
 LWBU01000101|DEG10180150|54107|54498|49854|50624|cluster-1|t1pks|34106-80381|3483	LWBU01000101_DEG10180150_t1pks_cluster-1_Actinobacteria_3-deoxy-manno-octulosonate_cytidylyltransferase_(EC_2.7.7.38)_Streptomyces albulus
 
 FP885907|DEG10180244|1076809|1077219|1074035|1074640|cluster-4|transatpks|1055705-1174520|2169	FP885907_DEG10180244_transatpks_cluster-4_Proteobacteria_Hypothetical_protein_ydcN_Ralstonia solanacearum CFBP2957
-
-BBPN01000010|DEG10180180|174757|174898|173719|174477|cluster-1|t1pks-ectoine-arylpolyene-nrps|107997-201072|280	BBPN01000010_DEG10180180_t1pks-ectoine-arylpolyene-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptacidiphilus jiangxiensis
 
 CP009280|DEG10180283|4433231|4433502|4427767|4428789|cluster-1|transatpks-otherks|4397623-4519544|4442	CP009280_DEG10180283_transatpks-otherks_cluster-1_Firmicutes_Putative_electron_transfer_flavoprotein_subunit_ydiR_Paenibacillus sp. FSL P4-0081
 
@@ -872,8 +790,6 @@ FJ872523|DEG10180179|73909|74320|63693|73826|cluster-1|t1pks|1-85059|83	FJ872523
 
 PYAX01000012|DEG10180052|177843|178183|179292|180998|cluster-1|bacteriocin-t2pks-t1pks|120458-199012|1109	PYAX01000012_DEG10180052_bacteriocin-t2pks-t1pks_cluster-1_Actinobacteria_Acetyl-coenzyme_A_carboxylase_carboxyl_transferase_subunit_alpha_(EC_6.4.1.2)_Saccharothrix carnea
 
-CP022161|DEG10180180|10863841|10864083|10862005|10862766|cluster-4|t1pks-nrps|10788130-10939144|1075	CP022161_DEG10180180_t1pks-nrps_cluster-4_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. 1H-SSA4
-
 MH480575|DEG10180179|21306|21730|21274|24258|cluster-1|t1pks|1-37031|456	MH480575_DEG10180179_t1pks_cluster-1_environmental samples_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_uncultured bacterium
 
 ATZF01000001|DEG10180076|451885|452343|447752|448228|cluster-2|t1pks|431880-479871|3657	ATZF01000001_DEG10180076_t1pks_cluster-2_Firmicutes_6,7-dimethyl-8-ribityllumazine_synthase_(EC_2.5.1.9)_Shimazuella kribbensis DSM 45090
@@ -893,8 +809,6 @@ AORV01000021|DEG10180524|273499|273954|270585|271160|cluster-2|t1pks-nrps|253477
 CP021434|DEG10180179|761280|761707|756510|757793|cluster-1|transatpks-nrps|671117-837700|3487	CP021434_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Tumebacillus sp. AR23208
 
 FJ545274|DEG10180179|67162|67595|60601|67128|cluster-1|t1pks|1-79604|34	FJ545274_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces antibioticus
-
-JNXR01000021|DEG10180180|46354|46781|45589|46332|cluster-1|butyrolactone-otherks-t1pks-nrps|945-100265|22	JNXR01000021_DEG10180180_butyrolactone-otherks-t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces durhamensis
 
 HG328253|DEG10180545|210181|210603|205146|206948|cluster-1|transatpks-nrps|189514-258694|3233	HG328253_DEG10180545_transatpks-nrps_cluster-1_Firmicutes_Glucosamine--fructose-6-phosphate_aminotransferase_[isomerizing]_(EC_2.6.1.16)_Bacillus velezensis UCMB5033
 
@@ -964,10 +878,6 @@ LT629789|DEG10180357|401007|401431|399082|400617|cluster-1|t1pks-nrps|270991-485
 
 KE150412|DEG10180179|39582|40007|38263|39507|cluster-1|transatpks-nrps|1-61440|75	KE150412_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus sp. HGH0039
 
-FOZX01000003|DEG10180180|416730|417090|415975|416670|cluster-1|lantipeptide-t1pks|239912-453917|60	FOZX01000003_DEG10180180_lantipeptide-t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Saccharopolyspora flava
-
-NZ_RFLX01000002|DEG10180180|409546|409966|405920|406669|cluster-1|t1pks|389511-436893|2877	NZ_RFLX01000002_DEG10180180_t1pks_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Roseomonas sp. Z23
-
 PYCI01000029|DEG10180034|8371|8797|11467|15834|cluster-1|t1pks-nrps|1-50992|2670	PYCI01000029_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Chroococcidiopsis sp. CCALA 051
 
 CP020821|DEG10180179|1538521|1538940|1538485|1551015|cluster-1|t1pks|1518485-1571015|455	CP020821_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Mycobacterium colombiense CECT 3035
@@ -978,8 +888,6 @@ CP023474|DEG10180179|3648949|3649370|3647625|3648893|cluster-2|transatpks-nrps|3
 
 CP012201|DEG10180052|1375332|1375749|1373740|1374720|cluster-5|nrps-transatpks-otherks|1362729-1466707|612	CP012201_DEG10180052_nrps-transatpks-otherks_cluster-5_Proteobacteria_Acetyl-coenzyme_A_carboxylase_carboxyl_transferase_subunit_alpha_(EC_6.4.1.2)_Massilia sp. NR 4-1
 
-CP017248|DEG10180180|6304068|6304481|6300738|6301487|cluster-2|melanin-aminocoumarin-t1pks-nrps|6254741-6388081|2581	CP017248_DEG10180180_melanin-aminocoumarin-t1pks-nrps_cluster-2_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces puniciscabiei
-
 QUQO01000001|DEG10180034|334754|335184|331486|334698|cluster-2|t1pks-nrps|306574-357492|56	QUQO01000001_DEG10180034_t1pks-nrps_cluster-2_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Parvularcula sp. SM1705
 
 MEIA01000001|DEG10180206|110532|110954|109056|109910|cluster-1|t1pks|1-130524|622	MEIA01000001_DEG10180206_t1pks_cluster-1_Actinobacteria_Protein_methyltranferase_hemK_(EC_2.1.1.-)_Couchioplanes caeruleus subsp. caeruleus
@@ -987,8 +895,6 @@ MEIA01000001|DEG10180206|110532|110954|109056|109910|cluster-1|t1pks|1-130524|62
 PKFQ01000001|DEG10180302|5404121|5404544|5403350|5403913|cluster-1|t1pks-nrps|5384086-5490116|208	PKFQ01000001_DEG10180302_t1pks-nrps_cluster-1_Actinobacteria_Protein_ydjA_Streptomyces cinnamoneus
 
 CP026652|DEG10180034|2251192|2251622|2254479|2260073|cluster-7|siderophore-t1pks-nrps|2231186-2308466|2857	CP026652_DEG10180034_siderophore-t1pks-nrps_cluster-7_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces sp. XZHG99
-
-CP025258|DEG10180180|2293209|2293633|2292314|2293051|cluster-1|transatpks|2273091-2373541|158	CP025258_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus sp. SJ-10
 
 KZ679046|DEG10180338|353313|353743|348224|349255|cluster-3|t1pks-nrps|332577-384675|4058	KZ679046_DEG10180338_t1pks-nrps_cluster-3_Actinobacteria_Galactitol-1-phosphate_5-dehydrogenase_(EC_1.1.1.251)_Streptomyces sp. A217
 
@@ -1006,8 +912,6 @@ LRQU01000002|DEG10180099|232693|232975|226557|227942|cluster-1|t1pks-nrps|215783
 
 LPEC01000052|DEG10180034|148077|148501|148044|161438|cluster-2|t1pks-nrps|103911-174890|457	LPEC01000052_DEG10180034_t1pks-nrps_cluster-2_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Burkholderia ubonensis
 
-JPJZ01000050|DEG10180180|23436|23865|20952|22342|cluster-1|t1pks|3052-52759|1094	JPJZ01000050_DEG10180180_t1pks_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Pseudogymnoascus sp. VKM F-4516 (FW-969)
-
 LYMC01000002|DEG10180179|874870|875175|870171|872483|cluster-2|transatpks-otherks|854869-954351|2387	LYMC01000002_DEG10180179_transatpks-otherks_cluster-2_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus subtilis
 
 LZKU01000232|DEG10180483|63139|63563|58726|59220|cluster-1|t3pks-t1pks|41992-67846|3919	LZKU01000232_DEG10180483_t3pks-t1pks_cluster-1_Actinobacteria_Arginine_repressor_Mycobacterium sp. 1465703.0
@@ -1017,10 +921,6 @@ QZDE01000003|DEG10180179|530392|530722|525367|526233|cluster-1|nrps-transatpks-o
 PXBH01000059|DEG10180190|33080|33501|27895|29061|cluster-1|t1pks|11781-61197|4019	PXBH01000059_DEG10180190_t1pks_cluster-1_Bacteroidetes_tRNA_(5-methylaminomethyl-2-thiouridylate)-methyltransferase_(EC_2.1.1.61)_Cryomorphaceae bacterium (soda lake metagenome)
 
 CP003259|DEG10180179|508904|509331|507546|508778|cluster-1|transatpks-nrps|488874-578867|126	CP003259_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Clostridium sp. BNL1100
-
-QKTW01000022|DEG10180180|443999|444428|443098|443850|cluster-1|transatpks|423961-474238|149	QKTW01000022_DEG10180180_transatpks_cluster-1_Bacteroidetes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Taibaiella soli
-
-CP023009|DEG10180047|1913672|1913906|1914705|1915202|cluster-2|t1pks|1886300-1963818|799	CP023009_DEG10180047_t1pks_cluster-2_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Lonsdalea britannica
 
 BCNM01000010|DEG10180034|238261|238680|237583|246834|cluster-1|transatpks-nrps|217583-252857|1097	BCNM01000010_DEG10180034_transatpks-nrps_cluster-1_Firmicutes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Paenibacillus pabuli NBRC 13638
 
@@ -1045,8 +945,6 @@ AP018207|DEG10180034|8294531|8294954|8293422|8309381|cluster-2|t1pks-nrps|827342
 ANAW01000217|DEG10180052|20770|21139|16184|17857|cluster-1|t2pks-t1pks-otherks|1-73180|2913	ANAW01000217_DEG10180052_t2pks-t1pks-otherks_cluster-1_Actinobacteria_Acetyl-coenzyme_A_carboxylase_carboxyl_transferase_subunit_alpha_(EC_6.4.1.2)_Nocardiopsis synnemataformans DSM 44143
 
 CP006941|DEG10180179|1271377|1271804|1270060|1271307|cluster-2|transatpks-nrps|1206549-1306530|70	CP006941_DEG10180179_transatpks-nrps_cluster-2_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus polymyxa CR1
-
-NZ_CCDX020000012|DEG10180180|177388|177725|176597|177322|cluster-1|t1pks-arylpolyene-nrps|144687-222800|66	NZ_CCDX020000012_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira sp. GB04J01
 
 JH650741|DEG10180376|500331|500757|498975|500279|cluster-2|t1pks-nrps|460560-529655|52	JH650741_DEG10180376_t1pks-nrps_cluster-2_Proteobacteria_Succinyl-diaminopimelate_desuccinylase_(EC_3.5.1.18)_Pseudoalteromonas flavipulchra JG1
 
@@ -1080,11 +978,7 @@ QUMQ01000001|DEG10180285|7751208|7751562|7752748|7753806|cluster-2|t1pks|7725020
 
 JPDT01000319|DEG10180034|12566|12991|12532|21894|cluster-1|t1pks-nrps|1-63536|459	JPDT01000319_DEG10180034_t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Candidatus Magnetomorum sp. HK-1
 
-CP020555|DEG10180180|4628321|4628637|4629510|4630256|cluster-1|phosphonate-t1pks-ladderane|4600796-4659754|873	CP020555_DEG10180180_phosphonate-t1pks-ladderane_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. Sge12
-
 CXWK01016315|DEG10180179|864|1106|1|6735|cluster-1|t1pks|1-6753|1105	CXWK01016315_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_wastewater metagenome
-
-LUTP01000034|DEG10180047|6185|6419|7218|7706|cluster-1|t1pks|1-24110|799	LUTP01000034_DEG10180047_t1pks_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Lonsdalea iberica
 
 LXIC01000001|DEG10180146|855053|855494|852466|853128|cluster-2|t1pks-otherks|834393-887006|1925	LXIC01000001_DEG10180146_t1pks-otherks_cluster-2_Actinobacteria_Protein_ycaC_Streptomyces sp. RTd22
 
@@ -1106,8 +1000,6 @@ LZHV01000055|DEG10180483|52558|52984|48123|48617|cluster-1|t3pks-t1pks|31381-894
 
 MGTO01000067|DEG10180303|9027|9479|4494|5936|cluster-1|t1pks-otherks|1-20733|3091	MGTO01000067_DEG10180303_t1pks-otherks_cluster-1_Proteobacteria_Glyceraldehyde_3-phosphate_dehydrogenase_A_(EC_1.2.1.12)_Desulfuromonadales bacterium GWC2_61_20 (subsurface metagenome)
 
-CP015163|DEG10180180|2742830|2743252|2742035|2742739|cluster-1|t1pks-nrps|2673780-2768219|91	CP015163_DEG10180180_t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Amycolatopsis albispora
-
 LN881724|DEG10180179|1227793|1228221|1226447|1227721|cluster-1|transatpks-nrps|1204159-1290934|72	LN881724_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Gorillibacterium timonense
 
 FNAZ01000006|DEG10180164|141956|142374|140288|140971|cluster-2|bacteriocin-thiopeptide-transatpks-t1pks-nrps|121287-224818|985	FNAZ01000006_DEG10180164_bacteriocin-thiopeptide-transatpks-t1pks-nrps_cluster-2_Firmicutes_TorCAD_operon_transcriptional_regulatory_protein_torR_Paenibacillus sp. cl6col
@@ -1122,8 +1014,6 @@ NBTK02000001|DEG10180179|1279711|1280042|1281149|1283404|cluster-1|transatpks-ot
 
 AP018288|DEG10180034|5688876|5689299|5687756|5702413|cluster-1|t1pks-nrps|5667756-5743899|1543	AP018288_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Nostoc sp. NIES-4103
 
-CM001230|DEG10180047|4239221|4239469|4238604|4239101|cluster-1|t1pks-nrps|4222222-4313626|120	CM001230_DEG10180047_t1pks-nrps_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Brenneria sp. EniD312
-
 MPOI01000013|DEG10180034|60601|61025|60596|70861|cluster-1|t1pks-nrps|40596-94280|429	MPOI01000013_DEG10180034_t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Archangium sp. Cb G35
 
 CP016435|DEG10180099|3103176|3103602|3096925|3098301|cluster-1|t1pks|3083172-3130896|4875	CP016435_DEG10180099_t1pks_cluster-1_Proteobacteria_Cysteinyl-tRNA_synthetase_(EC_6.1.1.16)_Burkholderia sp. AD24
@@ -1131,8 +1021,6 @@ CP016435|DEG10180099|3103176|3103602|3096925|3098301|cluster-1|t1pks|3083172-313
 CP000154|DEG10180315|3281651|3282088|3274929|3276710|cluster-1|transatpks-otherks-nrps|3261020-3358180|4941	CP000154_DEG10180315_transatpks-otherks-nrps_cluster-1_Firmicutes_Aspartyl-tRNA_synthetase_(EC_6.1.1.12)_Paenibacillus polymyxa E681
 
 CAGD01000004|DEG10180034|34364|34789|34337|47203|cluster-1|transatpks-nrps|1-103919|452	CAGD01000004_DEG10180034_transatpks-nrps_cluster-1_Firmicutes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Brevibacillus laterosporus GI-9
-
-NXGX01000005|DEG10180180|148165|148502|147374|148099|cluster-1|t1pks-arylpolyene-nrps|115380-193638|66	NXGX01000005_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira lohafexi
 
 ODMA01000306|DEG10180179|1231|1650|6621|7502|cluster-1|transatpks|1-10395|4971	ODMA01000306_DEG10180179_transatpks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_human metagenome
 
@@ -1151,8 +1039,6 @@ AF357202|DEG10180179|33624|34050|5042|33574|cluster-1|t1pks|1-113193|50	AF357202
 BAZT01000001|DEG10180179|309692|310123|308317|309600|cluster-1|transatpks-nrps|268488-328324|92	BAZT01000001_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus pini JCM 16418
 
 CP018043|DEG10180452|4581389|4581814|4577221|4579254|cluster-1|t1pks|4561378-4606810|2135	CP018043_DEG10180452_t1pks_cluster-1_Actinobacteria_Topoisomerase_IV_subunit_B_(EC_5.99.1.-)_Mycobacterium sp. WY10
-
-JQOD01000001|DEG10180047|1594566|1594813|1593947|1594444|cluster-2|t1pks|1577566-1632078|122	JQOD01000001_DEG10180047_t1pks_cluster-2_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Pectobacterium carotovorum subsp. brasiliense
 
 CP019636|DEG10180034|4291074|4291501|4291062|4296923|cluster-3|lantipeptide-t1pks-nrps|4261171-4353871|439	CP019636_DEG10180034_lantipeptide-t1pks-nrps_cluster-3_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Nostocales cyanobacterium HT-58-2
 
@@ -1187,10 +1073,6 @@ JQJV01000052|DEG10180508|45079|45123|42709|43878|cluster-2|t1pks-nrps|37918-9981
 JWTD02000065|DEG10180185|68154|68483|67359|68063|cluster-1|transatpks-otherks|48078-104984|91	JWTD02000065_DEG10180185_transatpks-otherks_cluster-1_Proteobacteria_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Xanthomonas phaseoli pv. phaseoli
 
 MEAX01000018|DEG10180034|34|458|1|10306|cluster-1|bacteriocin-transatpks-t1pks-nrps|1-129783|457	MEAX01000018_DEG10180034_bacteriocin-transatpks-t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Burkholderia ubonensis
-
-HG514499|DEG10180180|1434225|1434649|1433330|1434067|cluster-1|transatpks|1414107-1514551|158	HG514499_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis NAU-B3
-
-NZ_ACOK01000094|DEG10180180|45481|45877|47639|48382|cluster-1|t1pks-nrps|13376-92648|1762	NZ_ACOK01000094_DEG10180180_t1pks-nrps_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Ruminococcus flavefaciens FD-1
 
 MIHB01000001|DEG10180483|175537|175962|171007|171516|cluster-1|t3pks-t1pks|154382-212617|4021	MIHB01000001_DEG10180483_t3pks-t1pks_cluster-1_Actinobacteria_Arginine_repressor_Mycobacterium intermedium
 
@@ -1228,8 +1110,6 @@ LNBE01000003|DEG10180222|1678516|1678942|1676654|1677328|cluster-7|terpene-t1pks
 
 CP021659|DEG10180164|1614590|1615019|1611713|1612384|cluster-1|t1pks|1594569-1641879|2206	CP021659_DEG10180164_t1pks_cluster-1_Proteobacteria_TorCAD_operon_transcriptional_regulatory_protein_torR_Candidatus Fukatsuia symbiotica
 
-CP021890|DEG10180180|2452136|2452560|2456650|2457387|cluster-1|transatpks|2376185-2469253|4090	CP021890_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
-
 FOUX01000006|DEG10180179|504236|504665|502957|504207|cluster-1|transatpks-lantipeptide-nrps|414206-547593|29	FOUX01000006_DEG10180179_transatpks-lantipeptide-nrps_cluster-1_Bacteroidetes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Chitinophaga sp. YR627
 
 CP011104|DEG10180431|3301193|3301613|3297629|3297895|cluster-2|t1pks|3281185-3326311|3298	CP011104_DEG10180431_t1pks_cluster-2_Proteobacteria_Hypothetical_protein_ygfY_Photorhabdus temperata subsp. thracensis
@@ -1254,8 +1134,6 @@ QJJD01000001|DEG10180034|276801|277226|276774|289682|cluster-2|transatpks-nrps|2
 
 FNTQ01000001|DEG10180508|7940260|7940304|7942524|7943693|cluster-1|t1pks-otherks|7935327-7987096|2220	FNTQ01000001_DEG10180508_t1pks-otherks_cluster-1_Actinobacteria_Elongation_factor_Tu_Streptomyces sp. Ag109_O5-10
 
-CP025407|DEG10180180|36054|36481|35218|35967|cluster-1|t1pks-nrps|4536-77157|87	CP025407_DEG10180180_t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. CMB-StM0423
-
 FNQB01000003|DEG10180285|185026|185380|183615|184673|cluster-1|t1pks|166326-212496|353	FNQB01000003_DEG10180285_t1pks_cluster-1_Actinobacteria_Phospho-2-dehydro-3-deoxyheptonate_aldolase,_Trp-sensitive_(EC_4.1.2.15)_Asanoa ishikariensis
 
 CP022263|DEG10180185|2788457|2788786|2789625|2790329|cluster-1|bacteriocin-transatpks-otherks-nrps|2689564-2809610|839	CP022263_DEG10180185_bacteriocin-transatpks-otherks-nrps_cluster-1_Proteobacteria_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Xanthomonas citri pv. vignicola
@@ -1263,8 +1141,6 @@ CP022263|DEG10180185|2788457|2788786|2789625|2790329|cluster-1|bacteriocin-trans
 FNHB01000001|DEG10180313|93932|94355|90547|91284|cluster-1|transatpks-nrps|73705-143847|2648	FNHB01000001_DEG10180313_transatpks-nrps_cluster-1_Firmicutes_Protein_yebC_Dendrosporobacter quercicolus
 
 JOFL01000001|DEG10180366|43050|43476|40339|42009|cluster-1|t1pks|23041-67102|1041	JOFL01000001_DEG10180366_t1pks_cluster-1_Actinobacteria_Glutamyl-tRNA_synthetase_(EC_6.1.1.17)_Streptomyces roseoverticillatus
-
-PVRP01000004|DEG10180180|149584|150008|148690|149427|cluster-1|transatpks|129467-229836|157	PVRP01000004_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
 
 LWLC01000066|DEG10180264|6323|6746|5243|5563|cluster-1|t1pks-nrps|1-36999|760	LWLC01000066_DEG10180264_t1pks-nrps_cluster-1_Actinobacteria_Hypothetical_protein_ynfA_Saccharothrix sp. CB00851
 
@@ -1281,8 +1157,6 @@ AGAQ01000134|DEG10180164|6180|6603|4612|5295|cluster-1|t1pks|1-10311|885	AGAQ010
 ANBC01000319|DEG10180589|5557|5876|7202|8212|cluster-1|t1pks|1-13568|1326	ANBC01000319_DEG10180589_t1pks_cluster-1_Actinobacteria_tRNA_delta(2)-isopentenylpyrophosphate_transferase_(EC_2.5.1.8)_Nocardiopsis lucentensis DSM 44048
 
 LWKZ01000023|DEG10180034|1054377|1054809|1057653|1065650|cluster-12|t1pks-terpene-nrps|990675-1085650|2844	LWKZ01000023_DEG10180034_t1pks-terpene-nrps_cluster-12_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces sp. CB02923
-
-LYUE01000043|DEG10180180|47801|48225|46906|47643|cluster-1|transatpks|27683-128118|158	LYUE01000043_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus siamensis
 
 FOQI01000012|DEG10180393|128880|129300|126619|127086|cluster-1|t1pks|108876-156504|1794	FOQI01000012_DEG10180393_t1pks_cluster-1_Proteobacteria_Hypothetical_protein_yfhC_Collimonas sp. OK307
 
@@ -1336,10 +1210,6 @@ CP017596|DEG10180397|3233127|3233550|3227408|3228130|cluster-1|t1pks-nrps|321302
 
 KX707822|DEG10180179|657|1095|1|5610|cluster-1|t1pks|1-5610|1094	KX707822_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp
 
-CCDX020000012|DEG10180180|177388|177725|176597|177322|cluster-1|t1pks-arylpolyene-nrps|144687-222800|66	CCDX020000012_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira sp. GB04J01
-
-AZWA01000042|DEG10180180|4597|5018|3797|4486|cluster-1|lantipeptide-t1pks|1-29876|111	AZWA01000042_DEG10180180_lantipeptide-t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Salinispora pacifica CNT084
-
 JFJP01037841|DEG10180179|4983|5375|4966|10353|cluster-1|t1pks|1-26866|409	JFJP01037841_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_microbial mat metagenome
 
 AJ580915|DEG10180179|34246|34672|23686|34188|cluster-1|t1pks|1-70742|58	AJ580915_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces parvulus
@@ -1380,15 +1250,11 @@ NZ_CYHF01000007|DEG10180034|153251|153677|152423|159871|cluster-1|t1pks-nrps|132
 
 MH325200|DEG10180034|28394|28819|28358|37657|cluster-1|t1pks-nrps|1-60901|461	MH325200_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Anabaena sp. UHCC-0399
 
-NW_017263691|DEG10180180|231013|231442|226717|227656|cluster-1|t1pks|210629-257272|3357	NW_017263691_DEG10180180_t1pks_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Pseudogymnoascus verrucosus
-
 AMPN02000002|DEG10180238|6831522|6831952|6826002|6826790|cluster-2|lantipeptide-t1pks-nrps|6662429-6928181|4732	AMPN02000002_DEG10180238_lantipeptide-t1pks-nrps_cluster-2_Actinobacteria_Phenylacetic_acid_degradation_protein_paaC_Streptomyces sp. SM8
 
 PRKS01000001|DEG10180034|66402|66827|66375|79241|cluster-1|transatpks-otherks-nrps|18301-220799|452	PRKS01000001_DEG10180034_transatpks-otherks-nrps_cluster-1_Firmicutes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Brevibacillus laterosporus
 
 KZ195584|DEG10180271|3294|3532|1750|2454|cluster-1|t1pks|1-156822|840	KZ195584_DEG10180271_t1pks_cluster-1_Actinobacteria_Uid_operon_repressor_Streptomyces sp. CS227
-
-JVCN01000021|DEG10180180|242034|242432|241004|241741|cluster-1|ladderane-t1pks-nrps|199999-263246|293	JVCN01000021_DEG10180180_ladderane-t1pks-nrps_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptococcus cristatus
 
 LMPN01000003|DEG10180179|126307|126729|124943|126220|cluster-1|transatpks-t1pks-nrps|59064-297756|87	LMPN01000003_DEG10180179_transatpks-t1pks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Brevibacillus sp. Leaf182
 
@@ -1414,17 +1280,9 @@ AXVK01000026|DEG10180185|118813|119237|117629|118429|cluster-1|t1pks-nrps|76868-
 
 LMXH01000001|DEG10180179|597340|597767|596001|597287|cluster-1|transatpks-nrps|532918-661824|53	LMXH01000001_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus sp. FJAT-26967
 
-LJRT01000063|DEG10180047|16270|16483|15733|16230|cluster-1|t1pks|1-51450|40	LJRT01000063_DEG10180047_t1pks_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Pseudomonas coronafaciens pv. zizaniae (Pseudomonas syringae pv. zizaniae)
-
-LLZJ01000073|DEG10180047|160592|160809|161657|162109|cluster-1|t1pks|157799-196356|848	LLZJ01000073_DEG10180047_t1pks_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Streptomyces violaceusniger
-
-QNUN01000006|DEG10180047|286649|286862|286006|286530|cluster-2|t1pks-terpene-nrps|196621-390414|119	QNUN01000006_DEG10180047_t1pks-terpene-nrps_cluster-2_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Corallococcus sp. H22C18031201
-
 AWNK01000009|DEG10180564|48781|49210|44957|45994|cluster-1|t1pks-nrps|28369-113295|2787	AWNK01000009_DEG10180564_t1pks-nrps_cluster-1_Chrysiogenetes_N-acetyl-gamma-glutamyl-phosphate_reductase_(EC_1.2.1.38)_Chrysiogenes arsenatis DSM 11915
 
 AZQN01000005|DEG10180029|210705|211125|206121|207518|cluster-1|transatpks|190163-242669|3187	AZQN01000005_DEG10180029_transatpks_cluster-1_Bacteroidetes_Dihydrolipoamide_dehydrogenase_(EC_1.8.1.4)_Dyadobacter tibetensis Y620-1
-
-NW_019173017|DEG10180180|159054|159485|153934|156894|cluster-1|t1pks-nrps|123933-226201|2160	NW_019173017_DEG10180180_t1pks-nrps_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Colletotrichum orchidophilum
 
 NVNP01000049|DEG10180179|2481|2913|1167|2429|cluster-1|transatpks-nrps|1-21018|52	NVNP01000049_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus thuringiensis
 
@@ -1435,8 +1293,6 @@ CP011509|DEG10180034|2962054|2962478|2962048|2967426|cluster-10|t1pks-nrps|29386
 CP015417|DEG10180034|1699189|1699611|1698519|1710467|cluster-2|transatpks-nrps|1654407-1727023|1092	CP015417_DEG10180034_transatpks-nrps_cluster-2_Firmicutes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Bacillus velezensis
 
 CP031733|DEG10180417|221368|221783|216520|216975|cluster-1|t1pks-nrps|201276-263387|4393	CP031733_DEG10180417_t1pks-nrps_cluster-1_Firmicutes_NrdI_protein_Streptococcus sp. Z15
-
-JRMH01000001|DEG10180047|812023|812271|813036|813533|cluster-1|t1pks|775399-829914|765	JRMH01000001_DEG10180047_t1pks_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Pectobacterium carotovorum subsp. actinidiae
 
 AXBT01000062|DEG10180034|263461|263886|263434|276306|cluster-2|transatpks-nrps|206718-318811|452	AXBT01000062_DEG10180034_transatpks-nrps_cluster-2_Firmicutes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Brevibacillus laterosporus PE36
 
@@ -1454,25 +1310,17 @@ ASPS01000080|DEG10180179|57900|58329|62707|63969|cluster-1|transatpks-nrps|24755
 
 BBPP01000003|DEG10180034|255873|256304|259145|265099|cluster-1|thiopeptide-t1pks-nrps|210677-287417|2841	BBPP01000003_DEG10180034_thiopeptide-t1pks-nrps_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptacidiphilus melanogenes
 
-JOFX01000014|DEG10180180|73031|73349|72190|72936|cluster-1|phosphonate-t1pks-ladderane|42829-126807|95	JOFX01000014_DEG10180180_phosphonate-t1pks-ladderane_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. NRRL F-2664
-
 CP002905|DEG10180179|1892625|1892955|1887609|1888475|cluster-1|nrps-transatpks-otherks|1872548-1982455|4150	CP002905_DEG10180179_nrps-transatpks-otherks_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus subtilis subsp. spizizenii TU-B-10
 
 FMCV01000018|DEG10180392|131317|131744|129900|131303|cluster-1|nrps-siderophore-t1pks-otherks|346-141575|14	FMCV01000018_DEG10180392_nrps-siderophore-t1pks-otherks_cluster-1_Actinobacteria_Serine_hydroxymethyltransferase_(EC_2.1.2.1)_Micromonospora marina
 
 MRYI01000022|DEG10180179|49784|50111|48521|49657|cluster-1|transatpks-t1pks-otherks-nrps|4648-98295|127	MRYI01000022_DEG10180179_transatpks-t1pks-otherks-nrps_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Hahella sp. CCB-MM4
 
-KE598564|DEG10180180|70624|70656|65086|66099|cluster-1|t1pks|51663-96399|4525	KE598564_DEG10180180_t1pks_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Cladonia macilenta KoLRI003786
-
 OKJB01000232|DEG10180179|10065|10491|3896|5164|cluster-1|t1pks-nrps|1-12608|4901	OKJB01000232_DEG10180179_t1pks-nrps_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_human gut metagenome
-
-JQHM01000002|DEG10180047|148097|148344|147478|147975|cluster-1|t1pks|131097-185618|122	JQHM01000002_DEG10180047_t1pks_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Pectobacterium betavasculorum
 
 LPJH01000050|DEG10180034|55051|55475|55018|68427|cluster-1|transatpks-t1pks-nrps|10885-170602|457	LPJH01000050_DEG10180034_transatpks-t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Burkholderia ubonensis
 
 CP010407|DEG10180439|759494|759920|757935|759143|cluster-3|butyrolactone-t1pks-nrps|739444-867936|351	CP010407_DEG10180439_butyrolactone-t1pks-nrps_cluster-3_Actinobacteria_S-adenosylmethionine_synthetase_(EC_2.5.1.6)_Streptomyces vietnamensis
-
-BBXC01000007|DEG10180047|235608|235868|233929|234402|cluster-1|nrps-t1pks-ladderane|215488-361626|1206	BBXC01000007_DEG10180047_nrps-t1pks-ladderane_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Herbidospora sakaeratensis
 
 KN050798|DEG10180034|1052000|1052422|1051398|1063142|cluster-2|transatpks-nrps|1007286-1063143|1024	KN050798_DEG10180034_transatpks-nrps_cluster-2_Firmicutes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Bacillus sp. UNC69MF
 
@@ -1488,10 +1336,6 @@ JWJJ01000001|DEG10180381|1578815|1579248|1575976|1577220|cluster-1|transatpks|15
 
 NBMQ01000003|DEG10180072|347693|348102|342588|343427|cluster-4|transatpks|326810-427269|4266	NBMQ01000003_DEG10180072_transatpks_cluster-4_Firmicutes_Pyrroline-5-carboxylate_reductase_(EC_1.5.1.2)_Bacillus velezensis
 
-FNSO01000004|DEG10180394|2424983|2425400|2419460|2420119|cluster-6|lantipeptide-t1pks-nrps|2380037-2474912|4864	FNSO01000004_DEG10180394_lantipeptide-t1pks-nrps_cluster-6_Actinobacteria_Holo-[acyl-carrier_protein]_synthase_(EC_2.7.8.7)_Amycolatopsis tolypomycina
-
-NZ_MCAO01000043|DEG10180180|174824|175169|174033|174758|cluster-1|t1pks-arylpolyene-nrps|97564-196002|66	NZ_MCAO01000043_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira sp. MIT1004
-
 ACXX02000001|DEG10180185|48018|48443|44710|45402|cluster-1|transatpks-nrps|14512-116691|2616	ACXX02000001_DEG10180185_transatpks-nrps_cluster-1_Firmicutes_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Ruminiclostridium papyrosolvens DSM 2782
 
 MVHE01000003|DEG10180397|223702|224125|218119|218832|cluster-1|t1pks-nrps|203599-265848|4870	MVHE01000003_DEG10180397_t1pks-nrps_cluster-1_Actinobacteria_Ribonuclease_III_(EC_3.1.26.3)_Mycobacterium angelicum
@@ -1505,10 +1349,6 @@ MWZB01000072|DEG10180179|250550|250880|245533|246399|cluster-1|bacteriocin-nrps-
 KK211292|DEG10180179|173543|173966|177263|178519|cluster-1|transatpks-t1pks-nrps|137152-208504|3297	KK211292_DEG10180179_transatpks-t1pks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Ruminiclostridium cellobioparum DSM 1351 = ATCC 15832
 
 EU035755|DEG10180361|18726|19150|18054|18683|cluster-1|t1pks|1-78527|43	EU035755_DEG10180361_t1pks_cluster-1_Actinobacteria_3-octaprenyl-4-hydroxybenzoate_carboxy-lyase_(EC_4.1.1.-)_Streptomyces griseochromogenes
-
-NOWI01000005|DEG10180180|250208|250631|247135|247860|cluster-1|transatpks|234695-285939|2348	NOWI01000005_DEG10180180_transatpks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Cutibacterium avidum
-
-KL587649|DEG10180180|119378|119699|118388|118969|cluster-1|phosphonate-t1pks-ladderane|88981-161296|409	KL587649_DEG10180180_phosphonate-t1pks-ladderane_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. NRRL S-525
 
 LMWG01004781|DEG10180200|31102|31527|26709|27401|cluster-1|t1pks-butyrolactone|4827-36500|3701	LMWG01004781_DEG10180200_t1pks-butyrolactone_cluster-1_Actinobacteria_Protein_ycgS_Streptomyces albus subsp. albus
 
@@ -1534,8 +1374,6 @@ OESG01000013|DEG10180029|2092162|2092589|2086272|2087678|cluster-3|t1pks|2072159
 
 CP002872|DEG10180516|749952|750370|744999|746003|cluster-2|t1pks|729949-776869|3949	CP002872_DEG10180516_t1pks_cluster-2_Proteobacteria_Tryptophanyl-tRNA_synthetase_(EC_6.1.1.2)_Francisella sp. TX077308
 
-BCQT01000010|DEG10180180|576141|576560|578390|579094|cluster-4|t3pks-t1pks-nrps|506986-634461|1830	BCQT01000010_DEG10180180_t3pks-t1pks-nrps_cluster-4_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Actinomadura macra NBRC 14102
-
 CP007699|DEG10180179|235449|235884|232985|235261|cluster-4|transatpks|215263-294994|188	CP007699_DEG10180179_transatpks_cluster-4_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces lydicus A02
 
 FOEB01000004|DEG10180518|376054|376474|372741|373379|cluster-1|t1pks|356041-393242|2675	FOEB01000004_DEG10180518_t1pks_cluster-1_Proteobacteria_Shikimate_kinase_I_(EC_2.7.1.71)_Methylobacterium sp. ap11
@@ -1546,13 +1384,9 @@ CP011509|DEG10180021|10248417|10248843|10244797|10245786|cluster-1|t1pks-nrps|10
 
 LQOZ01000020|DEG10180360|185446|185871|179843|181234|cluster-1|t1pks|165433-211006|4212	LQOZ01000020_DEG10180360_t1pks_cluster-1_Actinobacteria_Hypothetical_protein_yfcH_Mycolicibacter hiberniae
 
-LOZK01000008|DEG10180180|279650|279992|278862|279587|cluster-1|t1pks-arylpolyene|232873-296090|63	LOZK01000008_DEG10180180_t1pks-arylpolyene_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Burkholderia gladioli
-
 CP022098|DEG10180034|9866148|9866571|9865506|9876725|cluster-1|t1pks-nrps|9828130-9896725|1065	CP022098_DEG10180034_t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Cystobacter fuscus
 
 FOQY01000006|DEG10180080|72386|72813|76707|78485|cluster-1|t1pks-nrps|36210-113880|3894	FOQY01000006_DEG10180080_t1pks-nrps_cluster-1_Actinobacteria_1-deoxy-D-xylulose_5-phosphate_synthase_(EC_4.1.3.37)_Streptosporangium canum
-
-BBXG01000013|DEG10180047|104528|104789|102850|103323|cluster-1|nrps-t1pks-ladderane|84409-194754|1205	BBXG01000013_DEG10180047_nrps-t1pks-ladderane_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Herbidospora cretacea
 
 PMKQ01000234|DEG10180366|80625|80939|76928|78370|cluster-1|t1pks-arylpolyene|60546-115960|2255	PMKQ01000234_DEG10180366_t1pks-arylpolyene_cluster-1_Proteobacteria_Glutamyl-tRNA_synthetase_(EC_6.1.1.17)_Myxococcales bacterium (peat metagenome)
 
@@ -1568,10 +1402,6 @@ QJTA01000013|DEG10180179|4611|5037|3340|4596|cluster-1|transatpks-nrps|1-45156|1
 
 KE150468|DEG10180052|1787240|1787574|1783056|1784753|cluster-1|t2pks-lantipeptide-t1pks|1767154-1858008|2487	KE150468_DEG10180052_t2pks-lantipeptide-t1pks_cluster-1_Actinobacteria_Acetyl-coenzyme_A_carboxylase_carboxyl_transferase_subunit_alpha_(EC_6.4.1.2)_Streptomyces sp. HPH0547
 
-LGLL01000092|DEG10180047|31647|31727|32212|32709|cluster-1|t1pks-arylpolyene|1-35259|485	LGLL01000092_DEG10180047_t1pks-arylpolyene_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Pseudomonas savastanoi pv. glycinea (Pseudomonas syringae pv. glycinea)
-
-MSYT01000003|DEG10180180|184879|185303|183984|184721|cluster-1|transatpks|164761-265217|158	MSYT01000003_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus amyloliquefaciens
-
 MWKY01000001|DEG10180483|6429952|6430385|6425447|6425956|cluster-5|t3pks-t1pks|6408765-6466911|3996	MWKY01000001_DEG10180483_t3pks-t1pks_cluster-5_Actinobacteria_Arginine_repressor_Mycobacterium kansasii
 
 CP015726|DEG10180179|4214751|4215177|4210124|4214560|cluster-16|t1pks|4047668-4258982|191	CP015726_DEG10180179_t1pks_cluster-16_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. RTd22
@@ -1582,27 +1412,19 @@ NZ_RFFH01000005|DEG10180179|82643|83069|71735|82606|cluster-1|t1pks|38224-124608
 
 CQSL01000061|DEG10180397|12444|12867|6725|7447|cluster-1|t1pks|1-26099|4997	CQSL01000061_DEG10180397_t1pks_cluster-1_Actinobacteria_Ribonuclease_III_(EC_3.1.26.3)_Mycobacterium tuberculosis
 
-CP018627|DEG10180180|2621897|2622312|2616920|2617690|cluster-1|t1pks-nrps|2601004-2679395|4207	CP018627_DEG10180180_t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces hygroscopicus
-
 OBEG01000004|DEG10180098|166160|166594|163913|164416|cluster-1|t1pks|146029-191305|1744	OBEG01000004_DEG10180098_t1pks_cluster-1_Actinobacteria_Peptidyl-prolyl_cis-trans_isomerase_B_(EC_5.2.1.8)_Nocardia amikacinitolerans
 
 JQLN01000007|DEG10180509|170520|170820|173256|175349|cluster-4|t1pks-otherks|141341-192876|2436	JQLN01000007_DEG10180509_t1pks-otherks_cluster-4_Actinobacteria_Elongation_factor_G_Kitasatospora mediocidica KCTC 9733
 
-CP023414|DEG10180180|959575|959999|958680|959417|cluster-1|transatpks|939457-1039907|158	CP023414_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
-
 HE804045|DEG10180179|5043150|5043546|5038918|5041272|cluster-2|transatpks-otherks-t1pks-nrps|4954455-5099089|1878	HE804045_DEG10180179_transatpks-otherks-t1pks-nrps_cluster-2_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Saccharothrix espanaensis DSM 44229
 
 JODR01000002|DEG10180179|343255|343605|343219|349368|cluster-2|t1pks|323219-353393|386	JODR01000002_DEG10180179_t1pks_cluster-2_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces albus subsp. albus
-
-JQMO01000002|DEG10180047|793280|793527|794292|794789|cluster-4|t1pks|755748-811205|765	JQMO01000002_DEG10180047_t1pks_cluster-4_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Kitasatospora azatica KCTC 9699
 
 MG742725|DEG10180179|75987|76408|75951|109190|cluster-1|t1pks|1-122844|457	MG742725_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces albulus
 
 AREY01000012|DEG10180179|77005|77466|76309|88023|cluster-1|t1pks|56309-97301|1157	AREY01000012_DEG10180179_t1pks_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Desulfobacter curvatus DSM 3379
 
 LAZR01000993|DEG10180179|7947|8407|7222|17688|cluster-1|t1pks|1-19220|1185	LAZR01000993_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_marine sediment metagenome
-
-NZ_AWFE01000060|DEG10180180|66280|66734|63415|64224|cluster-1|t1pks-otherks|46272-81269|2056	NZ_AWFE01000060_DEG10180180_t1pks-otherks_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Hyphomonas sp. GM-8P
 
 CP009487|DEG10180034|135654|136078|135621|149015|cluster-1|transatpks-t1pks-nrps|91470-250867|457	CP009487_DEG10180034_transatpks-t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Burkholderia ubonensis MSMB22
 
@@ -1617,8 +1439,6 @@ ATAY01000017|DEG10180179|9673|10101|12714|13973|cluster-1|transatpks-t1pks-nrps|
 AOPX01000001|DEG10180359|5639943|5640314|5634707|5635873|cluster-2|t1pks|5619931-5663707|4070	AOPX01000001_DEG10180359_t1pks_cluster-2_Actinobacteria_Acetate_kinase_(EC_2.7.2.1)_Mycobacterium sp. 012931
 
 KY484834|DEG10180179|56874|57300|42419|56761|cluster-1|t1pks|1-129796|113	KY484834_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. 211726
-
-NW_020290289|DEG10180180|516759|517177|512268|513097|cluster-3|t1pks-nrps|444074-545755|3662	NW_020290289_DEG10180180_t1pks-nrps_cluster-3_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Aspergillus eucalypticola CBS 122712
 
 KX622602|DEG10180179|5472|5899|4391|5236|cluster-1|t1pks-nrps|1-42417|236	KX622602_DEG10180179_t1pks-nrps_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Stigmatella erecta
 
@@ -1641,8 +1461,6 @@ DCLJ01000013|DEG10180179|17768|18192|22486|23739|cluster-1|transatpks-t1pks-nrps
 MEHK01000001|DEG10180241|5489455|5489881|5486928|5487554|cluster-2|t1pks|5468812-5558381|1901	MEHK01000001_DEG10180241_t1pks_cluster-2_Actinobacteria_Acyl_carrier_protein_phosphodiesterase_(EC_3.1.4.14)_Streptomyces subrutilus
 
 AB818354|DEG10180179|89720|90132|74047|89649|cluster-1|t1pks|1-105855|71	AB818354_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. MJ635-86F5
-
-JOAG01000015|DEG10180047|399430|399640|400421|400948|cluster-6|t1pks-arylpolyene-nrps|373928-434985|781	JOAG01000015_DEG10180047_t1pks-arylpolyene-nrps_cluster-6_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Nonomuraea candida
 
 MCIA01000021|DEG10180179|27463|27889|26159|27466|cluster-1|transatpks-nrps|1-47725|3	MCIA01000021_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_[Clostridium] algidixylanolyticum
 
@@ -1674,15 +1492,11 @@ CP026121|DEG10180034|54293|54724|46826|54286|cluster-1|t1pks-nrps|26826-77675|7	
 
 KX707994|DEG10180179|35|461|1|10035|cluster-1|t1pks|1-10035|460	KX707994_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp
 
-FMYR01000011|DEG10180180|200628|201055|199816|200616|cluster-3|t1pks-nrps|180613-269509|12	FMYR01000011_DEG10180180_t1pks-nrps_cluster-3_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. AmelKG-A3
-
 CP009460|DEG10180544|4834097|4834440|4831237|4832421|cluster-2|transatpks-nrps|4814097-4927189|1676	CP009460_DEG10180544_transatpks-nrps_cluster-2_Proteobacteria_Hypothetical_protein_yieL_Dickeya solani
 
 CP021744|DEG10180179|1867804|1868210|1867774|1880934|cluster-2|t1pks-nrps|1819073-2024606|436	CP021744_DEG10180179_t1pks-nrps_cluster-2_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces albireticuli
 
 LISX01000002|DEG10180034|238945|239377|231414|238874|cluster-1|t1pks-nrps|211414-262242|71	LISX01000002_DEG10180034_t1pks-nrps_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Kitasatospora sp. CB01950
-
-NZ_FNTU01000002|DEG10180180|4303902|4304247|4303111|4303836|cluster-5|t1pks-arylpolyene-nrps|4226668-4325080|66	NZ_FNTU01000002_DEG10180180_t1pks-arylpolyene-nrps_cluster-5_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira sp. KO164
 
 FKKE01008490|DEG10180179|3466|4073|3452|7711|cluster-1|t1pks|1-7712|621	FKKE01008490_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_freshwater metagenome
 
@@ -1718,8 +1532,6 @@ LHCC01000001|DEG10180072|257542|257951|252436|253275|cluster-3|transatpks|236659
 
 OBVE01000255|DEG10180179|17609|18030|16287|17558|cluster-1|transatpks-nrps|1-34364|51	OBVE01000255_DEG10180179_transatpks-nrps_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_human gut metagenome
 
-MPOI01000017|DEG10180180|186961|187286|186149|186880|cluster-1|t1pks-arylpolyene-nrps|154503-238295|81	MPOI01000017_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Archangium sp. Cb G35
-
 JX827769|DEG10180034|820|1246|71|7168|cluster-1|t1pks-nrps|1-27423|1175	JX827769_DEG10180034_t1pks-nrps_cluster-1_environmental samples_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_uncultured bacterium contig00030
 
 JOIQ01000012|DEG10180454|41030|41471|37712|38329|cluster-1|t1pks|21021-66231|2701	JOIQ01000012_DEG10180454_t1pks_cluster-1_Actinobacteria_3,4-dihydroxy-2-butanone_4-phosphate_synthase_Streptomyces sp. NRRL F-3213
@@ -1731,8 +1543,6 @@ BDBX01000021|DEG10180200|221661|222089|218707|219384|cluster-2|t1pks-nrps|172125
 MZZM01000027|DEG10180397|128515|128938|122845|123558|cluster-1|t1pks|108411-187680|4957	MZZM01000027_DEG10180397_t1pks_cluster-1_Actinobacteria_Ribonuclease_III_(EC_3.1.26.3)_Mycobacterium simiae
 
 CP019655|DEG10180179|2238461|2238883|2236560|2237759|cluster-1|phosphonate-transatpks-t1pks-nrps|2123638-2293839|702	CP019655_DEG10180179_phosphonate-transatpks-t1pks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus larvae subsp. larvae
-
-MSBW01000054|DEG10180047|18935|19149|19946|20443|cluster-1|t1pks|1-27105|797	MSBW01000054_DEG10180047_t1pks_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Pseudomonas syringae pv. actinidiae
 
 CYHO01000081|DEG10180179|73217|73547|78461|79327|cluster-1|transatpks-otherks-nrps|1-80495|4914	CYHO01000081_DEG10180179_transatpks-otherks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus subtilis
 
@@ -1746,19 +1556,13 @@ NZ_NITY01000011|DEG10180021|126137|126416|128674|129771|cluster-1|t1pks-nrps|653
 
 KN049967|DEG10180179|109515|109937|107621|108823|cluster-1|transatpks-nrps|92578-170433|692	KN049967_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus intestinalis
 
-PEKU01000004|DEG10180047|390808|391054|390232|390684|cluster-2|t1pks|373771-429309|124	PEKU01000004_DEG10180047_t1pks_cluster-2_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Streptomyces sp. JV178
-
 NVWB01000011|DEG10180185|54469|54795|51962|52630|cluster-1|transatpks-otherks-nrps|1-66218|1839	NVWB01000011_DEG10180185_transatpks-otherks-nrps_cluster-1_Planctomycetes_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Blastopirellula sp. (marine metagenome)
-
-MKQR01000018|DEG10180047|173320|173639|177556|178029|cluster-1|ladderane-t1pks-nrps|71292-214305|3917	MKQR01000018_DEG10180047_ladderane-t1pks-nrps_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Actinokineospora bangkokensis
 
 AB193609|DEG10180179|7544|7962|7524|22142|cluster-1|transatpks-t1pks|1-113234|438	AB193609_DEG10180179_transatpks-t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. NRRL 11266
 
 BDGW01000050|DEG10180034|9331|9765|12802|20235|cluster-1|t1pks-nrps|1-40235|3037	BDGW01000050_DEG10180034_t1pks-nrps_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces luteocolor
 
 CP023133|DEG10180179|1000057|1000479|997720|1000026|cluster-1|transatpks|980047-1065930|31	CP023133_DEG10180179_transatpks_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus velezensis
-
-CP021744|DEG10180180|7887387|7887815|7885109|7885870|cluster-12|bacteriocin-t1pks-ectoine|7825347-7911341|1517	CP021744_DEG10180180_bacteriocin-t1pks-ectoine_cluster-12_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces albireticuli
 
 MTZV01000001|DEG10180179|43721|44133|40359|41507|cluster-1|transatpks|1-90673|2214	MTZV01000001_DEG10180179_transatpks_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Pseudomonas acidophila
 
@@ -1769,8 +1573,6 @@ CP003539|DEG10180563|1369206|1369619|1364592|1366796|cluster-1|transatpks|134872
 CP022522|DEG10180376|2232024|2232450|2230668|2231972|cluster-1|t1pks-nrps|2192281-2261348|52	CP022522_DEG10180376_t1pks-nrps_cluster-1_Proteobacteria_Succinyl-diaminopimelate_desuccinylase_(EC_3.5.1.18)_Pseudoalteromonas sp. NC201
 
 JOID01000004|DEG10180392|149612|150026|153521|154870|cluster-2|t1pks-nrps|123329-199754|3495	JOID01000004_DEG10180392_t1pks-nrps_cluster-2_Actinobacteria_Serine_hydroxymethyltransferase_(EC_2.1.2.1)_Streptomyces albus subsp. albus
-
-LYDS01000845|DEG10180180|18913|19341|16651|17412|cluster-1|t1pks|1-26461|1501	LYDS01000845_DEG10180180_t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces acidiscabies
 
 MUMH01000086|DEG10180185|11446|11855|7453|8130|cluster-1|t1pks|1-83766|3316	MUMH01000086_DEG10180185_t1pks_cluster-1_Actinobacteria_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Allokutzneria sp. NRRL B-24872
 
@@ -1789,8 +1591,6 @@ LITM01000006|DEG10180179|82805|83231|81517|82785|cluster-1|transatpks-nrps|36290
 CP001037|DEG10180034|3765072|3765495|3763952|3780010|cluster-2|bacteriocin-t1pks-nrps|3684016-3800010|1543	CP001037_DEG10180034_bacteriocin-t1pks-nrps_cluster-2_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Nostoc punctiforme PCC 73102 (Nostoc punctiforme ATCC 29133)
 
 CM001980|DEG10180257|1519283|1519715|1514685|1515584|cluster-1|transatpks-nrps|1499279-1608099|3699	CM001980_DEG10180257_transatpks-nrps_cluster-1_Proteobacteria_Multiple_antibiotic_resistance_protein_marA_Dickeya zeae NCPPB 3531
-
-LRTO01001243|DEG10180047|4056|4302|3423|3920|cluster-1|t1pks|1-11789|136	LRTO01001243_DEG10180047_t1pks_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Streptomyces scabiei
 
 CP015588|DEG10180435|600906|601334|597805|598440|cluster-4|transatpks-nrps|584615-688427|2466	CP015588_DEG10180435_transatpks-nrps_cluster-4_Actinobacteria_Hypothetical_protein_yggA_Streptomyces alfalfae
 
@@ -1956,8 +1756,6 @@ MNPM01000002|DEG10180034|416070|416493|416035|426570|cluster-3|t1pks-nrps|396035
 
 CP022531|DEG10180179|2480283|2480706|2477846|2480251|cluster-1|transatpks|2460273-2546173|32	CP022531_DEG10180179_transatpks_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus velezensis
 
-AOTG01000357|DEG10180180|53144|53325|48226|49023|cluster-1|t1pks|34473-76434|4121	AOTG01000357_DEG10180180_t1pks_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Penicillium paxilli ATCC 26601
-
 QHVI01000014|DEG10180400|31339|31763|30511|30846|cluster-1|bacteriocin-t1pks-nrps|11327-150890|493	QHVI01000014_DEG10180400_bacteriocin-t1pks-nrps_cluster-1_Acidobacteria_Thioredoxin_2_Acidobacteriia bacterium AA117 (soil metagenome)
 
 MLCV01000001|DEG10180034|747397|747819|746727|758675|cluster-3|transatpks-nrps|702615-790536|1092	MLCV01000001_DEG10180034_transatpks-nrps_cluster-3_Firmicutes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Bacillus velezensis
@@ -1985,8 +1783,6 @@ MPPI01000015|DEG10180034|41212|41638|36363|41162|cluster-1|t1pks-nrps|1-76071|50
 DS989904|DEG10180098|2327890|2328216|2329053|2329829|cluster-1|t1pks|2277848-2345150|837	DS989904_DEG10180098_t1pks_cluster-1_Cyanobacteria_Peptidyl-prolyl_cis-trans_isomerase_B_(EC_5.2.1.8)_Synechococcus sp. PCC 7335
 
 NVWB01000044|DEG10180190|18855|19278|16127|17251|cluster-1|t1pks|1-33133|1604	NVWB01000044_DEG10180190_t1pks_cluster-1_Planctomycetes_tRNA_(5-methylaminomethyl-2-thiouridylate)-methyltransferase_(EC_2.1.1.61)_Blastopirellula sp. (marine metagenome)
-
-QXJL01000001|DEG10180180|559140|559564|558245|558982|cluster-1|transatpks|539022-639475|158	QXJL01000001_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
 
 LT546166|DEG10180164|103665|104088|102087|102770|cluster-1|t1pks-nrps|82953-135467|895	LT546166_DEG10180164_t1pks-nrps_cluster-1_Actinobacteria_TorCAD_operon_transcriptional_regulatory_protein_torR_Mycolicibacter icosiumassiliensis
 
@@ -2036,8 +1832,6 @@ CP019724|DEG10180185|1753919|1754334|1748556|1750397|cluster-2|siderophore-t1pks
 
 CM002271|DEG10180238|6750419|6750849|6744877|6745665|cluster-1|t3pks-lantipeptide-t1pks-nrps|6545260-6849240|4754	CM002271_DEG10180238_t3pks-lantipeptide-t1pks-nrps_cluster-1_Actinobacteria_Phenylacetic_acid_degradation_protein_paaC_Streptomyces sp. GBA 94-10
 
-JQHL01000021|DEG10180047|22702|22949|23713|24210|cluster-1|t1pks|1-33048|764	JQHL01000021_DEG10180047_t1pks_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Pectobacterium betavasculorum
-
 CEVQ01036633|DEG10180179|56|515|43|3549|cluster-1|t1pks|1-3549|472	CEVQ01036633_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_marine metagenome
 
 JOCA01000001|DEG10180080|385490|385819|388321|390252|cluster-4|t1pks|353107-400498|2502	JOCA01000001_DEG10180080_t1pks_cluster-4_Actinobacteria_1-deoxy-D-xylulose_5-phosphate_synthase_(EC_4.1.3.37)_Streptomyces sp. NRRL WC-3626
@@ -2060,8 +1854,6 @@ QWFA01000161|DEG10180034|27|473|3209|8929|cluster-1|t1pks-nrps|1-14279|2736	QWFA
 
 LGTC01000001|DEG10180179|218660|219086|217327|218613|cluster-1|transatpks-nrps|182283-250700|47	LGTC01000001_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Pseudobacteroides cellulosolvens ATCC 35603 = DSM 2933
 
-JODQ01000001|DEG10180047|102982|103242|106196|106669|cluster-1|t1pks-arylpolyene-nrps|14963-125110|2954	JODQ01000001_DEG10180047_t1pks-arylpolyene-nrps_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Herbidospora cretacea
-
 KB890945|DEG10180034|377125|377556|369709|377118|cluster-6|t1pks-nrps|349709-400453|7	KB890945_DEG10180034_t1pks-nrps_cluster-6_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces sp. CcalMP-8W
 
 NZ_PENC01000017|DEG10180303|74110|74549|68625|69623|cluster-1|bacteriocin-t1pks|43292-130132|4487	NZ_PENC01000017_DEG10180303_bacteriocin-t1pks_cluster-1_Actinobacteria_Glyceraldehyde_3-phosphate_dehydrogenase_A_(EC_1.2.1.12)_Streptomyces griseocarneus
@@ -2069,8 +1861,6 @@ NZ_PENC01000017|DEG10180303|74110|74549|68625|69623|cluster-1|bacteriocin-t1pks|
 KB910518|DEG10180179|4302302|4302724|4300989|4302266|cluster-1|transatpks-t1pks-nrps|4240156-4420437|36	KB910518_DEG10180179_transatpks-t1pks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus sp. HW567
 
 LAYX01000019|DEG10180238|52602|53032|47060|47848|cluster-1|lantipeptide-t1pks-nrps|1-103562|4754	LAYX01000019_DEG10180238_lantipeptide-t1pks-nrps_cluster-1_Actinobacteria_Phenylacetic_acid_degradation_protein_paaC_Streptomyces sp. KE1
-
-KQ948781|DEG10180047|186966|187212|186350|186844|cluster-1|t1pks|156493-225680|122	KQ948781_DEG10180047_t1pks_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Streptomyces griseoruber
 
 FSRB01000001|DEG10180185|4108896|4109230|4106528|4108696|cluster-1|t1pks-nrps|4062394-4123210|200	FSRB01000001_DEG10180185_t1pks-nrps_cluster-1_Planctomycetes_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Singulisphaera sp. GP187
 
@@ -2086,13 +1876,9 @@ CP019626|DEG10180179|44013|44435|42121|43323|cluster-1|bacteriocin-transatpks-nr
 
 BDBM01000037|DEG10180098|45090|45524|42844|43341|cluster-1|t1pks|24951-59032|1749	BDBM01000037_DEG10180098_t1pks_cluster-1_Actinobacteria_Peptidyl-prolyl_cis-trans_isomerase_B_(EC_5.2.1.8)_Nocardia gamkensis NBRC 108242
 
-BCMM01000011|DEG10180047|21881|22127|22892|23389|cluster-1|t1pks|1-39805|765	BCMM01000011_DEG10180047_t1pks_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Streptomyces scabiei
-
 ARYB01000005|DEG10180034|50495|50907|50263|56691|cluster-1|t1pks-nrps|30263-77768|644	ARYB01000005_DEG10180034_t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Enterobacter cloacae MR2
 
 BBCG01000005|DEG10180185|47509|47839|42932|43633|cluster-1|nrps-transatpks-otherks|27417-114358|3876	BBCG01000005_DEG10180185_nrps-transatpks-otherks_cluster-1_Firmicutes_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Cellulosilyticum ruminicola JCM 14822
-
-CP022163|DEG10180180|5677835|5678268|5674482|5675225|cluster-2|t1pks|5663616-5709516|2610	CP022163_DEG10180180_t1pks_cluster-2_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Melittangium boletus DSM 14713
 
 CP026121|DEG10180164|4542153|4542579|4537873|4538568|cluster-1|t1pks-nrps|4521474-4578915|3585	CP026121_DEG10180164_t1pks-nrps_cluster-1_Actinobacteria_TorCAD_operon_transcriptional_regulatory_protein_torR_Streptomyces sp. Go-475
 
@@ -2108,10 +1894,6 @@ NZ_LJVG01000021|DEG10180179|7266|7722|7233|15575|cluster-1|t1pks-PUFA-otherks|1-
 
 KB235896|DEG10180185|3637075|3637531|3631802|3632491|cluster-1|t1pks-otherks|3617023-3667115|4584	KB235896_DEG10180185_t1pks-otherks_cluster-1_Cyanobacteria_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Anabaena sp. PCC 7108
 
-MWDK01000004|DEG10180180|56002|56429|53837|54583|cluster-1|t1pks|35373-82077|1419	MWDK01000004_DEG10180180_t1pks_cluster-1_Bacteroidetes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacteroidetes bacterium ADurb.Bin141 (anaerobic digester metagenome)
-
-NNBM01000002|DEG10180180|895784|896214|892271|893017|cluster-7|t1pks|875748-902357|2767	NNBM01000002_DEG10180180_t1pks_cluster-7_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. CB02120-2
-
 NTHK01000080|DEG10180034|15863|16302|10027|15861|cluster-1|t1pks-nrps|1-35030|2	NTHK01000080_DEG10180034_t1pks-nrps_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces sp. b62
 
 FPJO01000011|DEG10180034|109362|109794|112796|120064|cluster-1|t1pks-nrps|70415-140064|3002	FPJO01000011_DEG10180034_t1pks-nrps_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces atratus
@@ -2120,19 +1902,13 @@ LQYC01000058|DEG10180179|5898|6356|5176|13131|cluster-1|t1pks|1-17131|1180	LQYC0
 
 CP011420|DEG10180179|1456128|1456555|1454811|1456058|cluster-3|transatpks-nrps|1391297-1491282|70	CP011420_DEG10180179_transatpks-nrps_cluster-3_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus polymyxa
 
-LGUV01000370|DEG10180180|99522|99776|98620|99366|cluster-1|t1pks-ladderane|75248-128004|156	LGUV01000370_DEG10180180_t1pks-ladderane_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces virginiae
-
 BFBZ01000002|DEG10180179|559873|560136|554246|559876|cluster-1|t1pks|514480-593356|3	BFBZ01000002_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_symbiont metagenome
-
-FOFV01000027|DEG10180047|59891|60452|63275|63754|cluster-1|otherks-t1pks-arylpolyene-nrps|14308-131137|2823	FOFV01000027_DEG10180047_otherks-t1pks-arylpolyene-nrps_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Lentzea albida
 
 MEJG01000002|DEG10180435|187231|187520|190866|191495|cluster-1|t1pks-arylpolyene|167121-252875|3346	MEJG01000002_DEG10180435_t1pks-arylpolyene_cluster-1_Proteobacteria_Hypothetical_protein_yggA_Parasaccharibacter apium
 
 FNSZ01000001|DEG10180508|7219395|7219439|7222819|7223991|cluster-1|t1pks-otherks|7213078-7265111|3380	FNSZ01000001_DEG10180508_t1pks-otherks_cluster-1_Actinobacteria_Elongation_factor_Tu_Streptomyces sp. 1222.5
 
 CP024710|DEG10180179|3150899|3151331|3146363|3148249|cluster-6|transatpks-nrps|3110139-3186973|2650	CP024710_DEG10180179_transatpks-nrps_cluster-6_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Dickeya solani
-
-BCWS01000001|DEG10180180|1051329|1051754|1048494|1049234|cluster-1|transatpks|1035916-1075690|2095	BCWS01000001_DEG10180180_transatpks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Pseudopropionibacterium propionicum NBRC 14587
 
 CP000951|DEG10180080|1206530|1206935|1203793|1205709|cluster-1|t1pks|1185897-1213881|821	CP000951_DEG10180080_t1pks_cluster-1_Cyanobacteria_1-deoxy-D-xylulose_5-phosphate_synthase_(EC_4.1.3.37)_Synechococcus sp. PCC 7002
 
@@ -2143,8 +1919,6 @@ AZUB01000003|DEG10180034|481655|482067|480986|488722|cluster-1|t1pks-nrps|460986
 CP009909|DEG10180179|4082108|4082530|4080139|4081350|cluster-1|transatpks-nrps|4061432-4137520|758	CP009909_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus polymyxa
 
 FNSO01000004|DEG10180522|4597565|4597977|4595074|4595850|cluster-3|t1pks-butyrolactone|4516380-4655074|1715	FNSO01000004_DEG10180522_t1pks-butyrolactone_cluster-3_Actinobacteria_Cell_division_ATP-binding_protein_ftsE_Amycolatopsis tolypomycina
-
-PVRO01000003|DEG10180180|205527|205951|204632|205369|cluster-1|transatpks|185409-261187|158	PVRO01000003_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
 
 JOCQ01000061|DEG10180034|30061|30493|33409|41205|cluster-1|t1pks-terpene-nrps|1-52629|2916	JOCQ01000061_DEG10180034_t1pks-terpene-nrps_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces rimosus subsp. rimosus
 
@@ -2196,8 +1970,6 @@ PBIM01000075|DEG10180034|4245|4669|8587|10014|cluster-1|t1pks-nrps|1-16909|3918	
 
 DFNB01000085|DEG10180179|85936|86360|83514|84770|cluster-1|transatpks-t1pks-nrps|41650-123906|1166	DFNB01000085_DEG10180179_transatpks-t1pks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Clostridiales bacterium UBA3578 (soil metagenome)
 
-LIVZ01000002|DEG10180180|664825|665174|664033|664737|cluster-5|butyrolactone-t1pks-otherks|622139-691675|88	LIVZ01000002_DEG10180180_butyrolactone-t1pks-otherks_cluster-5_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. TSRI0107
-
 AMWB02158164|DEG10180179|1024|1481|302|7972|cluster-1|t1pks|1-16917|1179	AMWB02158164_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_bioreactor metagenome
 
 LPHJ01000104|DEG10180034|87792|88216|87759|101153|cluster-1|transatpks-t1pks-nrps|43614-203173|457	LPHJ01000104_DEG10180034_transatpks-t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Burkholderia ubonensis
@@ -2244,15 +2016,11 @@ PSZD01000001|DEG10180393|537208|537634|533823|534293|cluster-4|t1pks|517205-5635
 
 NPCI01000001|DEG10180179|32198|32620|30306|31508|cluster-1|transatpks-nrps|1-87552|690	NPCI01000001_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus siamensis
 
-JMRO01000051|DEG10180180|652425|652458|647954|648766|cluster-2|t1pks|632758-675571|3659	JMRO01000051_DEG10180180_t1pks_cluster-2_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Galactomyces candidum (Geotrichum candidum)
-
 LPFZ01000051|DEG10180034|34|458|1|10224|cluster-1|bacteriocin-transatpks-t1pks-nrps|1-129532|457	LPFZ01000051_DEG10180034_bacteriocin-transatpks-t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Burkholderia ubonensis
 
 CP002160|DEG10180179|4753154|4753580|4755537|4756763|cluster-1|transatpks-nrps|4708437-4793085|1957	CP002160_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Clostridium cellulovorans 743B
 
 AMBZ01000008|DEG10180179|33526|33949|32756|33454|cluster-1|transatpks-nrps|1-130917|72	AMBZ01000008_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus alvei DSM 29
-
-LC095592|DEG10180180|22651|23078|20266|21030|cluster-1|t1pks|2509-71515|1621	LC095592_DEG10180180_t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Actinomadura fulva subsp. indica
 
 CP031222|DEG10180210|402761|403201|399526|400365|cluster-1|t1pks-otherks|382093-433633|2396	CP031222_DEG10180210_t1pks-otherks_cluster-1_Proteobacteria_UTP--glucose-1-phosphate_uridylyltransferase_(EC_2.7.7.9)_Moraxellaceae bacterium HYN0046
 
@@ -2306,8 +2074,6 @@ OFLW01000124|DEG10180052|12645|13059|6904|7710|cluster-1|transatpks-nrps|1-32811
 
 LGDQ01000236|DEG10180080|40987|41315|37264|39228|cluster-1|t1pks|27081-74505|1759	LGDQ01000236_DEG10180080_t1pks_cluster-1_Actinobacteria_1-deoxy-D-xylulose_5-phosphate_synthase_(EC_4.1.3.37)_Streptomyces sp. XY152
 
-AB363939|DEG10180180|6640|7070|4975|5778|cluster-1|t1pks|1-80358|862	AB363939_DEG10180180_t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces cyaneogriseus subsp. noncyanogenus
-
 KT327068|DEG10180179|38171|38426|30298|38082|cluster-1|t1pks|1-49740|89	KT327068_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. NCIB 11649
 
 CP018295|DEG10180072|2490200|2490609|2485095|2485934|cluster-1|transatpks|2469317-2569766|4266	CP018295_DEG10180072_transatpks_cluster-1_Firmicutes_Pyrroline-5-carboxylate_reductase_(EC_1.5.1.2)_Bacillus subtilis
@@ -2329,8 +2095,6 @@ PPFB01000001|DEG10180080|1928294|1928618|1931208|1933142|cluster-2|bacteriocin-t
 CTEE01000001|DEG10180537|1994173|1994629|1989688|1990161|cluster-2|nrps-t1pks-otherks|1974166-2064216|4012	CTEE01000001_DEG10180537_nrps-t1pks-otherks_cluster-2_Actinobacteria_Phosphopantetheine_adenylyltransferase_(EC_2.7.7.3)_Mycobacterium lentiflavum
 
 CP031320|DEG10180164|7761081|7761510|7757091|7757891|cluster-5|t1pks-nrps|7664165-7850538|3190	CP031320_DEG10180164_t1pks-nrps_cluster-5_Actinobacteria_TorCAD_operon_transcriptional_regulatory_protein_torR_Streptomyces armeniacus
-
-FPJG01000006|DEG10180180|2955124|2955451|2954327|2955031|cluster-2|t1pks-butyrolactone|2937763-2988196|93	FPJG01000006_DEG10180180_t1pks-butyrolactone_cluster-2_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Amycolatopsis australiensis
 
 NZ_JNXR01000047|DEG10180508|46119|46163|50823|52004|cluster-1|t1pks-otherks|41140-72205|4660	NZ_JNXR01000047_DEG10180508_t1pks-otherks_cluster-1_Actinobacteria_Elongation_factor_Tu_Streptomyces durhamensis
 
@@ -2356,13 +2120,9 @@ NZ_LISX01000002|DEG10180034|238945|239377|231414|238874|cluster-1|t1pks-arylpoly
 
 NZ_UPHS01000067|DEG10180483|13619|14053|9086|9586|cluster-1|t3pks-t1pks|1-36214|4033	NZ_UPHS01000067_DEG10180483_t3pks-t1pks_cluster-1_Actinobacteria_Arginine_repressor_Mycobacterium sp. MK191
 
-CP020664|DEG10180180|2252720|2252765|2253841|2254557|cluster-2|otherks-t1pks-nrps|2245993-2325436|1076	CP020664_DEG10180180_otherks-t1pks-nrps_cluster-2_Cyanobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Microcystis sp. MC19
-
 JWLZ01000199|DEG10180179|43917|44337|48437|49699|cluster-1|transatpks-nrps|6486-52052|4100	JWLZ01000199_DEG10180179_transatpks-nrps_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Photobacterium gaetbulicola
 
 CM001488|DEG10180072|3877333|3877794|3871952|3872803|cluster-1|t1pks|3856638-3908076|4530	CM001488_DEG10180072_t1pks_cluster-1_Proteobacteria_Pyrroline-5-carboxylate_reductase_(EC_1.5.1.2)_Desulfobacter postgatei 2ac9
-
-RBAL01000001|DEG10180180|509227|509561|508390|509079|cluster-2|butyrolactone-t1pks|478219-532618|148	RBAL01000001_DEG10180180_butyrolactone-t1pks_cluster-2_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces hoynatensis
 
 KT727016|DEG10180179|7202|7625|4799|5665|cluster-1|transatpks-otherks|1-98353|1537	KT727016_DEG10180179_transatpks-otherks_cluster-1_Cyanobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Leptolyngbya sp. ISBN3-Nov-94-8
 
@@ -2390,8 +2150,6 @@ NQNB01000067|DEG10180034|19673|20097|19640|33040|cluster-1|t1pks-nrps|1-70416|45
 
 CP022545|DEG10180179|11139652|11140075|11131353|11139593|cluster-1|t1pks-nrps|11092881-11205821|59	CP022545_DEG10180179_t1pks-nrps_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. 11-1-2
 
-FNLF01000002|DEG10180047|1131376|1131711|1127744|1128238|cluster-1|ladderane-t1pks-nrps|1057479-1153604|3138	FNLF01000002_DEG10180047_ladderane-t1pks-nrps_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Tsukamurella pulmonis
-
 FNPR01000001|DEG10180238|842272|842317|844698|845450|cluster-2|t1pks|794664-846671|2381	FNPR01000001_DEG10180238_t1pks_cluster-2_Proteobacteria_Phenylacetic_acid_degradation_protein_paaC_Lentibacter algarum
 
 KJ710244|DEG10180034|6211|6634|5528|18073|cluster-1|t1pks-nrps|1-37509|1106	KJ710244_DEG10180034_t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Cystobacter fuscus
@@ -2408,13 +2166,9 @@ NZ_JQNR01000004|DEG10180179|1354048|1354480|1354029|1358585|cluster-8|t1pks-nrps
 
 CENX01002161|DEG10180179|4|392|1|7971|cluster-1|t1pks|1-7973|391	CENX01002161_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_marine metagenome
 
-DBOQ01000066|DEG10180180|6591|6924|5738|6475|cluster-1|transatpks-otherks|1-65117|116	DBOQ01000066_DEG10180180_transatpks-otherks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Ruminococcaceae bacterium UBA642 (gut metagenome)
-
 JTJC02000153|DEG10180034|25340|25764|30241|35604|cluster-1|t1pks-nrps|4627-61785|4477	JTJC02000153_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Scytonema millei VB511283
 
 NNBT01000015|DEG10180034|34387|34813|29067|34376|cluster-1|t1pks-nrps|1-56162|11	NNBT01000015_DEG10180034_t1pks-nrps_cluster-1_metagenomes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_plant metagenome
-
-NZ_BBPA01000018|DEG10180180|21571|22024|17671|18429|cluster-1|t1pks|1562-46145|3142	NZ_BBPA01000018_DEG10180180_t1pks_cluster-1_Cyanobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Microcystis aeruginosa NIES-44
 
 ABVL01000001|DEG10180241|415323|415749|413909|414565|cluster-3|t1pks|395318-441071|758	ABVL01000001_DEG10180241_t1pks_cluster-3_Verrucomicrobia_Acyl_carrier_protein_phosphodiesterase_(EC_3.1.4.14)_Chthoniobacter flavus Ellin428
 
@@ -2446,13 +2200,7 @@ CP023278|DEG10180034|185329|185752|185294|195745|cluster-1|t1pks-nrps|165294-249
 
 LMDZ01000005|DEG10180219|551114|551539|545951|546568|cluster-1|t1pks-nrps|531101-584789|4546	LMDZ01000005_DEG10180219_t1pks-nrps_cluster-1_Proteobacteria_COB(I)alamin_adenosyltransferase_(EC_2.5.1.17)_Phenylobacterium sp. Root1277
 
-KL591457|DEG10180180|148432|148567|146705|147265|cluster-2|terpene-arylpolyene-t2pks-phosphonate-melanin-t1pks|65712-176051|1167	KL591457_DEG10180180_terpene-arylpolyene-t2pks-phosphonate-melanin-t1pks_cluster-2_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. NRRL B-2375
-
 PVWO01000075|DEG10180034|5731|6149|4650|16774|cluster-1|t1pks-nrps|1-16774|1499	PVWO01000075_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Chamaesiphon polymorphus CCALA 037
-
-PHNC01000008|DEG10180180|8990|9126|3233|3997|cluster-1|ladderane-t1pks-nrps|1-87634|4993	PHNC01000008_DEG10180180_ladderane-t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces orinoci
-
-CP015726|DEG10180180|1548426|1548753|1547619|1548323|cluster-3|t1pks-otherks-butyrolactone-nrps|1521490-1731040|103	CP015726_DEG10180180_t1pks-otherks-butyrolactone-nrps_cluster-3_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. RTd22
 
 LIRB01000148|DEG10180179|22502|22924|21142|22419|cluster-1|transatpks-t1pks-nrps|1-137681|83	LIRB01000148_DEG10180179_transatpks-t1pks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus riograndensis
 
@@ -2460,17 +2208,11 @@ HG428150|DEG10180447|17796|18217|12311|12871|cluster-1|t1pks-nrps|1-58061|4925	H
 
 JTCM01000002|DEG10180034|11488|11914|11476|16590|cluster-1|t1pks-nrps|1-83796|438	JTCM01000002_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Hassallia byssoidea VB512170
 
-CP003422|DEG10180180|4635682|4636048|4637193|4637924|cluster-1|nrps-t1pks-ladderane|4615643-4764897|1145	CP003422_DEG10180180_nrps-t1pks-ladderane_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Paenibacillus mucilaginosus K02
-
 CP006890|DEG10180034|1922778|1923200|1922108|1934056|cluster-3|transatpks-nrps|1878029-2015842|1092	CP006890_DEG10180034_transatpks-nrps_cluster-3_Firmicutes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Bacillus velezensis SQR9
 
 NZ_MLYN01000089|DEG10180508|68450|68494|64126|65304|cluster-1|t1pks-otherks|23689-76178|3146	NZ_MLYN01000089_DEG10180508_t1pks-otherks_cluster-1_Actinobacteria_Elongation_factor_Tu_Streptomyces sp. MUSC 14
 
-OMZK01000001|DEG10180180|90591|90923|91805|92542|cluster-1|transatpks-otherks|1-111778|882	OMZK01000001_DEG10180180_transatpks-otherks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_uncultured Clostridiales bacterium
-
 CP009285|DEG10180283|4434503|4434828|4429176|4430198|cluster-1|transatpks-otherks|4399088-4521026|4305	CP009285_DEG10180283_transatpks-otherks_cluster-1_Firmicutes_Putative_electron_transfer_flavoprotein_subunit_ydiR_Paenibacillus borealis
-
-CP004388|DEG10180180|3057364|3057709|3056573|3057298|cluster-1|t1pks-arylpolyene-nrps|2980105-3078542|66	CP004388_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira xiamenensis M-5 = DSM 17429
 
 LMDL01000054|DEG10180518|1271|1699|522|1040|cluster-1|t1pks|1-4963|231	LMDL01000054_DEG10180518_t1pks_cluster-1_Actinobacteria_Shikimate_kinase_I_(EC_2.7.1.71)_Streptomyces sp. Root369
 
@@ -2528,15 +2270,9 @@ MLCE01000002|DEG10180052|346558|346914|344477|346216|cluster-2|t2pks-t1pks-other
 
 JX827855|DEG10180185|21129|21553|25611|26243|cluster-1|t1pks-nrps|1-34046|4058	JX827855_DEG10180185_t1pks-nrps_cluster-1_environmental samples_Lipoprotein_releasing_system_ATP-binding_protein_lolD_uncultured bacterium contig00322
 
-JQNW01000004|DEG10180180|364469|364789|363196|363921|cluster-1|t1pks-arylpolyene|329878-385595|548	JQNW01000004_DEG10180180_t1pks-arylpolyene_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Chromohalobacter israelensis
-
-BCMN01000019|DEG10180180|166884|167307|163962|164723|cluster-1|t1pks|146837-210782|2161	BCMN01000019_DEG10180180_t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces turgidiscabies
-
 UGSC01000001|DEG10180179|1075101|1075523|1073132|1074343|cluster-2|transatpks-nrps|1054425-1130513|758	UGSC01000001_DEG10180179_transatpks-nrps_cluster-2_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus polymyxa
 
 OKOX01000066|DEG10180179|10760|11079|11907|14114|cluster-1|transatpks|1050-70713|828	OKOX01000066_DEG10180179_transatpks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_human gut metagenome
-
-AP017424|DEG10180180|7658480|7658907|7657714|7658463|cluster-1|t1pks-nrps|7638460-7711851|17	AP017424_DEG10180180_t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces laurentii
 
 AUXY01000013|DEG10180034|16322|16732|15602|25621|cluster-1|t1pks-nrps|1-67540|1130	AUXY01000013_DEG10180034_t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Pseudoalteromonas luteoviolacea H33-S
 
@@ -2555,10 +2291,6 @@ QLLW01000013|DEG10180508|60941|61376|56022|57200|cluster-1|t1pks-otherks|40269-9
 KC699835|DEG10180034|25689|26116|15114|25556|cluster-1|t1pks-terpene-nrps|1-65820|133	KC699835_DEG10180034_t1pks-terpene-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Nostoc sp. 152 (Nostoc sp. PCC 9237/1)
 
 CP004370|DEG10180238|6740250|6740680|6734708|6735496|cluster-1|lantipeptide-t1pks-nrps|6613274-6838639|4754	CP004370_DEG10180238_lantipeptide-t1pks-nrps_cluster-1_Actinobacteria_Phenylacetic_acid_degradation_protein_paaC_Streptomyces albus J1074
-
-MLYN01000058|DEG10180180|46096|46481|43861|44619|cluster-1|t1pks|26093-69887|1477	MLYN01000058_DEG10180180_t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. MUSC 14
-
-KB891904|DEG10180180|17143|17570|16361|17128|cluster-1|t1pks-nrps|1-62086|15	KB891904_DEG10180180_t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. MspMP-M5
 
 JOGU01000015|DEG10180238|59648|60078|54111|54899|cluster-1|lantipeptide-t1pks-nrps|1-120995|4749	JOGU01000015_DEG10180238_lantipeptide-t1pks-nrps_cluster-1_Actinobacteria_Phenylacetic_acid_degradation_protein_paaC_Streptomyces griseus subsp. griseus
 
@@ -2581,8 +2313,6 @@ BBYF01000002|DEG10180185|665159|665490|669245|669925|cluster-1|transatpks-otherk
 GG657742|DEG10180522|4893872|4894299|4888278|4888967|cluster-1|t1pks-nrps|4873825-4923244|4905	GG657742_DEG10180522_t1pks-nrps_cluster-1_Actinobacteria_Cell_division_ATP-binding_protein_ftsE_Streptomyces sp. SPB78
 
 LPUP01000014|DEG10180179|65500|65929|64164|65417|cluster-1|transatpks-nrps|25742-103472|83	LPUP01000014_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus amyloliquefaciens
-
-JPJU01000971|DEG10180180|23337|23766|18725|19666|cluster-1|t1pks|2953-36983|3671	JPJU01000971_DEG10180180_t1pks_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Pseudogymnoascus sp. VKM F-4246
 
 JF430079|DEG10180034|23244|23669|23208|37514|cluster-1|t1pks-nrps|1-55508|461	JF430079_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Nostoc sp. 152 (Nostoc sp. PCC 9237/1)
 
@@ -2614,8 +2344,6 @@ BDBI01000030|DEG10180098|170455|170888|167218|167829|cluster-1|t1pks|150335-1955
 
 MKKZ01000016|DEG10180244|135275|135685|132502|133107|cluster-1|transatpks|114171-171851|2168	MKKZ01000016_DEG10180244_transatpks_cluster-1_Proteobacteria_Hypothetical_protein_ydcN_Ralstonia solanacearum
 
-BCQR01000005|DEG10180180|105634|106054|107958|108662|cluster-1|t1pks-nrps|79902-110078|1904	BCQR01000005_DEG10180180_t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Actinomadura kijaniata NBRC 14229
-
 LM995447|DEG10180179|1003604|1004028|1001185|1002435|cluster-1|microcin-transatpks-t1pks-nrps|950106-1030551|1169	LM995447_DEG10180179_microcin-transatpks-t1pks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_[Clostridium] cellulosi
 
 APWM01000007|DEG10180257|43382|43814|38750|39649|cluster-1|transatpks-nrps|23378-100393|3733	APWM01000007_DEG10180257_transatpks-nrps_cluster-1_Proteobacteria_Multiple_antibiotic_resistance_protein_marA_Dickeya zeae MS1
@@ -2644,8 +2372,6 @@ CEVS01032936|DEG10180179|24|483|3|4382|cluster-1|t1pks|1-9170|480	CEVS01032936_D
 
 MEBK01000023|DEG10180034|34|458|1|11026|cluster-1|transatpks-t1pks-nrps|1-112928|457	MEBK01000023_DEG10180034_transatpks-t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Burkholderia ubonensis
 
-QUNO01000014|DEG10180180|156038|156383|160382|161107|cluster-1|indole-thiopeptide-t2pks-lantipeptide-t1pks|12703-177213|3999	QUNO01000014_DEG10180180_indole-thiopeptide-t2pks-lantipeptide-t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Kutzneria buriramensis
-
 DF967974|DEG10180179|2500460|2500690|2496087|2500298|cluster-3|terpene-t1pks|2476087-2542706|162	DF967974_DEG10180179_terpene-t1pks_cluster-3_Chloroflexi_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Levilinea saccharolytica
 
 CP029541|DEG10180179|8630504|8630968|8623290|8630495|cluster-1|t1pks-otherks|8603080-8655566|9	CP029541_DEG10180179_t1pks-otherks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. NEAU-S7GS2
@@ -2653,8 +2379,6 @@ CP029541|DEG10180179|8630504|8630968|8623290|8630495|cluster-1|t1pks-otherks|860
 CP008702|DEG10180397|3245548|3245971|3239829|3240551|cluster-1|t1pks-nrps|3225445-3319954|4997	CP008702_DEG10180397_t1pks-nrps_cluster-1_Actinobacteria_Ribonuclease_III_(EC_3.1.26.3)_Mycobacterium tuberculosis TRS9
 
 FTCB01000676|DEG10180357|33749|34181|33237|42425|cluster-1|t1pks-nrps|1-66080|944	FTCB01000676_DEG10180357_t1pks-nrps_cluster-1_metagenomes_O-succinylbenzoic_acid--CoA_ligase_(EC_6.2.1.26)_metagenome
-
-NZ_AUNC01000072|DEG10180180|80594|80939|79803|80528|cluster-1|t1pks-arylpolyene-nrps|3288-101772|66	NZ_AUNC01000072_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira permensis NBRC 106175
 
 CP015423|DEG10180315|736217|736654|729494|731263|cluster-1|transatpks-otherks-nrps|715585-813060|4954	CP015423_DEG10180315_transatpks-otherks-nrps_cluster-1_Firmicutes_Aspartyl-tRNA_synthetase_(EC_6.1.1.12)_Paenibacillus polymyxa
 
@@ -2702,8 +2426,6 @@ LT732547|DEG10180179|425720|426142|423724|424959|cluster-2|transatpks-nrps|40498
 
 CP008953|DEG10180357|2525789|2526213|2523500|2525035|cluster-1|t1pks-nrps|2449130-2610944|754	CP008953_DEG10180357_t1pks-nrps_cluster-1_Actinobacteria_O-succinylbenzoic_acid--CoA_ligase_(EC_6.2.1.26)_Amycolatopsis japonica
 
-CDGZ01000012|DEG10180180|408451|408755|410033|410758|cluster-1|t1pks-arylpolyene|388359-445657|1278	CDGZ01000012_DEG10180180_t1pks-arylpolyene_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Chromohalobacter japonicus
-
 JH556659|DEG10180179|254795|255219|259859|261115|cluster-1|transatpks-t1pks-nrps|202446-303045|4640	JH556659_DEG10180179_transatpks-t1pks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Hungateiclostridium cellulolyticum CD2
 
 LIPN01000436|DEG10180034|9243|9667|5146|6525|cluster-1|t1pks|1-11756|2718	LIPN01000436_DEG10180034_t1pks_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces atriruber
@@ -2711,10 +2433,6 @@ LIPN01000436|DEG10180034|9243|9667|5146|6525|cluster-1|t1pks|1-11756|2718	LIPN01
 PAPR01000009|DEG10180553|16321|16748|13043|13912|cluster-1|t1pks-nrps|1-44539|2409	PAPR01000009_DEG10180553_t1pks-nrps_cluster-1_Proteobacteria_Diaminopimelate_epimerase_(EC_5.1.1.7)_Pseudooceanicola sp. (marine metagenome)
 
 LOZJ01000091|DEG10180034|178942|179366|178909|192315|cluster-2|t1pks-nrps|141534-236442|457	LOZJ01000091_DEG10180034_t1pks-nrps_cluster-2_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Burkholderia ubonensis
-
-PCOF01000002|DEG10180047|268984|269291|268504|268926|cluster-1|transatpks-ladderane-nrps|171435-300874|58	PCOF01000002_DEG10180047_transatpks-ladderane-nrps_cluster-1_Firmicutes_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Paenibacillus sp. MYb67
-
-KF386883|DEG10180180|21348|21603|22544|23290|cluster-1|phosphonate-t1pks-ladderane|1-45232|941	KF386883_DEG10180180_phosphonate-t1pks-ladderane_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. XY66
 
 CEWG01032659|DEG10180179|24|483|3|4997|cluster-1|t1pks|1-5627|480	CEWG01032659_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_marine metagenome
 
@@ -2730,8 +2448,6 @@ JPWY01000019|DEG10180179|513655|513985|518896|519762|cluster-4|transatpks-otherk
 
 KE650771|DEG10180034|6286425|6286849|6286422|6293741|cluster-1|lantipeptide-t1pks-nrps|6195740-6313741|427	KE650771_DEG10180034_lantipeptide-t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Fischerella sp. PCC 9431
 
-ACXQ02000111|DEG10180180|13553|13753|15962|16759|cluster-1|t1pks|1-32983|2209	ACXQ02000111_DEG10180180_t1pks_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Grosmannia clavigera kw1407
-
 DDLX01000018|DEG10180396|32291|32716|37123|38034|cluster-1|t3pks-t1pks|1-56120|4407	DDLX01000018_DEG10180396_t3pks-t1pks_cluster-1_Bacteroidetes_GTP-binding_protein_era_Cytophagales bacterium UBA2561 (coral metagenome)
 
 ASPR01000003|DEG10180179|200749|201175|195939|197198|cluster-1|transatpks-nrps|172195-305992|3551	ASPR01000003_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus sp. FSL R5-192
@@ -2739,8 +2455,6 @@ ASPR01000003|DEG10180179|200749|201175|195939|197198|cluster-1|transatpks-nrps|1
 LZYT01000033|DEG10180179|10371|10799|9033|10292|cluster-1|transatpks-nrps|1-38424|79	LZYT01000033_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Clostridium felsineum DSM 794
 
 CP000698|DEG10180179|3615865|3616273|3613915|3615147|cluster-1|hserlactone-transatpks|3595183-3700470|718	CP000698_DEG10180179_hserlactone-transatpks_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Geobacter uraniireducens Rf4
-
-PJMX01000001|DEG10180180|1073307|1073735|1071047|1071808|cluster-1|amglyccycl-t1pks|1053302-1142784|1499	PJMX01000001_DEG10180180_amglyccycl-t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. TLI_146
 
 JACA01000047|DEG10180388|77135|77569|73968|75176|cluster-1|transatpks-otherks|43277-96271|1959	JACA01000047_DEG10180388_transatpks-otherks_cluster-1_Bacteroidetes_Cysteine_desulfurase_(EC_4.4.1.-)_Aquimarina macrocephali JAMB N27
 
@@ -2762,19 +2476,11 @@ KC863954|DEG10180589|15512|15972|14275|15282|cluster-1|t1pks|1-41341|230	KC86395
 
 CP019913|DEG10180585|2611413|2611863|2613774|2614346|cluster-1|t1pks-otherks|2590937-2638064|1911	CP019913_DEG10180585_t1pks-otherks_cluster-1_Proteobacteria_Elongation_factor_P_Desulfococcus multivorans
 
-CP015443|DEG10180180|3618173|3618597|3617278|3618015|cluster-1|transatpks|3598055-3698505|158	CP015443_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
-
 LT961733|DEG10180250|4108208|4108633|4112333|4112872|cluster-2|transatpks-nrps|4051571-4130894|3700	LT961733_DEG10180250_transatpks-nrps_cluster-2_Proteobacteria_Hypothetical_acetyltransferase_yncA_(EC_2.3.1.-)_Xanthomonas citri pv. fuscans (Xanthomonas fuscans subsp. fuscans)
 
 HM584908|DEG10180179|44098|44508|38018|39889|cluster-1|transatpks|24097-148058|4209	HM584908_DEG10180179_transatpks_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Sorangium cellulosum
 
 PMHC01000162|DEG10180455|3113|3530|1728|3104|cluster-1|t1pks|1-19179|9	PMHC01000162_DEG10180455_t1pks_cluster-1_Acidobacteria_tRNA_nucleotidyltransferase_(EC_2.7.7.25)_Acidobacteriaceae bacterium (peat metagenome)
-
-CP031320|DEG10180180|5729233|5729656|5725270|5726040|cluster-23|t1pks|5709215-5754134|3193	CP031320_DEG10180180_t1pks_cluster-23_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces armeniacus
-
-KZ319337|DEG10180180|3580268|3580692|3579373|3580110|cluster-1|transatpks|3560150-3660585|158	KZ319337_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
-
-JOKF01000009|DEG10180180|307110|307534|306215|306952|cluster-1|transatpks|286992-387441|158	JOKF01000009_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
 
 CP010976|DEG10180179|295610|296032|293661|294872|cluster-2|transatpks-nrps|274930-349591|738	CP010976_DEG10180179_transatpks-nrps_cluster-2_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus sp. IHBB 10380
 
@@ -2860,8 +2566,6 @@ LMZE01000090|DEG10180034|69134|69566|61510|69078|cluster-1|terpene-t1pks-nrps|41
 
 NKRD01000001|DEG10180483|6104008|6104442|6099513|6100016|cluster-1|t3pks-t1pks|6082821-6140967|3992	NKRD01000001_DEG10180483_t3pks-t1pks_cluster-1_Actinobacteria_Arginine_repressor_Mycobacterium kansasii
 
-BD262936|DEG10180180|15374|15795|12712|13866|cluster-1|t1pks-nrps|1-37856|1508	BD262936_DEG10180180_t1pks-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Sorangium cellulosum
-
 CM002271|DEG10180145|64677|65100|59637|60914|cluster-1|butyrolactone-t1pks-nrps|2794-140797|3763	CM002271_DEG10180145_butyrolactone-t1pks-nrps_cluster-1_Actinobacteria_Seryl-tRNA_synthetase_(EC_6.1.1.11)_Streptomyces sp. GBA 94-10
 
 MOOO01000016|DEG10180179|40023|40452|35267|36529|cluster-1|transatpks-nrps|11613-67822|3494	MOOO01000016_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus thuringiensis serovar argentinensis
@@ -2899,8 +2603,6 @@ AGAQ01000128|DEG10180240|16754|17061|19719|20180|cluster-1|t1pks|1-22040|2658	AG
 JNZD01000014|DEG10180179|270737|271154|242816|270682|cluster-1|t1pks|222816-300987|55	JNZD01000014_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces aureus
 
 MUKA01000379|DEG10180361|12812|13235|9097|9747|cluster-1|t1pks|1-29157|3065	MUKA01000379_DEG10180361_t1pks_cluster-1_Actinobacteria_3-octaprenyl-4-hydroxybenzoate_carboxy-lyase_(EC_4.1.1.-)_Streptomyces africanus
-
-FLTR01000018|DEG10180180|99965|100290|99161|99880|cluster-1|phosphonate-nrps-t1pks-ladderane|69790-124305|85	FLTR01000018_DEG10180180_phosphonate-nrps-t1pks-ladderane_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. Ncost-T6T-1
 
 HG779961|DEG10180003|4576|5008|103|378|cluster-1|t1pks-nrps|1-60220|4198	HG779961_DEG10180003_t1pks-nrps_cluster-1_Proteobacteria_Insertion_element_IS1_1_2_3_5_6_protein_insA_Xenorhabdus bovienii str. puntauvense
 
@@ -2940,8 +2642,6 @@ MRCD01000078|DEG10180034|21753|22174|12678|19058|cluster-1|t1pks-nrps|1-43815|26
 
 NZ_PVNL01000030|DEG10180179|68422|68847|68286|81164|cluster-1|t1pks-siderophore|1-118881|561	NZ_PVNL01000030_DEG10180179_t1pks-siderophore_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Enhygromyxa salina
 
-KZ672952|DEG10180047|208807|209059|208195|208689|cluster-1|t1pks-phenazine|103112-247465|118	KZ672952_DEG10180047_t1pks-phenazine_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Streptomyces geranii
-
 CETG01080164|DEG10180179|17|476|3|4823|cluster-1|t1pks|1-7790|473	CETG01080164_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_marine metagenome
 
 JNYO01000048|DEG10180522|42312|42736|36640|37497|cluster-1|t1pks|21145-132184|4815	JNYO01000048_DEG10180522_t1pks_cluster-1_Actinobacteria_Cell_division_ATP-binding_protein_ftsE_Saccharothrix syringae
@@ -2957,8 +2657,6 @@ JNWO01000002|DEG10180303|279578|280003|274765|276210|cluster-1|t1pks|258953-3068
 LYXA01000001|DEG10180445|1382296|1382724|1379121|1379399|cluster-3|t1pks|1362262-1441045|2897	LYXA01000001_DEG10180445_t1pks_cluster-3_Cyanobacteria_Hydrogenase-2_operon_protein_hybG_Cylindrospermopsis raciborskii CS-505
 
 LUTS01000004|DEG10180517|201404|201845|196635|197309|cluster-1|bacteriocin-t1pks-otherks|180721-256136|4095	LUTS01000004_DEG10180517_bacteriocin-t1pks-otherks_cluster-1_Proteobacteria_Ribulose-phosphate_3-epimerase_(EC_5.1.3.1)_Neptuniibacter pectenicola
-
-NZ_PRLP01000064|DEG10180180|5726|6149|3421|4212|cluster-1|t1pks-nrps|1-19886|1514	NZ_PRLP01000064_DEG10180180_t1pks-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Proteobacteria bacterium 228
 
 PPXO01003145|DEG10180034|14189|14615|14151|28604|cluster-1|t1pks-nrps|1-54133|464	PPXO01003145_DEG10180034_t1pks-nrps_cluster-1_Nitrospinae/Tectomicrobia group_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Candidatus Entotheonella serta
 
@@ -2977,8 +2675,6 @@ CP016077|DEG10180164|5243300|5243759|5239350|5240009|cluster-1|t1pks-otherks|522
 JOIZ01000010|DEG10180145|213465|213815|211998|213275|cluster-2|butyrolactone-t1pks|195973-262327|190	JOIZ01000010_DEG10180145_butyrolactone-t1pks_cluster-2_Actinobacteria_Seryl-tRNA_synthetase_(EC_6.1.1.11)_Streptomyces sp. NRRL S-37
 
 JQHM01000009|DEG10180057|10185|10556|4705|5442|cluster-1|t1pks-nrps|1-46183|4743	JQHM01000009_DEG10180057_t1pks-nrps_cluster-1_Proteobacteria_DNA_polymerase_III,_epsilon_chain_(EC_2.7.7.7)_Pectobacterium betavasculorum
-
-NW_020291156|DEG10180180|410749|411167|406217|407046|cluster-3|t1pks-nrps|336851-439742|3703	NW_020291156_DEG10180180_t1pks-nrps_cluster-3_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Aspergillus neoniger CBS 115656
 
 LANC01000009|DEG10180185|52815|53240|48053|48817|cluster-1|bacteriocin-transatpks-t1pks-nrps|1-69497|3998	LANC01000009_DEG10180185_bacteriocin-transatpks-t1pks-nrps_cluster-1_Proteobacteria_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Teredinibacter turnerae
 
@@ -3048,8 +2744,6 @@ CP025546|DEG10180483|3067196|3067618|3062735|3063232|cluster-2|t3pks-t1pks|30460
 
 NZ_MWQN01000003|DEG10180179|593714|594134|593690|608539|cluster-5|t1pks|529911-628539|444	NZ_MWQN01000003_DEG10180179_t1pks_cluster-5_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces scabrisporus
 
-NZ_NMUL01000007|DEG10180180|560895|561218|556426|557142|cluster-3|t2pks-t1pks|540821-604881|3753	NZ_NMUL01000007_DEG10180180_t2pks-t1pks_cluster-3_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Amycolatopsis sp. H5
-
 FN433113|DEG10180179|46371|46797|35811|46154|cluster-1|t1pks-terpene-nrps|1-80894|217	FN433113_DEG10180179_t1pks-terpene-nrps_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces lydicus
 
 BDCK01000016|DEG10180098|218103|218537|215857|216354|cluster-1|t1pks|197964-243249|1749	BDCK01000016_DEG10180098_t1pks_cluster-1_Actinobacteria_Peptidyl-prolyl_cis-trans_isomerase_B_(EC_5.2.1.8)_Nocardia niwae NBRC 108934 = DSM 45340
@@ -3072,8 +2766,6 @@ PEFS01000001|DEG10180052|1836809|1837146|1832660|1834345|cluster-1|t2pks-lantipe
 
 NZ_JNZH01000007|DEG10180179|53438|53898|46441|53484|cluster-1|t1pks-otherks|26441-78108|46	NZ_JNZH01000007_DEG10180179_t1pks-otherks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces xanthophaeus
 
-MCAO01000043|DEG10180180|174824|175169|174033|174758|cluster-1|t1pks-arylpolyene-nrps|97564-196002|66	MCAO01000043_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira sp. MIT1004
-
 CP018145|DEG10180179|2498694|2499115|2497370|2498638|cluster-1|transatpks-nrps|2473963-2550911|56	CP018145_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Brevibacillus formosus
 
 NZ_FNDJ01000057|DEG10180179|15030|15451|15030|20324|cluster-1|t1pks-nrps|1-30603|421	NZ_FNDJ01000057_DEG10180179_t1pks-nrps_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Nonomuraea jiangxiensis
@@ -3082,8 +2774,6 @@ NVCI01000022|DEG10180179|8236|8666|6896|8152|cluster-1|transatpks-nrps|1-46418|8
 
 CP013449|DEG10180179|986603|987036|990977|991813|cluster-2|transatpks-nrps|927263-1005964|3941	CP013449_DEG10180179_transatpks-nrps_cluster-2_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Burkholderia sp. Bp7605
 
-AZWL01000009|DEG10180180|159769|160194|158931|159680|cluster-1|t1pks-nrps|128294-200845|89	AZWL01000009_DEG10180180_t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. CNH099
-
 CP011924|DEG10180376|1309933|1310359|1308577|1309881|cluster-3|t1pks-nrps|1289916-1339257|52	CP011924_DEG10180376_t1pks-nrps_cluster-3_Proteobacteria_Succinyl-diaminopimelate_desuccinylase_(EC_3.5.1.18)_Pseudoalteromonas piscicida
 
 KZ559477|DEG10180052|189517|189849|193433|195109|cluster-1|t2pks-t1pks-nrps|131887-233392|3584	KZ559477_DEG10180052_t2pks-t1pks-nrps_cluster-1_Actinobacteria_Acetyl-coenzyme_A_carboxylase_carboxyl_transferase_subunit_alpha_(EC_6.4.1.2)_Nonomuraea indica
@@ -3091,8 +2781,6 @@ KZ559477|DEG10180052|189517|189849|193433|195109|cluster-1|t2pks-t1pks-nrps|1318
 QMDO01000001|DEG10180179|3098883|3099308|3097564|3098823|cluster-1|transatpks-nrps|3065510-3151379|60	QMDO01000001_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Vallitalea guaymasensis
 
 CP011533|DEG10180179|8290370|8290800|8287262|8288107|cluster-1|transatpks-nrps|8270365-8375658|2263	CP011533_DEG10180179_transatpks-nrps_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces noursei ATCC 11455
-
-AXZN01000044|DEG10180180|364429|364633|361970|362782|cluster-1|t1pks|345644-388586|1647	AXZN01000044_DEG10180180_t1pks_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Shiraia sp. slf14
 
 OJVC01000145|DEG10180179|754|997|5100|6368|cluster-1|t1pks-nrps|1-18982|4103	OJVC01000145_DEG10180179_t1pks-nrps_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_human gut metagenome
 
@@ -3108,8 +2796,6 @@ LNDA01000063|DEG10180098|72197|72630|69954|70454|cluster-1|t1pks|52055-80100|174
 
 LT548273|DEG10180179|77608|78019|67381|77529|cluster-1|t1pks|1-84281|79	LT548273_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. CMB-0406
 
-DEHU01000065|DEG10180047|18475|18904|15432|15872|cluster-1|t1pks-nrps|1-34193|2603	DEHU01000065_DEG10180047_t1pks-nrps_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Competibacteraceae bacterium UBA2792 (EBPR bioreactor metagenome)
-
 FO818637|DEG10180447|715879|716300|710394|710954|cluster-3|t1pks-nrps|700306-764815|4925	FO818637_DEG10180447_t1pks-nrps_cluster-3_Proteobacteria_Hypothetical_protein_yqhA_Xenorhabdus bovienii
 
 JOAA01000045|DEG10180179|26443|26859|25503|26438|cluster-1|lantipeptide-t1pks-otherks|1-73091|5	JOAA01000045_DEG10180179_lantipeptide-t1pks-otherks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Rhodococcus rhodnii
@@ -3121,8 +2807,6 @@ QFKU01000008|DEG10180034|31984|32406|31366|38055|cluster-1|terpene-t1pks-nrps|73
 CP010334|DEG10180397|3221585|3222008|3215866|3216588|cluster-1|t1pks-nrps|3211717-3296195|4997	CP010334_DEG10180397_t1pks-nrps_cluster-1_Actinobacteria_Ribonuclease_III_(EC_3.1.26.3)_Mycobacterium africanum
 
 LSBB01000018|DEG10180179|657821|658243|655927|657129|cluster-3|transatpks-nrps|637150-726248|692	LSBB01000018_DEG10180179_transatpks-nrps_cluster-3_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus atrophaeus
-
-FYEP01000021|DEG10180047|3338|3752|2737|3162|cluster-1|transatpks-otherks|1-99409|176	FYEP01000021_DEG10180047_transatpks-otherks_cluster-1_Firmicutes_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Paenibacillus elgii B69
 
 MIGN01000010|DEG10180185|22956|23285|24124|24828|cluster-1|transatpks-otherks|1-44109|839	MIGN01000010_DEG10180185_transatpks-otherks_cluster-1_Proteobacteria_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Xanthomonas arboricola
 
@@ -3139,8 +2823,6 @@ PTJM01000014|DEG10180179|17621|18043|23021|24229|cluster-1|transatpks-nrps|1-430
 JOFS01000047|DEG10180034|1716|2147|4958|12232|cluster-1|t1pks-nrps|1-32232|2811	JOFS01000047_DEG10180034_t1pks-nrps_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces bicolor
 
 LPIU01000016|DEG10180034|166197|166621|166164|179576|cluster-1|bacteriocin-t1pks-arylpolyene-nrps|103128-262200|457	LPIU01000016_DEG10180034_bacteriocin-t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Burkholderia ubonensis
-
-JJOB01000001|DEG10180180|310652|311079|309840|310640|cluster-3|t1pks-nrps|290637-379533|12	JJOB01000001_DEG10180180_t1pks-nrps_cluster-3_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. NTK 937
 
 NZJC01000082|DEG10180034|7224|7650|11456|13525|cluster-1|t1pks-nrps|1-37482|3806	NZJC01000082_DEG10180034_t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Deltaproteobacteria bacterium (marine metagenome)
 
@@ -3160,15 +2842,7 @@ CP007142|DEG10180377|4845800|4846225|4851060|4851932|cluster-1|t1pks-nrps|482178
 
 PEQO01000026|DEG10180397|33043|33466|27426|28151|cluster-1|t1pks-nrps|12940-76514|4892	PEQO01000026_DEG10180397_t1pks-nrps_cluster-1_Actinobacteria_Ribonuclease_III_(EC_3.1.26.3)_Mycobacterium sp. (freshwater metagenome)
 
-JOGB01000005|DEG10180180|201237|201568|202444|203187|cluster-2|phosphonate-t1pks-nrps|173599-231563|876	JOGB01000005_DEG10180180_phosphonate-t1pks-nrps_cluster-2_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. NRRL S-87
-
 LOUY01000052|DEG10180099|53047|53316|47914|49290|cluster-1|transatpks-nrps|37017-114356|3757	LOUY01000052_DEG10180099_transatpks-nrps_cluster-1_Proteobacteria_Cysteinyl-tRNA_synthetase_(EC_6.1.1.16)_Burkholderia ubonensis
-
-LGDI01000216|DEG10180180|174113|174429|173270|174016|cluster-1|phosphonate-t1pks-ladderane|143927-215401|97	LGDI01000216_DEG10180180_phosphonate-t1pks-ladderane_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. XY66
-
-FLRG01000006|DEG10180047|51581|51686|50993|51502|cluster-1|transatpks-ladderane-otherks|1-73846|79	FLRG01000006_DEG10180047_transatpks-ladderane-otherks_cluster-1_Bacteroidetes_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Aquimarina megaterium
-
-NZ_QMEY01000005|DEG10180180|78685|79018|77508|78314|cluster-1|t2pks-t1pks-nrps|58617-157128|371	NZ_QMEY01000005_DEG10180180_t2pks-t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Sphaerisporangium sp. LHW63015
 
 LLEN01000011|DEG10180185|24387|24801|19468|21222|cluster-1|transatpks-nrps|1-36920|3165	LLEN01000011_DEG10180185_transatpks-nrps_cluster-1_metagenomes_Lipoprotein_releasing_system_ATP-binding_protein_lolD_bioreactor metagenome
 
@@ -3242,8 +2916,6 @@ NZ_JOGZ01000002|DEG10180034|283550|283982|277881|283553|cluster-1|t1pks-nrps|252
 
 NPKF01000001|DEG10180508|7569131|7569175|7571851|7573020|cluster-1|t1pks-ectoine-otherks|7564317-7623852|2676	NPKF01000001_DEG10180508_t1pks-ectoine-otherks_cluster-1_Actinobacteria_Elongation_factor_Tu_Streptomyces sp. FBKL.4005
 
-KB894403|DEG10180047|583422|583657|584389|584886|cluster-2|arylpolyene-ladderane-otherks-t1pks-nrps|428045-611661|732	KB894403_DEG10180047_arylpolyene-ladderane-otherks-t1pks-nrps_cluster-2_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Actinokineospora enzanensis DSM 44649
-
 KK366027|DEG10180179|201263|201686|199944|201203|cluster-2|bacteriocin-thiopeptide-transatpks-t1pks-nrps|167247-270783|60	KK366027_DEG10180179_bacteriocin-thiopeptide-transatpks-t1pks-nrps_cluster-2_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus sp. UNC217MF
 
 AP018270|DEG10180034|318109|318539|317264|328999|cluster-2|t1pks-nrps|258446-340655|1275	AP018270_DEG10180034_t1pks-nrps_cluster-2_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Cylindrospermum sp. NIES-4074
@@ -3274,29 +2946,15 @@ CEQW01043228|DEG10180179|21|479|1|3339|cluster-1|t1pks|1-8575|478	CEQW01043228_D
 
 QOIL01000031|DEG10180146|65862|66276|62006|62659|cluster-1|t1pks|47976-99987|3203	QOIL01000031_DEG10180146_t1pks_cluster-1_Actinobacteria_Protein_ycaC_Sphaerisporangium album
 
-ADFY01000276|DEG10180047|2428|2641|1809|2306|cluster-1|t1pks|1-25613|122	ADFY01000276_DEG10180047_t1pks_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Pseudomonas syringae pv. tomato K40
-
-LUTO01000057|DEG10180047|2326|2560|1735|2223|cluster-1|t1pks|1-27266|103	LUTO01000057_DEG10180047_t1pks_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Lonsdalea britannica
-
 ASSJ01000064|DEG10180433|37|465|3934|5238|cluster-1|t1pks|1-22271|3469	ASSJ01000064_DEG10180433_t1pks_cluster-1_Cyanobacteria_2-octaprenyl-6-methoxyphenol_hydroxylase_(EC_1.14.13.-)_Rubidibacter lacunae KORDI 51-2
 
 FNHS01000022|DEG10180403|71187|71593|66658|67059|cluster-1|t1pks|51186-80388|4128	FNHS01000022_DEG10180403_t1pks_cluster-1_Proteobacteria_50S_ribosomal_protein_L19_Methylobacterium phyllostachyos
 
-ANAT01000017|DEG10180180|6080|6408|8188|8925|cluster-1|transatpks|1-26069|1780	ANAT01000017_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Paenibacillus lentimorbus NRRL B-30488
-
-KZ155841|DEG10180180|2517093|2517517|2516198|2516935|cluster-1|transatpks|2496975-2597428|158	KZ155841_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
-
 LZYT01000003|DEG10180179|266480|266902|265172|266437|cluster-1|sactipeptide-transatpks-nrps|242598-306283|43	LZYT01000003_DEG10180179_sactipeptide-transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Clostridium felsineum DSM 794
-
-CP022654|DEG10180180|3890108|3890532|3889213|3889950|cluster-1|transatpks|3869990-3970401|158	CP022654_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
-
-CP029342|DEG10180180|748513|748940|747719|748501|cluster-4|t1pks-nrps|728498-820279|12	CP029342_DEG10180180_t1pks-nrps_cluster-4_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. SM18
 
 NITU01000001|DEG10180072|311996|312405|306890|307729|cluster-4|transatpks|291113-366895|4267	NITU01000001_DEG10180072_transatpks_cluster-4_Firmicutes_Pyrroline-5-carboxylate_reductase_(EC_1.5.1.2)_Bacillus velezensis
 
 MIER01000019|DEG10180135|37563|37991|31377|32696|cluster-1|t1pks|17558-64721|4867	MIER01000019_DEG10180135_t1pks_cluster-1_Bacteroidetes_Hypothetical_protein_yliG_Reichenbachiella sp. MSK19-1
-
-LJCV01000231|DEG10180180|13864|14292|11598|12359|cluster-1|t1pks|1-37725|1505	LJCV01000231_DEG10180180_t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Actinobacteria bacterium OK074
 
 MRTN01000001|DEG10180179|107131|107558|105814|107061|cluster-1|transatpks-nrps|42323-142287|70	MRTN01000001_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus peoriae
 
@@ -3310,11 +2968,7 @@ PDHO01000003|DEG10180452|143923|144346|137455|139488|cluster-1|t1pks-terpene|991
 
 CP008975|DEG10180179|84903|85246|84903|88571|cluster-1|t1pks|64903-108571|343	CP008975_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Mycobacterium tuberculosis
 
-ABCS01000094|DEG10180180|18484|18527|19753|21261|cluster-1|t1pks|9919-36461|1226	ABCS01000094_DEG10180180_t1pks_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Plesiocystis pacifica SIR-1
-
 CP029465|DEG10180179|1908347|1908677|1903322|1904188|cluster-2|nrps-transatpks-otherks|1888270-1998159|4159	CP029465_DEG10180179_nrps-transatpks-otherks_cluster-2_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus subtilis subsp. inaquosorum
-
-KU568466|DEG10180180|4862|5292|1349|2095|cluster-1|t1pks|1-68720|2767	KU568466_DEG10180180_t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. A1(2016)
 
 RBIY01000001|DEG10180508|7908235|7908279|7911180|7912370|cluster-1|t1pks-otherks|7906940-7959012|2901	RBIY01000001_DEG10180508_t1pks-otherks_cluster-1_Actinobacteria_Elongation_factor_Tu_Streptomyces sp. 3212.4
 
@@ -3368,8 +3022,6 @@ AP008955|DEG10180179|3369643|3370064|3368319|3369587|cluster-1|transatpks-nrps|3
 
 CP014504|DEG10180034|235908|236329|235292|241849|cluster-2|t1pks-nrps|211232-261849|1037	CP014504_DEG10180034_t1pks-nrps_cluster-2_Bacteroidetes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Pedobacter cryoconitis
 
-LUTN01000004|DEG10180047|143804|144038|143213|143701|cluster-1|t1pks|94617-174919|103	LUTN01000004_DEG10180047_t1pks_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Lonsdalea britannica
-
 CP007244|DEG10180072|2319840|2320249|2314735|2315574|cluster-1|transatpks|2298957-2399412|4266	CP007244_DEG10180072_transatpks_cluster-1_Firmicutes_Pyrroline-5-carboxylate_reductase_(EC_1.5.1.2)_Bacillus velezensis TrigoCor1448
 
 ASZJ01000162|DEG10180028|9389|9795|4385|6061|cluster-1|t1pks|1-25199|3328	ASZJ01000162_DEG10180028_t1pks_cluster-1_Proteobacteria_Dihydrolipoamide_acetyltransferase_component_of_pyruvate_dehydrogenase_complex_(EC_2.3.1.12)_Osedax symbiont Rs1 (symbiont metagenome)
@@ -3377,8 +3029,6 @@ ASZJ01000162|DEG10180028|9389|9795|4385|6061|cluster-1|t1pks|1-25199|3328	ASZJ01
 CM002285|DEG10180522|500735|501143|499064|499867|cluster-2|t1pks|437440-552064|868	CM002285_DEG10180522_t1pks_cluster-2_Actinobacteria_Cell_division_ATP-binding_protein_ftsE_Streptomyces roseochromogenus subsp. oscitans DS 12.976
 
 AP009552|DEG10180034|3517881|3518304|3517846|3528309|cluster-1|t1pks-nrps|3466436-3557123|458	AP009552_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Microcystis aeruginosa NIES-843
-
-FNTU01000002|DEG10180180|4303902|4304247|4303111|4303836|cluster-1|t1pks-arylpolyene-nrps|4226668-4325080|66	FNTU01000002_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira sp. KO164
 
 CP009287|DEG10180179|790659|791095|789342|790604|cluster-1|transatpks-nrps|765586-830083|55	CP009287_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus graminis
 
@@ -3393,8 +3043,6 @@ KF170325|DEG10180179|45302|45715|29350|45195|cluster-1|t1pks|5475-56724|107	KF17
 CP012752|DEG10180179|3671911|3672336|3668785|3671910|cluster-2|transatpks-nrps|3626549-3711758|1	CP012752_DEG10180179_transatpks-nrps_cluster-2_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Kibdelosporangium phytohabitans
 
 AJTY01000936|DEG10180179|4503|4932|3202|4479|cluster-1|transatpks-nrps|1-15749|24	AJTY01000936_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus sonchi X19-5
-
-OMPD01000014|DEG10180047|640114|640219|639526|640035|cluster-1|transatpks-ladderane-otherks|521181-662379|79	OMPD01000014_DEG10180047_transatpks-ladderane-otherks_cluster-1_Bacteroidetes_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Aquimarina sp. AU58
 
 KQ947475|DEG10180377|2410115|2410537|2406193|2407071|cluster-1|t1pks|2389537-2436910|3044	KQ947475_DEG10180377_t1pks_cluster-1_Proteobacteria_Dihydrodipicolinate_synthase_(EC_4.2.1.52)_Vibrio sp. MEBiC08052
 
@@ -3449,8 +3097,6 @@ KK328973|DEG10180397|3269958|3270381|3264239|3264961|cluster-1|t1pks-nrps|324985
 CP003642|DEG10180185|1368558|1369013|1363569|1364261|cluster-2|t1pks-otherks|1348473-1399020|4297	CP003642_DEG10180185_t1pks-otherks_cluster-2_Cyanobacteria_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Cylindrospermum stagnale PCC 7417
 
 KY646190|DEG10180179|49608|49935|44316|45155|cluster-1|transatpks-t1pks-otherks|1-50778|4453	KY646190_DEG10180179_transatpks-t1pks-otherks_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Sorangium cellulosum
-
-AUNC01000072|DEG10180180|80594|80939|79803|80528|cluster-1|t1pks-arylpolyene-nrps|3288-101772|66	AUNC01000072_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira permensis NBRC 106175
 
 CP009922|DEG10180034|5641435|5641866|5644677|5652095|cluster-2|t1pks-nrps|5621426-5672095|2811	CP009922_DEG10180034_t1pks-nrps_cluster-2_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces xiamenensis
 
@@ -3512,8 +3158,6 @@ QXQB01000004|DEG10180179|281018|281441|279689|280963|cluster-1|transatpks-nrps|2
 
 JMLR01000004|DEG10180264|229201|229477|224429|224758|cluster-1|nrps-transatpks-otherks|209107-299243|4443	JMLR01000004_DEG10180264_nrps-transatpks-otherks_cluster-1_Firmicutes_Hypothetical_protein_ynfA_Paenibacillus sp. UNCCL52
 
-NW_020291498|DEG10180180|195672|196105|192775|193622|cluster-1|t1pks-nrps|175272-274268|2050	NW_020291498_DEG10180180_t1pks-nrps_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Aspergillus aculeatinus CBS 121060
-
 RCCR01000011|DEG10180034|1190159|1190581|1189541|1196224|cluster-1|t1pks-nrps|1160739-1220245|1040	RCCR01000011_DEG10180034_t1pks-nrps_cluster-1_Bacteroidetes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Mucilaginibacter sp. YR332
 
 AZUS01000007|DEG10180080|199311|199635|202228|204162|cluster-2|t1pks|166747-214129|2593	AZUS01000007_DEG10180080_t1pks_cluster-2_Actinobacteria_1-deoxy-D-xylulose_5-phosphate_synthase_(EC_4.1.3.37)_Streptomyces sp. CNH189
@@ -3530,8 +3174,6 @@ PUHZ01000023|DEG10180190|453921|454344|451324|452436|cluster-1|t1pks|433914-4618
 
 NJHX01000021|DEG10180438|52616|53019|50425|52437|cluster-1|t1pks-otherks|13139-87347|179	NJHX01000021_DEG10180438_t1pks-otherks_cluster-1_Cyanobacteria_Transketolase_1_(EC_2.2.1.1)_Cylindrospermopsis raciborskii S07
 
-CP019626|DEG10180180|3631544|3631968|3630680|3631417|cluster-1|transatpks|3611411-3711900|127	CP019626_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus sp. 275
-
 FQZK01000001|DEG10180052|435965|436315|440052|441719|cluster-2|t2pks-t1pks-otherks|384889-464600|3737	FQZK01000001_DEG10180052_t2pks-t1pks-otherks_cluster-2_Actinobacteria_Acetyl-coenzyme_A_carboxylase_carboxyl_transferase_subunit_alpha_(EC_6.4.1.2)_Nocardiopsis flavescens
 
 CP021707|DEG10180034|7134644|7135076|7137946|7145274|cluster-2|t1pks-nrps|7114635-7165274|2870	CP021707_DEG10180034_t1pks-nrps_cluster-2_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces sp. S063
@@ -3543,8 +3185,6 @@ QGHA01000002|DEG10180034|125028|125450|124398|131111|cluster-1|t1pks-nrps|100361
 PYHT01000007|DEG10180179|56145|56566|53869|55200|cluster-2|t1pks|36104-93309|945	PYHT01000007_DEG10180179_t1pks_cluster-2_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Nocardia sp. MDA0666
 
 CP003284|DEG10180034|1047206|1047629|1047171|1057619|cluster-1|t1pks-nrps|1027171-1182179|458	CP003284_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Anabaena sp. 90
-
-CP022753|DEG10180180|581468|581798|580603|581307|cluster-2|butyrolactone-t1pks|512249-609632|161	CP022753_DEG10180180_butyrolactone-t1pks_cluster-2_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Nocardiopsis gilva YIM 90087
 
 MPMZ01000016|DEG10180452|22597|23025|20313|22181|cluster-1|t1pks|2570-50078|416	MPMZ01000016_DEG10180452_t1pks_cluster-1_Nitrospirae_Topoisomerase_IV_subunit_B_(EC_5.99.1.-)_Nitrospira sp. bin75 (sponge metagenome)
 
@@ -3566,13 +3206,7 @@ PVZG01000002|DEG10180062|29302|29724|25517|26503|cluster-1|t1pks-nrps|8688-96184
 
 AOQI01000327|DEG10180179|59302|59396|54731|55771|cluster-1|t1pks-nrps|5899-60017|3531	AOQI01000327_DEG10180179_t1pks-nrps_cluster-1_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Escherichia coli TOP293-3
 
-AP010947|DEG10180047|214597|214815|213945|214439|cluster-1|t1pks-arylpolyene|189021-252937|158	AP010947_DEG10180047_t1pks-arylpolyene_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Azospirillum sp. B510
-
-UHFV01000002|DEG10180047|1089630|1089764|1089144|1089572|cluster-1|nrps-t1pks-ladderane|1070611-1133878|58	UHFV01000002_DEG10180047_nrps-t1pks-ladderane_cluster-1_Firmicutes_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Streptococcus macacae NCTC 11558
-
 CP023992|DEG10180179|3563614|3564040|3537767|3563566|cluster-17|lantipeptide-t1pks|3422319-3618642|48	CP023992_DEG10180179_lantipeptide-t1pks_cluster-17_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces malaysiensis
-
-AE016853|DEG10180047|5285095|5285308|5284476|5284973|cluster-1|t1pks-nrps|5268089-5356786|122	AE016853_DEG10180047_t1pks-nrps_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Pseudomonas syringae pv. tomato str. DC3000
 
 LT607733|DEG10180179|3758884|3759310|3728988|3758822|cluster-1|siderophore-t1pks-nrps|3627511-3877834|62	LT607733_DEG10180179_siderophore-t1pks-nrps_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Micromonospora echinofusca
 
@@ -3589,8 +3223,6 @@ FOIJ01000002|DEG10180185|146726|147143|142868|143614|cluster-1|t1pks|126725-1730
 JH993793|DEG10180034|400934|401350|400931|407005|cluster-1|t1pks-nrps|348773-427005|419	JH993793_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Leptolyngbya sp. PCC 7375
 
 CP008969|DEG10180397|2644799|2645222|2639080|2639802|cluster-1|t1pks-nrps|2634936-2719212|4997	CP008969_DEG10180397_t1pks-nrps_cluster-1_Actinobacteria_Ribonuclease_III_(EC_3.1.26.3)_Mycobacterium tuberculosis
-
-HE971709|DEG10180180|729629|730054|728884|729618|cluster-1|t1pks-nrps|699548-770346|11	HE971709_DEG10180180_t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces davawensis JCM 4913
 
 AP018786|DEG10180150|1890920|1891342|1888240|1889010|cluster-2|t1pks|1870913-1919138|1910	AP018786_DEG10180150_t1pks_cluster-2_Proteobacteria_3-deoxy-manno-octulosonate_cytidylyltransferase_(EC_2.7.7.38)_Sutterella sp. 6FBBBH3
 
@@ -3609,8 +3241,6 @@ NBLN01000005|DEG10180261|100977|101405|97959|98213|cluster-1|t1pks|80313-126828|
 KQ948304|DEG10180020|346224|346647|343622|345013|cluster-2|bacteriocin-t1pks|308164-373386|1211	KQ948304_DEG10180020_bacteriocin-t1pks_cluster-2_Actinobacteria_UDP-N-acetylmuramate--alanine_ligase_(EC_6.3.2.8)_Streptomyces canus
 
 FOQN01000003|DEG10180034|412683|413095|412014|419753|cluster-1|t1pks-nrps|392014-439753|1081	FOQN01000003_DEG10180034_t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Enterobacter sp. NFIX59
-
-ATWN01000003|DEG10180180|111031|111368|110240|110965|cluster-1|t1pks-arylpolyene-nrps|78351-156496|66	ATWN01000003_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira lucentensis MCCC 1A00383 = DSM 14000
 
 KT368179|DEG10180179|11385|11810|8149|11370|cluster-1|transatpks|1-59810|15	KT368179_DEG10180179_transatpks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. CNH365
 
@@ -3637,8 +3267,6 @@ NZ_RFFJ01000203|DEG10180179|2633|3058|2628|10403|cluster-1|t1pks|1-10403|430	NZ_
 NSHF01000001|DEG10180034|50301|50727|44951|50290|cluster-1|t1pks-nrps|3313-80783|11	NSHF01000001_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Nostoc sp. 'Peltigera malacea cyanobiont' DB3992
 
 FMHU01000002|DEG10180034|2141280|2141704|2139899|2153575|cluster-1|t2pks-t1pks-nrps|2076554-2173575|1805	FMHU01000002_DEG10180034_t2pks-t1pks-nrps_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Micromonospora inyonensis
-
-KQ948015|DEG10180180|642346|642758|640088|640831|cluster-3|t1pks|622343-666239|1515	KQ948015_DEG10180180_t1pks_cluster-3_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces cellostaticus
 
 JRJC01000028|DEG10180034|75245|75657|74577|82304|cluster-1|t1pks-nrps|54577-102304|1080	JRJC01000028_DEG10180034_t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Enterobacter sp. UCD-UG_FMILLET
 
@@ -3685,8 +3313,6 @@ LSMU01000027|DEG10180179|518200|518530|513183|514049|cluster-1|bacteriocin-nrps-
 UATJ01000015|DEG10180381|81481|81914|86034|87278|cluster-1|transatpks-nrps|17639-93319|4120	UATJ01000015_DEG10180381_transatpks-nrps_cluster-1_Firmicutes_Histidyl-tRNA_synthetase_(EC_6.1.1.21)_Paenibacillus polymyxa
 
 CP003678|DEG10180034|486849|487261|486280|493722|cluster-1|t1pks-nrps|466280-513722|981	CP003678_DEG10180034_t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Enterobacter cloacae subsp. dissolvens SDM
-
-X86780|DEG10180180|10609|11027|9337|10131|cluster-1|t1pks-nrps|1-107379|478	X86780_DEG10180180_t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces rapamycinicus NRRL 5491
 
 AP018933|DEG10180473|387200|387429|392071|393270|cluster-1|t1pks|349929-405107|4642	AP018933_DEG10180473_t1pks_cluster-1_Proteobacteria_Hypothetical_GTP-binding_protein_yhbZ_Zymobacter palmae
 
@@ -3740,8 +3366,6 @@ CP011533|DEG10180179|9314438|9314864|9301976|9314194|cluster-4|terpene-t1pks|924
 
 NYYT01000048|DEG10180034|6431|6857|4896|6395|cluster-1|t1pks-nrps|1-85116|36	NYYT01000048_DEG10180034_t1pks-nrps_cluster-1_Verrucomicrobia_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Pedosphaera sp. (marine metagenome)
 
-CP003235|DEG10180180|4477053|4477419|4478564|4479295|cluster-1|nrps-t1pks-ladderane|4457014-4606301|1145	CP003235_DEG10180180_nrps-t1pks-ladderane_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Paenibacillus mucilaginosus 3016
-
 CP002271|DEG10180584|5894556|5894980|5888029|5889672|cluster-1|bacteriocin-t1pks-nrps|5874522-5989790|4884	CP002271_DEG10180584_bacteriocin-t1pks-nrps_cluster-1_Proteobacteria_60_kDa_chaperonin_Stigmatella aurantiaca DW4/3-1
 
 JXRA01000006|DEG10180034|51082|51505|50460|57044|cluster-1|t1pks-nrps|30460-81104|1045	JXRA01000006_DEG10180034_t1pks-nrps_cluster-1_Bacteroidetes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Pedobacter lusitanus
@@ -3762,15 +3386,11 @@ JPKA01001076|DEG10180438|3307|3739|215|2279|cluster-1|t1pks|1-31687|1028	JPKA010
 
 CP023669|DEG10180034|2749468|2749884|2748753|2759867|cluster-1|t1pks-nrps|2710397-2779867|1131	CP023669_DEG10180034_t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Methylomonas koyamae
 
-LYOY01000022|DEG10180180|432|843|5831|6589|cluster-1|t1pks|1-14207|4988	LYOY01000022_DEG10180180_t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. ERV7
-
 CP014579|DEG10180185|1095174|1095599|1092329|1093066|cluster-2|t3pks-t1pks-otherks|1061570-1122768|2108	CP014579_DEG10180185_t3pks-t1pks-otherks_cluster-2_Proteobacteria_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Burkholderia sp. OLGA172
 
 FMDH01000023|DEG10180508|19328|19372|14571|15749|cluster-1|t1pks-otherks|1-25428|3579	FMDH01000023_DEG10180508_t1pks-otherks_cluster-1_Actinobacteria_Elongation_factor_Tu_Streptomyces sp. LamerLS-31b
 
 JHYF01000001|DEG10180179|152492|152915|155606|157000|cluster-2|transatpks-nrps|131825-199851|2691	JHYF01000001_DEG10180179_transatpks-nrps_cluster-2_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Alkaliphilus transvaalensis ATCC 700919
-
-CP020039|DEG10180180|3552759|3553075|3551919|3552665|cluster-1|phosphonate-t1pks-nucleoside-ladderane|3522410-3607786|94	CP020039_DEG10180180_phosphonate-t1pks-nucleoside-ladderane_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. 3211
 
 JOFL01000001|DEG10180034|418797|419229|411077|418786|cluster-5|t1pks-nrps|391077-442127|11	JOFL01000001_DEG10180034_t1pks-nrps_cluster-5_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces roseoverticillatus
 
@@ -3795,8 +3415,6 @@ NZ_LT699745|DEG10180179|409682|410146|403907|409468|cluster-1|t1pks-otherks|3839
 CESM01125979|DEG10180179|4613|5072|4600|13131|cluster-1|t1pks|1-22830|472	CESM01125979_DEG10180179_t1pks_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_marine metagenome
 
 FOQW01000014|DEG10180403|174746|175166|170226|170639|cluster-1|t1pks|154735-184207|4107	FOQW01000014_DEG10180403_t1pks_cluster-1_Proteobacteria_50S_ribosomal_protein_L19_Methylobacterium brachiatum
-
-PVWD01000024|DEG10180047|5243|5604|4638|5186|cluster-1|t1pks|1-33767|57	PVWD01000024_DEG10180047_t1pks_cluster-1_Cyanobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_filamentous cyanobacterium CCP2
 
 CP025034|DEG10180034|2124043|2124455|2123374|2131113|cluster-1|t1pks-nrps|2103374-2151113|1081	CP025034_DEG10180034_t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Lelliottia nimipressuralis
 
@@ -3864,8 +3482,6 @@ MGTY01000064|DEG10180389|24808|25257|21621|22382|cluster-1|t1pks|4807-30155|2426
 
 BDBF01000002|DEG10180179|225549|225970|223273|224604|cluster-1|t1pks-nrps|159354-262854|945	BDBF01000002_DEG10180179_t1pks-nrps_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Nocardia elegans NBRC 108235
 
-CP025001|DEG10180180|1823447|1823871|1822552|1823289|cluster-1|transatpks|1803329-1903761|158	CP025001_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus siamensis
-
 PEAL01000020|DEG10180034|3300|3716|3|3296|cluster-1|t1pks-nrps|1-31599|4	PEAL01000020_DEG10180034_t1pks-nrps_cluster-1_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Deltaproteobacteria bacterium (sediment metagenome)
 
 QTUB01000001|DEG10180360|2522697|2523159|2518549|2519463|cluster-2|nrps-t1pks-PUFA-otherks|2502682-2634214|3234	QTUB01000001_DEG10180360_nrps-t1pks-PUFA-otherks_cluster-2_Proteobacteria_Hypothetical_protein_yfcH_Xenorhabdus cabanillasii
@@ -3882,10 +3498,6 @@ NZ_MEHK01000001|DEG10180241|5489455|5489881|5486928|5487554|cluster-11|t1pks|546
 
 NEOT01000006|DEG10180185|57571|57633|54438|55145|cluster-1|t1pks-nrps|37992-108204|2426	NEOT01000006_DEG10180185_t1pks-nrps_cluster-1_Firmicutes_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Bacillus sp. MB353a
 
-CP022098|DEG10180180|2184277|2184710|2180815|2181558|cluster-1|t1pks|2170582-2216068|2719	CP022098_DEG10180180_t1pks_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Cystobacter fuscus
-
-FMZK01000019|DEG10180180|7017|7434|6218|6922|cluster-1|lantipeptide-t1pks|1-32465|95	FMZK01000019_DEG10180180_lantipeptide-t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces prasinopilosus
-
 NZ_KB898991|DEG10180034|280241|280687|274291|280239|cluster-1|t1pks-nrps|248414-303535|2	NZ_KB898991_DEG10180034_t1pks-nrps_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces sp. CNB091
 
 CDSB01000001|DEG10180244|369535|369945|366762|367367|cluster-1|transatpks-t1pks-nrps|326521-397415|2168	CDSB01000001_DEG10180244_transatpks-t1pks-nrps_cluster-1_Proteobacteria_Hypothetical_protein_ydcN_Ralstonia solanacearum
@@ -3896,19 +3508,11 @@ PUEV01000102|DEG10180164|53932|54355|52344|53027|cluster-1|t1pks-nrps|33221-6824
 
 CP006745|DEG10180563|1405418|1405831|1400652|1402856|cluster-1|transatpks|1384956-1465918|2562	CP006745_DEG10180563_transatpks_cluster-1_Proteobacteria_Primosomal_protein_N'_Candidatus Endolissoclinum faulkneri L5
 
-FNIX01000026|DEG10180047|43167|43732|41557|42036|cluster-1|ladderane-t1pks-otherks|1-65435|1131	FNIX01000026_DEG10180047_ladderane-t1pks-otherks_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Lentzea jiangxiensis
-
 BDBX01000015|DEG10180098|27946|28379|25709|26200|cluster-1|t1pks|7804-53041|1746	BDBX01000015_DEG10180098_t1pks_cluster-1_Actinobacteria_Peptidyl-prolyl_cis-trans_isomerase_B_(EC_5.2.1.8)_Nocardia sienata NBRC 100364
 
 NZ_JQJV01000052|DEG10180508|45079|45123|42709|43878|cluster-2|t1pks-nrps|37918-99812|1201	NZ_JQJV01000052_DEG10180508_t1pks-nrps_cluster-2_Actinobacteria_Elongation_factor_Tu_Streptomyces mirabilis
 
-LMUC01000004|DEG10180180|575866|576290|574971|575708|cluster-1|transatpks|555748-656198|158	LMUC01000004_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus amyloliquefaciens
-
-FNVU01000001|DEG10180180|362984|363409|360657|361421|cluster-3|t1pks|342979-387172|1563	FNVU01000001_DEG10180180_t1pks_cluster-3_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces yanglinensis
-
 CP028969|DEG10180477|106064|106491|103485|104033|cluster-1|t1pks|86053-137507|2031	CP028969_DEG10180477_t1pks_cluster-1_Proteobacteria_Nitrogen_regulatory_IIA_protein_(EC_2.7.1.69)_Aminobacter sp. MSH1
-
-KK211308|DEG10180047|13361|13530|12858|13298|cluster-1|sactipeptide-nrps-t1pks-ladderane|1-78805|63	KK211308_DEG10180047_sactipeptide-nrps-t1pks-ladderane_cluster-1_Firmicutes_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Butyrivibrio sp. LB2008
 
 PZOX01000005|DEG10180155|432412|432831|429661|431061|cluster-3|t1pks-nrps|412371-471362|1351	PZOX01000005_DEG10180155_t1pks-nrps_cluster-3_Proteobacteria_Asparaginyl-tRNA_synthetase_(EC_6.1.1.22)_Vitiosangium sp. GDMCC 1.1324
 
@@ -3924,8 +3528,6 @@ BCFL01000028|DEG10180508|231176|231220|228631|229800|cluster-2|t1pks-otherks|185
 
 JH993793|DEG10180179|544006|544270|541235|542215|cluster-2|transatpks-otherks|454266-565108|1791	JH993793_DEG10180179_transatpks-otherks_cluster-2_Cyanobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Leptolyngbya sp. PCC 7375
 
-FJ915123|DEG10180180|19886|20270|21865|22614|cluster-1|t2pks-t1pks-otherks|1-39835|1595	FJ915123_DEG10180180_t2pks-t1pks-otherks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Micromonospora echinospora subsp. challisensis
-
 JTHN01000005|DEG10180179|48763|49185|46880|48064|cluster-1|transatpks-nrps|28091-85659|699	JTHN01000005_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus sp. A3
 
 LZHV01000057|DEG10180397|14258|14680|8757|9467|cluster-1|t1pks|1-16728|4791	LZHV01000057_DEG10180397_t1pks_cluster-1_Actinobacteria_Ribonuclease_III_(EC_3.1.26.3)_Mycobacterium sp. ACS4054
@@ -3935,8 +3537,6 @@ LQMT02000005|DEG10180062|336551|336886|333726|334706|cluster-2|t2pks-t1pks-nrps|
 JAOA01000016|DEG10180034|86426|86507|81808|86400|cluster-1|t1pks-nrps|38225-106400|26	JAOA01000016_DEG10180034_t1pks-nrps_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Mycobacterium kansasii 662
 
 CP018335|DEG10180179|2752657|2753084|2756240|2757511|cluster-1|transatpks-nrps|2727981-2780047|3156	CP018335_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Clostridium kluyveri
-
-BBXD01000017|DEG10180047|323665|323925|326882|327355|cluster-1|ladderane-t1pks-nrps|235182-345785|2957	BBXD01000017_DEG10180047_ladderane-t1pks-nrps_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Herbidospora mongoliensis
 
 KZ819178|DEG10180034|7453216|7453648|7456521|7463858|cluster-1|t1pks-terpene-nrps|7413538-7483858|2873	KZ819178_DEG10180034_t1pks-terpene-nrps_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces sp. CS131
 
@@ -3958,13 +3558,9 @@ NQNA01000013|DEG10180099|90094|90359|94768|96144|cluster-1|transatpks-nrps|18523
 
 BDAZ01000001|DEG10180098|331255|331688|328978|329484|cluster-2|t1pks|311115-356493|1771	BDAZ01000001_DEG10180098_t1pks_cluster-2_Actinobacteria_Peptidyl-prolyl_cis-trans_isomerase_B_(EC_5.2.1.8)_Nocardia anaemiae NBRC 100462
 
-CP029607|DEG10180180|5943766|5944187|5942966|5943670|cluster-5|lantipeptide-t1pks|5903778-5969141|96	CP029607_DEG10180180_lantipeptide-t1pks_cluster-5_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Actinosynnema pretiosum subsp. pretiosum
-
 CP008983|DEG10180397|2644799|2645222|2639080|2639802|cluster-1|t1pks-nrps|2634937-2719213|4997	CP008983_DEG10180397_t1pks-nrps_cluster-1_Actinobacteria_Ribonuclease_III_(EC_3.1.26.3)_Mycobacterium tuberculosis
 
 BDCF01000014|DEG10180098|122858|123291|120615|121118|cluster-1|t1pks|102727-148006|1740	BDCF01000014_DEG10180098_t1pks_cluster-1_Actinobacteria_Peptidyl-prolyl_cis-trans_isomerase_B_(EC_5.2.1.8)_Nocardia xishanensis NBRC 101358
-
-LIQQ01000453|DEG10180047|16569|16815|17580|18068|cluster-1|t1pks|1-34493|765	LIQQ01000453_DEG10180047_t1pks_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Streptomyces graminilatus
 
 LWLC01000025|DEG10180498|35250|35669|30353|30649|cluster-1|t1pks-nrps|14601-64974|4601	LWLC01000025_DEG10180498_t1pks-nrps_cluster-1_Actinobacteria_30S_ribosomal_protein_S14_Saccharothrix sp. CB00851
 
@@ -3986,8 +3582,6 @@ JHVR01000025|DEG10180210|40772|40968|41503|42282|cluster-1|t1pks|11080-42282|535
 
 CNBW01000011|DEG10180397|12520|12943|6801|7523|cluster-1|t1pks-nrps|1-86872|4997	CNBW01000011_DEG10180397_t1pks-nrps_cluster-1_Actinobacteria_Ribonuclease_III_(EC_3.1.26.3)_Mycobacterium tuberculosis
 
-JNNZ01000153|DEG10180180|36191|36622|34421|35218|cluster-1|t1pks-nrps|16187-112761|973	JNNZ01000153_DEG10180180_t1pks-nrps_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Metarhizium anisopliae
-
 NZ_LBDA02000011|DEG10180508|62303|62738|57118|58296|cluster-1|t1pks-otherks|41631-71625|4007	NZ_LBDA02000011_DEG10180508_t1pks-otherks_cluster-1_Actinobacteria_Elongation_factor_Tu_Streptomyces malaysiense
 
 KQ948149|DEG10180020|305771|306193|303183|304574|cluster-2|bacteriocin-t1pks|269191-332939|1197	KQ948149_DEG10180020_bacteriocin-t1pks_cluster-2_Actinobacteria_UDP-N-acetylmuramate--alanine_ligase_(EC_6.3.2.8)_Streptomyces pseudovenezuelae
@@ -4006,17 +3600,11 @@ BFBZ01000001|DEG10180034|1567465|1567897|1567454|1573504|cluster-4|t1pks-nrps|15
 
 CP016176|DEG10180360|285218|285680|280200|281111|cluster-1|nrps-t1pks-PUFA-otherks|265198-406430|4107	CP016176_DEG10180360_nrps-t1pks-PUFA-otherks_cluster-1_Proteobacteria_Hypothetical_protein_yfcH_Xenorhabdus hominickii
 
-QXCZ01000001|DEG10180180|465336|465764|463076|463837|cluster-4|t1pks|445331-489281|1499	QXCZ01000001_DEG10180180_t1pks_cluster-4_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. 3212.5
-
 FO905644|DEG10180581|21857|22290|17609|18559|cluster-1|t1pks|1564-46240|3298	FO905644_DEG10180581_t1pks_cluster-1_Fungi_Aromatic-amino-acid_aminotransferase_(EC_2.6.1.57)_Leptosphaeria biglobosa 'brassicae' group
 
 LXQE01000184|DEG10180522|29547|29970|25249|25944|cluster-1|t1pks-nrps|1-43309|3603	LXQE01000184_DEG10180522_t1pks-nrps_cluster-1_Cyanobacteria_Cell_division_ATP-binding_protein_ftsE_Nostoc punctiforme NIES-2108
 
 OGSV01000060|DEG10180179|57736|58166|56370|57623|cluster-1|transatpks-t1pks-nrps|37723-148282|113	OGSV01000060_DEG10180179_transatpks-t1pks-nrps_cluster-1_metagenomes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_human gut metagenome
-
-CP029034|DEG10180180|1019530|1019954|1018635|1019372|cluster-1|transatpks|999412-1099865|158	CP029034_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
-
-NZ_NXGX01000005|DEG10180180|148165|148502|147374|148099|cluster-1|t1pks-arylpolyene-nrps|115380-193638|66	NZ_NXGX01000005_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira lohafexi
 
 QNRR01000007|DEG10180185|141045|141473|135905|136630|cluster-1|t1pks|121040-168734|4415	QNRR01000007_DEG10180185_t1pks_cluster-1_Verrucomicrobia_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Roseimicrobium gellanilyticum
 
@@ -4032,15 +3620,11 @@ NKQX01000001|DEG10180034|493502|493924|493455|501749|cluster-2|t1pks-nrps|453116
 
 PSZC01000006|DEG10180179|46351|46772|44084|45415|cluster-1|t1pks-nrps|1-83512|936	PSZC01000006_DEG10180179_t1pks-nrps_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Nocardia nova
 
-NZ_PEFP01000001|DEG10180180|207946|208356|203140|203874|cluster-1|t1pks|187924-233439|4072	NZ_PEFP01000001_DEG10180180_t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. 61
-
 KX708023|DEG10180179|36|446|1|5577|cluster-1|t1pks|1-5577|445	KX708023_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp
 
 NUDJ01000006|DEG10180179|103289|103714|107006|108235|cluster-1|transatpks-nrps|78645-109146|3292	NUDJ01000006_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus pseudomycoides
 
 CP015726|DEG10180179|4214755|4215181|4210124|4214560|cluster-1|t1pks|4047668-4258994|195	CP015726_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. RTd22
-
-NW_020798399|DEG10180180|2196|2627|500|1358|cluster-1|t1pks|1-23860|838	NW_020798399_DEG10180180_t1pks_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Aspergillus thermomutatus (Neosartorya pseudofischeri)
 
 CP016429|DEG10180403|5709564|5709954|5705050|5705451|cluster-1|t1pks|5689564-5736892|4113	CP016429_DEG10180403_t1pks_cluster-1_Proteobacteria_50S_ribosomal_protein_L19_Methylobacterium sp. XJLM
 
@@ -4053,8 +3637,6 @@ JJOB01000001|DEG10180141|130304|130642|128970|130016|cluster-1|t1pks|97904-14534
 KB891487|DEG10180164|103724|104141|99438|100169|cluster-1|t1pks-terpene|61604-128075|3555	KB891487_DEG10180164_t1pks-terpene_cluster-1_Actinobacteria_TorCAD_operon_transcriptional_regulatory_protein_torR_Streptomyces sp. FxanaD5
 
 CP007044|DEG10180179|3132341|3132777|3131007|3132272|cluster-2|transatpks-t1pks-nrps|3102167-3170780|69	CP007044_DEG10180179_transatpks-t1pks-nrps_cluster-2_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Chania multitudinisentens RB-25
-
-PPXP01000001|DEG10180180|1593087|1593511|1592192|1592929|cluster-1|transatpks|1572969-1672741|158	PPXP01000001_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
 
 CM002273|DEG10180238|6760598|6761028|6755056|6755844|cluster-1|lantipeptide-t1pks-nrps|6748821-6858963|4754	CM002273_DEG10180238_lantipeptide-t1pks-nrps_cluster-1_Actinobacteria_Phenylacetic_acid_degradation_protein_paaC_Streptomyces sp. PVA 94-07
 
@@ -4072,8 +3654,6 @@ NQNC01000002|DEG10180034|51054|51478|51021|64421|cluster-1|t1pks-nrps|6890-10177
 
 AUWR01000061|DEG10180164|24069|24492|22481|23164|cluster-1|t1pks-nrps|3358-38485|905	AUWR01000061_DEG10180164_t1pks-nrps_cluster-1_Actinobacteria_TorCAD_operon_transcriptional_regulatory_protein_torR_Mycobacterium sp. UM_WGJ
 
-NQXV01000044|DEG10180180|6154|6578|5259|5996|cluster-1|transatpks|1-86483|158	NQXV01000044_DEG10180180_transatpks_cluster-1_Firmicutes_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Bacillus velezensis
-
 BAGL01000117|DEG10180380|7762|8185|1793|3211|cluster-1|t1pks|1-30224|4551	BAGL01000117_DEG10180380_t1pks_cluster-1_Actinobacteria_Probable_GTP-binding_protein_engA_Nocardia transvalensis NBRC 15921
 
 MBEM01000211|DEG10180125|57394|57819|54190|55263|cluster-1|t1pks|37386-84924|2131	MBEM01000211_DEG10180125_t1pks_cluster-1_Actinobacteria_Dihydrolipoamide_succinyltransferase_component_of_2-oxoglutarate_dehydrogenase_complex_(EC_2.3.1.61)_Mycobacterium sp. SP-6446
@@ -4081,8 +3661,6 @@ MBEM01000211|DEG10180125|57394|57819|54190|55263|cluster-1|t1pks|37386-84924|213
 NZ_AQWO01000004|DEG10180179|182726|183190|175329|182717|cluster-2|t1pks-otherks|155329-207674|9	NZ_AQWO01000004_DEG10180179_t1pks-otherks_cluster-2_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. FxanaC1
 
 QZCF01000001|DEG10180179|353749|354175|350651|351934|cluster-1|transatpks-nrps|333716-398691|1815	QZCF01000001_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus sp. 1011MAR3C5
-
-FNIX01000037|DEG10180180|13861|14287|19191|19931|cluster-1|t1pks|1-29826|4904	FNIX01000037_DEG10180180_t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Lentzea jiangxiensis
 
 LAVK01000189|DEG10180392|3177|3602|17|1465|cluster-1|t1pks|1-14378|1712	LAVK01000189_DEG10180392_t1pks_cluster-1_Actinobacteria_Serine_hydroxymethyltransferase_(EC_2.1.2.1)_Streptomyces sp. SBT349
 
@@ -4098,11 +3676,7 @@ CP010849|DEG10180145|209404|209828|204424|205701|cluster-1|t1pks-nrps|181794-249
 
 JXCB01000004|DEG10180034|22618|23041|21893|33559|cluster-1|t1pks-nrps|1-53559|1148	JXCB01000004_DEG10180034_t1pks-nrps_cluster-1_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Tolypothrix campylonemoides VB511288
 
-CP012109|DEG10180047|5308480|5308701|5307842|5308372|cluster-2|t1pks-nrps|5262755-5336321|108	CP012109_DEG10180047_t1pks-nrps_cluster-2_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Myxococcus hansupus
-
 NZ_NWVL01000022|DEG10180034|8811|9255|3164|8809|cluster-1|t1pks-nrps|1-32012|2	NZ_NWVL01000022_DEG10180034_t1pks-nrps_cluster-1_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces sp. WZ.A104
-
-AY092402|DEG10180180|11602|12033|5874|6804|cluster-1|t1pks|1-37970|4798	AY092402_DEG10180180_t1pks_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Aspergillus ochraceoroseus
 
 CP008977|DEG10180179|84902|85245|84902|88570|cluster-1|t1pks|64902-108570|343	CP008977_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Mycobacterium tuberculosis
 
@@ -4112,21 +3686,15 @@ LNEW01000060|DEG10180281|4751|5172|2708|3136|cluster-1|t1pks|1-15351|1615	LNEW01
 
 JPWY01000019|DEG10180179|312587|313009|310693|311895|cluster-3|transatpks-nrps|291916-373502|692	JPWY01000019_DEG10180179_transatpks-nrps_cluster-3_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus sp. BSC154
 
-MTQO01000036|DEG10180047|82916|83160|83897|84349|cluster-2|t3pks-arylpolyene-lantipeptide-t1pks-nrps|41341-138736|737	MTQO01000036_DEG10180047_t3pks-arylpolyene-lantipeptide-t1pks-nrps_cluster-2_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Actinosynnema sp. ALI-1.44
-
 CP000117|DEG10180034|5112717|5113141|5117629|5122989|cluster-2|t1pks-nrps|5072680-5142989|4488	CP000117_DEG10180034_t1pks-nrps_cluster-2_Cyanobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Trichormus variabilis ATCC 29413 (Anabaena flos-aquae UTEX 1444)
 
 MRTO01000002|DEG10180179|238526|238948|236372|237577|cluster-1|transatpks-nrps|217850-279643|949	MRTO01000002_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus amylolyticus
-
-KB899004|DEG10180180|92451|92786|91121|91903|cluster-2|t2pks-otherks-t1pks-phenazine|72383-148726|548	KB899004_DEG10180180_t2pks-otherks-t1pks-phenazine_cluster-2_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. CNB091
 
 NITY01000011|DEG10180021|126137|126416|128674|129771|cluster-1|t1pks-nrps|65321-162527|2258	NITY01000011_DEG10180021_t1pks-nrps_cluster-1_Proteobacteria_D-alanine--D-alanine_ligase_B_(EC_6.3.2.4)_Xenorhabdus mauleonii
 
 QZFT01000045|DEG10180289|142594|143045|137802|139817|cluster-2|t1pks|122581-166774|2777	QZFT01000045_DEG10180289_t1pks_cluster-2_Actinobacteria_Threonyl-tRNA_synthetase_(EC_6.1.1.3)_Pseudonocardiaceae bacterium YIM PH 21723
 
 DFOF01000189|DEG10180537|64395|64475|68745|69224|cluster-1|t1pks-nrps|28959-84445|4270	DFOF01000189_DEG10180537_t1pks-nrps_cluster-1_Firmicutes_Phosphopantetheine_adenylyltransferase_(EC_2.7.7.3)_Hungateiclostridiaceae bacterium UBA3548 (terrestrial metagenome)
-
-FONN01000001|DEG10180047|795040|795351|794516|794938|cluster-2|transatpks-nrps|785825-856852|102	FONN01000001_DEG10180047_transatpks-nrps_cluster-2_Firmicutes_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Paenibacillus algorifonticola
 
 CP022098|DEG10180179|6784321|6784745|6784316|6794671|cluster-2|t1pks-nrps|6764316-6818106|429	CP022098_DEG10180179_t1pks-nrps_cluster-2_Proteobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Cystobacter fuscus
 
@@ -4145,8 +3713,6 @@ KN150849|DEG10180443|329397|329825|325450|326439|cluster-1|t1pks|309393-357045|2
 KE384306|DEG10180185|997327|997754|994069|994773|cluster-4|t1pks-nrps|977220-1044245|2554	KE384306_DEG10180185_t1pks-nrps_cluster-4_Firmicutes_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Paenibacillus taiwanensis DSM 18679
 
 AJST01000001|DEG10180072|2113311|2113720|2108205|2109044|cluster-1|transatpks|2092428-2192866|4267	AJST01000001_DEG10180072_transatpks_cluster-1_Firmicutes_Pyrroline-5-carboxylate_reductase_(EC_1.5.1.2)_Bacillus sp. 5B6
-
-NZ_ATWN01000003|DEG10180180|111031|111368|110240|110965|cluster-1|t1pks-arylpolyene-nrps|78351-156496|66	NZ_ATWN01000003_DEG10180180_t1pks-arylpolyene-nrps_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Thalassospira lucentensis MCCC 1A00383 = DSM 14000
 
 NOKT01000011|DEG10180034|119500|119931|113626|119439|cluster-2|t1pks-nrps|91763-143137|61	NOKT01000011_DEG10180034_t1pks-nrps_cluster-2_Actinobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Streptomyces sp. XY006
 
@@ -4174,15 +3740,11 @@ CP006259|DEG10180508|1646240|1646284|1641671|1642855|cluster-3|t1pks-otherks|160
 
 CP019724|DEG10180179|1151615|1152041|1151604|1156988|cluster-1|otherks-t1pks-nrps|1044256-1176997|437	CP019724_DEG10180179_otherks-t1pks-nrps_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces pactum
 
-KL573208|DEG10180047|57657|57813|55874|56497|cluster-1|t1pks-arylpolyene-nrps|1-91072|1160	KL573208_DEG10180047_t1pks-arylpolyene-nrps_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Sphaerisporangium viridialbum
-
 CP009241|DEG10180179|4246742|4247167|4240422|4241744|cluster-1|t1pks-nrps|4196962-4283106|4998	CP009241_DEG10180179_t1pks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus sp. FSL H7-0357
 
 JQ793783|DEG10180179|65434|65859|53687|65374|cluster-1|t1pks|1-102840|60	JQ793783_DEG10180179_t1pks_cluster-1_Actinobacteria_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Streptomyces sp. CS684
 
 QGGL01000005|DEG10180218|188740|189164|186744|187472|cluster-1|t1pks-nrps|167643-214734|1268	QGGL01000005_DEG10180218_t1pks-nrps_cluster-1_Firmicutes_Hypothetical_protein_yciL_Tumebacillus permanentifrigoris
-
-CP021744|DEG10180180|7887384|7887791|7885109|7885870|cluster-36|bacteriocin-t1pks-ectoine|7825347-7911269|1514	CP021744_DEG10180180_bacteriocin-t1pks-ectoine_cluster-36_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces albireticuli
 
 MRTG01000001|DEG10180179|275861|276283|273707|274912|cluster-1|transatpks-nrps|255185-316925|949	MRTG01000001_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus amylolyticus
 
@@ -4216,8 +3778,6 @@ MEEU01000079|DEG10180522|151740|152167|146851|147606|cluster-1|t1pks|131727-1807
 
 NPDH01000014|DEG10180072|294905|295314|289799|290638|cluster-3|transatpks|274022-320060|4267	NPDH01000014_DEG10180072_transatpks_cluster-3_Firmicutes_Pyrroline-5-carboxylate_reductase_(EC_1.5.1.2)_Bacillus velezensis
 
-FZNP01000017|DEG10180180|32965|33383|32261|32965|cluster-1|t3pks-t1pks-nrps|12962-73745|0	FZNP01000017_DEG10180180_t3pks-t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Actinomadura mexicana
-
 CP027868|DEG10180072|549871|550280|544764|545603|cluster-1|transatpks|528988-629433|4268	CP027868_DEG10180072_transatpks_cluster-1_Firmicutes_Pyrroline-5-carboxylate_reductase_(EC_1.5.1.2)_Bacillus velezensis
 
 KB894406|DEG10180052|106906|107288|102095|103765|cluster-1|t2pks-t1pks|86891-148771|3141	KB894406_DEG10180052_t2pks-t1pks_cluster-1_Actinobacteria_Acetyl-coenzyme_A_carboxylase_carboxyl_transferase_subunit_alpha_(EC_6.4.1.2)_Actinokineospora enzanensis DSM 44649
@@ -4242,8 +3802,6 @@ RAVZ01000006|DEG10180034|2498|2922|2393|10618|cluster-1|t1pks-nrps|1-55659|529	R
 
 DGVV01000131|DEG10180034|10746|11165|8305|9624|cluster-1|t1pks-nrps|1-33284|1122	DGVV01000131_DEG10180034_t1pks-nrps_cluster-1_Firmicutes_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Ruminococcus sp. UBA4275 (gut metagenome)
 
-CP014859|DEG10180047|1062673|1062918|1062031|1062549|cluster-1|t1pks-nrps|1023204-1089003|124	CP014859_DEG10180047_t1pks-nrps_cluster-1_Actinobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Actinoalloteichus hymeniacidonis
-
 NDGJ01000022|DEG10180179|52332|52755|51055|52317|cluster-1|transatpks-nrps|27232-109502|15	NDGJ01000022_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus apiarius
 
 CP020985|DEG10180185|3191449|3191778|3190654|3191358|cluster-2|bacteriocin-nrps-transatpks-otherks|3171373-3300021|91	CP020985_DEG10180185_bacteriocin-nrps-transatpks-otherks_cluster-2_Proteobacteria_Lipoprotein_releasing_system_ATP-binding_protein_lolD_Xanthomonas citri pv. phaseoli var. fuscans
@@ -4258,27 +3816,17 @@ AB283030|DEG10180179|20482|20918|17660|18547|cluster-1|transatpks-otherks-nrps|1
 
 AULX01000030|DEG10180179|35268|35692|33454|34362|cluster-1|t1pks-nrps|15258-99911|906	AULX01000030_DEG10180179_t1pks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Paenibacillus pinihumi DSM 23905 = JCM 16419
 
-ALIU01000005|DEG10180047|567862|568109|567243|567740|cluster-1|t1pks|550862-605374|122	ALIU01000005_DEG10180047_t1pks_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Pectobacterium carotovorum subsp. brasiliensis ICMP 19477
-
 NPKF01000002|DEG10180522|346201|346612|344752|345555|cluster-4|t1pks-nrps|229381-359646|646	NPKF01000002_DEG10180522_t1pks-nrps_cluster-4_Actinobacteria_Cell_division_ATP-binding_protein_ftsE_Streptomyces sp. FBKL.4005
 
 AJTS01000010|DEG10180210|30826|31246|25137|25991|cluster-1|t1pks|10822-58174|4835	AJTS01000010_DEG10180210_t1pks_cluster-1_Proteobacteria_UTP--glucose-1-phosphate_uridylyltransferase_(EC_2.7.7.9)_Halomonas stevensii S18214
 
-CP001630|DEG10180180|5774246|5774667|5773446|5774150|cluster-3|lantipeptide-t1pks|5734258-5799606|96	CP001630_DEG10180180_lantipeptide-t1pks_cluster-3_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Actinosynnema mirum DSM 43827
-
 MJAO01000002|DEG10180343|168969|169386|163565|164488|cluster-1|transatpks-t1pks-otherks|67217-191838|4481	MJAO01000002_DEG10180343_transatpks-t1pks-otherks_cluster-1_Proteobacteria_D-galactose-binding_periplasmic_protein_precursor_Serratia marcescens
-
-CM001978|DEG10180047|601949|602196|602960|603445|cluster-1|t1pks|565323-619838|764	CM001978_DEG10180047_t1pks_cluster-1_Proteobacteria_(3R)-hydroxymyristoyl-[acyl_carrier_protein]_dehydratase_(EC_4.2.1.-)_Dickeya dadantii subsp. dieffenbachiae NCPPB 2976
 
 MCHX01000008|DEG10180598|80134|80557|76194|76769|cluster-2|t1pks|60124-105619|3365	MCHX01000008_DEG10180598_t1pks_cluster-2_Actinobacteria_Hypothetical_protein_yjgJ_Mycobacterium grossiae
 
 CP008979|DEG10180397|2644799|2645222|2639080|2639802|cluster-1|t1pks-nrps|2634937-2719213|4997	CP008979_DEG10180397_t1pks-nrps_cluster-1_Actinobacteria_Ribonuclease_III_(EC_3.1.26.3)_Mycobacterium tuberculosis
 
 HG428608|DEG10180034|79468|79892|78913|92331|cluster-2|transatpks-nrps|58913-113146|979	HG428608_DEG10180034_transatpks-nrps_cluster-2_Proteobacteria_Glutamate-1-semialdehyde_2,1-aminomutase_(EC_5.4.3.8)_Xenorhabdus bovienii str. Intermedium
-
-NW_020291661|DEG10180180|62907|63340|60017|60864|cluster-1|t1pks-nrps|11100-131874|2043	NW_020291661_DEG10180180_t1pks-nrps_cluster-1_Fungi_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Aspergillus japonicus CBS 114.51
-
-MI095244|DEG10180180|12825|13251|10302|11078|cluster-1|t1pks-nrps|1-31318|1747	MI095244_DEG10180180_t1pks-nrps_cluster-1_None_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Unknown
 
 NGAF01000002|DEG10180393|762913|763339|760551|761039|cluster-3|t1pks|742910-789236|1874	NGAF01000002_DEG10180393_t1pks_cluster-3_Actinobacteria_Hypothetical_protein_yfhC_Nocardia cerradoensis
 
@@ -4304,11 +3852,7 @@ JOIY01000008|DEG10180220|185523|185945|179733|180554|cluster-1|t1pks-nrps|129760
 
 LZYV01000097|DEG10180285|18222|18645|12681|13709|cluster-1|transatpks-t1pks-nrps|1-86218|4513	LZYV01000097_DEG10180285_transatpks-t1pks-nrps_cluster-1_Firmicutes_Phospho-2-dehydro-3-deoxyheptonate_aldolase,_Trp-sensitive_(EC_4.1.2.15)_Clostridium roseum
 
-LIRL01000717|DEG10180180|5862|6290|11256|12017|cluster-1|t1pks|1-19535|4966	LIRL01000717_DEG10180180_t1pks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces niveiscabiei
-
 AF499447|DEG10180179|4945|5367|3053|4255|cluster-1|transatpks-nrps|1-16539|690	AF499447_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus subtilis
-
-NZ_ARYH01000002|DEG10180180|283833|284287|280960|281769|cluster-1|t1pks-otherks|263825-315324|2064	NZ_ARYH01000002_DEG10180180_t1pks-otherks_cluster-1_Proteobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Hyphomonas adhaerens MHS-3
 
 QFDR01000096|DEG10180044|11673|12099|7814|8521|cluster-1|transatpks|1-34770|3152	QFDR01000096_DEG10180044_transatpks_cluster-1_Actinobacteria_Undecaprenyl_pyrophosphate_synthetase_(EC_2.5.1.31)_Streptomyces sp. V2
 
@@ -4340,11 +3884,7 @@ LN831776|DEG10180179|2090002|2090431|2088701|2089978|cluster-2|transatpks-t1pks-
 
 NUGH01000021|DEG10180179|2144|2569|846|2075|cluster-1|transatpks-nrps|1-30436|69	NUGH01000021_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Bacillus cereus
 
-MKJY01000444|DEG10180180|28164|28385|26076|26816|cluster-1|nrps-t1pks-arylpolyene-otherks|10423-117499|1348	MKJY01000444_DEG10180180_nrps-t1pks-arylpolyene-otherks_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Actinomadura sp. CNU-125
-
 DBKX01000126|DEG10180179|21041|21473|19745|20989|cluster-1|transatpks-nrps|1-27267|52	DBKX01000126_DEG10180179_transatpks-nrps_cluster-1_Firmicutes_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)_Lachnoclostridium sp. UBA739 (gut metagenome)
-
-FLSP01000093|DEG10180180|10571|10996|9822|10556|cluster-1|t1pks-nrps|1-32934|15	FLSP01000093_DEG10180180_t1pks-nrps_cluster-1_Actinobacteria_3-oxoacyl-[acyl-carrier_protein]_reductase_(EC_1.1.1.100)_Streptomyces sp. DI166
 
 ACYY01000006|DEG10180099|101255|101672|96092|97534|cluster-1|t1pks-terpene|79242-129927|3721	ACYY01000006_DEG10180099_t1pks-terpene_cluster-1_Proteobacteria_Cysteinyl-tRNA_synthetase_(EC_6.1.1.16)_Rhodobacter sp. SW2
 
