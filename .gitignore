@@ -21,7 +21,8 @@ Antismash_gbids/KS.609.5kb.fasta
 Antismash_gbids/targets.609.5kb.fasta
 Antismash_gbids/bak_2019/
 
-
+Coevolution/pairwise_identities.609.5kb.out
+Coevolution/targets.609.5kb.out.notall
 Coevolution/KS.12.50kb.out
 Genbank/.nfs000000000819ce5f00000008
 Genbank/species.txt
@@ -38,6 +39,10 @@ old.Coevolution/
 Second_copy/targets_fasta/
 Coevolution/fasta/
 Coevolution/old/
+Coevolution/KS.92.5kb.out
+Coevolution/targets.92.5kb.out
+Coevolution/KS.609.5kb.out
+Coevolution/targets.609.5kb.out
 
 Antismash_gbids/sequences.110k.coord.redundant.fasta
 Antismash_gbids/2016_antismash_output/

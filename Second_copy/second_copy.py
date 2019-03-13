@@ -3,6 +3,7 @@ from Bio import SeqIO
 import os
 import subprocess
 from collections import defaultdict
+import tqdm
 
 # To Run script, specify:
 # targets_filename - fasta file with targets sequences
@@ -36,7 +37,7 @@ for line in antismash_file:
     print gbid, targetid
     gbid_to_target[gbid].append((targetid))
 
-for gbid in sorted(gbid_to_target.keys()):
+for gbid in tqdm.tqdm(sorted(gbid_to_target.keys())):
     targetids = gbid_to_target[gbid]
     for targetid in targetids:
         targetseq = target_to_seq[targetid]
@@ -61,7 +62,7 @@ for gbid in sorted(gbid_to_target.keys()):
         # print queryfile
         # print gbfile
 
-        outdir = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Second_copy"
+        outdir = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Second_copy/out"
         blast_evalue_cutoff = 1e-8
         outfilename = os.path.join(outdir, targetid + "." +
                                    str(blast_evalue_cutoff) +

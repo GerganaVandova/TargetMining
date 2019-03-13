@@ -2,9 +2,9 @@
 from collections import defaultdict
 import sys
 
+
 def get_targets(antismash_outfilename):
     # Get list of target gene names
-
     # Head of file:
     # ACXX02000001|AdmT_ACC|37972|38377|31720|32586|cluster-1|transatpks-nrps|14512-116691|5386
     targets = set()
@@ -52,10 +52,9 @@ def parse_blast(target, blast_file):
                 pairs[(qseqid, sseqid)] = identity
             else:
                 continue
-
         pairs[(qseqid, sseqid)] = identity
-        # pairs[(qseqid, sseqid)] = (identity, line) # if I want to print blast params
-
+        # to print blast params
+        # pairs[(qseqid, sseqid)] = (identity, line)
     return pairs
 
 
@@ -70,9 +69,9 @@ def main():
 
     print targets
 
-    blast_file_ks = "KS.609.5kb.out"
-    blast_file_target = "targets.609.5kb.out"
-    outfile = "pairwise_identities.609.5kb.out.short"
+    blast_file_ks = "../Antismash_gbids/KS.609.5kb.out"
+    blast_file_target = "../Antismash_gbids/targets.609.5kb.out"
+    outfile = "pairwise_identities.609.5kb.out"
 
     # Mibig set
     # blast_file_ks = "KS.mibig.out"
@@ -95,7 +94,6 @@ def main():
             len_sks = int(sks_end) - int(sks_start)
 
             distance = int(qseqid_ks.split("|")[-1])
-
             x = pairs_ks[(qseqid_ks, sseqid_ks)]
             y = pairs_target[(qseqid_ks, sseqid_ks)]
             d = abs(x-y)
@@ -107,45 +105,45 @@ def main():
             # print only points on diagonal:
             # if d > 20:
             #     continue
-            #
             # if distance < 5000:
             #     continue
-            # To print with tab between ids to check low seq identity scores
-            # f.write("%s\t%s\t%s\t%s\t%f\t%f\t%s\n" %
-            #         (qseqid_ks,
-            #          sseqid_ks,
-            #          len_qks,
-            #          len_sks,
-            #          pairs_ks[(qseqid_ks, sseqid_ks)],
-            #          pairs_target[(qseqid_ks, sseqid_ks)],
-            #          d))
-            #
-            # print "%s-%s\t%s\t%s\t%.2f\t%.2f\t%.2f" % \
-            #     (qgbid,
-            #      sgbid,
-            #      len_qks,
-            #      len_sks,
-            #      pairs_ks[(qseqid_ks, sseqid_ks)],
-            #      pairs_target[(qseqid_ks, sseqid_ks)],
-            #      d)
 
-            # To print short ids:
-            print "%s\t%s\t%s\t%s\t%.2f\t%.2f" % \
-                (qseqid_ks_short,
-                 sseqid_ks_short,
-                 len_qks,
-                 len_sks,
-                 pairs_ks[(qseqid_ks, sseqid_ks)],
-                 pairs_target[(qseqid_ks, sseqid_ks)])
-
-            f.write("%s\t%s\t%s\t%s\t%.0f\t%.0f\t%.0f\n" %
-                    (qseqid_ks_short,
-                     sseqid_ks_short,
+            # Write identities to use as input for plot
+            f.write("%s\t%s\t%s\t%s\t%f\t%f\t%s\n" %
+                    (qseqid_ks,
+                     sseqid_ks,
                      len_qks,
                      len_sks,
                      pairs_ks[(qseqid_ks, sseqid_ks)],
                      pairs_target[(qseqid_ks, sseqid_ks)],
                      d))
+
+            print "%s-%s\t%s\t%s\t%.2f\t%.2f\t%.2f" % \
+                (qgbid,
+                 sgbid,
+                 len_qks,
+                 len_sks,
+                 pairs_ks[(qseqid_ks, sseqid_ks)],
+                 pairs_target[(qseqid_ks, sseqid_ks)],
+                 d)
+
+            # # To print short ids:
+            # print "%s\t%s\t%s\t%s\t%.2f\t%.2f" % \
+            #     (qseqid_ks_short,
+            #      sseqid_ks_short,
+            #      len_qks,
+            #      len_sks,
+            #      pairs_ks[(qseqid_ks, sseqid_ks)],
+            #      pairs_target[(qseqid_ks, sseqid_ks)])
+            #
+            # f.write("%s\t%s\t%s\t%s\t%.0f\t%.0f\t%.0f\n" %
+            #         (qseqid_ks_short,
+            #          sseqid_ks_short,
+            #          len_qks,
+            #          len_sks,
+            #          pairs_ks[(qseqid_ks, sseqid_ks)],
+            #          pairs_target[(qseqid_ks, sseqid_ks)],
+            #          d))
 
     f.close()
 

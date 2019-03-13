@@ -24,12 +24,13 @@ COEVOLUTION STEP
 
     blastp -db blastdb/KS.609.5kb -query KS.609.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.609.5kb.out
     blastp -db blastdb/targets.609.5kb -query targets.609.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.609.5kb.out
-
+56267.pts-37.maguro
 
 4. Parse pairwise blast
 parse_pairwise_identities.py
 Output file: pairwise_identities.12.5kb.out
-             pairwise_identities.609.5kb.out
+             pairwise_identities.609.5kb.out (use for next step)
+             pairwise_identities.609.5kb.out.short (use to browse)
 
 5. Plot pairwise identities
 plot_pairwise_identities.py

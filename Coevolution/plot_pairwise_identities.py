@@ -15,7 +15,7 @@ target_pair_identities = defaultdict(list)
 pairs = []
 
 # pairwis_filename = "pairwise_identities.mibig.out"
-pairwise_filename = "pairwise_identities.92.10kb.out"
+pairwise_filename = "pairwise_identities.609.5kb.out.short"
 with open(pairwise_filename, 'r') as f:
     data = f.readlines()
     data = map(lambda x: x.strip(), data)
@@ -143,4 +143,4 @@ for target in ks_pair_identities:
 plt.xlim([0, 100])
 plt.ylim([0, 100])
 # plt.savefig('mibig.png')
-plt.savefig('92.5kb.sp_P0A6K3_DEF_ECOLI.png', dpi=400)
+plt.savefig('609.5kb.png', dpi=400)
