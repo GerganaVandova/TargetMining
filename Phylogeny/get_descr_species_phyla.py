@@ -34,14 +34,15 @@ for line in taxafile:
     gbid, taxa, phyla, rest = feats
     gbid_to_phyla[gbid] = phyla
 
-f = open("KS.609.5kb.fasta.descr", "w")
+f = open("KS.609.5kb.fasta.filtered.descr", "w")
 # Read KS fasta file and write phyla for each gbid
 # KB907307|DEG10180214|1954686|1955110|1951543|1953327|cluster-1|terpene-t1pks|1918076-2020118|1359
-for record in SeqIO.parse(open("KS.609.5kb.fasta", "rU"), "fasta"):
+for record in SeqIO.parse(open("KS.609.5kb.fasta.filtered", "rU"), "fasta"):
     gbidfull = record.id
     seq = record.seq
     gbid, target_id, rest = gbidfull.split("|", 2)
-    cl_type = gbidfull.split("|")[6]
+    cl_num = gbidfull.split("|")[6]
+    cl_type = gbidfull.split("|")[7]
     print gbid, target_id, rest
     if gbid not in gbid_to_phyla.keys():
         gbid_to_phyla[gbid] = "None"
@@ -49,6 +50,7 @@ for record in SeqIO.parse(open("KS.609.5kb.fasta", "rU"), "fasta"):
         gbid_to_species[gbid] = "None"
 
     descr = "_".join([gbid, target_id, cl_type,
+                      cl_num,
                       gbid_to_phyla[gbid],
                       gbid_to_names[target_id],
                       gbid_to_species[gbid]])

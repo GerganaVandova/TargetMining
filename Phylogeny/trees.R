@@ -5,7 +5,8 @@
 # Load the tree file
 library(ape)
 dir <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
-filename <- "KS.92.10kb.fasta.withFabF.cdhit.90.mafft.FastTree"
+# filename <- "KS.92.10kb.fasta.withFabF.cdhit.90.mafft.FastTree"
+filename <- "KS.609.5kb.fasta.withFabF.cdhit.90.mafft.FastTree"
 
 # Choose root sequence set
 rootset <- "FabF"
@@ -22,14 +23,16 @@ desc3.df <- data.frame(descriptions3)
 tip.label3.df <- data.frame(MyTree$tip.label, row.names=1)
 desc3.reordered <- desc3.df[rownames(tip.label3.df),]# This is the key step that matches the tree tip names to the external description file
 
-filename2 <- "KS.92.10kb.fasta.descr.species"
+# filename2 <- "KS.92.10kb.fasta.descr.species"
+filename2 <- "KS.609.5kb.fasta.descr"
 description_file2 = paste(dir1, filename2, sep="")
 descriptions2 <- read.table(description_file2, sep="\t", as.is=T, row.names=1)
 desc2.df <- data.frame(descriptions2)
 tip.label2.df <- data.frame(MyTree$tip.label, row.names=1)
 desc2.reordered <- desc2.df[rownames(tip.label2.df),]# This is the key step that matches the tree tip names to the external description file
 
-filename1 <- "KS.92.10kb.fasta.target"
+# filename1 <- "KS.92.10kb.fasta.target"
+filename1 <- "KS.609.5kb.fasta.target"
 description_file = paste(dir1, filename1, sep="")
 descriptions <- read.table(description_file, sep="\t", as.is=T, row.names=1)
 desc.df <- data.frame(descriptions)
@@ -171,7 +174,8 @@ myBG <- myCols
 ##############################################################
 # Read the 2f file of fastaID and description
 dir1 <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
-filename1 <- "KS.92.10kb.fasta.phyla" # to get colors by phyla for KSs
+# filename1 <- "KS.92.10kb.fasta.phyla" # to get colors by phyla for KSs
+filename1 <- "KS.609.5kb.fasta.phyla" # to get colors by phyla for KSs
 phylum_file = paste(dir1, filename1, sep="")
 phyla <- read.table(phylum_file, sep="\t", as.is=T, row.names=1)
 phyla.df <- data.frame(phyla)
@@ -193,7 +197,7 @@ syner <- phyla.reordered=="Synergistetes"
 aqui <- phyla.reordered=="Aquificae"
 cloa <- phyla.reordered=="Cloacimonetes"
 
-# Other bacteria
+# Other bacteria 92 targets
 acido <- phyla.reordered=="Acidobacteria" # gram neg
 elusim <- phyla.reordered=="Elusimicrobia" # gram neg
 fibro <- phyla.reordered=="Fibrobacteres" # gram neg?
@@ -203,8 +207,20 @@ stram <- phyla.reordered=="Stramenopiles" # ?
 verru <- phyla.reordered=="Verrucomicrobia" # gram neg
 fungi <-phyla.reordered=="Fungi"
 met <-phyla.reordered=="Metazoa"
+
+# Other bacteria 609 targets
+amo <-phyla.reordered=="Amoebozoa"
+canc <-phyla.reordered=="Candidatus Cloacimonetes"
+canr <-phyla.reordered=="Candidatus Riflebacteria"
+chla <-phyla.reordered=="Chlamydiae"
+chry <-phyla.reordered=="Chrysiogenetes"
+eury <-phyla.reordered=="Euryarchaeota"
+hapto <-phyla.reordered=="Haptophyceae"
+nitrot <-phyla.reordered=="Nitrospinae/Tectomicrobia group"
+nitro <-phyla.reordered=="Nitrospirae"
+
 # colors
-myCols1 <- c(rep("black",length(MyTree$tip.label)))
+myCols1 <- c(rep("lightgray",length(MyTree$tip.label)))
 
 # Terrabacteria: blues (per Hedges MBE 2009)
 myCols1[actino]="blue"
@@ -222,7 +238,7 @@ myCols1[thermo]="orange"
 myCols1[aqui]="orange"
 myCols1[syner]="orange"
 myCols1[cloa]="orange"
-#New colors
+#New colors 92 targets
 myCols1[acido]="#acc6f6"
 myCols1[elusim]="#a0db8e"
 myCols1[fibro]="#cc5c5c"
@@ -232,6 +248,16 @@ myCols1[stram]="#ffa500"
 myCols1[verru]="#ffd5d5"
 myCols1[fungi]="black"
 myCols1[met]="black"
+# New colors 609 targets
+myCols1[amo]="grey"
+myCols1[canc]="darkgreen"
+myCols1[canr]="seagreen"
+myCols1[chla]="palegreen"
+myCols1[chry]="olivedrab"
+myCols1[eury]="mediumspringgreen"
+myCols1[hapto]="gold"
+myCols1[nitro]="sandybrown"
+myCols1[nitrot]="sandybrown"
 
 myBG1 <- myCols1
 
@@ -243,12 +269,13 @@ MyTree.rooted <- root(MyTree,outgroup,node = NULL)
 MyTree.ladderized <- ladderize(MyTree.rooted)
 
 # mywidth=4; myheight=6 #for small rooted tree
-mywidth=6; myheight=22 #for 92 targets rooted tree
+# mywidth=6; myheight=22 #for 92 targets rooted tree
+mywidth=20; myheight=60 #for 609 targets rooted tree
 
-outfile <- paste(dir, filename, ".phyla.png", sep="")
-title <- "KS.92targets.10kb.562sequences"
+outfile <- paste(dir, filename, ".phyla.labeled.png", sep="")
+title <- "KS.609targets.5kb.1974sequences"
 pdf(file=outfile, width=mywidth, height=myheight)
-plot(MyTree.ladderized, main=title, font=1, type="phylogram", edge.color="gray",
+plot(MyTree.ladderized, main=title, font=.1, type="phylogram", edge.color="gray",
      edge.width=.5, show.tip.label=F, open.angle=5) # for rooted tree
 # plot(MyTree, font=1, type="unrooted", edge.color="gray", edge.width=.5, show.tip.label=F, open.angle=5) # for unrooted tree
 # tiplabels(pch=21, cex=.5, col=myCols, bg=myBG)# pch=21 circles, colored by target
@@ -257,6 +284,8 @@ tiplabels(pch=21, cex=.5, col=myCols1, bg=myBG1)# colored by phyla
 # Print labels
 # tiplabels(MyTree$tip.label, cex=.2, frame="none", adj=0) # full label
 # tiplabels(phyla.reordered, cex=.1, frame="none", adj=0) # phyla label
+# tiplabels(phyla.reordered, cex=.5, frame="none", adj=0) # phyla  label 609
+
 tiplabels(desc2.reordered, cex=0.2, frame="none", adj=0) # short descr label
 # tiplabels(desc3.reordered, cex=0.3, frame="none", adj=0) # to highlight mibig ref sequences
 
