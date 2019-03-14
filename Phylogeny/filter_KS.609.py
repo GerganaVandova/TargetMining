@@ -13,9 +13,11 @@ for record in SeqIO.parse(open(targetfilename, "rU"), "fasta"):
     name = name.replace("/", "_")
     gbid_to_names[gbid] = name
 
-f = open("KS.609.5kb.fasta.filtered", "w")
+# f = open("KS.609.5kb.fasta.filtered", "w")
+f = open("targets.609.5kb.fasta.filtered", "w")
 
-for record in SeqIO.parse(open("KS.609.5kb.fasta", "rU"), "fasta"):
+# for record in SeqIO.parse(open("KS.609.5kb.fasta", "rU"), "fasta"):
+for record in SeqIO.parse(open("../Antismash_gbids/targets.609.5kb.fasta", "rU"), "fasta"):
     gbidfull = record.id
     seq = record.seq
     gbid, target_id, rest = gbidfull.split("|", 2)

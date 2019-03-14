@@ -6,7 +6,7 @@
 library(ape)
 dir <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
 # filename <- "KS.92.10kb.fasta.withFabF.cdhit.90.mafft.FastTree"
-filename <- "KS.609.5kb.fasta.withFabF.cdhit.90.mafft.FastTree"
+filename <- "KS.609.5kb.fasta.filtered.withFabF.cdhit.90.mafft.FastTree"
 
 # Choose root sequence set
 rootset <- "FabF"
@@ -24,7 +24,7 @@ tip.label3.df <- data.frame(MyTree$tip.label, row.names=1)
 desc3.reordered <- desc3.df[rownames(tip.label3.df),]# This is the key step that matches the tree tip names to the external description file
 
 # filename2 <- "KS.92.10kb.fasta.descr.species"
-filename2 <- "KS.609.5kb.fasta.descr"
+filename2 <- "KS.609.5kb.fasta.filtered.descr"
 description_file2 = paste(dir1, filename2, sep="")
 descriptions2 <- read.table(description_file2, sep="\t", as.is=T, row.names=1)
 desc2.df <- data.frame(descriptions2)
@@ -32,7 +32,7 @@ tip.label2.df <- data.frame(MyTree$tip.label, row.names=1)
 desc2.reordered <- desc2.df[rownames(tip.label2.df),]# This is the key step that matches the tree tip names to the external description file
 
 # filename1 <- "KS.92.10kb.fasta.target"
-filename1 <- "KS.609.5kb.fasta.target"
+filename1 <- "KS.609.5kb.fasta.filtered.target"
 description_file = paste(dir1, filename1, sep="")
 descriptions <- read.table(description_file, sep="\t", as.is=T, row.names=1)
 desc.df <- data.frame(descriptions)
@@ -175,7 +175,7 @@ myBG <- myCols
 # Read the 2f file of fastaID and description
 dir1 <- "/Users/gvandova/Dropbox/Computational_projects/TargetMiningGenomes/Phylogeny/"
 # filename1 <- "KS.92.10kb.fasta.phyla" # to get colors by phyla for KSs
-filename1 <- "KS.609.5kb.fasta.phyla" # to get colors by phyla for KSs
+filename1 <- "KS.609.5kb.fasta.filtered.phyla" # to get colors by phyla for KSs
 phylum_file = paste(dir1, filename1, sep="")
 phyla <- read.table(phylum_file, sep="\t", as.is=T, row.names=1)
 phyla.df <- data.frame(phyla)
@@ -273,7 +273,7 @@ MyTree.ladderized <- ladderize(MyTree.rooted)
 mywidth=20; myheight=60 #for 609 targets rooted tree
 
 outfile <- paste(dir, filename, ".phyla.labeled.png", sep="")
-title <- "KS.609targets.5kb.1974sequences"
+title <- "KS.609targets.5kb.1166.sequences"
 pdf(file=outfile, width=mywidth, height=myheight)
 plot(MyTree.ladderized, main=title, font=.1, type="phylogram", edge.color="gray",
      edge.width=.5, show.tip.label=F, open.angle=5) # for rooted tree
