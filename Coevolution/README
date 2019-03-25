@@ -10,12 +10,31 @@ COEVOLUTION STEP
     KS.609.5kb.fasta
     targets.609.5kb.fasta
 
+    KS.609.5kb.fasta.filtered
+    targets.609.5kb.fasta.filtered
+
+    KS.609.10kb.fasta.filtered
+    trgets.609.10kb.fasta.filtered
+
 2. Make KS and genes databaase and move to blastb/
     makeblastdb -in KS.12.5kb.fasta -dbtype prot -out KS.12.5kb
     makeblastdb -in targets.12.5kb.fasta -dbtype prot -out targets.12.5kb
 
     makeblastdb -in KS.609.5kb.fasta -dbtype prot -out KS.609.5kb
     makeblastdb -in targets.609.5kb.fasta -dbtype prot -out targets.609.5kb
+
+    makeblastdb -in KS.609.5kb.fasta.filtered -dbtype prot -out KS.609.5kb.filtered
+    makeblastdb -in targets.609.5kb.fasta.filtered -dbtype prot -out targets.609.5kb.filtered
+
+    makeblastdb -in KS.609.10kb.fasta.filtered -dbtype prot -out KS.609.10kb.filtered
+    makeblastdb -in targets.609.10kb.fasta.filtered -dbtype prot -out targets.609.10kb.filtered
+
+
+    makeblastdb -in KS.609.5kb.fasta -dbtype prot -out KS.609.5kb
+    makeblastdb -in targets.609.5kb.fasta -dbtype prot -out targets.609.5kb
+
+    makeblastdb -in KS.609.10kb.fasta -dbtype prot -out KS.609.10kb
+    makeblastdb -in targets.609.10kb.fasta -dbtype prot -out targets.609.10kb
 
 
 3. Pairwise blastp
@@ -24,15 +43,25 @@ COEVOLUTION STEP
 
     blastp -db blastdb/KS.609.5kb -query KS.609.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.609.5kb.out
     blastp -db blastdb/targets.609.5kb -query targets.609.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.609.5kb.out
-56267.pts-37.maguro
+
+    blastp -db blastdb/KS.609.5kb.filtered -query KS.609.5kb.fasta.filtered -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.609.5kb.filtered.out
+    blastp -db blastdb/targets.609.5kb.filtered -query targets.609.5kb.fasta.filtered -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.609.5kb.filtered.out
+
+    March-19-2019 DONE March-20:
+    blastp -db blastdb/KS.609.5kb -query KS.609.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.609.5kb.out
+    blastp -db blastdb/targets.609.5kb -query targets.609.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.609.5kb.out
+
+    blastp -db blastdb/KS.609.10kb -query KS.609.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.609.10kb.out
+    blastp -db blastdb/targets.609.10kb -query targets.609.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.609.10kb.out
+
 
 4. Parse pairwise blast
-parse_pairwise_identities.py
-Output file: pairwise_identities.12.5kb.out
-             pairwise_identities.609.5kb.out (use for next step)
-             pairwise_identities.609.5kb.out.short (use to browse)
+    parse_pairwise_identities.py
+    Output file: pairwise_identities.12.5kb.out
+                 pairwise_identities.609.5kb.out (use for next step)
+                 pairwise_identities.609.5kb.out.short (use to browse)
 
 5. Plot pairwise identities
-plot_pairwise_identities.py
-Output file: 12.5kb.png
-             609.5kb.png
+    plot_pairwise_identities.py
+    Output file: 12.5kb.png
+                 609.5kb.png
