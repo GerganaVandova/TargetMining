@@ -11,11 +11,11 @@ import pylab
 from matplotlib.pyplot import *  # This is for the legend to work
 from collections import defaultdict
 from Bio import SeqIO
+import tqdm
 
 
 def get_targets(antismash_outfilename):
     # Get list of target gene names
-    # Head of file:
     # ACXX02000001|AdmT_ACC|37972|38377|31720|32586|cluster-1|transatpks-nrps|14512-116691|5386
     targets = set()
     outfile = open(antismash_outfilename).readlines()[1:]
@@ -29,15 +29,12 @@ def get_targets(antismash_outfilename):
 def target_to_name(targets_fasta):
     # Get target name from targets fasta file
     # >DEG10180001_Molybdopterin_biosynthesis_mog_protein
-    # >tclQ_L11 tr|A0A097PTA1|A0A097PTA1_9STAP 50S ribosomal protein L11
     target_to_names = defaultdict(list)
     for record in SeqIO.parse(open(targets_fasta, "rU"), "fasta"):
         gbidfull = record.id
         gbid, name = gbidfull.split("_", 1)  # for E. coli 609 targets
-        # print gbidfull
         name = name.replace("/", " ")
         name = name.replace("_", " ")
-        # print gbid, name
         target_to_names[gbid] = name
     return target_to_names
 
@@ -45,25 +42,21 @@ def target_to_name(targets_fasta):
 def target_to_name92(targets_fasta):
     # Get target name from targets fasta file of 12 targets and 92 targets lists
     # >tclQ_L11 tr|A0A097PTA1|A0A097PTA1_9STAP 50S ribosomal protein L11
-    # >DEG10180001_Molybdopterin_biosynthesis_mog_protein
     target_to_names92 = defaultdict(list)
     targets_file = open(targets_fasta).readlines()
     for line in targets_file:
         if not line.startswith(">"):
             continue
-        # print line
         line = line.strip()
         target_id, name = line.split(" ", 1)  # for 92 targets
         target_id = target_id.split(">")[1]
         # name = name.replace("/", " ")
         name = name.replace("_", " ")
-        print name
         target_to_names92[target_id] = name
     return target_to_names92
 
 
 def get_species(speciesfilename):
-
     # Get species name from species file
     # BDBI01000023   Nocardia sp.
     gbid_to_species = defaultdict()
@@ -76,7 +69,6 @@ def get_species(speciesfilename):
 
 
 def get_phyla(taxafilename):
-
     # Get phyla from taxa file
     # BDBI01000023   Bacteria    Actinobacteria  Corynebacteriales   Nocardiaceae    Nocardia
     gbid_to_phyla = defaultdict()
@@ -91,7 +83,6 @@ def get_phyla(taxafilename):
 
 
 def get_coevolution_score(coevolutionfilename):
-
     gbid_to_score = defaultdict()
     coevolutionfile = open(coevolutionfilename).readlines()
     for line in coevolutionfile:
@@ -103,7 +94,7 @@ def get_coevolution_score(coevolutionfilename):
 
 
 def get_antismash_link(gbid, ks_start, ks_end):
-
+    gbid_to_antismashlink = defaultdict()
     # Local path
     gbdir_nt = "/Users/gvandova/TargetMining/Antismash_gbids/antismash_output"
     gbdir_as = "/Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all"
@@ -133,7 +124,8 @@ def get_antismash_link(gbid, ks_start, ks_end):
             gbid_end = int(gbid_end)
             if gbid_start < ks_start and gbid_end > ks_end:
                 antismashfile = os.path.join(gbdir_as, folder, "index.html")
-    return antismashfile
+    gbid_to_antismashlink[gbid] = antismashfile
+    return gbid_to_antismashlink
 
 
 def get_second_copy(second_copy_filename):
@@ -149,8 +141,6 @@ def get_second_copy(second_copy_filename):
 
 
 def main():
-
-    # targets_fasta = "../Antismash_gbids/targets.12.fa.cleannames"
     # targets_fasta = "../Antismash_gbids/targets.92.fa.cleannames"
     # target_to_names = target_to_name92(targets_fasta)
 
@@ -163,27 +153,17 @@ def main():
     taxafilename = "../Genbank/taxa.txt"
     gbid_to_phyla = get_phyla(taxafilename)
 
-    # coevolutionfilename = "coevolution_scores.12.10kb"
-    # coevolutionfilename = "coevolution_scores.92.10kb"
     coevolutionfilename = "coevolution_scores.609.10kb"
     gbid_to_score = get_coevolution_score(coevolutionfilename)
 
-    # second_copy_filename = "../Second_copy/out.second_copy.12.10kb.filtered"
-    # second_copy_filename = "../Second_copy/out.second_copy.92.10kb.filtered"
     second_copy_filename = "../Second_copy/out.second_copy.609.10kb.filtered"
     gbid_to_copy = get_second_copy(second_copy_filename)
 
-
-    # f = open("Clusters.12.10kb.txt", "w")
-    # f = open("Clusters.92.10kb.txt", "w")
     f = open("Clusters.609.10kb.txt", "w")
     f.write("target_name\tgenbankid\ttargetid\tks_start\tks_end\target_start\ttarget_end\tcluster_num\tcluster_type\tcluster_coord\tcluster_len\tspecies\tphyla\tcount\tscore\tcopynum\tgenome_size\tcomplete\tantismashfile\n")
     # Read KS fasta file and write phyla for each gbid
 
-    # for record in SeqIO.parse(open("KS.12.10kb.fasta", "rU"), "fasta"):
-    # for record in SeqIO.parse(open("KS.92.10kb.fasta", "rU"), "fasta"):
-    for record in SeqIO.parse(open("KS.609.10kb.fasta", "rU"), "fasta"):
-
+    for record in tqdm.tqdm(SeqIO.parse(open("KS.609.10kb.fasta", "rU"), "fasta")):
         gbidfull = record.id
         seq = record.seq
         gbid, target_id, \
@@ -197,7 +177,8 @@ def main():
         target_name = target_to_names[target_id]
         descr = "\t".join(gbidfull.split("|"))
 
-        antismashfile = get_antismash_link(gbid, ks_start, ks_end)
+        gbid_to_antismashlink = get_antismash_link(gbid, ks_start, ks_end)
+        antismashfile = gbid_to_antismashlink[gbid]
 
         if gbid not in gbid_to_phyla.keys():
             phyla = "None"
@@ -220,13 +201,12 @@ def main():
         second_copy = gbid_to_copy[gbid]
         copynum, genome_size, complete = second_copy.split("|")
 
-        print "%s\t%s\t%s\t%s\t%s\t%.2f\t%s\t%s\t%s\t%s" % \
-            (target_name, descr, species, phyla, count, score,
-             copynum, genome_size, complete, antismashfile)
+        # print "%s\t%s\t%s\t%s\t%s\t%.2f\t%s\t%s\t%s\t%s" % \
+        #     (target_name, descr, species, phyla, count, score,
+        #      copynum, genome_size, complete, antismashfile)
         f.write("%s\t%s\t%s\t%s\t%s\t%.2f\t%s\t%s\t%s\t%s\n" %
                 (target_name, descr, species, phyla, count, score,
                  copynum, genome_size, complete, antismashfile))
-
     f.close()
 
 if __name__ == "__main__":
