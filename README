@@ -1,31 +1,28 @@
-I. BLAST Step
-Identifying pks and pks/nrps clusters harboring a potential self-resistance
+I. Identifying pks and pks/nrps clusters harboring a potential self-resistance
 gene.
 
 ********************************************************************************
 STEP1. Blast 8 KSs against 11 databases
 ********************************************************************************
 
+
+Blast 8 diverse KSs against 11 databases and parse blast results with e value < 1
 Location: TargetMining/Blast/ folder
+The blast queries are in Manual/
 
-Blast 8 diverse KSs from modular KS, cisat pks/nrps and transat pks/nrps hybrids
-against 11 databases (wgs not updated)
-and parse blast results with e value < 1
+1. update 11 databases (as of April 25, 2018, except for wgs – Jan-27-2016)
+    cd /mnt/gnpn/gnpn/projects/orphanpks/blast/db/
+    Databases: nt, wgs, refseq_genomic, other_genomic, env_nt, patnt, htgs, tsa_nt, sts, gss, est_others
+    perl update_blastdb.pl --passive [database]
 
-199 894 proteins;  110174 NCBI nucleotide records/genomes
+2. Download Bacterial Assemblies:
+    wget -L --recursive -e robots=off --reject "index.html" --no-host-directories --cut-dirs=6 -A genomic.gbff.gz https://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/  -P Assemblies/
 
-    The blast queries are in Manual/
 
-    1. Make phylogenetic tree of all typeI ks sequences used to make HMMs (27)
-    2. make a phylogenetic tree in clustal omega
-    3. pick diverse sequences to Blast
-    4. update 11 databases (wgs not updated since 2013)
-       cd /mnt/gnpn/gnpn/projects/orphanpks/blast/db/
-       perl update_blastdb.pl --passive [database]
-
-1. Run ./run_blast.py (specify on line 49 which query sequences to blast against)
-If you want to run blast agains all sequences, type
-blast_query_files = glob.glob("%s/*.seq" % blast_query_dir)
+2. Run ./run_blast.py
+    specify on line 49 which query sequences to blast against
+    If you want to run blast agains all sequences:
+    blast_query_files = glob.glob("%s/*.seq" % blast_query_dir)
 
 2. Run make all
 
@@ -51,6 +48,7 @@ blast_query_files = glob.glob("%s/*.seq" % blast_query_dir)
     creates blast_results.KS.fasta.cleanName.cdhit.99
             blast_results.KS.fasta.cleanName.cdhit.99.clstr
 
+    199 894 proteins;  110174 NCBI nucleotide records/genomes
 ********************************************************************************
 STEP2. Fetch all genbank ids that contain a KS
 ********************************************************************************

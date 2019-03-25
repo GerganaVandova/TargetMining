@@ -14,7 +14,7 @@ import tqdm
 target_to_seq = {}
 
 # Make a dictionary for target ids and their sequences
-targets_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/targets.609.fa"
+targets_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/targets.12.fa"
 
 for record in SeqIO.parse(open(targets_filename, "rU"), "fasta"):
     targetid = record.id
@@ -24,7 +24,7 @@ for record in SeqIO.parse(open(targets_filename, "rU"), "fasta"):
 
 # Read antismash output file
 # ACXX02000001|AdmT_ACC|37972|38377|31720|32586|cluster-1|transatpks-nrps|14512-116691|5386
-antismash_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/out.609.filtered.5kb"
+antismash_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/out.12.filtered.20kb"
 antismash_file = open(antismash_filename).readlines()
 
 gbid_to_target = defaultdict(list)
@@ -62,7 +62,7 @@ for gbid in tqdm.tqdm(sorted(gbid_to_target.keys())):
         # print queryfile
         # print gbfile
 
-        outdir = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Second_copy/out"
+        outdir = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Second_copy/blast_out"
         blast_evalue_cutoff = 1e-8
         outfilename = os.path.join(outdir, targetid + "." +
                                    str(blast_evalue_cutoff) +

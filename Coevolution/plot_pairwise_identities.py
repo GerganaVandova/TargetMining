@@ -15,21 +15,24 @@ target_pair_identities = defaultdict(list)
 pairs = []
 
 # pairwis_filename = "pairwise_identities.mibig.out"
-pairwise_filename = "pairwise_identities.609.5kb.out.short"
+pairwise_filename = "pairwise_identities.609.5kb.filtered.out"
 with open(pairwise_filename, 'r') as f:
     data = f.readlines()
     data = map(lambda x: x.strip(), data)
     for line in data:
         # print line
         gene1, gene2, len1, len2, ks_pair_identity, target_pair_identity, d = line.split("\t")
+        d = float(d)
         target = gene1.split("|")[1]
+
         # if target == "'sp_P0A6K3_DEF_ECOLI'":
         # if target == "sp_P0A6K3_DEF_ECOLI":
-        # if target == "sp_P0A6G7_CLPP_ECOLI":
+        if target == "DEG10180034":
         # print target
-        ks_pair_identities[target].append(float(ks_pair_identity))
-        target_pair_identities[target].append(float(target_pair_identity))
-        pairs.append((gene1,gene2))
+        # if d <15:
+            ks_pair_identities[target].append(float(ks_pair_identity))
+            target_pair_identities[target].append(float(target_pair_identity))
+            pairs.append((gene1,gene2))
 
 # ks_pair_identities = map(float, ks_pair_identities)
 # target_pair_identities = map(float, target_pair_identities)
@@ -143,4 +146,4 @@ for target in ks_pair_identities:
 plt.xlim([0, 100])
 plt.ylim([0, 100])
 # plt.savefig('mibig.png')
-plt.savefig('609.5kb.png', dpi=400)
+plt.savefig('609.5kb.DEG10180034.png', dpi=400)

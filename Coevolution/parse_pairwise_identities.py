@@ -61,17 +61,23 @@ def parse_blast(target, blast_file):
 def main():
 
     # Need a file to read target names, use the 10kb cutoff
-    antismash_outfilename = "../Antismash_gbids/out.609.filtered.5kb"
+    antismash_outfilename = "../Antismash_gbids/out.12.filtered.50kb"
 
     targets = get_targets(antismash_outfilename)
     # targets = ["borI_Thr-tRNA-syn", "mupM_Ile-tRNA-syn", "PtmP3_FabB-F",
     # "rubR1_TIF", "AdmT_ACC", "SalI_beta_proteasome", "BatG_FabI"]
 
-    print targets
+    print len(targets), targets
 
-    blast_file_ks = "../Antismash_gbids/KS.609.5kb.out"
-    blast_file_target = "../Antismash_gbids/targets.609.5kb.out"
-    outfile = "pairwise_identities.609.5kb.out"
+    # as of 3-13-2019 Why from Antismash_gbid folder?
+    # blast_file_ks = "../Antismash_gbids/KS.609.5kb.out"
+    # blast_file_target = "../Antismash_gbids/targets.609.5kb.out"
+
+    # 3-13-2019 Corrected, from Coevolution folder
+    blast_file_ks = "KS.mibig.out"
+    blast_file_target = "targets.mibig.out"
+
+    outfile = "pairwise_identities.mibig.out"
 
     # Mibig set
     # blast_file_ks = "KS.mibig.out"

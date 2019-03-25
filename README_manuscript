@@ -1,0 +1,424 @@
+Files:
+targets.12.fa
+targets.92.fa
+targets.609.fa
+
+Requirements:
+
+Antismash 4
+cdhit
+mafft
+Fasttree
+R (ape)
+
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+I. Identifying pks and pks/nrps clusters harboring a potential self-resistance
+gene.
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+********************************************************************************
+STEP1. Blast 8 KSs against 11 databases
+********************************************************************************
+
+
+Blast 8 diverse KSs against 11 databases and parse blast results with e value < 1
+Location: TargetMining/Blast/ folde
+The blast queries are in Manual/
+
+1. update 11 databases (as of April-25-2018, except for wgs – Jan-27-2016)
+    cd /mnt/gnpn/gnpn/projects/orphanpks/blast/db/
+    Databases: nt, wgs, refseq_genomic, other_genomic, env_nt, patnt, htgs, tsa_nt, sts, gss, est_others
+    perl update_blastdb.pl --passive [database]
+
+2. Download Bacterial Assemblies (Oct-26-2018)
+    wget -L --recursive -e robots=off --reject "index.html" --no-host-directories --cut-dirs=6 -A genomic.gbff.gz https://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/  -P Assemblies/
+    There are 172 642 Assemblies as of Oct-26-2018
+    FINISHED --2018-10-26 08:07:48--
+    Total wall clock time: 1d 17h 46m 19s
+    Downloaded: 1 115 055 files, 748G in 5h 15m 0s (40.5 MB/s)
+
+3. Run ./run_blast.py
+    specify on line 49 which query sequences to blast against
+    If you want to run blast agains all sequences:
+    blast_query_files = glob.glob("%s/*.seq" % blast_query_dir)
+
+4. Run make all
+
+    All files stored in TargetMining/Blast/blast_results_seqs/ folder
+
+    4.1 Concatenate all parsed blast files into one: make concat
+    creates blast_results_seqs/blast_results.parsed.KS.9f
+
+    4.2 Uniqify the proteins and remove dashes and asterisks and choose longest
+    synonym: make longest (have to rm output files of Step #2.4)
+    creates blast_results.parsed.KS.9f.synonyms
+            blast_results.parsed.KS.9f.longest_synonym
+
+    4.3. Compare the Reference set to the found set: make compare
+    creates blast_results.parsed.KS.9f.longest_synonym.comparemibig
+
+    4.4.  Make fasta file of blast hit sequences to use in HMM search and clean the
+    names: make fasta
+    creates blast_results.KS.fasta
+            blast_results.KS.fasta.cleanName
+
+    4.5. Remove redundant sequences (cdhit cutoff = 0.99): make cdhit
+    creates blast_results.KS.fasta.cleanName.cdhit.99
+            blast_results.KS.fasta.cleanName.cdhit.99.clstr
+
+    199 894 proteins;  110174 NCBI nucleotide records/genomes
+
+********************************************************************************
+STEP2. Run Antismash on all 95k genbank ids
+********************************************************************************
+
+1. Fetch all genbank ids that contain a core KS gene
+Location: Genbank/gbdir (89449 gbids)
+          Genbank/assembly_gb (21080 gbids)
+
+1.1. Get genbank id list:
+    ./get_gbid.py > gbids.txt
+    cat gbids.txt |sort -u > gbids.unique.94516.txt
+
+1.2. Download all genbank files from the traditional databases
+    ./fetch_gbid.py
+    Genbank files in Genbank/gbdir (89449 gbids)
+
+1.3. The genbank files from the Assembly database are already stored locally
+    Genbank files in Genbank/assembly_gb
+
+
+2. Run Antismash on all 95k genbank ids
+Location: Antismash_gbids/
+2.1. Run antismash on all 89k genbank id from the traditional NCBI Databases
+    ./run_antismash.nt.gbids.py
+    Output folder: antismash_output/
+
+2.2. Run antismash on all 21k genbank ids from Bacterial Assembly database
+    ./run_antismash.assembly.gbids.py (using 64 cores on the server)
+    Output folder: antismash_output_assemblies
+    Server was running out of memory because genbank files were very big
+    and because Antismash is also parallel.
+
+2.3. Split Bacterial Assembly genbank files into smaller sequences by extracting
+    sequence 150kb upstream and downstream of a KS
+    ./extract_assembly_parts.py
+
+2.4. Run antismash on extracted genbank files with 5 parallel processes.
+    ./run_antismash.assembly.part.gbids.py
+    Output folder: antismash_output_assemblies_part
+
+2.5. Move all antismash results of Bacterial Assembly sequences in
+    antismash_output_assemblies_all
+    26575 assembly files total
+
+********************************************************************************
+STEP3. Extract KS and gene sequences from all PKS-labeled clusters found by
+    antismash and make a database
+********************************************************************************
+
+1. Extract KS and all gene sequences from geneclusters.js files
+    extract only "t1pks" and "transatpks"-labeled clusters
+
+1.1. Run ./parse_js.py for nt gbids:
+    Input folder: antismash_output/
+    Output file: cluster_genes.89k.fasta
+                 KS.89k.fasta
+
+1.2. Run ./parse_js.py for bacterial assemblies gbids:
+    Input folder: antismash_output_assemblies_all/
+    Output file: cluster_genes.21k.fasta
+                 KS.21k.fasta
+
+2. Make blast database from cluster_genes.21k.fasta and cluster_genes.89k.fasta
+    ./makeblastdb.py
+    Input folder with cluster_genes.21k.fasta and cluster_genes.89k.fasta
+    sequences is seq_dir/
+    Move databases in antismashdb/
+
+    There are 244 196 sequences from nucleotide records in NCBI Bacterial
+    assemblies database and 664,336 sequences from nucleotide records in the
+    traditional NCBI databases.
+
+********************************************************************************
+STEP4. Blast search for a putative self-resistant gene in a PKS cluster
+********************************************************************************
+
+1. Blast 12 experimentally-verified self-resistant genes against the antismash database
+from 110k genbank ids using e-value <1
+    ./run_blastp.py
+    Input file: targets_file = "targets.12.fa"
+    Output files: out.targets.12.fa.cluster_genes.89k
+                  out.targets.12.fa.cluster_genes.21k
+    cat out.targets.12.fa.cluster_genes.* > out.12
+
+2. Filter blast hits by evalue <1e-8 and identity > 0.3 (and FabB/F identity > 0.6)
+    ./filter_blast.py
+    Input file: out.12
+    Output file: out.12.filtered
+
+********************************************************************************
+STEP5. Require both KS+ target to be less than 10kb apart
+********************************************************************************
+    ./target_ks_tandem.py
+    Input file: out.12.filtered
+    Output file: out.12.filtered.10kb
+                 KS.12.10kb.fasta
+                 targets.12.10kb.fasta
+                 out.12.filtered.5kb.noks
+
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+II. PHYLOGENY Step
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+1. Copy KS fasta files to Phylogeny
+    KS.12.10kb.fasta
+
+2. Add FabF to root the phylogenetic tree on
+    Output file: KS.12.10kb.fasta.withFabF
+
+3. Eliminate redundant gene clusters at a redundancy threshold of 90%
+    ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit \
+    -i KS.12.10kb.fasta.withFabF \
+    -o KS.12.10kb.fasta.withFabF.cdhit.90 \
+    -c .9 -d 200 -M 10000
+
+4. Perform multiple sequence alignment using MAFFT
+    /usr/local/bin/mafft --thread 64 \
+    KS.12.10kb.fasta.withFabF.cdhit.90 > \
+    KS.12.10kb.fasta.withFabF.cdhit.90.mafft
+
+5. Build a phylogenetic tree using FastTree
+    /home/maureenh/FastTree/FastTreeMP \
+    KS.12.10kb.fasta.withFabF.cdhit.90.mafft > \
+    KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree
+
+6. Make a reference set file to be able to highlight positive clusters on tree
+    mibig_refset.10.mod
+
+7. Get taxonomy for all genbank ids harboring a pks cluster (Genbank/)
+    ./parse_gb_taxa.py > taxa_nt.txt
+    Input files: gbdir/*.gb
+
+    ./parse_gb_taxa.py > taxa_assembly.txt
+    Input files: assembly_gb/*.gbff
+    cat taxa_nt.txt taxa_assembly.txt | sort -u > taxa.txt
+
+8. Add phyla to the KS fasta ids (use for labeling tree)
+    ./get_phyla
+    Input file: KS.12.10kb.fasta
+    ../Genbank/taxa.txt
+    Output file: KS.12.10kb.fasta.phyla
+
+9. Get species names for all genbank ids harboring a pks cluster (Genbank/)
+    ./parse_gb_species.py
+    Input files: gbdir/*.gb
+    Output file: species_nt.txt
+
+    ./parse_gb_species.py
+    Input files: assembly_gb/*.gbff
+    Output file: species_assembly.txt
+
+    cat species_nt.txt species_assembly.txt | sort -u > species.txt
+
+10. Add a short description to the KS fasta ids (use for labeling tree)
+    ./get_descr_species.py
+    Input file: KS.12.10kb.fasta
+                ../Genbank/species.txt
+    Output file: KS.12.10kb.fasta.descr.species
+
+    ### For E. coli: ./get_descr_species_phyla.py
+        KS.609.5kb.fasta.descr
+
+11. Add target names to the KS fasta ids (use for labeling tree)
+    ./get_target_name.py
+    Input file: KS.12.10kb.fasta
+    Output file: KS.12.10kb.fasta.target
+
+12. Visualize tree using the APE package in R
+    Root tree on E. coli FabB/F
+    Color tree by target or phyla
+    Rscript trees.R
+    Input files: KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree
+                 KS.12.10kb.fasta.target
+                 KS.12.10kb.fasta.descr.species
+                 mibig_refset.10.mod
+
+    Output file: KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree.phylogram.png
+
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+STEP III. Housekeeping copy
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+1. Split target gene sequences into separate fasta files
+    /.split_mibig.py
+    Input file: targets.12.fa
+    Ouptut folder: targets_fasta/
+
+2. Run blast to find number of copies (e-value cutoff 1e-8)
+    ./second_copy.py
+    Input files: targets.12.fa
+                 out.12.filtered.10kb
+                 Genbank/gbdir
+                 Genbank/assembly_gb
+    Output folder: blast_out/
+
+3. Get genome lengths and (T/F for complete genome) of all nucleotide records
+    harboring a KS
+    Genank/ folder
+    ./get_genome_length.py
+    Input files:  gbdir/*.gb
+                  assembly_gb/*.gbff
+    Output files: genome_lengths_nt.txt
+                  genome_lengths_assembly.txt
+    cat genome_lengths_nt.txt genome_lengths_assembly.txt |sort -u > genome_lengths.txt
+
+4. Filter blast results by pident > 30%
+    ./filter_second_copy.py
+    Input files: blast_out/*.out
+                 genome_lengths.txt
+                 out.12.filtered.10kb
+    Output file: out.second_copy.12.10kb.filtered
+
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+Step IV. COEVOLUTION STEP
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+1. Copy output fasta seqs from Tandem KS-target step:
+    KS.12.5kb.fasta
+    targets.12.5kb.fasta
+
+2. Make blast databases for KS and targets and move to blastdb/
+    makeblastdb -in KS.12.5kb.fasta -dbtype prot -out KS.12.5kb
+    makeblastdb -in targets.12.5kb.fasta -dbtype prot -out targets.12.5kb
+
+3. Pairwise blastp
+    blastp -db blastdb/KS.12.5kb -query KS.92.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.5kb.out
+    blastp -db blastdb/targets.12.5kb -query targets.92.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.5kb.out
+
+4. Parse pairwise blast
+    ./parse_pairwise_identities.py
+    Input files: ../Antismash_gbids/KS.12.10kb.out
+                 ../Antismash_gbids/targets.12.10kb.out
+    Output file: pairwise_identities.12.10kb.out
+
+5. Plot pairwise identities
+    ./plot_pairwise_identities.py
+    Input file:  pairwise_identities.12.5kb.out
+    Output file: 12.5kb.png
+
+    To make individual plots for each target:
+    ./plot_pairwise_identities.ind.py
+    Input files: pairwise_identities.609.10kb.filtered.out
+                 ../Antismash_gbids/out.609.filtered.10kb
+                      ../Antismash_gbids/targets.609.fa.longnames"
+
+
+
+
+________________________________________________________________________________
+Mine 92 putative targets, start from Step6:
+
+STEP6. Blast 92 targets genes against antismash database from 110k genbank ids
+
+        6.1. ./run_blastp.py with targets.92.fa
+        6.2. cat out.targets.92* > out.92
+
+31944 hits.
+
+STEP7. Filter blast hits by evalue <1e-8 and identity > 0.3 (and "FAB" identity > 0.6)
+5492 hits.
+
+STEP8. Require both KS+ target <5kb apart.
+       Run ../Antismash_gbids/target_ks_tandem.py
+      ./target_ks_tandem.py > KS.92.5kb.fasta
+      ./target_ks_tandem.py > KS.92.5kb.fasta
+      ./target_ks_tandem.py > target_ks_tandem.92.5kb.out
+501 hits.
+
+**********************************************************************************
+
+________________________________________________________________________________
+Mine 609 E. coli essential genes Step6:
+
+STEP6. Blast 609 targets genes against antismash database from 110k genbank ids
+
+        6.1. ./run_blastp.py with targets.609.fa March-6-2019 4:20pm RUNNING
+        6.2. cat out.targets.609* > out.609
+
+133958 hits.
+
+STEP7. Filter blast hits by evalue <1e-8 and identity > 0.3 (and "FAB" identity > 0.6)
+28543 hits.
+
+STEP8. Require both KS+ target <5kb apart.
+       Run ../Antismash_gbids/target_ks_tandem.py
+      ./target_ks_tandem.py > KS.609.5kb.fasta
+      ./target_ks_tandem.py > target.609.5kb.fasta
+      ./target_ks_tandem.py > target_ks_tandem.609.5kb.out
+3238 hits.
+
+**********************************************************************************
+II. PHYLOGENY Step
+Build a phylogenetic tree and look for homologs
+
+2. ./get_phyla
+3. Add FabF
+7. Make a ref set file: mibig_refset.10.mod for targrts.12 and targets.92 (new targets in non-pks or non-bacterial clusters, no fungal KS in blast step)
+8. Make descr files (with species and phyla names)
+9. Get target names
+
+Remove redundant sequences: Run cdhit with cutoff .90
+Make Multiple sequence alignment using mafft
+Make a phylogram using FastTree
+
+There is a redundant KS sequence, because there are two copies of the target in that cluster
+>LT840184|DEG10180179_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)|2950237|2950660|2948904|2950187|cluster-1|transatpks-nrps|2916063-2977676|50
+IAIVGIAVKLPLADTVEQFANNLKTGRDCVRPIPSLRKQDTDLYFKQMGLEPEDLAYGEAAYLDEIDKFDYSFFKLSPREASLLDPNQRLFLETAWRAIEDAGYGGGKLGGSPTGVYVGYGSDADYLKLIRQVEPEAVSMSMAGNVRPIIASRLSYLMDLRGPSFIVDSTCSSSLVAVHLACQAIRNGECDSAIVGGTQLHLIPIREYEVGIESSTSRARTFDDRADGTGTGEGVVAMMLKPLEQAIESRDHIYAVIKSSALNQDGGSVGITAPNAEAQEAVIADAWKRAGIDPETIGYIETHGTGTKLGDPIEVEGLKRAFRRFTDKRQFCAIGALKSNIGHLDNTAGIAGLLKAVLSLKNKCIYPTLHFDRPNRVIDFAESPVYVNDKLMEWKSGPHPRRCGVSSFGISGTNCHVILEEAP
+>LT840184|DEG10180179_Malonyl_CoA-acyl_carrier_protein_transacylase_(EC_2.3.1.39)|4505173|4505599|4509851|4511098|cluster-1|transatpks-nrps|4480334-4564302|4252
+IAIIGIDAKIGSAKNVEELWDYLSNGFDLIRDFPVERWKDANQFYKLKFNRQLPEELTPCSYIDRLDMFDAGFFQLSPAEAELMEPAQRLFLESAWTALEDSGYGKGILNGSKTGVFLGYNNPQNPYNMVVEETDNYMYGVAVSGNVDAIIASRISYFLNLKGPAVNVDTSCSSSLVAVHLACQQIRDGEVSMALAGSVRLKTLPPHQHGKKMGIESSSGRTKTFDDRADGTGIGEGVICIVLKSLRQAVRDRDNIYAVIKGSSINQDGASVGITAPNAAAQEEVIKAAWKDAGINPETITYIEAHGTATNLGDPVEINGIERAFGSFTDKKQFCAIGSVKSNAGHLDCASGLAGLVKAILMLKHKQLLPTLHFEVPNRKINFISSPVYINDKLVPWETESGSRRCGVSSFGMSGTNCHLVLEEAP
+
+
+1973
+Manually remove the more distant one
+
+Visualize tree using APE package in R
+  root tree with E. coli withFabF
+  color tree by targrets
+*********************************************************************************
+
+III. COEVOLUTION STEP
+
+1. (Step 8 from Blast step) Run ../Antismash_gbids/target_ks_tandem.py
+Output: target_ks_tandem.5kb.out (408 hits)
+        KS.92.5kb.fasta
+        targets.92.5kb.fasta
+
+2. Make blast databases for KS and targets and move to blastdb/
+    makeblastdb -in KS.92.5kb.fasta -dbtype prot -out KS.92.5kb
+    makeblastdb -in targets.92.5kb.fasta -dbtype prot -out targets.92.5kb
+
+    makeblastdb -in KS.92.10kb.fasta -dbtype prot -out KS.92.10kb
+    makeblastdb -in targets.92.10kb.fasta -dbtype prot -out targets.92.10kb
+
+3. Pairwise blastp
+blastp -db blastdb/KS.92.5kb -query KS.92.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.92.5kb.out
+blastp -db blastdb/targets.92.5kb -query targets.92.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.92.5kb.out
+
+blastp -db blastdb/KS.92.10kb -query KS.92.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.92.10kb.out
+blastp -db blastdb/targets.92.10kb -query targets.92.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.92.10kb.out
+
+
+4. Parse pairwise blast
+parse_pairwise_identities.py
+Output file: pairwise_identities.[number of targets].[distance cutoff]kb.out
+             pairwise_identities.92.5kb.out
+
+5. Plot pairwise identities
+plot_pairwise_identities.py
+Output file: 12.5kb.png

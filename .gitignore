@@ -21,7 +21,7 @@ Antismash_gbids/KS.609.5kb.fasta
 Antismash_gbids/targets.609.5kb.fasta
 Antismash_gbids/bak_2019/
 
-Coevolution/pairwise_identities.609.5kb.out
+Coevolution/pairwise_identities.*.out
 Coevolution/targets.609.5kb.out.notall
 Coevolution/KS.12.50kb.out
 Genbank/.nfs000000000819ce5f00000008
@@ -62,6 +62,8 @@ Coevolution/fasta_seqs/
 Coevolution/all.KS.out
 Coevolution/all.targets.out
 Coevolution/pairwise_identities.out
+Coevolution/targets.*.out
+Coevolution/KS.*.out
 
 Antismash_gbids/all.cluster.counts.sorted.txt
 Antismash_gbids/all.cluster.counts.txt

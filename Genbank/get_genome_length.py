@@ -19,7 +19,7 @@ def get_complete_genomes(outfile, gbfilenames):
             descr = record.description
             if "complete genome" in descr.lower():
                 complete_genome = True
-            
+
             print count, gbid, complete_genome, len(record.seq), descr
             seq = record.seq
             t.write("%s\t%s\t%s" % (gbid, complete_genome, len(record.seq)))
@@ -29,12 +29,11 @@ def get_complete_genomes(outfile, gbfilenames):
 
 
 
-outfile_assemblies  = "genome_lengths_assembly.txt"
+outfile_assemblies = "genome_lengths_assembly.txt"
 gbfilenames_assemblies = glob.glob("assembly_gb/*.gbff")
 
-outfile_nt  = "genome_lengths_nt.txt"
+outfile_nt = "genome_lengths_nt.txt"
 gbfilenames_nt = glob.glob("gbdir/*.gb")
 
 get_complete_genomes(outfile_assemblies, gbfilenames_assemblies)
 get_complete_genomes(outfile_nt, gbfilenames_nt)
-

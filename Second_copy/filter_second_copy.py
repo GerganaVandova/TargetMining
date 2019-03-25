@@ -53,11 +53,11 @@ def main():
         gbid, complete_genome, length = line.strip().split("\t")
         gbid_to_len[gbid] = ((complete_genome, length))
 
-    outf = open("out.second_copy.92.5kb.filtered", "w")
+    outf = open("out.second_copy.12.20kb.filtered", "w")
 
     # Read antismash output file
     # ACXX02000001|AdmT_ACC|37972|38377|31720|32586|cluster-1|transatpks-nrps|14512-116691|5386
-    antismash_filename = "../Antismash_gbids/out.92.filtered.5kb"
+    antismash_filename = "../Antismash_gbids/out.12.filtered.20kb"
     antismash_file = open(antismash_filename).readlines()
     gbid_to_target = defaultdict(list)
     for line in antismash_file:

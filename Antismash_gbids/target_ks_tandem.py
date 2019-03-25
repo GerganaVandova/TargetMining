@@ -18,19 +18,20 @@ def parse_fasta(fasta_file):
 
             seq = record.seq
             name_to_seq[(gbid, gene_start, gene_end)] = seq
+            print name, seq[:10]
     return name_to_seq
 
 
 def main():
-    DIST_CUTOFF = 10000
+    DIST_CUTOFF = 20000
     cluster_genes_file = "cluster_genes.all.fasta"
     ks_file = "ks.all.fasta"
-    target_blast_file = "out.609.filtered"
+    target_blast_file = "out.12.filtered"
 
-    f1 = open("KS.609.10kb.fasta", "w")
-    f2 = open("targets.609.10kb.fasta", "w")
-    f3 = open("out.609.filtered.10kb", "w")
-    f4 = open("out.609.filtered.10kb.noks", "w")
+    f1 = open("KS.12.20kb.fasta", "w")
+    f2 = open("targets.12.20kb.fasta", "w")
+    f3 = open("out.12.filtered.20kb", "w")
+    f4 = open("out.12.filtered.20kb.noks", "w")
 
     min_distance = {}
     data = {}
@@ -52,7 +53,7 @@ def main():
         target_start, target_end = map(int, target_coords.split("-"))
         targets.append((gbid, target_start, target_end, line))
 
-    # print targets # added for debugging purposes
+    print targets # added for debugging purposes
 
     for target in targets:
         t_gbid, target_start, target_end, target_info = target
@@ -94,7 +95,7 @@ def main():
                                                ]))
 
         if not found:
-            # print "no KS found for target %s" % str(target)
+            print "no KS found for target %s" % str(target)
             f4.write("%s\n" % str(target))
 
     ks_to_seq = parse_fasta(ks_file)
