@@ -23,6 +23,15 @@ Antismash_gbids/bak_2019/
 Antismash_gbids/KS.609.10kb.filtered.out
 Antismash_gbids/KS.609.5kb.filtered.out
 
+Antismash_gbids/KS.12.20kb.fasta.new
+Antismash_gbids/KS.609.10kb.fasta.new
+Antismash_gbids/KS.92.10kb.fasta.new
+Antismash_gbids/KS.92.20kb.fasta.new
+Antismash_gbids/target_ks_tandem.new.py
+Antismash_gbids/targets.12.20kb.fasta.new
+Antismash_gbids/targets.609.10kb.fasta.new
+Antismash_gbids/targets.92.10kb.fasta.new
+Antismash_gbids/targets.92.20kb.fasta.new
 
 Coevolution/pairwise_identities.*.out
 Coevolution/targets.609.5kb.out.notall
