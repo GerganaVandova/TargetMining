@@ -1,0 +1,92 @@
+1-deoxy-D-xylulose 5-phosphate synthase (EC 4.1.3.37)
+30S ribosomal protein S20
+3-deoxy-manno-octulosonate cytidylyltransferase (EC 2.7.7.38)
+3-hydroxydecanoyl-[acyl-carrier-protein] dehydratase (EC 4.2.1.60)
+3-octaprenyl-4-hydroxybenzoate carboxy-lyase (EC 4.1.1.-)
+3-oxoacyl-[acyl-carrier-protein] synthase I (EC 2.3.1.41)
+(3R)-hydroxymyristoyl-[acyl carrier protein] dehydratase (EC 4.2.1.-)
+60 kDa chaperonin
+Acetyl-coenzyme A carboxylase carboxyl transferase subunit alpha (EC 6.4.1.2)
+Acyl carrier protein phosphodiesterase (EC 3.1.4.14)
+Alanyl-tRNA synthetase (EC 6.1.1.7)
+Arginine repressor
+Aspartyl-tRNA synthetase (EC 6.1.1.12)
+Cell division ATP-binding protein ftsE
+Chromosomal replication initiator protein dnaA
+Cysteine desulfurase (EC 4.4.1.-)
+D-alanine--D-alanine ligase B (EC 6.3.2.4)
+Delta-aminolevulinic acid dehydratase (EC 4.2.1.24)
+Dihydrodipicolinate synthase (EC 4.2.1.52)
+Dihydrolipoamide dehydrogenase (EC 1.8.1.4)
+DNA gyrase subunit A (EC 5.99.1.3)
+DNA ligase (EC 6.5.1.2)
+DNA polymerase III alpha subunit (EC 2.7.7.7)
+Elongation factor G
+Elongation factor P
+Elongation factor Tu
+Formyltetrahydrofolate deformylase (EC 3.5.1.10)
+FTSH ECOLI
+Glucosamine--fructose-6-phosphate aminotransferase [isomerizing] (EC 2.6.1.16)
+Glutamate-1-semialdehyde 2,1-aminomutase (EC 5.4.3.8)
+Glutamate aspartate transport ATP-binding protein gltL
+Glutamate aspartate transport system permease protein gltK
+Glutamyl-tRNA synthetase (EC 6.1.1.17)
+GTP cyclohydrolase I (EC 3.5.4.16)
+GTP cyclohydrolase II (EC 3.5.4.25)
+Hypothetical ABC transporter ATP-binding protein ydcT
+Hypothetical ABC transporter ATP-binding protein ynjD
+Hypothetical acetyltransferase yncA (EC 2.3.1.-)
+Hypothetical oxidoreductase yciK (EC 1.-.-.-)
+Hypothetical protein yaiN
+Hypothetical protein ybiA
+Hypothetical protein ydcN
+Hypothetical protein ydgE
+Hypothetical protein ydiI P77781 MENI ECOLI 1,4-dihydroxy-2-naphthoyl-CoA hydrolase
+Hypothetical protein ydiO
+Hypothetical protein ydjR
+Hypothetical protein yfcH
+Hypothetical protein ygaP
+Hypothetical protein yliG
+Hypothetical transport protein yeaN
+Hypothetical transport protein yfaV
+Insertion element IS1 4 protein insB
+IspH protein (lytB)
+L-arabinose transport ATP-binding protein araG
+L-asparaginase II precursor (EC 3.5.1.1)
+Leucyl-tRNA synthetase (EC 6.1.1.4)
+Lipoprotein releasing system ATP-binding protein lolD
+Methionyl-tRNA synthetase (EC 6.1.1.10)
+Methyl-accepting chemotaxis protein III
+MQNX STRCO
+Octaprenyl-diphosphate synthase (EC 2.5.1.-)
+Oligopeptide transport ATP-binding protein oppD
+O-succinylbenzoic acid--CoA ligase (EC 6.2.1.26)
+Peptide deformylase (EC 3.5.1.88)
+Peptidyl-prolyl cis-trans isomerase B (EC 5.2.1.8)
+Phenylacetic acid degradation protein paaC
+Phenylacetic acid degradation protein paaY
+Phospho-2-dehydro-3-deoxyheptonate aldolase, Trp-sensitive (EC 4.1.2.15)
+Probable ABC transporter ATP-binding protein yhbG
+Probable transport ATP-binding protein msbA
+Prolyl-tRNA synthetase (EC 6.1.1.15)
+Protease degQ precursor (EC 3.4.21.-)
+Protein ycgM
+Protein ydjA
+Protein yjgF
+Putative beta-xylosidase (EC 3.2.1.37)
+Putative methylase yhhF (EC 2.1.1.-)
+Pyrroline-5-carboxylate reductase (EC 1.5.1.2)
+Ribonuclease III (EC 3.1.26.3)
+Ribose-phosphate pyrophosphokinase (EC 2.7.6.1)
+Ribosomal large subunit pseudouridine synthase D (EC 4.2.1.70)
+Rod shape-determining protein mreB
+S-adenosylmethionine synthetase (EC 2.5.1.6)
+Serine hydroxymethyltransferase (EC 2.1.2.1)
+Seryl-tRNA synthetase (EC 6.1.1.11)
+SufA protein
+target_name
+Topoisomerase IV subunit A (EC 5.99.1.-)
+Topoisomerase IV subunit B (EC 5.99.1.-)
+Transketolase 1 (EC 2.2.1.1)
+UDP-N-acetylglucosamine--N-acetylmuramyl-(Pentapeptide) pyrophosphoryl-undecaprenol N-acetylglucosamine transferase (EC 2.4.1.-)
+UTP--glucose-1-phosphate uridylyltransferase (EC 2.7.7.9)
