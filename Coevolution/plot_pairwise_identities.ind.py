@@ -278,7 +278,7 @@ def plot_identities(targets, colors, target_to_names, ks_pair_identities,
 
 def main():
 
-    ci = 0
+    ci = 1
     colors = [
         "#000000", "#012C58", "#1CE6FF", "#FF34FF",  # "#FFFF00" yellow, replaced with "#012C58"
         "#FF4A46", "#008941", "#006FA6", "#A30059",
@@ -332,16 +332,19 @@ def main():
     for target in targets:
         # if target != "AdmT_ACC":
         #     continue
-        print "\n\n**********", target
+        #print "\n\n**********", target
         ks_pair_identities, target_pair_identities = \
             get_pairs(pairwise_filename, target)
 
-        print len(ks_pair_identities), len(target_pair_identities)
+        #print len(ks_pair_identities), len(target_pair_identities)
         # print ks_pair_identities, target_pair_identities
         if len(ks_pair_identities[target]) < 1:
             continue
         c = colors[ci]
+        print "a%s<-desc.reordered=='%s'" % (ci, target)
+        print "myCols[a%s]='%s'" % (ci, c)
         ci = (ci + 1) % len(colors)
+
         plot_identities(targets,
                         colors,
                         target_to_names,
