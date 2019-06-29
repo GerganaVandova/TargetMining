@@ -200,3 +200,10 @@ out
 streptomyces_wgs.nvl
 blast_out_streptomyces
 wgs/
+software/
+publish/
+Second_copy/bak_062019
+Second_copy/bak_2019
+Second_copy/old.*
+Phylogeny/bak_2019/
+Phylogeny/*.mafft
