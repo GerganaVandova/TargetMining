@@ -1,3 +1,4 @@
+.DS_Store
 pairwise_identities.12.10kb.out.xlsx
 
 Antismash_gbids/KS.12.20kb.fasta
@@ -207,3 +208,8 @@ Second_copy/bak_2019
 Second_copy/old.*
 Phylogeny/bak_2019/
 Phylogeny/*.mafft
+Coevolution/old.*
+Coevolution/bak_2019
+Coevolution/bak_062019
+Antismash_gbids/bak_*
+Antismash_gbids/antismash_output_final/
