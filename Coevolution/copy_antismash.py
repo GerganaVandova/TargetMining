@@ -11,36 +11,35 @@ import pylab
 from matplotlib.pyplot import *  # This is for the legend to work
 from collections import defaultdict
 from Bio import SeqIO
-import tqdm
 import json
+import tqdm
 import subprocess
 
 def copy_antismash(summary_filename):
-
     lines = open(summary_filename).readlines()[1:]
     for line in tqdm.tqdm(lines):
         line = line.strip()
-        # print line
-        antismash_link = line.split("\t")[4]
+        antismash_link = line.split("\t")[12]
+        print antismash_link
         # /Users/gvandova/TargetMining/Antismash_gbids/antismash_output_assemblies_all/CP003233_1726930_2028193/index.html
-        new_link = antismash_link.replace("/Users/gvandova/", "/mnt/gnpn/gnpn/projects/orphanpks/")
-        # print new_link
+        new_link = antismash_link.replace("/Users/gvandova/",
+                                          "/mnt/gnpn/gnpn/projects/orphanpks/")
+
+
+        print new_link
         path = new_link.split("/index.html")[0]
+        # full_path = 'maguro:/' + path
         print path
-        dest_folder = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/publish/609targets.10kb"
-        is_assemblydir = path.split("/")[8]
-        # if "assemblies_all" in is_assemblydir:
-        #     dest_folder = "/home/gvandova/publish/antismash_output_assemblies"
-        # else:
-        #     dest_folder = "/home/gvandova/publish/antismash_output_nt"
-        # print is_assemblydir
-        # print path
+        dest_folder = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/publish/616targets.10kb"
+        # dest_folder = "/Users/gvandova/Dropbox/publish/12targets/"
         subprocess.call(['cp', '-a', path, dest_folder])
+        # subprocess.call(['scp', '-r', full_path, dest_folder])
 
 
 def copy_genbank_files(summary_filename):
     f = open(summary_filename).readlines()[1:]
     for line in f:
+
         line = line.strip()
         gbid = line.split("\t")[2]
         # if "CP011497" not in gbid:
@@ -63,11 +62,12 @@ def copy_genbank_files(summary_filename):
 
 def main():
 
-    # summary_filename = "Clusters.609.10kb.txt"
-    # copy_antismash(summary_filename)
+    summary_filename = "Clusters.616.10kb.txt"
+    print summary_filename
+    copy_antismash(summary_filename)
 
-    summary_filename = "Clusters.12.20kb.txt"
-    copy_genbank_files(summary_filename)
+    # summary_filename = "Clusters.12.10kb.txt"
+    # copy_genbank_files(summary_filename)
 
 
 

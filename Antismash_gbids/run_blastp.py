@@ -3,7 +3,7 @@ from Bio import SeqIO
 import os
 import ntpath
 
-targets_file = "targets.609.fa"
+targets_file = "targets.616.fa"
 dbdir = "antismashdb"
 blastdb_names = [os.path.join(dbdir, "cluster_genes.89k"),
                  os.path.join(dbdir, "cluster_genes.21k")]

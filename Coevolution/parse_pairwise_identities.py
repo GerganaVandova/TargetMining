@@ -1,11 +1,12 @@
 #!/usr/bin/python
 from collections import defaultdict
 import sys
+from Bio import SeqIO
+import tqdm
 
 
 def get_targets(antismash_outfilename):
     # Get list of target gene names
-    # Head of file:
     # ACXX02000001|AdmT_ACC|37972|38377|31720|32586|cluster-1|transatpks-nrps|14512-116691|5386
     targets = set()
     outfile = open(antismash_outfilename).readlines()[1:]
@@ -14,6 +15,16 @@ def get_targets(antismash_outfilename):
         target = line.split("|")[1]
         targets.add(target)
     return(targets)
+
+
+def get_nonredundnat(ksfasta_cdhitfile):
+    # Get list of nonredundnat KS gene names
+    # >ACXX02000001|AdmT_ACC|37972|38377|31720|32586|cluster-1|transatpks-nrps|14512-116691|5386
+    nonredundants = set()
+    for record in SeqIO.parse(open(ksfasta_cdhitfile, "rU"), "fasta"):
+        gbidfull = record.id
+        nonredundants.add(gbidfull)
+    return nonredundants
 
 
 def parse_gbids(gbidfull):
@@ -60,39 +71,30 @@ def parse_blast(target, blast_file):
 
 def main():
 
-    # Need a file to read target names, use the 10kb cutoff
-    antismash_outfilename = "../Antismash_gbids/out.12.filtered.50kb"
-
+    # Need a file to read target names
+    antismash_outfilename = "../Antismash_gbids/out.616.filtered.10kb"
     targets = get_targets(antismash_outfilename)
-    # targets = ["borI_Thr-tRNA-syn", "mupM_Ile-tRNA-syn", "PtmP3_FabB-F",
-    # "rubR1_TIF", "AdmT_ACC", "SalI_beta_proteasome", "BatG_FabI"]
-
     print len(targets), targets
 
-    # as of 3-13-2019 Why from Antismash_gbid folder?
-    # blast_file_ks = "../Antismash_gbids/KS.609.5kb.out"
-    # blast_file_target = "../Antismash_gbids/targets.609.5kb.out"
+    blast_file_ks = "KS.616.10kb.out"
+    blast_file_target = "targets.616.10kb.out"
+    ksfasta_cdhitfile = "../Antismash_gbids/KS.616.10kb.fasta.cdhit.90"
+    nonredundants = get_nonredundnat(ksfasta_cdhitfile)
 
-    # 3-13-2019 Corrected, from Coevolution folder
-    blast_file_ks = "KS.mibig.out"
-    blast_file_target = "targets.mibig.out"
-
-    outfile = "pairwise_identities.mibig.out"
-
-    # Mibig set
-    # blast_file_ks = "KS.mibig.out"
-    # blast_file_target = "targets.mibig.out"
-    # outfile = "pairwise_identities.mibig.out"
-
+    outfile = "pairwise_identities.616.10kb.out"
     f = open(outfile, "w")
 
-    for target in targets:
+    for target in tqdm.tqdm(targets):
         pairs_ks = parse_blast(target, blast_file_ks)
         pairs_target = parse_blast(target, blast_file_target)
 
         for (qseqid_ks, sseqid_ks) in sorted(pairs_ks.keys()):
             qgbid, target_q, qseqid_ks_short = parse_gbids(qseqid_ks)
             sgbid, target_s, sseqid_ks_short = parse_gbids(sseqid_ks)
+
+            if qseqid_ks not in nonredundants or sseqid_ks not in nonredundants:
+                print qgbid, sgbid, " redundnat"
+                continue
 
             qks_start, qks_end = qseqid_ks.split("|")[2:4]
             sks_start, sks_end = sseqid_ks.split("|")[2:4]
@@ -105,14 +107,8 @@ def main():
             d = abs(x-y)
 
             # don't write pairwise idientites of short, misannotated KSs
-            if len_qks < 300 or len_sks < 300:
+            if len_qks < 200 or len_sks < 200:
                 continue
-
-            # print only points on diagonal:
-            # if d > 20:
-            #     continue
-            # if distance < 5000:
-            #     continue
 
             # Write identities to use as input for plot
             f.write("%s\t%s\t%s\t%s\t%f\t%f\t%s\n" %
@@ -132,24 +128,6 @@ def main():
                  pairs_ks[(qseqid_ks, sseqid_ks)],
                  pairs_target[(qseqid_ks, sseqid_ks)],
                  d)
-
-            # # To print short ids:
-            # print "%s\t%s\t%s\t%s\t%.2f\t%.2f" % \
-            #     (qseqid_ks_short,
-            #      sseqid_ks_short,
-            #      len_qks,
-            #      len_sks,
-            #      pairs_ks[(qseqid_ks, sseqid_ks)],
-            #      pairs_target[(qseqid_ks, sseqid_ks)])
-            #
-            # f.write("%s\t%s\t%s\t%s\t%.0f\t%.0f\t%.0f\n" %
-            #         (qseqid_ks_short,
-            #          sseqid_ks_short,
-            #          len_qks,
-            #          len_sks,
-            #          pairs_ks[(qseqid_ks, sseqid_ks)],
-            #          pairs_target[(qseqid_ks, sseqid_ks)],
-            #          d))
 
     f.close()
 

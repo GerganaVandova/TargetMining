@@ -3,11 +3,11 @@ import sys
 from Bio import SeqIO
 from collections import defaultdict
 
-f = open("KS.609.5kb.fasta.filtered.target", "w")
+f = open("KS.616.10kb.fasta.filtered.target", "w")
 
 # Read KS fasta file and write phyla for each gbid
 # >CSTD01000001|mupM_Ile-tRNA-syn|1364568|1364989|1356957|1360097|cluster-3|t1pks-nrps|1344560-1399261|4471
-for record in SeqIO.parse(open("KS.609.5kb.fasta.filtered", "rU"), "fasta"):
+for record in SeqIO.parse(open("KS.616.10kb.fasta.cdhit.90", "rU"), "fasta"):
     gbidfull = record.id
     target = gbidfull.split("|")[1]
     f.write("%s\t%s\n" % (gbidfull, target))

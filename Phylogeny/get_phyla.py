@@ -16,12 +16,12 @@ for line in taxafile:
     gbid, taxa, phyla, rest = feats
     gbid_to_phyla[gbid] = phyla
 
-f = open("KS.609.5kb.fasta.filtered.phyla", "w")
+f = open("KS.616.10kb.fasta.filtered.phyla", "w")
 
 # Read KS fasta file and write phyla for each gbid
 
 # >CSTD01000001|mupM_Ile-tRNA-syn|1364568|1364989|1356957|1360097|cluster-3|t1pks-nrps|1344560-1399261|4471
-for record in SeqIO.parse(open("KS.609.5kb.fasta.filtered", "rU"), "fasta"):
+for record in SeqIO.parse(open("KS.616.10kb.fasta.cdhit.90", "rU"), "fasta"):
     gbidfull = record.id
     gbid, rest = gbidfull.split("|", 1)
     coord = gbidfull.rsplit("|", 2)[1]

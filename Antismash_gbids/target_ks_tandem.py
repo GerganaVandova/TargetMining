@@ -18,20 +18,20 @@ def parse_fasta(fasta_file):
 
             seq = record.seq
             name_to_seq[(gbid, gene_start, gene_end)] = seq
-            print name, seq[:10]
+            # print name, seq[:10]
     return name_to_seq
 
 
 def main():
-    DIST_CUTOFF = 20000
+    DIST_CUTOFF = 10000
     cluster_genes_file = "cluster_genes.all.fasta"
     ks_file = "ks.all.fasta"
-    target_blast_file = "out.12.filtered"
+    target_blast_file = "out.616.filtered"
 
-    f1 = open("KS.12.20kb.fasta", "w")
-    f2 = open("targets.12.20kb.fasta", "w")
-    f3 = open("out.12.filtered.20kb", "w")
-    f4 = open("out.12.filtered.20kb.noks", "w")
+    f1 = open("KS.616.10kb.fasta", "w")
+    f2 = open("targets.616.10kb.fasta", "w")
+    f3 = open("out.616.filtered.10kb", "w")
+    f4 = open("out.616.filtered.10kb.noks", "w")
 
     min_distance = {}
     data = {}
@@ -48,16 +48,18 @@ def main():
         gbid, cluster_num, cluster_coord, cluster_type, \
             target_coords, gene_name = info.split("|")
 
-        # if gbid != "FRDC01002724": # added for debugging purposes
+        # if gbid != "PHAG01000006": # added for debugging purposes
         #     continue
         target_start, target_end = map(int, target_coords.split("-"))
         targets.append((gbid, target_start, target_end, line))
 
-    print targets # added for debugging purposes
-
     for target in targets:
+        # print target
         t_gbid, target_start, target_end, target_info = target
         target_n = target_info.split("\t")[0]
+        # if "sp_P0A6M8_EFG_ECOLI" not in target_n:
+        #     continue
+        # print t_gbid, target_start, target_end, target_info, target_n
 
         found = False
         for ks_record in ks_records:
@@ -69,18 +71,23 @@ def main():
             if gbid != t_gbid:
                 continue
 
+            # print name
             dist1 = abs(ks_start - target_end)
             dist2 = abs(target_start - ks_end)
             dist = min(dist1, dist2)
+
+            # print dist
+            # print "name %s \tdistance %s for %s target" % (name, dist, target_n)
 
             found = True
 
             if dist > DIST_CUTOFF:
                 continue
 
-            key = (gbid, cluster_coord)
+            key = (gbid, cluster_coord, target_n)
             if min_distance.get(key) is None or min_distance.get(key) > dist:
                 min_distance[key] = dist
+                # print gbid, target_n, dist
                 # data[key] = "|".join(map(str, [gbid, ks_start, ks_end, target_start, target_end, dist]))
                 data[key] = "|".join(map(str, [gbid,
                                                target_n,
@@ -107,8 +114,8 @@ def main():
         # CSTD01000001|mupM_Ile-tRNA-syn|1364568|1364989|1356957|1360097|cluster-3|t1pks-nrps|1344560-1399261|4471
         gbid, target_name, ks_start, ks_end, target_start, target_end = v.split("|")[:6]
         # print gbid, target_name, ks_start, ks_end, target_start, target_end
-        print ">%s\n%s" % (v, ks_to_seq[(gbid, ks_start, ks_end)])
-        print ">%s\n%s" % (v, target_to_seq[(gbid, target_start, target_end)])
+        # print ">%s\n%s" % (v, ks_to_seq[(gbid, ks_start, ks_end)])
+        # print ">%s\n%s" % (v, target_to_seq[(gbid, target_start, target_end)])
         f1.write(">%s\n%s\n" % (v, ks_to_seq[(gbid, ks_start, ks_end)]))
         f2.write(">%s\n%s\n" % (v, target_to_seq[(gbid, target_start, target_end)]))
 

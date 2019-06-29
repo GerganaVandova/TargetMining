@@ -25,10 +25,10 @@ def split_fasta(infile):
         for record in records:
             name = record.name
             outfilename = "targets_fasta/%s.fasta" % name
-            f = open(outfilename, 'a')
+            f = open(outfilename, 'w')
             f.write(">%s\n" % name)
             f.write(str(record.seq))
             f.write("\n")
 
-infile = '../Antismash_gbids/targets.609.fa'
+infile = '../Antismash_gbids/targets.616.fa'
 split_fasta(infile)

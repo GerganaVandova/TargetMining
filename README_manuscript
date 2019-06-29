@@ -1,7 +1,7 @@
 Files:
-targets.12.fa
+targets.14.fa
 targets.92.fa
-targets.609.fa
+targets.616.fa
 
 Requirements:
 
@@ -146,55 +146,72 @@ STEP3. Extract KS and gene sequences from all PKS-labeled clusters found by
 STEP4. Blast search for a putative self-resistant gene in a PKS cluster
 ********************************************************************************
 
-1. Blast 12 experimentally-verified self-resistant genes against the antismash database
+1. Blast 14 experimentally-verified self-resistant genes against the antismash database
 from 110k genbank ids using e-value <1
     ./run_blastp.py
-    Input file: targets_file = "targets.12.fa"
-    Output files: out.targets.12.fa.cluster_genes.89k
-                  out.targets.12.fa.cluster_genes.21k
-    cat out.targets.12.fa.cluster_genes.* > out.12
+    Input file: targets_file = "targets.14.fa"
+    Output files: out.targets.14.fa.cluster_genes.89k
+                  out.targets.14.fa.cluster_genes.21k
+    cat out.targets.14.fa.cluster_genes.* > out.14
 
 2. Filter blast hits by evalue <1e-8 and identity > 0.3 (and FabB/F identity > 0.6)
     ./filter_blast.py
-    Input file: out.12
-    Output file: out.12.filtered
+    Input file: out.14
+    Output file: out.14.filtered
 
 ********************************************************************************
 STEP5. Require both KS+ target to be less than 10kb apart
 ********************************************************************************
-    ./target_ks_tandem.py
-    Input file: out.12.filtered
-    Output file: out.12.filtered.10kb
-                 KS.12.10kb.fasta
-                 targets.12.10kb.fasta
-                 out.12.filtered.5kb.noks
+1. ./target_ks_tandem.py
+    Input file: out.14.filtered
+    Output file: out.14.filtered.10kb
+                 KS.14.10kb.fasta
+                 targets.14.10kb.fasta
+                 out.14.filtered.10kb.noks
+
+
+
+3. Eliminate redundant gene clusters at a redundancy threshold of 90%
+   ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit \
+   -i KS.14.10kb.fasta \
+   -o KS.14.10kb.fasta.cdhit.90 \
+   -c .9 -d 200 -M 10000
+
+   ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.14.5kb.fasta -o KS.14.5kb.fasta.cdhit.90 -c .9 -d 200 -M 10000
+   ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.14.10kb.fasta -o KS.14.10kb.fasta.cdhit.90 -c .9 -d 200 -M 10000
+   ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.14.50kb.fasta -o KS.14.50kb.fasta.cdhit.90 -c .9 -d 200 -M 10000
+   ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.14.m50kb.fasta -o KS.14.m50kb.fasta.cdhit.90 -c .9 -d 200 -M 10000
+   ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.119.10kb.fasta -o KS.119.10kb.fasta.cdhit.90 -c .9 -d 200 -M 10000
+   ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit -i KS.616.10kb.fasta -o KS.616.10kb.fasta.cdhit.90 -c .9 -d 200 -M 10000
 
 
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 II. PHYLOGENY Step
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
-1. Copy KS fasta files to Phylogeny
-    KS.12.10kb.fasta
+1. Copy targets fasta files to Phylogeny
+    KS.14.10kb.fasta.cdhit.90
 
 2. Add FabF to root the phylogenetic tree on
-    Output file: KS.12.10kb.fasta.withFabF
+    Output file: KS.14.10kb.fasta.cdhit.90.withFabF
 
-3. Eliminate redundant gene clusters at a redundancy threshold of 90%
-    ~maureenh/Cdhit/cd-hit-v4.6.1-2012-08-27/cd-hit \
-    -i KS.12.10kb.fasta.withFabF \
-    -o KS.12.10kb.fasta.withFabF.cdhit.90 \
-    -c .9 -d 200 -M 10000
-
-4. Perform multiple sequence alignment using MAFFT
+3. Perform multiple sequence alignment using MAFFT
     /usr/local/bin/mafft --thread 64 \
-    KS.12.10kb.fasta.withFabF.cdhit.90 > \
-    KS.12.10kb.fasta.withFabF.cdhit.90.mafft
+    KS.14.10kb.fasta.cdhit.90.withFabF > \
+    KS.14.10kb.fasta.cdhit.90.withFabF.mafft
+
+    /usr/local/bin/mafft --thread 64 KS.14.10kb.fasta.cdhit.90.withFabF > KS.14.10kb.fasta.cdhit.90.withFabF.mafft
+    /usr/local/bin/mafft --thread 64 KS.119.10kb.fasta.cdhit.90.withFabF > KS.119.10kb.fasta.cdhit.90.withFabF.mafft
+    /usr/local/bin/mafft --thread 64 KS.616.10kb.fasta.cdhit.90.withFabF > KS.616.10kb.fasta.cdhit.90.withFabF.mafft
 
 5. Build a phylogenetic tree using FastTree
     /home/maureenh/FastTree/FastTreeMP \
-    KS.12.10kb.fasta.withFabF.cdhit.90.mafft > \
-    KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree
+    KS.14.10kb.fasta.withFabF.cdhit.90.mafft > \
+    KS.14.10kb.fasta.withFabF.cdhit.90.mafft.FastTree
+
+    ../software/FastTree/FastTreeMP KS.14.10kb.fasta.cdhit.90.withFabF.mafft > KS.14.10kb.fasta.cdhit.90.withFabF.mafft.FastTree
+    ../software/FastTree/FastTreeMP KS.119.10kb.fasta.cdhit.90.withFabF.mafft > KS.119.10kb.fasta.cdhit.90.withFabF.mafft.FastTree
+    ../software/FastTree/FastTreeMP KS.616.10kb.fasta.cdhit.90.withFabF.mafft > KS.616.10kb.fasta.cdhit.90.withFabF.mafft.FastTree
 
 6. Make a reference set file to be able to highlight positive clusters on tree
     mibig_refset.10.mod
@@ -209,9 +226,9 @@ II. PHYLOGENY Step
 
 8. Add phyla to the KS fasta ids (use for labeling tree)
     ./get_phyla
-    Input file: KS.12.10kb.fasta
+    Input file: KS.14.10kb.fasta
     ../Genbank/taxa.txt
-    Output file: KS.12.10kb.fasta.phyla
+    Output file: KS.14.10kb.fasta.phyla
 
 9. Get species names for all genbank ids harboring a pks cluster (Genbank/)
     ./parse_gb_species.py
@@ -226,28 +243,30 @@ II. PHYLOGENY Step
 
 10. Add a short description to the KS fasta ids (use for labeling tree)
     ./get_descr_species.py
-    Input file: KS.12.10kb.fasta
+    Input file: KS.14.10kb.fasta
                 ../Genbank/species.txt
-    Output file: KS.12.10kb.fasta.descr.species
+    Output file: KS.14.10kb.fasta.descr.species
 
     ### For E. coli: ./get_descr_species_phyla.py
-        KS.609.5kb.fasta.descr
+        KS.616.10kb.fasta.descr
 
 11. Add target names to the KS fasta ids (use for labeling tree)
     ./get_target_name.py
-    Input file: KS.12.10kb.fasta
-    Output file: KS.12.10kb.fasta.target
+    Input file: KS.14.10kb.fasta
+    Output file: KS.14.10kb.fasta.target
 
-12. Visualize tree using the APE package in R
+
+TODO for 14 targets, 119, 616
+14. Visualize tree using the APE package in R
     Root tree on E. coli FabB/F
     Color tree by target or phyla
     Rscript trees.R
-    Input files: KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree
-                 KS.12.10kb.fasta.target
-                 KS.12.10kb.fasta.descr.species
+    Input files: KS.14.10kb.fasta.withFabF.cdhit.90.mafft.FastTree
+                 KS.14.10kb.fasta.target
+                 KS.14.10kb.fasta.descr.species
                  mibig_refset.10.mod
 
-    Output file: KS.12.10kb.fasta.withFabF.cdhit.90.mafft.FastTree.phylogram.png
+    Output file: KS.14.10kb.fasta.withFabF.cdhit.90.mafft.FastTree.phylogram.png
 
 
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
@@ -256,16 +275,19 @@ STEP III. Housekeeping copy
 
 1. Split target gene sequences into separate fasta files
     /.split_mibig.py
-    Input file: targets.12.fa
+    Input file: targets.14.fa
     Ouptut folder: targets_fasta/
 
 2. Run blast to find number of copies (e-value cutoff 1e-8)
     ./second_copy.py
-    Input files: targets.12.fa
-                 out.12.filtered.10kb
+    Input files: targets.14.fa
+                 out.14.filtered.10kb
                  Genbank/gbdir
                  Genbank/assembly_gb
     Output folder: blast_out/
+
+    IN PROGRESS for 616 targets:
+    screen -r 48809.pts-4.maguro
 
 3. Get genome lengths and (T/F for complete genome) of all nucleotide records
     harboring a KS
@@ -281,8 +303,8 @@ STEP III. Housekeeping copy
     ./filter_second_copy.py
     Input files: blast_out/*.out
                  genome_lengths.txt
-                 out.12.filtered.10kb
-    Output file: out.second_copy.12.10kb.filtered
+                 out.14.filtered.10kb
+    Output file: out.second_copy.14.10kb.filtered
 
 
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
@@ -290,34 +312,93 @@ Step IV. COEVOLUTION STEP
 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 1. Copy output fasta seqs from Tandem KS-target step:
-    KS.12.5kb.fasta
-    targets.12.5kb.fasta
+    KS.14.5kb.fasta
+    targets.14.5kb.fasta
 
-2. Make blast databases for KS and targets and move to blastdb/
-    makeblastdb -in KS.12.5kb.fasta -dbtype prot -out KS.12.5kb
-    makeblastdb -in targets.12.5kb.fasta -dbtype prot -out targets.12.5kb
+    cp ../Antismash_gbids/KS.14.5kb.fasta .
+    cp ../Antismash_gbids/targets.14.5kb.fasta .
+
+    cp ../Antismash_gbids/KS.14.10kb.fasta .
+    cp ../Antismash_gbids/targets.14.10kb.fasta .
+
+    cp ../Antismash_gbids/KS.14.50kb.fasta .
+    cp ../Antismash_gbids/targets.14.50kb.fasta .
+
+    cp ../Antismash_gbids/KS.14.m50kb.fasta .
+    cp ../Antismash_gbids/targets.14.m50kb.fasta .
+
+    cp ../Antismash_gbids/KS.119.10kb.fasta .
+    cp ../Antismash_gbids/targets.119.10kb.fasta .
+
+    cp ../Antismash_gbids/KS.616.10kb.fasta .
+    cp ../Antismash_gbids/targets.616.10kb.fasta .
+
+2. Make blast databases for KS and targets
+    makeblastdb -in KS.14.5kb.fasta -dbtype prot -out blastdb/KS.14.5kb
+    makeblastdb -in targets.14.5kb.fasta -dbtype prot -out blastdb/targets.14.5kb
+
+    makeblastdb -in KS.14.10kb.fasta -dbtype prot -out blastdb/KS.14.10kb
+    makeblastdb -in targets.14.10kb.fasta -dbtype prot -out blastdb/targets.14.10kb
+
+    makeblastdb -in KS.14.50kb.fasta -dbtype prot -out blastdb/KS.14.50kb
+    makeblastdb -in targets.14.50kb.fasta -dbtype prot -out blastdb/targets.14.50kb
+
+    makeblastdb -in KS.14.m50kb.fasta -dbtype prot -out blastdb/KS.14.m50kb
+    makeblastdb -in targets.14.m50kb.fasta -dbtype prot -out blastdb/targets.14.m50kb
+
+    makeblastdb -in KS.119.10kb.fasta -dbtype prot -out blastdb/KS.119.10kb
+    makeblastdb -in targets.119.10kb.fasta -dbtype prot -out blastdb/targets.119.10kb
+
+    makeblastdb -in KS.616.10kb.fasta -dbtype prot -out blastdb/KS.616.10kb
+    makeblastdb -in targets.616.10kb.fasta -dbtype prot -out blastdb/targets.616.10kb
+
 
 3. Pairwise blastp
-    blastp -db blastdb/KS.12.5kb -query KS.92.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.12.5kb.out
-    blastp -db blastdb/targets.12.5kb -query targets.92.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.12.5kb.out
+blastp -db blastdb/KS.14.5kb -query KS.14.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.14.5kb.out
+blastp -db blastdb/targets.14.5kb -query targets.14.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.14.5kb.out
+
+blastp -db blastdb/KS.14.10kb -query KS.14.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.14.10kb.out
+blastp -db blastdb/targets.14.10kb -query targets.14.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.14.10kb.out
+
+blastp -db blastdb/KS.14.50kb -query KS.14.50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.14.50kb.out
+blastp -db blastdb/targets.14.50kb -query targets.14.50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.14.50kb.out
+
+blastp -db blastdb/KS.14.m50kb -query KS.14.m50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.14.m50kb.out
+blastp -db blastdb/targets.14.m50kb -query targets.14.m50kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.14.m50kb.out
+
+blastp -db blastdb/KS.119.10kb -query KS.119.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.119.10kb.out
+blastp -db blastdb/targets.119.10kb -query targets.119.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.119.10kb.out
+
+blastp -db blastdb/KS.616.10kb -query KS.616.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.616.10kb.out
+blastp -db blastdb/targets.616.10kb -query targets.616.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.616.10kb.out
 
 4. Parse pairwise blast
     ./parse_pairwise_identities.py
-    Input files: ../Antismash_gbids/KS.12.10kb.out
-                 ../Antismash_gbids/targets.12.10kb.out
-    Output file: pairwise_identities.12.10kb.out
+    Input files: ../Antismash_gbids/KS.14.10kb.out
+                 ../Antismash_gbids/targets.14.10kb.out
+    Output file: pairwise_identities.14.10kb.out
 
 5. Plot pairwise identities
     ./plot_pairwise_identities.py
-    Input file:  pairwise_identities.12.5kb.out
-    Output file: 12.5kb.png
+    Input file:  pairwise_identities.14.5kb.out
+    Output file: mibig.png (all plots with 14 targets, different cutoffs)
 
     To make individual plots for each target:
     ./plot_pairwise_identities.ind.py
-    Input files: pairwise_identities.609.10kb.filtered.out
-                 ../Antismash_gbids/out.609.filtered.10kb
-                      ../Antismash_gbids/targets.609.fa.longnames"
+    Input files: pairwise_identities.616.10kb.filtered.out
+                 ../Antismash_gbids/out.616.filtered.10kb
+                      ../Antismash_gbids/targets.616.fa.longnames"
 
+6. Get score
+./get_score.py
+
+7. Get final cluster table
+./get_normalized_score.py
+
+8. Copy antismash folders
+copy_antismash.py
+
+9. Make excel files and change the links
 
 
 
@@ -344,12 +425,12 @@ STEP8. Require both KS+ target <5kb apart.
 **********************************************************************************
 
 ________________________________________________________________________________
-Mine 609 E. coli essential genes Step6:
+Mine 616 E. coli essential genes Step6:
 
-STEP6. Blast 609 targets genes against antismash database from 110k genbank ids
+STEP6. Blast 616 targets genes against antismash database from 110k genbank ids
 
-        6.1. ./run_blastp.py with targets.609.fa March-6-2019 4:20pm RUNNING
-        6.2. cat out.targets.609* > out.609
+        6.1. ./run_blastp.py with targets.616.fa March-6-2019 4:20pm RUNNING
+        6.2. cat out.targets.616* > out.616
 
 133958 hits.
 
@@ -358,9 +439,9 @@ STEP7. Filter blast hits by evalue <1e-8 and identity > 0.3 (and "FAB" identity 
 
 STEP8. Require both KS+ target <5kb apart.
        Run ../Antismash_gbids/target_ks_tandem.py
-      ./target_ks_tandem.py > KS.609.5kb.fasta
-      ./target_ks_tandem.py > target.609.5kb.fasta
-      ./target_ks_tandem.py > target_ks_tandem.609.5kb.out
+      ./target_ks_tandem.py > KS.616.5kb.fasta
+      ./target_ks_tandem.py > target.616.5kb.fasta
+      ./target_ks_tandem.py > target_ks_tandem.616.5kb.out
 3238 hits.
 
 **********************************************************************************
@@ -403,15 +484,15 @@ Output: target_ks_tandem.5kb.out (408 hits)
     makeblastdb -in KS.92.5kb.fasta -dbtype prot -out KS.92.5kb
     makeblastdb -in targets.92.5kb.fasta -dbtype prot -out targets.92.5kb
 
-    makeblastdb -in KS.92.10kb.fasta -dbtype prot -out KS.92.10kb
-    makeblastdb -in targets.92.10kb.fasta -dbtype prot -out targets.92.10kb
+    makeblastdb -in KS.119.10kb.fasta -dbtype prot -out KS.119.10kb
+    makeblastdb -in targets.119.10kb.fasta -dbtype prot -out targets.119.10kb
 
 3. Pairwise blastp
 blastp -db blastdb/KS.92.5kb -query KS.92.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.92.5kb.out
 blastp -db blastdb/targets.92.5kb -query targets.92.5kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.92.5kb.out
 
-blastp -db blastdb/KS.92.10kb -query KS.92.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.92.10kb.out
-blastp -db blastdb/targets.92.10kb -query targets.92.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.92.10kb.out
+blastp -db blastdb/KS.119.10kb -query KS.119.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out KS.119.10kb.out
+blastp -db blastdb/targets.119.10kb -query targets.119.10kb.fasta -outfmt "6 qseqid sseqid sstart send nident qlen slen evalue" -evalue 1 -out targets.119.10kb.out
 
 
 4. Parse pairwise blast
@@ -421,4 +502,4 @@ Output file: pairwise_identities.[number of targets].[distance cutoff]kb.out
 
 5. Plot pairwise identities
 plot_pairwise_identities.py
-Output file: 12.5kb.png
+Output file: 14.5kb.png

@@ -29,6 +29,7 @@ def main():
     for blastoutfile in os.listdir(blastdir):
         f = os.path.join(blastdir, blastoutfile)
         targetid, _, gbid = f.split(".")[:3]
+
         lines = open(f).readlines()
         for line in lines:
             targetid, _, sstart, send, \
@@ -37,7 +38,15 @@ def main():
             if "FAB" in targetid:  # for all fabs from the 92-targets list
             # if targetid == "PtmP3_FabB-F":  # for the FabB-F from the 12-targets list
                 pidentcutoff = PIDENTCUTOFF_FAB
+
+            # For E. coli essential genes targets.616.fa
+            fabs = ["DEG10180225", "DEG10180178", "DEG10180363", "DEG10180180", "DEG10180179"]
+            if targetid in fabs:
+                pidentcutoff = PIDENTCUTOFF_FAB
+            
             pident = float(nident)/int(qlen)
+            # if gbid == "CP025542" and targetid == "mupM_Ile-tRNA-syn":
+            #     print targetid, gbid, pident
             if float(pident) < pidentcutoff:
                 continue
             pairs[(targetid, gbid)] += 1
@@ -53,17 +62,22 @@ def main():
         gbid, complete_genome, length = line.strip().split("\t")
         gbid_to_len[gbid] = ((complete_genome, length))
 
-    outf = open("out.second_copy.12.20kb.filtered", "w")
+    outf = open("out.second_copy.616.10kb.filtered", "w")
 
     # Read antismash output file
     # ACXX02000001|AdmT_ACC|37972|38377|31720|32586|cluster-1|transatpks-nrps|14512-116691|5386
-    antismash_filename = "../Antismash_gbids/out.12.filtered.20kb"
-    antismash_file = open(antismash_filename).readlines()
+    # antismash_filename = "../Antismash_gbids/out.12.filtered.10kb"
+    # antismash_file = open(antismash_filename).readlines()
+    ksfasta_cdhitfile = "../Antismash_gbids/KS.616.10kb.fasta.cdhit.90"
     gbid_to_target = defaultdict(list)
-    for line in antismash_file:
-        gbid, targetid = line.strip().split("|")[:2]
+
+    for record in SeqIO.parse(open(ksfasta_cdhitfile, "rU"), "fasta"):
+        gbidfull = record.id
+        gbid, targetid = gbidfull.strip().split("|")[:2]
         complete_genome, length = gbid_to_len[gbid]
+        # if gbid == "CP025542" and targetid == "mupM_Ile-tRNA-syn":
         num_copies = pairs[(targetid, gbid)]
+        print gbid, targetid, num_copies
         feats = "\t".join(pairs_to_feats[(targetid, gbid)])
         print "%s\t%s\t%s\t%s\t%s\t%s" % \
             (targetid,
@@ -80,9 +94,7 @@ def main():
                     length,
                     complete_genome,
                     feats))
-
     outf.close()
-
 
 if __name__ == "__main__":
     main()

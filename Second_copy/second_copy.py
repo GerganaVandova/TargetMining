@@ -14,7 +14,7 @@ import tqdm
 target_to_seq = {}
 
 # Make a dictionary for target ids and their sequences
-targets_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/targets.12.fa"
+targets_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/targets.616.fa"
 
 for record in SeqIO.parse(open(targets_filename, "rU"), "fasta"):
     targetid = record.id
@@ -22,24 +22,22 @@ for record in SeqIO.parse(open(targets_filename, "rU"), "fasta"):
     target_to_seq[targetid] = targetseq
     print targetid, targetseq[:10]
 
-# Read antismash output file
+# Read antismash output KS fasta file
 # ACXX02000001|AdmT_ACC|37972|38377|31720|32586|cluster-1|transatpks-nrps|14512-116691|5386
-antismash_filename = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/out.12.filtered.20kb"
-antismash_file = open(antismash_filename).readlines()
-
+antismash_ksfasta = "/mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Antismash_gbids/KS.616.10kb.fasta.cdhit.90"
 gbid_to_target = defaultdict(list)
 
-for line in antismash_file:
-    print line
-    line = line.strip()
-    features = line.split("|")
-    gbid, targetid = features[:2]
+for record in SeqIO.parse(open(antismash_ksfasta, "rU"), "fasta"):
+    gbidfull = record.id
+    gbidfull = gbidfull.strip()
+    gbid, targetid = gbidfull.split("|")[:2]
     print gbid, targetid
     gbid_to_target[gbid].append((targetid))
 
 for gbid in tqdm.tqdm(sorted(gbid_to_target.keys())):
     targetids = gbid_to_target[gbid]
     for targetid in targetids:
+        # if targetid == "mupM_Ile-tRNA-syn" and gbid == "CP025542":
         targetseq = target_to_seq[targetid]
         print gbid, targetid, targetseq[:10]
 
@@ -68,12 +66,9 @@ for gbid in tqdm.tqdm(sorted(gbid_to_target.keys())):
                                    str(blast_evalue_cutoff) +
                                    "." + gbid + ".out")
         # print outfilename
-
-        # EF-Tu.1e-08.NZ_KQ948231.out
-        # if targetid == "borI_Thr-tRNA-syn" and gbid == "KT362046":
-        #     print queryfile
-        #     print gbfile
-        # tblastn -query targets_fasta/EF-Tu.fasta -subject /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/assembly_gb/KB899005.gbff -out out.txt
+        print queryfile
+        print gbfile
+        # tblastn -query targets_fasta/mupM_Ile-tRNA-syn -subject /mnt/gnpn/gnpn/projects/orphanpks/TargetMining/Genbank/assembly_gb/CP025542.gbff -out out.txt
         subprocess.call(["tblastn", "-query", queryfile,
                          "-subject", gbfile,
                          "-out", outfilename,
