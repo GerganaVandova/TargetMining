@@ -1,0 +1,88 @@
+>Cluster 0
+0	431aa, >KB893672|seryl-tRNA_synthetase|64462|64893|60107|61399|cluster-1|t1pks|44407-95817|3063... *
+1	428aa, >MBLM01000134|seryl-tRNA_synthetase|40013|40441|49747|51039|cluster-1|t1pks|13811-66684|9306... at 98.36%
+>Cluster 1
+0	429aa, >FOMQ01000002|seryl-tRNA_synthetase|376977|377406|366267|367589|cluster-2|t1pks-nrps|351646-416963|9388... *
+>Cluster 2
+0	424aa, >LOCL01000028|seryl-tRNA_synthetase|28651|29075|38461|39729|cluster-1|t1pks-nrps|1-62321|9386... *
+1	424aa, >JOAR01000019|seryl-tRNA_synthetase|221801|222225|216627|217895|cluster-1|t1pks-nrps|194175-244771|3906... at 96.23%
+>Cluster 3
+0	424aa, >CP010849|seryl-tRNA_synthetase|209404|209828|204424|205701|cluster-1|t1pks-nrps|181794-249436|3703... *
+1	423aa, >CM002271|seryl-tRNA_synthetase|64677|65100|59637|60914|cluster-1|butyrolactone-t1pks-nrps|2794-140797|3763... at 91.25%
+2	423aa, >CM002273|seryl-tRNA_synthetase|6943521|6943944|6953156|6954433|cluster-2|t1pks-butyrolactone-nrps|6873273-7007517|9212... at 91.25%
+3	423aa, >CM002271|seryl-tRNA_synthetase|6955490|6955913|6965125|6966402|cluster-2|t1pks-butyrolactone-nrps|6885242-7023245|9212... at 91.25%
+4	424aa, >LN831790|seryl-tRNA_synthetase|352413|352837|347431|348708|cluster-3|t1pks|324784-368267|3705... at 99.06%
+>Cluster 4
+0	423aa, >FTNT01000013|seryl-tRNA_synthetase|45230|45653|55471|56727|cluster-1|t1pks|1-71598|9818... *
+>Cluster 5
+0	423aa, >FMCI01000267|seryl-tRNA_synthetase|16928|17351|24318|25595|cluster-1|t1pks|1-26430|6967... *
+>Cluster 6
+0	400aa, >CNCS01000019|seryl-tRNA_synthetase|20767|21167|11318|12577|cluster-1|t1pks-nrps|1-65940|8190... at 99.00%
+1	185aa, >MQJW01000017|seryl-tRNA_synthetase|349399|349584|358108|359367|cluster-1|t1pks-nrps|286574-372019|8524... at 100.00%
+2	176aa, >HW607076|seryl-tRNA_synthetase|4874431|4874607|4883300|4884559|cluster-14|t1pks-nrps|4813533-4897034|8693... at 96.59%
+3	194aa, >MMQS01000054|seryl-tRNA_synthetase|348931|349125|357747|359006|cluster-1|t1pks-nrps|286033-371656|8622... at 98.97%
+4	190aa, >CP010334|seryl-tRNA_synthetase|4273632|4273822|4282356|4283615|cluster-1|t1pks-nrps|4212899-4296267|8534... at 100.00%
+5	340aa, >CP008966|seryl-tRNA_synthetase|3960084|3960424|3969308|3970567|cluster-1|t1pks-nrps|3897596-3983217|8884... at 99.71%
+6	188aa, >ALYG01000023|seryl-tRNA_synthetase|44873|45061|53597|54856|cluster-1|t1pks-nrps|1-64660|8536... at 99.47%
+7	398aa, >CNAZ01000030|seryl-tRNA_synthetase|20623|21021|11221|12480|cluster-1|t1pks-nrps|1-43414|8143... at 100.00%
+8	190aa, >CP010335|seryl-tRNA_synthetase|4307162|4307352|4315888|4317147|cluster-1|t1pks-nrps|4246408-4329797|8536... at 100.00%
+9	418aa, >CP005386|seryl-tRNA_synthetase|4278864|4279282|4289200|4290453|cluster-1|t1pks-nrps|4245982-4303122|9918... *
+10	279aa, >CONO01000028|seryl-tRNA_synthetase|18931|19210|9527|10786|cluster-1|t1pks-nrps|1-65613|8145... at 99.64%
+11	190aa, >CP010331|seryl-tRNA_synthetase|4248154|4248344|4256877|4258136|cluster-1|t1pks-nrps|4187409-4270789|8533... at 100.00%
+12	418aa, >LXGB01000034|seryl-tRNA_synthetase|18850|19268|9448|10707|cluster-1|t1pks-nrps|1-64105|8143... at 99.28%
+13	176aa, >CP003234|seryl-tRNA_synthetase|4293934|4294110|4302631|4303890|cluster-1|t1pks-nrps|4232407-4316537|8521... at 97.73%
+14	418aa, >KB822846|seryl-tRNA_synthetase|452903|453321|443499|444758|cluster-2|t1pks-nrps|430849-516640|8145... at 100.00%
+15	116aa, >MMEI01000039|seryl-tRNA_synthetase|350249|350365|358748|360007|cluster-1|t1pks-nrps|287038-372659|8383... at 100.00%
+>Cluster 7
+0	407aa, >AE014134|seryl-tRNA_synthetase|3045730|3046137|3035645|3037150|cluster-1|t1pks|3025712-3087502|8580... *
+>Cluster 8
+0	391aa, >JAIZ01000146|seryl-tRNA_synthetase|9194|9585|332|1606|cluster-1|t1pks|1-27066|7588... *
+>Cluster 9
+0	353aa, >CM003601|seryl-tRNA_synthetase|4235285|4235638|4236497|4237774|cluster-1|t1pks|4186603-4253908|859... *
+>Cluster 10
+0	352aa, >MTKC01000003|seryl-tRNA_synthetase|4449852|4450204|4446944|4448221|cluster-2|t1pks-otherks|4432291-4490011|1631... *
+1	350aa, >LGKJ01000215|seryl-tRNA_synthetase|7222|7572|5719|6996|cluster-1|butyrolactone-t1pks|1-55221|226... at 92.29%
+2	350aa, >FNTD01000004|seryl-tRNA_synthetase|6078995|6079345|6076093|6077370|cluster-3|t1pks|6061432-6114286|1625... at 96.00%
+3	350aa, >KQ948851|seryl-tRNA_synthetase|130621|130971|127614|128891|cluster-2|t1pks|113058-166074|1730... at 95.43%
+4	351aa, >QXCZ01000001|seryl-tRNA_synthetase|2242545|2242896|2245377|2246654|cluster-3|t1pks|2208192-2261178|2481... at 95.16%
+5	350aa, >JOIZ01000010|seryl-tRNA_synthetase|213465|213815|211998|213275|cluster-2|butyrolactone-t1pks|195973-262327|190... at 95.71%
+6	350aa, >KN039947|seryl-tRNA_synthetase|998680|999030|999984|1001261|cluster-2|t1pks-butyrolactone|951221-1017282|954... at 95.43%
+7	350aa, >BBNN01000050|seryl-tRNA_synthetase|32853|33203|34157|35434|cluster-1|t1pks-butyrolactone|1-45618|954... at 95.43%
+8	352aa, >KQ948030|seryl-tRNA_synthetase|47172|47524|49951|51228|cluster-1|t1pks|12829-65819|2427... at 96.59%
+9	350aa, >JOJB01000034|seryl-tRNA_synthetase|15650|16000|14184|15461|cluster-1|butyrolactone-t1pks|1-59870|189... at 95.43%
+10	350aa, >JOCT01000005|seryl-tRNA_synthetase|51645|51995|52949|54226|cluster-1|t1pks-butyrolactone-nrps|1-70251|954... at 95.71%
+11	350aa, >MQUS01000035|seryl-tRNA_synthetase|79003|79353|81709|82986|cluster-1|t1pks-terpene|22841-89838|2356... at 96.57%
+12	352aa, >LBDA02000024|seryl-tRNA_synthetase|84319|84671|87062|88339|cluster-1|otherks-t1pks-siderophore|18116-102998|2391... at 98.86%
+13	350aa, >NZ_KN039947|seryl-tRNA_synthetase|998680|999030|999984|1001261|cluster-6|t1pks-butyrolactone|951221-1017282|954... at 95.43%
+14	350aa, >PJMO01000001|seryl-tRNA_synthetase|7682703|7683053|7679790|7681067|cluster-2|t1pks|7665184-7718144|1636... at 96.00%
+15	350aa, >CP006259|seryl-tRNA_synthetase|6447920|6448270|6445005|6446282|cluster-2|t1pks|6430389-6483375|1638... at 95.43%
+16	350aa, >MCGQ01000010|seryl-tRNA_synthetase|66127|66477|68877|70154|cluster-1|t1pks|31810-84772|2400... at 95.43%
+17	352aa, >GV586860|seryl-tRNA_synthetase|2793125|2793477|2795949|2797232|cluster-15|t1pks-butyrolactone-otherks|2746969-2811734|2472... at 92.33%
+18	352aa, >BA000030|seryl-tRNA_synthetase|2793124|2793476|2795948|2797231|cluster-4|t1pks-butyrolactone-otherks|2746968-2811733|2472... at 92.33%
+19	350aa, >CP016279|seryl-tRNA_synthetase|2655805|2656155|2652840|2654117|cluster-4|t1pks|2638274-2691239|1688... at 95.43%
+20	350aa, >QLLW01000001|seryl-tRNA_synthetase|284712|285062|281803|283080|cluster-3|t1pks-otherks|267149-324646|1632... at 98.57%
+21	351aa, >MLYO01000016|seryl-tRNA_synthetase|47732|48083|44795|46072|cluster-1|t1pks|30171-83102|1660... at 95.44%
+22	350aa, >FKJI03000004|seryl-tRNA_synthetase|211159|211509|208256|209533|cluster-3|t1pks|193596-246451|1626... at 96.29%
+23	350aa, >PHUI01000001|seryl-tRNA_synthetase|6001843|6002193|5998887|6000164|cluster-1|t1pks|5984321-6037272|1679... at 96.29%
+24	350aa, >LGDV01000038|seryl-tRNA_synthetase|136258|136608|133382|134659|cluster-1|terpene-t1pks|118705-194332|1599... at 95.71%
+25	351aa, >MLYN01000035|seryl-tRNA_synthetase|76693|77044|79449|80726|cluster-1|t1pks|42450-95370|2405... at 95.73%
+>Cluster 11
+0	351aa, >CP013220|seryl-tRNA_synthetase|413323|413674|414541|415815|cluster-1|t1pks-amglyccycl|342399-431982|867... at 94.02%
+1	352aa, >LGDW01000119|seryl-tRNA_synthetase|26082|26434|24707|25987|cluster-1|t1pks|8536-69530|95... *
+2	350aa, >LFNT01000028|seryl-tRNA_synthetase|83432|83782|82056|83330|cluster-1|t1pks|65869-120470|102... at 94.00%
+>Cluster 12
+0	350aa, >CP015588|seryl-tRNA_synthetase|3332010|3332360|3333321|3334598|cluster-3|t1pks-butyrolactone|3285687-3350631|961... *
+1	350aa, >JODF01000057|seryl-tRNA_synthetase|9280|9630|7807|9084|cluster-1|butyrolactone-t1pks|1-50014|196... at 96.29%
+>Cluster 13
+0	350aa, >CP005929|seryl-tRNA_synthetase|2511046|2511396|2500318|2501583|cluster-2|t1pks|2488735-2552855|9463... *
+>Cluster 14
+0	342aa, >AP010968|seryl-tRNA_synthetase|3062435|3062777|3059418|3060686|cluster-2|t1pks-otherks|3025347-3085880|1749... *
+>Cluster 15
+0	342aa, >CP000820|seryl-tRNA_synthetase|6992707|6993049|6991286|6992578|cluster-4|t1pks|6975226-7044359|129... *
+>Cluster 16
+0	342aa, >FNIE01000009|seryl-tRNA_synthetase|195032|195374|191743|193044|cluster-1|t1pks|177579-237615|1988... *
+>Cluster 17
+0	341aa, >JQLN01000002|seryl-tRNA_synthetase|223309|223650|226172|227464|cluster-1|t1pks|200943-261432|2522... *
+>Cluster 18
+0	341aa, >OAOJ01000001|seryl-tRNA_synthetase|2699204|2699545|2696209|2697495|cluster-1|t1pks|2681662-2742223|1709... *
+1	341aa, >PJME01000010|seryl-tRNA_synthetase|53992|54333|50982|52289|cluster-1|t1pks-otherks|1-96740|1703... at 90.03%

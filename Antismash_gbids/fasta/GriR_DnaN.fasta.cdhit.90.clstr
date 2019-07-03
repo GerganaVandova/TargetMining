@@ -1,0 +1,13 @@
+>Cluster 0
+0	428aa, >LISY01000001|GriR_DnaN|611383|611811|619664|620779|cluster-1|ectoine-arylpolyene-t1pks-nrps-butyrolactone-ladderane|578317-739552|7853... *
+1	428aa, >LIVW01000001|GriR_DnaN|1910300|1910728|1905067|1906182|cluster-1|ectoine-arylpolyene-t1pks-nrps-butyrolactone-ladderane|1790344-1947591|4118... at 98.83%
+2	428aa, >CM003601|GriR_DnaN|4528613|4529041|4536931|4538046|cluster-2|ectoine-arylpolyene-t1pks-nrps-butyrolactone-ladderane|4495581-4652594|7890... at 98.83%
+>Cluster 1
+0	423aa, >MVHW01000011|GriR_DnaN|20635|21058|11009|12208|cluster-1|t1pks|622-47020|8427... *
+1	398aa, >LZJS01000133|GriR_DnaN|107326|107724|97850|99049|cluster-1|t1pks|87324-133608|8277... at 90.95%
+2	423aa, >LZKI01000115|GriR_DnaN|20369|20792|11038|12237|cluster-1|t1pks|336-46794|8132... at 90.54%
+3	418aa, >LZJZ01000015|GriR_DnaN|66049|66467|56488|57687|cluster-1|t1pks-nrps|46049-98643|8362... at 90.91%
+>Cluster 2
+0	423aa, >LZKU01000124|GriR_DnaN|19662|20085|10283|11482|cluster-1|t1pks-nrps|1-47260|8180... *
+>Cluster 3
+0	421aa, >LZIX01000058|GriR_DnaN|24956|25377|15456|16655|cluster-1|t1pks|4947-30365|8301... *

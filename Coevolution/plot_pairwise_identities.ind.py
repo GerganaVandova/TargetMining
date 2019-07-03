@@ -135,9 +135,8 @@ def plot_identities(targets, colors, target_to_names, ks_pair_identities,
 
 
     # For 92 and 609 targets:
-    target_to_color = dict([(k, v) for k, v in zip(targets, colors)])
-    #target_to_color = dict([(k, v) for k, v in zip(ks_pair_identities, colors)])
-    target_to_name = dict([(k, k) for k in targets])
+    # target_to_color = dict([(k, v) for k, v in zip(targets, colors)])
+    # target_to_name = dict([(k, k) for k in targets])
 
     # print "ks_pair_identites", len(ks_pair_identities), ks_pair_identities
     # print "targets", len(targets), targets
@@ -271,7 +270,7 @@ def plot_identities(targets, colors, target_to_names, ks_pair_identities,
                     ax.text(5, 80, '$r=$'+'{}'.format(Sp_corr) + "\n" +
                             p_value_def(p_value2), fontdict=font)
 
-                figname = "plots/616." + qtarget + ".png"
+                figname = "plots2/119." + qtarget + ".png"
                 plt.savefig(figname, dpi=400)
                 plt.clf()
 
@@ -315,19 +314,19 @@ def main():
         "#CFCDAC", "#D0AC94"        ## added above "#7ED379", "#012C58"
     ]
 
-    pairwise_filename = "pairwise_identities.616.10kb.out"
-    antismash_ksfasta = "../Antismash_gbids/KS.616.10kb.fasta.cdhit.90"
-    targets_fasta = "../Antismash_gbids/targets.616.fa.cleannames"
+    pairwise_filename = "pairwise_identities.119.10kb.out"
+    antismash_ksfasta = "../Antismash_gbids/KS.119.10kb.fasta.cdhit.90"
+    targets_fasta = "../Antismash_gbids/targets.119.fa.cleannames"
 
     targets = get_targets(antismash_ksfasta)
     print "len of targets:", len(targets), "len of colors: ", len(colors)
 
-    # target_to_names = target_to_name92(targets_fasta)  # for 12 and 92 targets, split in different way
-    target_to_names = target_to_name(targets_fasta)  # for 609 targets, split in different way
+    target_to_names = target_to_name92(targets_fasta)  # for 12 and 92 targets, split in different way
+    # target_to_names = target_to_name(targets_fasta)  # for 609 targets, split in different way
 
-    # mode = "subplot"
-    mode = "individual"
-    corr_file = open("616.correlations", 'w')
+    mode = "subplot"
+    # mode = "individual"
+    corr_file = open("119.correlations", 'w')
     i = 0
     for target in targets:
         # if target != "AdmT_ACC":
@@ -359,11 +358,11 @@ def main():
         i += 1
         if i % 12 == 0:
             if mode != "individual":
-                plt.savefig("plots/616.10kb.subplots.correlation_part%s.png" % i, dpi=400)
+                plt.savefig("plots2/119.10kb.subplots.correlation_part%s.png" % i, dpi=400)
                 plt.clf()  # comment if only 12 plots
 
     if mode != "individual":
-        plt.savefig("plots/616.10kb.subplots.correlation_part%s.png" % i, dpi=400)
+        plt.savefig("plots2/119.10kb.subplots.correlation_part%s.png" % i, dpi=400)
         plt.clf()
 
 if __name__ == "__main__":
