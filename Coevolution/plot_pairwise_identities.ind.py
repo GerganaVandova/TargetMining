@@ -1,5 +1,7 @@
 #!/usr/bin/env python
+print "begin1"
 import matplotlib
+print "b2"
 import numpy as np
 import seaborn as sns
 from scipy.stats import spearmanr
@@ -318,6 +320,7 @@ def main():
     antismash_ksfasta = "../Antismash_gbids/KS.119.10kb.fasta.cdhit.90"
     targets_fasta = "../Antismash_gbids/targets.119.fa.cleannames"
 
+    print "start"
     targets = get_targets(antismash_ksfasta)
     print "len of targets:", len(targets), "len of colors: ", len(colors)
 
