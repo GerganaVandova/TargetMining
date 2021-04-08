@@ -147,7 +147,7 @@ def plot_identities(targets, colors, target_to_names, ks_pair_identities,
     # size = 5 for subplots and 10 for indiv plots
     sns.set(style="whitegrid", font_scale=10)
     font = {'family': 'sans-serif', 'color': 'black',
-            'weight': 'normal', 'size': 10, 'rotation': 0,
+            'weight': 'normal', 'size': 5, 'rotation': 0,
             'verticalalignment': 'bottom', 'horizontalalignment': 'left'}
 
     #i = 1
@@ -272,7 +272,7 @@ def plot_identities(targets, colors, target_to_names, ks_pair_identities,
                     ax.text(5, 80, '$r=$'+'{}'.format(Sp_corr) + "\n" +
                             p_value_def(p_value2), fontdict=font)
 
-                figname = "plots2/119." + qtarget + ".png"
+                figname = "plots/14." + qtarget + ".png"
                 plt.savefig(figname, dpi=400)
                 plt.clf()
 
@@ -316,9 +316,9 @@ def main():
         "#CFCDAC", "#D0AC94"        ## added above "#7ED379", "#012C58"
     ]
 
-    pairwise_filename = "pairwise_identities.119.10kb.out"
-    antismash_ksfasta = "../Antismash_gbids/KS.119.10kb.fasta.cdhit.90"
-    targets_fasta = "../Antismash_gbids/targets.119.fa.cleannames"
+    pairwise_filename = "pairwise_identities.14.10kb.out"
+    antismash_ksfasta = "../Antismash_gbids/KS.14.10kb.fasta.cdhit.90"
+    targets_fasta = "../Antismash_gbids/targets.14.fa.cleannames"
 
     print "start"
     targets = get_targets(antismash_ksfasta)
@@ -329,7 +329,7 @@ def main():
 
     mode = "subplot"
     # mode = "individual"
-    corr_file = open("119.correlations", 'w')
+    corr_file = open("14.correlations", 'w')
     i = 0
     for target in targets:
         # if target != "AdmT_ACC":
@@ -340,7 +340,9 @@ def main():
 
         #print len(ks_pair_identities), len(target_pair_identities)
         # print ks_pair_identities, target_pair_identities
+        print i
         if len(ks_pair_identities[target]) < 1:
+            print "here"
             continue
         c = colors[ci]
         print "a%s<-desc.reordered=='%s'" % (ci, target)
@@ -361,11 +363,11 @@ def main():
         i += 1
         if i % 12 == 0:
             if mode != "individual":
-                plt.savefig("plots2/119.10kb.subplots.correlation_part%s.png" % i, dpi=400)
-                plt.clf()  # comment if only 12 plots
+                plt.savefig("plots/14.10kb.subplots.correlation_part%s.png" % i, dpi=400)
+                #plt.clf()  # comment if only 12 plots
 
     if mode != "individual":
-        plt.savefig("plots2/119.10kb.subplots.correlation_part%s.png" % i, dpi=400)
+        plt.savefig("plots/14.10kb.subplots.correlation_part%s.png" % i, dpi=400)
         plt.clf()
 
 if __name__ == "__main__":
